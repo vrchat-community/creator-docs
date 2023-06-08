@@ -27,8 +27,8 @@ If you have a blueprint id that you want to upload to you can attach a new one w
 
 ![vrcpipelinemanager-db63e77-Unity_2017-12-10_01-37-47.png](/img/sdk/vrcpipelinemanager-db63e77-Unity_2017-12-10_01-37-47.png)
 
-:::caution
+:::caution TIP
 
-Don't have more than one PipelineManager in the scene when building a world! You may end up uploading to the wrong blueprint ID.",
-  "title": "TIP
+Don't have more than one PipelineManager in the scene when building a world! You may end up uploading to the wrong blueprint ID.
+
 :::

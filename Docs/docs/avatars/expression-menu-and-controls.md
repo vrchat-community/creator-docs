@@ -7,7 +7,7 @@ updatedAt: "2022-11-08T23:54:49.666Z"
 ---
 :::caution Unity Knowledge Required
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2018.4/Documentation/Manual/class-AnimatorController.html).
+This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
 ## Creating An Expression Menu
 

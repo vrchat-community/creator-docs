@@ -17,9 +17,7 @@ When you create a Unity project with VRChat's Worlds SDK, your project will auto
 - Layers 8-21 are 'User' Unity layers managed by VRChat's SDK.
 - Layers 22-31 are unused 'User' Unity layers. You can edit them freely, and changes to these layers will not be discarded when you build & upload your world.
 
-# Unity's built-in layers
-
-Certainly! Here's the information reformatted into a three-column markdown table:
+## Unity's built-in layers
 
 | Layer number | Layer Name          | Description  |
 | :-- | :-- | :-- |

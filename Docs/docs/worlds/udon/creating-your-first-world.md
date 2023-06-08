@@ -10,7 +10,7 @@ updatedAt: "2023-03-30T16:55:26.082Z"
 > Parts of this page are in the process of being updated.  
 > Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) or our official forum at [ask.vrchat.com](https://ask.vrchat.com).
 
-Before getting started, ensure you have a [Unity project with the SDK set up](/sdk/setting-up-the-sdk).
+Before getting started, ensure you have a [Unity project with the SDK set up](/sdk).
 
 ## Step 1 - Setting up a scene
 

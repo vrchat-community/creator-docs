@@ -88,16 +88,16 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - MeshRenderer
 
 ### Unity Components
-- [ParticleSystemForceField](https://docs.unity3d.com/2018.4/Documentation/Manual/class-ParticleSystemForceField.html)
-- [AimConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-AimConstraint.html)
-- [LookAtConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-LookAtConstraint.html)
-- [ParentConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-ParentConstraint.html)
-- [PositionConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-PositionConstraint.html)
-- [RotationConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-RotationConstraint.html)
-- [ScaleConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-ScaleConstraint.html)
+- [ParticleSystemForceField](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParticleSystemForceField.html)
+- [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
+- [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
+- [ParentConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParentConstraint.html)
+- [PositionConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-PositionConstraint.html)
+- [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
+- [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
 
 ## VRChat Components
-- [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2018.4/Documentation/Manual/Constraints.html) instead! 
+- [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2019.4/Documentation/Manual/Constraints.html) instead! 
 - [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal) 
 - [VRC_PortalMarker](/worlds/components/vrc_portalmarker) 
 - [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection) 

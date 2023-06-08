@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Spacer from "../Utilities/Spacer";
 
 const FeatureList = [
     {
@@ -16,17 +17,17 @@ const FeatureList = [
     {
         title: 'Worlds',
         imageUrl: require('@site/static/img/homepage/ill-worlds.png').default,
-        link: '/worlds/worlds',
+        link: '/worlds',
         description: (
             <>
-                Build simple to complex experiences where people can hang out.
+                Build simple to complex experiences and hangouts.
             </>
         ),
     },
     {
         title: 'Avatars',
         imageUrl: require('@site/static/img/homepage/ill-avatars.png').default,
-        link: '/avatars/avatars',
+        link: '/avatars',
         description: (
             <>
                 Express yourself with a wide range of customization.
@@ -37,7 +38,7 @@ const FeatureList = [
 
 function Feature({imageUrl, title, description, link}) {
     return (
-        <div className={clsx('col col--4')}>
+        <div className={clsx(`col col--4 ${styles.feature}`)}>
             <div className="text--center">
                 <a href={link}>
                     <img className={styles.featureImage} src={imageUrl} alt={title} />
@@ -47,6 +48,7 @@ function Feature({imageUrl, title, description, link}) {
                 <h3>{title}</h3>
                 <p className="text--left">{description}</p>
             </div>
+            <Spacer/>
             <div>
                 <a href={link}><button className="button button--primary button--block">Learn more</button></a>
             </div>

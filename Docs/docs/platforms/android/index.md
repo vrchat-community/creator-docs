@@ -1,6 +1,5 @@
 ---
 title: "Android"
-slug: "android"
 hidden: false
 createdAt: "2019-04-26T22:04:41.370Z"
 updatedAt: "2019-10-28T19:23:09.635Z"

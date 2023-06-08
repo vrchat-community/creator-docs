@@ -7,7 +7,7 @@ updatedAt: "2023-03-15T23:26:32.023Z"
 sidebar_position: -1
 ---
 ## Requirement: Set up the SDK first!
-Before getting started, ensure you have a [Unity project with the SDK set up](/sdk/setting-up-the-sdk).
+Before getting started, ensure you have a [Unity project with the SDK set up](/sdk).
 
 After setting up the SDK, check out our example **example avatar**. Open your avatar project and go to
 'VRChat SDK > Samples > Avatar Dynamics Robot Avatar.'
@@ -68,7 +68,7 @@ With the model in your assets and with the correct settings on it you will next 
 It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks awry. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
 :::
 ## Step 4 - Adding an Avatar Descriptor 
-After doing so, we now want to add an [VRC_AvatarDescriptor](/avatars/vrc_avatardescriptor) and then set up the settings for it.
+After doing so, we now want to add a [VRC Avatar Descriptor](/avatars/creating-your-first-avatar#step-4---adding-an-avatar-descriptor) and then set up the settings for it.
 1. Select the avatar in your hierarchy.
 2. Click 'Add Component' in the inspector.
 3. Search for the 'VRC Avatar Descriptor' component and add it.

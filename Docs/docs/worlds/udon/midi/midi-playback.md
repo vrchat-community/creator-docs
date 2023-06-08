@@ -22,7 +22,7 @@ Files with the extension .mid are processed as MIDI assets. To get started with 
 
 ![VRCMidiPlayer](/img/worlds/midi-playback-215556799-a546e119-afdb-441f-8019-70ee50b6c008.png)
 
-This is the brains of the operation. It works similarly to an Audio Source but uses a Midi Asset instead. It sends MIDI [Note On](index.md#midinoteon) and [Note Off](index.md#midinoteoff) events to all target UdonBehaviours.
+This is the brains of the operation. It works similarly to an Audio Source but uses a Midi Asset instead. It sends MIDI [Note On](/worlds/udon/midi#midinoteon) and [Note Off](/worlds/udon/midi#midinoteoff) events to all target UdonBehaviours.
 
 ### Inspector Fields
 
@@ -32,7 +32,7 @@ This is the brains of the operation. It works similarly to an Audio Source but u
 <dt>Audio Source</dt>
 <dd>The AudioSource component with the audio clip corresponding to your MIDI data.</dd>
 <dt>Target Behaviours</dt>
-  <dd>An array of UdonBehaviours which will have MIDI <a href="index.md#midinoteon">Note On</a> and <a href="index.md#midinoteoff">Note Off</a> events sent to them</dd>
+  <dd>An array of UdonBehaviours which will have MIDI <a href="/worlds/udon#midinoteon">Note On</a> and <a href="/worlds/udon#midinoteoff">Note Off</a> events sent to them</dd>
 <dt>Display Debug Blocks</dt>
 <dd>When enabled, you can see a display of all the notes in your current MIDI file in the Scene View of the Unity Editor while the VRCMidiPlayer is selected. Helpful for a quick view into your data.</dd>
 </dl>

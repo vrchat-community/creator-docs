@@ -18,5 +18,7 @@ Click on an event to open its documentation page.
 
 :::caution
 
-Unity and VRChat updates may change the event execution order depicted above.\nNot all events are listed, and some events may be executed in a different order depending on circumstances (being an object's owner, joining a world late, etc.)
+Unity and VRChat updates may change the event execution order depicted above.
+Not all events are listed, and some events may be executed in a different order depending on circumstances (being an object's owner, joining a world late, etc.)
+
 :::

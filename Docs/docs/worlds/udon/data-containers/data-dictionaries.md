@@ -49,7 +49,13 @@ There are several different ways to get a value out of a dictionary. Each one ha
 
 If you want to get a value out of a dictionary safely, but you don't care what type exists at that location, it is recommended to use `TryGetValue`. This is a function that returns true or false depending on whether or not getting the value was successful. It is intended to put this inside of the conditions for an `if` or a `branch` so that it is clear what happens when it succeeds and what happens when it fails.
 
-![data-dictionaries-WOqKqFO.png](/img/worlds/data-dictionaries-WOqKqFO.png)
+```csharp title="Example of TryGetValue"
+if (dictionary.TryGetValue("key", out DataToken value)) {
+    Debug.Log($"Success! {value}");
+} else {
+    Debug.Log($"Failed! {value}");
+}
+```
 
 If this does fail, the DataToken you receive is still valid, but rather than containing your data it will contain an [error](/worlds/udon/data-containers/data-tokens#errors).
 
@@ -63,7 +69,20 @@ If you want to get a value from a dictionary and you don't know what type it cou
 
 This method is good for when you want to get a specific value from a specific location, but the data is coming from an outside source so you are not confident that the source has the right data.
 
-![data-dictionaries-fU4M0eR.png](/img/worlds/data-dictionaries-fU4M0eR.png)
+```csharp title="Example of TryGetValue with TokenType"
+// You could do it this way, but it's a bit ugly
+if (dictionary.TryGetValue("key", out DataToken value)) {
+    if (value.TokenType == TokenType.DataDictionary)
+    {
+        Debug.Log($"Success! Matching dictionary has {value.DataDictionary.Count} items");
+    }
+}
+
+// This approach has a type check built in! It's functionally the same, but streamlined.
+if (dictionary.TryGetValue("key", TokenType.DataDictionary, out value)) {
+    Debug.Log($"Success! Matching dictionary has {value.DataDictionary.Count} items");
+}
+```
 
 ### Shorthand Bracket syntax
 
@@ -71,13 +90,67 @@ You can also set and get items from a Data Dictionary using bracket syntax such 
 
 This method is good for when you have complete control over your data, can guarantee that it exists, and that it is the type you expect. Otherwise, it is recommended to use some form of `TryGetValue`.
 
-![data-dictionaries-cuwHrii.png](/img/worlds/data-dictionaries-cuwHrii.png)
+```csharp title="Example of Shorthand Bracket syntax"
+dictionary["A"] = 5;
+dictionary["B"] = 10;
+
+// This makes the assumption that A and B will always contain integers.
+// This is a safe assumption to make since we set them just above in a controlled environment.
+// If the data is coming from an external source, we shouldn't make these assumptions!
+int sum = dictionary["A"].Int + dictionary["B"].Int;
+```
 
 ## Initializing a Data Dictionary
 
 In Udonsharp, Data Dictionaries can be initialized in private variables. This allows you to have a pre-existing set of data that is defined before your code runs. This also supports nested dictionaries and anything else that DataTokens support. Here is an example of how you should use this syntax:
 
-![data-dictionaries-9E2oQ7Y.png](/img/worlds/data-dictionaries-9E2oQ7Y.png)
+```csharp title="Example of initializing a Data Dictionary"
+private DataDictionary users = new DataDictionary()
+    {
+        { "John Doe", new DataDictionary()
+            {
+                {"email", "johndoe@example.com"},
+                {"age", 35},
+                {"address", new DataDictionary()
+                    {
+                        {"street", "123 Main St"},
+                        {"city", "Anytown"},
+                        {"state", "CA"},
+                        {"zip", 12345}
+                    }
+                }
+            }
+        },
+        { "Jane Smith", new DataDictionary()
+            {
+                {"email", "janesmith@example.com"},
+                {"age", 28},
+                {"address", new DataDictionary()
+                    {
+                        {"street", "456 Elm St"},
+                        {"city", "Anytown"},
+                        {"state", "CA"},
+                        {"zip", 12345}
+                    }
+                }
+            }
+        },
+        { "Bob Johnson", new DataDictionary()
+            {
+                {"email", "bobjohnson@example.com"},
+                {"age", 42},
+                {"address", new DataDictionary()
+                    {
+                        {"street", "789 Oak St"},
+                        {"city", "Anytown"},
+                        {"state", "CA"},
+                        {"zip", 12345}
+                    }
+                }
+            }
+        }
+    };
+```
 
 At the moment, Udonsharp does not support initializers of this type inside a function. This would be a feature request for Udonsharp.
 
@@ -87,7 +160,20 @@ At the moment, Unity does not serialize DataDictionaries, which means that **thi
 
 Iterating over all the entries in a dictionary is a bit different from a list because a dictionary is not ordered. You can't index directly into a dictionary, you must use a key. To do this, we have the `GetKeys()` function. This function gives you a DataList of all the keys in a dictionary. Once you have that, you can use a for loop to iterate over all the keys and access the value at each key.
 
-![data-dictionaries-hoPKTjb.png](/img/worlds/data-dictionaries-hoPKTjb.png)
+```csharp title="Example of iterating over all entries in a dictionary"
+// First get all the keys in the dictionary
+DataList keys = dictionary.GetKeys();
+
+// For loop over all the keys
+for (int i = 0; i < keys.Count; i++)
+{
+    // Get the key at the current index
+    DataToken key = keys[i];
+    
+    // Access the entry connected to that key
+    Debug.Log(dictionary[key].ToString());
+}
+```
 
 GetKeys may appear to be expensive at first glance, but it is cached so long as a key is not added or removed so it is generally performant to access frequently, aside from the overhead of Udon itself.
 
@@ -101,4 +187,32 @@ Data Dictionaries cannot be directly synced. However, they can be serialized to/
 
 One way to do this is to use OnPreSerialization and OnDeserialization to Serialize and Deserialize the json string. Using this method, you won't need to worry about the serialization within the rest of your code, and you can simply set values and forget.
 
-![data-dictionaries-8THFGYS.png](/img/worlds/data-dictionaries-8THFGYS.png)
+```csharp title="Example of syncing a Data Dictionary with other players over the network"
+[UdonSynced]
+private string _json = "";
+private DataDictionary _dictionary;
+
+public override void OnPreSerialization()
+{
+    if (VRCJson.TrySerializeToJson(_dictionary, JsonExportType.Minify, out DataToken result))
+    {
+        _json = result.String;
+    }
+    else
+    {
+        Debug.LogError(result.ToString());
+    }
+}
+
+public override void OnDeserialization()
+{
+    if(VRCJson.TryDeserializeFromJson(_json, out DataToken result))
+    {
+        _dictionary = result.DataDictionary;
+    }
+    else
+    {
+        Debug.LogError(result.ToString());
+    }
+}
+```

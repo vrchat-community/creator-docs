@@ -1,6 +1,5 @@
 ---
 title: "Udon"
-slug: "what-is-udon"
 sidebar_position: 1
 hidden: false
 createdAt: "2020-08-21T19:18:54.059Z"
@@ -18,7 +17,7 @@ For the more technically inclined: **VRChat Udon** is a VM running bytecode comp
 # Current Udon Status
 **Udon is our current main-line standard system for World Creation!**
 
-You can use the [Udon Node Graph](/worlds/udon/graph/index.md/udon-node-graph) to create Udon programs with a graphical interface. This is a lot like Unity animators, Blender shaders or geometry nodes, Unreal blueprints, and many other similar methods. It's a great starting point-- but also, some people just prefer nodes over code!
+You can use the [Udon Node Graph](/worlds/udon/graph) to create Udon programs with a graphical interface. This is a lot like Unity animators, Blender shaders or geometry nodes, Unreal blueprints, and many other similar methods. It's a great starting point-- but also, some people just prefer nodes over code!
 
 Of course, if you do prefer code, you can always write Udon using [UdonSharp](https://udonsharp.docs.vrchat.com/)! UdonSharp is a way to write Udon in a way very similar to C#. If you're already familiar with programming, U# might be the easiest way forward for you!
 
