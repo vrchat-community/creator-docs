@@ -16,17 +16,17 @@ const FeatureList = [
     {
         title: 'Worlds',
         imageUrl: require('@site/static/img/homepage/ill-worlds.png').default,
-        link: '/worlds/worlds',
+        link: '/worlds',
         description: (
             <>
-                Build simple to complex experiences where people can hang out.
+                Build simple to complex experiences and hangouts.
             </>
         ),
     },
     {
         title: 'Avatars',
         imageUrl: require('@site/static/img/homepage/ill-avatars.png').default,
-        link: '/avatars/avatars',
+        link: '/avatars',
         description: (
             <>
                 Express yourself with a wide range of customization.

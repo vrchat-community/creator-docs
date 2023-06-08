@@ -1,6 +1,5 @@
 ---
 title: "Player API"
-slug: "players"
 excerpt: "Use Udon to retrieve information about players in your world"
 sidebar_position: 1
 createdAt: "2020-09-24T22:01:51.834Z"

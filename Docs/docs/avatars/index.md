@@ -1,28 +1,27 @@
 ---
 title: "Avatars"
-slug: "avatars"
 excerpt: "Learn about VRChat's Avatars 3.0 SDK"
 hidden: false
 createdAt: "2020-07-08T17:39:44.315Z"
 updatedAt: "2023-04-03T18:46:53.072Z"
 sidebar_position: 0
 ---
-# What is Avatars 3.0?
+## What is Avatars 3.0?
 
 **Avatars 3.0** is our name for all the features available for avatars in VRChat. AV3's features are focused on improving expression, performance, and the abilities of avatars in VRChat.
 
 Avatars 3.0 is heavily integrated with the [Action Menu](https://docs.vrchat.com/docs/action-menu) for controlling and interacting with the avatar you're wearing. It's probably best if you hop in and try out the Action Menu before building an AV3 avatar!
 
-# Prerequisites
+## Prerequisites
 
-- [Install & set up the VRChat Avatars SDK](/sdk/setting-up-the-sdk)
+- [Install & set up the VRChat Avatars SDK](/sdk)
 - [Create your first avatar](/avatars/creating-your-first-avatar)
 
-# Understanding the Concepts
+## Understanding the Concepts
 
 In order to understand and use Avatars 3.0, you need to know a few concepts. These concepts will help you understand the construction of avatars, how best to assemble them, and the intended use of various systems.
 
-## Unity Systems
+### Unity Systems
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html). In particular, you should ensure you have basic working knowledge of:
 
@@ -40,7 +39,7 @@ It can also help to know about things like:
 - (Advanced) Time Sync between layers
 - (Advanced) Blend trees
 
-## Basics
+### Basics
 
 With Avatars 3.0, you can create a basic avatar with simulated eye movement and visemes very quickly. 
 
@@ -57,7 +56,7 @@ You're done! This will create a basic avatar with default gestures and actions. 
 
 However, even with these basic upgraded systems, there are some new features.
 
-## Local Avatar Testing
+### Local Avatar Testing
 
 Ever wanted to iterate and test an avatar without uploading it? Well, with Avatars 3.0, now you can!
 
@@ -69,7 +68,7 @@ This avatar is _only_ visible to you! To everyone else, you'll look like you're 
 
 To delete the copied local test avatar, go to "Content Manager" tab of the VRChat SDK control panel. You will see your avatar in "Test Avatars" section at the bottom. Click "Delete" and it will disappear from "Other" section of the Avatar menu when you reopen it.
 
-## Simulated Eye Movement
+### Simulated Eye Movement
 
 Simulated eye movement is where your eyes will move around, looking at things around you. This isn't _eye tracking_-- as in, we don't have a way for you to input data from eye tracking devices-- but it is a pretty good way of making your avatar look more "alive".
 
@@ -89,7 +88,7 @@ In addition, you'll notice two sliders-- one goes from Calm to Excited, and the 
 
 You'll learn more about this when we talk about state behaviors, but you can set states in your animator to **disable eye animations** when you reach that state. You can set it up such that you don't have to worry about your blendshapes being overdriven because your "happy" mood closes your eyes, and your blinking is still firing off. 
 
-## Blendshape / Bone-based Visemes
+### Blendshape / Bone-based Visemes
 
 If you just want to stick with the standard jaw-flap bone or blendshape-based visemes, we've got you covered. Both are still present and work just fine.
 
@@ -99,13 +98,13 @@ However, in Avatars 3.0, you can also access an Animator Parameter which indicat
 
 The `Viseme` animator parameter is updated in all viseme modes.
 
-## Proxy Animations
+### Proxy Animations
 
 You'll probably notice that the SDK includes a bunch of animations named `proxy_animationName`. These animations are "placeholders" for a variety of default VRChat animations. If you use an animation that starts with `proxy_`, VRChat will attempt to replace it with a built-in animation. This can be done in any playable layer.
 
 Although we will not replace an animation with a `proxy_` prefix if the suffix does not match one of our built-in animations, it is probably best practice to avoid naming any of your animations with the prefix `proxy_`.
 
-## Use Auto Footstep
+### Use Auto Footstep
 
 This is an option in the AV3 Avatar Descriptor. It is on by default.
 
@@ -115,7 +114,7 @@ Leaving Auto Footsteps on (which is the default state) will still allow you to e
 
 If Auto Footsteps is off, enabling/disabling tracking on your legs and hips won't do anything, and you're relying on your animations to drive your lower body at all times.
 
-## Force Locomotion Animations
+### Force Locomotion Animations
 
 This is an option in the AV3 Avatar Descriptor. It is on by default.
 
@@ -123,7 +122,7 @@ This is an option in the AV3 Avatar Descriptor. It is on by default.
 
 When "Locomotion Animations" is off, locomoting in FBT will NOT play the walking/running animation. This is useful if you wish to "mime" your walking with your full-body tracking movement. **If you are turning off "Locomotion Animations", do not use the default Base and Additive layers.** You're expected to make your own!
 
-## Write Defaults on States
+### Write Defaults on States
 
 [Write Defaults](https://docs.unity3d.com/2019.4/Documentation/Manual/class-State.html) is an option available on states in Animators in Unity. 
 
@@ -141,7 +140,7 @@ The Write Defaults value defaults to **on** when you create a new node, so creat
 
 All that being said, if you get into more advanced use cases and setups, it may be advantageous to use Write Defaults On.
 
-## Generic Avatars
+### Generic Avatars
 
 Avatar 3.0 also supports non-humanoid generic avatars. If you want access to similar features that AV3 Humanoids have access to, you'll need to follow a few guidelines:
 

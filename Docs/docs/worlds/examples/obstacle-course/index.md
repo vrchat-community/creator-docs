@@ -1,6 +1,5 @@
 ---
 title: "Obstacle Course"
-slug: "obstacle-course"
 hidden: false
 createdAt: "2021-08-10T18:17:12.204Z"
 updatedAt: "2021-09-21T22:51:28.690Z"

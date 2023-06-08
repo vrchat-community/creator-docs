@@ -1,7 +1,6 @@
 ---
 title: "Udon Moderation Tool Guidelines"
 slug: "udon-moderation-tool-guidelines"
-hidden: true
 createdAt: "2021-03-29T22:40:57.117Z"
 updatedAt: "2021-12-29T05:58:38.286Z"
 ---

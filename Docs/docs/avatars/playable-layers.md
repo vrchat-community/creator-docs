@@ -7,11 +7,11 @@ createdAt: "2020-08-05T22:29:37.898Z"
 updatedAt: "2023-02-06T14:15:33.627Z"
 ---
 When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
-:::caution
+:::caution Unity Knowledge Required
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2018.4/Documentation/Manual/class-AnimatorController.html).",
-  "title": "Unity Knowledge Required
+This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
+
 In the Avatars 3.0 Avatar Descriptor, there are five buttons labeled:
 - Base
 - Additive
@@ -28,10 +28,9 @@ We have example Playable Layers available in the SDK. Depending on how you learn
 When you are running VRChat and you're wearing (or viewing) an Avatar 3.0 avatar, all of these Playable Layers are put together into a combined Animator. This Animator is the root, main animator of your avatar, and you can control any part of it. **This means that there is no reason to add any additional animators on your avatar.** 
 
 As an aside, you should never use the same controller in multiple Playable Layers. This may work for some setups, but it is **very** poor practice and will cause major issues as you expand the functionality of your avatar.
-:::danger
+:::danger Only Use Animation Controllers
 
-We only support the use of Animation Controllers in Playable Layer slots. Do not use any other type of controller-- you will run into errors or will be unable to upload the content.",
-  "title": "Only Use Animation Controllers
+We only support the use of Animation Controllers in Playable Layer slots. Do not use any other type of controller-- you will run into errors or will be unable to upload the content.
 :::
 What do these Playable Layers do? Here's the short version:
 
@@ -43,7 +42,7 @@ What do these Playable Layers do? Here's the short version:
 
 That's great, but let's go into some more detail.
 
-# Base
+## Base
 
 The Base layer contains locomotion animations, including blend trees for walking, running, strafing. It also includes animation states for jumping, falling, falling fast, crouching, and crawling, among other things.
 
@@ -51,21 +50,22 @@ Keep in mind that if you put something in here, you'll have to redefine your loc
 
 Animations in Base should _only_ affect transforms, and all layers should be using Avatar Masks to ensure you're only affecting the appropriate transforms.
 
-# Additive
+## Additive
 
 The Additive layer is meant for additive transform movement on top of humanoid bones that are animated in Base-- things like breathing animations that can "add on" to the Base layer.
 
 **If you want to add an idle animation to non-humanoid bones-- like a tail, ears, or etc-- use Gesture instead!** Additive is *specifically* for humanoid bones.
 
 The Additive layer is special because it is _always_ set to "Additive" blending. In short, if you've got a transform that moves during locomotion, the Additive animation will "add" its animation on top. This can act really weirdly if you do crazy things to bones in Additive, so try to keep it pretty minimal.
-:::caution
 
-The first layer (base layer, 0th layer, etc)'s Avatar Mask is ignored. This is for internal masking purposes. You can still mask other layers, but any mask you apply to the first layer will be ignored.",
-  "title": "Additive First Layer Avatar Mask Ignored
+:::caution Additive First Layer Avatar Mask Ignored
+
+The first layer (base layer, 0th layer, etc)'s Avatar Mask is ignored. This is for internal masking purposes. You can still mask other layers, but any mask you apply to the first layer will be ignored.
 :::
+
 Animations in Additive should _only_ affect transforms.
 
-# Gesture
+## Gesture
 
 The Gesture layer is for animations that need to act on individual body parts while still playing the underlying animations for the rest of the body. Kind of like AV2 Gestures, but applied to any part of the body.
 
@@ -75,7 +75,7 @@ In addition, if you want to have an "idle" animation for non-humanoid bones like
 
 Animations in Gesture should _only_ affect transforms.
 
-# Action
+## Action
 
 The Action layer is for bone animations that will override all other layers, when you need to take over total control of the character. Basically, think AV2 "Emotes".
 
@@ -83,7 +83,7 @@ This layer is **blended to zero by default.** Before you do anything in the acti
 
 Animations in Action should _only_ affect transforms.
 
-# FX
+## FX
 FX is a **special layer.** On every other layer, you should not be using material animations, shader property animations, or blendshape animations, because they aren't copied to your mirror clone. Only transforms are.
 
 However, in the FX layer, everything is copied over! In other words, ***everything that isn't a humanoid transform/muscle animation should go into the FX layer.*** This includes (but is not limited to) things like enabling/disabling GameObjects, components, material swaps, shader animations, particle system animating, etc.
@@ -96,10 +96,10 @@ Example: you have a Tail on your avatar (chain of bones not part of humanoid hie
 
 Note that if you have a game object in your hierarchy that has both an animated transform (in Gesture) and an animated effect component (in FX), this will not work with the requirements for the masks. This can occur if you have a simple static-mesh embedded in your hierarchy that you are animating in Gesture, but also applying a material change to in FX. Another example, would be putting a particle effect component directly on the example tail bones above. The simple workaround is to make a child game object and put the static-mesh or effect on that. You would not animate the transform of the child, only the parent. If you follow these steps, you should not need to put transform animations in the FX layer.
 
-# Additional Poses
+## Additional Poses
 There are some additional poses available for Avatars 3.0 avatars. The buttons for these are under the Playable Layers.
 
-## T-Pose
+### T-Pose
 You can now provide your own T-Pose!
 
 The T-Pose is used to determine various measurements of your avatar, especially for placement of your viewpoint (or view-ball). Viewpoint is dependent entirely on where your view-ball is when your avatar is in this T-Pose animation you provide.
@@ -110,7 +110,7 @@ Finally, your t-pose determines your wingspan-- your full length of your arms wh
 
 In addition, (significant) joint bends in T-Pose aren't a good thing. As an example, if your elbows are bent in T-pose, this may affect many different things about your avatar that work off your proportions.
 
-## IK Pose
+### IK Pose
 IK Pose is used to determine major joint bends. In the IK pose, your joints should be bent slightly in the direction they're intended to bend. 
 
 As an example, VRChat will look at the elbow bend from your IK Pose and determine if there is a angle bend in any given direction. That bend determines how your elbow bends.
@@ -119,7 +119,7 @@ The foot's rotation in IK Pose will determine how the knees will bend. This is s
 
 In short: if you want your knees to bend more inward, rotate your feet outward in IK Pose. If you want your knees to bend more outward, rotate your feet inward in IK pose.
 
-## Sitting Pose
+### Sitting Pose
 The controller used in this slot is used for both animation and posing. When you sit, the viewpoint of your avatar is used for calibration. The animation is played, allowing you to create a "sitting down" animation, as well as a "sitting" idle animation.
 
 If you want to make your own, fair warning: this can take some significant tweaking to get right! You may want to employ transition states for sitting down/standing up that will help a bit with how your avatar looks while sitting.

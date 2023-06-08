@@ -66,9 +66,21 @@ Data Tokens can contain the following Token Types:
 
 ### UdonSharp
 
-In UdonSharp, DataTokens can be created "implicitly" which means that when a function asks for a DataToken, you do not need to do `new DataToken(value)`. Instead you can just pass the value in directly and it will create a DataToken for you automatically. 
+In UdonSharp, DataTokens can be created "implicitly" which means that when a function asks for a DataToken, you do not need to do `new DataToken(value)`. Instead you can just pass the value in directly and it will create a DataToken for you automatically.
 
-![data-tokens-KTTaD7O.png](/img/worlds/data-tokens-KTTaD7O.png)
+```csharp title="DataToken Creation"
+// You could do this
+DataToken _explicitFloat = new DataToken(5.3f);
+DataToken _explicitInt = new DataToken(5);
+DataToken _explicitString = new DataToken("value");
+DataToken _explicitBool = new DataToken(true);
+
+// But this is easier and simpler
+DataToken _float = 5.3f;
+DataToken _Int = 5;
+DataToken _String = "value";
+DataToken _Bool = true;
+```
 
 ### Udon Graph
 
@@ -84,7 +96,25 @@ Before getting a value out of a DataToken you need to be sure of what type it co
 - You can check the `DataToken.IsNumber` property to get if it is a number. If it is, then you can safely pull the `Number` property which will give you a double upcasted from whichever type it actually was. This may lose precision if the type was `long` or `ulong`.
 - Regardless of the type of the token, `ToString` is always a valid option and will never throw errors.
 
-![data-tokens-iUttEBV.png](/img/worlds/data-tokens-iUttEBV.png)
+```csharp title="DataToken Retrieval in U#"
+// If we know that it's a string, we can safely pull the string out of the token
+if (unknownToken.TokenType == TokenType.String)
+{
+    Debug.Log(unknownToken.String);
+}
+
+// We can use IsNumber to see if it's some type of number, even if we don't know which.
+if (unknownToken.IsNumber)
+{
+    Debug.Log(unknownToken.Number);
+}
+
+// If we're pulling a value from a container, we can use the version that does its own type check
+if (dictionary.TryGetValue("key", TokenType.String, out DataToken value))
+{
+    Debug.Log(value.String);
+}
+```
 
 ![data-tokens-SqQqE5w.png](/img/worlds/data-tokens-SqQqE5w.png)
 
@@ -92,7 +122,15 @@ Once you are sure that you have the right type, you can get the value out of the
 
 If you have complete control over the data that you're working with, then you can skip all the TokenType checking and just get the value from the token directly. This can save some extra code, but make sure that you're not doing this if the data is coming from an outside source or there is any possibility that the type could be something else.
 
-![data-tokens-cuwHrii.png](/img/worlds/data-tokens-cuwHrii.png)
+```csharp title="Example of Shorthand Bracket syntax"
+dictionary["A"] = 5;
+dictionary["B"] = 10;
+
+// This makes the assumption that A and B will always contain integers.
+// This is a safe assumption to make since we set them just above in a controlled environment.
+// If the data is coming from an external source, we shouldn't make these assumptions!
+int sum = dictionary["A"].Int + dictionary["B"].Int;
+```
 
 ## Errors
 
@@ -111,7 +149,15 @@ An error token can be one of several different things:
 | ValueUnsupported | The data container had a value that is not supported by the serialization format you tried to use. This can happen if you put NaN or Infinity floats into a Data Container and then try to serialize it into Json. |
 | UnableToParse    | The serialized format could not be parsed. This happens if the source Json is invalid.                                                                                                                             |
 
-![data-tokens-aZPJPKz.png](/img/worlds/data-tokens-aZPJPKz.png)
+```csharp title="TryGetValue with TokenType"
+if (dictionary.TryGetValue("key", TokenType.Float out DataToken value)) {
+    // If TryGetValue succeeds, we can do things with the token
+    Debug.Log($"Successfully retrieved value {token.Float}");
+} else {
+    // If TryGetValue fails, the token will instead be an error
+    Debug.Log($"Failed to retrieve value with error {token.Error}");
+}
+```
 
 ![data-tokens-zcqKePv.png](/img/worlds/data-tokens-zcqKePv.png)
 

@@ -1,7 +1,5 @@
 ---
 title: "Udon Example Scene"
-slug: "udon-example-scene"
-hidden: false
 createdAt: "2021-05-13T19:15:33.839Z"
 updatedAt: "2021-10-07T17:09:09.342Z"
 ---
@@ -46,7 +44,7 @@ These objects demonstrate different ways to sync variable values from the owner 
 The "Canvas" item has many UI items with synced variables:
 
 ## ButtonSyncOwner
-This is the first program described here which uses the [Manual Sync](/worlds/udon/networking/udon-networking#2-manual-variable) method. In the image below, you can see it has an OnClick() handler which calls UdonBehaviour.SendCustomEvent with a value of "OnClick". It's targeting the UdonBehaviour just below it, where it will run the custom event "OnClick". This is how UI Elements can run events on UdonBehaviours.
+This is the first program described here which uses the [Manual Sync](/worlds/udon/networking#2-manual-variable) method. In the image below, you can see it has an OnClick() handler which calls UdonBehaviour.SendCustomEvent with a value of "OnClick". It's targeting the UdonBehaviour just below it, where it will run the custom event "OnClick". This is how UI Elements can run events on UdonBehaviours.
 ![Triggering Custom Events from Unity UI controls](/img/worlds/index-2c98f4e-onclick-manual-sync.png)
 In the Graph Program, the OnClick event checks whether the player who clicked is the Owner of the object. If they are, it increases the "clickCount" variable by 1 and then calls **RequestSerialization**, which signals Udon to update the data on this Manual-synced UdonBehaviour.
 ![OnClick ▸ If Owner ▸ Set clickCount to clickCount + 1 ▸ Serialize.](/img/worlds/index-f0a3ff2-bso-gaph.png)
@@ -61,7 +59,7 @@ This object uses a program very similar to **ButtonSyncOwner** above, but adds l
 This object builds on the now-familiar ButtonSync program to demonstrate how to easily change ownership of an Object. When a non-owner clicks on the button, it will assign them ownership, and then update the variable. This is useful when you want to change multiple variables, or do logic more complicated than simply incrementing a value.
 ![](/img/worlds/udon-example-scene-1372141-button-sync-become-owner.png)
 
-When changing ownership of an object, some logic is run to decide whether or not the transfer is allowed. You can learn more about that here: [Networking](/img/worlds/udon/networking/udon-networking#object-ownership). If you don't add any custom logic, all Requests for Ownership will be approved. The nodes below show a simple setup checks a boolean variable called 'someSpecialLogic' to decide whether the Transfer will be approved. You could build your own logic based on the 'requester', the 'newOwner', or both.
+When changing ownership of an object, some logic is run to decide whether or not the transfer is allowed. You can learn more about that here: [Networking](/worlds/udon/networking#object-ownership). If you don't add any custom logic, all Requests for Ownership will be approved. The nodes below show a simple setup checks a boolean variable called 'someSpecialLogic' to decide whether the Transfer will be approved. You could build your own logic based on the 'requester', the 'newOwner', or both.
 ![Does someone want to be the new owner? Check 'someSpecialLogic' that you've updated elsewhere.](/img/worlds/index-91b3564-onOwnershipRequest.png)
 ## SliderSync
 ![](/img/worlds/udon-example-scene-080c991-syncSlider.png)

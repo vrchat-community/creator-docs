@@ -7,9 +7,7 @@ updatedAt: "2023-03-09T22:55:53.659Z"
 ---
 :::note
 
-Although VRChat on Quest can play video, the application that is used for resolving direct links to videos does not run on VRChat for Quest.
-
-As such, creators will need to work around these problems.
+VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like http://something.com/video.mp4 or http://test.com/cats.webm. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
 
 Some workarounds exist for advanced users. VRChat has not reviewed these methods, does not condone them, and cannot guarantee their continued operation, but they have been recommended by suggested edits to our documentation.
 
