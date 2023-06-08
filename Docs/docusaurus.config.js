@@ -10,11 +10,19 @@ const config = {
   tagline: 'Learn, create and share using our tools and documentation.',
   url: 'https://creator.docs.vrchat.com',
   baseUrl: '/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',
   organizationName: 'vrchat', // Usually your GitHub org/user name.
   projectName: 'CreatorDocs', // Usually your repo name.
+
+  scripts: [
+    {
+      defer: true,
+      src: 'https://plausible.io/js/script.js',
+      'data-domain': 'creators.vrchat.com'
+    },
+  ],
 
   presets: [
     [
@@ -24,17 +32,18 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // editUrl: ({versionDocsDirPath, docPath}) =>
-          //     `https://github.com/vrchat-community/CreatorDocs/edit/main/Docs/Source/${docPath}`,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+              `https://github.com/vrchat-community/creator-docs/edit/main/Docs/docs/${docPath}`,
           
         },
         blog: {
-          path: 'news',
-          routeBasePath: 'news',
+          path: 'releases',
+          routeBasePath: 'releases',
+          blogTitle: 'VRChat SDK Releases',
+          blogDescription: 'The latest VRChat SDK releases and patch notes.',
           showReadingTime: false,
-          // Please change this to your repo.
-          // editUrl: 'https://github.com/vrchat-community/CreatorDocs',
+          blogSidebarTitle: 'History',
+          blogSidebarCount: 'ALL'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,14 +59,11 @@ const config = {
         defaultMode: 'dark',
         respectPrefersColorScheme: true,
       },
-      // announcementBar: {
-      //   id: 'open_beta',
-      //   content:
-      //       '<b>This Tool is in an Open Beta, the Docs are not yet complete.</b>',
-      //   backgroundColor: '#21af90',
-      //   textColor: '#000',
-      //   isCloseable: true,
-      // },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
         title: 'VRChat Creation',
         logo: {
@@ -65,9 +71,9 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {to: 'worlds/worlds', label: 'Worlds', position: 'left'},
-          {to: 'avatars/avatars', label: 'Avatars', position: 'left'},
-          {to: '/news', label: 'Releases', position: 'left'},
+          {to: 'worlds', label: 'Worlds', position: 'left'},
+          {to: 'avatars', label: 'Avatars', position: 'left'},
+          {to: 'releases', label: 'Releases', position: 'left'},
           {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp', position: 'right'},
           {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion', position: 'right'},
           {to: 'https://clientsim.docs.vrchat.com', label: 'ClientSim', position: 'right'},
@@ -79,8 +85,8 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {to: 'worlds/worlds', label: 'Worlds'},
-              {to: 'avatars/avatars', label: 'Avatars'},
+              {to: 'worlds', label: 'Worlds'},
+              {to: 'avatars', label: 'Avatars'},
             ],
           },
           {
@@ -109,7 +115,7 @@ const config = {
             items: [
               {
                 label: 'Releases',
-                to: '/news',
+                to: '/releases',
               },
             ],
           },
@@ -119,6 +125,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['csharp']
       },
       algolia: {
         appId: 'NQHMNOH2YO',

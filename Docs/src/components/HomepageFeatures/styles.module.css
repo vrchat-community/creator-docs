@@ -4,3 +4,9 @@
     padding: 2rem 0;
     width: 100%;
 }
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}

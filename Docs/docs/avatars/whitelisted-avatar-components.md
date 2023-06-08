@@ -15,7 +15,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 :::
 ## VRChat
 
-- [VRCAvatarDescriptor](/avatars/vrc_avatardescriptor) 
+- VRCAvatarDescriptor 
 - PipelineManager
 - [VRCStation](/worlds/components/vrc_station)
 - [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
@@ -50,12 +50,12 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [FlareLayer](https://docs.unity3d.com/Documentation/Manual/class-FlareLayer.html)
 - [GUILayer](https://docs.unity3d.com/Documentation/Manual/class-GUILayer.html)
 - [AudioSource](https://docs.unity3d.com/Documentation/Manual/class-AudioSource.html)
-- [AimConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-AimConstraint.html)
-- [LookAtConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-LookAtConstraint.html)
-- [ParentConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-ParentConstraint.html)
-- [PositionConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-PositionConstraint.html)
-- [RotationConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-RotationConstraint.html)
-- [ScaleConstraint](https://docs.unity3d.com/2018.4/Documentation/Manual/class-ScaleConstraint.html)
+- [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
+- [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
+- [ParentConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParentConstraint.html)
+- [PositionConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-PositionConstraint.html)
+- [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
+- [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
 
 \* For the wearer and their friends, camera components are disabled on load. Use an animation to enable the component. For non-friends of the wearer, camera components are removed completely on load.
 
@@ -79,10 +79,11 @@ VRChat has highly modified its implementation of FinalIK. As such, these compone
 \* Using this script on a humanoid avatar will break it.
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
-:::danger
+:::danger Dynamic Bone Deprecated
 
-Support for Dynamic Bone is deprecated. You should use [PhysBones](/avatars/avatar-dynamics/physbones) instead.",
-  "title": "Dynamic Bone Deprecated
+Support for Dynamic Bone is deprecated. You should use [PhysBones](/avatars/avatar-dynamics/physbones) instead.
+  
 :::
+
 - DynamicBone
 - DynamicBoneCollider

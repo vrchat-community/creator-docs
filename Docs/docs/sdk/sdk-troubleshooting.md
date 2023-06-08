@@ -11,7 +11,7 @@ Here are common issues you may come across when using the SDK and how to solve t
 ## The build control panel isn't appearing in the VRChat SDK menu dropdown!
 There are two main reasons this might be happening: 
 
-Make sure you're using the recommended version for VRChat. (See [Setting up the SDK](/sdk/setting-up-the-sdk))
+Make sure you're using the recommended version for VRChat. (See [Setting up the SDK](/sdk))
 
 Check your console tab to ensure there aren't any compilation errors from third-party scripts or components. If there are, you may need to remove those components/scripts.
 

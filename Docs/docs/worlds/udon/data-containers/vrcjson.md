@@ -44,7 +44,27 @@ If this returns false, then the string you provided was not valid JSON. The Data
 
 For performance reasons, VRCJSON does not parse everything immediately. Instead, it only parses the top level of JSON first. if the top level is valid, but you have have invalid JSON further down inside a nested structure, it is possible for the initial DeserializeFromJson to return true. Later, if you use TryGetValue to pull values from something that was invalid, it will return false and give you DataError.UnableToParse.
 
-![vrcjson-usvm8SU.png](/img/worlds/vrcjson-usvm8SU.png)
+```csharp title="Deserializing from JSON"
+if (VRCJson.DeserializeFromJson(json, out DataToken result))
+{
+    // Deserialization succeeded! Let's figure out what we've got.
+    if (result.TokenType == TokenType.DataDictionary)
+    {
+        Debug.Log($"Successfully deserialized as a dictionary with {result.DataDictionary.Count} items.");
+    }
+    else if (result.TokenType == TokenType.DataList)
+    {
+        Debug.Log($"Successfully deserialized as a list with {result.DataList.Count} items.");
+    }
+    else 
+    {
+        // This should not be possible. If DeserializeFromJson returns true, this it *must* be either a dictionary or a list.
+    }
+} else {
+    // Deserialization failed. Let's see what the error was.
+    Debug.Log($"Failed to Deserialize json {json} - {result.ToString()}");
+}
+```
 
 ## Serializing to JSON
 
@@ -52,7 +72,18 @@ For performance reasons, VRCJSON does not parse everything immediately. Instead,
 
 If TrySerializeToJson returns true, then that means it has successfully converted your DataList or DataDictionary into a Json string, and you can safely pull the string out of the result token.
 
-![vrcjson-R4hKHN3.png](/img/worlds/vrcjson-R4hKHN3.png)
+```csharp title="Serializing to JSON"
+if (VRCJson.SerializeToJson(dictionary, JsonExportType.Beautify, out DataToken json))
+{
+    // Successfully serialized! We can immediately get the string out of the token and do something with it.
+    Debug.Log($"Successfully serialized to json: {json.String}");
+} 
+else 
+{
+    // Failed to serialize for some reason, running ToString on the result should tell us why.
+    Debug.Log(json.ToString());
+}
+```
 
 ### JsonExportType
 

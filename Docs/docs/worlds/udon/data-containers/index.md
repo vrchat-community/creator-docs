@@ -1,6 +1,5 @@
 ---
 title: "Data Containers"
-slug: "data-containers-vrcjson"
 sidebar_position: 1
 createdAt: "2023-04-24T23:47:52.981Z"
 updatedAt: "2023-04-25T00:12:39.357Z"

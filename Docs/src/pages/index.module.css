@@ -9,6 +9,7 @@
     position: relative;
     overflow: hidden;
     background-color: #1e509c;
+    background-image: url("/img/homepage/stars.jpg");
 }
 
 /* Styling one class specially in dark mode */

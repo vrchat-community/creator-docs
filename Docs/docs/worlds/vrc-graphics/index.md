@@ -1,6 +1,6 @@
 ---
 title: "VRCGraphics"
-slug: "vrcgraphics"
+
 sidebar_position: 2
 createdAt: "2022-10-27T00:44:59.293Z"
 updatedAt: "2023-02-14T13:45:29.978Z"

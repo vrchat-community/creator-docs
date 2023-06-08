@@ -7,16 +7,16 @@ updatedAt: "2023-02-17T16:00:15.490Z"
 ---
 If you need to update your SDK, it is important that you follow these steps to ensure the update proceeds properly and you don't have any old/conflicting files.
 
-### Version Control
+## Version Control
 If you know how to use it, you may find it beneficial to use version control software like [Git](https://git-scm.com/) to manage your project. You don't need to upload your repository to Github or similar service to gain the benefits of version control. Create a commit before you upgrade SDKs just to be sure.
 
-# VRChat Creator Companion
+## VRChat Creator Companion
 Keeping your SDK up to date is extremely easy with the VCC. See the [VRChat Creator Companion docs](https://vcc.docs.vrchat.com/guides/getting-started) to learn how to use it!
 
 ## Migrating to the VCC
 If you want to learn how to migrate your project to use the VCC, check out the guide [here](https://vcc.docs.vrchat.com/vpm/migrating).
 
-# Manual Updates
+## Manual Updates
 If you're using the VCC, you don't need to worry about manual updates.
 
 ## Legacy SDK3
@@ -24,6 +24,7 @@ If you're using the VCC, you don't need to worry about manual updates.
 
 These instructions only apply to users of our Legacy SDK (`Assets\\VRCSDK`).\nIf your SDK is in your `Packages` folder (`Packages\\com.vrchat.base`), do not follow the instructions below.
 :::
+
 **For SDK3, you should be able to update by simply importing the new SDK over the old one, also known as an in-place upgrade.** This is especially important for SDK3-Avatars, as you may lose State Behaviors on your animators if you incorrectly update!
 
 If you want to be super careful, always back up your projects before updating the SDK.
@@ -51,6 +52,7 @@ If you want to be super careful, always back up your projects before updating th
 
 It is expected to have a handful of errors when you first upgrade SDK3 for Avatars to the Avatar Dynamics SDK. This is due to the SDK installing the Burst and Mathematics packages during the install process, and Unity getting a bit ahead of itself in importing them early.\n\nIf you clear the errors or restart Unity, they should go away.
 :::
+
 ### SDK3 - Avatars - Separate Project Process
 If you run into issues with upgrading via the above process, try this instead:
 1. Close Unity.
@@ -73,6 +75,6 @@ If you're reinstalling the SDK in a project that contains a world using complex 
 6. Copy the newly added SDK/Plugin and associated .META files from the dummy project into your original project
 7. Done. Now you can open your upgraded project, and there will be no crash no matter how complex your trigger work!
 
-# Updating Unity
+## Updating Unity
 
 If you are updating from a previous version of Unity, we [have a guide for updating](/sdk/migrating-to-a-newer-minor-unity-version) to our latest version we support!
