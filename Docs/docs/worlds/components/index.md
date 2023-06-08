@@ -1,6 +1,5 @@
 ---
 title: "Scene Components"
-slug: "scene-components"
 hidden: false
 createdAt: "2017-07-11T20:33:31.318Z"
 updatedAt: "2021-10-20T20:03:08.484Z"

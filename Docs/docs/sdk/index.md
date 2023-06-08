@@ -1,6 +1,5 @@
 ---
 title: "Setting up the SDK"
-slug: "SDK"
 excerpt: "Learn how to create a Unity project for VRChat worlds or avatars"
 sidebar_position: 2
 createdAt: "2017-09-15T23:23:08.394Z"
@@ -13,7 +12,7 @@ There are multiple ways of downloading the VRChat <<glossary:SDK>>.
 
 
 ## Step 0 - Installing Unity
-If you already have Unity up and running, you can skip to [Step 1](setting-up-the-sdk#section-step-1-creating-a-project). The [Creator Companion](https://vcc.docs.vrchat.com/) automatically installs Unity for you.
+If you already have Unity up and running, you can skip to [Step 1](#section-step-1-creating-a-project). The [Creator Companion](https://vcc.docs.vrchat.com/) automatically installs Unity for you.
 
 If you'd like to install Unity yourself, check the [Current Supported Unity Version](/sdk/current-unity-version) page, and install the version of Unity that VRChat currently supports-- ideally using Unity Hub.
 
@@ -55,4 +54,4 @@ To use the SDK, you will need to log in. To do so, navigate to `VRChat SDK > Sho
 Keep in mind that you must have a VRChat account of at least "New User" [Trust Rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system) to upload content. You cannot use a Steam, Oculus, or Viveport account to upload content.
 
 ### What's Next?
-Your project is ready! You can move on to [World Creation](/worlds/worlds) or [Avatar Creation](/avatars/avatars).
+Your project is ready! You can move on to [World Creation](/worlds) or [Avatar Creation](/avatars).

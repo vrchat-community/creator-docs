@@ -1,13 +1,14 @@
 ---
 title: "Networking"
-slug: "udon-networking"
 sidebar_position: 1
 createdAt: "2020-12-15T00:35:42.570Z"
 updatedAt: "2023-01-16T15:28:57.978Z"
 ---
 :::note Overview
 
-Multiplayer experiences are the heart of VRChat, so creating a world that reacts to players and synchronizes the data between them is key.\n\nThis page introduces the concepts that power our networking system. Once you've understood the basics, you can dig into specifics:\n* [Network Components](/worlds/udon/networking/network-components)\n* [Network Specs and Tips](/worlds/udon/networking/network-details)
+Multiplayer experiences are the heart of VRChat, so creating a world that reacts to players and synchronizes the data between them is key.\n\nThis page introduces the concepts that power our networking system. Once you've understood the basics, you can dig into specifics:
+* [Network Components](/worlds/udon/networking/network-components)
+* [Network Specs and Tips](/worlds/udon/networking/network-details)
 :::
 
 # Overview: How Networking Works in Udon
@@ -95,15 +96,15 @@ There are four ways you can synchronize data and events in your world:
 ### 1. Continuous Variable
 Use this when you have a variable that you want to update frequently, and it's ok if it sometimes doesn't update to save bandwidth for other things. This will sync for late joiners.
 
-**Example**: A tree that grows as someone waters it, with a continuous 'size' variable. It's ok if you miss a few updates since it will jump to the right position on the next update you get. See [Using Variables](/worlds/udon/networking/index.md/udon-networking#using-variables) below. 
+**Example**: A tree that grows as someone waters it, with a continuous 'size' variable. It's ok if you miss a few updates since it will jump to the right position on the next update you get. See [Using Variables](/worlds/udon/networking#using-variables) below. 
 
 ### 2. Manual Variable
-Use this when you have a variable that will update less frequently, and it's super important that its value is always up-to-date. This will sync for late joiners. This option is not compatible with Object Sync. See [Using Variables](/worlds/udon/networking/index.md/udon-networking#using-variables) below. 
+Use this when you have a variable that will update less frequently, and it's super important that its value is always up-to-date. This will sync for late joiners. This option is not compatible with Object Sync. See [Using Variables](/worlds/udon/networking#using-variables) below. 
 
 **Example**: The 'score' of each team in a basketball game. This only changes when someone makes a basket and you definitely don't want to miss an update.
 
 ### 3. Custom Network Events
-Use this to trigger an event for every player currently in the instance, or for the owner of an object. It is guaranteed to arrive, but will have a fair amount of delay and overhead. It will not be received by anyone who joins after the event was sent. See [Using Events](/worlds/udon/networking/index.md/udon-networking#using-events) below. 
+Use this to trigger an event for every player currently in the instance, or for the owner of an object. It is guaranteed to arrive, but will have a fair amount of delay and overhead. It will not be received by anyone who joins after the event was sent. See [Using Events](/worlds/udon/networking#using-events) below. 
 
 **Example**: A laser effect that fires as part of your Dance Club. You want everyone in the club to see it around the same time, but if someone comes in 20 minutes later, it's ok that they missed it.
 
@@ -169,7 +170,7 @@ You can sync variables and arrays of variables of the following types:\nbool, ch
 
 :::caution Array Sync
 
-When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/docs/network-components#onpostserialization) node
+When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/worlds/udon/networking/network-components#onpostserialization) node
 :::
 
 # Using Custom Events

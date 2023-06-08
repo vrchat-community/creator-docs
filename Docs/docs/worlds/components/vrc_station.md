@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-07-06T02:54:59.005Z"
 updatedAt: "2023-03-15T22:59:46.292Z"
 ---
-Used to allow users to sit down. Example can be found in the SDK as [VRCChair](/worlds/examples/udon-example-scene/udon-example-scene#VRCChair3).
+Used to allow users to sit down. Example can be found in the SDK as [VRCChair](/worlds/examples/udon-example-scene#VRCChair3).
 
 This component can also be used on avatars to create seats on avatars!
 

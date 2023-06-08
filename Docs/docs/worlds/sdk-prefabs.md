@@ -7,7 +7,6 @@ updatedAt: "2022-03-03T00:38:28.712Z"
 ---
 This is a list of prefabs available in our SDKs!
 
-# SDK3 Prefabs
 ## VRCAvatarPedestal
 An example of how to create an avatar pedestal that you click on to wear a new avatar using Udon.
 
@@ -36,7 +35,7 @@ An example of how to use [VRC_SceneDescriptor](/worlds/components/vrc_scenedescr
 Found in  `VRChat examples > Prefabs > World`.
 
 ## VRCVideoSync
-An example of how to create an Udon-powered [Video Player](/worlds/udon/video-players/video-players). 
+An example of how to create an Udon-powered [Video Player](/worlds/udon/video-players/). 
 
 Found in `VRChat Examples > Prefabs > Video Players`.
 

@@ -1,6 +1,5 @@
 ---
 title: "Midi in Udon"
-slug: "midi"
 excerpt: "Use midi data in your worlds, from midi files, or in real-time"
 sidebar_position: 1
 createdAt: "2021-02-26T21:32:09.385Z"

@@ -65,9 +65,19 @@ There are several different ways to get a value out of a DataList. Each one has 
 
 ### TryGetValue
 
-If you want to get a value out of a list safely, it is recommended to use `TryGetValue`. This is a function that returns true or false depending on whether or not getting the value was successful. It is intended to put this inside of the conditions for an `if` or a `branch` so that it is clear what happens when it succeeds and what happens when it fails. 
+If you want to get a value out of a list safely, it is recommended to use `TryGetValue`. This is a function that returns true or false depending on whether or not getting the value was successful. It is intended to put this inside of the conditions for an `if` or a `branch` so that it is clear what happens when it succeeds and what happens when it fails.
 
-![data-lists-6OccJz1.png](/img/worlds/data-lists-6OccJz1.png)
+```csharp title="Example of TryGetValue"
+if (list.TryGetValue(0, out DataToken value))
+{
+    Debug.Log($"Success! {value}");
+}
+else
+{
+    Debug.Log("Failed! {value}");
+}
+
+```
 
 If this does fail, the DataToken you receive is still valid, but rather than containing your data it will contain an [error](/worlds/udon/data-containers/data-tokens#errors).
 
@@ -81,19 +91,51 @@ If you want to get a value from a list and you don't know what type it could be,
 
 This method is good for when you want to get a specific value from a specific location, but the data is coming from an outside source so you are not confident that the source has the right data.
 
-![data-lists-DFwsoO7.png](/img/worlds/data-lists-DFwsoO7.png)
+```csharp title="Example of TryGetValue with TokenType"
+// You could do it this way, but it's a bit ugly
+if (list.TryGetValue(0, out DataToken value)) {
+    if (value.TokenType == TokenType.DataDictionary)
+    {
+        Debug.Log($"Success! Matching dictionary has {value.DataDictionary.Count} items");
+    }
+}
+
+// This approach has a type check built in! It's functionally the same, but streamlined.
+if (list.TryGetValue(0, TokenType.DataDictionary, out value)) {
+    Debug.Log($"Success! Matching dictionary has {value.DataDictionary.Count} items");
+}
+```
 
 ### Shorthand Bracket syntax
 
 You can also set and get items from a DataList using bracket syntax such as `list[5] = "value";` in UdonSharp or `DataList Get Item` node in Udon graph. This method is smaller and easier to use. However, be aware that this is not completely safe and may halt your udonbehaviour if you attempt to perform an invalid operation. You should only use this if you have complete control over the data and can guarantee that it exists and is the type you expect. Otherwise, it is recommended to use some form of `TryGetValue`.
 
-![data-lists-yXXHOo1.png](/img/worlds/data-lists-yXXHOo1.png)
+```csharp title="Example of Shorthand Bracket syntax"
+list[0] = 5;
+list[1] = 10;
+
+// This makes the assumption that index 0 and 1 will always contain integers.
+// This is a safe assumption to make since we set them just above in a controlled environment.
+// If the data is coming from an external source, we shouldn't make these assumptions!
+int sum = list[0].Int + list[1].Int;
+```
 
 ## Initializing A Data List
 
 In Udonsharp, Data Lists can be initialized in private variables. This allows you to have a pre-existing set of data that is defined before your code runs. This also supports nested dictionaries and anything else that DataTokens support. Here is an example of how you should use this syntax:
 
-![data-lists-TH0SKD8.png](/img/worlds/data-lists-TH0SKD8.png)
+```csharp title="Example of initializing a Data List"
+private DataList _groceries = new DataList()
+{
+    "Bananas",
+    "Grapes",
+    "Milk",
+    "Soda",
+    "Turkey",
+    "Ham",
+    "Roast Beef"
+}
+```
 
 At the moment, Udonsharp does not support initializers of this type inside a function. This would be a feature request for Udonsharp.
 
@@ -105,7 +147,35 @@ Data Lists cannot be directly synced. However, they can be serialized to/from JS
 
 One way to do this is to use OnPreSerialization and OnDeserialization to Serialize and Deserialize the json string. Using this method, you won't need to worry about the serialization within the rest of your code, and you can simply set values and forget.
 
-![data-lists-KkbZCI0.png](/img/worlds/data-lists-KkbZCI0.png)
+```csharp title="Example of syncing a Data List with other players over the network"
+[UdonSynced]
+private string _json;
+private DataList _list;
+
+public override void OnPreSerialization()
+{
+    if (VRCJson.TrySerializeToJson(_list, JsonExportType.Minify, out DataToken result))
+    {
+        _json = result.String;
+    }
+    else
+    {
+        Debug.LogError(result.ToString());
+    }
+}
+
+public override void OnDeserialization()
+{
+    if(VRCJson.TryDeserializeFromJson(_json, out DataToken result))
+    {
+        _list = result.DataList;
+    }
+    else
+    {
+        Debug.LogError(result.ToString());
+    }
+}
+```
 
 ## FAQ
 

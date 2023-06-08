@@ -1,6 +1,5 @@
 ---
 title: "Avatar Dynamics"
-slug: "avatar-dynamics"
 sidebar_position: 0
 hidden: false
 createdAt: "2022-03-02T23:49:56.488Z"

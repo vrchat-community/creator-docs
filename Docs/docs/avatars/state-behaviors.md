@@ -7,7 +7,7 @@ updatedAt: "2023-02-08T15:38:26.170Z"
 ---
 :::caution Unity Knowledge Required
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2018.4/Documentation/Manual/class-AnimatorController.html).
+This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
 When you've got a specific state selected in the Animator view, you'll be able to add State Behaviors. They're a bit like components for states. They do different things. Try adding them, and you'll see what they can do!
 
@@ -18,7 +18,8 @@ State behaviors *should* run no matter how long the state machine remains in the
 
 The term "should" is deliberately used here, as in the [Unity documentation](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html) does not define any guarantee that state behaviors will execute given very small transition or state durations.\n\nIf you wanted to be **completely** safe, ensure the total time spent in the state containing the state behavior and any transitions directly to that state is a minimum of 0.02 seconds-- although in practice, this doesn't seem to be required.
 :::
-# Animator Layer Controller
+
+## Animator Layer Controller
 
 ![Unity_2020-07-08_12-50-04.png](/img/avatars/state-behaviors-e78eb77-Unity_2020-07-08_12-50-04.png)
 
@@ -38,7 +39,7 @@ Certainly! Here's the information reformatted into a two-column markdown table:
 | Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
 
 
-# Animator Locomotion Control
+## Animator Locomotion Control
 
 ![state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png](/img/avatars/state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png)
 The Animator Locomotion Control allows you to disable locomotion in a given state of an animator. The Locomotion state will remain until some other state runs this State Behavior again and changes it.
@@ -49,7 +50,7 @@ In Desktop mode, this disables translational movement, and restricts rotational 
 | Disable Locomotion | If set to True, locomotion (moving with the controls) will be disabled. Roomscale movement will still be possible. If set to False, will enable locomotion. |
 | Debug String | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
 
-# Animator Temporary Pose Space
+## Animator Temporary Pose Space
 ![state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png](/img/avatars/state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png)
 
 The Animator Temporary Pose Space control allows you to move the viewpoint of the person wearing the avatar to the head at that given point of the animator state.
@@ -72,8 +73,10 @@ This state behavior **will not execute** if the state this behavior is on is exi
 | Debug String  | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.                                                          |
 
 
-# Animator Tracking Control
+## Animator Tracking Control
+
 ![state-behaviors-076baca-Unity_2020-07-08_13-26-00.png](/img/avatars/state-behaviors-076baca-Unity_2020-07-08_13-26-00.png)
+
 The Animator Tracking Control allows you to enable or disable IK or simulated movement on various different parts of the avatar body. Setting the option to "No Change" will not change the body part from its current value. "Tracking" will set it to following IK or simulated movement. "Animation" will force that body part to respect values as given by the avatar's Animator.
 
 If you set all IK tracking points to Animation, your animation will play as the Animation remotely, instead of being translated through Networked IK. For the various types of tracking, these "IK tracking points" are:
@@ -91,8 +94,10 @@ The Tracking setting will be kept until some other state runs this State Behavio
 | Tracking Control | See description above. |
 | Debug String | When this State Behavior runs,this string will be printed to the output log. Useful for debugging. |
 
-# Avatar Parameter Driver
+## Avatar Parameter Driver
+
 ![image](/img/avatars/state-behaviors-fa19a1d-2022-06-02_18-11-06_Unity.png)
+
 The Avatar Parameter Driver can manipulate Animator Parameters in a variety of ways. A single Avatar Parameter can perform multiple operations, and they are done in order from top to bottom. These operations are completed *once* upon entry to the State upon which the behavior resides.
 
 `Local Only` will cause the driver to only operate locally, as a shortcut instead of detecting `isLocal`.
@@ -109,18 +114,21 @@ Set, Add, Random, and Copy work for `float` and `int`. Set, Random, and Copy wor
 
 ## Set
 Set will simply set the Value to the named Parameter in Destination.
+
 ![state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png](/img/avatars/state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png)
 
 ## Add
 Add will add the Value to the named Parameter in Destination.
 
 As the component points out, using Add may not produce the same result when run on a remote instance of the avatar. When using Add, it is suggested to use a synced Destination Parameter and only run the driver locally.
+
 ![state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png](/img/avatars/state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png)
         
 ## Random
 Random will set the Destination Parameter to a random number between Min Value and Max Value.
 
 As the component points out, using Random may not produce the same result when run on a remote instance of the avatar. When using Random, it is suggested to use a synced Destination Parameter and only run the driver locally.
+
 ![state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png](/img/avatars/state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png)
 
 ## Copy
@@ -141,9 +149,11 @@ When converting to a `float`, it will directly copy the value, even if it goes o
 
 ### Custom Ranges
 You can also use the `Convert Range` checkbox to enable some additional UI that allows you to set custom conversion ranges. This can be used to remap values or to have more control over exactly how it converts from one type to another type.
+
 ![state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png](/img/avatars/state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png)
 
 # Playable Layer Control
+
 ![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/img/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
         
 The Playable Layer Control allows you to blend the weight of the entire Playable Layer to a specified value over specified duration. Very similar to Animator Layer Control, but instead controls the entire Playable Layer.

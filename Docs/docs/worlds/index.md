@@ -1,6 +1,5 @@
 ---
 title: "Worlds"
-slug: "worlds"
 hidden: false
 sidebar_position: 0
 createdAt: "2017-09-10T16:25:55.819Z"
@@ -14,4 +13,4 @@ Check out [Creating Your First World](/worlds/udon/creating-your-first-world) to
 - [Whitelisted World Components](/worlds/whitelisted-world-components) 
 - [Supported Scripted Assets](/worlds/supported-assets) 
 - [World Creation, Optimization, and Community Labs Tips](/worlds/submitting-a-world-to-be-made-public)
-- [What is Udon?](/worlds/udon/index.md/what-is-udon)
+- [What is Udon?](/worlds/udon)

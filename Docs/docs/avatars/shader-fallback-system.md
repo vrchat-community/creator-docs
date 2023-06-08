@@ -7,7 +7,7 @@ updatedAt: "2022-08-12T01:21:02.481Z"
 ---
 This page serves as a description of the Shader Blocking System, how it operates, and how shader authors can work with it so that their shader falls back gracefully when a user has Shaders blocked on an avatar using a given shader.
 
-# VRChat 2021.4.2 Fallback System Upgrade
+## VRChat 2021.4.2 Fallback System Upgrade
 Shader fallback improvements work by using the "Tags" field at the top of the shader.
 ```text
 Tags{"Queue"="Geometry"}
@@ -81,7 +81,7 @@ _SrcBlend
 _DstBlend
 _ZWrite
 ```
-# Old Fallback System
+## Old Fallback System
 When a shader is blocked by the Safety System, it is first checked for one of the internal pre-compiled shaders in this list:
 ```text title="Pre-Compiled Internal Shaders"
   "Standard",
