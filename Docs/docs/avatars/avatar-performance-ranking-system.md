@@ -120,38 +120,38 @@ On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor
 
 Triangles (polygons) are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 polygons, the avatar will be marked as Very Poor immediately.
 
-| Parameter                                                             | Description |
-|-----------------------------------------------------------------------| --- |
-| Polygons                                                              | 32,000 |
-| Bounds Size<sup>1</sup>                                               | 2.5mx2.5mx2.5m |
-| Texture Memory                                                        | 40MB |
-| Skinned Meshes                                                        | 1 |
-| Meshes                                                                | 4 |
-| Material Slots                                                        | 4 |
-| Dynamic Bone Components                                               | 0 |
-| Dynamic Bone Transforms                                               | 0 |
-| Dynamic Bone Colliders                                                | 0 |
-| Dynamic Bone Collision Check Count                                    | 0 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components            | 4 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms   | 16 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders             | 4 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count | 32 |
-| Avatar Dynamics[Contacts](/avatars/avatar-dynamics/contacts)          | 8 |
-| Animators                                                             | 1 |
-| Bones                                                                 | 75 |
-| Lights                                                                | 0 |
-| Particle Systems                                                      | 0 |
-| Total Particles Active                                                | 0 |
-| Mesh Particle Active Polys                                            | 0 |
-| Particle Trails Enabled                                               | False |
-| Particle Collision Enabled                                            | False |
-| Trail Renderers                                                       | 1 |
-| Line Renderers                                                        | 1 |
-| Cloths                                                                | 0 |
-| Total Cloth Vertices                                                  | 0 |
-| Physics Colliders                                                     | 0 |
-| Physics Rigidbodies                                                   | 0 |
-| Audio Sources                                                         | 1 |
+| Avatar Quality                                                        | Excellent          | Good         | Medium       | Poor         |
+|-----------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
+| Polygons                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
+| Bounds Size<sup>1</sup>                                               | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                        | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
+| Skinned Meshes                                                        | 1                  | 2            | 8            | 16           |
+| Meshes                                                                | 4                  | 8            | 16           | 24           |
+| Material Slots                                                        | 4                  | 8            | 16           | 32           |
+| Dynamic Bone Components                                               | 0                  | 4            | 16           | 32           |
+| Dynamic Bone Transforms                                               | 0                  | 16           | 32           | 256          |
+| Dynamic Bone Colliders                                                | 0                  | 0            | 4            | 32           |
+| Dynamic Bone Collision Check Count                                    | 0                  | 0            | 8            | 256          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Components            | 4                  | 8            | 16           | 32           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms   | 16                 | 64           | 128          | 256          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders             | 4                  | 8            | 16           | 32           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count | 32                 | 128          | 256          | 512          |
+| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)         | 8                  | 16           | 24           | 32           |
+| Animators                                                             | 1                  | 4            | 16           | 32           |
+| Bones                                                                 | 75                 | 150          | 256          | 400          |
+| Lights                                                                | 0                  | 0            | 0            | 1            |
+| Particle Systems                                                      | 0                  | 4            | 8            | 16           |
+| Total Particles Active                                                | 0                  | 300          | 1000         | 2500         |
+| Mesh Particle Active Polys                                            | 0                  | 1000         | 2000         | 5000         |
+| Particle Trails Enabled                                               | False              | False        | True         | True         |
+| Particle Collision Enabled                                            | False              | False        | True         | True         |
+| Trail Renderers                                                       | 1                  | 2            | 4            | 8            |
+| Line Renderers                                                        | 1                  | 2            | 4            | 8            |
+| Cloths                                                                | 0                  | 1            | 1            | 1            |
+| Total Cloth Vertices                                                  | 0                  | 50           | 100          | 200          |
+| Physics Colliders                                                     | 0                  | 1            | 8            | 8            |
+| Physics Rigidbodies                                                   | 0                  | 1            | 8            | 8            |
+| Audio Sources                                                         | 1                  | 4            | 8            | 8            |
 
 Footnotes:
 1: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
@@ -177,28 +177,28 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
 :::
 
-| Parameter                                                                         | Description |
-|-----------------------------------------------------------------------------------| --- |
-| Polygons                                                                          | 7,500 |
-| Bounds Size <sup>1</sup>                                                          | 2.5mx2.5mx2.5m |
-| Texture Memory                                                                    | 10MB |
-| Skinned Meshes                                                                    | 1 |
-| Meshes                                                                            | 1 |
-| Material Slots                                                                    | 1 |
-| Animators                                                                         | 1 |
-| Bones                                                                             | 75 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components<sup>2</sup>            | 0 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms<sup>2</sup>   | 0 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders<sup>2</sup>             | 0 |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count<sup>2</sup> | 0 |
-| Avatar Dynamics[Contacts](/avatars/avatar-dynamics/contacts)<sup>2</sup>          | 2 |
-| Particle Systems                                                                  | 0 |
-| Total Particles Active                                                            | 0 |
-| Mesh Particle Active Polys                                                        | 0 |
-| Particle Trails Enabled                                                           | False |
-| Particle Collision Enabled                                                        | False |
-| Trail Renderers                                                                   | 0 |
-| Line Renderers                                                                    | 0 |
+| Avatar Quality                                                                    | Excellent          | Good         | Medium       | Poor         |
+|-----------------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
+| Polygons                                                                          | 7,500              | 10,000       | 15,000       | 20,000       |
+| Bounds Size <sup>1</sup>                                                          | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                                    | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
+| Skinned Meshes                                                                    | 1                  | 1            | 2            | 2            |
+| Meshes                                                                            | 1                  | 1            | 2            | 2            |
+| Material Slots                                                                    | 1                  | 1            | 2            | 4            |
+| Animators                                                                         | 1                  | 1            | 1            | 2            |
+| Bones                                                                             | 75                 | 90           | 150          | 150          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Components<sup>2</sup>            | 0                  | 4            | 6            | 8            |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms<sup>2</sup>   | 0                  | 16           | 32           | 64           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders<sup>2</sup>             | 0                  | 4            | 8            | 16           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count<sup>2</sup> | 0                  | 16           | 32           | 64           |
+| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)<sup>2</sup>         | 2                  | 4            | 8            | 16           |
+| Particle Systems                                                                  | 0                  | 0            | 0            | 2            |
+| Total Particles Active                                                            | 0                  | 0            | 0            | 200          |
+| Mesh Particle Active Polys                                                        | 0                  | 0            | 0            | 400          |
+| Particle Trails Enabled                                                           | False              | False        | False        | True         |
+| Particle Collision Enabled                                                        | False              | False        | False        | True         |
+| Trail Renderers                                                                   | 0                  | 0            | 0            | 1            |
+| Line Renderers                                                                    | 0                  | 0            | 0            | 1            |
 
 Footnotes:
 1: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
