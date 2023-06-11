@@ -45,7 +45,7 @@ If this returns false, then the string you provided was not valid JSON. The Data
 For performance reasons, VRCJSON does not parse everything immediately. Instead, it only parses the top level of JSON first. if the top level is valid, but you have have invalid JSON further down inside a nested structure, it is possible for the initial DeserializeFromJson to return true. Later, if you use TryGetValue to pull values from something that was invalid, it will return false and give you DataError.UnableToParse.
 
 ```csharp title="Deserializing from JSON"
-if (VRCJson.DeserializeFromJson(json, out DataToken result))
+if (VRCJson.TryDeserializeFromJson(json, out DataToken result))
 {
     // Deserialization succeeded! Let's figure out what we've got.
     if (result.TokenType == TokenType.DataDictionary)
@@ -73,7 +73,7 @@ if (VRCJson.DeserializeFromJson(json, out DataToken result))
 If TrySerializeToJson returns true, then that means it has successfully converted your DataList or DataDictionary into a Json string, and you can safely pull the string out of the result token.
 
 ```csharp title="Serializing to JSON"
-if (VRCJson.SerializeToJson(dictionary, JsonExportType.Beautify, out DataToken json))
+if (VRCJson.TrySerializeToJson(dictionary, JsonExportType.Beautify, out DataToken json))
 {
     // Successfully serialized! We can immediately get the string out of the token and do something with it.
     Debug.Log($"Successfully serialized to json: {json.String}");
