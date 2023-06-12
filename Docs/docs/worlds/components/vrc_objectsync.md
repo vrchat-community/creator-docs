@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-07-07T19:28:16.383Z"
 updatedAt: "2021-10-20T20:08:39.807Z"
 ---
-Used to sync transform values of a gameObject.
+Syncs the transform of a GameObject with all players in the instance.
 
 It has one option.
 

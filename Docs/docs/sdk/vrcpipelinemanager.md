@@ -18,7 +18,13 @@ This component is added automatically when the component it depends on is added 
 If you want to upload the world or avatar to a different blueprint you can press the `Detach (Optional)` button
 :::danger Required Blueprint Format
 
-Blueprint IDs can only be of the following format where 0 is replaced with [0-9] [a-f]:\n\navtr_00000000-0000-0000-0000-000000000000\nwrld_00000000-0000-0000-0000-000000000000\n\nAny other ID format will not be accepted. This is normally done automatically, so you shouldn't ever have to create your own Blueprint ID-- just click "Attach" and one will be generated for you.
+Blueprint IDs can only be of the following format where 0 is replaced with [0-9] [a-f]:
+
+`avtr_00000000-0000-0000-0000-000000000000`
+
+`wrld_00000000-0000-0000-0000-000000000000`
+
+Any other ID format will not be accepted. This is normally done automatically, so you shouldn't ever have to create your own Blueprint ID-- just click "Attach" and one will be generated for you.
 :::
 
 ![vrcpipelinemanager-7d57e76-Unity_2017-12-10_01-35-44.png](/img/sdk/vrcpipelinemanager-7d57e76-Unity_2017-12-10_01-35-44.png)

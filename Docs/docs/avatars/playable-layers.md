@@ -84,15 +84,25 @@ This layer is **blended to zero by default.** Before you do anything in the acti
 Animations in Action should _only_ affect transforms.
 
 ## FX
-FX is a **special layer.** On every other layer, you should not be using material animations, shader property animations, or blendshape animations, because they aren't copied to your mirror clone. Only transforms are.
+FX is a **special layer.** On every other layer, you should not be using material animations, shader property animations, or blend shape animations, because they aren't copied to your mirror clone. Only transforms are.
 
 However, in the FX layer, everything is copied over! In other words, ***everything that isn't a humanoid transform/muscle animation should go into the FX layer.*** This includes (but is not limited to) things like enabling/disabling GameObjects, components, material swaps, shader animations, particle system animating, etc.
 
 The mask in the first FX layer, by default is empty, this will (at avatar init) create a default mask that disables all humanoid muscles, but enables all GameObject animations. This means that any animations in the hierarchy should work, although it is still NOT RECOMMENDED to animate transforms here.
 
-If you have non-muscle animations in your gestures (eg. your Gesture Mask has any transforms checked at the bottom) those same transforms must be DISABLED in your FX mask. This will allow your Gesture animations to "show through" the FX layer.
+If you have non-muscle animations in your gestures (eg. your Gesture [mask](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AvatarMask.html) has any transforms checked at the bottom) those same transforms must be DISABLED in your FX mask. This will allow your Gesture animations to "show through" the FX layer.
 
-Example: you have a Tail on your avatar (chain of bones not part of humanoid hierarchy). Your Gesture Layer for the Tail has a special mask with only the chain of bones enabled. Your Gesture "All-Parts Mask" also has those bones checked (along with the other body parts animated in the rest of the controller). In this case, you'd also want to create a custom mask in the first FX layer. This would mask OFF all the muscles (human diagram all red) and mask OFF all the bones in the tail. You'd also want to make sure this mask has the checkboxes ON for any transforms that have components you will be animating for FX. eg. a Body skinned-mesh, for animating blendshapes or materials.
+:::info Example
+
+Let's say your avatar has the following setup:
+- You have a tail on your avatar (a chain of bones not part of humanoid hierarchy).
+- Your Gesture animator layer for the tail has a special mask with only the chain of bones enabled.
+- Your other Gesture animator layer with an "all-parts mask" also has those bones checked (along with the other body parts animated in the rest of the controller).
+
+In this case, you'd also want to create a custom mask in the first FX layer. This would mask OFF all the muscles (human diagram all red) and mask OFF all the bones in the tail.
+You'd also want to make sure this mask has the checkboxes ON for any transforms that have components you will be animating for FX. E.g. a body skinned mesh for animating blend shapes or materials.
+
+:::
 
 Note that if you have a game object in your hierarchy that has both an animated transform (in Gesture) and an animated effect component (in FX), this will not work with the requirements for the masks. This can occur if you have a simple static-mesh embedded in your hierarchy that you are animating in Gesture, but also applying a material change to in FX. Another example, would be putting a particle effect component directly on the example tail bones above. The simple workaround is to make a child game object and put the static-mesh or effect on that. You would not animate the transform of the child, only the parent. If you follow these steps, you should not need to put transform animations in the FX layer.
 
@@ -103,7 +113,9 @@ There are some additional poses available for Avatars 3.0 avatars. The buttons f
 You can now provide your own T-Pose!
 
 The T-Pose is used to determine various measurements of your avatar, especially for placement of your viewpoint (or view-ball). Viewpoint is dependent entirely on where your view-ball is when your avatar is in this T-Pose animation you provide.
+
 ![Standard T-Pose - [Mixamo](https://www.mixamo.com)](/img/avatars/playable-layers-1.png)
+
 Secondly, it is important for the wrist alignment/twist. The way your wrists are lined up in relation to the palm-down position will affect how your controller twisting in space will turn your wrist and arm.
 
 Finally, your t-pose determines your wingspan-- your full length of your arms when in T-Pose. This also determines your avatar's interpupillary distance (IPD), or the distance between your avatars eyes. Having arms that are too long will make your IPD wider, making everything seem smaller. Having arms that are too short will make your IPD narrower, making everything seem larger.

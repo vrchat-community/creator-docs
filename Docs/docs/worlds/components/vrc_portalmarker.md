@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-07-07T19:29:17.097Z"
 updatedAt: "2019-10-28T19:23:09.654Z"
 ---
-Used to create portals to other rooms.
+Creates portals to other VRChat worlds.
 
 | Parameter | Description                                                                   |
 | --- |-------------------------------------------------------------------------------|

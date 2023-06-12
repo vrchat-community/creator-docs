@@ -2,6 +2,7 @@
 title: "Creating Your First World"
 slug: "creating-your-first-world"
 hidden: false
+sidebar_position: -2
 createdAt: "2017-09-10T16:37:57.021Z"
 updatedAt: "2023-03-30T16:55:26.082Z"
 ---

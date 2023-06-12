@@ -11,6 +11,7 @@ Before getting started, ensure you have a [Unity project with the SDK set up](/s
 
 After setting up the SDK, check out our example **example avatar**. Open your avatar project and go to
 'VRChat SDK > Samples > Avatar Dynamics Robot Avatar.'
+
 ![The example avatar can help you understand what a complete VRChat avatar project might look like.](/img/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
 
 :::note Need help?
@@ -58,6 +59,7 @@ Ensure that the model that you're using is below 70,000 triangles (7,500 for VRC
 Now that you have found the model you want it's time to get it into your project. If you're getting it from the asset store, then you can download and directly import it into your project. If you got the model from elsewhere, then you need to import it and any related textures into your 'Assets' folder.
 
 If you are importing your model from a 3D editor, please ensure you keep in mind the difference between coordinate systems. For example, [**Blender**](https://blender.org)'s default coordinate and unit system differs from Unity's. You must export FBX files from Blender and define the exporter as such:
+
 ![image](/img/avatars/creating-your-first-avatar-b066a1b-2022-05-27_11-13-48_blender.png)
 After you get the model in your assets select it, you'll want to ensure it has the correct settings set, under the rig tab in the inspector make sure the Animation Type is set to Humanoid.
 
@@ -68,10 +70,12 @@ With the model in your assets and with the correct settings on it you will next 
 It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks awry. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
 :::
 ## Step 4 - Adding an Avatar Descriptor 
-After doing so, we now want to add a [VRC Avatar Descriptor](/avatars/creating-your-first-avatar#step-4---adding-an-avatar-descriptor) and then set up the settings for it.
+After doing so, we now want to add a 'VRC Avatar Descriptor' component and then set up the settings for it.
 1. Select the avatar in your hierarchy.
 2. Click 'Add Component' in the inspector.
 3. Search for the 'VRC Avatar Descriptor' component and add it.
+4. Customize its settings, explained below.
+
 ![Add a `VRC Avatar Descriptor` to get started with your avatar.](/img/avatars/creating-your-first-avatar-fd027ea-Unity_qH7NJfAzzn.png)
 ### View position
 First, you'll want to set the view position. This will be where your camera will be positioned in VRChat. You can see a visual representation of it as a small white sphere in the scene. If your avatar has a head, then the best position for the view is between the eyes. If it doesn't have a head, place it wherever you think it's appropriate.
@@ -81,6 +85,7 @@ When you talk, you can make your avatar's mouth (or anything else) react automat
 
 #### Default
 ![Pressing 'Auto Detect!' is usually enough to let your VRChat avatar react to your speech.](/img/avatars/creating-your-first-avatar-d69289f-Unity_FgsAtEU75F.png)
+
 Press 'Auto Detect!' to let the VRChat SDK automatically detect the appropriate lip sync mode. The mode will then switch to one of the modes below.
 
 #### Jaw Flap Bone

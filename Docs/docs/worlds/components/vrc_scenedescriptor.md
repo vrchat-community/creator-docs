@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-07-06T00:43:48.565Z"
 updatedAt: "2019-11-23T01:41:31.381Z"
 ---
-Required and used to describe a VRChat world, one per scene.
+Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.
 
 | Parameter                    | Description                                                                                                     |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |

@@ -1,7 +1,7 @@
 ---
 title: "Welcome!"
 slug: "getting-started"
-sidebar_position: -1
+sidebar_position: -99
 ---
 Your VRChat Creator Journey begins here! 
 

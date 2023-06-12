@@ -6,6 +6,20 @@ createdAt: "2020-07-08T17:39:44.315Z"
 updatedAt: "2023-04-03T18:46:53.072Z"
 sidebar_position: 0
 ---
+
+VRChat allows you to create and upload custom avatars!
+
+# Creating Avatars
+
+To get started, check out [Creating your first avatar](/avatars/creating-your-first-avatar).
+
+There's a whole 'Avatars' category on the sidebar to check out. Here are some of the more impactful and important pages:
+
+- [Rig Requirements](/avatars/rig-requirements) explains how to set up your custom 3D model's hierarchy for VRChat.
+- [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system) explains how some avatars achieve an 'Excellent' performance, and others 'Very Poor'.
+- [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Now that you know _why_, check out this page to learn how to get all your frames back.
+- Continue reading this page to learn more about important Avatars 3.0 SDK concepts.
+
 ## What is Avatars 3.0?
 
 **Avatars 3.0** is our name for all the features available for avatars in VRChat. AV3's features are focused on improving expression, performance, and the abilities of avatars in VRChat.

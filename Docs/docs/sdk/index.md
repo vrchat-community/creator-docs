@@ -1,7 +1,7 @@
 ---
 title: "Setting up the SDK"
 excerpt: "Learn how to create a Unity project for VRChat worlds or avatars"
-sidebar_position: 2
+sidebar_position: -1
 createdAt: "2017-09-15T23:23:08.394Z"
 updatedAt: "2023-02-27T18:28:17.748Z"
 ---
