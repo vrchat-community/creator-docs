@@ -6,11 +6,12 @@ hidden: false
 createdAt: "2019-07-08T14:35:40.642Z"
 updatedAt: "2021-10-20T20:02:34.121Z"
 ---
-This component supercedes `ONSPAudioSource`, which is being deprecated. Use `VRC_SpatialAudioSource` to add 3D spatialization to a Unity `Audio Source`.
+Use `VRC_SpatialAudioSource` to add 3D spatialization to a Unity `Audio Source`.
 
 When added, `VRC_SpatialAudioSource` will automatically add a Unity `Audio Source` component.
 
 This component can be used on both avatars and worlds.
+
 ![image](/img/worlds/vrc_spatialaudiosource-1.png)
 ## Unity Editor Interface
 

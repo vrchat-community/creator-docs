@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2017-07-06T00:55:36.747Z"
 updatedAt: "2023-05-04T21:43:45.162Z"
 ---
-Used to allow objects to be picked up and held
+Allows objects to be picked up, held and used by players.
 
 ## Requires:
 

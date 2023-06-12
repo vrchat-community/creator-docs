@@ -29,7 +29,14 @@ Your avatar affects everyone else's framerate, so be mindful of how your choices
 When you open your Quick Menu, you'll see icons appear on top of the nameplates of users. 
 
 The ranks are as follows:
-<div>Hello World</div>
+
+| Icon                                                  | Performance Rank | Description                                                                                                                                                                       |
+|-------------------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![image](/img/avatars/performance-rank/excellent.png) | Excellent        | This is as good as you can get! The "Gold Star on the Fridge" rank.                                                                                                               |
+| ![image](/img/avatars/performance-rank/good.png)      | Good             | Good enough! A great target to aim for.                                                                                                                                           |
+| ![image](/img/avatars/performance-rank/medium.png)    | Medium           | Don't let the name fool you, Medium is plenty good. If you're here and don't want to work any farther up, you're fine.                                                            |
+| ![image](/img/avatars/performance-rank/poor.png)      | Poor             | Could use some work.                                                                                                                                                              |
+| ![image](/img/avatars/performance-rank/very-poor.png) | Very Poor        | This avatar has some serious performance problems. Since this rank is unbounded, it is very possible that your performance is suffering as a result of this avatar being visible. |
 
 # Viewing Detailed Avatar Stats
 If you click on a user with your Quick Menu open, you'll notice a new **"Show Avatar Stats"** button on the left side, displaying the icon of that user's Performance Rank.

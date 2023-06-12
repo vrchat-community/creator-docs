@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2017-07-07T19:34:10.176Z"
 updatedAt: "2023-01-31T17:09:17.157Z"
 ---
-Script used to make Unity UI interactable in VRChat. Requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
+Make Unity's UI interactable in VRChat. Requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
 
 ## Steps to making an Interact-able UI with VRC_UiShape
 

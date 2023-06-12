@@ -12,7 +12,6 @@ Udon and Unity have built-in events that are automatically called if you include
 Unity provides an (incomplete) list of built-in events, many of which are also available in VRChat. https://docs.unity3d.com/Manual/ExecutionOrder.html
 :::
 The following diagram shows the execution order of the most important events available in Udon and Unity.
-Click on an event to open its documentation page.
 
 ![Example banner](/img/worlds/event-execution-order.svg)
 

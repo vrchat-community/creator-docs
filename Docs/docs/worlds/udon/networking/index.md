@@ -6,7 +6,9 @@ updatedAt: "2023-01-16T15:28:57.978Z"
 ---
 :::note Overview
 
-Multiplayer experiences are the heart of VRChat, so creating a world that reacts to players and synchronizes the data between them is key.\n\nThis page introduces the concepts that power our networking system. Once you've understood the basics, you can dig into specifics:
+Multiplayer experiences are the heart of VRChat, so creating a world that reacts to players and synchronizes the data between them is key.
+
+This page introduces the concepts that power our networking system. Once you've understood the basics, you can dig into specifics:
 * [Network Components](/worlds/udon/networking/network-components)
 * [Network Specs and Tips](/worlds/udon/networking/network-details)
 :::

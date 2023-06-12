@@ -1,6 +1,7 @@
 ---
 title: "World Creation, Optimization, and Community Labs Tips"
 slug: "submitting-a-world-to-be-made-public"
+sidebar_position: -1
 hidden: false
 createdAt: "2018-12-29T00:05:06.003Z"
 updatedAt: "2023-04-21T14:54:14.165Z"
