@@ -88,7 +88,6 @@ If you set all IK tracking points to Animation, your animation will play as the 
 - Desktop: Head, Left Hand, Right Hand
 - 3pt Tracking: Head, Left Hand, Right Hand
 - 6pt / FBT Tracking: Head, Left Hand, Right Hand, Hip, Left Foot, Right Foot
-
 :::note
 
 All parts are IK-driven, aside from the Eyes and Eyelid, which are simulated. Mouth and Jaw are driven by visemes.\n\nAs an example, setting Left and Right Hand to Animation will ignore the position of the hands (and arms) as defined by IK, and will instead use any currently-active state's motion to define the position of the hands and arms. Setting them back to Tracking will use IK instead. \n\nSetting Eyes & Eyelid to Animation will disable eye movement and eyelid blinking. Setting Eyes & Eyelid to Tracking will re-enable the simulated eye movement and blinking.\n\nSetting Mouth and Jaw to Animation will disable visemes, although viseme parameters will still be sent. Setting Mouth and Jaw will re-enable visemes.

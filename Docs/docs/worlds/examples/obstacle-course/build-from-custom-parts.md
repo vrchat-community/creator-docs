@@ -35,7 +35,6 @@ This UdonBehaviour needs the following variables set:
 3. _eventName_ should be set to an Event that exists on the UdonBehaviour referenced above.
 4. _deactivateOnTrigger_ should be checked for Checkpoints so that it can only be activated once per run until a player finishes the course.
 5. _sendPlayerData_ is only required for a Checkpoint being used as a StartGate.
-
 :::note OnPlayerDataEnter details
 
 If you want to learn more about what's going on in this program, you can find the full documentation here: [OnPlayerDataEnter](/worlds/examples/obstacle-course/uoc-how-stuff-works#onplayerdataenter)
@@ -108,7 +107,6 @@ This prefab has a TriggerCollider on the "Trigger" child object which runs the e
 * _lifeDuration_ controls how long this prefab will exist after spawning, to ensure it doesn't stick around forever if there are no players around.
 * _playerModsManager_ is set by the **HazardSpawner** program
 * _speedChange_ works like a typical **PowerUp**. The 'x' value is the change to apply to the player's default speed, and the 'y' value is the duration of the effect. The default setting of (-3,3) on this prefab will subtract 3 from the player's speed for 3 seconds when they touch it.
-
 :::danger UNPACK YOUR HAZARD PREFABS
 
 Since these prefabs are not created and managed through the Utility Window, it's important to unpack them after you place them in your scene. Otherwise the auto-injection might not stick.

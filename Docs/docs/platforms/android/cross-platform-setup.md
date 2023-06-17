@@ -31,11 +31,9 @@ There's some important notes here:
 - [You need to install Unity's Android SDK](https://docs.unity3d.com/Manual/android-sdksetup.html). Otherwise the option won't pop up.
 - Although you *can* swap back and forth between Windows and Android, **you probably don't want to do this.** It changes files around, you probably want to maintain a scaled-back version of your world for Quest, and...
 - It can take a **significant** amount of time to swap to the Android platform. Thankfully, if you maintain two separate projects, you only do this once. If your project is huge or has dozens of avatars, you'll probably want to just export the content you want as Prefabs or UnityPackages, and then create an empty Android project from scratch.
-
 :::note Local Cache Server
 
 You can reduce the time it takes to swap platforms by using Unity's Cache Server, which you can run locally. [Read more about the cache server here](https://docs.unity3d.com/Manual/CacheServer.html). Keep in mind this can take up a significant amount of disk space.
-
 :::
 
 # Fine-tuning and Optimization
