@@ -10,10 +10,9 @@ Setting up a cross-platform world or avatar is actually quite straightforward! I
 If you need a bit more detail on how to do this properly (and easily), here's a short guide.
 # Duplicating your Project (Deprecated)
 
-:::caution
+:::caution Asset Database v2
 
-With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.\n\nYou can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.",
-  "title": "Asset Database v2
+With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.\n\nYou can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.
 :::
 We'll be making the assumption that you already have a VRChat PC project set up with your world or avatar. If this isn't the case, you'll need to set up and create your project for PC first. You could also build for Android/Quest first, but that's your call.
 

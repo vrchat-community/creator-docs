@@ -149,10 +149,9 @@ They are permitted in worlds, but you should be careful not to go overboard with
 Lights are disabled completely on avatars in VRChat Quest.
 
 ### Video Sync Panels
-:::caution
+:::caution VRC_SyncVideoPlayer and VRC_SyncVideoStream
 
-Placing either of these components in your Quest world will break compatibility between your Quest and PC world! Simply remove it from the Quest version.",
-  "title": "VRC_SyncVideoPlayer and VRC_SyncVideoStream
+Placing either of these components in your Quest world will break compatibility between your Quest and PC world! Simply remove it from the Quest version.
 :::
 VRC_SyncVideoPlayer and VRC_SyncVideoStream are both completely disabled in worlds in VRChat Quest.
 
