@@ -15,7 +15,7 @@ This component can be used on both avatars and worlds.
 ![image](/img/worlds/vrc_spatialaudiosource-1.png)
 ## Unity Editor Interface
 
-The component generates two [Unity Gizmos](https://docs.unity3d.com/ScriptReference/Gizmos.html) that show:
+The component generates two [Unity Gizmos](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Gizmos.html) that show:
 
 - Far
 - Near

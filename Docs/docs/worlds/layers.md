@@ -6,7 +6,7 @@ hidden: false
 createdAt: "2023-04-03T21:22:34.611Z"
 updatedAt: "2023-04-24T16:23:07.971Z"
 ---
-[Layers](https://docs.unity3d.com/2019.4/Documentation/Manual/Layers.html) are used in Unity to organize your Game Objects, determine [collisions ](https://docs.unity3d.com/Manual/LayerBasedCollision.html) and [Raycasts](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) between Game Objects, selectively [render](https://docs.unity3d.com/ScriptReference/Camera-cullingMask.html) parts of the scene, and more.
+[Layers](https://docs.unity3d.com/2019.4/Documentation/Manual/Layers.html) are used in Unity to organize your Game Objects, determine [collisions ](https://docs.unity3d.com/2019.4/Documentation/Manual/LayerBasedCollision.html) and [Raycasts](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Physics.Raycast.html) between Game Objects, selectively [render](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Camera-cullingMask.html) parts of the scene, and more.
 
 **You can freely use most Layers in your VRChat world.** Some Layers are shared and used Unity and VRChat.
 

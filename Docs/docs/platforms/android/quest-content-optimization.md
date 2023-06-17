@@ -21,7 +21,7 @@ The Oculus Quest has several hard (and soft) limits for content on avatars. Chec
 
 If you upload an avatar or avatar world that features avatars greatly exceeding our recommendations, that world or avatar may be removed from public access.
 # Unity Profiler
-We strongly, strongly recommend that you check out the [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html). Using the profiler, you can quantify precise values for  various performance metrics for your world or avatar. Of particular interest is probably the number of draw calls in a scene, or the proportional amount of frame time a component uses. 
+We strongly, strongly recommend that you check out the [Unity Profiler](https://docs.unity3d.com/2019.4/Documentation/Manual/Profiler.html). Using the profiler, you can quantify precise values for  various performance metrics for your world or avatar. Of particular interest is probably the number of draw calls in a scene, or the proportional amount of frame time a component uses. 
 
 Of course, the profiler on your powerful PC won't represent how a profiler on the Quest might look, but you can still see that X component is using a ton of frame time versus rendering, or etc. Its all relative!
 

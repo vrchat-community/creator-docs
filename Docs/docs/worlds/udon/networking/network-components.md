@@ -43,7 +43,7 @@ Same as OnDeserialization, but with additional information about the time at whi
 - `sendTime`: The time in seconds at which this message was sent.
 - `receiveTime`: The time in seconds at which this message was received.
 
-Both `sendTime` and `receiveTime` measure based on the time in seconds since VRChat has started, from your perspective (see [Time.realtimeSinceStartup](https://docs.unity3d.com/ScriptReference/Time-realtimeSinceStartup.html)). This means that if you want to know how many seconds ago a certain Deserialization was sent, you can calculate it with `Time.realtimeSinceStartup - sendTime`.
+Both `sendTime` and `receiveTime` measure based on the time in seconds since VRChat has started, from your perspective (see [Time.realtimeSinceStartup](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Time-realtimeSinceStartup.html)). This means that if you want to know how many seconds ago a certain Deserialization was sent, you can calculate it with `Time.realtimeSinceStartup - sendTime`.
 
 Note that every user's `Time.realtimeSinceStartup` is different, so one player's `sendTime` is going to be different from another player's `sendTime`. As a result, if you want to sync a specific `sendTime` to other players, you will need to calculate its offset by subtracting your `Time.realtimeSinceStartup`. Then, when the other players receive that offset, they can add back their own `Time.realtimeSinceStartup` to the offset in order to determine the absolute time relative to their own clock.
 
