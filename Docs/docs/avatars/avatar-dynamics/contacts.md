@@ -73,6 +73,7 @@ This section contains settings defining what the Receiver does when it gets a si
 - `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
 - `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
 - `Proximity` - Gives you a Float value of `0.0-1.0` depending how close a contact is to the trigger's center. This is calculated as the closest point of the sender onto the receiver. You must use a Float. If multiple contacts are detected, it will give you the closest. 
+
 :::note
 
 If you want to have a more precise measurement of proximity, you need to adjust the Sender's radius to be very small.

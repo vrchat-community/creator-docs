@@ -31,6 +31,7 @@ To detect events on these Colliders, you can use:
 - **OnPlayerCollisionEnter** is called when a player's capsule enters a Collider.
 - **OnPlayerCollisionStay** is called on frames while a player's capsule is inside a Collider.
 - **OnPlayerCollisionExit** is called when a player's capsule exits a Collider.
+
 :::caution
 
 These events WILL NOT be called when a player 'walks into' a stationary object. If you want to handle that, use a Trigger Collider.",
