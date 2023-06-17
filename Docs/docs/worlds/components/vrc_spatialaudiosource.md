@@ -55,10 +55,9 @@ Other than these limitations, `VRC_SpatialAudioSource` works precisely the same 
 If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one will be added by the SDK with default settings.\n\nIf you use a pre-existing avatar-based `Audio Source` without a `VRC_SpatialAudioSource` or ONSP (legacy) component, you may get unexpected, undocumented, and undesired behavior. We **strongly recommend** always using `VRC_SpatialAudioSource` with any avatar-based `Audio Sources`.
 :::
 ## Component Properties
-:::caution
+:::caution Dynamic Adjustment at Runtime
 
-Adjusting these properties via animations during runtime is not supported. These values are set at initialization.\n\nAnimating properties of the `Audio Source` should still work for properties that are not related to spatialization settings, like pitch.",
-  "title": "Dynamic Adjustment at Runtime
+Adjusting these properties via animations during runtime is not supported. These values are set at initialization.\n\nAnimating properties of the `Audio Source` should still work for properties that are not related to spatialization settings, like pitch.
 :::
 
 :::caution Disabling / Enabling Sound Sources

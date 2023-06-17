@@ -188,10 +188,9 @@ When syncing behaviours with synced array variables on them - make sure to alway
 4. Enter this same event name in the 'eventName' input.
 5. Leave the default 'All' as the target to trigger this event on each Player in your room, or change it to 'Owner' to only fire this event on the Owner.
 6. You can leave the 'instance' input empty to target the current UdonBehaviour, or connect a reference to another UdonBehaviour to fire a Custom Event on that one instead.
-:::note
+:::note Editor Shortcut
 
-SendCustomNetworkEvent will work as a 'SendCustomEvent' node in the Editor to allow for some basic testing.",
-  "title": "Editor Shortcut
+SendCustomNetworkEvent will work as a 'SendCustomEvent' node in the Editor to allow for some basic testing.
 :::
 ### Local-Only Events
 If you start your Event names with an underscore, you will not be able to call them over the network. We do this to safeguard our internal methods like _start, _update, _interact against malicious network calls. We have plans to add an attribute to events to mark them as 'local-only' without the need for an underscore. If you want to block events from remote execution in the meantime, you can use a unique underscore prefix like '_u_eventName' to make sure it doesn't match any existing or future VRC methods.
