@@ -8,9 +8,10 @@ updatedAt: "2022-11-15T23:12:29.563Z"
 Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
 
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
-:::caution Oculus Quest
+:::caution
 
-The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
+The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.",
+  "title": "Oculus Quest
 :::
 ## VRChat
 
@@ -26,29 +27,24 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 
 ## Unity
 
-- [Transform](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Transform.html)
-- [Animator](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Animator.html)
-- [SkinnedMeshRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-SkinnedMeshRenderer.html)
-- [MeshFilter](https://docs.unity3d.com/2019.4/Documentation/Manual/class-MeshFilter.html)
-- [MeshRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-MeshRenderer.html)
-- [Animation](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Animation.html)
-- [ParticleSystem](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParticleSystem.html)
-- [ParticleSystemRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/PartSysRendererModule.html)
-- [ParticleRenderer](https://docs.unity3d.com/Documentation/Manual/class-ParticleRenderer.html)
-- [ParticleAnimator](https://docs.unity3d.com/Documentation/Manual/class-ParticleAnimator.html)
-- [EllipsoidParticleEmitter](https://docs.unity3d.com/Documentation/Manual/class-EllipsoidParticleEmitter.html)
-- [MeshParticleEmitter](https://docs.unity3d.com/Documentation/Manual/class-MeshParticleEmitter.html)
-- [TrailRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-TrailRenderer.html)
-- [LineRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LineRenderer.html)
-- [Cloth](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Cloth.html)
-- [Light](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Light.html)
-- [Collider](https://docs.unity3d.com/2019.4/Documentation/Manual/CollidersOverview.html)
-- [Rigidbody](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Rigidbody.html)
-- [Joints](https://docs.unity3d.com/2019.4/Documentation/Manual/Joints.html)
-- [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)\*
-- [FlareLayer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-FlareLayer.html)
-- [GUILayer](https://docs.unity3d.com/Documentation/Manual/class-GUILayer.html)
-- [AudioSource](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioSource.html)
+- [Transform](https://docs.unity3d.com/Documentation/Manual/class-Transform.html)
+- [Animator](https://docs.unity3d.com/Documentation/Manual/class-Animator.html)
+- [SkinnedMeshRenderer](https://docs.unity3d.com/Documentation/Manual/class-SkinnedMeshRenderer.html)
+- [MeshFilter](https://docs.unity3d.com/Documentation/Manual/class-MeshFilter.html)
+- [MeshRenderer](https://docs.unity3d.com/Documentation/Manual/class-MeshRenderer.html)
+- [Animation](https://docs.unity3d.com/Documentation/Manual/class-Animation.html)
+- [ParticleSystem](https://docs.unity3d.com/Documentation/Manual/class-ParticleSystem.html)
+- [ParticleSystemRenderer](https://docs.unity3d.com/Documentation/Manual/PartSysRendererModule.html)
+- [TrailRenderer](https://docs.unity3d.com/Documentation/Manual/class-TrailRenderer.html)
+- [LineRenderer](https://docs.unity3d.com/Documentation/Manual/class-LineRenderer.html)
+- [Cloth](https://docs.unity3d.com/Documentation/Manual/class-Cloth.html)
+- [Light](https://docs.unity3d.com/Documentation/Manual/class-Light.html)
+- [Collider](https://docs.unity3d.com/Documentation/Manual/CollidersOverview.html)
+- [Rigidbody](https://docs.unity3d.com/Documentation/Manual/class-Rigidbody.html)
+- [Joints](https://docs.unity3d.com/Documentation/Manual/Joints.html)
+- [Camera](https://docs.unity3d.com/Documentation/Manual/class-Camera.html)\*
+- [FlareLayer](https://docs.unity3d.com/Documentation/Manual/class-FlareLayer.html)
+- [AudioSource](https://docs.unity3d.com/Documentation/Manual/class-AudioSource.html)
 - [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
 - [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
 - [ParentConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParentConstraint.html)

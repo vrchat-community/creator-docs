@@ -42,4 +42,4 @@ In rare cases, Unity tabs can go off screen and become inaccessible. You'll need
 
 ## I have a problem that the Knowledgebase doesn't solve and isn't listed here!
 
-Sorry about that! Please let us know by [creating a ticket](http://help.vrchat.com/new) and we'll help you out.
+Sorry about that! Please browse our [official knowledgebase](http://help.vrchat.com/) or [submit a support request](https://help.vrchat.com/hc/en-us/requests/new). We're happy to help you.

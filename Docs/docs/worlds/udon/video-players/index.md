@@ -29,7 +29,7 @@ Notably, the AVPro speaker component implies support for 8 channel audio. This i
 
 # Android / Quest Compatibility
 
-VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like http://something.com/video.mp4 or http://test.com/cats.webm. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
+VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like `http://something.com/video.mp4` or `http://test.com/cats.webm`. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
 
 Some workarounds exist for advanced users. VRChat has not reviewed these methods, does not condone them, and cannot guarantee their continued operation, but they have been recommended by the community:
 
