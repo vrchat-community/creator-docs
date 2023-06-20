@@ -47,7 +47,7 @@ public bool _IsUsingPhone()
 
 Here’s how it works:
 
-- Use [conditional compilation](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) to detect the current platform
+- Use [conditional compilation](https://docs.unity3d.com/2019.4/Documentation/Manual/PlatformDependentCompilation.html) to detect the current platform
 - Use [Networking.LocalPlayer](https://creators.vrchat.com/worlds/udon/players/) to retrieve data about the local player
 - Use [IsUserInVR](https://creators.vrchat.com/worlds/udon/players/#isuserinvr) to check if the local player is in VR.
 

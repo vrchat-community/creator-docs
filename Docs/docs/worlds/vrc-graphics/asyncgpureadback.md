@@ -20,8 +20,8 @@ VRChat's implementation of AsyncGpuReadback employs a wrapper that calls the Uni
 - Rather than using `GetData` on the completed readback, you need to use `TryGetData`.
 
 See Unity's documentation on this feature for other shared details:  
-[Making a readback request](https://docs.unity3d.com/ScriptReference/Rendering.AsyncGPUReadback.Request.html)  
-[Getting data from a readback](https://docs.unity3d.com/ScriptReference/Rendering.AsyncGPUReadbackRequest.html)
+[Making a readback request](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Rendering.AsyncGPUReadback.Request.html)  
+[Getting data from a readback](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Rendering.AsyncGPUReadbackRequest.html)
 
 ## Using VRCAsyncGpuReadback
 

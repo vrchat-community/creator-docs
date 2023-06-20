@@ -11,7 +11,8 @@ Setting up Unity to create Quest content is actually pretty straightforward. Thi
 
 :::caution Requires Additional Setup
 
-[You need to install Unity's Android SDK](https://docs.unity3d.com/Manual/android-sdksetup.html). Otherwise the option won't pop up.
+[You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.",
+
 :::
 If you're starting a brand new project, this won't take long at all. However, if you're converting a Windows platform project to an Android platform project, you will have to convert your assets appropriately. This can take quite a while for larger projects.
 
