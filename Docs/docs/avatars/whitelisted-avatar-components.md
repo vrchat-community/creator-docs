@@ -8,10 +8,9 @@ updatedAt: "2022-11-15T23:12:29.563Z"
 Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
 
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
-:::caution
+:::caution Oculus Quest
 
-The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.",
-  "title": "Oculus Quest
+The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
 :::
 ## VRChat
 

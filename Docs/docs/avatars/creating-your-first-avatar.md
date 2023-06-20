@@ -43,10 +43,9 @@ You can also try using an avatar creator! There are several out there of varying
 
 ### OK, give me some sliders and the ability to paint things on
 You may want to look into [VRoid Studio](https://vroid.com/en/studio), which is also available on Steam. It is an anime-themed character creator intended primarily to create VTuber-style models, but it is very flexible! For some examples of what it can do, check out the [VRoid subreddit](https://www.reddit.com/r/VRoid/).
-:::note
+:::note A note about VRoid Studio
 
-VRoid Studio outputs avatars in the **.vrm** format, which isn't natively supported by Unity! If you'd like to import a VRoid Studio model directly for use in VRchat, you may want to look into the community-created [VRMtoVRChat converter](https://github.com/esperecyan/VRMConverterForVRChat) for .vrm avatars. Be sure to [read the documentation for this plugin](https://www.store.vket.com/ec/items/122/detail/) if you use it.",
-  "title": "A note about VRoid Studio
+VRoid Studio outputs avatars in the **.vrm** format, which isn't natively supported by Unity! If you'd like to import a VRoid Studio model directly for use in VRchat, you may want to look into the community-created [VRMtoVRChat converter](https://github.com/esperecyan/VRMConverterForVRChat) for .vrm avatars. Be sure to [read the documentation for this plugin](https://www.store.vket.com/ec/items/122/detail/) if you use it.
 :::
 ## Step 1 - Find a model
 Arguably the most important part, you must find a 3D model to be used as your avatar. As this is your first avatar we recommend getting one from the [Unity Asset Store](https://assetstore.unity.com/) as they usually come fully rigged meaning you don't have to do anything special to get it uploaded. If you decide to get your model outside of the asset store, ensure the model is fully rigged and is in a format Unity accepts.

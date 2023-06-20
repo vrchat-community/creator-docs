@@ -10,10 +10,9 @@ Setting up a cross-platform world or avatar is actually quite straightforward! I
 If you need a bit more detail on how to do this properly (and easily), here's a short guide.
 # Duplicating your Project (Deprecated)
 
-:::caution
+:::caution Asset Database v2
 
-With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.\n\nYou can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.",
-  "title": "Asset Database v2
+With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.\n\nYou can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.
 :::
 We'll be making the assumption that you already have a VRChat PC project set up with your world or avatar. If this isn't the case, you'll need to set up and create your project for PC first. You could also build for Android/Quest first, but that's your call.
 
@@ -32,9 +31,11 @@ There's some important notes here:
 - [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
 - Although you *can* swap back and forth between Windows and Android, **you probably don't want to do this.** It changes files around, you probably want to maintain a scaled-back version of your world for Quest, and...
 - It can take a **significant** amount of time to swap to the Android platform. Thankfully, if you maintain two separate projects, you only do this once. If your project is huge or has dozens of avatars, you'll probably want to just export the content you want as Prefabs or UnityPackages, and then create an empty Android project from scratch.
+
 :::note Local Cache Server
 
 You can reduce the time it takes to swap platforms by using Unity's Cache Server, which you can run locally. [Read more about the cache server here](https://docs.unity3d.com/2019.4/Documentation/Manual/CacheServer.html). Keep in mind this can take up a significant amount of disk space.
+
 :::
 
 # Fine-tuning and Optimization
