@@ -40,10 +40,9 @@ FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression
 * **Four Axis Puppet** - Opens an axis puppet menu that controls four float parameters depending on the joystick position.  The parameters are mapped in order, up, right, down, left. The float values are 0.0 to 1.0.
 * **Radial Puppet** - Open a radial puppet menu that controls a single float parameter, kind of like a progress bar that you can fill! The float value is 0.0 to 1.0.
 
-:::note
+:::note Puppet Menu Sync
 
-The **Puppet** controls use [**IK Sync**](/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.\n\n**Button**/**Toggle** uses **Playable Sync** which updates on-demand, instead of continuously, and is appropriate for things you "turn on/off" but don't need highly precise syncing.\n\nPuppet menu sync always updates at the maximum rate available, and it smooths the values for remote users - much better when timed replication is important.",
-  "title": "Puppet Menu Sync
+The **Puppet** controls use [**IK Sync**](/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.\n\n**Button**/**Toggle** uses **Playable Sync** which updates on-demand, instead of continuously, and is appropriate for things you "turn on/off" but don't need highly precise syncing.\n\nPuppet menu sync always updates at the maximum rate available, and it smooths the values for remote users - much better when timed replication is important.
 :::
 Puppet controls may also set a parameter when entering the menu. 
 
