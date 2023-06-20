@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'VRChat Creation',
   tagline: 'Learn, create and share using our tools and documentation.',
-  url: 'https://creator.docs.vrchat.com',
+  url: 'https://creators.vrchat.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',

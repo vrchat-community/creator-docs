@@ -60,7 +60,9 @@ If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one 
 
 :::caution Dynamic Adjustment at Runtime
 
-Adjusting these properties via animations during runtime is not supported. These values are set at initialization.\n\nAnimating properties of the `Audio Source` should still work for properties that are not related to spatialization settings, like pitch.
+Adjusting these properties via animations during runtime is not supported. These values are set at initialization.
+
+Animating properties of the `Audio Source` should still work for properties that are not related to spatialization settings, like pitch.
 
 :::
 
