@@ -30,6 +30,7 @@ You can find all the available Course Pieces in the project under "Assets/_World
 
 1. To add new pieces to your course, just drag and drop them into the scene view. You can hold CTRL while dragging to snap the items to a grid.
 2. If you're using Udon on any of your pieces, make sure to Unpack them from being prefabs to just regular GameObjects. It's also a good idea in case you want to load in an updated package for this project with overwriting your existing pieces.
+
 :::note Grid Snapping
 
 Unity has many settings for aligning items to a grid - check out the manual here: [Grid Snapping](https://docs.unity3d.com/2019.4/Documentation/Manual/GridSnapping.html)
@@ -93,6 +94,7 @@ Move Speed sets **Walk**, **Run** and **Strafe** speeds to be all the same.
 ![build-from-demo-parts-9d80caf-unpack-prefab.png](/img/worlds/build-from-demo-parts-9d80caf-unpack-prefab.png)
 
 4. Once you've placed your Hazards, press the "Refresh" button at bottom of the Utility window. This will inject some references into your Hazards so they can properly Respawn your users when they touch the Hazard.
+
 :::danger NO SERIOUSLY - UNPACK THAT PREFAB!
 
 
