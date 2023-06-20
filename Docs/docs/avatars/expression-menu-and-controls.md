@@ -8,7 +8,9 @@ updatedAt: "2022-11-08T23:54:49.666Z"
 :::caution Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
+
 :::
+
 ## Creating An Expression Menu
 
 1. Right-click in the Unity project, select `Create/VRC Scriptable Objects/Expressions Menu`
@@ -42,8 +44,14 @@ FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression
 
 :::note Puppet Menu Sync
 
-The **Puppet** controls use [**IK Sync**](/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.\n\n**Button**/**Toggle** uses **Playable Sync** which updates on-demand, instead of continuously, and is appropriate for things you "turn on/off" but don't need highly precise syncing.\n\nPuppet menu sync always updates at the maximum rate available, and it smooths the values for remote users - much better when timed replication is important.
+The **Puppet** controls use [**IK Sync**](/avatars/animator-parameters#sync-types) when open. If you want sync that is as close as possible to your inputs for fast/quick movements, you should use a Puppet menu.
+
+**Button**/**Toggle** uses **Playable Sync** which updates on-demand, instead of continuously, and is appropriate for things you "turn on/off" but don't need highly precise syncing.
+
+Puppet menu sync always updates at the maximum rate available, and it smooths the values for remote users - much better when timed replication is important.
+
 :::
+
 Puppet controls may also set a parameter when entering the menu. 
 
 If you use Joystick press to exit, then the parameters being puppeted will remain as their value until you change them again-- either by re-entering a puppet menu that uses those params, or using them elsewhere.

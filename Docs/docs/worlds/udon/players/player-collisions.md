@@ -34,6 +34,7 @@ To detect events on these Colliders, you can use:
 :::caution OnPlayerCollision Events are for Moving Objects
 
 These events WILL NOT be called when a player 'walks into' a stationary object. If you want to handle that, use a Trigger Collider.
+
 :::
 ### Particles
 Finally, you can use **OnPlayerParticleCollision** to detect when a Particle colliders with a player, assuming that Particle System has Collision and Send Collision Messages turned on.
