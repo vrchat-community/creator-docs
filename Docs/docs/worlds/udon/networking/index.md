@@ -11,6 +11,7 @@ Multiplayer experiences are the heart of VRChat, so creating a world that reacts
 This page introduces the concepts that power our networking system. Once you've understood the basics, you can dig into specifics:
 * [Network Components](/worlds/udon/networking/network-components)
 * [Network Specs and Tips](/worlds/udon/networking/network-details)
+
 :::
 
 # Overview: How Networking Works in Udon
@@ -146,6 +147,7 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 :::note Using a variable to sync data takes three steps:
 
 1. Create the variable.\n2. Update the value on the Owner.\n3. React to changes in value received from the Owner.
+
 :::
 ### Create the variable
 1. Click the + button in the Variables window
@@ -180,7 +182,9 @@ When syncing behaviours with synced array variables on them - make sure to alway
 :::note Using an Event to fire a change takes 2 steps:
 
 1. Add a Custom Event node\n2. Use a SendCustomNetworkEvent node to trigger this event on your target(s).
+
 :::
+
 ### Add a Custom Event node
 1. Create an "Event Custom" node.
 2. Give this node a unique name using its input box
@@ -188,9 +192,11 @@ When syncing behaviours with synced array variables on them - make sure to alway
 4. Enter this same event name in the 'eventName' input.
 5. Leave the default 'All' as the target to trigger this event on each Player in your room, or change it to 'Owner' to only fire this event on the Owner.
 6. You can leave the 'instance' input empty to target the current UdonBehaviour, or connect a reference to another UdonBehaviour to fire a Custom Event on that one instead.
+
 :::note Editor Shortcut
 
 SendCustomNetworkEvent will work as a 'SendCustomEvent' node in the Editor to allow for some basic testing.
+
 :::
 ### Local-Only Events
 If you start your Event names with an underscore, you will not be able to call them over the network. We do this to safeguard our internal methods like _start, _update, _interact against malicious network calls. We have plans to add an attribute to events to mark them as 'local-only' without the need for an underscore. If you want to block events from remote execution in the meantime, you can use a unique underscore prefix like '_u_eventName' to make sure it doesn't match any existing or future VRC methods.
