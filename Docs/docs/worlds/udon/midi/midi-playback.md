@@ -10,7 +10,7 @@ You can play back MIDI data along with an audio track to control anything you wa
 ## Assets: MidiFile and AudioClip
 
 Files with the extension .mid are processed as MIDI assets. To get started with your own MIDI and Audio files:
-1. Drag and drop them somewhere into your Assets folder. The MIDI file must have the extension .mid, the audio file can be of any [type supported by Unity](https://docs.unity3d.com/Manual/class-AudioClip.html) (.aif, .wav, .mp3, .ogg).
+1. Drag and drop them somewhere into your Assets folder. The MIDI file must have the extension .mid, the audio file can be of any [type supported by Unity](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioClip.html) (.aif, .wav, .mp3, .ogg).
 2. Select the MIDI file and set its AudioClip to the matching audio file.
 
 ![image](/img/worlds/midi-playback-214464414-32af9c18-c003-49ed-bd12-dd431367db56.png)
