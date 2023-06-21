@@ -14,7 +14,9 @@ It is also used to drive the [Minimum Displayed Performance Rank](/avatars/avata
 **This system is not meant to be an end-all-be-all authority on avatar performance**, but is a good general guide to indicate if an avatar needs a bit more work to be performant.
 :::danger Perf Ranks are not the final word!
 
-Although the Performance Rank system does as best as it can to judge the "worst case" scenario of an avatar's performance, there are many ways to have a well-optimized avatar appear as Very Poor, and have a FPS hog rank as Excellent.\n\nFor the technically inclined: the Performance Rank system is based on a static analysis of the avatar's properties without any consideration paid to things like animators, shaders, texture resolution, pixel lights, and many more factors. *However*, it tends to provide an excellent litmus test for detecting problematic avatars 95% of the time!
+Although the Performance Rank system does as best as it can to judge the "worst case" scenario of an avatar's performance, there are many ways to have a well-optimized avatar appear as Very Poor, and have a FPS hog rank as Excellent.
+
+For the technically inclined: the Performance Rank system is based on a static analysis of the avatar's properties without any consideration paid to things like animators, shaders, texture resolution, pixel lights, and many more factors. *However*, it tends to provide an excellent litmus test for detecting problematic avatars 95% of the time!
 :::
 
 # Short Version
@@ -76,8 +78,6 @@ Bolded stats will cause the avatar to be fully blocked if they exceed the Minimu
 
 For example with the Minimum Displayed Performance Rank set to Poor an avatar with 9 Trail Renderers (Very Poor) will be displayed with all of its Trail Renderers removed. Refer to [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) for more information.
 
-Certainly! Here's the information reformatted into a two-column markdown table:
-
 | Avatar Quality             | Quality Description                                                                                                                       |
 | --------------------------| ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Polygons                   | The polygon count of the model in question, counted in triangles.                                                                        |
@@ -119,7 +119,9 @@ All GameObjects and Components, **including those that are currently disabled**,
 
 :::caution Mesh Read/Write Disabled
 
-If you disable Mesh Read/Write on **any** mesh on the avatar (including particle systems), the "Polygons" count will read "Mesh Read/Write Disabled" and the avatar's Performance Rank will be immediately downgraded to "Very Poor" regardless of the actual triangle count on the avatar.\n\nThe SDK warns you of this and will require that you fix it before you upload.
+If you disable Mesh Read/Write on **any** mesh on the avatar (including particle systems), the "Polygons" count will read "Mesh Read/Write Disabled" and the avatar's Performance Rank will be immediately downgraded to "Very Poor" regardless of the actual triangle count on the avatar.
+
+The SDK warns you of this and will require that you fix it before you upload.
 :::
 
 # PC Limits

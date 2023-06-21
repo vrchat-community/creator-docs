@@ -12,7 +12,9 @@ If you need a bit more detail on how to do this properly (and easily), here's a 
 
 :::caution Asset Database v2
 
-With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.\n\nYou can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.
+With the advent of Asset Database v2, swapping between platforms doesn't take nearly as long! Duplicating your project isn't really necessary anymore. You can skip this part.
+
+You can also use [EasyQuestSwitch](https://github.com/JordoVR/EasyQuestSwitch), which helps make switching even easier.
 
 :::
 
@@ -51,7 +53,9 @@ You can also check out some of our documentation on optimizing content for Oculu
 
 :::caution SyncVideoStream and SyncVideoPlayer Components
 
-Currently, neither SyncVideoStream nor SyncVideoPlayer is supported on Quest. Putting these into a Quest world will cause severe issues! Simply remove them from the Quest version. However,  having a video player only in the PC version can cause problems as well. If the Master of the instance is a Quest user, you'll run into further problems.\n\nAlthough getting synced video playback working on Quest is an eventual goal, we suggest not using them until we have official support on the platform.
+Currently, neither SyncVideoStream nor SyncVideoPlayer is supported on Quest. Putting these into a Quest world will cause severe issues! Simply remove them from the Quest version. However,  having a video player only in the PC version can cause problems as well. If the Master of the instance is a Quest user, you'll run into further problems.
+
+Although getting synced video playback working on Quest is an eventual goal, we suggest not using them until we have official support on the platform.
 :::
 
 ## Uploading Content

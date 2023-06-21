@@ -42,7 +42,9 @@ Our example Seated controllers show this branching behavior and the proper trans
 
 :::caution Stations cannot create new Parameters via Drivers, only affect existing ones
 
-Parameter driver [State Behaviors](/avatars/state-behaviors) in animators specified on stations will only be able to drive existing avatar parameters, not create new ones.\n\nGenerally speaking, using parameter drivers in station animators is not a supported use-case.
+Parameter driver [State Behaviors](/avatars/state-behaviors) in animators specified on stations will only be able to drive existing avatar parameters, not create new ones.
+
+Generally speaking, using parameter drivers in station animators is not a supported use-case.
 :::
 # Stations used on Avatars
 The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more!
@@ -56,8 +58,6 @@ Attempting to work around this by enabling/disabling a parent object of the chai
 Keep in mind that having avatar stations on by default (as in, having the green toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
 
 # Parameters and Options
-
-Certainly! Here's the information reformatted into a two-column markdown table:
 
 | Parameter                    | Description                                                                                             |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------- |

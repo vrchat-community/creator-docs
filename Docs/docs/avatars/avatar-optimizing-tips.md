@@ -7,7 +7,11 @@ updatedAt: "2023-03-10T15:12:26.161Z"
 ---
 :::caution
 
-**This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.\n\nHowever, we try our best to keep this document updated with the most common things people miss, and the most important targets to hit.\n\nIf you have input on optimization tips, please use the **Suggest Edits** button in the top right and add your own!
+**This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.
+
+However, we try our best to keep this document updated with the most common things people miss, and the most important targets to hit.
+
+If you have input on optimization tips, please use the **Suggest Edits** button in the top right and add your own!
 :::
 Do you want your avatar to be efficient and be loved by everyone because of all the frames you're saving them? Follow these tips and you should be good!
 

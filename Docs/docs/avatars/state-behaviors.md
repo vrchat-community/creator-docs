@@ -32,7 +32,6 @@ The Animator Layer Control allows you to blend the weight of a specific Animator
 If the state is exited mid-blend duration, the target layer is immediately set to the goal weight.
 
 The layer weight will remain until some other state runs this State Behavior again and resets it.
-Certainly! Here's the information reformatted into a two-column markdown table:
 
 | Property Name  | Purpose                                                                                       |
 | -------------- | -------------------------------------------------------------------------------------------- |
@@ -91,13 +90,20 @@ If you set all IK tracking points to Animation, your animation will play as the 
 
 :::note
 
-All parts are IK-driven, aside from the Eyes and Eyelid, which are simulated. Mouth and Jaw are driven by visemes.\n\nAs an example, setting Left and Right Hand to Animation will ignore the position of the hands (and arms) as defined by IK, and will instead use any currently-active state's motion to define the position of the hands and arms. Setting them back to Tracking will use IK instead. \n\nSetting Eyes & Eyelid to Animation will disable eye movement and eyelid blinking. Setting Eyes & Eyelid to Tracking will re-enable the simulated eye movement and blinking.\n\nSetting Mouth and Jaw to Animation will disable visemes, although viseme parameters will still be sent. Setting Mouth and Jaw will re-enable visemes.
+All parts are IK-driven, aside from the Eyes and Eyelid, which are simulated. Mouth and Jaw are driven by visemes.
+
+As an example, setting Left and Right Hand to Animation will ignore the position of the hands (and arms) as defined by IK, and will instead use any currently-active state's motion to define the position of the hands and arms. Setting them back to Tracking will use IK instead. 
+
+Setting Eyes & Eyelid to Animation will disable eye movement and eyelid blinking. Setting Eyes & Eyelid to Tracking will re-enable the simulated eye movement and blinking.
+
+Setting Mouth and Jaw to Animation will disable visemes, although viseme parameters will still be sent. Setting Mouth and Jaw will re-enable visemes.
 :::
 The Tracking setting will be kept until some other state runs this State Behavior again and resets it.
-| Parameter | Description |
-| :-- | :-- |
-| Tracking Control | See description above. |
-| Debug String | When this State Behavior runs,this string will be printed to the output log. Useful for debugging. |
+
+| Parameter | Description                                                                                         |
+| :-- |:----------------------------------------------------------------------------------------------------|
+| Tracking Control | See description above.                                                                              |
+| Debug String | When this State Behavior runs, this string will be printed to the output log. Useful for debugging. |
 
 ## Avatar Parameter Driver
 

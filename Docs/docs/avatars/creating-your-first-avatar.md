@@ -105,7 +105,8 @@ Unity will delete shape keys/blend shapes that are empty on import, so make sure
 
 :::note Viseme Performance Tip!
 
-If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face.\nThe performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.
+If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face.
+The performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.
 :::
 
 ##### Jaw Flap Blend Shape
