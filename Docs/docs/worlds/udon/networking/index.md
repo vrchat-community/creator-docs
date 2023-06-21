@@ -146,7 +146,9 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 
 :::note Using a variable to sync data takes three steps:
 
-1. Create the variable.\n2. Update the value on the Owner.\n3. React to changes in value received from the Owner.
+1. Create the variable.
+2. Update the value on the Owner.
+3. React to changes in value received from the Owner.
 
 :::
 ### Create the variable
@@ -169,7 +171,8 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 This node is used in Manual Sync mode to flag the variables on the target UdonBehaviour for Serialization during the next Network Tick, which does not happen every frame. This node works will with the OnPreSerialization Event node. You trigger "RequestSerialization" and then the OnPreSerialization event will trigger during the next Network Tick. At that point, you can update any variables to the values you would like to be synced.
 :::note Variable Sync
 
-You can sync variables and arrays of variables of the following types:\nbool, char, byte, sbyte, short, ushort, int, uint, long, ulong, float, double, Vector2, Vector3, Vector4, Quaternion, string, VRCUrl, Color and Color32.
+You can sync variables and arrays of variables of the following types:
+bool, char, byte, sbyte, short, ushort, int, uint, long, ulong, float, double, Vector2, Vector3, Vector4, Quaternion, string, VRCUrl, Color and Color32.
 :::
 
 :::caution Array Sync
@@ -181,7 +184,8 @@ When syncing behaviours with synced array variables on them - make sure to alway
 
 :::note Using an Event to fire a change takes 2 steps:
 
-1. Add a Custom Event node\n2. Use a SendCustomNetworkEvent node to trigger this event on your target(s).
+1. Add a Custom Event node
+2. Use a SendCustomNetworkEvent node to trigger this event on your target(s).
 
 :::
 
@@ -210,5 +214,9 @@ You can see some per-object information in list form using RightShift + ` + 6 in
 
 :::danger Known Issues
 
-The latest build & SDK have these issues:\n\n* isInstanceOwner returns true when spawning (thanks [FSP](https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning))\n* OnOwnershipRequest sometimes logs that it rejects transferring ownership when it actually succeeds (thanks [AirGamer](https://feedback.vrchat.com/udon-networking-update/p/1069-strange-logging-when-networksetowner-is-called-within-onownershiprequest))\n* Teleporting a player during Network Update (OnDeserialization) will not teleport the player's avatar. To fix this issue currently, use `SendCustomEventDelayedFrames` and delay the teleport by 1 frame.
+The latest build & SDK have these issues:
+
+* isInstanceOwner returns true when spawning (thanks [FSP](https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning))
+* OnOwnershipRequest sometimes logs that it rejects transferring ownership when it actually succeeds (thanks [AirGamer](https://feedback.vrchat.com/udon-networking-update/p/1069-strange-logging-when-networksetowner-is-called-within-onownershiprequest))
+* Teleporting a player during Network Update (OnDeserialization) will not teleport the player's avatar. To fix this issue currently, use `SendCustomEventDelayedFrames` and delay the teleport by 1 frame.
 :::

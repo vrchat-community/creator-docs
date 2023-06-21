@@ -52,7 +52,9 @@ VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [lim
 Other than these limitations, `VRC_SpatialAudioSource` works precisely the same on avatars as it does in worlds.
 :::danger Don't Forget to add a SpatialAudioSource!
 
-If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one will be added by the SDK with default settings.\n\nIf you use a pre-existing avatar-based `Audio Source` without a `VRC_SpatialAudioSource` or ONSP (legacy) component, you may get unexpected, undocumented, and undesired behavior. We **strongly recommend** always using `VRC_SpatialAudioSource` with any avatar-based `Audio Sources`.
+If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one will be added by the SDK with default settings.
+
+If you use a pre-existing avatar-based `Audio Source` without a `VRC_SpatialAudioSource` or ONSP (legacy) component, you may get unexpected, undocumented, and undesired behavior. We **strongly recommend** always using `VRC_SpatialAudioSource` with any avatar-based `Audio Sources`.
 
 :::
 

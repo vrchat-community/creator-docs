@@ -45,7 +45,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [Collider](https://docs.unity3d.com/2019.4/Documentation/Manual/CollidersOverview.html)
 - [Rigidbody](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Rigidbody.html)
 - [Joints](https://docs.unity3d.com/2019.4/Documentation/Manual/Joints.html)
-- [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)\*
+- [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)
 - [FlareLayer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-FlareLayer.html)
 - [GUILayer](https://docs.unity3d.com/Documentation/Manual/class-GUILayer.html)
 - [AudioSource](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioSource.html)
@@ -56,26 +56,30 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
 - [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
 
-\* For the wearer and their friends, camera components are disabled on load. Use an animation to enable the component. For non-friends of the wearer, camera components are removed completely on load.
+ For the wearer and their friends, camera components are disabled on load. Use an animation to enable the component. For non-friends of the wearer, camera components are removed completely on load.
 
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
 :::caution FinalIK Components Modified
 
-VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.\n\nWe do not directly support or test custom FinalIK implementations on avatars. However, they *should* work fine, and if we must intentionally break one or more of these, we will try our best to inform creators. \n\nIf you discover a bug, please [let us know](https://feedback.vrchat.com).
+VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
+
+We do not directly support or test custom FinalIK implementations on avatars. However, they *should* work fine, and if we must intentionally break one or more of these, we will try our best to inform creators. 
+
+If you discover a bug, please [let us know](https://feedback.vrchat.com).
 :::
 - [Aim IK](http://www.root-motion.com/finalikdox/html/page1.html)
 - [Biped IK](http://www.root-motion.com/finalikdox/html/page4.html)
 - [CCDIK](http://www.root-motion.com/finalikdox/html/page5.html)
 - [FABRIK](http://www.root-motion.com/finalikdox/html/page6.html)
-- [Full Body Biped IK](http://www.root-motion.com/finalikdox/html/page8.html)\*
+- [Full Body Biped IK](http://www.root-motion.com/finalikdox/html/page8.html)
 - [Grounder](http://www.root-motion.com/finalikdox/html/page9.html)
 - [Limb IK](http://www.root-motion.com/finalikdox/html/page12.html)
 - [Rotation Limits](http://www.root-motion.com/finalikdox/html/page14.html)
-- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)\*
+- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)
 - Twist Relaxer
 - Shoulder Rotator
 
-\* Using this script on a humanoid avatar will break it.
+ Using this script on a humanoid avatar will break it.
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 :::danger Dynamic Bone Deprecated

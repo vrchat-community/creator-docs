@@ -57,14 +57,14 @@ It can also help to know about things like:
 
 With Avatars 3.0, you can create a basic avatar with simulated eye movement and visemes very quickly. 
 
-1. Import your avatar, rig as humanoid\*\*. Set up your materials, etc.
+1. Import your avatar, rig as humanoid. Set up your materials, etc.
 2. Add the Avatar Descriptor component.
 3. Define the eye bones, if you want simulated eye movement.
 4. Define the viseme type, if you want visemes. Assign the jaw-flap bone in the Rigging Configuration Screen, or define your visemes by blendshapes. Same as Avatar 2.0.
 5. Set your viewpoint.
 6. Build and upload!
 
-\*\*If you are making a non-humanoid avatar please read the Generic Avatars section below.
+If you are making a non-humanoid avatar please read the Generic Avatars section below.
 
 You're done! This will create a basic avatar with default gestures and actions. There's some built-in things you can take advantage of, so even if someone slaps in an avatar with blendshapes/bones named a certain way, you'll get some basic Avatar 3.0 features.
 

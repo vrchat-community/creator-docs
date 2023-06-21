@@ -52,7 +52,7 @@ Note that the property name must be prefixed with “\_Udon”, or be the litera
 
 See: https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Shader.PropertyToID.html
 
-## VRCShader.SetGlobal\*()
+## VRCShader.SetGlobal()
 
 Use the ID acquired with PropertyToID as a key and specify a value of the correct type. The value will be available in _all_ shaders in the world (including ones on avatars!) under the name passed into PropertyToID.
 

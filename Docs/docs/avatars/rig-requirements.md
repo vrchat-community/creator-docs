@@ -32,14 +32,20 @@ If your avatar diverges greatly from a human (ie. quadruped, hunching monster, e
 
 :::caution Thumb, Index, and Middle finger bones are not mapped, Full-Body IK will be disabled.
 
-**This warning does not appear for SDK3 avatars, as they have no problem with using armatures without finger bones.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.\n\nIn order to have full IK (allowing crouching and automatic foot placement) you need to have these three finger bones mapped. If you ignore this warning, your avatar will not be able to crouch, and it's feet will not automatically step (unless you use controller locomotion).\n\nIt will also prevent custom animation overrides on hand gestures from being played back. (This is **not** currently mentioned by the warning in the SDK.)
+**This warning does not appear for SDK3 avatars, as they have no problem with using armatures without finger bones.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.
+
+In order to have full IK (allowing crouching and automatic foot placement) you need to have these three finger bones mapped. If you ignore this warning, your avatar will not be able to crouch, and it's feet will not automatically step (unless you use controller locomotion).
+
+It will also prevent custom animation overrides on hand gestures from being played back. (This is **not** currently mentioned by the warning in the SDK.)
 :::
 
 ### Spine Hierarchy
 
 :::danger Your rig has the UPPERCHEST mapped in the Humanoid Rig. This will cause problems with IK.
 
-**This warning does not appear for SDK3 avatars, as they have no problem with using armatures with a mapped upper chest.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.\n\nIf you must use SDK2, leave the upper chest bone blank when configuring your humanoid.
+**This warning does not appear for SDK3 avatars, as they have no problem with using armatures with a mapped upper chest.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.
+
+If you must use SDK2, leave the upper chest bone blank when configuring your humanoid.
 :::
 
 :::danger Spine hierarchy missing elements, make sure that Pelvis, Spine, Chest, Neck and Shoulders are mapped.
@@ -56,7 +62,11 @@ For the IK to work properly, you must have a specific hierarchy of bones around 
 
 :::caution LowerArm is not first child of UpperArm or Hand is not first child of LowerArm: you may have problems with Forearm rotations.
 
-VRChat's IK system looks at the first child of a bone when determining the bone layout. If you have other child bones, like prop-placement bones or twist-bones in your rig, they can confuse the IK. In this particular case, the SDK is seeing that your LowerArm is not the first-listed child of your UpperArm bone.\n\nTo fix this, move the child bone to the first position in the list of children of the parent bone. **You will have to unpack your avatar prefab to do this.** \n\nNote that this message is naming the slot, not the actual bone name in your rig, so you'll have to look to see what bone is in that slot.
+VRChat's IK system looks at the first child of a bone when determining the bone layout. If you have other child bones, like prop-placement bones or twist-bones in your rig, they can confuse the IK. In this particular case, the SDK is seeing that your LowerArm is not the first-listed child of your UpperArm bone.
+
+To fix this, move the child bone to the first position in the list of children of the parent bone. **You will have to unpack your avatar prefab to do this.** 
+
+Note that this message is naming the slot, not the actual bone name in your rig, so you'll have to look to see what bone is in that slot.
 :::
 
 :::caution LowerLeg is not first child of UpperLeg or Foot is not first child of LowerLeg: you may have problems with Shin rotations.
