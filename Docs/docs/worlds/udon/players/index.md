@@ -14,7 +14,8 @@ This page includes info on using some general nodes. Since there are so many thi
 * [Player Forces](/worlds/udon/players/player-forces)
 * [Player Collisions](/worlds/udon/players/player-collisions)
 * [Player Audio](/worlds/udon/players/player-audio)
-* [Player Events](/worlds/udon/graph/event-nodes#player-events) 
+* [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling)
+* [Player Events](/worlds/udon/graph/event-nodes#player-events)
 
 ## Generally Useful Nodes
 
