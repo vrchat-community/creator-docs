@@ -32,10 +32,6 @@ All of the shaders listed below are under `VRChat/Mobile` in the shader selectio
 | Lightmapped (Only for worlds) | A basic diffuse shader that supports lightmapping. This shader is only meant for use on worlds. It cannot be used on avatars. It does not support real-time lighting.                                                                                          |
 | Skybox (Only for worlds)      | This shader is an optimized skybox shader, meant for use in worlds.                                                                                                                                                                                                    |
 
-The table above represents the "Shader Name" and "Shader Description" columns of the information you provided.
-
-If you have any further questions or need additional assistance, feel free to ask!
-
 ## Components
 
 The following components are not supported on Quest and will not work. This list may change. We'll note in the Patch Notes and updated documentation when these change.
