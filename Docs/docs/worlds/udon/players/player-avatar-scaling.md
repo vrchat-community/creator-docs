@@ -91,10 +91,10 @@ Returns the configured eye height for the target player's avatar. This function 
 
 ### SetAvatarEyeHeightByMeters
 
-**Output**
+**Input**
 - `float`: Sets the eye height in meters for the current player avatar.
 
 ### SetAvatarEyeHeightByMultiplier
 
-**Output**
+**Input**
 - `float`: Sets the eye height as a multiple of the target player's avatar eye height at its prefab scale.

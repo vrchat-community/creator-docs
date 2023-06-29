@@ -19,6 +19,7 @@ The **ObstacleCourseAsset** holds all the special information about your Checkpo
 2. Rename the new course to something custom like "MyCourse.asset" and move it to your "_MyProject" folder.
 3. In your hierarchy, select the **CourseManager** under "Udon/CourseManager".
 4. Drag and drop the new Course Asset your just created to the "Asset" field on the **Obstacle Course Data** script on the CourseManager object.
+
 ![build-from-demo-parts-8a69d28-drop-course-asset.png](/img/worlds/build-from-demo-parts-8a69d28-drop-course-asset.png)
 
 Now all your changes will be saved to your custom course instead of the Starter course.
@@ -42,21 +43,24 @@ Your Start Gate, Checkpoints and Finish Gate are best added through the special 
 ![build-from-demo-parts-df0b76f-open-utilities-window.png](/img/worlds/build-from-demo-parts-df0b76f-open-utilities-window.png)
 
 2. Check out the prefabs:
+
 ![build-from-demo-parts-22a6f4e-checkpoint-prefabs.png](/img/worlds/build-from-demo-parts-22a6f4e-checkpoint-prefabs.png)
 
 These are the only three prefabs we need to make a working course - a start Gate, a Checkpoint and a FinishGate.
 
-2. The utilities window makes it very easy to add new Checkpoints.Select a prefab from the "Checkpoint Prefabs" list and move your cursor over to your Scene View. You'll see a preview of the selected prefab, it will try to place itself intelligently on the surface you're pointing at - notice how the gate snaps to the side of the block in the GIF below until I point at the top. 
-3. Once you're happy with the placement, press the Spacebar to actually add the prefab and wire it up to your scene. 
+3. The utilities window makes it very easy to add new Checkpoints.Select a prefab from the "Checkpoint Prefabs" list and move your cursor over to your Scene View. You'll see a preview of the selected prefab, it will try to place itself intelligently on the surface you're pointing at - notice how the gate snaps to the side of the block in the GIF below until I point at the top. 
+4. Once you're happy with the placement, press the Spacebar to actually add the prefab and wire it up to your scene. 
 ![build-from-demo-parts-4200ff4-place-gates.gif](/img/worlds/build-from-demo-parts-4200ff4-place-gates.gif)
 
-4. When you add a Checkpoint prefab this way, it is automatically added to your "Checkpoints In Scene" list. Open that list to see the new checkpoint included:
+5. When you add a Checkpoint prefab this way, it is automatically added to your "Checkpoints In Scene" list. Open that list to see the new checkpoint included:
+
 ![build-from-demo-parts-84c73fe-checkpoints-in-scene.png](/img/worlds/build-from-demo-parts-84c73fe-checkpoints-in-scene.png)
 
 Select one of these checkpoints and the Scene View will move to focus on it. You can also see it selected in the hierarchy. If you press the triangle next to this new "Checkpoint 1" object in your hierarchy, you can see an UdonProgram on it. Select that UdonProgram and you can see that its 'index' has been automatically set to 1.
+
 ![build-from-demo-parts-feaf465-checkpoint-program.png](/img/worlds/build-from-demo-parts-feaf465-checkpoint-program.png)
 
-5. Continue to add checkpoints around your course until you've got enough to get started. If you need to rearrange the order, you can use the up and down arrows in the "Checkpoints in Scene" list to change the order in which players should go through your gates. When you change the order this way, the Checkpoint's index is changed to match its actual order, and its name is changed to match its index.
+6. Continue to add checkpoints around your course until you've got enough to get started. If you need to rearrange the order, you can use the up and down arrows in the "Checkpoints in Scene" list to change the order in which players should go through your gates. When you change the order this way, the Checkpoint's index is changed to match its actual order, and its name is changed to match its index.
 
 # Test Checkpoints
 At this point, you've extended or changed the course, and added some checkpoints - time for a test! Open the VRChat SDK Control Panel, sign into your account, and choose "Build & Test" to test out your course!
@@ -68,6 +72,7 @@ If you have any problems launching your world or just want to learn more about l
 Let's add some PowerUps to make things more interesting.
 
 1. In the Utility Window, open the "Power Ups" section. It's very similar to the Checkpoints section, with different parameters for the ones you've already placed.
+
 ![build-from-demo-parts-9c8911e-power-ups-section.png](/img/worlds/build-from-demo-parts-9c8911e-power-ups-section.png)
 
 2. Select one of the PowerUp Prefabs, then place it in your scene by pointing your mouse at a surface and pressing the spacebar, just like you did for Checkpoints.
