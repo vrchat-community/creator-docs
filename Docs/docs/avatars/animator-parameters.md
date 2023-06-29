@@ -137,7 +137,7 @@ If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the ava
 | --- | :-- |
 | 0 | Uninitialized. Usually only occurs when the user is switching avatars and their IK isn't sending yet. |
 | 1 | Generic rig. The user might have tracking of any kind on, but the avatar is rigged as Generic,so tracking is ignored. _Might_ be a desktop user if `VRMode` is 0. |
-| 2 | _Only occurs with AV2,and therefore isn't a state you should expect to be in for very long for AV3 controllers on avatars. May still occur with SDK3 stations._ <br />Hands-only tracking with no fingers. Hands-only tracking with no fingers. This will only occur in states that are transitions-- as in, you should expect `TrackingType` to change again, and the avatar should not stay in this state. |
+| 2 | _Only occurs with AV2,and therefore isn't a state you should expect to be in for very long for AV3 controllers on avatars. May still occur with SDK3 stations._ <br />Hands-only tracking with no fingers. This will only occur in states that are transitions-- as in, you should expect `TrackingType` to change again, and the avatar should not stay in this state. |
 | 3 | Head and hands tracking. If `VRMode` is `1`, this user is in 3-point VR. If `VRMode` is `0`, this is a Desktop user in a humanoid avatar. |
 | 4 | 4-point VR user. Head, hands, and hip. |
 | 6 | Full Body Tracking VR user. Head, hands, hip, and feet tracked. |
