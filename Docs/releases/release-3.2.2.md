@@ -21,6 +21,6 @@ You may see warnings or errors about conflicting package versions for Newtonsoft
 ### Changes
 * Adds [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling) and [Avatar Events](/worlds/udon/avatar-events) to integrate with the new Avatar Scaling system.
 * Includes new limits for avatar dynamic components. The SDK will give a build error if you exceed these:
-  * VRCPhysBoneBase: 256 Max
+  * VRCPhysBone: 256 Max
   * VRCPhysBoneCollider: 256 Max
   * VRCContact: 256 Max
