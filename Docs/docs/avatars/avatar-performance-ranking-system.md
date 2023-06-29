@@ -19,7 +19,7 @@ Although the Performance Rank system does as best as it can to judge the "worst 
 For the technically inclined: the Performance Rank system is based on a static analysis of the avatar's properties without any consideration paid to things like animators, shaders, texture resolution, pixel lights, and many more factors. *However*, it tends to provide an excellent litmus test for detecting problematic avatars 95% of the time!
 :::
 
-# Short Version
+## Short Version
 **Aim for Good ranking.** If you can't hit that, **Medium is perfectly fine.** 
 
 Creating avatars is already hard, and creating optimized avatars is even harder. It is a skill that takes a long time to build!
@@ -27,7 +27,7 @@ Creating avatars is already hard, and creating optimized avatars is even harder.
 Keep in mind that many events, groups, and locations in VRChat may ask you to change your avatar if you show up in a Very Poor avatar. As such, even if you choose to use a Very Poor avatar in small instances with your friends, make sure you also have one meant for usage in instances with more people.
 
 Your avatar affects everyone else's framerate, so be mindful of how your choices affect other people's experiences. Otherwise, they might see you as your Fallback!
-# Performance Ranking Icons
+## Performance Ranking Icons
 When you open your Quick Menu, you'll see icons appear on top of the nameplates of users. 
 
 The ranks are as follows:
@@ -40,7 +40,7 @@ The ranks are as follows:
 | ![image](/img/avatars/performance-rank/poor.png)      | Poor             | Could use some work.                                                                                                                                                              |
 | ![image](/img/avatars/performance-rank/very-poor.png) | Very Poor        | This avatar has some serious performance problems. Since this rank is unbounded, it is very possible that your performance is suffering as a result of this avatar being visible. |
 
-# Viewing Detailed Avatar Stats
+## Viewing Detailed Avatar Stats
 If you click on a user with your Quick Menu open, you'll notice a new **"Show Avatar Stats"** button on the left side, displaying the icon of that user's Performance Rank.
 :::caution
 
@@ -71,7 +71,7 @@ You'll also see a "before and after" in the form of the "Original" and "Perf Fil
 In the example given above, Lights and Particle Systems are disabled due to exceeding the limit defined. Because Particle Systems employ at least one material each, the count of materials from Particle Systems is also subtracted from the pre-filtered avatar. 
 
 You can also see that we link to our **Documentation**, in particular our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips).
-# Avatar Performance Ranking Stats
+## Avatar Performance Ranking Stats
 Here is a listing of all of the statistics that the system looks at and their description.
 
 Bolded stats will cause the avatar to be fully blocked if they exceed the Minimum Displayed Performance Rank. If other stats (except for bounds) exceed the Minimum Displayed Performance Rank the avatar will only be partially blocked. The avatar will be shown with any components related to the exceeded stats will be removed. 
@@ -108,7 +108,7 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Cloths                     | The total number of Cloth components on the avatar.                                                                                     |
 
 
-# Avatar Performance Ranks - Value Maximums per Rank
+## Avatar Performance Ranks - Value Maximums per Rank
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
 
 For example (on PC), if your avatar has 2 Skinned Meshes, your avatar will be ranked as Good, as that exceeds the rating for Excellent, but does not exceed the rating for Good. 
@@ -124,7 +124,7 @@ If you disable Mesh Read/Write on **any** mesh on the avatar (including particle
 The SDK warns you of this and will require that you fix it before you upload.
 :::
 
-# PC Limits
+## PC Limits
 On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor". **Currently, no avatars will be blocked by default due to performance ranking on PC, unless you've enabled the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system.**
 
 Triangles (polygons) are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 polygons, the avatar will be marked as Very Poor immediately.
@@ -164,7 +164,7 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 
 Footnotes:
 1: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
-# Quest Limits
+## Quest Limits
 ### Default Performance Rank Blocking
 On Quest, the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
 
@@ -229,7 +229,7 @@ The following categories are disabled on Quest since they can never appear on av
 
 These values may still appear in the in-app stats readout, but will always be zero.
 
-# Minimum Displayed Performance Rank
+## Minimum Displayed Performance Rank
 You can choose to manage avatars based on their Avatar Performance Rank. This option is available in the "Performance Options" menu, accessible as a button in the top-right of the Safety tab in the main menu.
 
 When you choose a Performance Rank in this menu, all avatars that are below that level will have their components/display managed as described below.
