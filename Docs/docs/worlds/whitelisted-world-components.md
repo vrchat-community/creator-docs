@@ -112,8 +112,6 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - DynamicBoneCollider
 
 ## Text Mesh Pro
-- InlineGraphic
-- InlineGraphicManager
 - TMP_Dropdown
 - TMP_InputField
 - TMP_ScrollbarEventHandler
@@ -185,15 +183,10 @@ PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by U
 - ApplyToMaterial
 - ApplyToMesh
 - AudioOutput
-- CubemapCube
-- DebugOverlay
-- DisplayBackground
 - DisplayIMGUI
 - DisplayUGUI
 - MediaPlayer
-- StreamParser
 - SubtitlesUGUI
-- UpdateStereoMaterial
 
 ## Oculus Spatializer Unity
 - ONSPReflectionZone
@@ -250,7 +243,6 @@ PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by U
 - Recoil
 - ShoulderRotator
 - AnimationBlocker
-- BehaviourAnimatedStagger
 - BehaviourBase
 - BehaviourFall
 - BehaviourPuppet
