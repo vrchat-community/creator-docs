@@ -21,7 +21,7 @@ If you want to apply moderation effects to a user in your world using Udon, you 
 
 1. **Tell everyone that enters your world that you have rules, and that you will apply moderation effects if they break them.** You must list your rules at or near the entrance of your world, or have them otherwise easily accessible and visible.
 2. **Tell everyone that is moderated by your system what effects have been applied and why.** For example, if you teleport a user off the dance floor and lock them out for bad language, you might deliver this message like so: "You have been kicked off the dance floor for: bad language". This must be done both in-world (as in, something easily readable by a user) and in the VRChat logs.
-3. **If you moderate someone, it MUST be because of something they did in this instance.** Apply your moderation effects ONLY as the result of specific behaviors personally witnessed in the current instance of the world. **In other words, you cannot have a user blacklist or whitelist.** This includes (but is not limited to) creating a list based off someone's name or player properties.
+3. **If you moderate someone, it MUST be because of something they did in this instance.** Apply your moderation effects ONLY as the result of specific behaviors personally witnessed in the current instance of the world. **In other words, you cannot have a user blacklist.** This includes (but is not limited to) creating a list based off someone's name or player properties.
 
 You may not:
 
