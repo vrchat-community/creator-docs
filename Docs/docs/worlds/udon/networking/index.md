@@ -217,6 +217,5 @@ You can see some per-object information in list form using RightShift + ` + 6 in
 The latest build & SDK have these issues:
 
 * isInstanceOwner returns true when spawning (thanks [FSP](https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning))
-* OnOwnershipRequest sometimes logs that it rejects transferring ownership when it actually succeeds (thanks [AirGamer](https://feedback.vrchat.com/udon-networking-update/p/1069-strange-logging-when-networksetowner-is-called-within-onownershiprequest))
 * Teleporting a player during Network Update (OnDeserialization) will not teleport the player's avatar. To fix this issue currently, use `SendCustomEventDelayedFrames` and delay the teleport by 1 frame.
 :::
