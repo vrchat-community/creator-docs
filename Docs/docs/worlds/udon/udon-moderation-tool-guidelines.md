@@ -27,6 +27,6 @@ You may not:
 
 1. **Change the user's avatar.**
 2. **Intentionally crash the user.** Doing so will cause your account to be moderated by the VRChat Trust and Safety Team.
-3. **Automatically apply moderation effects to any user** based on past behavior or any of their personal characteristics. Again, **this means you cannot have a user blacklist or whitelist.** This includes creating a blacklist or whitelist based off someone's name or player properties.
+3. **Automatically apply moderation effects to any user** based on past behavior or any of their personal characteristics. Again, **this means you cannot have a user blacklist.** This includes creating a blacklist based off someone's name or player properties.
 
 If we find your usage of user-created moderation tools in Udon to be inappropriate, we may remove content or moderate your account until the issues are addressed. This judgement will be made at our discretion.
