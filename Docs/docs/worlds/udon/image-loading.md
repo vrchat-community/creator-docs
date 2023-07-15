@@ -55,7 +55,7 @@ You can use `VRCImageDownloader` in your own Udon Graph scripts. Here's how:
 1. Create a new `VRCImageDownloader` object with its Constructor node.
 2. Save the newly created `VRCImageDownloader` as a variable. (This **required**, see 'Notes'.)
 3. Execute the `DownloadImage` function on the `VRCImageDownloader` instance.
-4. (Optional) Wait for the `OnImageLoadSuccess` or `OnImageLoadFailure` event to execute.
+4. (Optional) Wait for the `OnImageLoadSuccess` or `OnImageLoadError` event to execute.
 
 ## UdonGraph Nodes
 
