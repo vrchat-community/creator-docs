@@ -132,7 +132,7 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 | Avatar Quality                                                        | Excellent          | Good         | Medium       | Poor         |
 |-----------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
 | Polygons                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
-| Bounds Size<sup>1</sup>                                               | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
 | Texture Memory                                                        | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
 | Skinned Meshes                                                        | 1                  | 2            | 8            | 16           |
 | Meshes                                                                | 4                  | 8            | 16           | 24           |
@@ -162,8 +162,7 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 | Physics Rigidbodies                                                   | 0                  | 1            | 8            | 8            |
 | Audio Sources                                                         | 1                  | 4            | 8            | 8            |
 
-Footnotes:
-1: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
+
 ## Quest Limits
 ### Default Performance Rank Blocking
 On Quest, the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
@@ -189,18 +188,18 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics
 | Avatar Quality                                                                    | Excellent          | Good         | Medium       | Poor         |
 |-----------------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
 | Polygons                                                                          | 7,500              | 10,000       | 15,000       | 20,000       |
-| Bounds Size <sup>1</sup>                                                          | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Bounds Size[^1]                                                                    | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
 | Texture Memory                                                                    | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
 | Skinned Meshes                                                                    | 1                  | 1            | 2            | 2            |
 | Meshes                                                                            | 1                  | 1            | 2            | 2            |
 | Material Slots                                                                    | 1                  | 1            | 2            | 4            |
 | Animators                                                                         | 1                  | 1            | 1            | 2            |
 | Bones                                                                             | 75                 | 90           | 150          | 150          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components<sup>2</sup>            | 0                  | 4            | 6            | 8            |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms<sup>2</sup>   | 0                  | 16           | 32           | 64           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders<sup>2</sup>             | 0                  | 4            | 8            | 16           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count<sup>2</sup> | 0                  | 16           | 32           | 64           |
-| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)<sup>2</sup>         | 2                  | 4            | 8            | 16           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Components[^2]                                                           | 0                  | 4            | 6            | 8            |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms[^2]                                                  | 0                  | 16           | 32           | 64           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders[^2]                                                            | 0                  | 4            | 8            | 16           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count[^2]                                                | 0                  | 16           | 32           | 64           |
+| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)[^2]                                                       | 2                  | 4            | 8            | 16           |
 | Particle Systems                                                                  | 0                  | 0            | 0            | 2            |
 | Total Particles Active                                                            | 0                  | 0            | 0            | 200          |
 | Mesh Particle Active Polys                                                        | 0                  | 0            | 0            | 400          |
@@ -209,9 +208,9 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics
 | Trail Renderers                                                                   | 0                  | 0            | 0            | 1            |
 | Line Renderers                                                                    | 0                  | 0            | 0            | 1            |
 
-Footnotes:
-1: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
-2: If the Very Poor value is exceeded on Quest, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
+[^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
+
+[^2]: If the Very Poor value is exceeded on Quest, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
 
 ### Removed Categories
 The following categories are disabled on Quest since they can never appear on avatars:

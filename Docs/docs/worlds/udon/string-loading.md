@@ -8,6 +8,7 @@ updatedAt: "2023-03-26T00:35:05.784Z"
 ---
 String Loading allows you to download text files from the internet and use them in your VRChat world. You can either use the `DownloadString` script included in the SDK, or you can make your own script using the new `VRCStringDownloader.LoadUrl` function.
 
+- Your text files can be in any format, such as `.txt` or `.json`.
 * One string can be downloaded every five seconds.
 If this limit is exceeded, string downloads are queued and downloaded in a random order.
 * One string can only be of a maximum of 100MB

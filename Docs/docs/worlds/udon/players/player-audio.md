@@ -51,7 +51,7 @@ This sets the maximum start of the range for hearing the avatar's audio. Default
 
 ### SetAvatarAudioVolumetricRadius
 *in Meters, Range is not limited*
-An avatar's audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully, and is mainly for distant audio sources that need to sound "large" as you move past them. Keep this at zero unless you know what you're doing. The value for Volumetric Radius should always be lower than Avatar AUdio Far Radius. Default is 40 meters.
+An avatar's audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully, and is mainly for distant audio sources that need to sound "large" as you move past them. Keep this at zero unless you know what you're doing. The value for Volumetric Radius should always be lower than Avatar AudioFarRadius. Default is 40 meters.
 
 ### SetAvatarAudioForceSpatial
 *On/Off*
