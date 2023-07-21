@@ -32,17 +32,18 @@ Describes your VRChat world. Required for every Unity scene you'd like to use as
 | Unity Version                | Unity version being used; you should never need to touch this.                                                  |
 | Dynamic Prefabs              | An array of prefabs that can be dynamically spawned at runtime. Any prefab that isn't referenced in the scene but needs to be spawned should be listed here. |
 | Dynamic Materials            | An array of materials that can be dynamically changed at runtime. Any material that isn't referenced in the scene but needs to be set to an object should be listed here. |
+| Interact Passthrough         | Allow interactions to pass through specified user layers, see description below. |
 
-<br/>
-<!-- Description of Physics Matrix here -->
-<h3>Interaction Block and Passthrough on VRChat Layers</h3>
+<!-- Description of Physics Matrix goes here -->
+### Interaction Block and Passthrough on VRChat Layers
+
 Interaction (grabbing an item from a distance, toggling a UI element with the laser) is blocked by most VRChat layers. The following layers are transparent to interaction and allow you to interact through them:
-<ul>
-<li>UiMenu</li>
-<li>UI</li>
-<li>PlayerLocal</li>
-<li>MirrorReflection</li>
-</ul>
+ - UiMenu
+ - UI
+ - PlayerLocal
+ - MirrorReflection
+   
 <!-- Unreleased feature -->
-<h3>Interaction Passthrough for User Layers</h3>
+### Interaction Passthrough for User Layers
+
 Interaction through User layers is blocked by default. Use the "Interact Passthrough" mask to define layers that will be transparent to interaction (allow interactions to pass through). Note that collision test rays originate differently from Desktop/Mobile players (inside the player capsule) versus VR players (from the user's tracked hand). This means that VR players can penetrate colliders with their hand, those same colliders will therefore not block interaction from the VR player if their hand has penetrated.</p>
