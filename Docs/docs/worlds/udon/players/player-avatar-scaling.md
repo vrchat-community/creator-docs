@@ -22,9 +22,9 @@ Avatar Scaling operates in two modes and can be adjusted individually on a playe
 
 In either case, avatar changes and eye height changes will fire "OnAvatarChanged" and "OnAvatarEyeHeightChanged" events so that an Udon program can react to these occurrences.
 
-:::note World-authoritative by default
+:::note Player-controlled by default
 
-Currently, avatar scaling is operating in the world-authoritative mode by default. If you wish to operate in the player-controlled mode, you must enable it on the website or with the Udon functions below.
+Currently, avatar scaling is operating in the player-controlled mode by default. If you wish to operate solely in the world-authoritative mode, you must disable player-controlled avatar scaling on the website or with the Udon functions below.
 
 :::
 
