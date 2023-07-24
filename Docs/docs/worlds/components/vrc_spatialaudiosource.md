@@ -84,10 +84,6 @@ Here's the information converted into a two-column markdown table:
 | Advanced: Use AudioSource Volume Curve | Use the AudioSource's '3D Sound Settings' volume curve. If unchecked, use Inverse Square falloff. It is recommended to keep this disabled to ensure realistic and authentic spatialization. <br /> <br /> Defaults to False. |
 | Advanced: Enable Spatialization  | Uncheck this to disable the default inverse-square falloff curve and instead use the Audio Source's spatialization settings. <br /><br /> Defaults to True.|
 
-The table above represents the "Property" and "Description" columns of the information you provided.
-
-If you have any further questions or need additional assistance, feel free to ask!
-
 ## Avatar Limitations
 You are permitted to adjust the fall-off curve on avatar-based `Audio Sources`. Simply set `Use AudioSource Volume Curve` to True, adjust the curve in the `Audio Source`, and VRChat will use that fall-off curve instead of the default inverse-square.
 

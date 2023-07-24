@@ -82,3 +82,13 @@ The following nodes are Under Review - not working, not recommended for use. We'
 * CombatSetMaxHitpoints
 * CombatSetRespawn
 * CombatSetup
+
+## Language
+
+### GetCurrentLanguage
+*string*
+Gets the selected language of the local user.
+
+### GetAvailableLanguages
+*string[]*
+Gets all available languages a player can select.

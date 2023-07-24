@@ -24,10 +24,10 @@ Fired when the ownership of this object is transferred via some mechanic.
 Fired when this object is picked up by a VRChat player.
 
 ### OnPickupUseDown
-Fired when this object is held and the Use button is pressed. Fires on button down.
+Fired when this object is held and the Use button is pressed. Fires on button down. Requires 'Auto Hold' on Desktop.
  
 ### OnPickupUseUp
-Fired when this object is held and the Use button is pressed. Fires on button up.
+Fired when this object is held and the Use button is pressed. Fires on button up. Requires 'Auto Hold' on Desktop.
 
 ### OnPlayerJoined
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`

@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-01-22T00:32:00.432Z"
 updatedAt: "2023-03-28T19:07:26.827Z"
 ---
-Here are the nodes relating to Players' positions. For nodes that deal with forces relating to Players, see [Player Forces](/worlds/udon/players/player-forces) 
+Here are the nodes relating to Players' positions. For nodes that deal with forces relating to Players, see [Player Forces](/worlds/udon/players/player-forces). 
 
 ### GetPosition
 
@@ -46,3 +46,10 @@ Get whether the player is touching the ground, which enables Jump.
 
 _takes a Vector3 World Position and Quaternion World Rotation_  
 Send a Player to a new spot and specified rotation, unless a Station does not allow it.
+
+:::note Teleporting other players
+
+TeleportTo only works with the [local player](/worlds/udon/players/getting-players/#networkingget-localplayer). You can use [networking](/worlds/udon/networking/) to cause other players to teleport themselves. 
+
+:::
+

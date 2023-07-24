@@ -34,6 +34,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: ({versionDocsDirPath, docPath}) =>
               `https://github.com/vrchat-community/creator-docs/edit/main/Docs/docs/${docPath}`,
+          showLastUpdateTime: true
           
         },
         blog: {

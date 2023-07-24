@@ -123,26 +123,26 @@ You also cannot drive any of the [VRChat-defined Animator Parameters](/avatars/a
 
 Set, Add, Random, and Copy work for `float` and `int`. Set, Random, and Copy work for `bool`.
 
-## Set
+### Set
 Set will simply set the Value to the named Parameter in Destination.
 
 ![state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png](/img/avatars/state-behaviors-121fe2a-2022-06-02_18-11-13_NVIDIA_Share.png)
 
-## Add
+### Add
 Add will add the Value to the named Parameter in Destination.
 
 As the component points out, using Add may not produce the same result when run on a remote instance of the avatar. When using Add, it is suggested to use a synced Destination Parameter and only run the driver locally.
 
 ![state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png](/img/avatars/state-behaviors-e10bb6a-2022-06-02_18-11-17_Unity.png)
         
-## Random
+### Random
 Random will set the Destination Parameter to a random number between Min Value and Max Value.
 
 As the component points out, using Random may not produce the same result when run on a remote instance of the avatar. When using Random, it is suggested to use a synced Destination Parameter and only run the driver locally.
 
 ![state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png](/img/avatars/state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png)
 
-## Copy
+### Copy
 Copy will set the value of the Source Parameter to the Destination Parameter. This can be used to set one float to match another float, to remap one float into a different range, or to convert between two different types entirely.
 :::caution
 
@@ -151,19 +151,19 @@ VRChat's built-in parameters, such as `GestureLeftWeight`, **can** be specified 
 
 ![state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png](/img/avatars/state-behaviors-bffdb10-2022-06-02_18-11-30_Unity.png)
 
-### Converting between types
+#### Converting between types
 When converting from a `bool`, False counts as 0 and True counts as 1.
 
 When converting to a `bool`, 0 is False and *anything* else is True.
 When converting to an `int`, it will always round *down* to the nearest whole number.
 When converting to a `float`, it will directly copy the value, even if it goes outside the range that it is capable of syncing to other players.
 
-### Custom Ranges
+#### Custom Ranges
 You can also use the `Convert Range` checkbox to enable some additional UI that allows you to set custom conversion ranges. This can be used to remap values or to have more control over exactly how it converts from one type to another type.
 
 ![state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png](/img/avatars/state-behaviors-cab639b-2022-06-02_18-35-32_Unity.png)
 
-# Playable Layer Control
+## Playable Layer Control
 
 ![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/img/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
         
