@@ -20,4 +20,5 @@ This version of the SDK updates the Newtonsoft package used by the Base SDK as w
 * A few MIDI input timing fixes, including improved note processing, more consistent looping, and fixed Note On events with a velocity of '0' turning into Note Off events, which broke MIDI file parsing.
 * Scaling PhysBones to zero or very small values and back no longer breaks behavior
 * Fixed VRCPhysBone position unable to be animated when very tiny
+* Blocked users will sync their position and motion state again for querying in local Udon scripts
 * Udon can now be used to eject players from "standing" stations, with or without station exit disabled
