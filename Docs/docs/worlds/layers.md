@@ -41,3 +41,15 @@ When you create a Unity project with VRChat's Worlds SDK, your project will auto
 | 20           | reserved3                    | ⚠ Avoid using this layer. Reserved by VRChat. When you upload your world, any Game Object on a reserved Layer will be moved to Layer 0 (Default). |                                                                                                                       
 | 21           | reserved4           |  ⚠ Avoid using this layer. Reserved by VRChat. When you upload your world, any Game Object on a reserved Layer will be moved to Layer 0 (Default).                                                                                                                                                                                                                                                                    |
 | 22-31        |                     | Unused by Unity and VRChat. VRChat will not override the name and collision matrix of these Layers in uploaded worlds.                                                                                                                                               |
+
+## Interaction Block and Passthrough on VRChat Layers
+
+Interaction (grabbing an item from a distance, toggling a UI element with the laser) is blocked by most VRChat layers. The following layers are transparent to interaction and allow you to interact through them:
+ - UiMenu
+ - UI
+ - PlayerLocal
+ - MirrorReflection
+
+ ## Interaction Passthrough for User Layers
+
+Interaction through User layers is blocked by default. Use the "Interact Passthrough" mask to define layers that will be transparent to interaction (allow interactions to pass through). Note that collision test rays originate differently from Desktop/Mobile players (inside the player capsule) versus VR players (from the user's tracked hand). This means that VR players can penetrate colliders with their hand even when the player collider is blocked. Those same colliders will therefore not block interaction from the VR player, since the hand has penetrated.

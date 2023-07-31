@@ -3,7 +3,7 @@ title: "Player Avatar Scaling"
 slug: "player-avatar-scaling"
 hidden: false
 createdAt: "2023-06-22T01:23:45.678Z"
-updatedAt: "2023-06-22T01:23:45.678Z"
+updatedAt: "2023-07-19T01:23:45.678Z"
 ---
 Udon provides functions allowing world creators to
 - Permit or enforce avatar scaling features and parameters.
@@ -22,16 +22,22 @@ Avatar Scaling operates in two modes and can be adjusted individually on a playe
 
 In either case, avatar changes and eye height changes will fire "OnAvatarChanged" and "OnAvatarEyeHeightChanged" events so that an Udon program can react to these occurrences.
 
-:::note World-authoritative by default
+:::note Player-controlled by default
 
-Currently, avatar scaling is operating in the world-authoritative mode by default. If you wish to operate in the player-controlled mode, you must enable it on the website or with the Udon functions below.
+Currently, avatar scaling is operating in the player-controlled mode by default. If you wish to operate in the world-authoritative mode, you must disable it on the website or with the Udon functions below.
 
 :::
 
-## Enabling player-controlled scaling via the website
-If you simply wish to enable player-controlled scaling in your world but don't want to dip into Udon and reupload it, you can simply log into the [My Worlds section of the VRChat Website](https://vrchat.com/home/content/worlds), select your world, toggle it on, and save your changes.
+## Disabling player-controlled scaling via the website
+If you simply wish to disable the avatar scaling system in your world, you can log into the [My Worlds section of the VRChat Website](https://vrchat.com/home/content/worlds), select your world, toggle it off, and save your changes.
 
 ![It's really easy!](/img/worlds/udon/website_avatar_scaling_enabled.png)
+
+When you disable avatar scaling via the website, the system is disabled for players in your world entirely. They will only be able to use your world at their default scale, and the menu components for avatar scaling will be disabled. 
+
+Because of this, the following `VRCPlayerApi` functions are not available to Udon when avatar scaling is disabled via the website, and using them will have no effect: `SetManualAvatarScalingAllowed`, `SetAvatarEyeHeightMinimumByMeters`, `SetAvatarEyeHeightMaximumByMeters`, `SetAvatarEyeHeightByMeters`, `SetAvatarEyeHeightByMultiplier`.
+
+If you wish to retain access to these Udon functions but don't want users to be able to scale themselves via the radial puppet in their Action Menu, please leave avatar scaling enabled via the website and instead use Udon to disable the player-controlled avatar scaling mode via `SetManualAvatarScalingAllowed`.
 
 ## Functions for player-controlled scaling
 :::note Local player only
