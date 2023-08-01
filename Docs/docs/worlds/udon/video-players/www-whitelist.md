@@ -1,5 +1,5 @@
 ---
-title: "Video Player allowlist"
+title: "Video Player Allowlist"
 slug: "www-whitelist"
 hidden: false
 createdAt: "2020-09-10T18:56:07.748Z"
@@ -12,7 +12,9 @@ VRChat on Quest can play videos from direct links to video files. These URLs typ
 Some workarounds exist for advanced users. VRChat has not reviewed these methods, does not condone them, and cannot guarantee their continued operation, but they have been recommended by suggested edits to our documentation.
 
 * [Streamlink](https://streamlink.github.io)
-* [ArchiTechAnon's "Understanding URLs in VRChat" post](https://ask.vrchat.com/t/protv-by-architechanon-usage-guides-and-walkthroughs/7029/11)",
+* [ArchiTechAnon's "Understanding URLs in VRChat" post](https://ask.vrchat.com/t/protv-by-architechanon-usage-guides-and-walkthroughs/7029/11)"
+
+Future updates may improve this functionality.
 
 :::
 
@@ -27,7 +29,7 @@ VRChat on Android will not play video if the host is not using HTTPS protocol.
 The example video player in the SDK will not handle cases in which the master has "Untrusted URLs" disabled, which will result in videos being unable to play. User-created video players may want to modify the Udon code to give sync ownership to the user requesting the video.
 :::
 
-## allowlisted Services
+## Allowlisted Services
 The services listed below are inherently trusted and are permitted with our default URL allowlist. The resource being accessed (as in, the URL you enter into/use in the video player) must reside in the service domain listed next to the service name. This means that short-links may not work!
 
 :::note
@@ -35,14 +37,15 @@ The services listed below are inherently trusted and are permitted with our defa
 *The listings below do not constitute partnerships or endorsements and may change at any time without notice*.
 :::
 
-| Parameter | Description |
+| Service | Domain |
+| --- | --- |
 | --- | --- |
 | Soundcloud | `soundcloud.com` |
-| FacebookVideo | `facebook.com` |
+| Facebook Video | `*.facebook.com` |
 | NicoNico | `*.nicovideo.jp` |
 | Twitch.TV | `*.twitch.tv` |
 | Vimeo | `*.vimeo.com` |
 | Youku | `*.youku.com` |
 | YouTube | `*.youtube.com`,`youtu.be` |
-| Mixcloud | `mixcloud.com` |
 | VRCDN | `*.vrcdn.live`,`*.vrcdn.video` |
+| Topaz Chat | `ciel.topaz.chat` |
