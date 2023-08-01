@@ -94,4 +94,4 @@ We will publish a document listing all the exclusions from our SDK before the en
 - `VRC.SDK3.Dynamics.PhysBone.VRCPhysBoneEditor`
 - `VRC.Udon.ClientBindings.UdonClientInterface`
 - `VRC.Udon.Security.UnityEngineObjectSecurityBlacklist`
-  The UdonManager will have parts that are part of the Public SDK API, but changes were made to 'blacklisted' methods which are not meant to be used directly.
+  The UdonManager will have parts that are part of the Public SDK API, but changes were made to 'banlisted' methods which are not meant to be used directly.

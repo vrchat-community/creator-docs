@@ -9,7 +9,7 @@ In VRChat, you can create and visit custom worlds powered by the Udon programmin
 
 To get started, check out [Creating Your First World](/worlds/creating-your-first-world).
 
-- [Whitelisted World Components](/worlds/whitelisted-world-components) 
+- [Allowed World Components](/worlds/whitelisted-world-components) 
 - [Supported Scripted Assets](/worlds/supported-assets) 
 - [World Creation, Optimization, and Community Labs Tips](/worlds/submitting-a-world-to-be-made-public)
 - [What is Udon?](/worlds/udon)

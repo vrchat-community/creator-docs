@@ -7,7 +7,7 @@ updatedAt: "2023-02-24T00:48:47.712Z"
 ---
 You can use certain external assets that use scripts in VRChat worlds.
 
-To see a list of precise components permitted in VRChat worlds, please see [Whitelisted World Components](/worlds/whitelisted-world-components). Most of these components (except TextMeshPro) are unavailable on Quest.
+To see a list of precise components permitted in VRChat worlds, please see [Allowlisted World Components](/worlds/whitelisted-world-components). Most of these components (except TextMeshPro) are unavailable on Quest.
 
 ## TextMeshPro
 "TextMesh Pro is the ultimate text solution for Unity. It's the perfect replacement for Unity's UI Text & Text Mesh."

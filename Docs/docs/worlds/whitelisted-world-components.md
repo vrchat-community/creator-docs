@@ -1,5 +1,5 @@
 ---
-title: "Whitelisted World Components"
+title: "Allowlisted World Components"
 slug: "whitelisted-world-components"
 hidden: false
 createdAt: "2018-12-13T22:11:19.350Z"
