@@ -1,5 +1,5 @@
 ---
-title: "Video Player Whitelist"
+title: "Video Player allowlist"
 slug: "www-whitelist"
 hidden: false
 createdAt: "2020-09-10T18:56:07.748Z"
@@ -16,7 +16,7 @@ Some workarounds exist for advanced users. VRChat has not reviewed these methods
 
 :::
 
-The following services are on the video player whitelist.
+The following services are on the video player allowlist.
 
 If a service is not on this list, it will not play unless "Allow Untrusted URLs" is checked in Settings.
 
@@ -27,8 +27,8 @@ VRChat on Android will not play video if the host is not using HTTPS protocol.
 The example video player in the SDK will not handle cases in which the master has "Untrusted URLs" disabled, which will result in videos being unable to play. User-created video players may want to modify the Udon code to give sync ownership to the user requesting the video.
 :::
 
-## Whitelisted Services
-The services listed below are inherently trusted and are permitted with our default URL whitelist. The resource being accessed (as in, the URL you enter into/use in the video player) must reside in the service domain listed next to the service name. This means that short-links may not work!
+## allowlisted Services
+The services listed below are inherently trusted and are permitted with our default URL allowlist. The resource being accessed (as in, the URL you enter into/use in the video player) must reside in the service domain listed next to the service name. This means that short-links may not work!
 
 :::note
 

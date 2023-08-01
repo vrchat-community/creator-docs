@@ -1,5 +1,5 @@
 ---
-title: "Whitelisted Avatar Components"
+title: "Allowlisted Avatar Components"
 slug: "whitelisted-avatar-components"
 hidden: false
 createdAt: "2017-09-10T03:41:08.259Z"

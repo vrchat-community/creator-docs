@@ -46,7 +46,7 @@ This also applies to late-joiners. If you have 2 video players running in your w
 # Supported Video Hosts
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 
-A full list of our supported hosts is available at [Video Player Whitelist](/worlds/udon/video-players/www-whitelist). Some recommendations are below.
+A full list of our supported hosts is available at [Video Player Allowlist](/worlds/udon/video-players/www-whitelist). Some recommendations are below.
 :::note Disclaimer
 
 *The listings below do not constitute partnerships or endorsements*. These are services that are widely accessible and have been tested to work properly with VRChat video players.
@@ -55,11 +55,11 @@ A full list of our supported hosts is available at [Video Player Whitelist](/wor
 
 - **Cost**: Paid - varies depending on your Provider
 - **Links**: Link directly to the .mp4 or .webm file
-- **Limitations**: If you have your own host outside of our whitelist, users must have the "Allow Untrusted URLs" option enabled in their Settings to see your content.
+- **Limitations**: If you have your own host outside of our allowlist, users must have the "Allow Untrusted URLs" option enabled in their Settings to see your content.
 
 You may want to consider looking into a "content delivery network" (CDN) to host your content. This is useful if you plan on your video being accessible for many users, or to be fast for many users across the world. CDNs will distribute your file across many servers worldwide to ensure that there is a source close to the viewer to ensure fast downloads.
 
-We have tested *Amazon Cloudfront* and *BunnyCDN*. CDN services are usually paid services, but tend to be low-cost for bulk storage/transmission of data. However, due to their openness, they are not present in our whitelist and will require that users enable the "Allow Untrusted URLs" setting.
+We have tested *Amazon Cloudfront* and *BunnyCDN*. CDN services are usually paid services, but tend to be low-cost for bulk storage/transmission of data. However, due to their openness, they are not present in our allowlist and will require that users enable the "Allow Untrusted URLs" setting.
 
 ### YouTube
 - **Cost**: Free
