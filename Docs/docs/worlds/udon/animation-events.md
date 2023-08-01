@@ -9,7 +9,7 @@ You can [call events from your Animations](https://docs.unity3d.com/2019.4/Docum
 
 ![animation-events-af04d2a-AnimationEventInspector.png](/img/worlds/animation-events-af04d2a-AnimationEventInspector.png)
 
-# Allowlisted Animation Events
+# Allowed Animation Events
 * RunProgram
 * SendCustomEvent
 * Play
