@@ -35,7 +35,6 @@ const config = {
           editUrl: ({versionDocsDirPath, docPath}) =>
               `https://github.com/vrchat-community/creator-docs/edit/main/Docs/docs/${docPath}`,
           showLastUpdateTime: true
-          
         },
         blog: {
           path: 'releases',
