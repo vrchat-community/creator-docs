@@ -1,6 +1,6 @@
 ---
 slug: release-3-2-2
-date: 2023-06-23
+date: 2023-07-31
 title: Release 3.2.2
 authors: [momo]
 tags: [release]
@@ -8,9 +8,7 @@ draft: false
 ---
 ### Summary
 
-*Currently released as 3.2.2-beta.1 for Open Beta testing.*
-
-Adds Udon support for Avatar Scaling and enforces new Avatar Dynamic Component limits.
+Adds Udon support for Avatar Scaling (along with an Udon Example) and enforces new Avatar Dynamic Component limits.
 
 ## Requires Resolver 0.1.20!
 
