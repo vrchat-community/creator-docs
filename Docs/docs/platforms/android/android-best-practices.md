@@ -6,7 +6,7 @@ updatedAt: "2023-06-08T20:00:00.157Z"
 ---
 Making your VRChat worlds cross-platform is a great way of allowing more players to enjoy it. Most VRChat players are on Android, so it’s worth creating an Android of your VRChat world.
 
-However, smartphone players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
+However, mobile players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
 :::info
 
 VRChat is not available on Android _yet_.
@@ -17,7 +17,7 @@ It is scheduled to release later this year.
 
 It’s always a good idea to publish your world on PC and all other platforms supported by VRChat.
 
-Any worlds uploaded to Android are available on the Oculus Quest 2 and Android phones. If you’ve previously published a Quest version of your world, it’ll be available on phones as well!
+Any worlds uploaded to Android are available on the Oculus Quest 2 and Android mobile devices. If you’ve previously published a Quest version of your world, it’ll be available on phones and tablets as well!
 
 To learn how to upload your world to Android, please refer to our [cross-platform setup documentation](https://creators.vrchat.com/platforms/android/cross-platform-setup).
 
@@ -31,12 +31,12 @@ For example: Existing tools like [EasyQuestSwitch](https://vcc.docs.vrchat.com/v
 
 ## 2. Detect Mobile Players in Your World Automatically
 
-When an Android player joins your world, you may want to tweak certain aspects of it. Players on an Android phone won’t have access to VR controllers, just like VR players won’t have access to a touchscreen.
+When an Android player joins your world, you may want to tweak certain aspects of it. Players on an Android mobile device won’t have access to VR controllers, just like VR players won’t have access to a touchscreen.
 
 You can use [UdonSharp](https://udonsharp.docs.vrchat.com/) to detect Android players in your world:
 
 ```
-public bool _IsUsingPhone()
+public bool _IsUsingPhoneOrTablet()
 {
   #if UNITY_ANDROID
   return !VRC.SDKBase.Networking.LocalPlayer.IsUserInVR();
@@ -51,7 +51,7 @@ Here’s how it works:
 - Use [Networking.LocalPlayer](https://creators.vrchat.com/worlds/udon/players/) to retrieve data about the local player
 - Use [IsUserInVR](https://creators.vrchat.com/worlds/udon/players/#isuserinvr) to check if the local player is in VR.
 
-If the local player is on Android, but not in VR, that mean that they’re playing on an Android phone.
+If the local player is on Android, but not in VR, that mean that they’re playing on an Android phone or tablet.
 
 We’re working on a way to easily detect platforms like this for both Udon Graph and UdonSharp.
 
@@ -59,7 +59,7 @@ We’re working on a way to easily detect platforms like this for both Udon Grap
 
 Android devices are usually less powerful than PCs. Read our [Quest Content Optimization guide](https://creators.vrchat.com/platforms/android/quest-content-optimization/) to optimize your world’s performance.
 
-Good news: If your world runs OK on the Quest 2, it will probably run well on Android phones. Phones have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
+Good news: If your world runs OK on the Quest 2, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
 
 You should still ensure that Quest 2 players have an acceptable frame rate.
 
@@ -77,12 +77,27 @@ When rapidly iterating on VRChat worlds, it may be convenient to test them in th
 
 Phone screens are different from PC and VR devices. You may want to adjust your user interfaces to make them easier for mobile users to read and interact with.
 
-- Text in your user interface should be easy to read. Use legible fonts, large text sizes, and big buttons.
+- Make text easy to read. Use legible fonts, large text sizes, and big buttons.
+- Remove unnecessary text. Reading large amounts of text is difficult on a mobile device.
+- Localize text. Mobile users user a much wider spectrum of languages than on other platforms.
 - Avoid relying on interactions that require a VR device or complex camera movements.
 - Try using [screen-space user interfaces](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/UICanvas.html). On a touchscreen, they are easier to interact with than world space canvases. Consider adding a user interface that users can open from anywhere without needing to walk over to an in-world menu panel.
 
+## In Conclusion: Give Players a Smooth User Experience
+
+When a player joins your world, try to make the experience as smooth as possible. Try to apply the other tips mentioned in this article, and think of how you could use them in your world.
+
+- **Don't** reupload your PC world without optimizing your materials.
+- **Do** optimize your world for users on Android and enhance their experience.
+
+- **Don't** force players to follow complex steps before enjoying your world.
+- **Do** make your world enjoyable automatically, without any user input.
+
+- **Don't** upload your world without testing it.
+- **Do** listen to user feedback.
+
 ---
 
-Following these steps will make your world an excellent experience for mobile players.
+Following these steps will help make your world an excellent experience for mobile players.
 
 Do you have any tips or tricks you’d like us to include in this article? Submit your feedback below, and we’ll do our best to help share your knowledge with the VRChat Community.
