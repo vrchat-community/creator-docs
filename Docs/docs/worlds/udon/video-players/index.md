@@ -3,11 +3,11 @@ title: "Video Players"
 excerpt: "Play videos in your VRChat world"
 sidebar_position: 1
 createdAt: "2020-08-28T19:47:50.947Z"
-updatedAt: "2023-03-23T15:05:14.280Z"
+updatedAt: "2023-08-14T09:05:14.280Z"
 ---
 # Using the Prefabs
 
-The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Assets/VRChat Examples/Prefabs/VideoPlayers`.
+The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
 
 ![The two Video Player prefabs, ready to drop into your world.](/img/worlds/video-players-aae04e6-video-player-prefabs.png)
 
@@ -29,19 +29,15 @@ Notably, the AVPro speaker component implies support for 8 channel audio. This i
 
 # Android / Quest Compatibility
 
-VRChat on Quest can play videos from direct links to video files. These URLs typically end with a filename ending in a supported video type like `http://something.com/video.mp4` or `http://test.com/cats.webm`. If you visit the link and see a whole website around a video, that link will probably not play on Android / Quest because the application that VRChat uses to resolve these links into videos does not run on Android.  Creators will need to move the video to a host that supports direct links, or find another way to work around this issue.
-
-Some workarounds exist for advanced users. VRChat has not reviewed these methods, does not condone them, and cannot guarantee their continued operation, but they have been recommended by the community:
-
-- [Streamlink](https://streamlink.github.io)
-- [ArchiTechAnon's "Understanding URLs in VRChat" post](https://ask.vrchat.com/t/protv-by-architechanon-usage-guides-and-walkthroughs/7029/11)
+An application that VRChat uses to resolve links into videos is also available on Android now, so previous workarounds aren't needed.
+In the past, some workarounds existed for advanced users, because Quest had no URL resolver.
 
 # Rate Limiting
 A given user is only permitted to handle a new video player URL once every five seconds. This is a global limit across all video players. This applies to the default URLs as well as those set with LoadURL and PlayURL.
 
 With a single video player, this isn't an issue-- but if you have multiple video players, you need to ensure that a request isn't sent too quickly after a previous request.
 
-This also applies to late-joiners. If you have 2 video players running in your world, a late-joiner will see that they must send out two video requests. Unmanaged, they will attempt to do so simultaneously, and will fail. In cases where you have more than one video player playing simultaneously in a world, you'll have to account for this.
+This also applies to late-joiners. If you have 2 video players running in your world, a late-joiner will see that they must send out two video requests. Unmanaged, they will attempt to do so simultaneously and will fail. In cases where you have more than one video player playing simultaneously in a world, you'll have to account for this.
 
 # Supported Video Hosts
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
