@@ -2,8 +2,6 @@
 title: "Player API"
 excerpt: "Use Udon to retrieve information about players in your world"
 sidebar_position: 1
-createdAt: "2020-09-24T22:01:51.834Z"
-updatedAt: "2023-02-25T17:03:46.793Z"
 ---
 You can interact with Players in your world through the VRCPlayerApi. Each Player has a VRCPlayerApi Object, and your world fires the OnPlayerJoined / OnPlayerLeft events on any UdonBehaviours that listen for them when a player joins or leaves.
 
@@ -84,6 +82,11 @@ The following nodes are Under Review - not working, not recommended for use. We'
 * CombatSetup
 
 ## Language
+:::note
+
+Switching Languages is not yet ready in the VRChat client, these methods will return example data until the full feature is launched. They will currently throw an exception when testing in ClientSim, as well.
+
+:::
 
 ### GetCurrentLanguage
 *string*
