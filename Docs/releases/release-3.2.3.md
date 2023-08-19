@@ -18,4 +18,4 @@ Adds "interaction passthrough" to the World Descriptor and fixes a bug in the Av
 * Updates the Avatar Scaling Example Graph to prevent errors when running without ClientSim or when building the world.
 
 ## Features
-* Adds `VRCPlayerApi.GetAvailableLanguages()` and `VRCPlayerApi.GetCurrentLanguage()`
+* Adds `VRCPlayerApi.GetAvailableLanguages()` and `VRCPlayerApi.GetCurrentLanguage()`. These methods are 'stubs' for now - providing default values in return rather than pulling the actual values until a future Client release. See [the Language docs](https://creators.vrchat.com/worlds/udon/players/#language) for more info.
