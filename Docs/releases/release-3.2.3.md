@@ -16,3 +16,6 @@ Adds "interaction passthrough" to the World Descriptor and fixes a bug in the Av
 * Added a mask for "interaction passthrough" in the WorldDescriptor, so that world creators can allow interaction and grabs to occur through user defined layers. By default (Nothing) they will use the legacy behaviour, which was to always block interactions and grabs.
   * Note: This does not change the normal Unity behaviour that if a ray begins inside a collider, it ignores that collider. This means that desktop (which begins its ray from the center of the Player Capsule) will behave differently than VR, where the tracked hand can enter colliders that the Player Capsule cannot.
 * Updates the Avatar Scaling Example Graph to prevent errors when running without ClientSim or when building the world.
+
+## Features
+* Adds `VRCPlayerApi.GetAvailableLanguages()` and `VRCPlayerApi.GetCurrentLanguage()`. These methods are 'stubs' for now - providing default values in return rather than pulling the actual values until a future Client release. See [the Language docs](https://creators.vrchat.com/worlds/udon/players/#language) for more info.
