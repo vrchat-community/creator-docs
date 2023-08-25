@@ -50,7 +50,8 @@ The services listed below are inherently trusted and are permitted with our defa
 | VRCDN | `*.vrcdn.live`,`*.vrcdn.video` |
 | Mixcloud | `mixcloud.com` |
 | Topaz Chat | `ciel.topaz.chat` |
-| Virtual Market | `music4.cdn.vket.com`,`*.xr-marketplace.com`,`*.v-market.work`,`*.vket.chat`,`movie.vketcdn.com` |
+| Virtual Market | `music4.cdn.vket.com`,`*.v-market.work`,`*.vket.chat`,`movie.vketcdn.com` |
+| Gugenka | `*.xr-marketplace.com` |
 | Twist Events | `twisteventsasia.com` |
 | Unity Technologies | `stream.broadcast.unity.com` |
 | Furality Sylva | `*.furality.online` |
