@@ -22,6 +22,10 @@ The following URLs are available:
 * GitHub (`*.github.io`)
 * Pastebin (`pastebin.com`)
 * Github Gist (`gist.githubusercontent.com`)
+* Gugenka  (`*.xr-marketplace.com`)
+* Virtual Market (`*.v-market.work`,`*.vket.chat`)
+* Fynn (`api.fynn.ai`,`api-dev.fynn.ai`)
+* Poly  (`*.poly.jp`)
 
 # Guides
 ## Using the `DownloadString` script to download a string
