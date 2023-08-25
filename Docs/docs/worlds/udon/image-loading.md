@@ -35,6 +35,9 @@ The following domains are allowed to be used with Image Loading. If a domain is 
 - Reddit (`i.redd.it`)
 - Twitter (`pbs.twimg.com`)
 - VRChat (`assets.vrchat.com`)
+- Virtual Market (`*.v-market.work`,`*.vket.chat`)
+- Gugenka (`*.xr-marketplace.com`)
+- Poly (`*.poly.jp`)
 
 ## Guides
 
