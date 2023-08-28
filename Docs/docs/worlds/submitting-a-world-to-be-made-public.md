@@ -62,17 +62,32 @@ Once you've read everything above, submit your new world to Community Labs! If y
 
 If you want your world to be categorized as an Avatar World or Game World, just add the appropriate tag during upload.
 
-> 🚧 Don't Abuse The World Rows
-> 
-> These rules are in place to give **all** worlds a chance to be discovered. Utilizing "SEO-like" techniques is not permitted and will result in actions such as tag removal, or in repeated/worse cases, moderation of the author.
-> 
-> VRChat reserves the right to action users that abuse our systems to unfairly or misleadingly promote their own content.
+
+:::caution Don't abuse the world rows
+
+These rules are in place to give **all** worlds a chance to be discovered. Utilizing "SEO-like" techniques is not permitted and will result in actions such as tag removal, or in repeated/worse cases, moderation of the author.
+
+VRChat reserves the right to action users who abuse our systems to unfairly or misleadingly promote their own content.
+
+:::
 
 ### Avatar Worlds
 
-**An Avatar World is a world where gaining and sharing avatars is the** **_primary focus._** Finding an avatar in worlds tagged as Avatar Worlds should be quick and easy, and should not be an afterthought or "addition" to another clearly primary functionality of the world.
+An Avatar World is a world where sharing a variety of avatars is the primary focus. In an Avatar World, avatars are quick and easy to find. Avatars shouldn't be an afterthought or a late addition.
 
-To categorize your world as an avatar world, add the tag `avatar`.
+To categorize your world as an Avatar World, its title must include one of the terms "avatar", "avatars", "avi", or "avis". 
+
+By including one of these terms in your world's title, it will show up in the "Avatar World" category in VRChat's menu, making it easier for users to discover.
+
+:::caution Don't miscategorize your world
+
+Does your world contain avatars, but it's not an Avatar World?
+
+Add the tag "avatar" to your world instead. It won't be categorized as an Avatar World, but users can still find it by searching for "avatar".
+
+If avatars are not the primary focus of your world, don't include terms like "avatar" in the world's title. Your world may be hidden from certain categories, making it more difficult for users to discover.
+
+:::
 
 ### Game Worlds
 
