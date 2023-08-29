@@ -119,9 +119,6 @@ If you're an advanced creator, you can use this mode to control how your avatar 
 Next we'll want to check that everything is good in the build window, to do that you'll need to open `VRChat SDK > Show Control Panel > Builder`, within you should see the avatars gameobject mentioned with a Build & Publish button below it. In between you will see a polygon count, errors and warnings. If there's any errors you will need to fix them first, the most common error is too many polygons though to fix this you will need to decimate your avatars mesh(es) which if you know how to do then go do so but if not just go back and choose another model for now.
 
 ## Step 6 - Uploading the avatar!
-Now everything is ready. Press the Build & Publish button, the SDK will then build you avatar and get it ready for upload. You will next be brought to the upload screen where you can name your avatar, set a image for it and other metadata. To alter the image move the VRCCam around the scene.
-:::caution
+Now everything is ready. Press the Build & Publish button, the SDK will then build your avatar and get it ready for upload. You will next be brought to the upload screen where you can name your avatar, set a image for it and other metadata. To alter the image, move the VRCCam around the scene. See the [VRChat Creator Guidelines](https://hello.vrchat.com/creator-guidelines) for info about the tags.
 
-**Content Warnings are deprecated and not used at this time.** You cannot upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so (even if you have checked off a content warning) will result in moderation action.
-:::
 After all that is entered you need to confirm you have the rights to upload the content to VRChat then you can press the upload button, the avatar will then start uploading and when finished you should able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
