@@ -14,6 +14,8 @@ VRChat SDK provides a set of Interfaces and methods you can use to enhance your 
 
 The majority of the public API is contained and documented inside `Public SDK API` folder in the SDK packages. E.g., "Packages/VRChat SDK - Avatars/Editor/VRCSDK/SDK3A/Public SDK API" for the avatars API.
 
+Other methods marked as `[PublicAPI]` are also be a part of Public SDK API. E.g., "Packages/VRChat SDK - Base/Editor/VRCSDK/Dependencies/VRChat/API/VRCApi.cs" for updating description of contents.
+
 Most of the events and methods are shared between the SDKs and are defined in the Base SDK Package.
 
 ## What is available
