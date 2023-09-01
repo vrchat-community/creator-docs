@@ -6,30 +6,30 @@ createdAt: "2023-08-18T21:01:07.855Z"
 updatedAt: "2023-08-18T21:04:48.137Z"
 ---
 
-VRChat SDK provides a set of Interfaces and methods you can use to enhance your World and Avatar build process.
+The VRChat SDK provides a set of interfaces and methods you can use to enhance your world and avatar build process. 
 
-> 🚧 While we're going to make our best effort to provide a stable API, it is still subject to change in the future. We recommend leveraging semver to define which version of the SDK your tools are compatible with, [learn more here](https://vcc.docs.vrchat.com/vpm/packages/#versions-and-ranges).
+You can find the **Public SDK API** folder in both SDKs:
 
-## Where to find the API
+For avatars: `Packages/VRChat SDK > Avatars/Editor/VRCSDK/SDK3A/Public SDK API`  
+For worlds: `Packages/VRChat SDK > Base/Editor/VRCSDK/SDK3A/Public SDK API`
 
-The majority of the public API is contained and documented inside `Public SDK API` folder in the SDK packages. E.g., "Packages/VRChat SDK - Avatars/Editor/VRCSDK/SDK3A/Public SDK API" for the avatars API.
+However, most of the events and methods are shared between both the world and avatar SDKs and are defined in the **Base SDK Package.**
 
-Most of the events and methods are shared between the SDKs and are defined in the Base SDK Package.
+# What's available?
 
-## What is available
-
-For the most up-to-date list of events and methods, we recommend looking at the interface definition files directly as per the section above.
+For the most up-to-date list of events and methods, we recommend looking at the files directly mentioned above.
 
 But here is a short list of what is available:
 
 - OnEnable/OnDisable events of the main SDK Panel
-- Build Start/End/Success/Error events
-- Upload Start/End/Success/Error events
-- Build/Build & Test/Build & Upload methods
+- Build Start/End events
+- Upload Success/Error events
+- Build, Build and Test, and Build and Upload methods
 
-If you're currently using reflection to access the SDK internals, we recommend switching to the public API as soon as possible. As we might be changing/removing those APIs in the future.
-
-## Usage Examples
+:::note
+If you run into exceptions during the build process, you can view the list of expected exceptions in the Interface definitions.
+:::
+## Examples
 
 ### Getting an instance of a builder
 
@@ -92,5 +92,9 @@ public static async void BuildSelectedAvatar()
     }
 }
 ```
+## Heads up
+:::caution
+If you're currently using reflection to access the SDK internals, we recommend switching to the public API as soon as possible.
+:::
+We're going to make our best effort to provide a stable API, but it's still subject to change in the future. We recommend leveraging semver to define which version of the SDK your tools are compatible with. [Learn more here](https://vcc.docs.vrchat.com/vpm/packages/#versions-and-ranges).
 
-SDK can throw a variety of exceptions during the build process, you can see the list of expected exceptions in the Interface definitions.

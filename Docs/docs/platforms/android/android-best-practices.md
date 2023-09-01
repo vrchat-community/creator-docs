@@ -36,7 +36,7 @@ When an Android player joins your world, you may want to tweak certain aspects o
 You can use [UdonSharp](https://udonsharp.docs.vrchat.com/) to detect Android players in your world:
 
 ```
-public bool _IsUsingPhoneOrTablet()
+public bool IsUsingPhoneOrTablet()
 {
   #if UNITY_ANDROID
   return !VRC.SDKBase.Networking.LocalPlayer.IsUserInVR();

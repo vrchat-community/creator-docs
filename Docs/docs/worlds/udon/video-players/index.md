@@ -5,7 +5,7 @@ sidebar_position: 1
 createdAt: "2020-08-28T19:47:50.947Z"
 updatedAt: "2023-08-14T09:05:14.280Z"
 ---
-# Using the Prefabs
+## Using the Prefabs
 
 The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
 
@@ -18,7 +18,7 @@ Both of these prefabs will play a video of your choosing, synchronized for every
 You don't have to use the "UdonSyncPlayer" Udon Behaviours. You can use just the VRC Video Player component if you don't need the videos synced in your world. You can also make your own Sync Graphs using the provided one as a starting point or you can make one from scratch.
 
 :::
-# Choosing AVPro or Unity Video Player
+## Choosing AVPro or Unity Video Player
 
 Why would you choose one or the other?
 **AVPro** supports live streams on multiple platforms, like YouTube Live, Twitch, and some others! You'll need to make a graph that calls PlayURL on the Video Player to make this work. The **Unity Video** player does not support these live streams.
@@ -27,19 +27,19 @@ In addition, **AVPro** does not play in the editor - you'll need to Build & Test
 
 Notably, the AVPro speaker component implies support for 8 channel audio. This is not correct-- only 6 channel (usually 5.1 audio) can be played. [AVPro support EAC3 7.1 audio on PCVR only]
 
-# Android / Quest Compatibility
+## Android / Quest Compatibility
 
 An application that VRChat uses to resolve links into videos is also available on Android now, so previous workarounds aren't needed.
 In the past, some workarounds existed for advanced users, because Quest had no URL resolver.
 
-# Rate Limiting
+## Rate Limiting
 A given user is only permitted to handle a new video player URL once every five seconds. This is a global limit across all video players. This applies to the default URLs as well as those set with LoadURL and PlayURL.
 
 With a single video player, this isn't an issue-- but if you have multiple video players, you need to ensure that a request isn't sent too quickly after a previous request.
 
 This also applies to late-joiners. If you have 2 video players running in your world, a late-joiner will see that they must send out two video requests. Unmanaged, they will attempt to do so simultaneously and will fail. In cases where you have more than one video player playing simultaneously in a world, you'll have to account for this.
 
-# Supported Video Hosts
+## Supported Video Hosts
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 
 A full list of our supported hosts is available at [Video Player Allowlist](/worlds/udon/video-players/www-whitelist). Some recommendations are below.
