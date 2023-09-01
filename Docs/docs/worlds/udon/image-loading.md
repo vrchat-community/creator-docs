@@ -6,7 +6,13 @@ hidden: false
 createdAt: "2023-02-07T01:09:55.404Z"
 updatedAt: "2023-05-15T15:20:08.022Z"
 ---
-Image Loading allows you to download images from the internet and use them as textures in your materials. The SDK includes an easy-to-use `ImageDownload` script, or you can make your own script with the new `VRCImageDownloader` object.
+Image Loading allows you to display images from the internet in your VRChat world. When a user visits your world, the image can be downloaded from the internet and used as a texture in your materials. Here are a few examples on how Image Loading can be used:
+
+- Updating textures in your world without a re-upload.
+- Creating a poster in your world and updating it for seasonal events or parties.
+- Reusing the same texture in multiple worlds and updating them all at once.
+
+The SDK includes an easy-to-use `ImageDownload` script, or you can make your own script with the new `VRCImageDownloader` object.
 
 - The maximum resolution is 2048 × 2048 pixels.
   - Attempting to download larger images will result in an error.

@@ -8,7 +8,8 @@ updatedAt: "2023-03-17T15:44:23.435Z"
 This page lists the current Unity version you should use when creating content for VRChat, as well as linking to the documentation for our Creator Companion.
 
 # Current Unity Version
-The current Unity version in use by VRChat is [**Unity 2019.4.31f1**](https://unity3d.com/unity/whats-new/2019.4.31). We recommend downloading it with [Unity Hub](https://unity.com/download).
+
+The current Unity version in use by VRChat is [**Unity 2019.4.31f1**](https://unity3d.com/unity/whats-new/2019.4.31). We recommend downloading it with [Unity Hub](https://unity.com/download). You can find all Unity versions on [Unity's Archive page](https://unity.com/releases/editor/archive).
 
 Ensure you are using this *exact* version! Using a version newer than our current supported version may permit you to upload, but **you won't be able to see your content in VRChat**. 
 :::note VRChat Creator Companion
