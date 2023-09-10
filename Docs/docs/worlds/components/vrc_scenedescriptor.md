@@ -30,6 +30,6 @@ Describes your VRChat world. Required for every Unity scene you'd like to use as
 | Voice Falloff Near           | The distance where users' voices start reducing in volume.                                                      |
 | Voice Falloff Far            | The distance where users' voices become inaudible.                                                              |
 | Unity Version                | Unity version being used; you should never need to touch this.                                                  |
-| Dynamic Prefabs              | An array of prefabs that can be dynamically spawned at runtime. Any prefab that isn't referenced in the scene but needs to be spawned should be listed here. |
-| Dynamic Materials            | An array of materials that can be dynamically changed at runtime. Any material that isn't referenced in the scene but needs to be set to an object should be listed here. |
+| Dynamic Prefabs              | *Deprecated, unused in the VRChat SDK3.* |
+| Dynamic Materials            | *Deprecated, unused in the VRChat SDK3.* |
 | Interact Passthrough         | A mask defining which User Layers should allow interactions to pass through. See the [Layers](/worlds/layers) page for more info. |

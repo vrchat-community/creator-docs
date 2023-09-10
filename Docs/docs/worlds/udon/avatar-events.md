@@ -33,7 +33,7 @@ When a **remote** user changes their avatar and applies a persisted eye height (
 For remote players, you will receive this event every time a new eye height is synced to you by the remote player. This means that you could receive an `OnAvatarEyeHeightChanged` event prior to an `OnAvatarChanged` event, but you should not receive `OnAvatarEyeHeightChanged` events out of order.
 
 
-::: note More Info
+:::note More Info
 
 See [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling) for more info about this feature.
 
