@@ -14,21 +14,24 @@ Image Loading allows you to display images from the internet in your VRChat worl
 
 The SDK includes an easy-to-use `ImageDownload` script, or you can make your own script with the new `VRCImageDownloader` object.
 
-- The maximum resolution is 2048 × 2048 pixels.
-  - Attempting to download larger images will result in an error.
+:::tip
+You can [view our Image Loader example](/worlds/examples/image-loading) to get started quickly.
+:::
+## Before You Begin
+
+There are a few Image Loader limits and parameters you should know:
+
+- The maximum resolution is 2048 × 2048 pixels. Attempting to download larger images will result in an error.
 - One image can be downloaded every five seconds.
   - If this limit is exceeded, images downloads are queued and downloaded in a random order.
   - This limit applies to your entire scene, regardless of the amount of VRCImageDownload components used.
-- The URL must point directly at an image file.
-  - URL redirection is not allowed and will result in an error.
+- The URL must point directly at an image file. URL redirection is not allowed and will result in an error.
 - Downloaded images are automatically interpreted as RGBA, RGB, or RG images.
   - For example, a grayscale image with an alpha channel is interpreted as an RG image.
-- There is a limit of 1000 elements in the queue
+- There is a limit of 1000 elements in the queue.
 - Both the Input and Output buffers are limited to a maximum of 32MB, images exceeding these will result in an error.
 
-## Trusted URLs
-
-The following domains are allowed to be used with Image Loading. If a domain is not on the list, images will not download unless 'Allow Untrusted URLs' has been enabled in the user's settings.
+And only certain domains domains are allowed. If a domain is not on the list, images will not download unless **Allow Untrusted URLs** has been enabled in the user's settings.
 
 - Discord (`cdn.discordapp.com`)
 - Dropbox (`dl.dropbox.com`)
@@ -42,36 +45,13 @@ The following domains are allowed to be used with Image Loading. If a domain is 
 - Twitter (`pbs.twimg.com`)
 - VRChat (`assets.vrchat.com`)
 
-## Guides
-
-### Using the `ImageDownload` script to download an image
-
-The SDK includes a script to easily download images:
-
-1. Create a new GameObject in your scene.
-2. Add an UdonBehaviour component.
-3. Select `ImageDownload` as the program source.
-4. Select a Material to apply the downloaded texture to
-5. (Optional) Customize `TextureInfo` to change the downloaded texture's settings 
-
-### Create your own script for `VRCImageDownloader`
-
-You can use `VRCImageDownloader` in your own Udon Graph scripts. Here's how:
-
-1. Create a new `VRCImageDownloader` object with its Constructor node.
-2. Save the newly created `VRCImageDownloader` as a variable. (This **required**, see 'Notes'.)
-3. Execute the `DownloadImage` function on the `VRCImageDownloader` instance.
-4. (Optional) Wait for the `OnImageLoadSuccess` or `OnImageLoadError` event to execute.
-
 ## UdonGraph Nodes
-
-### Type Nodes
 
 #### VRCImageDownloader
 
 Use `VRCImageDownloader`'s constructor to create an image downloader, which can download image from the internet during runtime.
 
-##### DownloadImage
+#### DownloadImage
 
 Downloads an image, and calls an event indicating success or failure (see 'New Events').  
 Returns an `IVRCImageDownload`, which can be used to track the progress of the download.
@@ -83,12 +63,11 @@ Returns an `IVRCImageDownload`, which can be used to track the progress of the d
   - Note that UdonSharp will not receive any events unless `udonBehavior` is specified.
 - **TextureInfo** (optional):  The `TextureInfo` object containing settings for the newly created texture.
 
-##### Dispose
+#### Dispose
 
-Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory.  
-(Calling `Dispose` invalidates the VRCImageDownloader object, and a new one must be instantiated to download images).  
+Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory. Calling `Dispose` invalidates the VRCImageDownloader object, and a new one must be instantiated to download images.  
 
-###### Note on disposal and garbage collection
+**Note on disposal and garbage collection:**
 
 - Calling `Dispose` will invalidate the `VRCImageDownloader`, the associated `IVRCImageDownload`, and the downloaded texture.
   - After calling `Dispose`, the `VRCImageDownloadState` `State` of `IVRCImageDownload` will change to `Unloaded` until it is garbage collected.
@@ -120,8 +99,8 @@ Note that many of these fields will be invalid until the download has completed 
 - **Get Result**: The `Texture2d` of the downloaded image.  
 - **Get SizeInMemoryBytes**: Gets the size of the texture in bytes as an `int`. 
 - **Get State**: Gets the `VRCImageDownloadState` indicating the state of the image download.  
-- **Get TextureInfo**: The texture info given to the DownloadImage function (TextureInfo)  
-- **Get Udonbehavior**: Gets the given udonbehavior the events of the download image are being send to (UdonBehavior)  
+- **Get TextureInfo**: The texture info given to the DownloadImage function (TextureInfo).  
+- **Get Udonbehavior**: Gets the given udonbehavior the events of the download image are being sent to (UdonBehavior).
 - **Get URL**: Gets the `VRCURL` of the image download.
 
 #### VRCImageDownloadState
@@ -144,12 +123,7 @@ When an image download fails, `OnImageLoadError` is called. `IVRCImageDownload`'
 - **DownloadError**: A web request error occured.
 - **Unknown**: Unknown error state.
 
-### Events
+## Events
 
-#### OnImageLoadSuccess
-
-Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has successfully download an image.
-
-#### OnImageLoadError
-
-Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has failed to download an image.
+* **OnImageLoadSuccess**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has successfully download an image.
+* **OnImageLoadError**: Returns `IVRCImageDownload`. Called when a `VRCImageDownloader` has failed to download an image.
