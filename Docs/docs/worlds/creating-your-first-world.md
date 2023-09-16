@@ -60,12 +60,12 @@ If you wish to test your world, press the New Build button under the Test headin
 Now, we can build and upload your world by pressing the New Build button found under the Publish heading! This will build you world and get it ready for upload. Unity should go into Play mode showing a screen in which you can enter details about the upload which includes:
 
 - World name - The name of your world, as shown to everyone!
-- _(Coming soon)_ Recommended capacity - The recommended maximum amount of players for your world.
-  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing VRChat's list of public instances.
-  - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
-- Player capacity - The maximum amount of players allowed in your world.
+- Maximum capacity - The maximum amount of players allowed in your world.
   - If an instance has reached its player capacity, new players cannot join.
   - The instance creator, world creator, or group owner can always join, even if it would exceed the player capacity. (Unless they do not have permission to enter/see that instance)
+- Recommended capacity - The recommended maximum amount of players for your world.
+  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing VRChat's list of public instances.
+  - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
 
 > 🤔 What if my world doesn't have 'Recommended capacity'?
 > 

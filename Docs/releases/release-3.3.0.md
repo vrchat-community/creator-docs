@@ -1,14 +1,16 @@
 ---
 slug: release-3-3-0
-date: 2023-08-26
-title: Release 3.3.0-beta.1
+date: 2023-09-11
+title: Release 3.3.0
 authors: [momo]
 tags: [release]
 draft: false
 ---
 ### Summary
 
-This Open Beta release delivers a large rework of the Builder panel in the VRChat SDK. Including new UI, quality-of-life improvements, and easier ways to build and update your content.
+This release reworks the main user interface for the VRChat SDK (the 'Build panel'). It includes a new UI, quality-of-life improvements, and easier ways to build and update your content.
+
+This update also adds support for the new 'Maximum capacity' and 'Recommended capacity' settings for worlds. You can learn more about these settings [in our documentation](/worlds/creating-your-first-world/#step-5---building-your-world).
 
 <!--truncate-->
 

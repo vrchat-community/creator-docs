@@ -47,7 +47,7 @@ Parameter driver [State Behaviors](/avatars/state-behaviors) in animators specif
 Generally speaking, using parameter drivers in station animators is not a supported use-case.
 :::
 # Stations used on Avatars
-The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more!
+The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more! An avatar can have up to 6 stations.
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
 ![image](/img/worlds/vrc_station-0adc923-av-station-fix.png)
