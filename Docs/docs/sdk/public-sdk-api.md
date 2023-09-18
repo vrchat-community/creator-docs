@@ -15,6 +15,8 @@ For worlds: `Packages/VRChat SDK > Base/Editor/VRCSDK/SDK3A/Public SDK API`
 
 However, most of the events and methods are shared between both the world and avatar SDKs and are defined in the **Base SDK Package.**
 
+Other methods marked as `[PublicAPI]` are also be a part of Public SDK API. E.g., "Packages/VRChat SDK - Base/Editor/VRCSDK/Dependencies/VRChat/API/VRCApi.cs" for updating description of contents.
+
 # What's available?
 
 For the most up-to-date list of events and methods, we recommend looking at the files directly mentioned above.
