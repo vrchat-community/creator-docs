@@ -33,6 +33,7 @@ An application that VRChat uses to resolve links into videos is also available o
 In the past, some workarounds existed for advanced users, because Quest had no URL resolver.
 
 ## Rate Limiting
+
 A given user is only permitted to handle a new video player URL once every five seconds. This is a global limit across all video players. This applies to the default URLs as well as those set with LoadURL and PlayURL.
 
 With a single video player, this isn't an issue-- but if you have multiple video players, you need to ensure that a request isn't sent too quickly after a previous request.
