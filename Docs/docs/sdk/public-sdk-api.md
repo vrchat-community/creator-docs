@@ -15,6 +15,8 @@ For worlds: `Packages/VRChat SDK - Worlds > Editor/VRCSDK/SDK3/Public SDK API`
 
 However, most of the events and methods are shared between both the world and avatar SDKs and are defined in the **Base SDK Package**: `Packages/VRChat SDK - Base > Editor/VRCSDK/Dependencies/VRChat/Public SDK API`.
 
+Other methods marked as `[PublicAPI]` are also be a part of Public SDK API. E.g., "Packages/VRChat SDK - Base/Editor/VRCSDK/Dependencies/VRChat/API/VRCApi.cs" for updating description of contents.
+
 :::note
 
 These types are in assembly definitions that are auto referenced. If you are writing code in your own project, the types will usually be available by default. If you're writing a redistributable package and have your own assembly definition, you will need to add the appropriate assembly definition references:
@@ -24,6 +26,7 @@ For worlds: `VRC.SDK3.Editor`
 For both: `VRC.SDKBase.Editor`
 
 :::
+
 # What's available?
 
 For the most up-to-date list of events and methods, we recommend looking at the files directly mentioned above.
