@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "tasks": [
+      {
+        "label": "install-and-run",
+        "type": "shell",
+        "command": "npm install && npm start",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  
