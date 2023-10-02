@@ -116,12 +116,33 @@ If your avatar only uses a single blend shape to animate its mouth, configure it
 If you're an advanced creator, you can use this mode to control how your avatar reacts to speech with VRChat's built-in [Animator Parameters](/avatars/animator-parameters).
 
 ## Step 5 - Going to the build tab / Checking if the avatar is ok
-Next we'll want to check that everything is good in the build window, to do that you'll need to open `VRChat SDK > Show Control Panel > Builder`, within you should see the avatars gameobject mentioned with a Build & Publish button below it. In between you will see a polygon count, errors and warnings. If there's any errors you will need to fix them first, the most common error is too many polygons though to fix this you will need to decimate your avatars mesh(es) which if you know how to do then go do so but if not just go back and choose another model for now.
+Next, we'll want to check that everything is good in the build window, to do that you'll need to open `VRChat SDK > Show Control Panel`, within you should see the avatar's GameObject mentioned with a Build & Publish button below it. In between you will see settings, content tags, an 'Overall performance' rank, errors, and warnings.
 
-## Step 6 - Uploading the avatar!
-Now everything is ready. Press the Build & Publish button, the SDK will then build you avatar and get it ready for upload. You will next be brought to the upload screen where you can name your avatar, set a image for it and other metadata. To alter the image move the VRCCam around the scene.
-:::caution
+![The VRChat SDK build panel.](/img/avatars/build-panel-avatars-2023.png)
 
-**Content Warnings are deprecated and not used at this time.** You cannot upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so (even if you have checked off a content warning) will result in moderation action.
-:::
-After all that is entered you need to confirm you have the rights to upload the content to VRChat then you can press the upload button, the avatar will then start uploading and when finished you should able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
+Simply follow the steps in VRChat's SDK build panel: 
+- Give your avatar a name. You can add a description, too.
+- Make sure to tag your avatar with the appropriate content tags to comply with [VRChat's content gating system](https://hello.vrchat.com/blog/content-gating).
+- Choose your avatar's visibility. Private avatars can can't be cloned or used by other VRChat users.
+- Select a thumbnail image. You can select an image or use a capture from your Unity scene.
+- Read the 'Validations' section. It contains many useful errors and warnings. For example, the SDK may warn you about your avatar having too many polygons, which you can fix by optimizing mesh(es). If you're unable to optimize the mesh, you may need to go back and choose another model.
+- When you're ready, continue with building your avatar
+
+## Step 6 - Building and uploading the avatar!
+Now everything is ready. Press the "Build & Publish" button, and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).
+
+After uploading your avatar, it should be available in VRChat. You can also see your avatar in  `VRChat SDK > Show Control Panel > Content Manager`.
+
+You can also test your avatar without uploading it. To do this, click "Build & Test" instead. Your avatar will appear in the "Other" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
+
+## Step 7 - Enjoy your avatar!
+
+Congratulations on creating your first avatar! We hope everything went smoothly. If you need any help, consider visiting our [Ask Forum](https://ask.vrchat.com/) or our [Discord server](https://discord.com/invite/vrchat).
+
+Creating and uploading VRChat avatars can be fun and creatively fulfilling. If you'd like to improve your avatar creation skills, take a look at the rest of our [Avatars documentation](https://creators.vrchat.com/avatars/).
+
+Why not learn more about:
+- [Optimizing your avatar?](/avatars/avatar-optimizing-tips)
+- [VRChat's performance ranking system?](/avatars/avatar-performance-ranking-system)
+- [Avatar Dynamics?](/avatars/avatar-dynamics/) 
+- [Creating your first World?](/worlds/creating-your-first-world)

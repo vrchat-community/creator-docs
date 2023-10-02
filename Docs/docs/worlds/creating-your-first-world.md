@@ -50,39 +50,51 @@ Let's get started! Go to `VRChat SDK > Show Control Panel > Builder`. There, you
 - Apply 3D spatialization to 3D AudioSources automatically at runtime. Use this if all AudioSources in your scene are going to be spatialized.
 - Apply 3D spatialization to 3D AudioSources in the scene currently. You should use this if you want to later add AudioSources that are 2D, like background music.
 
-## Step 5 - Building your World
+## Step 5 - Configure your World in the SDK build panel
 
-Next you need to build the world! You'll need to choose what you will be doing first: you can either make a test build to test your world without uploading it, or publish your world directly to VRChat. Under both Test and Publish headings you will find Last Build and New Build buttons. Last Build takes the last successful build of the world to either test or upload. New Build puts a new world together to either test or upload.
+Before you can upload your name, you need to give the VRChat SDK some basic information about your world - such as its name, capacity, or content warnings.
+
+![VRChat's SDK World build panel.](/img/worlds/build-panel-worlds-2023.png)
+
+- World name - The name of your world, as shown to everyone.
+- Description - This will be displayed on the 'World Details' page in VRChat and on the website.
+- Content warnings - Warnings that work in conjunction with VRChat's [Content Gating system](https://hello.vrchat.com/blog/content-gating).
+- Maximum capacity - The maximum amount of players allowed in your world.
+  - If an instance has reached its player capacity, new players cannot join.
+  - The instance creator, world creator, or group owner can always join, even if it would exceed the player capacity. (Unless they do not have permission to enter/see that instance)
+- Recommended capacity - The recommended maximum amount of players for your world.
+  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing VRChat's list of public instances.
+  - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
+- Tags - Keyworlds that help users find your world in VRChat.
+- World debugging - Allows other users to debug your Udon code.
+- Thumbnail - A preview image of your world.
+
+:::note What if my world doesn't have a recommended capacity?
+
+If you uploaded your VRChat world with an old VRChast SDK, without 'recommended capacity', player capacity works differently:
+
+ - 'Recommended capacity' will be the same as your player capacity value
+ - 'Player capacity' will be **twice** your player capacity value
+ 
+ For example: If you set 'Player capacity' to 10 and did not set 'Recommended capacity', your _actual_ 'Player capacity' will be 20. 'Player capacity' was sometimes referred to as the 'soft cap' for this reason.
+
+:::
+
+## Step 6 - Building and publishing your World
+
+Next you need to build the world! You'll need to choose what you will be doing first: you can either make a test build to test your world without uploading it, or publish your world directly to VRChat. Under both "Test" and "Publish" headings you will find buttons to publish a new build or your last build. Last Build takes the last successful build of the world to either test or upload. New Build puts a new world together to either test or upload.
 
 _(Optional)_  
 If you wish to test your world, press the New Build button under the Test heading. This will build a new version of your world and launch into the world in VRChat. The Number of Clients option is used for when you want to open multiple clients for testing networked behaviour.
 
-Now, we can build and upload your world by pressing the New Build button found under the Publish heading! This will build you world and get it ready for upload. Unity should go into Play mode showing a screen in which you can enter details about the upload which includes:
+Now, we can build and upload your world by pressing the "Build and Upload" button found under the Publish heading! This will build you world and get it ready for upload. Keep in mind that you're not permitted to upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so will result in moderation action.
 
-- World name - The name of your world, as shown to everyone!
-- _(Coming soon)_ Recommended capacity - The recommended maximum amount of players for your world.
-  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing VRChat's list of public instances.
-  - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
-- Player capacity - The maximum amount of players allowed in your world.
-  - If an instance has reached its player capacity, new players cannot join.
-  - The instance creator, world creator, or group owner can always join, even if it would exceed the player capacity. (Unless they do not have permission to enter/see that instance)
+After upload your world, it will become available in VRChat! You should able to see it in-game, or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
-> 🤔 What if my world doesn't have 'Recommended capacity'?
-> 
-> If you uploaded your VRChat world without 'recommended capacity', player capacity works differently:
-> 
-> - 'Recommended capacity' will be the same as your player capacity value
-> - 'Player capacity' will be **twice** your player capacity value
-> 
-> For example: If you set 'Player capacity' to 10 and did not set 'Recommended capacity', your _actual_ 'Player capacity' will be 20. 'Player capacity' was sometimes referred to as the 'soft cap' for this reason.
+:::warning World Upload Failures
 
-- Description - This will be displayed on the 'World Details' page in VRChat and on the website.
-- Content Warnings - **Content Warnings are deprecated and not used at this time.** You cannot upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so (even if you have checked off a content warning) will result in moderation action.
+If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If so, then solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
 
-You can also go back into the Scene view and adjust the VRCCam Camera so that the thumbnail looks great.
+Check our other documentation, the [Ask Forum](https://ask.vrchat.com/),  or ask on [Discord](https://discord.com/invite/vrchat) if you need help. Make sure to provide as much information as possible, such as Unity console errors.
 
-After all that is entered, you must confirm that you have the right to upload the content to VRChat. After you have done so, you can click the "Upload" button. The room will then upload to VRChat! When finished, you should able to see it in-game, or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
-
-> 🚧 Upload Failures
-> 
-> If your world fails to upload check the console to see if there are any errors, if so then solve them before trying to build your world again. Check our other documentation or ask in [Discord](https://discord.com/invite/vrchat) if you need help.
+:::

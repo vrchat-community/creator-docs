@@ -29,8 +29,8 @@ Gets the rotation of the specified Bone in the Player's Avatar, or Quaternion.Id
 
 ### GetTrackingData
 
-_returns TrackingData for the given TrackingDataType: Head, LeftHand, RightHand, or Origin_  
-Gets a struct called TrackingData, which contains separate Position and Rotation data. This is the suggested way to get position and rotation data for a Player's head and hands. This returns data from the TrackingManager for a Local Player (ie the data coming from their headset / trackers) and from the RightHand, LeftHand and Head bones for a Remote Player. Origin returns the center of the local VR user's playspace, while returning the player's position for local Desktop users and all remote users.
+_returns TrackingData for the given TrackingDataType: Head, LeftHand, RightHand, Origin, or AvatarRoot_  
+Gets a struct called TrackingData, which contains separate Position and Rotation data. This is the suggested way to get position and rotation data for a Player's head and hands. This returns data from the TrackingManager for a Local Player (ie the data coming from their headset / trackers) and from the RightHand, LeftHand and Head bones for a Remote Player. Origin returns the center of the local VR user's playspace, while returning the player's position for local Desktop users and all remote users. AvatarRoot returns data for the root transform of the avatar (the same transform that the player capsule is attached to). For users in Fully-Body Tracking, AvatarRoot will not rotate with the head facing direction. If you need data reflecting the general forward facing direction of a Player, consider using GetRotation instead.
 
 ### GetVelocity / SetVelocity
 
