@@ -1,7 +1,7 @@
 ---
 slug: release-3-4-0
-date: 2023-09-27
-title: Release 3.4.0 Beta 2
+date: 2023-10-04
+title: Release 3.4.0
 authors: [momo]
 tags: [release]
 draft: false
@@ -16,16 +16,13 @@ Make sure you update to [Creator Companion 2.1.3](https://vcc.docs.vrchat.com/ne
 
 :::
 
-## Changes in 3.4.0 Beta 2:
-* SerializedUdonPrograms are no longer compressed into Byte Arrays, which keeps them from working on the Live client (they only load in the Open Beta). This will be restored for the final version of the SDK. If your world was broken in this manner, just delete the files in `Assets/SerializedUdonAssets` and they'll be re-created in the compatible format. Sorry!
-* Fixed an issue where Unity Editor would constantly use more memory if Thumbnail "Capture From Scene" is left enabled while tabbed out to a different window.
-
 <!--truncate-->
 
 ## Changes
 
 * UdonSharp and ClientSim are now both included in the Worlds package within the "Integrations" folder.
 * UdonSharp and ClientSim added as "legacyPackages" in the Worlds package manifest to have the Creator Companion and Resolver properly remove them.
+* Fixed an issue where Unity Editor would constantly use more memory if Thumbnail "Capture From Scene" is left enabled while tabbed out to a different window.
 * Updates Content Tags from "Nudity/Sexuality", "Realistic Violence", "Blood/Gore", "Other NSFW" to "Sexually Suggestive", "Graphic Violence", "Extreme Horror", "Adult Language and Themes" and "Excessive Gore".
 * SerializedUdonProgram now uses compressed byte[] instead of base64 string. This avoids a giant string allocation in some worlds which persisted until the world was exited.
 * Restores the checkbox for the rights statement within the Build panel.
