@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2022-11-30T18:50:12.586Z"
 updatedAt: "2022-11-30T18:50:12.586Z"
 ---
-Occasionally, VRChat will update within major Unity versions. 
+Occasionally, VRChat will update within minor Unity versions. 
 
 Upgrading your projects between these is easy in comparison to major version switches.
 
