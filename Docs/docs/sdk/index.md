@@ -39,7 +39,7 @@ If you're using Unity Hub:
 ## Step 2 - Open Your Project
 However you create it, you can now open your project. If your project isn't listed, click 'Add' in the project screen and select it. If you're using Unity Hub, click 'Open' in the top right, then select the directory where your project lives.
 
-After the project is open, check the title bar to ensure it ends with `PC, Mac & Linux Standalone <DX11>`. If it does not, then go to `File > Build Settings...`, select `PC, Mac & Linux Standalone`, then click `Switch Platform` in the bottom left.
+After the project is open, check the title bar to ensure it ends with `PC, Mac & Linux Standalone <DX11>`. If it does not, then go to `File > Build Settings...`, select `PC, Mac & Linux Standalone`, then click `Switch Platform` in the bottom right.
 
 If you're building content for VRChat for Meta Quest or Android phones, you should also be building for Android. Check our [Android documentation](/platforms/android/index.md) for more details.
 
