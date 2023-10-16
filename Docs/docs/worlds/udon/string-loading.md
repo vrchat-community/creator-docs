@@ -26,6 +26,8 @@ The following URLs are available:
 * Virtual Market (`*.v-market.work`,`*.vket.chat`)
 * Fynn (`api.fynn.ai`,`api-dev.fynn.ai`)
 * Poly  (`*.poly.jp`)
+* VazaR  (`*.vazar.jp`)
+* CatsUDON  (`*.catsudon.net`)
 
 # Guides
 ## Using the `DownloadString` script to download a string
