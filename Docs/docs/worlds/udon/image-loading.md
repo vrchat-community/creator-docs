@@ -34,7 +34,7 @@ There are a few Image Loader limits and parameters you should know:
 And only certain domains domains are allowed. If a domain is not on the list, images will not download unless **Allow Untrusted URLs** has been enabled in the user's settings.
 
 - Discord (`cdn.discordapp.com`)
-- Dropbox (`dl.dropbox.com`)
+- Dropbox (`dl.dropbox.com`,`dl.dropboxusercontent.com`)
 - GitHub (`*.github.io`)
 - ImageBam (`images4.imagebam.com`)
 - ImgBB (`i.ibb.co`)
@@ -47,6 +47,8 @@ And only certain domains domains are allowed. If a domain is not on the list, im
 - Virtual Market (`*.v-market.work`,`*.vket.chat`)
 - Gugenka (`*.xr-marketplace.com`)
 - Poly (`*.poly.jp`)
+- Vazar (`*.vazar.jp`)
+- CatsUDON (`*.catsudon.net`)
 
 ## UdonGraph Nodes
 
