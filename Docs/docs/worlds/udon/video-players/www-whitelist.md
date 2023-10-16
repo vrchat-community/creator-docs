@@ -57,3 +57,6 @@ The services listed below are inherently trusted and are permitted with our defa
 | Furality Sylva | `*.furality.online` |
 | FoxCDN | `live.foxcdn.io` |
 | Poly | `*.poly.jp` |
+| VazaR | `*.vazar.jp` |
+| CatsUDON | `*.catsudon.net` |
+| Virtual Okinawa | `virtualokinawa-on-demand.contents.work` |
