@@ -47,7 +47,7 @@ And only certain domains domains are allowed. If a domain is not on the list, im
 - Virtual Market (`*.v-market.work`,`*.vket.chat`)
 - Gugenka (`*.xr-marketplace.com`)
 - Poly (`*.poly.jp`)
-- Vazar (`*.vazar.jp`)
+- VazaR (`*.vazar.jp`)
 - CatsUDON (`*.catsudon.net`)
 
 ## UdonGraph Nodes
