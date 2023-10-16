@@ -127,13 +127,6 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['csharp']
       },
-      algolia: {
-        appId: 'NQHMNOH2YO',
-        apiKey: '292dfc501d73d6fa1352744ce4620735',
-        indexName: 'VRChat_Docs',
-        contextualSearch: true,
-        externalUrlRegex: 'https:\/\/(?!creators)' // Results that don't come from this site should redirect using their absolute URL, rather than redirecting relative to the current site
-      },
     }),
 };
 
