@@ -24,7 +24,7 @@ Blueprint IDs can only be of the following format where 0 is replaced with [0-9]
 
 `wrld_00000000-0000-0000-0000-000000000000`
 
-Any other ID format will not be accepted. This is normally done automatically, so you shouldn't ever have to create your own Blueprint ID-- just click "Attach" and one will be generated for you.
+Any other ID format will not be accepted. This is normally done automatically, so you shouldn't ever have to create your own Blueprint ID.
 :::
 
 ![vrcpipelinemanager-7d57e76-Unity_2017-12-10_01-35-44.png](/img/sdk/vrcpipelinemanager-7d57e76-Unity_2017-12-10_01-35-44.png)
