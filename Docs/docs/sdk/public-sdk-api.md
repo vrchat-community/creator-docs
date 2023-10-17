@@ -10,12 +10,14 @@ The VRChat SDK provides a set of interfaces and methods you can use to enhance y
 
 You can find the **Public SDK API** folder in both SDKs:
 
-- Packages > VRChat SDK - Worlds > Editor > VRCSDK > SDK3 > Public SDK API
-- Packages > VRChat SDK - Avatars > Editor > VRCSDK > SDK3A > Public SDK API
+- Packages > com.vrchat.worlds > Editor > VRCSDK > SDK3 > Public SDK API
+- Packages > com.vrchat.avatars > Editor > VRCSDK > SDK3A > Public SDK API
 
-However, most of the events and methods are shared between both the world and avatar SDKs and are defined in the **Base SDK Package.**
+However, most of the events and methods are shared between both the world and avatar SDKs and are defined in:
 
-# What's available?
+- Packages > com.vrchat.base
+
+## What's available?
 
 For the most up-to-date list of events and methods, we recommend looking at the files directly mentioned above.
 
@@ -97,4 +99,3 @@ public static async void BuildSelectedAvatar()
 If you're currently using reflection to access the SDK internals, we recommend switching to the public API as soon as possible.
 :::
 We're going to make our best effort to provide a stable API, but it's still subject to change in the future. We recommend leveraging semver to define which version of the SDK your tools are compatible with. [Learn more here](https://vcc.docs.vrchat.com/vpm/packages/#versions-and-ranges).
-
