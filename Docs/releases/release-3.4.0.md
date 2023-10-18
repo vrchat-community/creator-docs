@@ -12,7 +12,7 @@ This update merges the ClientSim and UdonSharp packages into the Worlds package 
 
 :::caution
 
-Make sure you update to [Creator Companion 2.1.3](https://vcc.docs.vrchat.com/news/release-2.1.3) or higher before updating to this version of the SDK!
+Make sure you update to [Creator Companion 2.1.6](https://vcc.docs.vrchat.com/news/release-2.1.6) or higher before updating to this version of the SDK!
 
 :::
 
