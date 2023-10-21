@@ -69,6 +69,7 @@ This section contains settings allowing you to adjust and define how this Contac
 
 ## Receiver
 This section contains settings defining what the Receiver does when it gets a signal.
+
 `Receiver Type` defines the behavior of the parameter setting when a signal is received.
 - `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
 - `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
