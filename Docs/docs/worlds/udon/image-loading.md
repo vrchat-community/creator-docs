@@ -44,11 +44,7 @@ And only certain domains domains are allowed. If a domain is not on the list, im
 - Reddit (`i.redd.it`)
 - Twitter (`pbs.twimg.com`)
 - VRChat (`assets.vrchat.com`)
-- Virtual Market (`*.v-market.work`,`*.vket.chat`)
-- Gugenka (`*.xr-marketplace.com`)
 - Poly (`*.poly.jp`)
-- VazaR (`*.vazar.jp`)
-- CatsUDON (`*.catsudon.net`)
 
 ## UdonGraph Nodes
 
