@@ -48,4 +48,5 @@ The services listed below are inherently trusted and are permitted with our defa
 | Youku | `*.youku.com` |
 | YouTube | `*.youtube.com`,`youtu.be` |
 | VRCDN | `*.vrcdn.live`,`*.vrcdn.video` |
-| Topaz Chat | `ciel.topaz.chat` |
+| Mixcloud | `mixcloud.com` |
+| Poly | `*.poly.jp` |
