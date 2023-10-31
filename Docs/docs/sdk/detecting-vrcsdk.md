@@ -13,8 +13,8 @@ there are several ways to detect VRChat SDK installation.
 
 The best way to detect VRChat SDK installation is that using [Version Defines of assembly definition file][version-defines].
 
-You can define symbols in your assembly if `com.vrchat.base`, `com.vrchat.avatars`, or `com.vrchat.worlds` are installed.
-It's highly recommended to use Expression to define your symbol only if your tool is compatible with installed VRChat SDK versions.
+You can define symbols in your assembly when `com.vrchat.base`, `com.vrchat.avatars`, or `com.vrchat.worlds` are installed.
+It's highly recommended to use Expression to define your symbol only when installed VRChat SDK version is compatible with your tool.
 For versioning of VRChat SDK, please refer [VCC Docs][versioning].
 
 Since Version Defines is feature for UPM packages, this method only works for VPM-based SDKs.
