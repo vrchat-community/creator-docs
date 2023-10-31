@@ -18,7 +18,18 @@ It's highly recommended to use Expression to define your symbol only when instal
 For versioning of VRChat SDK, please refer [VCC Docs][versioning].
 
 Since Version Defines is feature for UPM packages, this method only works for VPM-based SDKs, which treated as UPM package by Unity.
-If you also want to detect legacy unitypackage-based SDKs, you can combine with legacy way.
+If you also want to detect legacy unitypackage-based SDKs, you can combine with the following legacy method by defining
+same symbol as VRCSDK defines or adding code like this onto evey file.
+
+```csharp
+#if !YOUR_VRCSDK3_AVATARS && !YOUR_VRCSDK3_WORLDS && VRC_SDK_VRCSDK3
+    #if UDON
+        #define YOUR_VRCSDK3_WORLDS
+    #else
+        #define YOUR_VRCSDK3_AVATARS
+    #endif
+#endif
+```
 
 [version-defines]: https://docs.unity3d.com/2019.4/Documentation/Manual/ScriptCompilationAssemblyDefinitionFiles.html#define-symbols
 [versioning]: https://vcc.docs.vrchat.com/vpm/packages/#brandingbreakingbumps
