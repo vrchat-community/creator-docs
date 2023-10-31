@@ -22,3 +22,16 @@ If you also want to detect legacy unitypackage-based SDKs, you can combine with 
 
 [version-defines]: https://docs.unity3d.com/2019.4/Documentation/Manual/ScriptCompilationAssemblyDefinitionFiles.html#define-symbols
 [versioning]: https://vcc.docs.vrchat.com/vpm/packages/#brandingbreakingbumps
+
+## Using Legacy VRCSDK-defined scripting symbols (Deprecated) {#using-scripting-symbols}
+
+The other method to detect VRChat SDK installation is that using VRCSDK-defined scripting symbols.
+For all VRCSDK projects, `VRC_SDK_VRCSDK3` will be defined and for worlds projects, `UDON` will be defined.
+
+This method is legacy, obsoleted method that will be removed in the feature so please do not depend (only) on this method.
+
+In the old VRChat SDK, we use `VRC_SDK_VRCSDK3` and `UDON` symbol for internal usages but since those symbols are
+active whole project, many tools depends on those symbols for detecting VRChat SDK.
+Currently, in the VRChat SDK, all those symbol usages are migrated to VersionDefines.
+Please migrate to Version Defines as soon as possible!
+
