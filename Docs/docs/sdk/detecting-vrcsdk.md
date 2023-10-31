@@ -17,7 +17,7 @@ You can define symbols in your assembly when `com.vrchat.base`, `com.vrchat.avat
 It's highly recommended to use Expression to define your symbol only when installed VRChat SDK version is compatible with your tool.
 For versioning of VRChat SDK, please refer [VCC Docs][versioning].
 
-Since Version Defines is feature for UPM packages, this method only works for VPM-based SDKs.
+Since Version Defines is feature for UPM packages, this method only works for VPM-based SDKs, which treated as UPM package by Unity.
 If you also want to detect legacy unitypackage-based SDKs, you can combine with legacy way.
 
 [version-defines]: https://docs.unity3d.com/2019.4/Documentation/Manual/ScriptCompilationAssemblyDefinitionFiles.html#define-symbols
