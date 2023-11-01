@@ -30,6 +30,5 @@ If you like Tutorial Videos, you can check out our [Learning Udon](https://www.y
 If you'd rather read the steps directly, then read our [Getting Started with Udon](/worlds/udon/getting-started-with-udon) page.
 
 ## Bug Reports and Feature Requests
-We use Canny across all of VRChat to receive reports of bugs and feature requests. For Udon specifically, use these links:
-* [Bugs](https://feedback.vrchat.com/vrchat-udon-closed-alpha-bugs)
-* [Feature Requests](https://feedback.vrchat.com/vrchat-udon-closed-alpha-feedback)
+We use Canny across all of VRChat to receive reports of bugs and feature requests. For Udon specifically, use this link:
+* [Bugs & Feature Requests](https://feedback.vrchat.com/udon)
