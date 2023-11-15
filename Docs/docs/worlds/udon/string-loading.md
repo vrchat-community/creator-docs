@@ -22,7 +22,6 @@ The following URLs are available:
 * GitHub (`*.github.io`)
 * Pastebin (`pastebin.com`)
 * Github Gist (`gist.githubusercontent.com`)
-* Poly  (`*.poly.jp`)
 
 # Guides
 ## Using the `DownloadString` script to download a string

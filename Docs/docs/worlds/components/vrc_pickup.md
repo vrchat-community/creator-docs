@@ -7,6 +7,25 @@ updatedAt: "2023-05-04T21:43:45.162Z"
 ---
 Allows objects to be picked up, held and used by players.
 
+## Proximity Rules
+
+:::note
+
+All of the rules described in this section also apply to "Interactables", i.e. UdonBehaviours that have an `Interact` event (they will also show a "Proximity" slider in the Inspector).
+:::
+
+The "Proximity" value defines from how far away your pickup will be grabbable. It is given in meters, aka. "Unity units", where the side-length of one default Cube equals 1 unit.
+
+There are 2 mechanisms of grabbing where the Proximity value will be in play:
+
+- **Raycast:** If you are far away from a pickup, or you are running in desktop mode, pickups will be highlighted if the "laser" coming out of your hands (in VR) or your head (desktop) intersects the collider on a pickup object. The distance calculation to compare against Proximity is different in VR and Desktop mode:
+    - VR: The distance between the origin of the laser (i.e. your hand controllers) and the impact point on the collider, in meters
+    - Desktop: The distance between the origin of the laser (i.e. your head or main camera position) minus an "extra reach" value to compensate for being unable to move your hands forward. This is an approximate value that also takes your avatar scale into account ("longer arms"). Since it is subtracted from the distance, it will allow you to grab objects that are technically outside of the "Proximity" range, but could be grabbed by moving your arms while standing in this position in VR.
+- **Hover (VR only):** If your hands are close enough to an object, pickups will be highlighted even if a ray in the direction of the UI laser would not intersect the object. This allows more natural "grabbing" of objects. The distance of reach is a sphere centered on your hands with a radius of 0.4 meters times your avatar scale (note that this value is not directly comparable to the "avatar scaling" system available to users, although changing the avatar scale that way can affect the reach). 
+    - The "Proximity" value is still compared against the raw distance between your hand and the collider on the pickup, meaning the "reach distance" described is only an upper bound for the closeness at which "Hover" mode will engage.
+    - For example, setting the Proximity to 0 will require the hand to be _inside_ the collider for the pickup to be highlighted (it will still be grabbable in Desktop mode however, because of the "extra reach" desktop users get to compensate).
+    - As an advanced technique, you may want to adjust the Proximity value based on the data provided via the [avatar scaling system](/worlds/udon/players/player-avatar-scaling).
+
 ## Requires:
 
 - Rigidbody
@@ -26,3 +45,4 @@ Allows objects to be picked up, held and used by players.
 | Throw Velocity Boost Min Speed  | How fast the object needs to move to be thrown                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Throw Velocity Boost Scale      | How much throwing should scale, higher = faster thrown while lower means slower throw speed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Pickupable                      | Can you pickup the pickup                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Proximity                       | The maximum distance this pickup is reachable from. See section above for more details. |
