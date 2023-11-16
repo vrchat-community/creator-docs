@@ -14,7 +14,7 @@ The Contact Sender component defines a volume of space that will send a Contact 
 ![contacts-59b6e82-2022-04-19_11-53-01_Unity.png](/img/avatars/contacts-59b6e82-2022-04-19_11-53-01_Unity.png)
 - `Root Transform` - Transform where this contact is placed. If empty, we use this game object's transform.
 
-## Shape
+### Shape
 This section contains settings that define the shape of the ContactSender.
 - `Shape Type` - Type of collision shape used by this contact. You can choose between Sphere and Capsule.
 - `Radius` - Size of the collider extending from its origin.
@@ -22,7 +22,7 @@ This section contains settings that define the shape of the ContactSender.
 - `Position` - Position offset from the root transform.
 - `Rotation` - Rotation offset from the root transform.
 
-## Filtering
+### Filtering
 This section contains settings allowing you to adjust and define how this ContactSender will interact with  [ContactReceivers](/avatars/avatar-dynamics/contacts/#vrccontactreceiver).
 
 - `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
@@ -49,7 +49,7 @@ The Contact Receiver component defines a volume of space that will receive a Con
 ![contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png](/img/avatars/contacts-6f84ac4-2022-04-19_11-57-25_NVIDIA_Share.png)
 - `Root Transform` - Transform where this contact is placed. If empty, we use this game object's transform.
 
-## Shape
+### Shape
 This section contains settings that define the shape of the ContactReceiver.
 
 - `Shape Type` - Type of collision shape used by this contact.
@@ -59,7 +59,7 @@ This section contains settings that define the shape of the ContactReceiver.
 - `Rotation` - Rotation offset from the root transform.
 - `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
-## Filtering
+### Filtering
 This section contains settings allowing you to adjust and define how this ContactReceiver will interact with  [ContactSenders](/avatars/avatar-dynamics/contacts/#vrccontactsender).
 
 - `Allow Self` - Allow this contact to be affected by yourself.
@@ -67,7 +67,7 @@ This section contains settings allowing you to adjust and define how this Contac
 - `Local Only` - Limit this contact to only work on the local client.
 - `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
-## Receiver
+### Receiver
 This section contains settings defining what the Receiver does when it gets a signal.
 
 `Receiver Type` defines the behavior of the parameter setting when a signal is received.
