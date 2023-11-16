@@ -11,4 +11,4 @@ The two primary features of Avatar Dynamics are [PhysBones](/avatars/avatar-dyna
 
 These features are governed by the [Permissions and Settings](https://docs.vrchat.com/docs/permissions-and-settings) system, which gives you full and complete control over who can interact with you.
 
-SDK3-Avatars contains an example avatar in `VRCSDK\Examples3\Dynamics\Robot Avatar` that is useful for trying out implementing Avatar Dynamics systems.
+SDK3-Avatars contains an example avatar in `Packages > VRChat SDK - Avatars > Samples > Dynamics > Robot Avatar` that is useful for trying out implementing Avatar Dynamics systems.
