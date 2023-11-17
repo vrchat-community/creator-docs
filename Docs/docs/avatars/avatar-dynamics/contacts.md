@@ -29,7 +29,7 @@ This section contains settings allowing you to adjust and define how this Contac
 
 As an example, the tags below will cause the Sender to send a contact signal when they come into contact with the default Head [ContactReceiver](/avatars/avatar-dynamics/contacts/#vrccontactreceiver) or any custom [ContactReceiver](/avatars/avatar-dynamics/contacts/#vrccontactreceiver) with the tag `Face`-- note the capital F!
 ![contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png](/img/avatars/contacts-de34d55-2022-04-19_11-53-34_NVIDIA_Share.png)
-## Standard Colliders
+### Standard Colliders
 A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new section called “Colliders”. This section lets you define a number of standard colliders that exist on every avatar. These will be setup automatically if you don’t touch this, but they may also be tweaked to exactly fit your avatar. These colliders do not affect the performance rating.
 
 - Head
