@@ -42,6 +42,15 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [Rigidbody](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Rigidbody.html)
 - [Joints](https://docs.unity3d.com/2019.4/Documentation/Manual/Joints.html)
 - [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)
+  - For avatars worn by the local user, Camera components are fully whitelisted.
+  - For avatars worn by remote users, the following rules apply:
+    - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
+      - You can use animations to enable Camera components.
+    - If the local user and remote user are friends, Camera components are not removed.
+      - Note that becoming friends with a user does not automatically reload their avatar.
+    - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
+    - If neither of the above is true, Camera components are removed and cannot be enabled.
+
 - [FlareLayer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-FlareLayer.html)
 - [AudioSource](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioSource.html)
 - [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
@@ -50,8 +59,6 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [PositionConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-PositionConstraint.html)
 - [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
 - [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
-
- For the wearer and their friends, camera components are disabled on load. Use an animation to enable the component. For non-friends of the wearer, camera components are removed completely on load.
 
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
 :::caution FinalIK Components Modified
