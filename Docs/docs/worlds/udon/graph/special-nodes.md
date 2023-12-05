@@ -68,6 +68,8 @@ Runs the event 'eventName' on the target UdonBehaviour. If instance is left blan
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delayFrames` - int, `eventTiming` - EventTiming
 Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
 
+Note that [Unity's frames count](https://docs.unity3d.com/ScriptReference/Time-frameCount.html) is based on the Update event. If you call SendCustomEventDelayedFrames [before the Update event](/worlds/udon/event-execution-order), such as [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) or an [Input event](/worlds/udon/input-events), the delay may be 1 frame shorter than expected.
+
 ### SendCustomEventDelayedSeconds
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delaySeconds` - float, `eventTiming` - EventTiming
 Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delaySeconds`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected.

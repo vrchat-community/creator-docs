@@ -42,7 +42,7 @@ Publishing your world will make it immediately available to all users that opt-i
 - **Bad things also happen when you put more than 1 mirror in your room.**  Mirrors severely affect a world's performance. If you have 1 mirror in the room, make sure to set it to toggle.
 - **We** **_STRONGLY SUGGEST_** **not enabling mirrors by default.** Add a toggle that can be activated by players or activated automatically when players enter a certain area.
 - **Do NOT overuse real-time lights.** They are **very** expensive and can kill your world's performance if used incorrectly.
-- **Baking your lighting is exceedingly important and can give you huge performance gains.** 
+- **Baking your lighting is exceedingly important and can give you huge performance gains.** You can learn more about light baking in [Unity's documentation](https://docs.unity3d.com/Manual/progressive-lightmapper.html) or  [Android's development guide](https://developer.android.com/games/optimize/lighting-for-mobile-games-with-unity#lightmap-baking).
 
 ## General Tips
 
