@@ -12,10 +12,15 @@ When you create animations for your VRChat avatar, you'll utilize VRChat's 'Play
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 :::
 
-In the Avatars 3.0 Avatar Descriptor, there are five buttons labeled:
+In the Avatars 3.0 Avatar Descriptor, all humanoid avatars have five buttons:
 - Base
 - Additive
 - Gesture
+- Action
+- FX
+
+Generic avatars only have three buttons:
+- Base
 - Action
 - FX
 

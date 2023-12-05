@@ -15,10 +15,11 @@ This is a list of Parameters (**case-sensitive**) that can be added to any Playa
 
 You'll need to add these to your Playable Layer animators to use them. **They are case-sensitive!**
 
-> ❗️ Don't Dead-End!
-> 
-> You should assume that parameter values may change. If you "dead-end" your animators-- as in, you don't have an "exit" in any particular branch-- you may end up having a broken avatar.
+:::danger Don't Dead-End!
 
+You should assume that parameter values may change. If you "dead-end" your animators, which means you don't have an "exit" in any particular branch, you may end up having a broken avatar.
+
+:::
 ## Parameters
 
 | Name                                                                        | Description                                                                                                                                                                        | Type        | Sync           |
@@ -142,9 +143,11 @@ If the value is 3, 4, or 6 while `VRMode` is 1, the value is indicating how many
 
 If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the avatar is still initializing. You should not design animators to branch based off this combination of values, and it should instead wait for a "valid" value of 3, 4, or 6.
 
-> 🚧 Account for Changes
-> 
-> During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
+:::caution Account for changes
+
+During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
+
+:::
 
 | Parameter | Description |
 | --- | :-- |
@@ -158,7 +161,7 @@ If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the ava
 
 ### Expression Parameter Aliasing
 
-You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default ExpressionN name for the parameters. **
+You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default Expression name for the parameters. **
 
 Once you have created names for any Expression parameter you want to use, you can use that name directly in your Controller. This means can come up with your own standard naming for your parameters. This _also_ means that Menu definitions and Controllers can be mixed and matched as long as they use the same names. You can get prefab controllers from others and create your own menu styles based on your preferences, without worrying about Expression parameter conflicts.
 

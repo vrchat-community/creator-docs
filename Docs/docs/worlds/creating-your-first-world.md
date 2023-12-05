@@ -6,53 +6,57 @@ sidebar_position: -2
 createdAt: "2017-09-10T16:37:57.021Z"
 updatedAt: "2023-03-30T16:55:26.082Z"
 ---
-> 🚧 
-> 
-> Parts of this page are in the process of being updated.  
-> Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) or our official forum at [ask.vrchat.com](https://ask.vrchat.com).
+:::info
 
 Before getting started, ensure you have a [Unity project with the SDK set up](/sdk).
 
+Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) or our official forum at [ask.vrchat.com](https://ask.vrchat.com).
+
+:::
+
 ## Step 1 - Setting up a scene
 
-The first thing you need is a scene. This can either be an existing one with content or a new one. With the scene open, you should drag and drop the VRCWorld prefab into your scene.
+The first thing you need is a Unity scene. You can either create a new scene, or open an existing Unity scene with pre-existing content.
 
-You can find the VRCWorldPrefab by searching for it in your 'Project' tab, and setting your search to 'In Packages' or 'All'.
+With the scene open, you need to add a **VRC Scene Descriptor** to your scene. You can easily add it with the VRChat SDK:
 
-![](/img/worlds/creating-your-first-world-b1946d4-Unity_4t4quWsgTY.png)
+![Adding a scene descriptor automatically via the VRChat SDK build panel.](/img/worlds/build-panel-add-vrc-scene-descriptor.png)
+
+1. Click **VRChat SDK** > **Show Control Panel**.
+	- If you do not see this menu at the top of your Unity window, your SDK may not be installed correctly. Try clicking **Assets** > **Reimport All**, and check our [SDK troubleshooting guide](/sdk/sdk-troubleshooting).
+2. In the **Authentication**, log into your VRChat account.
+3. Switch to the **Builder** tab and click **Add a VRCSceneDescriptor**.
+
+![Adding a scene descriptor automatically via the VRChat SDK build panel.](/img/worlds/vrcworld-prefab-in-scene.png)
+
+A Game Object called **VRCWorld** will automatically be added to your scene. It contains a **VRC Scene Descriptor** and other helpful components. Click on VRCWorld in your hierarchy to inspect its settings.
 
 ## Step 2 - Creating spawn points
 
-You now need to set up at least one point in the scene where users can spawn in. By default, players will spawn at the location of your VRCWorld object. This is the simplest setup and the setup that most users employ.
+Your world needs at least one spawn point. When players join your world, that's where they'll appear. By default, players will spawn at the location of your VRCWorld prefab. Simply move the VRCWorld prefab to wherever you'd like users to spawn.
 
-If you'd like to create additional spawn points, create an empty GameObject and place it where you want users to appear. Add the GameObject to the `spawns` list in the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor). Do this for as many spawn points as you want.
+![Move your scene descriptor to change your spawn.](/img/worlds/vrc-scene-descriptor-gizmo.png)
 
-If you have more than one spawn point, you can choose the order in which people will spawn into them by changing the Spawn Order property.
+If you'd like to create additional spawn points, create an empty Game Object and place it where you want users to appear. Add the Game Object to the **Spawns** list in the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) component. Do this for as many spawn points as you want.
+
+If you have more than one spawn point, you can choose the order in which people will spawn into them by changing the **Spawn Order** property.
 
 ## Step 3 - Descriptor Settings
 
-There are various different options you can set the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) which change the behaviour of the room. Here are some of the more important ones.
+There are various settings in the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) that change the behavior of your world. Here are some of the more important ones.
 
-_Spawns_ - An array of transforms where players will spawn when they join your world. By default, players spawn at your Scene Descriptor's transform.
+_Spawns_ - An array of transforms where players will spawn when they join your world. By default, players spawn at your Scene Descriptor.
 
-_Respawn Height_ - Y-Height at which players respawn and pickups are respawned or destroyed. Anything that exists below this Y level will be respawned (or destroyed, in the case of configured objects).
+_Respawn Height_ - The vertical height (on the y axis) at which players respawn and pickups are respawned (or destroyed, depending on the "Object Behaviour At Respawn" setting).
 
-_Reference Camera_ - A camera which you can apply settings onto that are applied to the player when they join the room. Most often used for adjusting the clipping planes and adding post-processing effects.
+_Reference Camera_ - Settings you apply to this camera will be applied to the player when they join the room. It is most often used for adjusting the clipping planes and adding post-processing effects.
 
 More settings can be found on the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) page.
 
-## Step 4 - Setting up the Scene
 
-Let's get started! Go to `VRChat SDK > Show Control Panel > Builder`. There, you'll see optional things you can set up in your scene as well as options to build your world. Go ahead and run through these operations:
+## Step 4 - Configure your World in the SDK build panel
 
-- Setting up layers to match VRChat's layers. You should definitely do this, otherwise your world may not work properly.
-- Setting up the collision layer matrix to match VRChat's. See above. Don't skip this!
-- Apply 3D spatialization to 3D AudioSources automatically at runtime. Use this if all AudioSources in your scene are going to be spatialized.
-- Apply 3D spatialization to 3D AudioSources in the scene currently. You should use this if you want to later add AudioSources that are 2D, like background music.
-
-## Step 5 - Configure your World in the SDK build panel
-
-Before you can upload your name, you need to give the VRChat SDK some basic information about your world - such as its name, capacity, or content warnings.
+Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you need to give VRChat some basic information about it, such as the world's name, capacity, or content warnings.
 
 ![VRChat's SDK World build panel.](/img/worlds/build-panel-worlds-2023.png)
 
@@ -63,7 +67,7 @@ Before you can upload your name, you need to give the VRChat SDK some basic info
   - If an instance has reached its player capacity, new players cannot join.
   - The instance creator, world creator, or group owner can always join, even if it would exceed the player capacity. (Unless they do not have permission to enter/see that instance)
 - Recommended capacity - The recommended maximum amount of players for your world.
-  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing VRChat's list of public instances.
+  - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing in VRChat's list of public instances.
   - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
 - Tags - Keyworlds that help users find your world in VRChat.
 - World debugging - Allows other users to debug your Udon code.
@@ -80,16 +84,30 @@ If you uploaded your VRChat world with an old VRChast SDK, without 'recommended 
 
 :::
 
+## Step 5 - Check for warnings or validation messages
+
+![Validations in the SDK build panel.](/img/worlds/build-panel-validations-everything-looks-good.png)
+
+At the bottom of the VRChat SDK build panel, you'll find a section called **Validations**. It contains suggestions on how to set up your scene and build your world. For example:
+
+- Is your scene missing a VRC Scene Descriptor?
+- Is your scene missing VRChat's layers and collision layer matrix?
+- Are there any issues with Audio Sources, textures, or Udon scripts?
+
+The SDK will often give you the option to fix these issues automatically. If not, please read the validation messages carefully to learn how to improve your world. Some of the messages are optional and are not required for uploading your world.
+
 ## Step 6 - Building and publishing your World
 
-Next you need to build the world! You'll need to choose what you will be doing first: you can either make a test build to test your world without uploading it, or publish your world directly to VRChat. Under both "Test" and "Publish" headings you will find buttons to publish a new build or your last build. Last Build takes the last successful build of the world to either test or upload. New Build puts a new world together to either test or upload.
+Next, you need to build the world! You'll need to choose what you will be doing first: You can either make a **test build** to test your world without uploading it or **publish** your world directly to VRChat. Under both "Offline Testing" and "Online Publishing" headings, you will find buttons to publish a new build or your last build. Last Build takes the last successful build of the world to either test or upload. New Build puts a new world together to either test or upload.
+
+![Validations in the SDK build panel.](/img/worlds/build-panel-upload-or-test.png)
 
 _(Optional)_  
-If you wish to test your world, press the New Build button under the Test heading. This will build a new version of your world and launch into the world in VRChat. The Number of Clients option is used for when you want to open multiple clients for testing networked behaviour.
+If you wish to test your world, go to **Offline Testing** and click **Build & Test New Build**. This will build a new version of your world and launch into the world in VRChat. The **Number of Clients** option is used when you want to open multiple VRChat windows for testing your world with multiple players.
 
-Now, we can build and upload your world by pressing the "Build and Upload" button found under the Publish heading! This will build you world and get it ready for upload. Keep in mind that you're not permitted to upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so will result in moderation action.
+Once you're ready to publish your world, go to **Online Publishing** and click **Build and Upload**! This will build you world and get it ready for upload. Keep in mind that you're not permitted to upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so will result in moderation action.
 
-After upload your world, it will become available in VRChat! You should able to see it in-game, or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
+After uploading your world, it will become available in VRChat! You should able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
 :::warning World Upload Failures
 

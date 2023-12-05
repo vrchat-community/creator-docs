@@ -30,7 +30,3 @@ This mode is turned off by default, so first you need to go to your Welcome Scre
 
 This mode is also off by default - you'll need to open your Welcome Screen and check the box next to 'Search on Noodle Drop'. Once it's on, you can drag a noodle from any port and drop it into empty space to open up a search for **any** node that could connect to that port. This works forwards and backwards, and will also search for Variables that could be connected.
 ![image](/img/worlds/searching-for-nodes-8656333-portsearch.gif)
-# Search on Noodle Drop
-
-This mode is also off by default - you'll need to open your Welcome Screen and check the box next to 'Search on Noodle Drop'. Once it's on, you can drag a noodle from any port and drop it into empty space to open up a search for **any** node that could connect to that port. This works forwards and backwards, and will also search for Variables that could be connected.
-![image](/img/worlds/searching-for-nodes-8656333-portsearch.gif)

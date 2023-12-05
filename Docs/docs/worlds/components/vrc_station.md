@@ -13,7 +13,7 @@ This component acts a bit differently in VRCSDK2 and VRCSDK3. We support SDK2 an
 
 There is a new parameter `InStation`, which can be used to indicate that an avatar has entered a station, but might not have Seated-IK enabled. The `Seated` parameter is now only true if the `Seated` property was checked on the station.
 
-# Stations used in Worlds
+## Stations used in Worlds
 
 ### SDK2 Station with SDK2 Avatar
 The Seated property is used to decide what kind of IK the occupant should get when playing the animation.
@@ -46,7 +46,7 @@ Parameter driver [State Behaviors](/avatars/state-behaviors) in animators specif
 
 Generally speaking, using parameter drivers in station animators is not a supported use-case.
 :::
-# Stations used on Avatars
+## Stations used on Avatars
 The default `VRCChair` prefab included in the SDK can be used on avatars to let other players "sit" on you. You can use this to make your avatar into a car, a dinner table that moves around, and more! An avatar can have up to 6 stations.
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
@@ -57,7 +57,7 @@ Attempting to work around this by enabling/disabling a parent object of the chai
 
 Keep in mind that having avatar stations on by default (as in, having the green toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
 
-# Parameters and Options
+## Parameters and Options
 
 | Parameter                    | Description                                                                                             |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -72,7 +72,3 @@ Keep in mind that having avatar stations on by default (as in, having the green 
 | Station Enter Player Location | Transform used to define where the user should be transported to when seated                             |
 | Station Exit Player Location  | Transform used to define where the user should be transported to when they are unseated                  |
 | Controls Object              | This is used for having a station where you can control an object, such as vehicles.                     |
-
-The table above represents the "Parameter" and "Description" columns of the information you provided.
-
-If you have any further questions or need additional assistance, feel free to ask!

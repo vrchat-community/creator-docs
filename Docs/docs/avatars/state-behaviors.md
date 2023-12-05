@@ -48,8 +48,9 @@ The layer weight will remain until some other state runs this State Behavior aga
 The Animator Locomotion Control allows you to disable locomotion in a given state of an animator. The Locomotion state will remain until some other state runs this State Behavior again and changes it.
 
 In Desktop mode, this disables translational movement, and restricts rotational (view) movement to the vertical axis. In VR, this disables translational and rotational controller movement and restricts half-body IK (full-body IK is unaffected). In both modes, the player's capsule is frozen in place.
+
 | Parameter | Description |
-| :-- | :-- |
+| - | - |
 | Disable Locomotion | If set to True, locomotion (moving with the controls) will be disabled. Roomscale movement will still be possible. If set to False, will enable locomotion. |
 | Debug String | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
 
@@ -96,7 +97,7 @@ As an example, setting Left and Right Hand to Animation will ignore the position
 
 Setting Eyes & Eyelid to Animation will disable eye movement and eyelid blinking. Setting Eyes & Eyelid to Tracking will re-enable the simulated eye movement and blinking.
 
-Setting Mouth and Jaw to Animation will disable visemes, although viseme parameters will still be sent. Setting Mouth and Jaw will re-enable visemes.
+Setting Mouth and Jaw to Animation will disable visemes, and viseme parameters will stop being updated. Setting Mouth and Jaw will re-enable visemes and they will start updating again.
 :::
 The Tracking setting will be kept until some other state runs this State Behavior again and resets it.
 
