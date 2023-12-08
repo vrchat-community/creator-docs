@@ -5,9 +5,11 @@ hidden: false
 createdAt: "2022-03-03T00:07:46.847Z"
 updatedAt: "2022-05-03T19:31:41.007Z"
 ---
-Contacts are a new system that allows avatars to detect collisions with itself or other avatars. These collisions can then be used to drive the animation controller and perform all sorts of fun effects. 
+Contacts are a system that allows avatars to detect collisions with itself or other avatars. These collisions can then be used to drive the animation controller and perform all sorts of fun effects. 
 
 These are separate from standard Unity colliders. Contacts are broken down into senders and receivers. Senders simply exist to be detected. Receivers detect senders and then update parameters accordingly.
+
+The amount of contacts on your avatar affect its [performance rank](/avatars/avatar-performance-ranking-system#pc-limits).
 
 ## VRCContactSender
 The Contact Sender component defines a volume of space that will send a Contact signal upon contact with a Contact Receiver.

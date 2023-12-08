@@ -52,7 +52,7 @@ Arguably the most important part, you must find a 3D model to be used as your av
 
 **Ensure that you obtain a license to use the model that you wish to use.** Artists put hundreds of hours into their models. Using them without a license is a violation of the VRChat Terms of Service as well as a violation of the model author's rights.
 
-Ensure that the model that you're using is below 70,000 triangles (7,500 for VRChat on Oculus Quest). On PC, you can upload models above this amount, but the avatar will be automatically marked as "Very Poor" performance, as excessive polygon count can cause performance problems.
+Ensure that the model that you're using is below 70,000 triangles (20,000 for VRChat on Oculus Quest). On PC, you can upload models above this amount, but the avatar will be automatically marked as "Very Poor" performance, as excessive polygon count can cause performance problems.
 
 ## Step 2 - Get the model into your project
 Now that you have found the model you want it's time to get it into your project. If you're getting it from the asset store, then you can download and directly import it into your project. If you got the model from elsewhere, then you need to import it and any related textures into your 'Assets' folder.

@@ -109,7 +109,7 @@ Once you're ready to publish your world, go to **Online Publishing** and click *
 
 After uploading your world, it will become available in VRChat! You should able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
-:::warning World Upload Failures
+:::caution World Upload Failures
 
 If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If so, then solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
 

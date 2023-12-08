@@ -18,7 +18,8 @@ See [Json documentation](https://www.json.org/json-en.html) for further details 
 | VRCJson.TryDeserializeFromJson | String input                    | success bool, DataToken result | Creates a DataList or DataDictionary from JSON string input. If successful, this returns true and the result token will be either a DataDictionary or DataList. If not successful, this returns false and puts an error explaining what the issue was in the result token.       |
 | VRCJson.TrySerializeToJson     | DataToken input, JsonExportType | success bool, DataToken result | Attempts to convert a DataDictionary or DataList into JSON string output. If successful, this returns true and the result token will be a string with the final Json. If not successful, this returns false and puts an error explaining what the issue was in the result token. |
 
-Note that in Udon Graph, "VRC" is removed from the beginning of all class names, so you need to search for "Json" to find these functions.
+- Note that in Udon Graph, "VRC" is removed from the beginning of all class names, so you need to search for "Json" to find these functions.
+- In UdonSharp, these classes are found in the `VRC.SDK3.Data` namespace.
 
 ## Supported types and values
 

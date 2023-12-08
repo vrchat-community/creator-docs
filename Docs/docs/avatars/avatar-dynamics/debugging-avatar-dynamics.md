@@ -8,7 +8,8 @@ updatedAt: "2022-03-04T00:41:09.121Z"
 As Avatar Dynamics is a complex system, it’s understandably easy to make a mistake while building your avatar. To help with both testing and debugging problems, we’ve provided users with a few tools to help make the process easier.
 
 ### In Game Debugging
-<iframe src='https://gfycat.com/ifr/LiveWhimsicalGuineafowl' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8hqDquZWvhY?si=Mp7pM80fCYZPei81" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Using the Action Menu you can now use the Avatar Overlay option to show visual representations of both [PhysBones](/avatars/avatar-dynamics/physbones) and [Contacts](/avatars/avatar-dynamics/contacts) live in game. These are useful for seeing exactly what is happening, or if objects have been set up properly.
 

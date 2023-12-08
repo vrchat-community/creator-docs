@@ -7,7 +7,7 @@ updatedAt: "2023-08-14T09:05:14.280Z"
 ---
 ## Using the Prefabs
 
-The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/com.vrchat.worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
+The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/VRChat SDK - Worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.
 
 ![The two Video Player prefabs, ready to drop into your world.](/img/worlds/video-players-aae04e6-video-player-prefabs.png)
 

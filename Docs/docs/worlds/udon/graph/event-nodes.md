@@ -37,10 +37,10 @@ Fired when a VRChat player joins the instance. Outputs the `player` that joined.
 `Event_OnPlayerLeft`
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 Fired when a VRChat player leaves the instance. Outputs the `player` that left.
- 
+
 ### OnSpawn
 `Event_OnSpawn`
-Fired when this object spawns for the local player. Unbuffered, so late joiners do not get this event. Only fires when the object is spawned via network instantiation. Will not fire if the object is present in the base scene.
+Deprecated. OnSpawn serves no function in VRChat's SDK3. In SDK2, this event was triggered when spawning an object for the local player.
  
 ### OnStationEntered
 `Event_OnStationEntered`
