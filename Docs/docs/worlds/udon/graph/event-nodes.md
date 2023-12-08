@@ -119,5 +119,13 @@ Fired when a particle collides with a player's capsule, assuming that Particle S
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 Fired when a player respawns using their menu.
 
+### OnScreenUpdate
+`Event_OnScreenUpdate`
+Outputs: `data` - `VRC.SDK3.Platform.ScreenUpdateData`
+Triggered when a player first enters the world on a Mobile Device, and whenever the orientation of their device changes. Outputs a `ScreenUpdateData` struct with the following values:
+* `type` - `ScreenUpdateType` - only `OrientationChanged` for now, can be expanded in the future.
+* `orientation` - `VRCOrientation` - the orientation of the player's device, as a `VRC.SDKBase.Platform.VRCOrientation` enum, which is `Landscape` or `Portrait`.
+* `resolution` - `Vector2` - the resolution of the player's device, as a `Vector2` struct. 
+
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.

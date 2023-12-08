@@ -82,6 +82,8 @@ Phone screens are different from PC and VR devices. You may want to adjust your 
 - Localize text. Mobile users user a much wider spectrum of languages than on other platforms.
 - Avoid relying on interactions that require a VR device or complex camera movements.
 - Try using [screen-space user interfaces](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/UICanvas.html). On a touchscreen, they are easier to interact with than world space canvases. Consider adding a user interface that users can open from anywhere without needing to walk over to an in-world menu panel.
+- Use the `OnScreenUpdateEvent` to get the orientation and resolution of the player's screen. This will trigger once when they first load into the world, and whenever the orientation of their device changes.
+
 
 ## In Conclusion: Give Players a Smooth User Experience
 

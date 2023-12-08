@@ -9,7 +9,7 @@ This page will describe various limits in place for the Oculus Quest version of 
 
 Find more information about limited components on our [Quest Content Optimization](/platforms/android/quest-content-optimization) page.
 ## Avatar-Specific Limitations
-Although the current version of VRChat does not implement a hard limit, **we may implement a hard limit for avatars based on triangle count, material counts, mesh counts, and other qualities in the future.** Please keep our recommendations in mind as described in [Quest Content Optimization](/platforms/android/quest-content-optimization). 
+Although the current version of VRChat does not implement a hard limit, **we may implement a hard limit for avatars based on triangle count, material counts, mesh counts, and other qualities in the future.** Please keep our recommendations in mind as described in [Quest Content Optimization](/platforms/android/quest-content-optimization).
 
 Currently, if you upload an avatar or avatar world that features avatars exceeding our recommendations, that world or avatar may be removed from public access.
 ## Shaders
@@ -17,11 +17,11 @@ VRChat on Quest only permits the shaders provided with the latest SDK on avatars
 
 All of the shaders listed below are under `VRChat/Mobile` in the shader selection dialog.
 
-**For performance reasons, make sure you always enable "Enable GPU Instancing" on your materials.** 
+**For performance reasons, make sure you always enable "Enable GPU Instancing" on your materials.**
 
 | Shader Name                | Shader Description |
 | :-- | :-- |
-| Standard Lite              | A "Lite" version of Unity Standard. Supports diffuse, normal maps, metallic+smoothness maps, and optional emission maps. Channel mappings for relevant maps are identical to Unity Standard Metallic setup. The diffuse texture is tinted by the vertex colours |
+| Standard Lite              | A "Lite" version of Unity Standard, designed to require less VRAM. Channel mappings and supported maps are identical to Unity Standard Metallic setup, excluding Alpha and Parallax. Not currently reccomended on PC as it does not support realtime lighting. The diffuse texture is tinted by the vertex colours. |
 | Bumped Diffuse             | Diffuse but with a normal map. The diffuse texture is tinted by the vertex colours.                                                                                                                                                                                 |
 | Bumped Mapped Specular     | Diffuse, but with a specular map (shininess) on the alpha channel. The diffuse texture is tinted by the vertex colours. Normal map also supported.                                                                                                                |
 | Diffuse                    | Just diffuse! The diffuse texture is tinted by the vertex colours.                                                                                                                                                                                                 |
@@ -31,6 +31,7 @@ All of the shaders listed below are under `VRChat/Mobile` in the shader selectio
 | Particles/Multiply         | Should be used on particles. Blends using Multiply mode.                                                                                                                                                                                                             |
 | Lightmapped (Only for worlds) | A basic diffuse shader that supports lightmapping. This shader is only meant for use on worlds. It cannot be used on avatars. It does not support real-time lighting.                                                                                          |
 | Skybox (Only for worlds)      | This shader is an optimized skybox shader, meant for use in worlds.                                                                                                                                                                                                    |
+| Supersampled UI (Only for worlds) | An unlit shader which is is supersampled at the texture sample phase. Use with mipmapping to make in-world UI text crisp without being grainy or distracting.
 
 ## Components
 

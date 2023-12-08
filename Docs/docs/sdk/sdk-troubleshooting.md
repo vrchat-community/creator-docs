@@ -17,7 +17,7 @@ Check your console tab to ensure there aren't any compilation errors from third-
 
 ## I uploaded my content but I can't see it in-game!
 There are a few reasons this might be the case. Here are some things to check:
-- Make sure you are using the [correct version of Unity](/sdk/current-unity-version).
+- Make sure you are using the [correct version of Unity](/sdk/upgrade/current-unity-version).
 - Make sure you are using the correct account in-game and are not logged into a platform account.
 - Check the `Content Manger` tab found in the control panel window to see if your content is there.
 - Check the editor console to see if there were any errors when uploading.
