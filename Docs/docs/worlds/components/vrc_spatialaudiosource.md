@@ -73,8 +73,6 @@ Animating properties of the `Audio Source` should still work for properties that
 On avatars, it is best to disable and enable the Audio Source components rather than the entire GameObject.
 :::
 
-Here's the information converted into a two-column markdown table:
-
 | Property                         | Description     |
 | :-- | :-- |
 | Gain                             | An additional boost to volume. By default, world audio sources get a 10dB boost. Avatar audio sources are limited to a maximum gain of 10dB. |

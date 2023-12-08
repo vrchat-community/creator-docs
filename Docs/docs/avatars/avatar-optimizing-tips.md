@@ -45,21 +45,24 @@ Creating avatars for the Quest can be more challenging due to the reduced limits
 Notably if you are using Cats Blender Plugin, it merges meshes automatically when you "Fix Model". **If you seperate meshes by Material or by Loose Parts using Cats to assist with decimation or editing, do not forget to merge the meshes again.** 
 <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F1fco-G2j0Jg%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1fco-G2j0Jg&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1fco-G2j0Jg%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
 
-### ... except when you're using shapekeys!
-**There is an exception here!** Calculating shape keys can be expensive, especially on avatars with higher polygon counts (>32,000) or when running on lower-spec hardware (Quest). If all your shape keys are on your face, it can be beneficial to split your face mesh from your body mesh, and delete all shape keys from your body mesh. This can be a more advanced technique. Because you have more meshes, it may negatively affect your [Avatar Performance Rank](/avatars/avatar-performance-ranking-system), but in reality you'll be slightly more optimized. Remember, *the Perf Rank system isn't perfect*-- it is just a surface-level recommendation system.
-
 ## Reduce the amount of material slots you use
 Each additional material slot is also a draw call, which eats more processor time! If you have a lot of materials (more than 10), look into Texture Atlasing. With Community-created tools, atlasing is exceedingly easy. Check out the Materials video for more details.
 
 As an aside, what is important is the number of **material slots on the Renderer components** in your avatar. If you have the same material in 20 slots, you still technically have 20 "materials". 
 
 This is due to the way that Unity splits meshes into submeshes. What really matters for performance is the number of submeshes created, which Unity creates based on Material slots.
-<iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2F5LwRi26RxSQ%3Ffeature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D5LwRi26RxSQ&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5LwRi26RxSQ%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
-## ... but also watch your VRAM usage!
 
-Textures eat up VRAM. If you create an inefficient atlas, you might end up using more VRAM than you did before!
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5LwRi26RxSQ?si=_TuNCYuWLrsWrVIm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's excellent and quite comprehensive. 
+## Watch your VRAM usage!
+
+Even if you use texture atlases, you might end end up using more VRAM than you did before!
+
+Textures eat up VRAM. The higher the resolution of each texture, the more VRAM it consumes. Avoid using several high-resolution textures, or reduce their size by reducing the "Max Size" parameter in [Unity's import settings](https://docs.unity3d.com/Manual/class-TextureImporter.html). 
+
+For example: A 30 MB avatar *can* use 3 GB of VRAM if it uses inefficient high-resolution textures. Don't be fooled by an avatar's download size.
+
+Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's an excellent and comprehensive guide on how to optimize your avatar's textures.
 
 ## Avoid expensive shaders
 Some shaders can cause excessive time spent rendering on the GPU. Try to stick with the Unity Standard shaders, or shaders that you know perform well. If you don't know how to tell if a shader is well-optimized, that's fine! Here are some examples-- these certainly aren't all the shaders available, but are all well-made and well-optimized with a variety of features.

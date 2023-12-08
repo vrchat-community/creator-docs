@@ -53,7 +53,7 @@ Use `VRCImageDownloader`'s constructor to create an image downloader, which can 
 
 #### DownloadImage
 
-Downloads an image, and calls an event indicating success or failure (see 'New Events').  
+Downloads an image, and calls an event indicating success or failure (see 'Events' below).  
 Returns an `IVRCImageDownload`, which can be used to track the progress of the download.
 
 - **Instance**: The `ImageDownloader` component to download the image with.  
@@ -71,7 +71,7 @@ Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory. Ca
 
 - Calling `Dispose` will invalidate the `VRCImageDownloader`, the associated `IVRCImageDownload`, and the downloaded texture.
   - After calling `Dispose`, the `VRCImageDownloadState` `State` of `IVRCImageDownload` will change to `Unloaded` until it is garbage collected.
-- `VRCImageDownloader` keeps textures in memory until it is destroyed or disposed using its `Dispose` function.
+- `VRCImageDownloader` keeps textures in memory until the underlying Texture2D is destroyed or disposed using its `Dispose` function.
 - Make sure to save the reference to your `VRCImageDownloader` as a variable to prevent it (and any downloaded texture) from randomly being garbage collected.
 
 #### TextureInfo

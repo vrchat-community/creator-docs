@@ -48,25 +48,26 @@ Version 1.1:
 
  If set to **Average**, the motion of the root bone will be the average of all of the other chains. This means that the base of each chain will be able to move. 
 
-> 🚧 
-> 
-> If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
-> 
-> For example, if you put the PhysBone component on any of the `RootBone`s below, you **must** define an **Endpoint Position** in order for PhysBones to work. This is different from Dynamic Bones!
-> 
-> Single Bone
-> 
-> - `RootBone`
-> 
-> Multiple Children, Single Root
-> 
-> - `RootBone`
->   - `ChildBone1`
->   - `ChildBone2`
->   - `ChildBone3`
->   - `ChildBone4`
-> 
-> You can also address this by adding "end bones" after each `ChildBone`, but that involves editing the armature.
+:::caution
+
+If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
+
+For example, if you put the PhysBone component on any of the `RootBone`s below, you **must** define an **Endpoint Position** in order for PhysBones to work. This is different from Dynamic Bones!
+ 
+Single Bone 
+- `RootBone`
+
+Multiple Children, Single Root
+
+ - `RootBone`
+ - `ChildBone1`
+ - `ChildBone2`
+ - `ChildBone3`
+ - `ChildBone4`
+ 
+You can also address this by adding "end bones" after each `ChildBone`, but that involves editing the armature.
+
+:::
 
 ## Forces
 
@@ -76,11 +77,13 @@ Version 1.1:
 - `Advanced` is less stable, but allows more complicated configurations, and tends to be more reactive to external impulses and forces.  
   With default settings, both of these modes act fairly similarly, but adjusting the settings and testing them out will quickly reveal how they differ.
 
-> 📘 
-> 
-> Most (if not all) of the options below allow for Curves by pressing the C button next to the slider. Curves let you adjust the value over the length of the bone chain, and allow for VERY complicated setups within bone chains!
-> 
-> In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
+:::info
+
+Most (if not all) of the options below allow for Curves by pressing the C button next to the slider. Curves let you adjust the value over the length of the bone chain, and allow for VERY complicated setups within bone chains!
+
+In fact, most PhysBones settings allow for the use of Curves! Learn how to use them and your PhysBones will look amazing!
+
+:::
 
 ![physbones-054e326-2022-04-19_11-32-12_Unity.png](/img/avatars/physbones-054e326-2022-04-19_11-32-12_Unity.png)
 
@@ -178,11 +181,13 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 Put the Constraint on the parent game object instead. You can still have the target of the Constraint set to the original GameObject.
 
-> ❗️ 
-> 
-> **PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
-> 
-> You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+:::caution Quest limitations 
+
+**PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
+
+You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+
+:::
 
 ### Per-Component Limitations
 

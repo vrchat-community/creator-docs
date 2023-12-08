@@ -27,9 +27,9 @@ Gets the actual number of Players in the instance when it is called.
 
 This is how you get all the Players in your world so you can go through them in a For Loop and apply settings, make changes, look for a particular name, etc. To use it, you *first need to create a VRCPlayerApi Array*.
 
-![The bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.](/img/worlds/getting-players-506acb6-getplayers.png)
+![The bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.](/img/worlds/graphgetplayers.png)
 
-Above, you can see the bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.
+Above, you can see the bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi\[\] as a variable so you can reuse it.
 
 ### GetPlayerById
 *int*

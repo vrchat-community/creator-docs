@@ -6,6 +6,7 @@ createdAt: "2020-09-24T22:05:44.842Z"
 updatedAt: "2023-01-10T00:35:37.776Z"
 ---
 Players have two sources of audio: the voice coming through their microphone, and sounds attached to their Avatar. With Udon, you can change how a Player hears *other* players' voices and avatar sounds. For example, this graph makes a player quieter by setting their gain to 5 dB (which is lower than the default of 15 dB):
+
 ![player-audio-8e50220-setvoicegain.png](/img/worlds/player-audio-8e50220-setvoicegain.png)
 
 Here are all the properties you can access:
@@ -43,15 +44,15 @@ Set the Maximum Gain allowed on Avatar Audio. Default is 10.
 
 ### SetAvatarAudioFarRadius
 *in Meters, Range is not limited*
-This sets the maximum end of the range for hearing the avatar's audio. Default is 40 meters. You can lower this to make another player's avatar not travel as far, all the way to 0 to effectively 'mute' the player. Note that this is compared to the audio source's maxDistance, and the smaller value is used.
+This sets the maximum end of the range for hearing the avatar's audio. Default is 40 meters. You can lower this to make another player's avatar audio not travel as far, all the way to 0 to effectively 'mute' the player. Note that this is compared to the audio source's maxDistance, and the smaller value is used.
 
 ### SetAvatarAudioNearRadius
 *in Meters, Range is not limited*
-This sets the maximum start of the range for hearing the avatar's audio. Default is 40 meters. You can lower this to make another player's avatar not travel as far, all the way to 0 to effectively 'mute' the player. Note that this is compared to the audio source's minDistance, and the smaller value is used.
+This sets the maximum start of the range for hearing the avatar's audio. Default is 0 meters. Increasing this value makes the avatar audio sources reach their maximum volume from a further distance. Note that this is compared to the audio source's maxDistance, and the smaller value is used.
 
 ### SetAvatarAudioVolumetricRadius
 *in Meters, Range is not limited*
-An avatar's audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully, and is mainly for distant audio sources that need to sound "large" as you move past them. Keep this at zero unless you know what you're doing. The value for Volumetric Radius should always be lower than Avatar AudioFarRadius. Default is 40 meters.
+An avatar's audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully, and is mainly for distant audio sources that need to sound "large" as you move past them. Keep this at zero unless you know what you're doing. The value for Volumetric Radius should always be lower than Avatar AudioFarRadius. Default is 0 meters.
 
 ### SetAvatarAudioForceSpatial
 *On/Off*
