@@ -60,10 +60,6 @@ This graphic is out of date! Update pending.
 When you click the **Avatar Stats** button, you'll get a screen pop up with the details of avatar you're looking at, or your own avatar (if you clicked the button in the Avatar tab).
 :::caution
 
-This graphic is out of date! Update pending.
-:::
-
-<iframe src='https://gfycat.com/ifr/ImpossibleFarawayLamprey?hd=1' frameborder='0' scrolling='no' allowfullscreen width='640' height='506'></iframe>
 The color of the text matches the rank that the particular stat "drags" the rank down to.
 
 You'll also see a "before and after" in the form of the "Original" and "Perf Filtered" lines. If you're using the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system, you can see what the stats were before and after the system removed components. In the case of the Minimum Displayed Performance Rank system blocking an avatar for performance reasons, you'll only see the original stats.
