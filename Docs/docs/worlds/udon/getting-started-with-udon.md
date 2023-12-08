@@ -42,7 +42,7 @@ Here are all the steps to get you started with Udon, as covered in the video abo
 
 3. Download the SDK.
 
-4. Install Unity Hub and current VRChat-compatible version if you don't have them yet. Check the Android Support box when installing Unity so you can make Quest-compatible worlds. Check the current VRChat compatible version on [this page](/sdk/current-unity-version)
+4. Install Unity Hub and current VRChat-compatible version if you don't have them yet. Check the Android Support box when installing Unity so you can make Quest-compatible worlds. Check the current VRChat compatible version on [this page](/sdk/upgrade/current-unity-version)
 
 5. Install VRChat if you don't have it yet.
 
