@@ -1,7 +1,7 @@
 ---
 slug: release-3-5-0
-date: 2023-12-07
-title: Release 3.5.0 beta 1
+date: 2023-12-08
+title: Release 3.5.0
 authors: [momo]
 tags: [release]
 draft: false
