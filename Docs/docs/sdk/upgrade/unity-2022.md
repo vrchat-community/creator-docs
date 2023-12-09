@@ -29,6 +29,12 @@ Without a backup, you don't get a second try. If you make a mistake or the upgra
 
 Now you're ready to upgrade!
 
+:::danger Test your creations before uploading it.
+
+After successfully uploading a creations with Unity 2022, you won't be able to upload that same creations with Unity 2019.
+
+:::
+
 ## Using the Creator Companion 
 
 There are two ways you can upgrade your project from the VCC: Directly from your Projects page or from each Manage Project page. **Make sure the project you are trying to upgrade is closed before proceeding.**
