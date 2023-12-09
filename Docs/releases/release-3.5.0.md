@@ -26,6 +26,7 @@ You will need to update your Creator Companion to version 2.2.0 in order to mana
 * Switches from .NET Framework 4.x to .NET Standard 2.1.
 * Restores UdonSharp Samples, now  listed under World Samples.
 * Restores UdonSharp and ClientSim legacyFiles.
+* Now you can add `VRC Imposter Settings` Component!
 
 ## Known Issues
 
