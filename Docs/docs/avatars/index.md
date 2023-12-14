@@ -93,10 +93,10 @@ Blinking can be handled via blendshapes or bones. Blendshapes are the usual meth
 Blinking blendshapes are defined by three blendshapes, described below:
 
 - Blink - Both eyes blinking
-- LookUp - Blendshape used when looking up-- use this to tweak eye/iris/lid/eyebrow positioning
-- LookDown - Blendshape used when looking down, use this similarly to LookUp
+- Looking Up - Blendshape used when looking up-- use this to tweak eye/iris/lid/eyebrow positioning
+- Looking Down - Blendshape used when looking down, use this similarly to LookUp
 
-You can set LookUp and LookDown to `-none-` if you don't want to use them.
+You can set these blendshapes to `-none-` if you don't want to use them.
 
 In addition, you'll notice two sliders-- one goes from Calm to Excited, and the other goes from Shy to Confident. Calm / Excited affects how often you blink. Shy / Confident affects how often you look at other players, and how long your gaze remains on other player's faces until you look away.
 
