@@ -12,7 +12,7 @@ Events are used to detect actions and set off chains of action or logic. [Input 
 All below nodes have flow nodes where logic requires it.
 
 ### Interact
-Fired when a VRChat player interacts with this object.
+Fired when the local player interacts with this game object.
 
 ### OnDrop
 Fired when a VRChat player drops this object after being held.

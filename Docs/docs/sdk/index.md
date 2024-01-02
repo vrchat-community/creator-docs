@@ -26,7 +26,7 @@ If you're looking for the process to build content for VRChat on Quest, check ou
 
 2. Continue in the installation window. The install location will default to `:\Users\UserName\AppData\Local\Programs`, but you can change this as you'd like.
 
-3. The VCC should open automatically after installtion. If not, searching **Creator Companion** in your Windows search will help you find it.
+3. The VCC should open automatically after installation. If not, searching **Creator Companion** in your Windows search will help you find it.
 
 4. Click **Create New Project**.
 
