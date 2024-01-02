@@ -74,15 +74,11 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Avatar Quality             | Quality Description                                                                                                                       |
 | --------------------------| ---------------------------------------------------------------------------------------------------------------------------------------- |
 | Polygons                   | The polygon count of the model in question, counted in triangles.                                                                        |
-| Bounds Size                | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time. Important note: Bounds Size will not cause the avatar to be blocked even if it is below the Minimum Displayed Performance Rank setting. |
-| Texture Memory             | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory.                                                     |
-| Skinned Meshes             | The number of Skinned Mesh components on the avatar.                                                                                     |
-| Meshes                     | The number of non-Skinned Mesh components on the avatar.                                                                                 |
+| Bounds Size                | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time.<br/>Important note: Bounds Size will not cause the avatar to be blocked, even if it is below the "Minimum Displayed Performance Rank" setting. |
+| Texture Memory             | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory. |
+| Skinned Mesh Renderers     | The number of Skinned Mesh Renderer components on the avatar. |
+| Mesh Meshes                | The number of (non-skinned) Mesh Renderer components on the avatar. |
 | Material Slots             | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
-| Dynamic Bone Components    | The number of Dynamic Bone scripts on the avatar.                                                                                        |
-| Dynamic Bone Transforms    | The number of transforms animated by any given Dynamic Bone script on the avatar.                                                        |
-| Dynamic Bone Colliders     | The number of Dynamic Bone Collider scripts on the avatar.                                                                               |
-| Dynamic Bone Collision Check Count | The total number of DynamicBone transforms affected by the Dynamic Bone Collider scripts on the avatar. This can count transforms twice or more, because a single transform can be affected by multiple colliders. |
 | PhysBones Components       | The number of PhysBone components on the avatar.                                                                                          |
 | PhysBones Affected Transforms | The total number of transforms affected by PhysBones components on the avatar.                                                          |
 | PhysBones Colliders        | The number of PhysBone collider scripts on the avatar.                                                                                    |
@@ -99,6 +95,10 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Trail Renderers            | The number of Trail Renderers on the avatar.                                                                                             |
 | Line Renderers             | The number of Line Renderers on the avatar.                                                                                              |
 | Cloths                     | The total number of Cloth components on the avatar.                                                                                     |
+| Dynamic Bone Components    | (Deprecated) The number of Dynamic Bone scripts on the avatar.                                                                                        |
+| Dynamic Bone Transforms    | (Deprecated) The number of transforms animated by any given Dynamic Bone script on the avatar.                                                        |
+| Dynamic Bone Colliders     | (Deprecated) The number of Dynamic Bone Collider scripts on the avatar.                                                                               |
+| Dynamic Bone Collision Check Count | (Deprecated) The total number of DynamicBone transforms affected by the Dynamic Bone Collider scripts on the avatar. This can count transforms twice or more, because a single transform can be affected by multiple colliders. |
 
 
 ## Avatar Performance Ranks - Value Maximums per Rank
@@ -156,15 +156,15 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 | Audio Sources                                                         | 1                  | 4            | 8            | 8            |
 
 
-## Quest Limits
+## Android Limits
 ### Default Performance Rank Blocking
-On Quest, the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
+On Android (phones, tablets, and Meta Quest), the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
 
 You can set your Performance Rank Block level to Poor to allow the display of Poor avatars. However, you cannot set your Performance Rank Block level to "Very Poor".
 
-For example, if an avatar on Quest exceeds 20,000 triangles (polygons), it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
+For example, if an avatar on Android exceeds 20,000 triangles (polygons), it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
 
-Notably, **there is a hard cap on [Avatar Dynamics](/avatars/avatar-dynamics) systems on Quest.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
+Notably, **there is a hard cap on [Avatar Dynamics](/avatars/avatar-dynamics) systems on Android.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
 
 - 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
 - 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
@@ -172,10 +172,10 @@ Notably, **there is a hard cap on [Avatar Dynamics](/avatars/avatar-dynamics) sy
 - 64 [PhysBones](/avatars/avatar-dynamics/physbones) collider checks
 - 16 [Avatar Dynamics Contacts](/avatars/avatar-dynamics/contacts) 
 
-If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics) components will be removed from the avatar, even if Show Avatar is enabled.
+If this cap is exceeded on Android, all [Avatar Dynamics](/avatars/avatar-dynamics) components will be removed from the avatar, even if Show Avatar is enabled.
 :::danger
 
-**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
+**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android entirely.** Please keep this in mind when creating avatars for VRChat on Android.
 :::
 
 | Avatar Quality                                                                    | Excellent          | Good         | Medium       | Poor         |
@@ -203,21 +203,21 @@ If this cap is exceeded on Quest, all [Avatar Dynamics](/avatars/avatar-dynamics
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
-[^2]: If the Very Poor value is exceeded on Quest, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
+[^2]: If the Very Poor value is exceeded on Android, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
 
 ### Removed Categories
-The following categories are disabled on Quest since they can never appear on avatars:
+The following categories are disabled on Android since they can never appear on avatars:
 
-  * Dynamic Bone Components
-  * Dynamic Bone Transforms
-  * Dynamic Bone Colliders
-  * Dynamic Bone Collision Check Count
   * Lights
   * Cloths
   * Total Cloth Vertices
   * Physics Colliders
   * Physics Rigidbodies
   * Audio Sources
+  * Dynamic Bone Components
+  * Dynamic Bone Transforms
+  * Dynamic Bone Colliders
+  * Dynamic Bone Collision Check Count
 
 These values may still appear in the in-app stats readout, but will always be zero.
 
@@ -256,16 +256,16 @@ When you choose a Performance Rank in this menu, all avatars that are below that
 ### Minimum Displayed Performance Rank on PC
 On VRChat for PC, the Minimum Displayed Performance Rank is set to "Very Poor" by default. This means that, by default, no avatars will have their components or display affected for performance reasons on PC. If you wish to change this, you can choose between "Medium", "Poor", or "Very Poor" options.
 
-### Avatar Performance Rank Blocking on Quest
-On VRChat for the Oculus Quest, the Avatar Performance Rank Block is set to "Medium" by default. You can choose to change this to "Poor" to see avatars of that rank, but your performance may suffer as a result.
+### Avatar Performance Rank Blocking on Android
+On VRChat for Android, the Avatar Performance Rank Block is set to "Medium" by default. You can choose to change this to "Poor" to see avatars of that rank, but your performance may suffer as a result.
 
-You cannot disable the Avatar Performance Rank Block system on Quest. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for the Oculus Quest, and may not display at all.
+You cannot disable the Avatar Performance Rank Block system on Android. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for Android, and may not display at all.
 
-No matter what setting you choose, if the [Avatar Dynamics](/avatars/avatar-dynamics) component limits are exceeded on Quest, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Quest avatars.
+No matter what setting you choose, if the [Avatar Dynamics](/avatars/avatar-dynamics) component limits are exceeded on Android, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Android avatars.
 
 ### Overriding Individual Avatars
 :::danger
 
-**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Quest entirely.** Please keep this in mind when creating avatars for VRChat on the Oculus Quest.
+**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android entirely.** Please keep this in mind when creating avatars for VRChat on Android and Meta Quest.
 :::
 You can choose to override the the entirety of the system (and the Safety system) by selecting "Show Avatar" on each user you wish to show.

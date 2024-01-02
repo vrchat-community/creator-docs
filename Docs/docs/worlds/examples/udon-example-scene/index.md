@@ -12,7 +12,7 @@ These objects show off some of the Prefabs included with the SDK which demonstra
 This prefab makes it easy to upload your Unity scene to VRChat. It has four components:
 - The [VRC Scene Descriptor](/worlds/components/vrc_scenedescriptor/) script, which defines basic properties of your world. It is required for every VRChat world.
 - The [VRC Pipeline Manager](/sdk/vrcpipelinemanager/) script, which contains the world ID. It is added automatically with the VRC Scene Descriptor.
-- The VRCWorldSettings Udon Graph program, which allows you to change the movement speed of players in your world.
+- The [VRCWorldSettings](/worlds/examples/udon-example-scene/player-mod-setter) Udon Graph program, which allows you to change the movement speed of players in your world.
 - The [Avatar Scaling Settings](/worlds/examples/udon-example-scene/avatar-scaling-settings) Udon Graph program, which allows you to limit the avatar scale of players in your world.
 
 If you'd like to use the VRCWorld prefab in your own Unity scene, you can find it in `\Packages\com.vrchat.worlds\Samples\UdonExampleScene\Prefabs\VRCWorld.prefab`.
