@@ -76,8 +76,8 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Polygons                   | The polygon count of the model in question, counted in triangles.                                                                        |
 | Bounds Size                | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time.<br/>Important note: Bounds Size will not cause the avatar to be blocked, even if it is below the "Minimum Displayed Performance Rank" setting. |
 | Texture Memory             | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory. |
-| Skinned Mesh Renderers     | The number of Skinned Mesh Renderer components on the avatar. |
-| Mesh Meshes                | The number of (non-skinned) Mesh Renderer components on the avatar. |
+| Skinned Meshes             | The number of Skinned Mesh Renderer components on the avatar. |
+| Basic Meshes               | The number of (non-skinned) Mesh Renderer components on the avatar. |
 | Material Slots             | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
 | PhysBones Components       | The number of PhysBone components on the avatar.                                                                                          |
 | PhysBones Affected Transforms | The total number of transforms affected by PhysBones components on the avatar.                                                          |
@@ -128,7 +128,7 @@ Triangles (polygons) are a somewhat special case-- if you are 32k or less, you a
 | Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
 | Texture Memory                                                        | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
 | Skinned Meshes                                                        | 1                  | 2            | 8            | 16           |
-| Meshes                                                                | 4                  | 8            | 16           | 24           |
+| Basic Meshes                                                          | 4                  | 8            | 16           | 24           |
 | Material Slots                                                        | 4                  | 8            | 16           | 32           |
 | Dynamic Bone Components                                               | 0                  | 4            | 16           | 32           |
 | Dynamic Bone Transforms                                               | 0                  | 16           | 32           | 256          |
@@ -184,7 +184,7 @@ If this cap is exceeded on Android, all [Avatar Dynamics](/avatars/avatar-dynami
 | Bounds Size[^1]                                                                    | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
 | Texture Memory                                                                    | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
 | Skinned Meshes                                                                    | 1                  | 1            | 2            | 2            |
-| Meshes                                                                            | 1                  | 1            | 2            | 2            |
+| Basic Meshes                                                                      | 1                  | 1            | 2            | 2            |
 | Material Slots                                                                    | 1                  | 1            | 2            | 4            |
 | Animators                                                                         | 1                  | 1            | 1            | 2            |
 | Bones                                                                             | 75                 | 90           | 150          | 150          |
@@ -232,7 +232,7 @@ When you choose a Performance Rank in this menu, all avatars that are below that
 | Bounds Size                                                                       | No change                                                                                                            |
 | Texture Memory                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
 | Skinned Meshes                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
-| Meshes                                                                            | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
+| Basic Meshes                                                                      | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
 | Material Slots                                                                    | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)**                             |
 | Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts  | All PhysBone, PhysBone Collider,and Contact components removed                                                       |
 | Dynamic Bone Components or Transforms                                             | All Dynamic Bones components removed                                                                                 |
