@@ -47,7 +47,7 @@ You should assume that parameter values may change. If you "dead-end" your anima
 | InStation                          | Returns `true` if the user is in a station, `false` if not           | Bool        | IK             |
 | Earmuffs                           | Returns `true` if the user's Earmuff feature is on, `false` if not   | Bool        | Playable       |
 | IsOnFriendsList                    | Returns `true` if the user viewing the avatar is friends with the user wearing it. `false` locally. | Bool        | Other          |
-| [AvatarVersion](/worlds/components/vrc_station/#sdk3-station-with-sdk2sdk3-avatar)                    | Returns `3` if the avatar was built using VRChat's SDK3 (2020.3.2) or later, `0` if not. | Bool | IK | 
+| [AvatarVersion](/worlds/components/vrc_station/#sdk3-station-with-sdk2sdk3-avatar)                    | Returns `3` if the avatar was built using VRChat's SDK3 (2020.3.2) or later, `0` if not. | Int | IK | 
 
 "Supine" and "GroundProximity" are visible in the Debug display, but are not implemented yet. They currently do nothing and never change values.
 
