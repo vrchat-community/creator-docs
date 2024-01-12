@@ -84,7 +84,7 @@ To delete the copied local test avatar, go to "Content Manager" tab of the VRCha
 
 ### Simulated Eye Movement
 
-Simulated eye movement is where your eyes will move around, looking at things around you. This isn't _eye tracking_-- as in, we don't have a way for you to input data from eye tracking devices-- but it is a pretty good way of making your avatar look more "alive".
+Simulated eye movement is where your eyes will move around, looking at things around you. This isn't _eye tracking_ but it is a pretty good way of making your avatar look more "alive".
 
 You can preview your setup in the editor and adjust how your avatar's eyes look in a combination of states, which are used to determine how your eye bones are set up.
 
