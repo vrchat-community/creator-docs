@@ -25,7 +25,7 @@ See Unity's documentation on this feature for other shared details:
 
 ## Using VRCAsyncGpuReadback
 
-When using VRCAsyncGpuReadback, there are 3 main steps that you need to follow:
+When using VRCAsyncGpuReadback, there are 4 main steps that you need to follow:
 
 1. Set up an array of data to be used.
 2. Make the AsyncGpuReadback request
