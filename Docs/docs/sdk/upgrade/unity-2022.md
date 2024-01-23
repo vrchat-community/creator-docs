@@ -32,6 +32,12 @@ Upgrades can fail. If they do, your backup can be used as a checkpoint. If you k
 
 Now you're ready to upgrade!
 
+:::danger Test your content before uploading it
+
+After successfully uploading a world or avatar with Unity 2022, you won't be able to upload it again with Unity 2019.
+
+:::
+
 ## Using the Creator Companion 
 
 There are two ways you can upgrade your project from the VCC: Directly from your Projects page or from each Manage Project page. **Make sure the project you are trying to upgrade is closed before proceeding.**
