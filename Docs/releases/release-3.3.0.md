@@ -23,6 +23,8 @@ This update also adds support for the new 'Maximum capacity' and 'Recommended ca
 * Standardized public API has been added for tool developers
 * Content Manager now marks the currently selected world and allows quickly setting any uploaded world as current
 * Countless bug fixes and improvements across Worlds and Avatars SDKs
+* Adds the [VRC Impostor Settings](/avatars/avatar-impostors#vrcimpostorsettings) component to the avatars SDK.
+  * However, you cannot attach this component manually for now.
 
 ### Important note for Tool Developers
 
