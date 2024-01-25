@@ -61,12 +61,11 @@ We have tested *Amazon Cloudfront* and *BunnyCDN*. CDN services are usually paid
 ### YouTube
 - **Cost**: Free
 - **Links**: Use the ['watch' url](https://www.youtube.com/watch?v=8yaQY0arCnc)
-- **Limitations**: Will not work on Quest or Linux
-
+- **Limitations**: None
 ### Vimeo Basic
 - **Cost**: Free
 - **Links**: Use the [basic video url](https://vimeo.com/383935156)
-- **Limitations**: Will not work on Quest or Linux
+- **Limitations**: None
 
 ### Vimeo Pro or Business
 - **Cost**: [Paid](https://vimeo.com/upgrade)
