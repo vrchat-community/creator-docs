@@ -4,6 +4,9 @@ sidebar_position: 1
 createdAt: "2020-12-15T00:35:42.570Z"
 updatedAt: "2023-01-16T15:28:57.978Z"
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 :::note Overview
 
 Multiplayer experiences are the heart of VRChat, so creating a world that reacts to players and synchronizes the data between them is key.
@@ -14,7 +17,7 @@ This page introduces the concepts that power our networking system. Once you've 
 
 :::
 
-# Overview: How Networking Works in Udon
+## Overview: How Networking Works in Udon
 
 <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FMb6ZYBEhxiI%3Flist%3DPLe9XHNvXcouQjg5GULWGLj1tMzeythnQi&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DMb6ZYBEhxiI&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMb6ZYBEhxiI%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>
 
@@ -26,7 +29,7 @@ The three main concepts used for networking in Udon are **Variables**, **Events*
 
 For a scoreboard in a game, you might use a variable to store and update user scores, and an event to trigger fireworks for the winner.
 
-# Ownership
+## Ownership
 
 Objects in a world are *local* by default. That means that an object you pick up **only moves for you**, no one else sees it moving. To synchronize the object, you need to tell VRChat that you want it to be a **Networked Object**.
 
@@ -34,7 +37,7 @@ To make an object **Networked**, you can add an UdonBehaviour and/or a VRC Objec
 
 The first player who opens a world becomes the owner of all the Networked Objects. They can make changes to those objects and the changes will be sent to everyone else. When you change the Owner of an object, the new owner is in charge of the network data and everyone else will listen for their changes.
 
-## Example: The Simplest Networked Object
+### Example: The Simplest Networked Object
 
 If you have a 3D object with a renderer and a collider, you can easily make it something that people can pick up and sync.
 
@@ -45,12 +48,14 @@ VRCPickup adds a Rigidbody to your GameObject if it doesn't already have one, an
 
 VRCObjectSync automatically syncs the object - sending its position, rotation, scale and some physics properties to the other players so that it looks the same to everyone. To sync other data, you need variables.
 
-# Variables
+## Variables
 A variable is a container for a value. UdonBehaviours run Udon Programs, and you can add variables to these programs.
+
 ![The Variables window in an Udon Graph shows the variables you've created, and lets you edit their properties.](/img/worlds/index-e057e35-slider-program-variables.png)
+
 In the image above, I've made three different variables, and you can see that I've checked the 'synced' box for the 'sliderValue' variable. The Owner of this GameObject will be in charge of this variable value, and their changes will be sent to everyone else.
 
-## Example: Synced Slider
+### Example: Synced Slider
 ![](/img/worlds/udon-networking-8472b6b-synced-slider.png)
 
 In this example, the Owner of a Slider syncs its value to everyone else. Note that this is meant to illustrate the concepts - we'll release a separate example that goes into the nitty-gritty 'how-to' details.
@@ -64,11 +69,12 @@ So the owner moves the slider and sets *sliderValue*. VRChat updates *sliderValu
 Owner: Moves Slider > OnValueChanged > set *sliderValue* from **UISlider.value** > Update readout.
 Others: *sliderValue* updated by VRChat > OnDeserialization triggered > set **UISlider.value** > OnValueChanged > Update readout.
 
-# Events
+## Events
 Events happen, and then they're gone. Unlike variables, which can only be updated by the Owner of an object, anyone can call an event on an Object. You can choose to send it to everyone, or just to the owner of that object. This is done by selecting target: All or target: Owner when sending the event.
+
 ![](/img/worlds/udon-networking-c764485-scne.png)
 
-## Example: Bubble Gun
+### Example: Bubble Gun
 ![](/img/worlds/udon-networking-33702b1-bubble-gun-shooting.png)
 
 In this example, we have an object with a particle system and an animator that spins its bubble wand and generates bubble particles. We want this to happen for everyone in the world when the user holding the wand presses the trigger.
@@ -76,15 +82,49 @@ In this example, we have an object with a particle system and an animator that s
 In our Udon Graph, we have a custom event we call "Trigger" which Plays the 'Spin' animation and triggers 22 Particles to Emit - this is just a local event in our graph.
 
 To make this happen for everyone, we tie the **OnPickupUseDown** event which is triggered when someone presses Use while holding our Bubble Gun, and we use **SendCustomNetworkEvent** with a target of *All* to fire the "Trigger" event for everyone, including the Owner of the object.
-![](/img/worlds/udon-networking-e21b3b0-bubble-gun-graph.png)
 
-# Bonus Concept: Late Joiners
+<Tabs>
+<TabItem value="graph" label="Udon Graph">
+
+![Networked pickup particles in the Udon Graph](/img/worlds/udon-networking-e21b3b0-bubble-gun-graph.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+using UdonSharp;  
+using UnityEngine;  
+using VRC.Udon.Common.Interfaces;  
+  
+[UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]  
+public class BubbleGun : UdonSharpBehaviour  
+{  
+    [SerializeField] private Animator animator;  
+    [SerializeField] private ParticleSystem particles;  
+      
+    public override void OnPickupUseDown()  
+    {  
+        SendCustomNetworkEvent(NetworkEventTarget.All, nameof(Trigger));  
+    }  
+  
+    public void Trigger()  
+    {  
+        animator.Play("Spin");  
+        particles.Emit(22);  
+    }  
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Bonus Concept: Late Joiners
 What happens to people who join your world after some synchronization has happened? It's straightforward: Variables will be updated, events will not. When someone joins your world, the OnDeserialization event will fire for every Networked Object in the world with the latest data, and they'll run whatever logic you have in place to update things based on that data. Events are gone, however - there's no reason for them to fire off the bubble particles an hour after someone pressed the trigger.
 
-# Overview Recap
+## Overview Recap
 Sync is done through Variables and Events. For variables, the owner of a Networked Object updates a variable and sends that data to all the other players who Deserialize it. Anyone who enters a world gets the latest data to Deserialize. For events, anyone can send a NetworkEvent. It will either be received by the owner or by everyone in the world at that time. 
 
-# Example Package
+## Example Package
 [UdonNetworkingConcepts.unitypackage](https://assets.vrchat.com/sdk/UdonNetworkingConcepts.unitypackage)
 
 We've included the three examples above in a simple package you can import into any project which has the Udon SDK in order to see them working and explore the graphs yourself.
@@ -93,7 +133,7 @@ We've included the three examples above in a simple package you can import into 
 This first section serves as a broad overview of networking with Udon in VRChat. Once you feel like you've got a grasp of the concepts and you've explored the example package above, you can learn further details of each aspect of the system below.
 :::
 
-# The Ways You Can Sync
+## The Ways You Can Sync
 There are four ways you can synchronize data and events in your world:
 
 ### 1. Continuous Variable
@@ -116,13 +156,13 @@ Some VRChat-specific objects are automatically synced. This includes:
 * Avatars: Includes their colliders, voice, and IK movement. 
 * VRCObjectSync: Includes the Transform and Rigidbody of the object.
 
-# Object Ownership
+## Object Ownership
 In VRChat, every GameObject is 'owned' by one player (`VRCPlayerApi`) at a time. Only the owner of an object can change its synced Udon variables. Those changes can then be sent to everyone else in the instance. If you want a player to be able to change a variable on an object, make sure to check or request ownership first!
 
 The ownership of an object can be changed with Udon by calling `Networking.SetOwner(VRCPlayerApi player, GameObject obj)`. This will cause every player in the instance to call `OnOwnershipTransferred(VRCPlayerApi player)`, where `player` is a reference to the new owner of the object. The new owner can immediately change synced variables.
 If your script is using manual sync, don't forget to call `RequestSerialization()`.
 
-## Requesting Ownership (Advanced)
+### Requesting Ownership (Advanced)
 
 If you'd like the owner of an object to be able to accept or refuse ownership transfers, add the event `OnOwnershipRequest(VRCPlayerApi requester, VRCPlayerApi newOwner)` to your script.
 
@@ -142,7 +182,7 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 5. If the request was accepted, `OnOwnershipTransferred(VRCPlayerApi player)` is called by the **former owner** and **all other players**.
 ![](/img/worlds/udon-networking-813f99e-OnOwnershipRequest_Activity.svg)
 
-# Using Variables
+## Using Variables
 
 :::note Using a variable to sync data takes three steps:
 
@@ -168,6 +208,7 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 3. Use the flow coming from the OnDeserialization node and the value from the Get Variable node to update another node with this new value.
 
 ## RequestSerialization
+
 This node is used in Manual Sync mode to flag the variables on the target UdonBehaviour for Serialization during the next Network Tick, which does not happen every frame. This node works will with the OnPreSerialization Event node. You trigger "RequestSerialization" and then the OnPreSerialization event will trigger during the next Network Tick. At that point, you can update any variables to the values you would like to be synced.
 :::note Variable Sync
 
@@ -180,7 +221,7 @@ bool, char, byte, sbyte, short, ushort, int, uint, long, ulong, float, double, V
 When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/worlds/udon/networking/network-components#onpostserialization) node
 :::
 
-# Using Custom Events
+## Using Custom Events
 
 :::note Using an Event to fire a change takes 2 steps:
 
@@ -203,13 +244,15 @@ SendCustomNetworkEvent will work as a 'SendCustomEvent' node in the Editor to al
 
 :::
 ### Local-Only Events
-If you start your Event names with an underscore, you will not be able to call them over the network. We do this to safeguard our internal methods like _start, _update, _interact against malicious network calls. We have plans to add an attribute to events to mark them as 'local-only' without the need for an underscore. If you want to block events from remote execution in the meantime, you can use a unique underscore prefix like '_u_eventName' to make sure it doesn't match any existing or future VRC methods.
-# Debugging
+If you start your Event names with an underscore, you will not be able to call them over the network. We do this to safeguard our internal methods like \_start, \_update, \_interact against malicious network calls. We have plans to add an attribute to events to mark them as 'local-only' without the need for an underscore. If you want to block events from remote execution in the meantime, you can use a unique underscore prefix like '\_u\_eventName' to make sure it doesn't match any existing or future VRC methods.
+## Debugging
 You can view some information about your networked objects in the client if you launch with `--enable-debug-gui` and press RightShift + ` + 8 while in the client.
 These overlays show you the NetworkId, name of the GameObject, **P**ing time, **Q**uality of the data (100% is no dropped packets) and **O**wner of the GameObject.
+
 ![](/img/worlds/udon-networking-9b0721f-network-debug.png)
 
 You can see some per-object information in list form using RightShift + ` + 6 in the client:
+
 ![](/img/worlds/udon-networking-dde0d15-networking-debug-6.png)
 
 :::danger Known Issues

@@ -1,35 +1,53 @@
----
-title: "Expression Menu and Controls"
-slug: "expression-menu-and-controls"
-hidden: false
-createdAt: "2020-08-05T22:34:37.899Z"
-updatedAt: "2022-11-08T23:54:49.666Z"
----
+# Expression Menu and Controls
+
 :::caution Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
 
 :::
 
-## Creating An Expression Menu
+## Creating an Expression Menu
 
-1. Right-click in the Unity project, select `Create/VRC Scriptable Objects/Expressions Menu`
-2. Select the new object in the project
+1. Right-click in your Assets folder and select `Create/VRC Scriptable Objects/Expressions Menu`
+2. Open your expressions menu to customize it. (See step 13)
 
-You'll also need to create a ExpressionParameters object, where you can define all of the custom parameters you're using. You can name them here, as well as define their type. You create one the same way as above:
+Before you continue, you'll need to create an **ExpressionParameters** asset, where you can define all of the avatar's custom parameters.
 
-3. Right-click in the Unity project, select `Create/VRC Scriptable Objects/Expression Parameters`
-4. Select the new object in the project.
-5. Set up your custom parameters with names and types. `Int` has a range of 0-255, Float has a range of -1.0 to 1.0. You can access your parameters with your custom names to make organization easier.
+![What expression parameters look like by default.](/img/avatars/animator-parameters/params-default.png)
 
-After this, you'll need to go back to your Expressions Menu.
+3. Right-click in your Assets folder and select **Create > VRC Scriptable Objects > Expression Parameters**.
+4. Select the expression parameters asset to customize it.
 
-6. In the inspector click "Add Control".  Up to 8 controls can be added to a menu.
-7. You can also name states, add icons, and change the order of the controls here.
-8. When complete, drag this object to the "Expressions Menu" property in the Avatar Descriptor.
-9. Drag your Expressions Parameters object to the "Expressions Parameters" property in the Avatar Descriptor.
+    - The asset contains [three parameters by default](https://creators.vrchat.com/avatars/animator-parameters/#default-av3-aliasing) (`VRCEmote`, `VRCFaceBlendH`, `VRCFaceBlendV`). You can safely delete them unless you use them in your avatar or don't want to create your own expression menu.
+5. Enter the names of your parameters.
+    - These names should match the parameters in your animators.
+    - You can categorize your parameters by using `/`. For example, `Clothing/Hoodie` and `Clothing/Hat`.
+    - VRChat has a few [built-in parameters](https://creators.vrchat.com/avatars/animator-parameters/#parameters). You can always use them in animators - don't add them to your own expression parameters.
+6. Choose a type for each parameter.
 
-FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression Menu Icons/` .
+    - `Int` has a range of 0-255.
+    - `Float` has a range of -1.0 to 1.0.
+    - `Bool` is either true or false.
+7. Change the `Default` value to set the default value of each parameter. When the avatar is reset, the parameter will revert to this value.
+8. Enable `Saved` for parameters that shouldn't reset themselves whenever the avatar is loaded. If your avatar has customization options or settings, `Saved` will prevent them from being reset after switching to a different world or avatar.
+9. Enable `Synced` if the state of this parameter should be sent to all other players over the network.
+
+Next, you should add both assets to your avatar descriptor.
+
+![What expression parameters look like by default.](/img/avatars/animator-parameters/avatar-descriptor-params.png)
+
+10. Select your avatar descriptor and scroll down to the "Expressions" section.
+11. Change the "Menu" property to your expressions menu.
+12. Change the "Parameters" property to your expression parameters.
+
+After adding both assets to your avatar descriptor, all your expression parameters will now be available in the expression menu, allowing you to customize it.
+
+![What expression parameters look like by default.](/img/avatars/animator-parameters/menu-default.png)
+
+13. In the inspector, click "Add Control." Up to 8 controls can be added to a single menu.
+14. Choose a name and [type](/avatars/expression-menu-and-controls#types-of-controls). 
+15. You can also add icons, and submenus, or change the order of the controls here.
+  - You can find some default icons in `VRCSDK/Assets3/Expression Menu Icons/` .
 
 ### Types of Controls
 
@@ -37,7 +55,6 @@ FYI: we've included some default icons you can use in `VRCSDK/Assets3/Expression
 * **Toggle** - Sets a parameter when the toggle is on, resets when the toggle is turned off
 * **Sub-Menu** - Opens another Expression Menu.  Additionally it may also set a parameter when entered, if so that parameter is reset to zero when you exit that menu. 
   * **Important note:** You can put sub-menus into sub-menus!
-
 * **Two Axis Puppet** - Opens an axis puppet menu that controls two float parameters depending on the joystick position. The parameters are mapped to vertical and horizontal. The float values range from -1.0 to 1.0.
 * **Four Axis Puppet** - Opens an axis puppet menu that controls four float parameters depending on the joystick position.  The parameters are mapped in order, up, right, down, left. The float values are 0.0 to 1.0.
 * **Radial Puppet** - Open a radial puppet menu that controls a single float parameter, kind of like a progress bar that you can fill! The float value is 0.0 to 1.0.

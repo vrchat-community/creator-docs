@@ -60,6 +60,7 @@ Now that you have found the model you want it's time to get it into your project
 If you are importing your model from a 3D editor, please ensure you keep in mind the difference between coordinate systems. For example, [**Blender**](https://blender.org)'s default coordinate and unit system differs from Unity's. You must export FBX files from Blender and define the exporter as such:
 
 ![image](/img/avatars/creating-your-first-avatar-b066a1b-2022-05-27_11-13-48_blender.png)
+
 After you get the model in your assets select it, you'll want to ensure it has the correct settings set, under the rig tab in the inspector make sure the Animation Type is set to Humanoid.
 
 ## Step 3 - Get the model into a scene
@@ -96,6 +97,7 @@ Blend shapes/shape keys (named depending on what software you're using) modify t
 We use the Oculus Audio library to detect and set visemes. [You can see a reference to what all the visemes should look like and what sound triggers them here](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference). 
 
 VRChat can usually detect your avatar's visemes automatically. If not, you can choose visemes from the dropdown list.
+
 ![The 'Viseme Blend Shape' mode is the most common method of making your character's face move when you speak.](/img/avatars/creating-your-first-avatar-6272723-Unity_w5nQONGtcb.png)
 
 :::caution SIL shape

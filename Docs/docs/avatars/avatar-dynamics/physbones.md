@@ -1,17 +1,12 @@
----
-title: "PhysBones"
-slug: "physbones"
-hidden: false
-createdAt: "2022-03-03T00:02:11.576Z"
-updatedAt: "2023-05-15T15:19:43.138Z"
----
+# Physbones
+
 PhysBones is a set of components that lets you add secondary motion to avatars, permitting you to add motion to things like hair, tails, ears, clothing, and more! Using these well will make your avatar seem more dynamic and real.
 
 PhysBones is a replacement for Dynamic Bones. While both systems share a lot of concepts, there are some major differences with PhysBones, so not all avatars may directly translate over to VRChat’s system.
 
 An example of how to use Avatar Dynamics can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
 
-# VRCPhysBone
+## VRCPhysBone
 
 Defines a chain of bones to be animated with PhysBones. These can be used to simulate soft-body and secondary motion like hair, tails, floppy ears, and more! It has many configuration options, and can be set up in many ways.
 
@@ -21,7 +16,7 @@ Although not designed as such, PhysBones also serves as a reasonable cloth subst
 
 ![](/img/avatars/physbones-ca9ee06-2022-05-04_18-23-09_Unity.png)
 
-## Versions
+### Versions
 
 You can now select the version of VRCPhysBone component you would like to use directly on the component.  By default the latest version will be chosen when creating a new component.  Existing avatars will continue to use their previous version unless manually updated and re-uploaded.
 
@@ -35,7 +30,7 @@ Version 1.1:
 - Gravity now acts as a ratio of how far the bones will rotate when at rest.  A positive Pull is required for bones to move in the direction of gravity.
 - Stiffness now acts as a ratio which keeps a bone in it's previous orientation.
 
-## Transforms
+### Transforms
 
 `Root Transform` - The transform where this component begins. If left blank, we assume we start at this game object.  
 `Ignore Transforms` - List of ignored transforms that shouldn't be affected by this component. Ignored transforms automatically include any of that transform's children.  
@@ -69,7 +64,7 @@ You can also address this by adding "end bones" after each `ChildBone`, but that
 
 :::
 
-## Forces
+### Forces
 
 **Integration Type** defines the type of math used to simulate the motion of any transform affected by this component. Depending on which you choose, your options available in the Forces section will change. You can choose between two:
 
@@ -104,7 +99,7 @@ If set to **World (Experimental)**, `Immobile` negates only positional movement 
 
 This means that moving around in your playspace will still affect your PhysBones' movement as normal, but locomoting (pushing on your joystick to move) will have its movement dampened by the `Immobile` factor.
 
-## Limits
+### Limits
 
 Setting Limits allows you to limit the amount that a PhysBone chain can move. This is useful when you don't want hair to clip into your head, and is **far** more performant than a collider!
 
@@ -112,23 +107,23 @@ Additionally, when configuring options for Limits, a visualization of those limi
 
 `Limit Type` has several modes. All of them allow for the adjustment of `Rotation` in terms of `Pitch`, `Yaw`, and `Roll`-- alternately, along the X, Y, and Z axes respectively.
 
-### None
+#### None
 
 `None` means no limit is enabled on this bone chain. There are no configuration options.
 
-### Angle
+#### Angle
 
 ![physbones-b7abe1f-2022-04-19_11-49-26_Unity.png](/img/avatars/physbones-b7abe1f-2022-04-19_11-49-26_Unity.png)
 
 `Angle` means the bone chain will be limited to some `Max Angle`, centered on an axis as defined by `Rotation`. This is visualized as a Cone in the Scene view.
 
-### Hinge
+#### Hinge
 
 ![physbones-b7723cc-2022-04-19_11-50-04_Unity.png](/img/avatars/physbones-b7723cc-2022-04-19_11-50-04_Unity.png)
 
 `Hinge` means that the bone chain will be limited to some `Max Angle` along the plane defined by the `Rotation`. This is visualized as a slice of a circle, similar to a pizza or a pie.
 
-### Polar
+#### Polar
 
 ![physbones-824db3c-2022-04-19_11-51-22_Unity.gif](/img/avatars/physbones-824db3c-2022-04-19_11-51-22_Unity.gif)
 
@@ -136,26 +131,26 @@ Additionally, when configuring options for Limits, a visualization of those limi
 
 Don't overuse Polar limits, as they have a non-zero performance cost. Using a huge amount (handwaving: more than 64) will probably cause some issues. If your `Max Pitch` and `Max Yaw` values are similar or the same, an `Angle` limit will suffice and costs less performance-wise.
 
-## Collision
+### Collision
 
 `Radius` - Collision radius around each bone in meters. Used for both collision and grabbing.  
 `Allow Collision` - Allows collision with colliders other than the ones specified on this component. Currently the only other colliders are each player's hands and fingers as defined by their avatar.  
 `Colliders` - List of colliders that specifically collide with these bones.
 
-## Stretch & Squish
+### Stretch & Squish
 
 `Stretch Motion` - The amount motion will affect the stretch/squish of the bones.  A value of zero means bones will only stretch/squish as a result of grabbing or collisions.  
 `Max Stretch` - Maximum amount the bones can stretch.  This value is a multiple of the original bone length. [Note: Maximum Bounds](/avatars/avatar-dynamics/physbones#maximum-bounds)  
 `Max Squish` - Maximum amount the bones can shrink.  This value is a multiple of the original bone length.
 
-## Grab & Pose
+### Grab & Pose
 
 `Allow Grabbing` - Allows players to grab the bones.  
 `Allow Posing` - Allows players to pose the bones after grabbing.  
 `Grab Movement` - Controls how grabbed bones move. A value of zero results in bones using pull & spring to reach the grabbed position. A value of one results in bones immediately moving to the grabbed position.  
 `Snap To Hand` - When a bone is grabbed it will snap to the bone grabbing it.
 
-## Options
+### Options
 
 `Parameter` - Prefix used to provide multiple parameters to the avatar controller. In the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
 
@@ -175,7 +170,7 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 `Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
 
-## Important Notes, Usage Tips, etc
+### Important Notes, Usage Tips, etc
 
 **Do not have a Constraint and a PhysBone component on the same GameObject**, as this causes execution order issues.
 
@@ -189,33 +184,33 @@ You can view those limits as the Very Poor limits for Quest described in the [Mi
 
 :::
 
-### Per-Component Limitations
+#### Per-Component Limitations
 
 **A single PhysBone component cannot affect more than 256 transforms at a time.** This counts the root bone as well as all children. _This also affects Dynamic Bone conversions!_ 
 
 However, you should aim not to have that many transforms to animate in the first place. Try merging bones in the chain upward to their immediate parents. Community-created tools like Cat's Blender Plugin can do this for you.
 
-### Animating Properties
+#### Animating Properties
 
 PhysBone properties like Spring, Pull, Stiffness, etc are set at initialization and **cannot be animated**.
 
 However, if you animate a property of a PhysBone component and then animate the component off and then on, you _may_ get the behavior you want. Be aware that this is not a supported method of animating these properties, and will not be supported in future changes. (In other words, it might break. If it does, we're not going to try to fix it.)
 
-### Humanoid Bones
+#### Humanoid Bones
 
 **Do not set Humanoid bones as PhysBone Root bones.** In other words, do not set Hip, Spine, Chest, Upper Chest, Neck, Head, or any of the limb bones as Roots. This will cause major issues.
 
 Instead, duplicate the bone you want to use as root and re-parent all the children bones you want to animate to that new duplicate root. This should be done in Blender. Community-created tools like Cat's Blender Plugin can do this for you.
 
-### PhysBone Rotation
+#### PhysBone Rotation
 
 Unlike Dynamic Bones, **the root bone of a PhysBone chain is permitted to rotate.** It can't translate, though. This can have some consequences with certain setups-- try things out on your own to see how it behaves.
 
-### PhysBone AV3 Parameters
+#### PhysBone AV3 Parameters
 
 When affecting parameters, **there is no need to use Synced Parameters as defined by the `VRCExpressionParameters` object**. These parameters are already updated on both the local and remote machines, as both will be running PhysBones.
 
-### PhysBone Immobile Behavior
+#### PhysBone Immobile Behavior
 
 Dynamic Bones bases its `Inert` value from where the component is placed, not the root transform. This is probably a Dynamic Bones bug. As such, PhysBones bases its `Immobile` value from the root transform. This may affect behavior in some cases.
 
@@ -233,7 +228,7 @@ Each VRCPhysBone component has a bounding box that grows and shrinks as bones mo
 
 The bounding box only accounts for bones with collision and a radius greater than zero. In situations where you want to provide extremely long stretching, as long as bones with collision exist past the stretching point, you can avoid hitting this maximum bounds limit.
 
-# VRCPhysBoneCollider
+## VRCPhysBoneCollider
 
 Defines a collider that will affect PhysBones that are configured correctly.
 
@@ -248,7 +243,7 @@ Defines a collider that will affect PhysBones that are configured correctly.
 `Inside Bounds` - When enabled, this collider will contain bones within its bounds instead of keeping them out.  
 `Bones As Sphere` - When enabled, this collider will treat PhysBone collision radii as spheres centered on the bone's position rather than capsules running the length of the bone.
 
-## Standard Colliders
+### Standard Colliders
 
 A set of "Standard Colliders" are defined in the Avatar Descriptor, in a new section called “Colliders”. This section lets you define a number of standard colliders that exist on every avatar. These will be setup automatically if you don’t touch this, but they may also be tweaked to exactly fit your avatar. These colliders do not affect the performance rating.
 
@@ -274,7 +269,7 @@ Turning off the conversion means you will not have any interaction with avatar b
 
 **It is important to note that Dynamic Bones and PhysBones are not identical.** The in-program conversion process is not perfect, and we intend to update it more over time. However, keep in mind: the conversion process will never be perfect! The goal of the automatic conversion is to have most setups working decently well and not breaking, not to perfectly replicate behavior. _It is expected that all users will gradually transition to using PhysBones provided they want their avatars to be rendered accurately and future proof._
 
-## Manual Dynamic Bone Conversion
+### Manual Dynamic Bone Conversion
 
 You can choose to use the SDK to convert your avatar from Dynamic Bones to PhysBones. 
 
@@ -282,13 +277,13 @@ This process deletes the previous Dynamic Bone components from your avatar and c
 
 You can access this tool in the SDK by looking at the Build Control Panel, or by accessing it in the Unity menu under `VRChat SDK/Utilities/Convert DynamicBones to PhysBones`. You must select the avatar beforehand for this to work.
 
-## Unmigrated Dynamic Bone Components
+### Unmigrated Dynamic Bone Components
 
 Some features and behaviors in Dynamic Bones do not exist in PhysBones, and will not migrate.
 
 `Force` - Dynamic Bone `Gravity` and `Force` values in the X or Z directions are ignored as they have no equivalent in PhysBones.
 
-## Eventual Dynamic Bone Deprecation
+### Eventual Dynamic Bone Deprecation
 
 Dynamic Bones will eventually be completely removed from VRChat. At that time, all older avatars still using Dynamic Bones will use the automatic conversion.
 
