@@ -14,34 +14,23 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 :::
 ## VRChat
 
-- VRCAvatarDescriptor 
-- PipelineManager
-- [VRCStation](/worlds/components/vrc_station)
-- [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
-- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
-- [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
-- [VRCContactReceiver](/avatars/avatar-dynamics/contacts#VRCContactReceiver)
-- [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
+- VRCAvatarDescriptor
+- [VRCPipelineManager](/sdk/vrcpipelinemanager/)
 - [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use Constraints instead.
+- [VRCContactReceiver](/avatars/avatar-dynamics/contacts#vrccontactreceiver)
+- [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
+- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
+- [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
+- [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
+- [VRCStation](/worlds/components/vrc_station)
 
 ## Unity
 
-- [Transform](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Transform.html)
-- [Animator](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Animator.html)
-- [SkinnedMeshRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-SkinnedMeshRenderer.html)
-- [MeshFilter](https://docs.unity3d.com/2019.4/Documentation/Manual/class-MeshFilter.html)
-- [MeshRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-MeshRenderer.html)
-- [Animation](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Animation.html)
-- [ParticleSystem](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParticleSystem.html)
-- [ParticleSystemRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/PartSysRendererModule.html)
-- [TrailRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-TrailRenderer.html)
-- [LineRenderer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LineRenderer.html)
-- [Cloth](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Cloth.html)
-- [Light](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Light.html)
-- [Collider](https://docs.unity3d.com/2019.4/Documentation/Manual/CollidersOverview.html)
-- [Rigidbody](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Rigidbody.html)
-- [Joints](https://docs.unity3d.com/2019.4/Documentation/Manual/Joints.html)
-- [Camera](https://docs.unity3d.com/2019.4/Documentation/Manual/class-Camera.html)
+- [AimConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-AimConstraint.html)
+- [Animation](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Animation.html)
+- [Animator](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Animator.html)
+- [AudioSource](https://docs.unity3d.com/2022.3/Documentation/Manual/class-AudioSource.html)
+- [Camera](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Camera.html)
   - For avatars worn by the local user, Camera components are fully whitelisted.
   - For avatars worn by remote users, the following rules apply:
     - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
@@ -50,15 +39,25 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
       - Note that becoming friends with a user does not automatically reload their avatar.
     - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
     - If neither of the above is true, Camera components are removed and cannot be enabled.
-
-- [FlareLayer](https://docs.unity3d.com/2019.4/Documentation/Manual/class-FlareLayer.html)
-- [AudioSource](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AudioSource.html)
-- [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
-- [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
-- [ParentConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParentConstraint.html)
-- [PositionConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-PositionConstraint.html)
-- [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
-- [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
+- [Cloth](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Cloth.html)
+- [Collider](https://docs.unity3d.com/2022.3/Documentation/Manual/CollidersOverview.html)
+- [FlareLayer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-FlareLayer.html)
+- [Joints](https://docs.unity3d.com/2022.3/Documentation/Manual/Joints.html)
+- [Light](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Light.html)
+- [LineRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-LineRenderer.html)
+- [LookAtConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-LookAtConstraint.html)
+- [MeshFilter](https://docs.unity3d.com/2022.3/Documentation/Manual/class-MeshFilter.html)
+- [MeshRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-MeshRenderer.html)
+- [ParentConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ParentConstraint.html)
+- [ParticleSystemRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/PartSysRendererModule.html)
+- [ParticleSystem](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ParticleSystem.html)
+- [PositionConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-PositionConstraint.html)
+- [Rigidbody](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Rigidbody.html)
+- [RotationConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-RotationConstraint.html)
+- [ScaleConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ScaleConstraint.html)
+- [SkinnedMeshRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-SkinnedMeshRenderer.html)
+- [TrailRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-TrailRenderer.html)
+- [Transform](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Transform.html)
 
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
 :::caution FinalIK Components Modified
@@ -77,9 +76,9 @@ If you discover a bug, please [let us know](https://feedback.vrchat.com).
 - [Grounder](http://www.root-motion.com/finalikdox/html/page9.html)
 - [Limb IK](http://www.root-motion.com/finalikdox/html/page12.html)
 - [Rotation Limits](http://www.root-motion.com/finalikdox/html/page14.html)
-- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)
-- Twist Relaxer
 - Shoulder Rotator
+- Twist Relaxer
+- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)
 
  Using this script on a humanoid avatar will break it.
 

@@ -5,9 +5,25 @@ hidden: false
 createdAt: "2020-09-24T22:05:44.842Z"
 updatedAt: "2023-01-10T00:35:37.776Z"
 ---
-Players have two sources of audio: the voice coming through their microphone, and sounds attached to their Avatar. With Udon, you can change how a Player hears *other* players' voices and avatar sounds. For example, this graph makes a player quieter by setting their gain to 5 dB (which is lower than the default of 15 dB):
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-![player-audio-8e50220-setvoicegain.png](/img/worlds/player-audio-8e50220-setvoicegain.png)
+Players have two sources of audio: the voice coming through their microphone, and sounds attached to their Avatar. With Udon, you can change how a Player hears *other* players' voices and avatar sounds. For example, this code makes a player quieter by setting their gain to 5 dB (which is lower than the default of 15 dB):
+
+<Tabs>
+<TabItem value="graph" label="Udon Graph">
+
+![Setting the player's voice gain in Udon Graph.](/img/worlds/player-audio-8e50220-setvoicegain.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+somePlayer.SetVoiceGain(15);
+```
+
+</TabItem>
+</Tabs>
 
 Here are all the properties you can access:
 

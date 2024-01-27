@@ -5,6 +5,9 @@ hidden: false
 createdAt: "2021-01-22T01:48:13.564Z"
 updatedAt: "2021-11-12T01:23:15.713Z"
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 These nodes are useful for getting an individual Player, a group of them, or all of them.
 
 ### Networking.get LocalPlayer
@@ -27,7 +30,24 @@ Gets the actual number of Players in the instance when it is called.
 
 This is how you get all the Players in your world so you can go through them in a For Loop and apply settings, make changes, look for a particular name, etc. To use it, you *first need to create a VRCPlayerApi Array*.
 
+
+<Tabs>
+<TabItem value="graph" label="Udon Graph">
+
 ![The bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.](/img/worlds/graphgetplayers.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+var players = new VRCPlayerApi[VRCPlayerApi.GetPlayerCount()];  
+VRCPlayerApi.GetPlayers(players);
+```
+
+</TabItem>
+</Tabs>
+
+
 
 Above, you can see the bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi\[\] as a variable so you can reuse it.
 
