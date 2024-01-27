@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-05-13T17:51:06.418Z"
 updatedAt: "2021-05-18T23:37:43.783Z"
 ---
-# Tips
+## Tips
 
 Try not to sync everything; consider what you can determine from the minimal amount of information shared. For example: if an object will move on a fixed or predictable path, then its position may not need to be synchronized and instead its initial location and velocity may be sufficient.
 
@@ -17,7 +17,7 @@ Manual synchronization is intended for data that changes infrequently and where 
 **Users should not expect high speed updates with manual serialization.**
 
 If you have multiple UdonBehaviours on an object, the sync method will default to the most restrictive settings - a Manual UdonBehaviour and a Continuous one on the same object will both act as manual.
-# Data and Specs
+## Data and Specs
 Note: all specs subject to change, they will be updated here if they do. 
 
 You can see some specific information about the data used per-object in Debug View 6.

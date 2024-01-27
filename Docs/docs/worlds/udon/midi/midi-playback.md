@@ -1,10 +1,8 @@
----
-title: "Midi Playback"
-slug: "midi-playback"
-hidden: false
-createdAt: "2023-02-16T02:12:05.772Z"
-updatedAt: "2023-02-16T02:12:05.772Z"
----
+# Midi Playback
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 You can play back MIDI data along with an audio track to control anything you want in your Udon world. You can jump to the [Example Scene](#example-midiplaybackscene) to get started right away.
 
 ## Assets: MidiFile and AudioClip
@@ -57,7 +55,9 @@ This is the brains of the operation. It works similarly to an Audio Source but u
 
 ## Example: MidiPlaybackScene
 
-https://user-images.githubusercontent.com/737888/214626843-53a4c069-ea69-423a-926d-e2ce024c9819.mp4
+<video controls>
+  <source src="https://user-images.githubusercontent.com/737888/214626843-53a4c069-ea69-423a-926d-e2ce024c9819.mp4"/>
+</video>
 
 The SDK includes a simple MIDI playback example. You can load it from the menu bar under VRChat SDK > Samples > MidiPlayback.
 
@@ -95,8 +95,14 @@ If you want to use a song with more than 4 channels, you can duplicate the grids
 
 Here's a breakdown of what happens in the MidiGrid Program.
 
+
+
+<Tabs>
+<TabItem value="graph" label="Udon Graph">
+
 **Start Event:**
-![image](/img/worlds/midi-playback-214465917-450d04cc-e7ce-4551-a3cd-f4feddd124b2.png)
+
+![Start event for the midi playback example in the Udon Graph](/img/worlds/midi/midi-sample-graph-start.png)
 
 On Start, it goes through each object in the `grids` array, finds the 'Image' component on its child, and sets its `enabled` value to `false`, effectively hiding all the Images to start.
 
@@ -104,59 +110,117 @@ It also waits 1 second after loading and then calls `Play()` on the VRCMidiPlaye
 
 **Note Events:**
 
-![image](/img/worlds/midi-playback-214465984-fea32000-04c3-42f3-bf7f-cef471d2b46f.png)
+![Midi note on event for the midi playback example in the Udon Graph](/img/worlds/midi/midi-sample-graph-on.png)
 
 
 When it receives a `Midi Note On` event, it will loop through each entry in the `channels` array and check if the incoming note's channel matches one of the entries. If a match is found, that number is used as the `index` for the `grids` array to find the matching grid. The incoming note is run through `int.Remainder()` to find its index in the octave - a C will be 0, a C# will be 1, etc. This index is used to find the right child of the grid, and then set `enabled` on the 'Image' to `true`. Finally, the note's channel and note number are logged to the console. 
 
+![Midi note off event for the midi playback example in the Udon Graph](/img/worlds/midi/midi-sample-graph-off.png)
+
 When the script receives a `Midi Note Off` event, it goes through a similar process as above. To hide the 'Image' component again, it sets `enabled` to `false`.
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+using UdonSharp;  
+using UnityEngine;  
+using UnityEngine.UI;  
+using VRC.SDK3.Midi;  
+  
+[UdonBehaviourSyncMode(BehaviourSyncMode.None)]  
+public class LogoButton : UdonSharpBehaviour  
+{  
+    [SerializeField] private Transform[] grids;  
+    [SerializeField] private VRCMidiPlayer player;  
+    [SerializeField] private int[] channels;  
+      
+    private void Start()  
+    {  
+        // Disable Image components of all grid children  
+        foreach (var grid in grids)  
+        {  
+            for (var i = 0; i < grid.childCount; i++)  
+            {  
+                var child = grid.GetChild(i);  
+                var image = child.GetComponent<Image>();  
+                image.enabled = false;  
+            }  
+        }  
+  
+        SendCustomEventDelayedSeconds(nameof(_PlayAudio), 1);  
+    }  
+  
+    public void _PlayAudio()  
+    {  
+        player.Play();  
+    }  
+  
+    public override void MidiNoteOn(int channel, int number, int velocity)  
+    {  
+        UpdateGridState(channel, number, true);  
+        Debug.Log($"{channel} : {number}");  
+    }  
+  
+    public override void MidiNoteOff(int channel, int number, int velocity)  
+    {  
+        UpdateGridState(channel, number, false);  
+    }  
+  
+    private void UpdateGridState(int midiEventChannel, int midiEventNoteNumber, bool isEnabled)  
+    {  
+        // Find all grids that are mapped to the midi event's channel.  
+        for (var gridIndex = 0; gridIndex < grids.Length; gridIndex++)  
+        {  
+            var gridChannel = channels[gridIndex];  
+            if (midiEventChannel != gridChannel) continue;  
+              
+            // Enable/Disable image, quantized by chromatic 12 note scale.  
+            var child = grids[gridIndex].GetChild(midiEventNoteNumber % 12);  
+            var image = child.GetComponent<Image>();  
+            image.enabled = isEnabled;  
+        }  
+    }  
+}
+```
+
+</TabItem>
+</Tabs>
+
+
 
 ## Class: MidiData
 
 When requesting MIDI data from a VRCMidiPlayer, this is what you get. It holds an array of all tracks as well as the BPM.
 
-<dl>
-<dt>`MidiTrack[]` Tracks</dt>
-<dd>Array of MidiTracks in the file.</dd>
-<dt>`byte` Bpm</dt>
-<dd>Represents the BPM of the track.</dd>
-</dl>
+| Type         | Name         | Description                                             |
+|--------------|--------------|---------------------------------------------------------|
+| `MidiTrack[]`| Tracks       | Array of MidiTracks in the file.                        |
+| `byte`       | Bpm          | Represents the BPM of the track.                        |
 
 ## Class: MidiTrack
 
 This class simply wraps an array of MidiBlocks, and provides some handy references for note and velocity ranges discovered in the track.
-<dl>
-<dt>`MidiBlock[]` Blocks</dt>
-<dd>Array of MidiBlocks in the track.</dd>
-<dt>`byte` minNote</dt>
-<dd>The lowest note played in the track.</dd>
-<dt>`byte` maxNote</dt>
-<dd>The highest note played in the track.</dd>
-<dt>`byte` minVelocity</dt>
-<dd>The lowest velocity played in the track (besides 0).</dd>
-<dt>`byte` maxVelocity</dt>
-<dd>The highest velocity played in the track.</dd>
-</dl>
+
+| Type         | Name         | Description                                             |
+|--------------|--------------|---------------------------------------------------------|
+| `MidiBlock[]`| Blocks       | Array of MidiBlocks in the track.                       |
+| `byte`       | minNote      | The lowest note played in the track.                    |
+| `byte`       | maxNote      | The highest note played in the track.                   |
+| `byte`       | minVelocity  | The lowest velocity played in the track (besides 0).    |
+| `byte`       | maxVelocity  | The highest velocity played in the track.               |
 
 ## Class: MidiBlock
 
 A MidiBlock represents a whole Midi Note event from On to Off, and some helpful metadata.
 
-<dl>
-<dt>`byte` Note</dt>
-<dd>0-127 range number for the note played.</dd>
-<dt>`byte` Velocity</dt>
-<dd>0-127 range number for the velocity of the note played.</dd>
-<dt>`byte` Channel</dt>
-<dd>1-16 range number for the channel on which the note is played.</dd>
-<dt>`float` StartTimeMs</dt>
-<dd>The start time in Milliseconds at which the Note On event starts.</dd>
-<dt>`float` EndTimeMs</dt>
-<dd>The end time in Milliseconds at which the Note Off event triggers.</dd>
-<dt>`float` StartTimeSec</dt>
-<dd>The start time in Seconds at which the Note On event starts.</dd>
-<dt>`float` EndTimeSec</dt>
-<dd>The end time in Seconds at which the Note Off event triggers.</dd>
-<dt>`float` LengthSec</dt>
-<dd>The length in Seconds of the whole event from Note on to Note Off.</dd>
-</dl>
+| Type   | Name        | Description                                              |
+|--------|-------------|----------------------------------------------------------|
+| `byte` | Note        | 0-127 range number for the note played.                  |
+| `byte` | Velocity    | 0-127 range number for the velocity of the note played.  |
+| `byte` | Channel     | 1-16 range number for the channel on which the note is played. |
+| `float`| StartTimeMs | The start time in Milliseconds at which the Note On event starts. |
+| `float`| EndTimeMs   | The end time in Milliseconds at which the Note Off event triggers. |
+| `float`| StartTimeSec| The start time in Seconds at which the Note On event starts. |
+| `float`| EndTimeSec  | The end time in Seconds at which the Note Off event triggers. |
+| `float`| LengthSec   | The length in Seconds of the whole event from Note on to Note Off. |
