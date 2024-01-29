@@ -14,6 +14,7 @@ The following shader globals are currently available:
   - `1` - Rendering in VR handheld camera
   - `2` - Rendering in Desktop handheld camera
   - `3` - Rendering for a screenshot
+- `uint _VRChatCameraMask` - The `cullingMask` property of the active camera, available if `_VRChatCameraMode != 0`
 - `float _VRChatMirrorMode`:
   - `0` - Rendering normally, not in a mirror
   - `1` - Rendering in a mirror viewed in VR
