@@ -154,7 +154,7 @@ The Write Defaults value defaults to **on** when you create a new node, so creat
 
 All that being said, if you get into more advanced use cases and setups, it may be advantageous to use Write Defaults On.
 
-### Generic Avatars
+### Generic Avatars yo 
 
 Avatar 3.0 also supports non-humanoid generic avatars. If you want access to similar features that AV3 Humanoids have access to, you'll need to follow a few guidelines:
 
