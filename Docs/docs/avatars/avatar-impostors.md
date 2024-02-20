@@ -56,13 +56,14 @@ Impostors that are previewed in the menu may exhibit more artifacts than they wo
 
 Impostors come out pretty good by default. However, complex avatars may benefit from some customization.
 
-## VRCImpostorSettings
-
 To customize your impostor, add the "VRCImpostorSettings" component to your avatar before uploading it. Changing the settings of this component allows you to change the impostor's appearance. You can add multiple "VRCImpostorSettings" to customize different body parts.
 
 ### Resolution Scale
 
-Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture. For instance, if placed on the head bone, the head would take up more or less of the texture atlas(depending on what the number is set to), increasing or decreasing the overall texture quality. Note that this may shrink other parts of the body on the atlas if needed. 
+Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture.
+For instance, you can place this script on the head bone and change this value to make the head take up more or less of the texture atlas, increasing or decreasing the overall texture quality.
+Note that this may shrink other parts of the body on the atlas it if needs to. 
+
 
 _This is relative to the bone that VRCImpostorSettings is placed on._
 
@@ -89,6 +90,6 @@ _This is relative to the bone that VRCImpostorSettings is placed on._
 ## When is an impostor visible?
 Currently, there are only three ways to see an impostor.
 
-- Avatar Preview
-- Performance Blocking (e.g. the Avatar's performance rank is "Very Poor" but your [minimum displayed performance rank](https://docs.vrchat.com/docs/vrchat-configuration-window#minimum-displayed-performance-rank) is set to "Medium".
-- Platform Mismatch (e.g. the Avatar is uploaded for PC, but you're on a Quest and vice versa)
+- Avatar Preview (e.g. viewing the impostor on the avatar's details page)
+- Performance Blocking (e.g. the avatar's performance rank is "Very Poor" but your [minimum displayed performance rank](https://docs.vrchat.com/docs/vrchat-configuration-window#minimum-displayed-performance-rank) is set to "Medium".
+- Platform Mismatch (e.g. the avatar is uploaded for PC, but you're on a Quest and vice versa)
