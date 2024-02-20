@@ -17,7 +17,7 @@ To create your first impostor:
 
 2. Navigate to "Avatars", then "My Avatars", then the name and icon of the avatar you'd like to make an impostor of.
 
-3. Click "Generate Impostors", or, if the avatar already has an impostor that you'd like to be updated, "Regenerate Impostors".
+3. Click "Generate impostors", or, if the avatar already has an impostor that you'd like to be updated, "Regenerate impostors".
 
 4. Wait.
 
@@ -58,7 +58,8 @@ To customize, simply add the VRCImpostorSettings Script to your avatar before up
 ### Resolution Scale
 Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture. 
 
-For instance, you can place this script on the head bone and change this value to make the head take up more or less of the texture atlas, increasing or decreasing the overall texture quality. Note that this may shrink other parts of the body on the atlas it if needs to. 
+For instance, you can place this script on the head bone and change this value to make the head take up more or less of the texture atlas, increasing or decreasing the overall texture quality.
+Note that this may shrink other parts of the body on the atlas it if needs to. 
 
 _This is relative to the bone that VRCImpostorSettings is placed on._
 
@@ -84,10 +85,10 @@ _This is relative to the bone that VRCImpostorSettings is placed on._
 ## When is an impostor visible?
 Currently, there are only three ways to see an impostor:
 
-- Avatar Preview
+- Avatar Preview (e.g. viewing the impostor on the avatar's details page)
 
 - Performance Blocking (e.g. avatar is very poor but you have performance limit set to medium)
 
-- Platform Mistmatch (e.g. avatar is uploaded for PC, but you're on a Quest)
+- Platform Mismatch (e.g. avatar is uploaded for PC, but you're on a Quest)
 
 **Note: Impostor auto-generation and support for non-humanoid avatars is coming in the future!**
