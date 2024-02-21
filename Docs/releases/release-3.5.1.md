@@ -1,10 +1,9 @@
 ---
 slug: release-3-5-1
-date: 2024-01-26
+date: 2024-02-20
 title: Release 3.5.1
 authors: [momo]
 tags: [release]
-draft: false
 ---
 ## Summary
 
