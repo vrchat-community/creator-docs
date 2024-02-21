@@ -5,62 +5,67 @@ hidden: false
 ---
 
 # Impostors
-## What are Impostors
-An impostor is your avatar's body double. It's what others will see when your avatar can't load for whatever reason, like if your avatar was uploaded for PC only but your friend is using a Quest. Typically, you'd show as a fallback avatar or robot, but creating an impostor will let you keep your unique style.
+## What are Impostors?
+Impostors are avatar body doubles, allowing you to see avatars in situations where you would typically see a fallback avatar or robot. They are intended to bridge gaps between different systems/user types in VRChat. For example, if a user’s avatar was only uploaded for Windows, VRChat makes an acceptable impostor for Quest automatically. You can only generate impostors for avatars you own and have uploaded.
 
-## Creating an Impostor
-You can only generate impostors for avatars you [own and have uploaded](/avatars/creating-your-first-avatar), and impostors currently only support humanoid avatars.
+Even if you've never uploaded a cross-platform version of your avatar, or if your avatar is "performance blocked" due to its performance rank, other users will still be able to see an impostor of your avatar. Eventually, impostors will be auto-generated, but for now, you create them with a few easy steps. Once you've made an impostor, you can toggle it on and off - when it's off, your fallback avatar will be shown instead.
 
-To create your first impostor:
+## How do I create an Impostor?
+The first step to creating an impostor is to [create and upload an avatar](/avatars/creating-your-first-avatar).
 
-1. Log in to the VRChat website.
+Once you've uploaded an avatar, creating an impostor for it is easy:
 
-2. Navigate to "Avatars", then "My Avatars", then the name and icon of the avatar you'd like to make an impostor of.
+- Log in to the VRChat website.
 
-3. Click "Generate Impostors", or, if the avatar already has an impostor that you'd like to be updated, "Regenerate Impostors".
+- Navigate to the info page for the avatar you'd like to impostorize. You can do this by pressing "Avatars", then "My Avatars", then the name and icon of the one you want.
 
-4. Wait.
+- Click "Generate Impostors", or, if the avatar already has an impostor that you'd like to be updated, "Regenerate Impostors"
 
-5. Refresh the page, after some time you should now see that your avatar has impostors for Quest and PC.
+- Wait.
 
-![image](/img/avatars/impostors/generation.png)
+- Refresh the page, after some time you should now see that your avatar has impostors for Quest and PC.
 
- You can toggle impostors on and off. When off, your fallback avatar will be shown instead.
+![A screnshot of an avatar's page on vrchat.com. It allows avatar creators to (re)generate impostors and see which impostors have already been generated. You can see if impostors have been generated for PC and/or Android. You can also see if the impostor has been customized by the avatar creator.](/img/avatars/impostors/generation.png)
 
+:::note
+
+Impostors currently only support [humanoid](https://docs.unity3d.com/Manual/AvatarCreationandSetup.html) avatars. [Generic](https://docs.unity3d.com/Manual/GenericAnimations.html) avatars will be supported in the future.
+
+:::
 
 ## Previewing an Impostor
-Once you've got your impostor generated, you're probably going to be pretty excited to see how it looks!
+Once you've got your impostor generated, you're probably going to be pretty excited to see how it looks! Well, no worries, we've got you covered!
 
-1. Log into VRChat.
+Once you've logged into VRChat, open the Avatar menu, and click the avatar that you generated an impostor for.
 
-2. Open the Avatar Menu via your Main Menu.
+You should notice that the "Features" of the avatar now includes "Impostor". 
 
-3. Click the avatar that you generated an impostor for.
+![A screenshot of the "Features" section of an avatar in VRChat. It shows an "Imposter" icon, among other features.](/img/avatars/impostors/features-row.png)
 
-4. You should notice that the "Features" of the avatar now includes "Impostor". 
 
-![image](/img/avatars/impostors/features-row.png)
+You should also see a new button underneath the avatar model preview, which will allow you to switch between viewing the impostor and the normal avatar for a quick preview.
 
-You should also see a new button underneath the avatar model preview, which will allow you to switch between previewing the impostor and the normal avatar.
+![A screenshot of an avatar being previewed in the VRChat menu.](/img/avatars/impostors/preview-avatar.png)
+![A screenshot of an avatar's imposter being previewed in the VRChat menu. A toggle near the bottom has been enabled.](/img/avatars/impostors/preview-impostor.png)
 
-**Note: Impostors that are previewed in this menu may exhibit some bugs not visible to other players.**
-
-![image](/img/avatars/impostors/preview-avatar.png)
-![image](/img/avatars/impostors/preview-impostor.png)
-
-## Customizing an Impostor
-Impostors come out pretty good by default, but complex avatars may benefit from some customization using the VRChat SDK.
-
-To customize, simply add the VRCImpostorSettings Script to your avatar before uploading.
+:::note
+Impostors that are previewed in the menu may exhibit more artifacts than they would when viewed on another player.
+:::
 
 ## VRCImpostorSettings
 
-### Resolution Scale
-Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture. 
+Impostors come out pretty good by default. However, complex avatars may benefit from some customization.
 
-For instance, you can place this script on the head bone and change this value to make the head take up more or less of the texture atlas, increasing or decreasing the overall texture quality. Note that this may shrink other parts of the body on the atlas it if needs to. 
+## VRCImpostorSettings
+
+To customize your impostor, add the "VRCImpostorSettings" component to your avatar before uploading it. Changing the settings of this component allows you to change the impostor's appearance. You can add multiple "VRCImpostorSettings" to customize different body parts.
+
+### Resolution Scale
+
+Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture. For instance, if placed on the head bone, the head would take up more or less of the texture atlas(depending on what the number is set to), increasing or decreasing the overall texture quality. Note that this may shrink other parts of the body on the atlas if needed. 
 
 _This is relative to the bone that VRCImpostorSettings is placed on._
+
 
 ### Transforms To Ignore
 Ignores these transforms when capturing data for the impostor. This will hide them from the final result.
@@ -68,9 +73,9 @@ Ignores these transforms when capturing data for the impostor. This will hide th
 _This is independent of the bone that VRCImpostorSettings is placed on._
 
 ### Extra Child Transforms
-This is good for things like wings and tails, as it will tell the impostor generator to make a separate sprite for the bone this script is on.
+This is good for things like wings and tails, it will tell the Impostorizer to make a separate sprite for the bone this script is on.
 
-We don't recommend using this on smaller things like individual fingers as all sprites share a single texture sheet. Doing so would cause quality to decrease elsewhere.
+As an example of what not to do - you _could_ put one of these on each finger to turn them into independent sprites. However, since all sprites share a single texture sheet, filling it with things like fingers will cause quality to decrease elsewhere - it's a balancing act.
 
 _This is independent of the bone that VRCImpostorSettings is placed on._
 
@@ -82,12 +87,8 @@ For instance, if you'd like your wings to be a part of the upper body, you can r
 _This is relative to the bone that VRCImpostorSettings is placed on._
 
 ## When is an impostor visible?
-Currently, there are only three ways to see an impostor:
+Currently, there are only three ways to see an impostor.
 
 - Avatar Preview
-
-- Performance Blocking (e.g. avatar is very poor but you have performance limit set to medium)
-
-- Platform Mistmatch (e.g. avatar is uploaded for PC, but you're on a Quest)
-
-**Note: Impostor auto-generation and support for non-humanoid avatars is coming in the future!**
+- Performance Blocking (e.g. the Avatar's performance rank is "Very Poor" but your [minimum displayed performance rank](https://docs.vrchat.com/docs/vrchat-configuration-window#minimum-displayed-performance-rank) is set to "Medium".
+- Platform Mismatch (e.g. the Avatar is uploaded for PC, but you're on a Quest and vice versa)
