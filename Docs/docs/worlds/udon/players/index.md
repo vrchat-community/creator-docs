@@ -88,22 +88,7 @@ The [simulation time](/worlds/udon/networking/network-components) of a player.
 
 **NOT RECOMMENDED** - turns on legacy locomotion for this player.
 
-## Combat System
-The following nodes are Under Review - not working, not recommended for use. We're evaluating their usefulness and they should be ignored for now:
-* CombatGetCurrentHitpoints
-* CombatGetDestructible
-* CombatSetCurrentHitpoints
-* CombatSetDamageGraphic
-* CombatSetMaxHitpoints
-* CombatSetRespawn
-* CombatSetup
-
 ## Language
-:::note
-
-Switching Languages is not yet ready in the VRChat client, these methods will return example data until the full feature is launched. They will currently throw an exception when testing in ClientSim, as well.
-
-:::
 
 ### GetCurrentLanguage
 *string*
