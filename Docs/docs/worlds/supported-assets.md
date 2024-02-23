@@ -30,4 +30,4 @@ Do not import the `Test` folder when importing post-processing. It will cause sc
 ## [Dynamic Bone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 "Dynamic Bone applies physics to objects. With simple setup, your object will move realistically."
 
-*Works up to v1.3.0, currently supplied version on asset store may not works.
+*Works up to v1.3.0, currently supplied version on asset store may not work.
