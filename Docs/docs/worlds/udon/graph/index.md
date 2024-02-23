@@ -95,7 +95,6 @@ There are two ways to run the graphs in your scene before you upload them to VRC
 ## Running In-Editor
 You can use Unity's Play Button to run your scene directly in the editor to test out some graphs. This will work for some simple methods and logic, but the following items won't work as expected:
 * Synced Variables & Networked Events
-* The VRCPlayerAPI object - using stations, triggering Interact events, anything involving Avatars
 
 ## Running Build & Test
 Use the VRChat SDK Window to do Local Testing. This takes slightly longer as it bundles your content into an offline world and launches the actual VRChat client to give you an Avatar that can Interact with objects and VRCPlayerAPI requests.
