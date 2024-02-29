@@ -91,5 +91,5 @@ _This is relative to the bone that VRCImpostorSettings is placed on._
 Currently, there are only three ways to see an impostor.
 
 - Avatar Preview (e.g. viewing the impostor on the avatar's details page)
-- Performance Blocking (e.g. the avatar's performance rank is "Very Poor" but your [minimum displayed performance rank](https://docs.vrchat.com/docs/vrchat-configuration-window#minimum-displayed-performance-rank) is set to "Medium".
-- Platform Mismatch (e.g. the avatar is uploaded for PC, but you're on a Quest and vice versa)
+- Performance Blocking (e.g. the avatar's performance rank is "Very Poor" but your [minimum displayed performance rank](https://docs.vrchat.com/docs/vrchat-configuration-window#minimum-displayed-performance-rank) is set to "Medium").
+- Platform Mismatch (e.g. the avatar is uploaded for PC, but you're on Android or vice versa)
