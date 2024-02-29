@@ -62,7 +62,7 @@ To customize your impostor, add the "VRCImpostorSettings" component to your avat
 
 Changes the amount of space on the impostors texture atlas that is dedicated to this body part's texture.
 For instance, you can place this script on the head bone and change this value to make the head take up more or less of the texture atlas, increasing or decreasing the overall texture quality.
-Note that this may shrink other parts of the body on the atlas it if needs to. 
+Note that this may shrink other parts of the body on the atlas if needed. 
 
 
 _This is relative to the bone that VRCImpostorSettings is placed on._
