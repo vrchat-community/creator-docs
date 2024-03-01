@@ -13,6 +13,6 @@ If you've worked with the VRChat SDK in the past, your project may be using an o
 
 :::info Starting a new project?
 
-Read [Setting up the SDK](/sdk/index) to learn how to create new projects with VRChat's latest Unity SDK.
+Read [Setting up the SDK](/sdk/index.md) to learn how to create new projects with VRChat's latest Unity SDK.
 
 :::

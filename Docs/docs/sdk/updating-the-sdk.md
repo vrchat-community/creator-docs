@@ -86,4 +86,4 @@ If you're reinstalling the SDK in a project that contains a world using complex 
 
 ## Updating Unity
 
-If you are updating from a previous version of Unity, we [have a guide for updating](/sdk/upgrade/index) to our latest version we support!
+If you are updating from a previous version of Unity, we [have a guide for updating](/sdk/upgrade/index.md) to our latest version we support!
