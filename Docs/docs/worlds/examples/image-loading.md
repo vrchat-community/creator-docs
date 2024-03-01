@@ -1,6 +1,8 @@
-﻿---
-title: "Image Loading"
----
+# Image Loading
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Udon can load images from the internet and display them as UI elements or as textures on world objects. Our example world below demonstrates how the system works and how to use GitHub to host the images and captions.
 
 ## Example World
@@ -115,10 +117,16 @@ _imageDownloader = new VRCImageDownloader();
 
 If the String downloads successfully, split it up line-by-line into separate strings, and save those to a `_captions` array. If it doesn't download, log the error message.
 
-<details><summary>Caption Downloading Code</summary>
-<p>
 
-```csharp
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
+![An example of how to use image loading in the Udon Graph. The Udon Graph can't use newline characters directly, so an integer conversion to a character is used instead.](/img/worlds/string-load-graph-example.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
 private void Start()
 {
     // To receive Image and String loading events, 'this' is casted to the type needed
@@ -140,8 +148,8 @@ public override void OnStringLoadError(IVRCStringDownload result)
 }
 ```
 
-</p>
-</details>
+</TabItem>
+</Tabs>
 
 3. Try to Load the next Image. Increment the `_loadedIndex` to keep track of our place, then call `DownloadImage()` on the downloader we saved earlier.
 

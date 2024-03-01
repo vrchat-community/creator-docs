@@ -12,7 +12,7 @@ Avatar scaling allows players to change the height of their current avatar.
 
 This page documents how VRChat's avatar scaling works internally to the extent that may be useful for developing community resources around it.
 
-Read the [Avatar Events documentation](/worlds/udon/players/player-avatar-scaling) documentation or our [example script](worlds/examples/udon-example-scene/avatar-scaling-settings) to learn how to use avatar scaling with Udon. 
+Read the [Avatar Events documentation](/worlds/udon/players/player-avatar-scaling) documentation or our [example script](/worlds/examples/udon-example-scene/avatar-scaling-settings) to learn how to use avatar scaling with Udon. 
 Read the [Avatar Parameters](/avatars/animator-parameters) page for available avatar parameters related to scaling.
 
 
