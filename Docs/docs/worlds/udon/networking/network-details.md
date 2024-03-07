@@ -24,7 +24,7 @@ You can see some specific information about the data used per-object in Debug Vi
 
 Continuous sync is limited to roughly **200 bytes** per serialization.
 
-Manual sync is limited to **64,690 bytes** per serialization.
+Manual sync is limited to **64,690 bytes** (live) or **280,496 bytes** (open-beta) per serialization.
 
 Each manually-synced object is rate limited as a factor of the data size. The more it sends, the more its send rate is limited. You can call RequestSerialization as many times as you want, but it will wait until enough time has passed before calling OnPreSerialization, sending the data, and calling OnPostSerialization with the result.
 
