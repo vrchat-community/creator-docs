@@ -36,7 +36,7 @@ You can hold the Tab key to activate the mouse cursor and use the buttons on the
 ![world-debug-views-0db830e-VRChat_pZdYm9u4ox.png](/img/worlds/world-debug-views-0db830e-VRChat_pZdYm9u4ox.png)
 
 Debug menu 4 displays various stats about other users.
-* M: Whether or not the user is the master of the instance (AKA the person who has been in the instance the longest)
+* M: Whether or not the user is the [master of the instance](/worlds/udon/networking#the-instance-master)
 * L: Whether or not the user is the local player
 * VR: Whether or not the user is in VR
 * Ping: The user's ping

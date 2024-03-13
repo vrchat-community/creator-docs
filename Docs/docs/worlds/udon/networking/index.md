@@ -48,6 +48,28 @@ VRCPickup adds a Rigidbody to your GameObject if it doesn't already have one, an
 
 VRCObjectSync automatically syncs the object - sending its position, rotation, scale and some physics properties to the other players so that it looks the same to everyone. To sync other data, you need variables.
 
+### The Instance Master
+
+The instance master is the player that owns any object that never had its ownership manually set or transferred. You can check if a player is the master via [`VRCPlayerApi.isMaster`](/worlds/udon/players/#get-ismaster).
+
+Whether a player is the instance master should _not_ be used as a way to gate access to certain features of a world. For that, consider using "instance owner" instead.
+
+The master player selection follows these rules:
+
+- There will always be a valid master player in an instance.
+- The first player to enter a previously empty instance will become the initial master.
+- The master player never changes except when the current master leaves the instance.
+- When the current master leaves, a new master is chosen from the other players in the instance before `OnPlayerLeft` is called.
+- You must not rely on any particular player becoming master. The new master player will be chosen based on various criteria on the server side (platform, network conditions, etc.).
+
+These are the _only_ guarantees VRChat currently makes about network master behaviour. Any other observed behaviour is subject to change.
+
+:::note Don't rely on master if you can avoid it!
+
+It is recommended to use ownership checks for your networking logic instead of checking for instance master wherever possible.
+There are scenarios where a master player might become unresponsive for a while, and events during that time might not be executed.
+:::
+
 ## Variables
 A variable is a container for a value. UdonBehaviours run Udon Programs, and you can add variables to these programs.
 
