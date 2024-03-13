@@ -45,7 +45,7 @@ in: *VRCPlayerApi*
 
 out: *Boolean*
 
-Tells you whether the given Player is the *Master* player. This is the player who either created the instance, or the one who inherited Master status when the last Master left.
+Tells you whether the given Player is the [instance master](/worlds/udon/networking#the-instance-master).
 
 ### GetPickupInHand
 in: *VRCPlayerApi, Hand (none, left, right)*
