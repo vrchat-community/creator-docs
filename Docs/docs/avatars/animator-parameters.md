@@ -188,3 +188,21 @@ If you also have an `eyes_closed` blendshape, it'll close them when you use the 
 When using an avatar that has both Quest and PC versions uploaded, parameters are synced by their position in the parameters list and their parameter type, **not** by the names of the parameters. For a given parameter to sync between PC and Quest, it has to be in the same position in the parameter list, and have the same parameter type. 
 
 Given this, it can be a good idea to use the same Expression Parameters asset for both the PC and Quest versions of an avatar, even if one version doesn't make use of all the parameters.
+
+### Parameter Type Mismatching
+
+Besides the defined type of parameter, you can use different types in your Animator.
+When you're using a parameter in a different type than it was defined as, it will be cast to the type you're using.
+You may use this to use int parameters in BlendTree.
+
+| Expression Type | Animator Type | Behavior                                               |
+|:----------------|:--------------|:-------------------------------------------------------|
+| `int`           | `float`       | Same as implicit cast in C#                            |
+| `int`           | `bool`        | `0` is `false`, anything else is `true`                |
+| `float`         | `int`         | Rounding half to even (same as [`Mathf.Round`][round]) |
+| `float`         | `bool`        | `0.0` is `false`, anything else is `true`              |
+| `bool`          | `int`         | `true` is `1`, `false` is `0`                          |
+| `bool`          | `float`       | `true` is `1.0`, `false` is `0.0`                      |
+
+[round]: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Round.html
+
