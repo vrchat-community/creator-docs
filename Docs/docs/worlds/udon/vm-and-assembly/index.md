@@ -88,7 +88,7 @@ If it is none of these, an error occurs.
 
 :::caution
 
-It is not presently possible to specify a non-null value for `SystemType` in Udon Assembly, but it is possible in Udon Graph and UdonSharp. Similar issues exist for `SystemInt64`, `SystemUInt64`, `SystemSByte`, `SystemByte`, `SystemInt16`, `SystemUInt16`.
+It is not presently possible to specify a non-null value for `SystemType` in Udon Assembly, but it is possible in Udon Graph and UdonSharp. Similar issues exist for `SystemInt64`, `SystemUInt64`, `SystemSByte`, `SystemByte`, `SystemInt16`, `SystemUInt16`, and `SystemBoolean` (yes, it is impossible to actually _successfully_ specify `true` or `false`).
 
 These are Udon Assembly limitations. They can only be circumvented by not using Udon Assembly.
 
@@ -120,6 +120,12 @@ Custom events never take parameters (outside of whatever mechanism you define), 
 
 The actual opcodes are reasonably simple. There is the opcode name, and then for some opcodes, a parameter. This parameter can be an integer, a symbol (integer value of that symbol, i.e. heap index or code address), or a string. When it is a string, the assembler will create a hidden, unnamed variable for that string, and the actual value will be the heap index.
 
+:::caution
+
+For some reason, defining two code symbols that point to the same position is not allowed, causing an `Address aliasing detected` error.
+
+:::
+
 ## Udon Opcodes
 
 ### `NOP`
@@ -127,7 +133,7 @@ The actual opcodes are reasonably simple. There is the opcode name, and then for
 * Opcode: 0
 * Parameters: 0
 
-This opcode does nothing. There is generally no reason to use this.
+This opcode does nothing. There is generally no reason to use this, unless you get the `Address aliasing detected:` error.
 
 ### `PUSH, parameter`
 
