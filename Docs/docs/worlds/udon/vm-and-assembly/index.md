@@ -112,9 +112,11 @@ _start:
 	JUMP, 0xFFFFFFFC
 ```
 
-`.export _start` is used to export code symbols for event handlers.
+`.export _start` (an example; replace `_start` with whatever symbol you're exporting) is used to export code symbols for event handlers.
 
 Standard events start with `_` and have their parameters passed in variables, not public, which you are expected to create; this is a long list, and best explored via Udon Graph.
+
+However, importantly, the first two events that run are `_onEnable` and `_start`, in that order. There is no gap between them in this initial run. These will always run before any other event; if something attempts to bypass that, the invocation will be ignored. Note that once this 'startup sequence' has completed, `_onEnable` still maintains its original function of running whenever the component is enabled.
 
 Custom events never take parameters (outside of whatever mechanism you define), and don't start with `_`.
 
