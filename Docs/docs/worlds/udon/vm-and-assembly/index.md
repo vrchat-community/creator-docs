@@ -98,6 +98,8 @@ Floating-point numbers are always read as floats, even if the intended type is a
 
 These variables can also be marked as public, using, i.e. `.export message`, and can be marked with sync metadata, i.e. `.sync message, none`.
 
+Marking a variable with sync metadata is equivalent to the `synced` checkbox; see [Networking](../networking#variables) for details.
+
 `none` here is the interpolation mode. The interpolation modes are `none`, `linear`, and `smooth`, though not all interpolation modes are valid for all types.
 
 ### The Code Section
@@ -116,7 +118,7 @@ _start:
 
 Standard events start with `_` and have their parameters passed in variables, not public, which you are expected to create; this is a long list, and best explored via Udon Graph.
 
-However, importantly, the first two events that run are `_onEnable` and `_start`, in that order. There is no gap between them in this initial run. These will always run before any other event; if something attempts to bypass that, the invocation will be ignored. Note that once this 'startup sequence' has completed, `_onEnable` still maintains its original function of running whenever the component is enabled.
+However, importantly, the first two events that run are `_onEnable` and `_start`, in that order. There is no gap between them in this initial run, and these will always run before any other event; if something attempts to bypass that, the invocation will be ignored. See [Event Execution Order](../event-execution-order) for more details.
 
 Custom events never take parameters (outside of whatever mechanism you define), and don't start with `_`.
 
@@ -244,4 +246,15 @@ There are some particularly weird cases:
 * Generics list their type parameters as "Udon types" such as `T` in their signature, and have invisible `SystemType` parameters.
 * `VRCUdonUdonBehaviour` becomes `VRCUdonCommonInterfacesIUdonEventReceiver`. (`Array` is still appended if relevant, etc.)
 
-There is presently no complete reference of externs. However, UdonSharp provides a way to explore what's available, using the Class Exposure Tree.
+_There is presently no complete reference of externs._
+
+However:
+
+* [The UdonSharp documentation has an API reference for the VRChat methods.](https://udonsharp.docs.vrchat.com/vrchat-api)
+* UdonSharp provides a way to explore what's available, using the [Class Exposure Tree](https://udonsharp.docs.vrchat.com/class-exposure-tree).
+
+:::caution
+
+The ability to copy member names in the UdonSharp Class Exposure Tree is broken at this time. This is a good way to quickly scout what's available, but you'll still need to actually get the extern name using Udon Graph.
+
+:::
