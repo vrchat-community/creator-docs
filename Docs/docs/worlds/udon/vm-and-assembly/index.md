@@ -1,9 +1,10 @@
----
-title: "The Udon VM and Udon Assembly"
-sidebar_position: 1
-createdAt: "2024-03-18T10:00:00.000Z"
-updatedAt: "2024-03-18T10:00:00.000Z"
----
+# The Udon VM and Udon Assembly
+
+:::info
+This page was written by a member of the VRChat community. Thank you for your contribution!
+The VRChat team can't guarantee the validity of the information on this page. If you would like to suggest changes, go to the bottom of this page and click "Edit this page."
+:::
+
 ## Overview of the Udon VM
 
 The Udon VM is a bytecode interpreter designed to run compiled Udon Graph programs.
