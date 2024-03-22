@@ -222,7 +222,7 @@ Pops two heap indexes. The value from the second heap index popped (aka the firs
 
 :::caution
 
-Relying on the exact format of extern signatures is less than advisible, outside of relying on specific externs that are already known to exist.
+Relying on the exact format of extern signatures is less than advisable, outside of relying on specific externs that are already known to exist.
 
 The format can be weird at the best of times and inferring attributes such as 'is this a static method' from a signature is impossible, not to mention the specifics of generics.
 
