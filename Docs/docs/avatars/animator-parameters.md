@@ -189,20 +189,19 @@ When using an avatar that has both Quest and PC versions uploaded, parameters ar
 
 Given this, it can be a good idea to use the same Expression Parameters asset for both the PC and Quest versions of an avatar, even if one version doesn't make use of all the parameters.
 
-### Parameter Type Mismatching
+### Mismatched Parameter Type Conversion
 
-Besides the defined type of parameter, you can use different types in your Animator.
-When you're using a parameter in a different type than it was defined as, it will be cast to the type you're using.
-You may use this to use int parameters in BlendTree.
+When you choose a [parameter type](/avatars/animator-parameters/#parameter-types) in your [animator](https://docs.unity3d.com/Manual/AnimationParameters.html), it's a good idea to choose the same type as the [built-in parameter](/avatars/animator-parameters/#parameters) or [custom parameter](/avatars/expression-menu-and-controls/#creating-an-expression-menu) you're trying to use. For example: If you use VRChat's built-in `AFK` parameter in your animator,  you should choose the type `bool`.
 
-| Expression Type | Animator Type | Behavior                                               |
-|:----------------|:--------------|:-------------------------------------------------------|
-| `int`           | `float`       | Same as implicit cast in C#                            |
-| `int`           | `bool`        | `0` is `false`, anything else is `true`                |
-| `float`         | `int`         | Rounding half to even (same as [`Mathf.Round`][round]) |
-| `float`         | `bool`        | `0.0` is `false`, anything else is `true`              |
-| `bool`          | `int`         | `true` is `1`, `false` is `0`                          |
-| `bool`          | `float`       | `true` is `1.0`, `false` is `0.0`                      |
+However, you *can* choose a mismatched type for your parameters. VRChat will try to convert the parameter's value to the type used by the animator. For example, if you choose the type `float` for your `AFK` parameter, VRChat will automatically set `AFK` to `1.0` or `0.0` instead of `true` or `false`. This also allows you to use the `AFK` parameter in your Animator's [Blend Tree](https://docs.unity3d.com/Manual/class-BlendTree.html).
 
-[round]: https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Mathf.Round.html
+The table below shows how converting a mismatched parameter changes it. 
 
+| Expression Type | Animator Type |                                                    Conversion Behavior                                                   | Example        |
+|:---------------:|:-------------:|:-------------------------------------------------------------------------------------------------------------:|----------------|
+| `int`           | `float`       | Directly converted to `float`.                                                                                | `1` → `1.0`    |
+| `int`           | `bool`        | `0` is `false`, anything else is `true`                                                                       | `1` → `true`   |
+| `float`         | `int`         | Rounded to closest `int` (same as [`Mathf.Round`](https://docs.unity3d.com/ScriptReference/Mathf.Round.html)) | `0.5` → `1`    |
+| `float`         | `bool`        | `0.0` is `false`, anything else is `true`                                                                     | `0.5` → `true` |
+| `bool`          | `int`         | `true` is `1`, `false` is `0`                                                                                 | `true` → `1`   |
+| `bool`          | `float`       | `true` is `1.0`, `false` is `0.0`                                                                             | `true` → `1.0` |
