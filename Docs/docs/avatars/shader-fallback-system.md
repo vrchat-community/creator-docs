@@ -199,3 +199,6 @@ If no matches are found in the shader name, a Standard material is used.
 An attempt is made to transfer parameters named "_MainTex" and "_Color" to the fallback shader. If neither parameter is matched, a Matcap shader is provided with the color set to the user's rank color.
 
 All this is highly subject to change as we tune the shader fallback system.
+
+## Previewing Fallback Shaders for your Avatar
+It's possible to force your own avatar to use fallback shaders locally via a toggle in the Action Menu. To activate this option, open your Action Menu and choose "Options" -> "Avatar" -> "Fallback Shaders". Once toggled on, any avatar you use will display locally with fallback shaders. The option will stay active when switching avatars but will reset on world change. This option does not affect how others view your avatar.

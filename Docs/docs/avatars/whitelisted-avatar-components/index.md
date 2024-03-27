@@ -21,6 +21,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
 - [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
 - [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
+- [VRCHeadChop](/avatars/whitelisted-avatar-components/vrc_headchop)
 - [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
 - [VRCStation](/worlds/components/vrc_station)
 
