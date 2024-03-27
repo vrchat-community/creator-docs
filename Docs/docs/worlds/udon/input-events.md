@@ -36,10 +36,14 @@ Moving the mouse up and down on Desktop, typically the right stick up and down o
 
 ### InputLookHorizontal
 Moving the mouse left and right on Desktop, turning left and right using the right stick/pad without Comfort Turning on VR controllers, typically the right stick left and right on gamepad controllers.
-# UdonInputEventArgs
+
+## UdonInputEventArgs
 This object is included in every input event, and holds additional data for the event which may be useful. We may add more data into this object in the future, let us know if you think of something handy you'd like to reference here. For now, it includes:
 
 **UdonInputEventType**: BUTTON or AXIS
 **boolValue**: True/False if this is a button event, false if it's an axis event (default value)
 **floatValue**: Number between -1 and 1 for an axis event, 0 if it's a button event (default value)
 **handType**: LEFT or RIGHT. Included for keyboard and mouse users as well (mouse is RIGHT, keyboard is LEFT).
+
+## OnInputMethodChanged
+This event fires whenever a user switches input methods, like from Keyboard to Mouse, Controller, or Touchscreen. It includes a [VRCInputMethod](/worlds/udon/graph/type-nodes/#vrcsdkbasevrcinputmethod) enum as its parameter.

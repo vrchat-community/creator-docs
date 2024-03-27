@@ -35,11 +35,12 @@ Publishing your world will make it immediately available to all users that opt-i
 ## Performance Tips
 
 - **Aim for at least 45 FPS with a single VR user at the spawn.** If you do not have VR, have a friend test the world for you. Having a badly performing world will mean people don't spend time in your world, and you probably won't make it out of Labs very easily.
-- **Don't use shaders that are not VR-compatible.**Shaders must support single-pass stereo rendering. If you are looking for a good water shader, [check out Silent's Water Shader](https://gitlab.com/s-ilent/clear-water).
+- **Don't use shaders that are not VR-compatible.** Shaders must support single-pass stereo rendering. If you are looking for a good water shader, [check out Silent's Water Shader](https://gitlab.com/s-ilent/clear-water).
 - **Use mobile shaders on Android.** Most shaders will _work_ on Android but usually take more processing power to render. Stick to mobile shaders if you can.
+- **Use a super-sampled shader for in-world UI.** This is a performance friendly way of achieving crisp-looking text in VR. The SDK will suggest switching over if it finds any UI materials using Unity's built-in UI shader.
 - **Be very careful with post-processing effects.** Some screen-space post-processing effects cause major issues for VR users. In particular, be careful with chromatic aberration, screen-space reflection, and screen-space ambient occlusion. 
 - **Bad things happen when you put more than 2 video players in a room.** It usually impacts performance negatively.
-- **Bad things also happen when you put more than 1 mirror in your room.**  Mirrors severely affect a world's performance. If you have 1 mirror in the room, make sure to set it to toggle.
+- **Bad things also happen when you put more than 1 mirror in your room.** Mirrors severely affect a world's performance. If you have 1 mirror in the room, make sure to set it to toggle.
 - **We** **_STRONGLY SUGGEST_** **not enabling mirrors by default.** Add a toggle that can be activated by players or activated automatically when players enter a certain area.
 - **Do NOT overuse real-time lights.** They are **very** expensive and can kill your world's performance if used incorrectly.
 - **Baking your lighting is exceedingly important and can give you huge performance gains.** You can learn more about light baking in [Unity's documentation](https://docs.unity3d.com/Manual/progressive-lightmapper.html) or  [Android's development guide](https://developer.android.com/games/optimize/lighting-for-mobile-games-with-unity#lightmap-baking).

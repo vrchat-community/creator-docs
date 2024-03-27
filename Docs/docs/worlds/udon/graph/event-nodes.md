@@ -158,6 +158,10 @@ Triggered when a player first enters the world on a Mobile Device, and whenever 
 * `type` - `ScreenUpdateType` - only `OrientationChanged` for now, can be expanded in the future.
 * `orientation` - `VRCOrientation` - the orientation of the player's device, as a `VRC.SDKBase.Platform.VRCOrientation` enum, which is `Landscape` or `Portrait`.
 * `resolution` - `Vector2` - the resolution of the player's device, as a `Vector2` struct. 
+### OnInputMethodChanged
+`Event_OnInputMethodChanged`
+Outputs: `inputMethod` - `VRC.SDKBase.VRCInputMethod`
+Fired when a player uses a different input method - Keyboard, Mouse, Controller, etc.
 
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.

@@ -63,6 +63,43 @@ Result from the string load events.
 
 * **Get Error (`string`)**: The error message for `OnStringLoadError`.
 * **Get ErrorCode (`int`)**: The HTTP Error code for `OnStringLoadError`.
-* **Get Response (`string`)**: The string that was downloaded.
+* **Get ResultBytes (`byte[]`)**: The raw data that was downloaded as a byte array. You can use `System.Text.Encoding` on this to decode a string in a custom format. Accessing this property will return a copy of the data.
+* **Get Result (`string`)**: The string that was downloaded, decoded via the UTF8 standard.
 * **Get UdonBehaviour (`UdonBehaviour`)**: The UdonBehaviour to which events are sent.
 * **Get Url (`VRCUrl`)**: Gets the URL from which the download was attempted.
+
+### Example Code
+
+```csharp title="String Download Example, Custom Text Encoding"
+using System.Text;
+using UdonSharp;
+using UnityEngine;
+using VRC.SDK3.StringLoading;
+using VRC.SDKBase;
+using VRC.Udon.Common.Interfaces;
+
+public class ResultBytesExample : UdonSharpBehaviour
+{
+    [SerializeField]
+    private VRCUrl url;
+
+    void Start()
+    {
+        VRCStringDownloader.LoadUrl(url, (IUdonEventReceiver)this);
+    }
+
+    public override void OnStringLoadSuccess(IVRCStringDownload result)
+    {
+        string resultAsUTF8 = result.Result;
+        byte[] resultAsBytes = result.ResultBytes;
+        string resultAsASCII = Encoding.ASCII.GetString(resultAsBytes);
+        Debug.Log($"UTF8: {resultAsUTF8}");
+        Debug.Log($"ASCII: {resultAsASCII}");
+    }
+
+    public override void OnStringLoadError(IVRCStringDownload result)
+    {
+        Debug.LogError($"Error loading string: {result.ErrorCode} - {result.Error}");
+    }
+}
+```

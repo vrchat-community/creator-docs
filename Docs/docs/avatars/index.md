@@ -138,21 +138,31 @@ When "Locomotion Animations" is off, locomoting in FBT will NOT play the walking
 
 ### Write Defaults on States
 
-[Write Defaults](https://docs.unity3d.com/2019.4/Documentation/Manual/class-State.html) is an option available on states in Animators in Unity. 
+[Write Defaults](https://docs.unity3d.com/2019.4/Documentation/Manual/class-State.html) is an option available for each state in an Animator Controller.
 
-Write Defaults "on" will write back the default values of **all animated properties** (_on a Controller-wide basis!_) that are not animated in that particular state. This can cause some very strange interactions if you don't plan for it.
+Write Defaults "Off" states will set only the animated property values, and those values will not change unless animated again. This can make it easier to keep track of what properties are animated through any specific layer.
 
-This feature was added by Unity during the migration to version 5.0. This was done so pre-existing assets and project that relied on this write-all-default-properties behavior didn't break. 
+Write Defaults "On" states will set default values for properties that are not being animated. This means that if you are animating a property value to "1" from "0", the value will revert to the default "0" upon exiting the state, unless the subsequent state continues to animate the value as "1".
 
-Normally, when you're working with other game developers on a project, you agree on a standard. In VRChat, we're _all_ game developers, so we must set the standard here. 
+Regardless of which option you choose, **we recommend keeping your usage of Write Defaults consistent across the entire avatar** - in other words, have Write Defaults "Off" for all states, or "On" for all states. Having both "Off" and "On" states on an avatar is known to cause unexpected property values to be set. This is commonly known as "Mixed Write Defaults". The SDK will give you a warning if it detects that you've done this.
 
-VRChat does not use "Write Defaults" in our built-in and example animators. This means that only the actual properties that are in animations get played by any one animation node. We recommend that creators also follow this workflow, as it is easier to keep track of what properties will be animated through any specific layer, and it also lines up with the intended use of Unity as a whole.
+VRChat uses Write Defaults set to "Off" in its built-in and example animators.
 
-The Write Defaults value defaults to **on** when you create a new node, so creators must be aware they will have to uncheck this value. If you want to use Write Defaults, you will have to keep track of all the possible properties that may be written by a node with this enabled.
+If you decide to set Write Defaults to "Off":
+- Write Defaults is set to **On** for newly created states, so you'll need to change this value for each new state you create.
+- You may need to add animations to initialize or reset properties with specific values.
+- It's recommended that for all states in a layer, you explicitly animate every property affected by that layer.
+- Each state should have an animation clip ("motion" in the state options) that animates at least one property. It does not have to be a valid property reference. States with "None" motion or entirely empty clips will behave as if Write Defaults is "On".
 
-**We recommend keeping Write Defaults off and explicitly animating any parameter that needs to be set by the animation.** Note that this may require adding "reset" animations or adding properties to the animation to "initialize" transforms in a specific orientation.
+:::caution Additive layers and direct blend trees
 
-All that being said, if you get into more advanced use cases and setups, it may be advantageous to use Write Defaults On.
+VRChat's avatar creator community recommends setting Write Defaults to "On" for:
+- Layers that use additive blending
+- Blend trees that use direct blending
+
+You should do this even if you are using "Off" for the rest of the avatar. The SDK will avoid generating warnings about mixed Write Defaults settings in these cases.
+
+:::
 
 ### Generic Avatars
 
