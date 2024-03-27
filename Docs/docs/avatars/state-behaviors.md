@@ -180,3 +180,36 @@ If the state is exited mid-blend duration, the playable layer is immediately set
 | Goal Weight    | The Playable layer weight to target after blending is complete.                                                 |
 | Blend Duration | The amount of time to take to blend to the layer. Zero is instant.                                              |
 | Debug String   | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging.             |
+
+## Animator Play Audio
+
+![image](/img/avatars/state-behaviors-animatorplayaudio.png)
+
+The "Animator Play Audio" behavior modifies an AudioSource when transitioning to the animation state. It can change the audio clip, pitch, or loop value, and it can play the AudioSource.
+
+The relative path of the AudioSource (i.e. `Armature/Hips/Spine/`) must be entered into the "Source Path" property. This property can be filled out automatically by selecting an audio source component. If the audio source is on the root of the avatar, "Source Path" should be blank.
+
+
+The "Playback order" property does not guarantee that audio clips are played in the same order for all players. For example, the "Random" setting may choose a different clip for each player. If you want to guarantee that all players hear the same clip, use multiple animation states or change "Playback Order" to "Parameter" in conjunction with a synced animator parameter. 
+
+"Animator Play Audio" can be added to states inside a sub-state machine. However, adding it to the sub-state machine itself is not recommended. The state behavior will be applied for every state transition in the sub-state machine, which may cause unintended interactions with other state behaviors.
+
+| Property Name | Purpose |
+| ---- | ---- |
+| Source Path | The path to the AudioSource relative to the avatar's root transform.<br/>If the AudioSource is not found when transitioning to this state for the first time, AnimatorPlayAudio will be disabled. |
+| Playback Order | Determines which audio clip is chosen when transitioning to this state.<br/>• Random: Chooses a random clip. (Default)<br/>• Unique Random: Chooses a random audio clip, but not the same clip twice in a row.<br/>• Roundabout: Chooses the first clip, then the second, and so on. After the last clip, the first clip is chosen again.<br/>• Parameter: Chooses a clip based on an ["int" type avatar parameter](/avatars/animator-parameters#parameter-types). For example, if the parameter is 0, the first clip is chosen. The parameter must be defined in the avatar's Expressions Parameters. If the parameter cannot be found, the first clip is chosen instead. |
+| Clips | A list of AudioClips that can be applied to the AudioSource when transitioning to this state. |
+| Random Volume | The random volume that is applied to the AudioSource when transitioning to this state. Clamped from 0 to 1.<br/>• Min: The minimum random volume. (Default: 1)<br/>• Max: The maximum random volume. (Default: 1) |
+| Random Pitch | The random pitch that is applied to the AudioSource when transitioning to this state. Clamped from -3 to 3.<br/>• Min: The minimum random pitch. (Default: 1)<br/>• Max: The maximum random pitch. (Default: 1) |
+| Loop | Whether the AudioSource's looping should be set enabled or disabled when transitioning to this state. |
+| On Enter | Whether to start or stop the AudioSource when transitioning into this state. Executed before "On Exit".<br/>🗹 Stop Audio Source (Default: Enabled)<br/>🗹 Play Audio Source (Default: Enabled) |
+| On Exit | Whether to start or stop the AudioSource when transitioning into this state. Executed before "On Enter".<br/>☐ Stop Audio Source (Default: Disabled)<br/>☐ Play Audio Source (Default: Disabled) |
+| Play On Enter Delay In Seconds | The delay before "Play On Enter" plays a clip, if enabled. Clamped from 0 to 60 seconds. (Default: 0 seconds) |
+
+Each audio setting has an additional property. By default, it's set to "Apply If Stopped". This prevents the setting from being applied if the audio source has not finished playing its previous clip and "Stop Audio Source On Enter" is disabled.
+
+| Setting name     | On Enter |
+|------------------|------------------------------------------------------------------------------------------- |
+| Always Apply     | The setting is applied to the audio source, even if it is currently playing a clip.               |
+| Apply If Stopped | The setting is applied to the audio source unless it's already playing a clip. (Default)   |
+| Never Apply      | The setting is unused and greyed out in the inspector.                                     |
