@@ -1,80 +1,140 @@
 ---
-title: "Creating Your First Avatar"
-slug: "creating-your-first-avatar"
-hidden: false
-createdAt: "2017-09-10T16:36:41.979Z"
-updatedAt: "2023-03-15T23:26:32.023Z"
 sidebar_position: -1
 ---
-## Requirement: Set up the SDK first!
-Before getting started, ensure you have a [Unity project with the SDK set up](/sdk).
+# Creating Your First Avatar
 
-After setting up the SDK, check out our example **example avatar**. Open your avatar project and go to
-'VRChat SDK > Samples > Avatar Dynamics Robot Avatar.'
+VRChat has tens of millions of avatars, and anyone can create them! This page explains how you can create your first VRChat avatar. There are two ways to create an avatar:
 
-![The example avatar can help you understand what a complete VRChat avatar project might look like.](/img/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
+- You can use an [avatar creation tool](https://hello.vrchat.com/avatar-systems) to create simple avatars without Unity.
+- You can use [Unity](https://unity.com/) and the [VRChat Software Development Kit (SDK)](https://creators.vrchat.com/sdk/) to upload a custom avatar.
 
-:::note Need help?
+## Requirements
 
-Making your first avatar can be challenging. If you get stuck, here's where you can get help:
-- Read our documentation (you're doing it!) 
-- Visit our [official forum](https://ask.vrchat.com/)
-- Join our [Discord server](https://discord.com/invite/vrchat)
+To upload a custom avatar with Unity and the VRChat SDK, you must meet the following requirements:
+
+- You must have an account on [VRChat.com](https://vrchat.com/).
+  - If you're playing on a Steam or Meta account, you'll need to [link your account first](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-platform-account-through-Steam-Meta-Pico-or-Viveport-into-a-VRChat-account).
+- Your VRChat account must have a [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) of "New User" or higher.
+  - If you're new to VRChat, you'll receive an email once you're allowed to upload avatars.
+
+:::tip Need help?
+
+If you get stuck or need help,  here's where you can get help:
+- Browse VRChat's [official documentation](https://creators.vrchat.com/). 
+- Visit VRChat's [official forum](https://ask.vrchat.com/) or [Discord server](https://discord.com/invite/vrchat) and ask the community.
 
 :::
-## Step 0 - Create a model!
-Although most users choose to find a model instead (see step 1), it is TOTALLY possible to create an avatar model from scratch. You can use any 3D software you like, as long as it supports exporting an FBX with an armature! Blender and Maya are very common choices.
 
-Let's be completely clear: For people who have never modeled in 3D before, this is the beginning of a long journey. Learning how to 3D model is complex, as is learning how to rig and texture. Creating a rigged character combines _all of those skills_!
+## Step 1 - Choose a 3D model
 
-If you choose to create your model, we suggest starting with something simple. Even if you don't look as flashy as pre-made models, it is _your_ model, and you can do whatever you'd like with it.
+Maybe you already have a 3D model that you want to use as an avatar - or you might be downloading a 3D model for the first time. Here are a few ways you can get started:
+
+### Option 1: Use an avatar creation tool
+Instead of finding or creating a 3D model, you can try using an avatar creation tool:
+
+- The [VRChat Avatar Systems](https://hello.vrchat.com/avatar-systems) page lists several beginner-friendly avatar creation tools.
+ 	- These tools are similar to customizing your character in a video game.
+ 	- These tools do not require the VRChat SDK! If you use them, you can skip all other steps on this page.
+        - Any VRChat user can use these tools. You do not need the ["New User" trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank).
+- [VRoid Studio](https://vroid.com/en/studio) is an anime-theme character creator for creating VTuber-style models.
+	- Characters have hundreds of customization sliders and can be hand-painted.
+	- For some examples of what it can do, check out the [VRoid subreddit](https://www.reddit.com/r/VRoid/).
+	- It's also available on [Steam](https://store.steampowered.com/app/1486350/VRoid_Studio_v1263/).
+	- ⚠VRoid Studio outputs avatars in the **.vrm** format, which isn't natively supported by Unity!
+		- If you'd like to import a VRoid Studio model directly for use in VRChat, you may want to look into the community-created [VRMtoVRChat converter](https://github.com/esperecyan/VRMConverterForVRChat) for .vrm avatars. Be sure to [read the documentation for this plugin](https://www.store.vket.com/ec/items/122/detail/) if you use it.
+
+### Option 2: Use VRChat's example avatar
+
+If you want to learn more about the VRChat SDK before choosing a model, [try the SDK's example avatar](/avatars/creating-your-first-avatar#try-vrchats-example-avatar). You can always come back and try your own 3D model later.
+
+### Option 3: Find a model
+
+There are many stores on the internet where you can download free or paid VRChat avatars.
+
+Some stores sell 3D models that can be used in VRChat or in other applications. These avatars are great for learning about the VRChat SDK and creating your own VRChat avatar.
+
+- [100 avatars](https://www.100avatars.com/) is a free collection of hundreds of avatars. They're simple and easy to import into the VRChat SDK. 
+- The [Unity Asset Store](https://assetstore.unity.com/) has free and paid 3D models. They're easy to import into Unity and usually compatible with the VRChat SDK, but they may include assets or scripts that won't work.
+
+Some stores sell avatars that are already prepared for VRChat. They may allow you to skip some steps when setting up the avatar in Unity but might also include advanced features that aren't covered in this article. They are suitable if you want a cool-looking avatar and care less about learning how to create your own. 
+
+- [BOOTH](https://booth.pm/en/items?tags%5B%5D=VRChat) is a Japanese store for VRChat avatars. It's the largest store for anime-style avatars, but you can also find other types of avatars there.
+- [Gumroad](https://gumroad.com/discover) is more popular among Western creators and focuses on anime-style and furry avatars.
+
+When you look for a model, try to keep the following things in mind:
+- If you decide to get your model outside of an asset store, ensure the model is fully "rigged" by the author.
+	- A "rigged" model has a skeleton that allows it to move. Creating a rig can be very difficult, but tools like [Mixamo](https://www.mixamo.com/) and [Rigify](https://docs.blender.org/manual/en/latest/addons/rigging/rigify/index.html) can do it automatically.
+	- You should also check that the model is in [a format compatible with Unity](https://docs.unity3d.com/Manual/3D-formats.html), such as `.fbx`.
+- Ensure that you have a license to use the model in VRChat.
+	- Most asset stores display their license on the 3D model's store page.
+	- Using them without a license is a violation of the model author's rights and the [VRChat Terms of Service](https://hello.vrchat.com/legal). 
+- Ensure that the model that you're using is [below 20,000 for VRChat on Meta Quest](/avatars/avatar-performance-ranking-system#android-limits) and [below 70,000 triangles on PC](/avatars/avatar-performance-ranking-system#pc-limits).
+	- Uploading an avatar with an excessive triangle count can cause performance issues.
+	- On PC, you can upload models above this limit, but the avatar will be ranked as having "Very Poor" performance, which means that fewer players will see it.
+
+### Option 4: Create a model
+
+While most users choose to find a model as a starting point, anyone can create an avatar model from scratch. You can use any 3D software you like, as long as it supports exporting an FBX with an armature. [Blender](https://www.blender.org/) is free and a very common choice.
+
+If you've never modeled in 3D before, this might be the beginning of a long journey. Learning how to model, rig, and texture a 3D model is very complex. Creating a VRChat avatar combines _all of those skills_!
+
+If you choose to create your model, we suggest starting with something very simple. Even if you don't look as flashy as pre-made models, it is _your_ model, and you can do whatever you'd like with it.
 
 To get you started, here's a VRChat-centric tutorial one of our community members has created:
 - [Rainhet's Blender 3D Virtual Avatar Tutorial 2022](https://www.youtube.com/watch?v=OKWsUAIsgpg&list=PL2EEbgwoJzdsC9wfKA2ZO2kAf4HDqC8a8&index=1) - Rainhet's tutorial is long-form, and she explains everything thoroughly as she works through it.
 - [Rainhet's 3D Avatar Class](https://www.youtube.com/watch?v=w-yhjgnhaNw) - An older version of Rainhet's tutorial series. Also has a [10-minute version](https://www.youtube.com/watch?v=in9rNze4FD4) that gives you a big-picture view of the process.
 
-If you have a tutorial you'd like to suggest, please submit it to our docs via the '[Edit this Page](https://github.com/vrchat-community/creator-docs/edit/main/Docs/docs/avatars/creating-your-first-avatar.md)' feature!
+import FeedbackButton from "@site/src/components/FeedbackButton";
 
-## Step 0.5 - Use an avatar creator!
-You can also try using an avatar creator! There are several out there of varying complexity.
+If you have a tutorial you'd like to suggest, please suggest it by clicking the <FeedbackButton /> button.
 
-### I basically want an RPG character creator, then click upload
-[VRChat Avatar Systems Page](https://hello.vrchat.com/avatar-systems) - We list several easy-to-use creators on this page. It's kept up to date.
+## Step 2 - Set up the VRChat SDK
 
-### OK, give me some sliders and the ability to paint things on
-You may want to look into [VRoid Studio](https://vroid.com/en/studio), which is also available on Steam. It is an anime-themed character creator intended primarily to create VTuber-style models, but it is very flexible! For some examples of what it can do, check out the [VRoid subreddit](https://www.reddit.com/r/VRoid/).
-:::note A note about VRoid Studio
+Congratulations on choosing or building a model! Before you continue, you'll need to set up the [VRChat Creator Companion](https://vcc.docs.vrchat.com/). It will help you install [Unity](https://unity.com/) and create projects with the [VRChat SDK](/sdk). Watch the video below to get started!
 
-VRoid Studio outputs avatars in the **.vrm** format, which isn't natively supported by Unity! If you'd like to import a VRoid Studio model directly for use in VRchat, you may want to look into the community-created [VRMtoVRChat converter](https://github.com/esperecyan/VRMConverterForVRChat) for .vrm avatars. Be sure to [read the documentation for this plugin](https://www.store.vket.com/ec/items/122/detail/) if you use it.
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/0u1g0TYoJsU" title="VRChat Creator Companion" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+</div>
+
+Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After setting creating your Unity project, you're ready to continue!
+
+:::tip New to Unity?
+
+Visit [Unity Learn](https://learn.unity.com/) for free tutorials on how to use Unity.
+
 :::
-## Step 1 - Find a model
-Arguably the most important part, you must find a 3D model to be used as your avatar. As this is your first avatar we recommend getting one from the [Unity Asset Store](https://assetstore.unity.com/) as they usually come fully rigged meaning you don't have to do anything special to get it uploaded. If you decide to get your model outside of the asset store, ensure the model is fully rigged and is in a format Unity accepts.
 
-**Ensure that you obtain a license to use the model that you wish to use.** Artists put hundreds of hours into their models. Using them without a license is a violation of the VRChat Terms of Service as well as a violation of the model author's rights.
+### Try VRChat's example avatar
 
-Ensure that the model that you're using is below 70,000 triangles (20,000 for VRChat on Meta Quest). On PC, you can upload models above this amount, but the avatar will be automatically marked as "Very Poor" performance, as excessive polygon count can cause performance problems.
+Before you import your own 3D model into Unity, you can try using VRChat's example avatar instead. This allows you to learn how to upload an avatar without worrying about problems related to your 3D model.
 
-## Step 2 - Get the model into your project
-Now that you have found the model you want it's time to get it into your project. If you're getting it from the asset store, then you can download and directly import it into your project. If you got the model from elsewhere, then you need to import it and any related textures into your 'Assets' folder.
+Open your avatar project and go to 'VRChat SDK > Samples > Avatar Dynamics Robot Avatar.'
+
+![The example avatar can help you understand what a complete VRChat avatar project might look like.](/img/avatars/creating-your-first-avatar-3dfc191-Unity_YrUFLEWWDe.png)
+
+If the example avatar loaded successfully, you can skip to [step 6](/avatars/creating-your-first-avatar#step-6---going-to-the-build-tab--checking-if-the-avatar-is-ok). If you'd rather import your own avatar, continue with step 3 below.
+
+## Step 3 - Get the model into your project
+Now that you've set up the VRChat SDK, it's time to import your model into your project. If you're getting it from an asset store, then you can download and directly import it into your project. If you got the model from elsewhere, then you need to import it and any related textures into your 'Assets' folder.
 
 If you are importing your model from a 3D editor, please ensure you keep in mind the difference between coordinate systems. For example, [**Blender**](https://blender.org)'s default coordinate and unit system differs from Unity's. You must export FBX files from Blender and define the exporter as such:
 
 ![image](/img/avatars/creating-your-first-avatar-b066a1b-2022-05-27_11-13-48_blender.png)
 
-After you get the model in your assets select it, you'll want to ensure it has the correct settings set, under the rig tab in the inspector make sure the Animation Type is set to Humanoid.
+After you get the model in your assets, select it, you'll want to ensure it has the correct settings in the rig tab in the inspector. Make sure the Animation Type is set to Humanoid.
 
-## Step 3 - Get the model into a scene
-With the model in your assets and with the correct settings on it you will next want to put it into a scene To do so, either drag it into your Hierarchy or into the scene. We recommend having one scene per avatar and placing it at 0, 0, 0. If the avatar isn't standing up straight, rotate it so it is. Also, ensure the avatar isn't really small or bigger than 5x5x5m, you can use a default unity cube which is 1x1x1m to compare.
+## Step 4 - Get the model into a scene
+Now that you have the model in your Assets folder, with the correct settings applied, you need to put it into a scene. To do so, either drag it into your [Hierarchy](https://docs.unity3d.com/Manual/Hierarchy.html) or directly into the Scene View window. We recommend having one scene per avatar and placing it at the coordinates (0, 0, 0). If needed, rotate the avatar so it is standing up straight, and ensure that its size is what you expect. You can add a Cube to your scene to compare - the cube will be 1 meter on each side and your Avatar will best function between about 0.5-5m tall. The average person is around 1.65 meters tall.
 :::caution Avatar Optimization
 
-It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks awry. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
+It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks wrong. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
 :::
-## Step 4 - Adding an Avatar Descriptor 
-After doing so, we now want to add a 'VRC Avatar Descriptor' component and then set up the settings for it.
+## Step 5 - Adding an Avatar Descriptor 
+The next step is to add a 'VRC Avatar Descriptor' component and prepare its settings.
 1. Select the avatar in your hierarchy.
 2. Click 'Add Component' in the inspector.
 3. Search for the 'VRC Avatar Descriptor' component and add it.
-4. Customize its settings, explained below.
+4. Customize its settings, as explained below.
 
 ![Add a `VRC Avatar Descriptor` to get started with your avatar.](/img/avatars/creating-your-first-avatar-fd027ea-Unity_qH7NJfAzzn.png)
 ### View position
@@ -117,8 +177,8 @@ If your avatar only uses a single blend shape to animate its mouth, configure it
 ##### Viseme Parameter Only
 If you're an advanced creator, you can use this mode to control how your avatar reacts to speech with VRChat's built-in [Animator Parameters](/avatars/animator-parameters).
 
-## Step 5 - Going to the build tab / Checking if the avatar is ok
-Next, we'll want to check that everything is good in the build window, to do that you'll need to open `VRChat SDK > Show Control Panel`, within you should see the avatar's GameObject mentioned with a Build & Publish button below it. In between you will see settings, content tags, an 'Overall performance' rank, errors, and warnings.
+## Step 6 - Going to the build tab / Checking if the avatar is ok
+Next, we'll want to check that everything is good in the build window. To do that, you'll need to use the menu item `VRChat SDK > Show Control Panel`, which will open up the VRChat SDK Control panel. After signing in, switch to the "Builder" tab to see the avatar's GameObject mentioned with a Build & Publish button below it. In between you will see settings, content tags, an 'Overall performance' rank, errors, and warnings.
 
 ![The VRChat SDK build panel.](/img/avatars/build-panel-avatars-2023.png)
 
@@ -128,23 +188,26 @@ Simply follow the steps in VRChat's SDK build panel:
 - Choose your avatar's visibility. Private avatars can can't be cloned or used by other VRChat users.
 - Select a thumbnail image. You can select an image or use a capture from your Unity scene.
 - Read the 'Validations' section. It contains many useful errors and warnings. For example, the SDK may warn you about your avatar having too many polygons, which you can fix by optimizing mesh(es). If you're unable to optimize the mesh, you may need to go back and choose another model.
-- When you're ready, continue with building your avatar
+- When you're ready, continue building your avatar
 
-## Step 6 - Building and uploading the avatar!
+## Step 7 - Building and uploading the avatar!
 Now everything is ready. Press the "Build & Publish" button, and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).
 
 After uploading your avatar, it should be available in VRChat. You can also see your avatar in  `VRChat SDK > Show Control Panel > Content Manager`.
 
 You can also test your avatar without uploading it. To do this, click "Build & Test" instead. Your avatar will appear in the "Other" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
 
-## Step 7 - Enjoy your avatar!
+## Step 8 - Enjoy your avatar!
 
 Congratulations on creating your first avatar! We hope everything went smoothly. If you need any help, consider visiting our [Ask Forum](https://ask.vrchat.com/) or our [Discord server](https://discord.com/invite/vrchat).
 
 Creating and uploading VRChat avatars can be fun and creatively fulfilling. If you'd like to improve your avatar creation skills, take a look at the rest of our [Avatars documentation](https://creators.vrchat.com/avatars/).
 
-Why not learn more about:
-- [Optimizing your avatar?](/avatars/avatar-optimizing-tips)
-- [VRChat's performance ranking system?](/avatars/avatar-performance-ranking-system)
-- [Avatar Dynamics?](/avatars/avatar-dynamics/) 
-- [Creating your first World?](/worlds/creating-your-first-world)
+## Learn more
+
+If you'd like to become better at avatar creation, check out these pages:
+- [Quest Content Optimization](/platforms/android/quest-content-optimization) - Learn how to create avatars that work well on Android and Quest.
+- [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Learn general advice on creating optimized PC or Android avatars.
+- [VRChat's performance ranking system?](/avatars/avatar-performance-ranking-system) - Learn why certain avatars are visible or hidden to other players by default.
+- [Avatar Dynamics](/avatars/avatar-dynamics/) - Learn how to create physics-driven interactions on your avatar. 
+
