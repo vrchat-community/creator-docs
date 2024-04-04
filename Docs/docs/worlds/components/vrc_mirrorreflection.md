@@ -5,7 +5,9 @@ hidden: false
 createdAt: "2017-07-06T06:10:45.478Z"
 updatedAt: "2022-08-17T20:23:01.162Z"
 ---
-Used for mirrors. An example can be found in the [SDK Prefabs](/worlds/sdk-prefabs#vrcmirror).
+This component can be used to create a mirror in your VRChat world.
+
+It requires a [mesh renderer component](https://docs.unity3d.com/Manual/class-MeshRenderer.html) on the same game object. It writes to the `_MainTex` value of the mesh renderer's first material. You can find an example in the [SDK prefabs](/worlds/sdk-prefabs#vrcmirror) called `VRCMirror.prefab`.
 
 | Parameter | Description |
 | :-- | :-- |
@@ -18,3 +20,7 @@ Used for mirrors. An example can be found in the [SDK Prefabs](/worlds/sdk-prefa
 | Camera Clear Flags     | Specifies the CameraClearFlags that the mirror will use to clear the background before rendering. The default "From Reference Camera" will use the same flags as the camera rendering the mirror plane.                                                                                                         |
 | Custom Skybox          | If "Camera Clear Flags" is set to "Custom Skybox," this skybox will be shown in the mirror. If "Custom Skybox" mode is selected but nothing is provided, the background will be black.                                                                                                                                 |
 | Custom Clear Color     | If "Camera Clear Flags" is set to "Solid Color," this color will be used as the background. Note that the alpha channel will be respected, so you can use this to clear alpha and use it in a custom shader (e.g., for cutout-style mirrors).                                                                 |
+Mirrors can drastically reduce the framerate of your VRChat world. To avoid this, try the following:
+- Keep mirrors off by default. Enable them automatically when users get near, or allow users to enable them manually.
+- Don't reflect every layer, or allow users to choose which layers to reflect. ("High quality" and "low quality" mirrors.)
+- If your users still experience performance issue, reduce the mirror resolution.

@@ -45,6 +45,7 @@ The layer weight will remain until some other state runs this State Behavior aga
 ## Animator Locomotion Control
 
 ![state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png](/img/avatars/state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png)
+
 The Animator Locomotion Control allows you to disable locomotion in a given state of an animator. The Locomotion state will remain until some other state runs this State Behavior again and changes it.
 
 In Desktop mode, this disables translational movement, and restricts rotational (view) movement to the vertical axis. In VR, this disables translational and rotational controller movement and restricts half-body IK (full-body IK is unaffected). In both modes, the player's capsule is frozen in place.
