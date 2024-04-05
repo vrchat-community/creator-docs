@@ -9,6 +9,7 @@ updatedAt: "2023-02-25T17:04:17.127Z"
 The Udon Node Graph is the default interface for creation of Udon programs. This section goes over how to use it. If you want to dive right into examples, take a look at the [Udon Example Scene](/worlds/examples/udon-example-scene).
 
 You can open up the Udon Graph window using the Menu Item under **VRChatSDK > Udon Graph**, or by clicking the **Open Udon Graph** button on an UdonBehaviour Component.
+
 ![The Udon Window](/img/worlds/index-a1d7f43-open-graph.png)
 
 :::caution Minimap
