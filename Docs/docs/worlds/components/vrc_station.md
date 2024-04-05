@@ -51,11 +51,15 @@ The default `VRCChair` prefab included in the SDK can be used on avatars to let 
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
 ![image](/img/worlds/vrc_station-0adc923-av-station-fix.png)
-**Do not animate or disable the toggle in the red box. Only animate the toggles in the green boxes.** Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
+**The red box needs to be enabled upon upload. If it is disabled upon upload, the Station will not work!**
 
-Attempting to work around this by enabling/disabling a parent object of the chair will also cause problems. You must explicitly animate the objects highlighted above in green.
+Toggling the red box will kick out the player currently sitting in the station. Toggling the green boxes will only stop new people from sitting in the station. Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
 
-Keep in mind that having avatar stations on by default (as in, having the green toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
+Keep in mind that having avatar stations on by default (as in, having the toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
+
+There are two other restrictions upon upload, namely:
+- The Entry and Exit point may at max be 2 meters apart.
+- There may at max be 6 stations on the avatar. Any more will be disabled.
 
 ## Parameters and Options
 
