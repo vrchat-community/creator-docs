@@ -138,7 +138,12 @@ The next step is to add a 'VRC Avatar Descriptor' component and prepare its sett
 
 ![Add a `VRC Avatar Descriptor` to get started with your avatar.](/img/avatars/creating-your-first-avatar-fd027ea-Unity_qH7NJfAzzn.png)
 ### View position
-First, you'll want to set the view position. This will be where your camera will be positioned in VRChat. You can see a visual representation of it as a small white sphere in the scene. If your avatar has a head, then the best position for the view is between the eyes. If it doesn't have a head, place it wherever you think it's appropriate.
+First, you'll want to set the view position. This will be where your camera will be positioned in VRChat. You can see a visual representation of it as a small white sphere in the scene.
+
+If your avatar has a head, place the view position between the avatar's eyes. If your avatar's head is unusually large, its feet may lift off the ground when looking up and down. To avoid this, place the view position closer to where a regular-sized head would be.
+
+If your avatar doesn't have a head, place the view position wherever you think it's appropriate.
+
 ![Use the Avatar Descriptor to configure your avatar for VRChat. Make sure to adjust the view position!](/img/avatars/creating-your-first-avatar-5afcbf1-Unity_lsTjP8qDqO.png)
 ### Lip sync mode
 When you talk, you can make your avatar's mouth (or anything else) react automatically.  Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. There are five modes to choose from:

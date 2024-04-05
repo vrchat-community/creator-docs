@@ -1,10 +1,5 @@
----
-title: "Input Events"
-slug: "input-events"
-hidden: false
-createdAt: "2021-03-06T00:42:21.796Z"
-updatedAt: "2021-04-30T05:46:19.513Z"
----
+# Input Events
+
 You can read the input of a Player's controller in a unified way across all platforms by using Udon Input Events. These events will work correctly even when the player has remapped their controls. 
 
 There are currently two types of events - Button and Axis, which include boolean and float values. Each event also holds a special [UdonInputEventArgs ](/worlds/udon/input-events#UdonInputEventArgs) object.
@@ -40,10 +35,17 @@ Moving the mouse left and right on Desktop, turning left and right using the rig
 ## UdonInputEventArgs
 This object is included in every input event, and holds additional data for the event which may be useful. We may add more data into this object in the future, let us know if you think of something handy you'd like to reference here. For now, it includes:
 
-**UdonInputEventType**: BUTTON or AXIS
-**boolValue**: True/False if this is a button event, false if it's an axis event (default value)
-**floatValue**: Number between -1 and 1 for an axis event, 0 if it's a button event (default value)
-**handType**: LEFT or RIGHT. Included for keyboard and mouse users as well (mouse is RIGHT, keyboard is LEFT).
+- **UdonInputEventType**: BUTTON or AXIS
+- **boolValue**: True/False if this is a button event, false if it's an axis event (default value)
+- **floatValue**: Number between -1 and 1 for an axis event, 0 if it's a button event (default value)
+- **handType**: LEFT or RIGHT. Included for keyboard and mouse users as well (mouse is RIGHT, keyboard is LEFT).
 
 ## OnInputMethodChanged
 This event fires whenever a user switches input methods, like from Keyboard to Mouse, Controller, or Touchscreen. It includes a [VRCInputMethod](/worlds/udon/graph/type-nodes/#vrcsdkbasevrcinputmethod) enum as its parameter.
+
+:::note Ambiguous Vive input names 
+
+- `VRCInputMethod.Vive` is a Vive controller running through SteamVR.
+- `VRCInputMethod.ViveXr` is a Vive XR Elite Controller running via OpenXR.
+
+:::

@@ -197,11 +197,11 @@ However, you *can* choose a mismatched type for your parameters. VRChat will try
 
 The table below shows how converting a mismatched parameter changes it. 
 
-| Source Type | Animator Type |                                              Conversion Behavior                                              | Example                               |
-|:-----------:|:-------------:|:-------------------------------------------------------------------------------------------------------------:|---------------------------------------|
-| `int`       | `float`       | Directly converted to `float`.                                                                                | `1` → `1.0`                           |
-| `int`       | `bool`        | `0` is `false`, anything else is `true`                                                                       | `1` → `true`                          |
-| `float`     | `int`         | Rounded to closest `int` (same as [`Mathf.Round`](https://docs.unity3d.com/ScriptReference/Mathf.Round.html)) | `0.5` → `0`, `0.6` → `1`, `1.5` → `2` |
-| `float`     | `bool`        | `0.0` is `false`, anything else is `true`                                                                     | `0.5` → `true`                        |
-| `bool`      | `int`         | `true` is `1`, `false` is `0`                                                                                 | `true` → `1`                          |
-| `bool`      | `float`       | `true` is `1.0`, `false` is `0.0`                                                                             | `true` → `1.0`                        |
+| Source Type | Animator Type |                                              Conversion Behavior                                              | Example        |
+|:-----------:|:-------------:|:-------------------------------------------------------------------------------------------------------------:|----------------|
+| `int`       | `float`       | Directly converted to `float`.                                                                                | `1` → `1.0`    |
+| `int`       | `bool`        | `0` is `false`, anything else is `true`                                                                       | `1` → `true`   |
+| `float`     | `int`         | Rounded to closest `int` (same as [`Mathf.Round`](https://docs.unity3d.com/ScriptReference/Mathf.Round.html)) | `0.5` → `1`    |
+| `float`     | `bool`        | `0.0` is `false`, anything else is `true`                                                                     | `0.5` → `true` |
+| `bool`      | `int`         | `true` is `1`, `false` is `0`                                                                                 | `true` → `1`   |
+| `bool`      | `float`       | `true` is `1.0`, `false` is `0.0`                                                                             | `true` → `1.0` |

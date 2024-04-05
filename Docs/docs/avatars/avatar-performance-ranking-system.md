@@ -1,10 +1,5 @@
----
-title: "Performance Ranks"
-slug: "avatar-performance-ranking-system"
-hidden: false
-createdAt: "2018-12-13T04:25:32.791Z"
-updatedAt: "2023-03-10T00:59:33.636Z"
----
+# Performance Ranks
+
 The Avatar Performance Ranking System allows you to see how much a user's avatar is affecting performance via analysis of the components on that user's avatar. You can also use it on yourself to see how performant your avatar is.
 
 This system is provided to inform users what is likely the most performance-heavy components on their avatars, and offer basic advice on what to look into when optimizing their avatar.
