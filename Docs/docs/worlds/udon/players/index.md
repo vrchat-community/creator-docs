@@ -21,6 +21,7 @@ This page includes info on using some general nodes. Since there are so many thi
 *VRCPlayerApi, Boolean*
 
 Before you try to get or set anything on a Player, check whether IsValid returns true. If a player has left since you saved a reference to them, this will return False. For easier use on the graph, search for the generic "IsValid" method which works for any Object, since it gives you separate flows for True and False.
+
 ![index-59fc2c8-player-isvalid.png](/img/worlds/index-59fc2c8-player-isvalid.png)
 
 ### EnablePickups
@@ -86,16 +87,16 @@ The [simulation time](/worlds/udon/networking/network-components) of a player.
 ### UseLegacyLocomotion
 *VRCPlayerApi*
 
-**NOT RECOMMENDED** - turns on legacy locomotion for this player.
+**NOT RECOMMENDED** - Turns on legacy locomotion for this player, mimicking how players moved in VRChat's deprecated SDK2. After enabling legacy locomotion, it stays enabled until the user leaves your world.
 
 ## Language
 
 ### GetCurrentLanguage
 *string*
 
-Gets the selected language of the local user.
+Gets the selected language of the local user. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.)
 
 ### GetAvailableLanguages
 *string[]*
 
-Gets all available languages a player can select.
+Gets all available languages a player can select in VRChat's settings. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.)

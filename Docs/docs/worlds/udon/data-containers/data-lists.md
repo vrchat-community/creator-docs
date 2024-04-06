@@ -11,6 +11,8 @@ Data Lists store [Data Tokens](/worlds/udon/data-containers/data-tokens) by inde
 
 Data Lists can be serialized to/from JSON strings using [VRCJSON](/worlds/udon/data-containers/vrcjson). This is the current recommended method of syncing Data Lists over the network.
 
+If you are using UdonSharp, include the `using VRC.SDK3.Data;` directive to use data lists.
+
 ## Properties
 
 | Property | Result                                                                                                                                                                                 |

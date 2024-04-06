@@ -231,7 +231,7 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 
 ## RequestSerialization
 
-This node is used in Manual Sync mode to flag the variables on the target UdonBehaviour for Serialization during the next Network Tick, which does not happen every frame. This node works will with the OnPreSerialization Event node. You trigger "RequestSerialization" and then the OnPreSerialization event will trigger during the next Network Tick. At that point, you can update any variables to the values you would like to be synced.
+This node is used in Manual Sync mode to flag the variables on the target UdonBehaviour for Serialization during the next Network Tick, which does not happen every frame. This node works well with the OnPreSerialization Event node. You trigger "RequestSerialization" and then the OnPreSerialization event will trigger during the next Network Tick. At that point, you can update any variables to the values you would like to be synced.
 :::note Variable Sync
 
 You can sync variables and arrays of variables of the following types:

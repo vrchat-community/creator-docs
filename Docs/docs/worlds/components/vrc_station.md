@@ -63,16 +63,15 @@ There are two other restrictions upon upload:
 
 ## Parameters and Options
 
-| Parameter                    | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Player Mobility              | Should the player be able to move, options include:                                                      |
-|                              | - Mobile: Allow users to move when seated in station                                                    |
-|                              | - Immobilize: Prevents user from moving                                                                 |
-|                              | - Immobilize For Vehicle: Same as Immobilized but optimized for moving stations                        |
-| Can Use Station From Station | If the user can switch stations when sitting in a station                                                |
-| Animation Controller (optional) | Used to override normal seating animations with a custom one.                                           |
-| Disable Station Exit         | If the user cannot exit the station by usual means, use triggers to unseat the user                      |
-| Seated                       | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
-| Station Enter Player Location | Transform used to define where the user should be transported to when seated                             |
-| Station Exit Player Location  | Transform used to define where the user should be transported to when they are unseated                  |
-| Controls Object              | This is used for having a station where you can control an object, such as vehicles.                     |
+| Parameter | Description |  
+| - | - |  
+| Player Mobility                 | Whether players are allowed to walk around while using the station. |  
+|                                 | - Mobile: Allows players to move when seated in the station. |  
+|                                 | - Immobilize: Prevents user from moving and moves them to "Station Enter Location." |  
+|                                 | - Immobilize For Vehicle: Same as "Immobilize" but optimized for moving stations.  |  
+| Can Use Station From Station    | Whether the players can switch stations when sitting in a station.  |  
+| Animation Controller (optional) | Overrides the "Sitting" playable layer in the avatar controller. |  
+| Disable Station Exit            | Prevents the player from exiting the station by moving or jumping.<br />Use the `ExitStation` node to remove the player from the station. |  
+| Seated                          | Whether the player's avatar will sit or stand when using the station.<br />This affects the "Seated" parameter of the avatar’s playable layers. |  
+| Station Enter Player Location   | Transform that the player is be moved to when they enter the station. |  
+| Station Exit Player Location    | Transform that the player is be moved to when they exit the station. |

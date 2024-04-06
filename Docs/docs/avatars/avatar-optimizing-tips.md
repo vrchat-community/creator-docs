@@ -1,10 +1,5 @@
----
-title: "Avatar Optimization Tips"
-slug: "avatar-optimizing-tips"
-hidden: false
-createdAt: "2017-09-23T03:26:49.590Z"
-updatedAt: "2023-03-10T15:12:26.161Z"
----
+# Avatar Optimization Tips
+
 :::caution
 
 **This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.
@@ -20,6 +15,12 @@ Any recommended numbers or limits in this document are subject to change at any 
 Community-created tools like [Cats Blender Plugin](https://github.com/michaeldegroot/cats-blender-plugin) (MIT license) allow users to very easily optimize their models and assist with common VRChat avatar problems. We strongly recommend using tools like this! It makes your job easier, and improves performance for all.
 
 As a sidenote, the SDK's Build Control panel provides numbers of components on avatars to help with optimization.
+
+## Optimize your content for Android/Quest
+
+When developing content for Android, please keep the [Content Limitations](/platforms/android/quest-content-limitations) in mind! For example, avatars don't have access to all shaders and avatar components.
+
+In addition, you should [optimize your content for Android](/platforms/android/quest-content-optimization). This improves your avatar's [performance rank](/avatars/avatar-performance-ranking-system) and allows more players to see your avatar.
 
 ## Do not use Dynamic Bones!
 Dynamic Bones is a Unity Asset that you can purchase that allows you to define bones on your avatar's rig to move around as if they were hanging. You can also define static forces like gravity which can make hair fall more realistically. 
