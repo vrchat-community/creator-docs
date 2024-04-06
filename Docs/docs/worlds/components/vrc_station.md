@@ -51,15 +51,15 @@ The default `VRCChair` prefab included in the SDK can be used on avatars to let 
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
 ![image](/img/worlds/vrc_station-0adc923-av-station-fix.png)
-**The red box needs to be enabled upon upload. If it is disabled upon upload, the Station will not work!**
+**The red box (in the screenshot above) needs to be enabled upon upload. If it is disabled upon upload, the station will not work!**
 
-Toggling the red box will kick out the player currently sitting in the station. Toggling the green boxes will only stop new people from sitting in the station. Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
+Toggling the red box will remove any player currently sitting in the station. Toggling the green boxes will only stop new players from sitting in the station. Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
 
-Keep in mind that having avatar stations on by default (as in, having the toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
+Keep in mind that users can disable animations with the [Safety system](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system). If an avatar station is on by default (as in, having the toggles on by default), the stations remain active, even if the wearer has used an animation to turn them off.
 
-There are two other restrictions upon upload, namely:
-- The Entry and Exit point may at max be 2 meters apart.
-- There may at max be 6 stations on the avatar. Any more will be disabled.
+There are two other restrictions upon upload:
+- The Entry and Exit points must not be more than 2 meters apart.
+- There can be up to 6 stations on the avatar. Any more will be disabled.
 
 ## Parameters and Options
 
