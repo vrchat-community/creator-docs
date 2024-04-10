@@ -23,7 +23,6 @@ const config = {
       'data-domain': 'creators.vrchat.com'
     },
   ],
-
   presets: [
     [
       'classic',
@@ -77,6 +76,7 @@ const config = {
         items: [
           {to: 'worlds', label: 'Worlds', position: 'left'},
           {to: 'avatars', label: 'Avatars', position: 'left'},
+          {to: 'economy', label: 'Creator Economy', position: 'left'},
           {to: 'releases', label: 'Releases', position: 'left'},
           {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp', position: 'right'},
           {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion', position: 'right'},
@@ -91,6 +91,7 @@ const config = {
             items: [
               {to: 'worlds', label: 'Worlds'},
               {to: 'avatars', label: 'Avatars'},
+              {to: 'economy', label: 'Creator Economy'},
             ],
           },
           {
