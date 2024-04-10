@@ -11,7 +11,7 @@ Floating Overhead Buy Indicator is a prefab that spawns an indicator over a play
 ![FloatingPrefab](/img/economy/examples/BuyIndicator-FloatingPrefab.png "Shows what a Floating Obj looks like over a players head.")
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/f04de6aac27a57f08e7e9b3180630b0f245a8a08.unitypackage).
+1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/44b4e129593cff2c69c2809e0e432bec7390c271.unitypackage).
 2. Make sure your project is using the World SDK `3.5.0`or newer.
 3. Import the Unity package into your project.
 

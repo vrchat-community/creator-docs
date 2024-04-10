@@ -9,7 +9,7 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 Subscribers In Instance is a prefab that lists the subscribers or non-subscribers who are currently in the instance via a text console.
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/c9190317e42a3b79b647252e521495009ae79e70.unitypackage).
+1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/437a711b7800ff57f4a931f792aec104a447225e.unitypackage).
 2. Make sure your project is using the World SDK `3.5.0`or newer.
 3. Import the Unity package into your project.
 

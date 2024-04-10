@@ -6,7 +6,7 @@ sidebar_position: 1
 OpenGroupPage is a prefab that makes it easier for users to access purchasable CE listings. Use it to create buttons that open group pages or specific listings.
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/b9892641f181ea9b05c355f7ced5b0c0ccd5a693.unitypackage).
+1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/c659160083f6a0f3448e7a3f6936289aaade5c9b.unitypackage).
 2. Make sure your project is using the World SDK `3.5.0`or newer.
 3. Import the Unity package into your project.
 4. Drag your chosen prefab into your scene. The options are:

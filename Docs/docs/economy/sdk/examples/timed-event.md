@@ -17,7 +17,7 @@ You can read more about Udon events [here](https://creators.vrchat.com/worlds/ud
 </div>
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/5f40157158e3debc0b436f1ab902d06c0a257080.unitypackage).
+1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/b1547cd3c689c256299f802b3a19c8bbc9da8613.unitypackage).
 2. Make sure your project is using the World SDK `3.5.0`or newer.
 3. Import the Unity package into your project.
 
