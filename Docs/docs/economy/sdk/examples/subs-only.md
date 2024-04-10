@@ -9,7 +9,7 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 Subscribers Only Area is a prefab that sets up an area where only subscribers can enter or non subscribers cannot leave from. Use this to create exclusive areas, events, and experiences in your world.
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/e49a50b7b30cf0b850c002bd415a05807ab52cbd.unitypackage).
+1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/277cc7e138047d7c34451d52123607fc9970dbd4.unitypackage).
 2. Make sure your project is using the World SDK `3.5.0`or newer.
 3. Import the Unity package into your project.
 
