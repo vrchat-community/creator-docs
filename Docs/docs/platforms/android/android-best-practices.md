@@ -16,7 +16,7 @@ VRChat is available on Android as an open beta.
 
 It’s always a good idea to publish your world on PC and all other platforms supported by VRChat.
 
-Any worlds uploaded to Android are available on the Oculus Quest and Android mobile devices. If you’ve previously published a Quest version of your world, it’ll be available on phones and tablets as well!
+Any worlds uploaded to Android are available on Oculus Quest and Android mobile devices. If you’ve previously published a Quest version of your world, it’ll be available on phones and tablets as well!
 
 To learn how to upload your world to Android, please refer to our [cross-platform setup documentation](https://creators.vrchat.com/platforms/android/cross-platform-setup).
 
