@@ -9,15 +9,14 @@ Making your VRChat worlds cross-platform is a great way of allowing more players
 However, mobile players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
 :::info
 
-VRChat is not available on Android _yet_.
-It is scheduled to release later this year.
+VRChat is available on Android as an open beta.
 
 :::
 ## 1. Publish Your VRChat World to Android
 
 It’s always a good idea to publish your world on PC and all other platforms supported by VRChat.
 
-Any worlds uploaded to Android are available on the Oculus Quest 2 and Android mobile devices. If you’ve previously published a Quest version of your world, it’ll be available on phones and tablets as well!
+Any worlds uploaded to Android are available on the Oculus Quest and Android mobile devices. If you’ve previously published a Quest version of your world, it’ll be available on phones and tablets as well!
 
 To learn how to upload your world to Android, please refer to our [cross-platform setup documentation](https://creators.vrchat.com/platforms/android/cross-platform-setup).
 
@@ -53,15 +52,23 @@ Here’s how it works:
 
 If the local player is on Android, but not in VR, that mean that they’re playing on an Android phone or tablet.
 
+You can also used [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect input method directly.
+```
+public bool IsUsingPhoneOrTablet()
+{
+    return InputManager.GetLastUsedInputMethod() == VRCInputMethod.Touch;
+}
+```
+
 We’re working on a way to easily detect platforms like this for both Udon Graph and UdonSharp.
 
 ## 3. Optimize Your World for Android
 
 Android devices are usually less powerful than PCs. Read our [Quest Content Optimization guide](https://creators.vrchat.com/platforms/android/quest-content-optimization/) to optimize your world’s performance.
 
-Good news: If your world runs OK on the Quest 2, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
+Good news: If your world runs OK on the Quest, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
 
-You should still ensure that Quest 2 players have an acceptable frame rate.
+You should still ensure that Quest players have an acceptable frame rate.
 
 ## 4. Test Your World on Android
 
