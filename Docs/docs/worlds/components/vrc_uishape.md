@@ -32,6 +32,7 @@ Make Unity's UI interactable in VRChat. Requires a Unity [UICanvas](https://docs
 * **Make sure that interact-able elements are not covered by invisible elements.** This often happens when a text box overlaps and covers a button. There's a few solutions: You can rearrange the button so it is on top (lower in the hierarchy), you can resize the text so that it does not cover the button, or you can set the text's `raycast target` to `false`.
 * **Make sure that the UI you are trying to interact with has an image with `Raycast Target` enabled.** This is auto-generated if you create UI elements with the right-click menu in the hierarchy.
 * **Make sure that the canvas has the `Graphic Raycaster` and `Canvas Scaler` components.** These are auto-generated if you create the canvas with the right-click menu in the hierarchy.
+* **Make sure that you are looking at the canvas from the correct side. The Z-forward axis of the canvas should be facing _away_ from you.
 
 ### If the UI is responsive but does not do what you expect it to do:
 
