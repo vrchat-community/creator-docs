@@ -9,7 +9,7 @@ Making your VRChat worlds cross-platform is a great way of allowing more players
 However, mobile players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
 :::info
 
-VRChat is available on Android as an open beta.
+VRChat is available on Android as an [open beta](https://play.google.com/store/apps/details?id=com.vrchat.mobile.playstore).
 
 :::
 ## 1. Publish Your VRChat World to Android
@@ -32,7 +32,16 @@ For example: Existing tools like [EasyQuestSwitch](https://vcc.docs.vrchat.com/v
 
 When an Android player joins your world, you may want to tweak certain aspects of it. Players on an Android mobile device won’t have access to VR controllers, just like VR players won’t have access to a touchscreen.
 
-You can use [UdonSharp](https://udonsharp.docs.vrchat.com/) to detect Android players in your world:
+You can use [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect the input method directly.
+
+```
+public bool IsUsingPhoneOrTablet()
+{
+    return InputManager.GetLastUsedInputMethod() == VRCInputMethod.Touch;
+}
+```
+
+Alternatively, you can also use [UdonSharp](https://udonsharp.docs.vrchat.com/) to detect Android players in your world.
 
 ```
 public bool IsUsingPhoneOrTablet()
@@ -50,23 +59,14 @@ Here’s how it works:
 - Use [Networking.LocalPlayer](https://creators.vrchat.com/worlds/udon/players/) to retrieve data about the local player
 - Use [IsUserInVR](https://creators.vrchat.com/worlds/udon/players/#isuserinvr) to check if the local player is in VR.
 
-If the local player is on Android, but not in VR, that mean that they’re playing on an Android phone or tablet.
+If the local player is on Android but not in VR, that means that they’re playing on an Android phone or tablet.
 
-You can also used [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect input method directly.
-```
-public bool IsUsingPhoneOrTablet()
-{
-    return InputManager.GetLastUsedInputMethod() == VRCInputMethod.Touch;
-}
-```
-
-We’re working on a way to easily detect platforms like this for both Udon Graph and UdonSharp.
 
 ## 3. Optimize Your World for Android
 
 Android devices are usually less powerful than PCs. Read our [Quest Content Optimization guide](https://creators.vrchat.com/platforms/android/quest-content-optimization/) to optimize your world’s performance.
 
-Good news: If your world runs OK on the Quest, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
+Good news: If your world runs OK on Quest, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
 
 You should still ensure that Quest players have an acceptable frame rate.
 

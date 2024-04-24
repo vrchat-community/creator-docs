@@ -1,12 +1,12 @@
----
-title: "VRC Ui Shape"
-slug: "vrc_uishape"
-excerpt: "Allows players to interact with Unity UI in your world"
-hidden: false
-createdAt: "2017-07-07T19:34:10.176Z"
-updatedAt: "2023-01-31T17:09:17.157Z"
----
-Make Unity's UI interactable in VRChat. Requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
+# VRC Ui Shape
+
+Thic component allows players to interact with Unity's UI in your VRChat world. It requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
+
+It only has a single parameter:
+
+| Parameter        | Description                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------- |
+| Allow Focus View | Whether this canvas should allow users to enter Focus View if they're playing on a phone or tablet. |
 
 ## Steps to making an Interact-able UI with VRC_UiShape
 
@@ -48,3 +48,25 @@ Make Unity's UI interactable in VRChat. Requires a Unity [UICanvas](https://docs
 ### If you'd like a TextField not to show VRChat's keyboard:
 
 * Add the `VRCInputFieldKeyboardOverride` component to prevent VRChat's keyboard from appearing.
+
+## Focus view
+
+VRChat's "Focus View" feature allows users to expand, pan, and zoom your world's UI on their phone or tablet. This makes it easier for them to read and interact with small text on their screen.
+
+Your canvas must meet the following conditions for Focus View to be available: 
+
+- The canvas is configured correctly and has a [`VRC_UIShape`](https://creators.vrchat.com/worlds/components/vrc_uishape) component. 
+- The `VRC_UIShape` component's "Allow Focus View" parameter is enabled.
+- You have not disabled Focus View in your world's settings on VRChat.com.
+
+In addition, users in your world must meet the following conditions:
+
+- The user is playing VRChat on a phone or tablet.
+- The user is using the touchscreen as their only input device.
+- The user has not disabled Focus View in their VRChat settings.
+- The user is less than 3-6 meters away from the canvas (depending on the canvas's size)
+- The user is more than 0.6-2 meters away from the canvas (depending on the canvas's size)
+
+While a user is in focus view:
+- The user's nameplate displays a focus view icon that's visible to other players.
+- Users stay in focus view until they manually close it.
