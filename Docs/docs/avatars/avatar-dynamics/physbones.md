@@ -166,6 +166,9 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 `{parameter}_Stretch`  
 [Float] Range of 0.0-1.0. How close the bones are to their maximum stretch length.
 
+`{parameter}_Squish`  
+[Float] Range of 0.0-1.0. How close the bones are to their maximum squish length.
+
 `Is Animated` - Allows bone transforms to be animated. Each frame bone rest position will be updated according to what was animated. This must be enabled in order for any bone in the PhysBone chain (Root bone included!) to respect animations applied to it.
 
 `Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
