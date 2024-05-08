@@ -94,9 +94,9 @@ The [simulation time](/worlds/udon/networking/network-components) of a player.
 ### GetCurrentLanguage
 *string*
 
-Gets the selected language of the local user. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.)
+Gets the selected language of the local user. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.). Clientsim currently does not return the correct values for this method
 
 ### GetAvailableLanguages
 *string[]*
 
-Gets all available languages a player can select in VRChat's settings. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.)
+Gets all available languages a player can select in VRChat's settings. The value is formatted in the RFC 5646 syntax. (`en`, `ja`, `es`, `zh-CN`, etc.) Clientsim currently does not return the correct values for this method
