@@ -61,12 +61,13 @@ Here’s how it works:
 
 If the local player is on Android but not in VR, that means that they’re playing on an Android phone or tablet.
 
+You can also used [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect input method directly.
 
 ## 3. Optimize Your World for Android
 
 Android devices are usually less powerful than PCs. Read our [Quest Content Optimization guide](https://creators.vrchat.com/platforms/android/quest-content-optimization/) to optimize your world’s performance.
 
-Good news: If your world runs OK on Quest, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
+Good news: If your world runs OK on the Quest, it will probably run well on Android mobile devices. Phones and tablets usually have a lower resolution than VR headsets, and performance issues will cause less nausea than in VR.
 
 You should still ensure that Quest players have an acceptable frame rate.
 
