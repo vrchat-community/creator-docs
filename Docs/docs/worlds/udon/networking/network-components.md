@@ -12,7 +12,17 @@ Special properties you can *get* from Networking:
 
 **IsClogged** - returns true if there is too much data trying to get out. You can use this to hold off some operations or adjust your logic.
 
-**IsInstanceOwner** - returns true if the Local Player is the one who created the instance. False when in Build & Test and Unity Playmode.
+**IsInstanceOwner** - returns true if the Local Player is the one who created the instance. False when in Build & Test and Unity Playmode. This value is controllable in Clientsim. Here is a table showing when this will be true
+| Instance Type | Will be true for |
+|---------------|------------------|
+| Public        | Nobody           |
+| Friends+      | Instance Creator |
+| Friends       | Instance Creator |
+| Invite+       | Instance Creator |
+| Invite        | Instance Creator |
+| Group+        | Nobody           |
+| Group         | Nobody           |
+| Group Public  | Nobody           |
 
 **IsMaster** - returns true if the Local Player is the 'Master' - either the first person who entered the instance or the person automatically designated as Master when the last Master left. Old logic, not recommended for use. IsOwner should be used instead.
 
