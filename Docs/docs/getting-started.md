@@ -15,6 +15,14 @@ Whether you're a seasoned developer or a curious enthusiast, the VRChat SDK prov
 
 1. Download & Install [the Creator Companion](https://vrchat.com/download/vcc).
 2. If Unity is not installed, the Creator Companion will help you download Unity Hub,  install [Unity 2022.3.6f1](https://creators.vrchat.com/sdk/upgrade/current-unity-version/) （VRChat SDK 3.4.2 or earlier is Unity 2019.4.31f1）, and [create a Unity Account](https://id.unity.com/account/new).
+
+:::info
+
+The Creator Companion 2.3.0 now supports the Unity 2022.3.22f1 used by VRChat. You will be prompted to install the Unity 2022.3.22f1 when you open the Creator Companion.  
+VRChatSDK 3.6.0 to Unity 2022.3.22f1 is now supported.
+
+:::
+
 3. Use the Creator Companion to create a new Worlds or Avatar project, and open it with Unity.
 4. Build your world or avatar in Unity, and test it in VRChat using the SDK Control Panel.
 5. Once ready, use the Control Panel to publish your World or Avatar to VRChat!
