@@ -1,6 +1,6 @@
 # VRC Ui Shape
 
-Thic component allows players to interact with Unity's UI in your VRChat world. It requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
+This component allows players to interact with Unity's UI in your VRChat world. It requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
 
 It only has a single parameter:
 
