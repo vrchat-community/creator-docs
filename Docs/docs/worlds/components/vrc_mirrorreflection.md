@@ -26,16 +26,8 @@ Mirrors can drastically reduce the framerate of your VRChat world. To avoid this
 - Don't reflect every layer, or allow users to choose which layers to reflect. ("High quality" and "low quality" mirrors.)
 - If your users still experience performance issue, reduce the mirror resolution.
 
-:::caution Required Layers
-The VRChat Community recommends the following Layers to always be used in Mirrors, as these two show both yourself and other players in the Mirror:
+:::tip
+Having the least amount of Reflect Layers set on a Mirror is recommended, as anything shown in Mirrors are rendered twice.
 
-- `Player`
-- `MirrorReflection`
-
-:::
-
-It is up to your discretion if you want to show the `Default` Layer as well, if you want to reflect the surrounding World environment. **However, this can cost performance.**
-
-:::danger Use only a minimal amount of Reflect Layers!
-Proper filtering of the Reflect Layers will ensure unnecessary graphics such as the HUD, Name Tags, or the Quick Menu, will never appear in Mirrors. If they are shown, it can heavily cost performance.
+For a minimal layer setup, `MirrorReflection` is required to see the local player, and `Player` is required to see other players. Any other layers should be considered based on how your world is set up and what you want to be visible in the mirror, such as pickups and the environment. To learn more about what each Reflect Layer is used for, see [Unity Layers in VRChat](../layers.md).
 :::
