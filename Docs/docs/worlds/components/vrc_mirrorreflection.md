@@ -36,8 +36,6 @@ The VRChat Community recommends the following Layers to always be used in Mirror
 
 It is up to your discretion if you want to show the `Default` Layer as well, if you want to reflect the surrounding World environment. **However, this can cost performance.**
 
-:::danger
-To ensure optimal performance, use only a minimal amount of Reflect Layers!
-
-Proper filtering of the Reflect Layers will ensure unnecessary graphics such as the HUD, Name Tags, or the Quick Menu, will never appear in Mirrors, which will heavily cost performance.
+:::danger Use only a minimal amount of Reflect Layers!
+Proper filtering of the Reflect Layers will ensure unnecessary graphics such as the HUD, Name Tags, or the Quick Menu, will never appear in Mirrors. If they are shown, it can heavily cost performance.
 :::
