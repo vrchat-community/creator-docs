@@ -13,7 +13,7 @@ It requires a [mesh renderer component](https://docs.unity3d.com/Manual/class-Me
 | --- | --- |
 | Disable Pixel Lights | Disables real-time pixel shaded point and spot lighting. Pixel shaded lights will fall-back to vertex lighting when this is enabled. |
 | Turn Off Mirror Occlusion | Disables occlusion culling on the mirror. Enable this if you see objects flickering in the mirror. |
-| Reflect Layers | Only objects on the selected layers will be rendered in the mirror. Objects on the Water layer are never rendered in mirrors. |
+| Reflect Layers | Only objects on the selected layers will be rendered in the mirror. <br />⚠ Objects on the `Water` layer are never rendered in mirrors. |
 | Mirror Resolution | Rendering resolution of the mirror (per eye in VR). Auto renders at the same resolution as the user's HMD or monitor up to the maximum of 2048x2048. |
 | Maximum Antialiasing | The maximum level of MSAA applied to the image rendered in the mirror. Can be overruled by client graphics settings. |
 | Custom Shader | The mirror will use this shader instead of the default shader if one is provided. |
@@ -25,3 +25,16 @@ Mirrors can drastically reduce the framerate of your VRChat world. To avoid this
 - Keep mirrors off by default. Enable them automatically when users get near, or allow users to enable them manually.
 - Don't reflect every layer, or allow users to choose which layers to reflect. ("High quality" and "low quality" mirrors.)
 - If your users still experience performance issue, reduce the mirror resolution.
+
+:::tip
+The VRChat Community recommends using ONLY these `Reflect Layers` on a Mirror:
+
+- `Default`: Shows the surrounding Environment in the World you are in.
+    - *You can ignore this Layer if you want.*
+- `Player`: Shows remote players in the Mirror.
+- `MirrorReflection`: Shows the local player in the Mirror.
+
+All other Layers besides the ones mentioned above should be ignored for optimal performance!
+
+Proper filtering of the Reflect Layers will ensure unnecessary graphics such as the HUD, Name Tags, or the Quick Menu, will never appear in Mirrors, which will heavily cost performance.
+:::
