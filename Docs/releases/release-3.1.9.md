@@ -36,7 +36,7 @@ Major Updates to Udon Graph Usability.
     * You can close each tab with the X button
 * Events/Groups entries are clickable in the sidebar for fast navigation
 * Added search bar at the top which allows you to search through your active graph
-    * Press `Ctrl+F` to move focus to the searc hbar
+    * Press `Ctrl+F` to move focus to the search bar
     * Search activates after entering at least 3 letters
     * Pressing Enter while having multiple search results will jump between them
 * There is a new "Highlight flow" toggle on the topbar, which, when enabled, will highlight the nodes connected via the flow edges

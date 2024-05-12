@@ -51,24 +51,27 @@ The default `VRCChair` prefab included in the SDK can be used on avatars to let 
 
 When using stations on an avatar that you want to animate on or off, you need to toggle specific objects and components. 
 ![image](/img/worlds/vrc_station-0adc923-av-station-fix.png)
-**Do not animate or disable the toggle in the red box. Only animate the toggles in the green boxes.** Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
+**The red box (in the screenshot above) needs to be enabled upon upload. If it is disabled upon upload, the station will not work!**
 
-Attempting to work around this by enabling/disabling a parent object of the chair will also cause problems. You must explicitly animate the objects highlighted above in green.
+Toggling the red box will remove any player currently sitting in the station. Toggling the green boxes will only stop new players from sitting in the station. Since this involves disabling/enabling components and objects, this **must** be done in the FX layer.
 
-Keep in mind that having avatar stations on by default (as in, having the green toggles on by default) means that if a user disables animations with the Safety System, the stations remain active, even if the wearer has animated them off.
+Keep in mind that users can disable animations with the [Safety system](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system). If an avatar station is on by default (as in, having the toggles on by default), the stations remain active, even if the wearer has used an animation to turn them off.
+
+There are two other restrictions upon upload:
+- The Entry and Exit points must not be more than 2 meters apart.
+- There can be up to 6 stations on the avatar. Any more will be disabled.
 
 ## Parameters and Options
 
-| Parameter                    | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Player Mobility              | Should the player be able to move, options include:                                                      |
-|                              | - Mobile: Allow users to move when seated in station                                                    |
-|                              | - Immobilize: Prevents user from moving                                                                 |
-|                              | - Immobilize For Vehicle: Same as Immobilized but optimized for moving stations                        |
-| Can Use Station From Station | If the user can switch stations when sitting in a station                                                |
-| Animation Controller (optional) | Used to override normal seating animations with a custom one.                                           |
-| Disable Station Exit         | If the user cannot exit the station by usual means, use triggers to unseat the user                      |
-| Seated                       | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
-| Station Enter Player Location | Transform used to define where the user should be transported to when seated                             |
-| Station Exit Player Location  | Transform used to define where the user should be transported to when they are unseated                  |
-| Controls Object              | This is used for having a station where you can control an object, such as vehicles.                     |
+| Parameter | Description |  
+| - | - |  
+| Player Mobility                 | Whether players are allowed to walk around while using the station. |  
+|                                 | - Mobile: Allows players to move when seated in the station. |  
+|                                 | - Immobilize: Prevents user from moving and moves them to "Station Enter Location." |  
+|                                 | - Immobilize For Vehicle: Same as "Immobilize" but optimized for moving stations.  |  
+| Can Use Station From Station    | Whether the players can switch stations when sitting in a station.  |  
+| Animation Controller (optional) | Overrides the "Sitting" playable layer in the avatar controller. |  
+| Disable Station Exit            | Prevents the player from exiting the station by moving or jumping.<br />Use the `ExitStation` node to remove the player from the station. |  
+| Seated                          | Whether the player's avatar will sit or stand when using the station.<br />This affects the "Seated" parameter of the avatar’s playable layers. |  
+| Station Enter Player Location   | Transform that the player is be moved to when they enter the station. |  
+| Station Exit Player Location    | Transform that the player is be moved to when they exit the station. |

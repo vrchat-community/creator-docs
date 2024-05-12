@@ -1,15 +1,13 @@
 ---
-title: "Current Unity Version"
-slug: "current-unity-version"
 sidebar_position: 1
-createdAt: "2020-01-14T17:49:48.217Z"
-updatedAt: "2023-03-17T15:44:23.435Z"
 ---
 # Current Unity Version
 
 The current Unity version used by VRChat is [**2022.3.22f1**](https://unity.com/releases/editor/whats-new/2022.3.22).
 
 If you have Unity Hub installed, you can [**click this link**](unityhub://2022.3.22f1/887be4894c44) to install the correct version of Unity. 2022.3.22f1 is also available in the [Unity editor release archive](https://unity.com/releases/editor/archive).
+
+In the installation screen, choose "Android Build Support" if you'd like to be able to create worlds or avatars for Android or Quest.
 
 Unity 2022.3.22f1 includes many improvements such as faster iteration times, improved asset import times, *much* faster platform switching times, better editor stability, fully featured C# 8 support, a quick search feature, [and much more!](https://unity.com/releases/lts)
 
