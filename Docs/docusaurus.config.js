@@ -122,6 +122,10 @@ const config = {
                 label: 'Releases',
                 to: '/releases',
               },
+              {
+                label: 'Roadmap',
+                to: '/roadmap',
+              },
             ],
           },
         ],
