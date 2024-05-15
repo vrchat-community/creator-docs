@@ -1,10 +1,5 @@
----
-title: "Player Audio"
-slug: "player-audio"
-hidden: false
-createdAt: "2020-09-24T22:05:44.842Z"
-updatedAt: "2023-01-10T00:35:37.776Z"
----
+# Player Audio
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -27,7 +22,7 @@ somePlayer.SetVoiceGain(15);
 
 Here are all the properties you can access:
 
-# Voice
+## Voice
 
 ### Set Voice Gain
 *in Decibels, Range 0-24*
@@ -52,7 +47,7 @@ If you want a user's voice to sound like it is close no matter how far it is, in
 *On/Off*
 When a voice is some distance off, it is passed through a low-pass filter to help with understanding noisy worlds. You can disable this if you want to skip this filter. For example, if you intend for a player to use their voice channel to play a high-quality DJ mix, turning this filter off is advisable.
 
-# Avatar
+## Avatar
 
 ### SetAvatarAudioGain
 *in Decibels, Range 0-10*

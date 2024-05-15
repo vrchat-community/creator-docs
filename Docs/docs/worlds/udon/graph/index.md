@@ -88,7 +88,8 @@ Press the **Spacebar** to open up Quick Search, then type in the first few lette
 This method of searching works best if you know Unity's basic classes and object types. There are other ways of searching, see: [Searching for nodes](/worlds/udon/graph/searching-for-nodes)
 
 # Compiling the Graph
-The graph automatically compiles in the background at regular variables. When this happens, you'll see a flash in the upper-right corner of your graph, and the Status box will turn green if things went well, or red if there's an issue. In either case, you can click on the Status box to see the Assembly Code that was generated, or the errors if there was a problem. 
+The graph automatically compiles in the background at regular intervals. When this happens, you'll see a flash in the upper-right corner of your graph, and the Status box will turn green if things went well, or red if there's an issue. In either case, you can click on the Status box to see the Assembly Code that was generated, or the errors if there was a problem.
+
 ![The status box shows 'OK' and we can see the Variables declared at the top of this Assembly.](/img/worlds/index-fc0a2c0-assembly.png)
 # Running the Graph
 There are two ways to run the graphs in your scene before you upload them to VRChat.

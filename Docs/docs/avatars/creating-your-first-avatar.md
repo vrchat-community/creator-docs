@@ -146,7 +146,7 @@ If your avatar doesn't have a head, place the view position wherever you think i
 
 ![Use the Avatar Descriptor to configure your avatar for VRChat. Make sure to adjust the view position!](/img/avatars/creating-your-first-avatar-5afcbf1-Unity_lsTjP8qDqO.png)
 ### Lip sync mode
-When you talk, you can make your avatar's mouth (or anything else) react automatically.  Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. There are five modes to choose from:
+When you talk, you can make your avatar's mouth (or anything else) react automatically.  Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. You can choose one of five lip sync modes:
 
 #### Default
 ![Pressing 'Auto Detect!' is usually enough to let your VRChat avatar react to your speech.](/img/avatars/creating-your-first-avatar-d69289f-Unity_FgsAtEU75F.png)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Platforms"
 sidebar_position: 1
 ---

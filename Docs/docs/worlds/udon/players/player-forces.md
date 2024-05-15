@@ -18,17 +18,17 @@ Only use these nodes for the [local player](/worlds/udon/players/getting-players
 ### GetWalkSpeed / SetWalkSpeed
 *float, working range around 0-5*
 
-The speed at which a Player can walk around your world. Set this below your Run Speed.
+The speed at which a Player can walk around your world. Set this below your Run Speed. Default is 2.
 
 ### GetRunSpeed / SetRunSpeed
 *float, working range around 0-10*
 
-The speed at which a Player can run around your world. Set this above your Walk Speed.
+The speed at which a Player can run around your world. Set this above your Walk Speed. Default is 4.
 
 ### GetStrafeSpeed / SetStrafeSpeed
 *float, working range around 0-5*
 
-The speed at which a Player can move sideways through your world. Recommended to be set to the same as Walk Speed. Not affected by running.
+The speed at which a Player can move sideways through your world. Recommended to be set to the same as Walk Speed. Not affected by running. Default is 2.
 
 ### GetJumpImpulse / SetJumpImpulse
 *float, working range around 0-10*

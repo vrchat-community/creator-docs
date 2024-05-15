@@ -58,7 +58,8 @@ The master player selection follows these rules:
 
 - There will always be a valid master player in an instance.
 - The first player to enter a previously empty instance will become the initial master.
-- The master player never changes except when the current master leaves the instance.
+- The master player changes when the current master leaves the instance.
+	- The master player may also change if they're on Android and kept VRChat in the background for too long.
 - When the current master leaves, a new master is chosen from the other players in the instance before `OnPlayerLeft` is called.
 - You must not rely on any particular player becoming master. The new master player will be chosen based on various criteria on the server side (platform, network conditions, etc.).
 
@@ -202,6 +203,7 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 	- If the owner returns `false` or doesn't return a value at all, the ownership transfer is rejected. `OnOwnershipTransferred()` called for the requesting player, informing them that the initial owner still owns the object.
 	- This step is skipped if the owner is transferring ownership to someone. The new player cannot reject ownership.
 5. If the request was accepted, `OnOwnershipTransferred(VRCPlayerApi player)` is called by the **former owner** and **all other players**.
+
 ![](/img/worlds/udon-networking-813f99e-OnOwnershipRequest_Activity.svg)
 
 ## Using Variables
@@ -232,11 +234,26 @@ By adding `OnOwnershipRequest()` to your script, additional steps are performed 
 ## RequestSerialization
 
 This node is used in Manual Sync mode to flag the variables on the target UdonBehaviour for Serialization during the next Network Tick, which does not happen every frame. This node works well with the OnPreSerialization Event node. You trigger "RequestSerialization" and then the OnPreSerialization event will trigger during the next Network Tick. At that point, you can update any variables to the values you would like to be synced.
-:::note Variable Sync
+
 
 You can sync variables and arrays of variables of the following types:
-bool, char, byte, sbyte, short, ushort, int, uint, long, ulong, float, double, Vector2, Vector3, Vector4, Quaternion, string, VRCUrl, Color and Color32.
-:::
+- Integral numeric types
+	- `byte` and `sbyte`
+	- `double`
+	- `float`
+	- `int` and `uint`
+	- `long` and `ulong`
+	- `short` and `ushort`
+- Composite types
+	- `Color` and `Color32` 
+	- `Quaternion`
+	- `Vector2`, `Vector3`, and `Vector4`
+- Textual data types
+	- `string` and `char`
+	- `VRCUrl`
+- Logical data types
+	- `bool`
+
 
 :::caution Array Sync
 
@@ -268,12 +285,17 @@ SendCustomNetworkEvent will work as a 'SendCustomEvent' node in the Editor to al
 ### Local-Only Events
 If you start your Event names with an underscore, you will not be able to call them over the network. We do this to safeguard our internal methods like \_start, \_update, \_interact against malicious network calls. We have plans to add an attribute to events to mark them as 'local-only' without the need for an underscore. If you want to block events from remote execution in the meantime, you can use a unique underscore prefix like '\_u\_eventName' to make sure it doesn't match any existing or future VRC methods.
 ## Debugging
-You can view some information about your networked objects in the client if you launch with `--enable-debug-gui` and press RightShift + ` + 8 while in the client.
-These overlays show you the NetworkId, name of the GameObject, **P**ing time, **Q**uality of the data (100% is no dropped packets) and **O**wner of the GameObject.
+You can view some information about your networked objects in the client if you launch with `--enable-debug-gui` and enter [debug menu 8](/worlds/udon/world-debug-views#debug-menu-8) by pressing `Right Shift` + \`  + `8` while in VRChat.
+These overlays show you
+- The GameObject's Network ID,
+- The display name of the GameObject,
+- `P`: Ping time,
+- `Q`: Quality of the data (100% is no dropped packets) and
+- `O`: Owner of the GameObject.
 
 ![](/img/worlds/udon-networking-9b0721f-network-debug.png)
 
-You can see some per-object information in list form using RightShift + ` + 6 in the client:
+You can enter [debug menu 6](/worlds/udon/world-debug-views#debug-menu-6) to see some per-object information in list form `RightShift` + \` + `6` in VRCHat:
 
 ![](/img/worlds/udon-networking-dde0d15-networking-debug-6.png)
 

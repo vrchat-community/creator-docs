@@ -87,7 +87,7 @@ Note that [Unity's frame count](https://docs.unity3d.com/ScriptReference/Time-fr
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delaySeconds` - float, `eventTiming` - EventTiming
 Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delaySeconds`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected.
 
-If `delaySeconds` is zero, the event will be executed in the same frame *or* the next frame. (See [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes#sendcustomeventdelayedframes)), just above.
+If `delaySeconds` is zero, the event will be executed in the same frame *or* the next frame. (See [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes#sendcustomeventdelayedframes), just above.)
 
 ### SendCustomNetworkEvent
 Inputs: `instance` - `UdonBehaviour`, `target` - NetworkEventTarget, `eventName` - String
