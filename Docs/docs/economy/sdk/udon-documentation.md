@@ -154,6 +154,8 @@ Sends an [OnListProductOwners](#onlistproductowners) event to the target UdonBeh
 
 For this event to work properly, you'll first need to enable the ["Owners Names in Udon" setting](/economy/products/udon#getting-udon-products-owners-in-the-sdk) for the Udon product on [VRChat.com](https://vrchat.com/home/marketplace/storefront/products). Otherwise, [OnListProductOwners](#onlistproductowners) will not fire.
 
+If your GameObject contains multiple UdonBehaviour components, this event may not work properly.
+
 **Input**
 - `UdonBehaviour`: An UdonBehaviour that will receive the resulting [OnListProductOwners](#onlistproductowners) event.
 - `UdonProduct`: The UdonProduct for which to retrieve the owner's user names.

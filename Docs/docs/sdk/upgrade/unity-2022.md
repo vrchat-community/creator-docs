@@ -2,8 +2,10 @@
 title: Upgrading Projects to 2022
 sidebar_position: 2
 ---
-This page explains how to upgrade your VRChat project from version 2019.4.31f1 to Unity 2022.3.6f1.
-Unity 2022 is required to use the latest version of the VRChat SDK. You can check out the [benefits to upgrading here](/sdk/upgrade/current-unity-version).
+import CurrentUnityVersion from '@site/src/components/UnityVersionedText.js';
+
+This page explains how to upgrade your VRChat project from version 2019.4.31f1 to Unity <CurrentUnityVersion/>.
+Unity <CurrentUnityVersion versionKey="major"/> is required to use the latest version of the VRChat SDK. You can check out the [benefits to upgrading here](/sdk/upgrade/current-unity-version).
 
 If you're using the Creator Companion, upgrading your project is easy! But first, make sure you create backups of your projects.
 
@@ -63,7 +65,7 @@ Unity Hub is a separate application that allows you to seamlessly install and wo
 	- You'll need to create a [Unity account](https://id.unity.com/account/new) after installing Unity Hub.
 2. Visit [Unity's download archive](https://unity.com/releases/editor/archive).
 3. Click **Unity 2022.x**.
-4. Scroll down until you see Unity **2022.3.6** and click the blue **Unity Hub** button.
+4. Scroll down until you see Unity <CurrentUnityVersion versionKey="patch"/> and click the blue **Unity Hub** button.
 	- Do not choose the first Unity version in the list!
 	- You can also go to the [Current Unity Version page](/sdk/upgrade/current-unity-version) to find a link to download the correct version of Unity.
 
@@ -71,14 +73,14 @@ Unity Hub is a separate application that allows you to seamlessly install and wo
 
 ![Accept the browser prompt to open Unity Hub.](/img/sdk/migrate-2019-2022/browser-prompt-unity-hub.png)
 
-1. Click **Open Unity Hub** in your web browser.
+5. Click **Open Unity Hub** in your web browser.
 
 ![Enable Android Build support if you'd like to be able to develop content for Android devices.](/img/sdk/migrate-2019-2022/unity_version_hub_upgrade_android.png)
 
 6. Enable **Android Build Support** in the Unity installation screen.
 	- You can skip this if you're not planning on uploading content to Android or Quest yet.
 	- You can complete this step later by choosing [Add modules](https://docs.unity3d.com/hub/manual/AddModules.html) in the Unity Hub.
-7. Click **Continue** to install Unity 2022.3.6.
+7. Click **Continue** to install Unity <CurrentUnityVersion versionKey="patch"/>.
 
 ## Managing Unity versions
 
@@ -86,7 +88,7 @@ It's easy to check what versions of Unity are available on your PC for use with 
 
 1. In the CC, go to **Settings**.
 2. Under **Unity Editors**, use the dropdown menu to change the default Unity editor. This will **not** apply retroactively to any projects already created.
-3. If you have not already installed Unity 2022.3.6, [follow the instructions above](unity-2022.md#Using-the-Creator-Companion). 
+3. If you have not already installed Unity <CurrentUnityVersion versionKey="patch"/>, [follow the instructions above](unity-2022.md#Using-the-Creator-Companion). 
 4. If you don't see a version of Unity here that you've installed, try using the refresh button or finding the path directly using the file button.
 
 ## Packages

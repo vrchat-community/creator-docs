@@ -53,6 +53,10 @@ It only has a single parameter:
 
 VRChat's "Focus View" feature allows users to expand, pan, and zoom your world's UI on their phone or tablet. This makes it easier for them to read and interact with small text on their screen.
 
+<div class="video-container">
+    <iframe src="https://assets.vrchat.com/videos/docs/focusViewDemo.mp4" title="Focus View demo" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+</div>
+
 Your canvas must meet the following conditions for Focus View to be available: 
 
 - The canvas is configured correctly and has a [`VRC_UIShape`](https://creators.vrchat.com/worlds/components/vrc_uishape) component. 

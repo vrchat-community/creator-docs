@@ -1,10 +1,9 @@
 ---
-title: Managing Unity
 excerpt: Learn how to update to a newer version of Unity
 sidebar_position: -1
-createdAt: 2023-09-26T19:35:00
-updatedAt: 2023-09-17T19:35:00
 ---
+# Managing Unity
+
 If you've worked with the VRChat SDK in the past, your project may be using an old version of Unity and the VRChat SDK. To use the latest version of the VRChat SDK, you'll first need to update Unity.
 
 - [Check which versions of Unity you already have installed](unity-2022.md#managing-unity-versions) on your PC that are VRChat compatible.

@@ -1,10 +1,10 @@
 ---
-title: "Allowed Avatar Components"
 slug: "whitelisted-avatar-components"
-hidden: false
-createdAt: "2017-09-10T03:41:08.259Z"
-updatedAt: "2022-11-15T23:12:29.563Z"
 ---
+# Allowed Avatar Components
+
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
 Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
 
 Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
@@ -27,11 +27,11 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 
 ## Unity
 
-- [AimConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-AimConstraint.html)
-- [Animation](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Animation.html)
-- [Animator](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Animator.html)
-- [AudioSource](https://docs.unity3d.com/2022.3/Documentation/Manual/class-AudioSource.html)
-- [Camera](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Camera.html)
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AimConstraint.html">AimConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animation.html">Animation</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animator.html">Animator</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AudioSource.html">AudioSource</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Camera.html">Camera</UnityVersionedLink>
   - For avatars worn by the local user, Camera components are fully whitelisted.
   - For avatars worn by remote users, the following rules apply:
     - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
@@ -40,25 +40,25 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
       - Note that becoming friends with a user does not automatically reload their avatar.
     - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
     - If neither of the above is true, Camera components are removed and cannot be enabled.
-- [Cloth](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Cloth.html)
-- [Collider](https://docs.unity3d.com/2022.3/Documentation/Manual/CollidersOverview.html)
-- [FlareLayer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-FlareLayer.html)
-- [Joints](https://docs.unity3d.com/2022.3/Documentation/Manual/Joints.html)
-- [Light](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Light.html)
-- [LineRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-LineRenderer.html)
-- [LookAtConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-LookAtConstraint.html)
-- [MeshFilter](https://docs.unity3d.com/2022.3/Documentation/Manual/class-MeshFilter.html)
-- [MeshRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-MeshRenderer.html)
-- [ParentConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ParentConstraint.html)
-- [ParticleSystemRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/PartSysRendererModule.html)
-- [ParticleSystem](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ParticleSystem.html)
-- [PositionConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-PositionConstraint.html)
-- [Rigidbody](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Rigidbody.html)
-- [RotationConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-RotationConstraint.html)
-- [ScaleConstraint](https://docs.unity3d.com/2022.3/Documentation/Manual/class-ScaleConstraint.html)
-- [SkinnedMeshRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-SkinnedMeshRenderer.html)
-- [TrailRenderer](https://docs.unity3d.com/2022.3/Documentation/Manual/class-TrailRenderer.html)
-- [Transform](https://docs.unity3d.com/2022.3/Documentation/Manual/class-Transform.html)
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Cloth.html">Cloth</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collider</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-FlareLayer.html">FlareLayer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/Joints.html">Joints</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Light.html">Light</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-LineRenderer.html">LineRenderer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-LookAtConstraint.html">LookAtConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-MeshFilter.html">MeshFilter</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-MeshRenderer.html">MeshRenderer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ParentConstraint.html">ParentConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/PartSysRendererModule.html">ParticleSystemRenderer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ParticleSystem.html">ParticleSystem</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-PositionConstraint.html">PositionConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Rigidbody.html">Rigidbody</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-RotationConstraint.html">RotationConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ScaleConstraint.html">ScaleConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-SkinnedMeshRenderer.html">SkinnedMeshRenderer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-TrailRenderer.html">TrailRenderer</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Transform.html">Transform</UnityVersionedLink>
 
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
 :::caution FinalIK Components Modified
