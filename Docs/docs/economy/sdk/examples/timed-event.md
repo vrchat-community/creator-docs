@@ -13,7 +13,7 @@ This can be customized in a variety of ways! For example, create a paid product 
 You can read more about Udon events [here](https://creators.vrchat.com/worlds/udon/graph/event-nodes/) and [here](https://udonsharp.docs.vrchat.com/events/).
 
 <div class="video-container">
-    <iframe src="/img/economy/examples/ProductEvent_Preview.mp4" title="Timed Event" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+    <iframe src="https://assets.vrchat.com/videos/docs/ProductEvent_Preview.mp4" title="Timed Event" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
 ### How to Import
