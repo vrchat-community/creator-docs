@@ -33,7 +33,7 @@ Once you've created a purchasable product:
 2. In the inspector, locate the **Products** drop down and drag a product over. You can also drag multiple products at once. The order in the inspector is not important, but make sure you only list each product once. 
 
 <div class="video-container">
-    <iframe src="/img/economy/examples/DebugLogging_AddProduct.mp4" title="Overhead Indicator" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+    <iframe src="https://assets.vrchat.com/videos/docs/DebugLogging_AddProduct.mp4" title="Overhead Indicator" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
 3. Fill the **Group Id** variable with your group ID. 

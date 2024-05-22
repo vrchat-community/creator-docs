@@ -49,7 +49,7 @@ Once you've created a purchasable product:
 5. If you'd like the player to be able to look up and see their own indicator, leave **Show Indicator Above Local Player** enabled. Disable it if otherwise.
 
 <div class="video-container">
-    <iframe src="/img/economy/examples/BuyIndicator-ShowIndicatorAboveLocalPlayer.mp4" title="Overhead Indicator" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+    <iframe src="https://assets.vrchat.com/videos/docs/BuyIndicator-ShowIndicatorAboveLocalPlayer.mp4" title="Overhead Indicator" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
 6. Run Build & Test!
