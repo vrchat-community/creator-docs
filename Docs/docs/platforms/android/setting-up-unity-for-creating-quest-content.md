@@ -8,12 +8,6 @@ sidebar_position: -1
 ---
 ![Building for Mobile instructions](/img/setting-up-unity-for-creating-quest-content-1ac8b19-VRChat_QuestContent_QuickStart.png)
 
-:::caution Requires Additional Setup
-
-[You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise, the option won't pop up.
-
-:::
-
 If you're starting a brand new project, this won't take long at all. However, if you're converting a Windows platform project to an Android platform project, you will have to convert your assets appropriately. This can take quite a while for larger projects.
 
 For more details on best practices when working with dual-platform projects, read our documentation on [Cross-Platform Setup](/platforms/android/cross-platform-setup).
@@ -28,7 +22,12 @@ Pros use the hotkeys Ctrl + Shift + B.
 
 ### 2. Switch Platform to Android
 
-Click "Android" -> "Switch Platform". Unity will automatically convert assets for Android-ready, it will take a while for larger projects with lots of assets. **If Android isn't appearing: [you'll need to install it.](https://docs.unity3d.com/Manual/android-sdksetup.html)**
+:::caution Requires Additional Setup
+If the Android option isn't appearing, [you'll need to install Unity's Android SDK.](https://docs.unity3d.com/Manual/android-sdksetup.html)
+
+:::
+
+Click "Android" -> "Switch Platform". Unity will automatically convert assets for Android-ready, it will take a while for larger projects with lots of assets.
 
 ### 3. Publish -> New Build
 
