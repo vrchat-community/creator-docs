@@ -12,7 +12,7 @@ If you're starting a brand new project, this won't take long at all. However, if
 
 For more details on best practices when working with dual-platform projects, read our documentation on [Cross-Platform Setup](/platforms/android/cross-platform-setup).
 
-## 3 Steps to get your world on VRChat for Oculus Quest
+## 3 Steps to get your world on VRChat for Quest
 
 ### 1. Open Your Build Settings
 
