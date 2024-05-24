@@ -43,7 +43,7 @@ Once you've created a purchasable product:
 3. In the Inspector, replace the Target object with whatever object you would like to be enabled/disabled when a player owns the Udon Product. Here's an example of **ToggleObjectOff** in action:
 
 <div class="video-container">
-    <iframe src="/img/economy/examples/ProductToggle_Demo.mp4" title="Product Toggle" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+    <iframe src="https://assets.vrchat.com/videos/docs/ProductToggle_Demo.mp4" title="Product Toggle" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
 4. Run Build & Test!

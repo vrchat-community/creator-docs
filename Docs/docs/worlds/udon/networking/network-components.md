@@ -1,9 +1,5 @@
----
-title: "Network Components"
-slug: "network-components"
-createdAt: "2021-05-13T17:19:13.691Z"
-updatedAt: "2023-02-26T20:26:03.564Z"
----
+# Network Components
+
 This doc covers Networking Components, Properties and Events you can use in your Udon Programs.
 
 ## Networking Properties
@@ -14,10 +10,10 @@ Special properties you can *get* from Networking:
 
 **IsInstanceOwner** - returns true if the Local Player is the one who created the instance. False when in Build & Test and Unity Playmode. This value is controllable in ClientSim.
 
-| Instance Type | Value of IsInstanceOwner |
-| ------------- | ---------------- |
-| Invite/Invite+<br/>Friends/Friends+ | `true` for the instance creator, otherwise `false`. |
-| Group/Group+/Group Public<br/>Public | Always `false`.           |
+| Instance Type                                              | Value of IsInstanceOwner                            |
+| ---------------------------------------------------------- | --------------------------------------------------- |
+| <ul><li>Invite/Invite+</li><li>Friends/Friends+</li></ul>  | `true` for the instance creator, otherwise `false`. |
+| <ul><li>Group/Group+/Group Public</li><li>Public</li></ul> | Always `false`.                                     |
 
 **IsMaster** - returns true if the Local Player is the 'Master' - either the first person who entered the instance or the person automatically designated as Master when the last Master left. Old logic, not recommended for use. IsOwner should be used instead.
 
