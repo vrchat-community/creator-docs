@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 These nodes are useful for getting an individual Player, a group of them, or all of them.
 
-### Networking.get LocalPlayer
+### [Networking.get LocalPlayer](/worlds/udon/networking/network-components)
 *VRCPlayerApi*
 
 :::note

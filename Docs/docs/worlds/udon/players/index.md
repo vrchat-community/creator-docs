@@ -48,6 +48,24 @@ out: *Boolean*
 
 Tells you whether the given Player is the [instance master](/worlds/udon/networking#the-instance-master).
 
+### Get isInstanceOwner
+in: *VRCPlayerApi*
+
+out: *Boolean*
+
+Tells you whether the given player is the current instance owner.
+
+### Get isSuspended
+in: *VRCPlayerApi*
+
+out: *Boolean*
+
+Tells you if the player's device is suspended. A device is suspended if it enters sleep mode or switches to a different app. While suspended, devices don't run Udon code or respond to network events until the player reopens VRChat.
+
+Your code should account for any device becoming suspended at any time, regardless of platform. PC players currently never become suspended, but this should not be assumed.
+
+Note that `isSuspended` is always `false` for the local player - Udon cannot run while the local player is suspended.
+
 ### GetPickupInHand
 in: *VRCPlayerApi, Hand (none, left, right)*
 
