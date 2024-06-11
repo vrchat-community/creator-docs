@@ -11,6 +11,7 @@ Please consult [Allowlisted World Components](/worlds/whitelisted-world-componen
 
 | Parameter | Description |
 | --- | --- |
+| [TextMesh Pro](/worlds/components/textmeshpro) | Used to display high-quality text. |
 | [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal) | Used to display and / or switch to an avatar. |
 | [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection) | Used to create a mirror in VRChat. |
 | [VRC_ObjectSync](/worlds/components/vrc_objectsync) | Syncs the transform of a GameObject with all players in the instance. |

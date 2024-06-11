@@ -6,22 +6,19 @@ This doc covers Networking Components, Properties and Events you can use in your
 
 Special properties you can *get* from Networking:
 
-**IsClogged** - returns true if there is too much data trying to get out. You can use this to hold off some operations or adjust your logic.
+| Property name    | Description |
+| ---------------- | ----------- |
+| LocalPlayer      | Returns the [VRC Player API](/worlds/udon/players) object of the local player. |
+| IsInstanceOwner  | Returns `true` if the local player created the world instance. Always `false` in the SDK's "Build & Test" mode. |
+| InstanceOwner    | Returns the [VRC Player API](/worlds/udon/players) object of the player who owns the instance. If the owner is currently not in the instance, this returns `null` instead. If the owner returns, it returns the instance owner again.<br />The instance owner has special moderation permissions. Instance ownership never changes.
+| IsMaster         | Returns `true` if the local player is the [instance master](/worlds/udon/networking/#the-instance-master). The master is the default owner for networked game objects.<br/>You should not use this for security or gating access to your world. Use `IsInstanceOwner` or implement a moderation system instead. |
+| Master           | Returns the [VRC Player API](/worlds/udon/players) object of the player who is the current instance master. Is always valid. |
+| IsNetworkSettled | Returns `true` if all the data in the instance has been deserialized, applied, and is ready for use. |
+| IsClogged        | Returns `true` if there is too much data trying to get out. You can use this to wait until the network is unclogged or to adjust your logic. |
+| SimulationTime   | Returns the current simulation time of a player or object with networking components. See below for more details. |
 
-**IsInstanceOwner** - returns true if the Local Player is the one who created the instance. False when in Build & Test and Unity Playmode. This value is controllable in ClientSim.
+### Simulation time
 
-| Instance Type                                              | Value of IsInstanceOwner                            |
-| ---------------------------------------------------------- | --------------------------------------------------- |
-| <ul><li>Invite/Invite+</li><li>Friends/Friends+</li></ul>  | `true` for the instance creator, otherwise `false`. |
-| <ul><li>Group/Group+/Group Public</li><li>Public</li></ul> | Always `false`.                                     |
-
-**IsMaster** - returns true if the Local Player is the 'Master' - either the first person who entered the instance or the person automatically designated as Master when the last Master left. Old logic, not recommended for use. IsOwner should be used instead.
-
-**IsNetworkSettled** - returns true once all the data in the instance has been deserialized and applied, and it's ready for use.
-
-**LocalPlayer** - returns the [VRC Player API](/worlds/udon/players) object of the local player. Will be null in the editor - use Utilities.IsValid to easily branch your logic on this.
-
-**SimulationTime** - returns the current simulation time of a player or object with networking components.
 Simulation time is a timestamp that refers to how far back in time an object is simulated. This value is used internally for [`VRCObjectSync`](/worlds/udon/networking/network-components#vrc-object-sync) and [players](/worlds/udon/players#simulationtime), but can be used in Udon scripts as well. For example, if your ` Time.realtimeSinceStartup ` is 45 and the SimulationTime of an object is 44.5, then VRChat believes 500ms of delay is necessary to smoothly replicate the object at that moment. You can use that number to learn some information about what `VRCObjectSync` is doing, or to create your own system similar to `VRCObjectSync`. For example, if you do `Time.realTimeSinceStartup - SimulationTime(player)` then that will tell you exactly how much latency that player has at that moment.
  
 Simulation time is frequently adjusted depending on network conditions, including many factors such as latency, reliability, and frequency of the packets being received. The goal of this adjustment is to be as close to real-time as possible to reduce latency, but to leave enough room to prevent hitching. There are a variety of factors that can cause hitching, but one example can be running out of received packets from the owner.
@@ -62,11 +59,16 @@ This event is triggered when someone has requested to take ownership. It include
 ### OnOwnershipTransferred
 This event is triggered for everyone in the instance when an objects ownership is changed, and includes the Player Object for the new owner.
 
+### OnMasterTransferred
+This event is triggered for everyone in the instance when the instance master changes because the previous instance master has left the instance.
+It includes one parameter, `newMaster,` which is the [VRC Player API](/worlds/udon/players) object of the player that has become master. This parameter is always valid.
+For the first user joining a new instance, this event will trigger after `OnPlayerJoined` to indicate that the master state was transferred from "nobody".
+
 ### OnVariableChanged
 This is a special type of event that you can create for any variable. In Udon Graph, you create it by dragging and dropping a variable into the graph while holding alt. This event detects when the variable changes, which can include when you receive synced variables from other players. 
 * changing the contents of an array does not trigger a change, because the array itself is still the same.
 * OnVariableChanged triggers immediately when the variable itself is written to, unlike OnDeserialization which triggers after it has finished writing all the synced variables. This means that if you use OnVariableChanged from one synced variable and try to get the contents of a different synced variable, it is not guaranteed that it has been updated with the latest synced data yet.
-  
+
 ## VRC Object Sync
 This component will automatically sync the Transform (position, rotation scale) and Rigidbody (physics) of the object you put it on. It has a few special methods and properties you can access:
 

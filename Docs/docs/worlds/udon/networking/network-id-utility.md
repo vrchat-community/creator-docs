@@ -13,7 +13,7 @@ To be more specific, a network ID is simply a number assigned to a GameObject. F
 
 To deal with these potential issues and to make sure that your different scenes are in sync, we have created a network ID utility.
 
-# Network ID Import and Export Utility
+## Network ID Import and Export Utility
 
 This utility allows you to save and transfer network IDs between scenes or projects. It can be found in the Unity Editor, under `VRChat SDK/Utilities/Network ID Import and Export Utility`. 
 :::note
@@ -33,7 +33,7 @@ When you are ready to transfer network IDs from one scene to another, click on t
 
 If everything matches between your two scenes, you should see one big block with an **Accept All** button. Go ahead and click that, and you’re good to go!
 
-# Resolving Conflicts
+## Resolving Conflicts
 
 There are several conflict resolution tools within this utility.
 ![network-id-utility-22a9bcf-image3.png](/img/worlds/network-id-utility-22a9bcf-image3.png)
