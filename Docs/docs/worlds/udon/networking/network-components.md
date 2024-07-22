@@ -9,7 +9,7 @@ Special properties you can *get* from Networking:
 | Property name    | Description |
 | ---------------- | ----------- |
 | LocalPlayer      | Returns the [VRC Player API](/worlds/udon/players) object of the local player. |
-| IsInstanceOwner  | Returns `true` if the local player created the world instance. Always `false` in the SDK's "Build & Test" mode. |
+| IsInstanceOwner  | Returns `true` for the instance creator in Invite, Invite+, Friends, and Friends+ instances.<br />Always returns `false` in Group instances, Public instances, and the SDK's "Build & Test" mode. |
 | InstanceOwner    | Returns the [VRC Player API](/worlds/udon/players) object of the player who owns the instance. If the owner is currently not in the instance, this returns `null` instead. If the owner returns, it returns the instance owner again.<br />The instance owner has special moderation permissions. Instance ownership never changes.
 | IsMaster         | Returns `true` if the local player is the [instance master](/worlds/udon/networking/#the-instance-master). The master is the default owner for networked game objects.<br/>You should not use this for security or gating access to your world. Use `IsInstanceOwner` or implement a moderation system instead. |
 | Master           | Returns the [VRC Player API](/worlds/udon/players) object of the player who is the current instance master. Is always valid. |
