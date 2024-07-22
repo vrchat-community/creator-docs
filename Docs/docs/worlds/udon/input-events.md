@@ -1,8 +1,9 @@
 # Input Events
 
-You can read the input of a Player's controller in a unified way across all platforms by using Udon Input Events. These events will work correctly even when the player has remapped their controls. 
+You can read the input of a player's controller in a unified way across all platforms by using Udon Input Events. These events will work correctly even when the player has remapped their controls. 
 
-There are currently two types of events - Button and Axis, which include boolean and float values. Each event also holds a special [UdonInputEventArgs ](/worlds/udon/input-events#UdonInputEventArgs) object.
+There are currently two types of events - [Button](/worlds/udon/input-events#button-events) and [Axis](/worlds/udon/input-events#axis-events), which include boolean and float values. Each event also holds a special [UdonInputEventArgs ](/worlds/udon/input-events#UdonInputEventArgs) object. You can also use [Unity input methods and properties](/worlds/udon/input-events#unity-input-methods-and-properties) to directly read input data. 
+
 ## Button Events
 Button events include a *bool* value which is **true** when the button is pressed and **false** when it is released. 
 
@@ -65,13 +66,19 @@ The following methods and properties are available in Udon:
 - [`Input.GetJoystickNames()`](https://docs.unity3d.com/ScriptReference/Input.GetJoystickNames.html)
 - [`Input.GetKey()`](https://docs.unity3d.com/ScriptReference/Input.GetKey.html), [`Input.GetKeyUp()`](https://docs.unity3d.com/ScriptReference/Input.GetKeyUp.html), [`Input.GetKeyDown()`](https://docs.unity3d.com/ScriptReference/Input.GetKeyDown.html)
 
-:::note Menus block Unity input
+## Input Detection in VRChat Menus
 
-Udon can't detect Unity input while any of the following VRChat menus are open:
-- Any text input popup
+Udon can't detect input while any of the following VRChat menus are open:
 - Main menu
 - Quick menu (Desktop or mobile only)
+- Text input popup
 
-While the user's VRChat menu is open, `UnityEngine.Input` releases all held inputs. For example: If you hold a key and open VRChat's menu, `GetKeyUp()` returns true, even though you're still holding the key. Likewise, if hold the key and close the menu, `GetKeyDown()` returns `true`.
+When you open a VRChat menu, Udon releases all held inputs, even if you continue holding them. For example:
+- If you hold the arrow key and open the VRChat menu, `Input.GetButtonUp()` returns `true` for that key.
+- If you hold the jump button and open the VRChat menu, Udon executes `InputJump(false)`.
 
-:::
+When you close a VRChat menu, Udon presses all held **Unity** inputs. For example:
+- If you hold the right arrow key while closing the VRChat menu, `Input.GetButtonDown()` returns `true` for that key.
+- If you hold the jump button and close the VRChat menu, Udon does **not** execute `InputJump(true)`.
+
+
