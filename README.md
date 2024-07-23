@@ -4,6 +4,8 @@ This repo holds the source for the VRChat Creator Docs!
 
 ## Suggesting Edits
 
+Please read the [contribution guide](https://creators.vrchat.com/contribute/) before suggesting an edit.
+
 To suggest an edit to an existing page, you can use the "Edit this page" link at the bottom of most pages on the site. 
 
 ![Suggesting Edits link](https://github.com/vrchat-community/creator-docs/assets/737888/0dfb0fdd-0bec-4bea-9ceb-9bb752655e6d)
