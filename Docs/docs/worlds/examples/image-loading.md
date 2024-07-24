@@ -1,4 +1,4 @@
-# Image Loading
+# Image Loading Example
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
