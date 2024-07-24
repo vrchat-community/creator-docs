@@ -19,6 +19,7 @@ Compared to previous versions, Unity 2022 has changed how AI Navigation works in
 * Obstacles can be dynamic now.
 * You can use multiple [NavMesh Surfaces](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html) within your world.
 * NavMesh Surfaces, [Modifiers](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshModifier.html) and [Modifier Volumes](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshModifierVolume.html) provide more granular control over the system.
+* Area costs are now properly exported into the world data and restored when joining a world.
 
 ## Limitations in VRChat
 
