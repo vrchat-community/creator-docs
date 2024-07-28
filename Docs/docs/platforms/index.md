@@ -2,5 +2,12 @@
 title: "Platforms"
 sidebar_position: 1
 ---
-We support the development of content for Microsoft Windows, enabling experiences compatible with both Desktop and VR modes. Additionally, we provide support for Android, ensuring compatibility with devices such as Meta Quest 2 and newer, PICO 4 and newer, and HTC Vive XR Elite.
-Furthermore, VRChat Mobile Beta is available on Android, with iOS support coming soon.
+The VRChat SDK allows you to upload Worlds and Avatars for the following platforms: 
+- [Windows](/platforms/pc/)
+  - VR mode (with a compatible VR device)
+  - Desktop mode
+- [Android](/platforms/android/)
+  - Meta Quest 2 (or newer devices)
+  - PICO 4 (or newer devices)
+  - HTC Vive XR Elite
+  - Phone/Tablet with Android 10 (or above)
