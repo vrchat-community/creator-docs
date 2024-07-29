@@ -21,11 +21,11 @@ You can access your [Build Settings](https://docs.unity3d.com/Manual/BuildSettin
 ### 2. Switch Platform to Android
 
 :::caution Requires Additional Setup
-If the Android option isn't appearing, [you'll need to install Unity's Android SDK.](https://docs.unity3d.com/Manual/android-sdksetup.html)
+If the Android option isn't appearing, [you need to install Unity's Android SDK.](https://docs.unity3d.com/Manual/android-sdksetup.html)
 
 :::
 
-Click "Android" -> "Switch Platform". Unity will automatically convert assets for Android-ready, it will take a while for larger projects with lots of assets.
+Click "Android" -> "Switch Platform". Unity will reimport your assets for Android. This will take a while for larger projects with many assets.
 
 ### 3. Publish -> New Build
 
