@@ -16,9 +16,7 @@ For more details on best practices when working with dual-platform projects, rea
 
 ### 1. Open Your Build Settings
 
-:::tip 
-Pros use the hotkeys Ctrl + Shift + B.
-:::
+You can access your [Build Settings](https://docs.unity3d.com/Manual/BuildSettings.html) from Unity's main menu by going to "File" -> "Build Settings". Or you can use the keyboard shortcut `Ctrl` + `Shift` + `B`.
 
 ### 2. Switch Platform to Android
 
