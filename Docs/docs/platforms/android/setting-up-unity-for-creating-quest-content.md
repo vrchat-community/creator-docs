@@ -29,4 +29,4 @@ Click "Android" -> "Switch Platform". Unity will automatically convert assets fo
 
 ### 3. Publish -> New Build
 
-That's it! Your content is ready to check out on the Quest! Note that **you must publish**. Testing locally is not supported for Quest.
+That's it! Your content is now available on Quest! Note that you must **upload** your content to test it. You can't use the SDK's "Build and Test" feature for Android content.
