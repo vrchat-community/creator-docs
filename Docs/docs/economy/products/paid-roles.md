@@ -8,8 +8,9 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-Paid roles are the easiest way to monetize your VRChat Group. By creating and activating a paid role, users will be able to support you with VRChat Credits and become members of your Group. Paid roles are directly tied to your **Listings**, with each one being a listing that you can edit and add UdonProducts to.
+Paid roles are the easiest way to monetize your VRChat Group. By creating and activating a paid role, users will be able to support you with VRChat Credits and become members of your Group. 
 
+Paid roles are directly tied to your **Listings**. You can add [UdonProducts](/economy/products/udon) to a Listing and use UdonProducts in your world.
 ## Creating a paid role
 
 1. Navigate to [vrchat.com/home](https://vrchat.com/home)

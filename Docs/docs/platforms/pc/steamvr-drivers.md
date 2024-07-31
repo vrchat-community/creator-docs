@@ -4,7 +4,7 @@ sidebar_label: SteamVR Drivers
 # SteamVR Skeletal Hand Tracking Driver Guide
 
 :::warning
-Skeletal hand tracking is not available in VRChat yet. This documentation was published early to give the authors of drivers more time to prepare.
+Skeletal hand tracking is not fully available yet, it is currently in Open Beta.
 :::
 
 
@@ -14,7 +14,7 @@ This guide is intended to help authors of custom **SteamVR Skeletal Input Driver
 
 ### Animating Avatars
 
-For the purposes of animating an avatar’s hands, VRChat will use any skeletal data that is bound to the ```SkeletonLeftHand``` or ```SkeletonRightHand``` actions whenever they are bound to an input source and are available. In every such case, the skeletal animations for ```VRSkeletalMotionRange_WithoutController``` will be fetched from the action and stored into an intermediary. The internal representation of the intermediary will store bone *positions* as well as *rotations*, however, as of the writing of this document, the retargeting that gets applied to the avatar will *only* provide rotations. This is because, unless an avatar’s 3d hand mesh was carefully and thoughtfully designed to work well with joint positions for hands of arbitrary finger lengths
+For the purposes of animating an avatar’s hands, VRChat will use any skeletal data that is bound to the ```SkeletonLeftHand``` or ```SkeletonRightHand``` actions whenever they are bound to an input source and are available. In every such case, the skeletal animations for ```VRSkeletalMotionRange_WithoutController``` will be fetched from the action and stored into an intermediary. The internal representation of the intermediary will store bone *positions* as well as *rotations*, however, as of the writing of this document, the retargeting that gets applied to the avatar will *only* provide rotations. This is because, unless an avatar’s 3d hand mesh was carefully and thoughtfully designed to work well with joint positions for hands of arbitrary finger lengths, they can appear distorted or crunched. The downside to this is that an avatar hand of arbitrary proportions cannot be guaranteed to accurately serve as visual feedback for actions such as pinching and grabbing.
 
 ### As A Gameplay/Menu/etc Input
 
