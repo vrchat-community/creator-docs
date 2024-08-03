@@ -1,12 +1,8 @@
----
-title: "VRC Spatial Audio Source"
-slug: "vrc_spatialaudiosource"
-excerpt: "Creates a spatial audio source in VRChat"
-hidden: false
-createdAt: "2019-07-08T14:35:40.642Z"
-updatedAt: "2021-10-20T20:02:34.121Z"
----
-Use `VRC_SpatialAudioSource` to add 3D spatialization to a Unity `Audio Source`.
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# VRC Spatial Audio Source
+
+Use the `VRC_SpatialAudioSource` to add 3D spatialization to a Unity `Audio Source` component.
 
 When added, `VRC_SpatialAudioSource` will automatically add a Unity `Audio Source` component.
 
@@ -15,7 +11,7 @@ This component can be used on both avatars and worlds.
 ![image](/img/worlds/vrc_spatialaudiosource-1.png)
 ## Unity Editor Interface
 
-The component generates two [Unity Gizmos](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Gizmos.html) that show:
+The component generates two <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Gizmos.html">Unity Gizmos</UnityVersionedLink> that show:
 
 - Far
 - Near
@@ -75,7 +71,7 @@ On avatars, it is best to disable and enable the Audio Source components rather 
 
 | Property                         | Description     |
 | :-- | :-- |
-| Gain                             | An additional boost to volume. By default, world audio sources get a 10dB boost. Avatar audio sources are limited to a maximum gain of 10dB. |
+| Gain                             | An additional boost to volume (0-24 dB). By default, world audio sources get a 10dB boost. Avatar audio sources are limited to a maximum gain of 10dB. |
 | Far                              | The far radius, in meters, where volume falls off to silence. By default, it is set to 40m. Avatar audio is limited to a maximum of 40m. <br /> Far only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource. |
 | Advanced: Near                   | The near radius, in meters, where volume begins to fall off. We recommend keeping this at zero for realism and effective spatialization. Defaults to 0m. <br /> Near only overrides an Audio Source curve if you turn on the "Use Spatializer Falloff" checkbox on VRC_SpatialAudioSource.  |                                                                                                                                                 |
 | Advanced: Volumetric Radius      | An audio source is normally simulated to be a point source, however changing this value allows the source to appear to come from a larger area. This should be used carefully and is mainly for distant audio sources that need to sound "large" as you move past them. <br /> The listener should not ever get close to the radius for best results. Keep this at zero unless you know what you're doing. Defaults to 0m. <br />  The value for Volumetric Radius should always be lower than Far. |

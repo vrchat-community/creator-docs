@@ -21,6 +21,7 @@ You can access your [Build Settings](https://docs.unity3d.com/Manual/BuildSettin
 ### 2. Switch Platform to Android
 
 :::caution Requires Additional Setup
+
 If the Android option isn't appearing, [you need to install Unity's Android SDK.](https://docs.unity3d.com/Manual/android-sdksetup.html)
 
 :::

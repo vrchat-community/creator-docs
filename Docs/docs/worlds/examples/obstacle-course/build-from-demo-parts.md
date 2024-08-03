@@ -1,19 +1,15 @@
----
-title: "Obstacle Course: Build From Demo Parts"
-slug: "build-from-demo-parts"
-hidden: false
-createdAt: "2021-08-10T19:26:44.450Z"
-updatedAt: "2021-08-18T20:57:08.958Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
-# Open Starter Scene
+# Obstacle Course: Build From Demo Parts
+
+## Open Starter Scene
 The easiest way to make a new course is to use the models and prefabs we provide.
 Start by opening the scene "_WorldJam2/Scenes/Starter.unity"
 
-# Make your own Folder
+## Make your own Folder
 It's important to save anything specific to your project in a folder outside of the "_WorldJam2" folder so you can import updates without overwriting your work. We recommend you create a new folder under Assets, we'll call it "_MyProject" for this demo. We use underscores at the beginning of important folders so they show up at the top of the alphabetically-sorted file listing.
 
-# Make New Course Asset
+## Make New Course Asset
 The **ObstacleCourseAsset** holds all the special information about your Checkpoints, Player Prefabs,  Score Display, PowerUps and more. 
 1. In the **Project** window, find the "StarterCourse.asset" under "_WorldJam2/Courses" and Duplicate it.
 2. Rename the new course to something custom like "MyCourse.asset" and move it to your "_MyProject" folder.
@@ -25,7 +21,7 @@ The **ObstacleCourseAsset** holds all the special information about your Checkpo
 Now all your changes will be saved to your custom course instead of the Starter course.
 
 
-# Add Course Pieces
+## Add Course Pieces
 You can find all the available Course Pieces in the project under "Assets/_WorldJam2/Prefabs/Course Pieces".
 ![build-from-demo-parts-ebf489c-all-course-pieces.png](/img/worlds/build-from-demo-parts-ebf489c-all-course-pieces.png)
 
@@ -34,9 +30,10 @@ You can find all the available Course Pieces in the project under "Assets/_World
 
 :::note Grid Snapping
 
-Unity has many settings for aligning items to a grid - check out the manual here: [Grid Snapping](https://docs.unity3d.com/2019.4/Documentation/Manual/GridSnapping.html)
+Unity has many settings for aligning items to a grid - check out <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/GridSnapping.html">Unity's Manual</UnityVersionedLink>
 :::
-# Add Checkpoints
+
+## Add Checkpoints
 Your Start Gate, Checkpoints and Finish Gate are best added through the special Utilities window we made for this jam.
 
 1. Open the **Obstacle Jam Utilities Window** from your menu bar under "⏵Obstacle Jam Utilities / Open Window"
@@ -62,13 +59,13 @@ Select one of these checkpoints and the Scene View will move to focus on it. You
 
 6. Continue to add checkpoints around your course until you've got enough to get started. If you need to rearrange the order, you can use the up and down arrows in the "Checkpoints in Scene" list to change the order in which players should go through your gates. When you change the order this way, the Checkpoint's index is changed to match its actual order, and its name is changed to match its index.
 
-# Test Checkpoints
+## Test Checkpoints
 At this point, you've extended or changed the course, and added some checkpoints - time for a test! Open the VRChat SDK Control Panel, sign into your account, and choose "Build & Test" to test out your course!
 :::note Build and Test
 
 If you have any problems launching your world or just want to learn more about local testing, check out the [Build and Test](/worlds/udon/using-build-test) docs.
 :::
-# Add PowerUps
+## Add PowerUps
 Let's add some PowerUps to make things more interesting.
 
 1. In the Utility Window, open the "Power Ups" section. It's very similar to the Checkpoints section, with different parameters for the ones you've already placed.
@@ -84,11 +81,11 @@ You can also change the default **Move Speed** and **Jump Impulse** in this sect
 
 Move Speed sets **Walk**, **Run** and **Strafe** speeds to be all the same.
 
-# Test PowerUps
+## Test PowerUps
 
 **Build & Test** your scene again to try out your new PowerUps!
 
-# Add Hazards
+## Add Hazards
 
 1. Find the Hazard prefabs in "Assets/_WorldJam2/Prefabs/Hazards"
 ![build-from-demo-parts-5c1a72c-hazards.png](/img/worlds/build-from-demo-parts-5c1a72c-hazards.png)
@@ -104,22 +101,22 @@ Move Speed sets **Walk**, **Run** and **Strafe** speeds to be all the same.
 
 
 :::
-## Modular Hazards
+### Modular Hazards
 The hazards we've included are modular so you can easily modify their look and difficulty. Each moving hazard consists of a collider set to "Trigger" attached to an animated game object. You can add different meshes and trigger placement for a whole new hazard concept using different course pieces we've included or kit-bashing other asset packs.
 ![build-from-demo-parts-26e93e5-uoc_hazard_pic1.png](/img/worlds/build-from-demo-parts-26e93e5-uoc_hazard_pic1.png)
 
 The four types of moving hazards included give you a starting point for horizontal, vertical, spinning and swinging hazards. You can change the speed of each type by using the Animator window.
 ![build-from-demo-parts-9b460a2-uoc_hazard_pic2.png](/img/worlds/build-from-demo-parts-9b460a2-uoc_hazard_pic2.png)
 
-# Check Hazards
+## Check Hazards
 
 Time for another **Build & Test!**
 
-# Set Number of Players
+## Set Number of Players
 It's a good idea to set the **Number of Players** in your Obstacle Course world to twice as high as the **Player Capacity** in your world. Just change the number in this field in your Utility Window, and the **Object Pool** which manages **Player Objects** will automatically fill with that number of players, and it will set all those players up with the variables they need.
 ![build-from-demo-parts-574bf2e-number-of-players.png](/img/worlds/build-from-demo-parts-574bf2e-number-of-players.png)
 
-# Build & Publish
+## Build & Publish
 
 Once you're ready to invite your friends to help test your world, you can **Build & Publish** it to make it available in VRChat. You'll set your world name, take a picture to share, and you can Submit to Community Labs once you're ready for more people to see it!
 :::note Publishing & Trust Levels

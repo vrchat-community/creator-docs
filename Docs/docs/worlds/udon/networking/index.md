@@ -74,7 +74,26 @@ There are scenarios where a master player might become unresponsive for a while,
 ## Variables
 A variable is a container for a value. UdonBehaviours run Udon Programs, and you can add variables to these programs.
 
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
 ![The Variables window in an Udon Graph shows the variables you've created, and lets you edit their properties.](/img/worlds/index-e057e35-slider-program-variables.png)
+
+In the image above, I've made three different variables, and you can see that I've checked the 'synced' box for the 'sliderValue' variable. The Owner of this GameObject will be in charge of this variable value, and their changes will be sent to everyone else.
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+[SerializeField] private Slider slider;
+[SerializeField] private Text sliderValueText;
+[SerializeField, UdonSynced] private float sliderValue;
+```
+
+In the code above, I've made three different variables, and you can see that I added the 'UdonSynced' attribute for the 'sliderValue' variable. The Owner of this GameObject will be in charge of this variable value, and their changes will be sent to everyone else.
+
+</TabItem>
+</Tabs>
 
 In the image above, I've made three different variables, and you can see that I've checked the 'synced' box for the 'sliderValue' variable. The Owner of this GameObject will be in charge of this variable value, and their changes will be sent to everyone else.
 
@@ -95,7 +114,20 @@ Others: *sliderValue* updated by VRChat > OnDeserialization triggered > set **UI
 ## Events
 Events happen, and then they're gone. Unlike variables, which can only be updated by the Owner of an object, anyone can call an event on an Object. You can choose to send it to everyone, or just to the owner of that object. This is done by selecting target: All or target: Owner when sending the event.
 
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
 ![](/img/worlds/udon-networking-c764485-scne.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+SendCustomNetworkEvent(NetworkEventTarget.All, "Your custom event name");
+```
+
+</TabItem>
+</Tabs>
 
 ### Example: Bubble Gun
 ![](/img/worlds/udon-networking-33702b1-bubble-gun-shooting.png)
@@ -106,7 +138,7 @@ In our Udon Graph, we have a custom event we call "Trigger" which Plays the 'Spi
 
 To make this happen for everyone, we tie the **OnPickupUseDown** event which is triggered when someone presses Use while holding our Bubble Gun, and we use **SendCustomNetworkEvent** with a target of *All* to fire the "Trigger" event for everyone, including the Owner of the object.
 
-<Tabs>
+<Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
 
 ![Networked pickup particles in the Udon Graph](/img/worlds/udon-networking-e21b3b0-bubble-gun-graph.png)
@@ -176,7 +208,7 @@ Use this to trigger an event for every player currently in the instance, or for 
 
 ### 4. Automatic
 Some VRChat-specific objects are automatically synced. This includes:
-* Avatars: Includes their colliders, voice, and IK movement. 
+* Players: Includes their position, voice, and IK movement. 
 * VRCObjectSync: Includes the Transform and Rigidbody of the object.
 
 ## Object Ownership

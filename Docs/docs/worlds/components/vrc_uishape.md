@@ -43,8 +43,8 @@ It only has a single parameter:
 
 ### If the UI is moving when you move, press a key, or move a joystick:
 
-* Set** `Navigation: None` **on all UI elements.
-
+* Set `Navigation` to `None` on all UI elements.
+- Set `Scroll Sensitivity` to `0` if your UI has a scroll bar.
 ### If you'd like a TextField not to show VRChat's keyboard:
 
 * Add the `VRCInputFieldKeyboardOverride` component to prevent VRChat's keyboard from appearing.

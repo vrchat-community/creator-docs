@@ -1,11 +1,7 @@
----
-title: "Image Loading"
-slug: "image-loading"
-excerpt: "Display image files from the internet in your VRChat world"
-hidden: false
-createdAt: "2023-02-07T01:09:55.404Z"
-updatedAt: "2023-05-15T15:20:08.022Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Image Loading
+
 Image Loading allows you to display images from the internet in your VRChat world. When a user visits your world, the image can be downloaded from the internet and used as a texture in your materials. Here are a few examples on how Image Loading can be used:
 
 - Updating textures in your world without a re-upload.
@@ -102,6 +98,12 @@ Note that many of these fields will be invalid until the download has completed 
 - **Get TextureInfo**: The texture info given to the DownloadImage function (TextureInfo).  
 - **Get Udonbehavior**: Gets the given udonbehavior the events of the download image are being sent to (UdonBehavior).
 - **Get URL**: Gets the `VRCURL` of the image download.
+
+VRChat automatically selects the <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/TextureFormat.html">texture format</UnityVersionedLink> of the downloaded image.
+- Images with an alpha channel as loaded as RGBA32, RGB64, etc.
+- Images without an alpha channel are loaded as RGB24, RGB48, etc.
+- Greyscale images are loaded as R8, R16, etc.
+
 
 #### VRCImageDownloadState
 

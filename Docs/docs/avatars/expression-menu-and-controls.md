@@ -1,7 +1,9 @@
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
 # Expressions Menu and Controls
 
 :::tip
-You need basic knowledge about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html) to use expression parameters in your avatar's animators.
+You need basic knowledge about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink> to use expression parameters in your avatar's animators.
 :::
 
 You can control your avatar's animators in VRChat with an Expressions Menu. This allows you to play animations or change your avatar's appearance with VRChat's radial menu.

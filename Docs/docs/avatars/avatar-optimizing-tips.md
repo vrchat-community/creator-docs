@@ -65,11 +65,12 @@ For example: A 30 MB avatar *can* use 3 GB of VRAM if it uses inefficient high-r
 
 Check out [Poiyomi's Texture Optimization guide](https://www.poiyomi.com/blog/2022-10-17-texture-optimization). It's an excellent and comprehensive guide on how to optimize your avatar's textures.
 
-## Avoid expensive shaders
+## Use Optimized Shaders
 Some shaders can cause excessive time spent rendering on the GPU. Try to stick with the Unity Standard shaders, or shaders that you know perform well. If you don't know how to tell if a shader is well-optimized, that's fine! Here are some examples-- these certainly aren't all the shaders available, but are all well-made and well-optimized with a variety of features.
-  * [Xiexe's "XSToon" Unity Shaders](https://github.com/Xiexe/Xiexes-Unity-Shaders) (MIT) - A collection of PBR 'Toon' shaders for Unity.
-  * [Silent's Shaders](https://gitlab.com/s-ilent/SCSS) (MIT) - Shaders for Unity for cel shading, originally based off the discontinued CubedParadox's Flat Lit Toon, featuring a number of handy features.
-  * [Poiyomi's Toon Shader](https://github.com/poiyomi/PoiyomiToonShader/releases) (MIT) - A very robust, powerful shader with a lot of options. 
+* VRChat's SDK includes various shaders optimized for mobile devices, such as 'Standard Lite.'
+* [Xiexe's "XSToon" Unity Shaders](https://github.com/Xiexe/Xiexes-Unity-Shaders) (MIT) - A collection of PBR 'Toon' shaders for Unity.
+* [Silent's Shaders](https://gitlab.com/s-ilent/SCSS) (MIT) - Shaders for Unity for cel shading, originally based off the discontinued CubedParadox's Flat Lit Toon, featuring a number of handy features.
+* [Poiyomi's Toon Shader](https://github.com/poiyomi/PoiyomiToonShader/releases) (MIT) - A very robust, powerful shader with a lot of options. 
 
 ### Minimize Excess Shader Passes
 Speaking more technically, you want to avoid shaders that have excess shader passes. This incurs additional draw calls. This might be a bit too much for most users to worry about, so if you stick with commonly used and proven community shaders, that should suffice.

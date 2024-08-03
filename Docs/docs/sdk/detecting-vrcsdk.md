@@ -1,20 +1,17 @@
----
-title: "Detecting the VRChat SDK"
-slug: "detecting-vrcsdk"
-hidden: false
-createdAt: "2023-10-31T07:18:15.860Z"
-updatedAt: "2023-10-31T07:18:15.860Z"
----
+import CurrentUnityVersion from '@site/src/components/UnityVersionedText.js';
+import UnityVersionedLink  from '@site/src/components/UnityVersionedLink.js';
+
+# Detecting the VRChat SDK
 
 There are several ways to detect the VRChat SDK in a Unity project. This can be helpful when developing Unity tools or libraries that do not depend on the VRChat SDK, but may still want to utilize [VRChat's SDK API](/sdk/public-sdk-api).
 
-## Using Version Defines (Recommended) {#using-version-defines}
+## Using Version Defines
 
-The best way to detect the VRChat SDK is with [Version Defines in your assembly definition file][version-defines].
+The best way to detect the VRChat SDK is with <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/ScriptCompilationAssemblyDefinitionFiles.html#define-symbols">Version Defines</UnityVersionedLink> in your assembly definition file.
 
 You can define symbols in your assembly when `com.vrchat.base`, `com.vrchat.avatars`, or `com.vrchat.worlds` are installed.
 It is recommended to only use the "Expression" property to define your symbol when the installed VRChat SDK version is compatible with your tool.
-For versioning of VRChat SDK, please refer to the [Creation Companion documentation][versioning].
+For versioning of VRChat SDK, please refer to the [Creation Companion documentation](https://vcc.docs.vrchat.com/vpm/packages/#brandingbreakingbumps).
 
 Since Version Defines is a feature for UPM packages, this method only works for VPM-based SDKs, which are treated as UPM packages by Unity.
 If you also want to detect legacy `.unitypackage`-based SDKs, use legacy method below by defining the same symbol as the VRCSDK defines, or adding the following code to every file:
@@ -28,9 +25,6 @@ If you also want to detect legacy `.unitypackage`-based SDKs, use legacy method 
     #endif
 #endif
 ```
-
-[version-defines]: https://docs.unity3d.com/2019.4/Documentation/Manual/ScriptCompilationAssemblyDefinitionFiles.html#define-symbols
-[versioning]: https://vcc.docs.vrchat.com/vpm/packages/#brandingbreakingbumps
 
 ## Using Legacy VRCSDK-defined scripting symbols (Deprecated) {#using-scripting-symbols}
 

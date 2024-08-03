@@ -1,10 +1,7 @@
----
-title: "Player Collisions"
-slug: "player-collisions"
-hidden: false
-createdAt: "2020-08-20T01:33:26.505Z"
-updatedAt: "2021-06-26T18:02:40.114Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Player Collisions
+
 Udon has three ways to detect when a Player and an Object Collide - **Triggers**, **Physics**, and **Particles**.
 
 ## Triggers
@@ -16,7 +13,7 @@ If you want to detect when a player has entered or exited an area, your best bet
 - **OnPlayerTriggerExit** is called when a player's capsule exits a Trigger Collider.
 
 ![A simple Box Collider with 'Is Trigger' checked.](/img/worlds/player-collisions-6d9aaf6-trigger-collider.png)
-To use these events, add an object with a collider and check the 'Trigger' box on the collider. A Trigger Collider lets objects and players pass through it and calls events when those objects have colliders. You can learn more about [Collision in the Unity Manual](https://docs.unity3d.com/2019.4/Documentation/Manual/CollidersOverview.html).
+To use these events, add an object with a collider and check the 'Trigger' box on the collider. A Trigger Collider lets objects and players pass through it and calls events when those objects have colliders. You can learn more about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collision in Unity's documentation</UnityVersionedLink>.
 
 
 :::note Edge Cases

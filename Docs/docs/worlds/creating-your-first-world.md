@@ -1,14 +1,13 @@
 ---
-title: "Creating Your First World"
-slug: "creating-your-first-world"
-hidden: false
 sidebar_position: -2
-createdAt: "2017-09-10T16:37:57.021Z"
-updatedAt: "2023-03-30T16:55:26.082Z"
 ---
+# Creating Your First World
+
+This guide explains how to create and upload a very simple VRChat world. You'll learn the basics of setting up a Unity scene, using VRChat's Control Panel, and publishing your world.
+
 :::info
 
-Before getting started, ensure you have a [Unity project with the SDK set up](/sdk).
+Before you get started, ensure you have a [Unity project with the SDK set up](/sdk).
 
 Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) or our official forum at [ask.vrchat.com](https://ask.vrchat.com).
 

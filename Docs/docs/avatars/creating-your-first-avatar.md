@@ -6,7 +6,7 @@ sidebar_position: -1
 VRChat has tens of millions of avatars, and anyone can create them! This page explains how you can create your first VRChat avatar. There are two ways to create an avatar:
 
 - You can use an [avatar creation tool](https://hello.vrchat.com/avatar-systems) to create simple avatars without Unity.
-- You can use [Unity](https://unity.com/) and the [VRChat Software Development Kit (SDK)](https://creators.vrchat.com/sdk/) to upload a custom avatar.
+- You can use the [Creator Companion](https://vcc.docs.vrchat.com/) to install [Unity](https://unity.com/), install the [VRChat Software Development Kit (SDK)](https://creators.vrchat.com/sdk/), and to upload a custom avatar.
 
 ## Requirements
 

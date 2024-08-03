@@ -1,10 +1,7 @@
----
-title: "ASyncGPUReadback"
-slug: "asyncgpureadback"
-hidden: false
-createdAt: "2023-04-26T00:51:17.446Z"
-updatedAt: "2023-04-26T00:53:33.444Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# AsyncGPUReadback
+
 AsyncGPUReadback in Unity is a feature that allows developers to copy data, such as a specific pixel's color, from textures on the GPU to code on the CPU. This function is similar to `Texture2D.GetPixels`except it does not block tasks on the main thread as it runs asynchronously.
 
 By performing the data transfer asynchronously, Unity ensures that the process does not negatively affect the application's frame rate and overall performance. AsyncGPUReadback helps developers avoid stalling the rendering pipeline, as the data transfer occurs in the background, parallel to the main thread.
@@ -20,8 +17,8 @@ VRChat's implementation of AsyncGpuReadback employs a wrapper that calls the Uni
 - Rather than using `GetData` on the completed readback, you need to use `TryGetData`.
 
 See Unity's documentation on this feature for other shared details:  
-[Making a readback request](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Rendering.AsyncGPUReadback.Request.html)  
-[Getting data from a readback](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/Rendering.AsyncGPUReadbackRequest.html)
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Rendering.AsyncGPUReadback.Request.html">Making a readback request</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Rendering.AsyncGPUReadbackRequest.html">Getting data from a readback</UnityVersionedLink>
 
 ## Using VRCAsyncGpuReadback
 

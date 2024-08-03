@@ -1,10 +1,7 @@
----
-title: "Allowlisted World Components"
-slug: "whitelisted-world-components"
-hidden: false
-createdAt: "2018-12-13T22:11:19.350Z"
-updatedAt: "2021-09-15T23:15:28.795Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Allowlisted World Components
+
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
 :::caution Oculus Quest
 
@@ -88,17 +85,25 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 - WindZone
 
 ### Unity Components
-- [AimConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AimConstraint.html)
-- [LookAtConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-LookAtConstraint.html)
-- [ParentConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParentConstraint.html)
-- [ParticleSystemForceField](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ParticleSystemForceField.html)
-- [PositionConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-PositionConstraint.html)
-- [RotationConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-RotationConstraint.html)
-- [ScaleConstraint](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScaleConstraint.html)
+
+:::info
+
+VRChat is currently working on [VRCConstraint](https://feedback.vrchat.com/avatar-30/p/vrcconstraint-optimized-replacement-for-unity-constraints), an optimized replacement for Unity's Constraints. 
+
+:::
+
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AimConstraint.html">AimConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-LookAtConstraint.html">LookAtConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ParentConstraint.html">ParentConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ParticleSystemForceField.html">ParticleSystemForceField</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-PositionConstraint.html">PositionConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-RotationConstraint.html">RotationConstraint</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ScaleConstraint.html">ScaleConstraint</UnityVersionedLink>
 
 ## VRChat Components
 - [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)
-- [VRC_IKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [Constraints](https://docs.unity3d.com/2019.4/Documentation/Manual/Constraints.html) instead!
+- [VRC_IKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use 
+<UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/Constraints.html">Constraints</UnityVersionedLink> instead!
 - [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection)
 - [VRCPipelineManager](/sdk/vrcpipelinemanager)
 - [VRC_PortalMarker](/worlds/components/vrc_portalmarker)
