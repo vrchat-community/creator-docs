@@ -13,7 +13,7 @@ It requires a [mesh renderer component](https://docs.unity3d.com/Manual/class-Me
 | --- | --- |
 | Disable Pixel Lights | Disables real-time pixel shaded point and spot lighting. Pixel shaded lights will fall-back to vertex lighting when this is enabled. |
 | Turn Off Mirror Occlusion | Disables occlusion culling on the mirror. Enable this if you see objects flickering in the mirror. |
-| Reflect Layers | Only objects on the selected layers will be rendered in the mirror. Objects on the Water layer are never rendered in mirrors. |
+| Reflect Layers | Only objects on the selected layers will be rendered in the mirror. <br />⚠ Objects on the `Water` layer are never rendered in mirrors. |
 | Mirror Resolution | Rendering resolution of the mirror (per eye in VR). Auto renders at the same resolution as the user's HMD or monitor up to the maximum of 2048x2048. |
 | Maximum Antialiasing | The maximum level of MSAA applied to the image rendered in the mirror. Can be overruled by client graphics settings. |
 | Custom Shader | The mirror will use this shader instead of the default shader if one is provided. |
@@ -25,3 +25,9 @@ Mirrors can drastically reduce the framerate of your VRChat world. To avoid this
 - Keep mirrors off by default. Enable them automatically when users get near, or allow users to enable them manually.
 - Don't reflect every layer, or allow users to choose which layers to reflect. ("High quality" and "low quality" mirrors.)
 - If your users still experience performance issue, reduce the mirror resolution.
+
+:::tip
+Having the least amount of Reflect Layers set on a Mirror is recommended, as anything shown in Mirrors are rendered twice.
+
+For a minimal layer setup, `MirrorReflection` is required to see the local player, and `Player` is required to see other players. Any other layers should be considered based on how your world is set up and what you want to be visible in the mirror, such as pickups and the environment. To learn more about what each Reflect Layer is used for, see [Unity Layers in VRChat](../layers.md).
+:::
