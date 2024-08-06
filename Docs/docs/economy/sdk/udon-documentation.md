@@ -1,7 +1,10 @@
 ---
-title: Udon Documentation
 sidebar_position: 4
 ---
+
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Udon Documentation
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
@@ -14,7 +17,7 @@ This page documents all Udon types, methods, and events related to the VRChat Cr
 VRChat's SDK contains objects types to support the management of Udon products that your customers can purchase.
 
 ### UdonProduct
-UdonProduct is a [ScriptableObject](https://docs.unity3d.com/2019.4/Documentation/Manual/class-ScriptableObject.html) that you can create in your project. It represents a product from your store, allowing you to interact with it in Udon.
+UdonProduct is a <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ScriptableObject.html">ScriptableObject</UnityVersionedLink> that you can create in your project. It represents a product from your store, allowing you to interact with it in Udon.
 A world will only receive events based on products that are being used within it, therefore it is necessary to reference a product's UdonProduct equivalent in any UdonBehaviour at least once before uploading.
 
 For example, even if you don't directly use the UdonProducts anywhere, you would need to have an array of UdonProducts on at least one UdonBehaviour somewhere in the scene to receive OnPurchaseConfirmed, OnPurchaseExpired or OnPurchasesLoaded events for those products across all UdonBehaviours.

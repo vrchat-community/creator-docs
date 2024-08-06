@@ -1,9 +1,11 @@
 ---
-title: "Player API"
-excerpt: "Use Udon to retrieve information about players in your world"
 sidebar_position: 1
 ---
-You can interact with Players in your world through the VRCPlayerApi. Each Player has a VRCPlayerApi Object, and your world fires the OnPlayerJoined / OnPlayerLeft events on any UdonBehaviours that listen for them when a player joins or leaves.
+# Player API
+
+You can use Udon to retrieve information about players in your world instance.
+
+Udon interacts with Players through the VRCPlayerApi. Each Player has a VRCPlayerApi Object, and your world fires the OnPlayerJoined / OnPlayerLeft events on any UdonBehaviours that listen for them when a player joins or leaves.
 
 This page includes info on using some general nodes. Since there are so many things you can do with the VRCPlayerApi object, we've grouped some node info together on the following pages:
 

@@ -1,13 +1,9 @@
----
-title: Animator Parameters
-slug: animator-parameters
-hidden: false
-createdAt: 2020-08-05T222023-04-07T14:38:34.913Z:30:32.065Z
-updatedAt: 2023-04-07T14:38:34.913Z
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Animator Parameters
 :::caution Unity Knowledge Required
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
+This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.
 
 :::
 

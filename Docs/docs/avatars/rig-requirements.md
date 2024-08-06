@@ -15,7 +15,7 @@ When exporting your rig from your 3D editor of choice, ensure your coordinate se
 
 For Blender, ensure that your rest X rotation is 90 degrees.
 ### Humanoid Rig
-Unity will flag your humanoid rig configuration if it does not meet the Mecanim requirements for a humanoid. Please read and be familiar with the [Unity Documentation on configuring avatars](https://docs.unity3d.com/2019.4/Documentation/Manual/ConfiguringtheAvatar.html).
+Unity will flag your humanoid rig configuration if it does not meet the Mecanim requirements for a humanoid. Please read and be familiar with the [Unity Documentation on configuring avatars](https://docs.unity3d.com/Manual/FBXImporter-Rig.html).
 
 :::danger Humanoid avatar must have head, hands and feet bones mapped.
 

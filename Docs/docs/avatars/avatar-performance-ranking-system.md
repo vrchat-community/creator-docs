@@ -4,7 +4,7 @@ The Avatar Performance Ranking System allows you to see how much a user's avatar
 
 This system is provided to inform users what is likely the most performance-heavy components on their avatars, and offer basic advice on what to look into when optimizing their avatar.
 
-It is also used to drive the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system, which is a way for users to decide what avatars they wish to show based on their Performance Rank.
+It is also used to drive the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system, which is a way for users to decide what avatars they wish to show based on their Performance Rank.
 
 **This system is not meant to be an end-all-be-all authority on avatar performance**, but is a good general guide to indicate if an avatar needs a bit more work to be performant.
 :::danger Perf Ranks are not the final word!
@@ -54,7 +54,7 @@ When you click the **Avatar Stats** button, you'll get a screen pop up with the 
 
 The color of the text matches the rank that the particular stat "drags" the rank down to.
 
-You'll also see a "before and after" in the form of the "Original" and "Perf Filtered" lines. If you're using the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system, you can see what the stats were before and after the system removed components. In the case of the Minimum Displayed Performance Rank system blocking an avatar for performance reasons, you'll only see the original stats.
+You'll also see a "before and after" in the form of the "Original" and "Perf Filtered" lines. If you're using the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system, you can see what the stats were before and after the system removed components. In the case of the Minimum Displayed Performance Rank system blocking an avatar for performance reasons, you'll only see the original stats.
 
 In the example given above, Lights and Particle Systems are disabled due to exceeding the limit defined. Because Particle Systems employ at least one material each, the count of materials from Particle Systems is also subtracted from the pre-filtered avatar. 
 
@@ -64,7 +64,7 @@ Here is a listing of all of the statistics that the system looks at and their de
 
 Bolded stats will cause the avatar to be fully blocked if they exceed the Minimum Displayed Performance Rank. If other stats (except for bounds) exceed the Minimum Displayed Performance Rank the avatar will only be partially blocked. The avatar will be shown with any components related to the exceeded stats will be removed. 
 
-For example with the Minimum Displayed Performance Rank set to Poor an avatar with 9 Trail Renderers (Very Poor) will be displayed with all of its Trail Renderers removed. Refer to [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) for more information.
+For example with the Minimum Displayed Performance Rank set to Poor an avatar with 9 Trail Renderers (Very Poor) will be displayed with all of its Trail Renderers removed. Refer to [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) for more information.
 
 | Avatar Quality                     | Quality Description                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -113,7 +113,7 @@ The SDK warns you of this and will require that you fix it before you upload.
 :::
 
 ## PC Limits
-On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor". **Currently, no avatars will be blocked by default due to performance ranking on PC, unless you've enabled the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#section-minimum-displayed-performance-rank) system.**
+On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor". **Currently, no avatars will be blocked by default due to performance ranking on PC, unless you've enabled the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system.**
 
 Triangles are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 triangles, the avatar will be marked as Very Poor immediately.
 
@@ -217,9 +217,9 @@ The following categories are disabled on Android since they can never appear on 
 These values may still appear in the in-app stats readout, but will always be zero.
 
 ## Minimum Displayed Performance Rank
-You can choose to manage avatars based on their Avatar Performance Rank. This option is available in the "Performance Options" menu, accessible as a button in the top-right of the Safety tab in the main menu.
+You can choose to manage avatars based on their Avatar Performance Rank. This option is available in the [Performance Options](https://docs.vrchat.com/docs/vrchat-configuration-window) menu, accessible as a button in the top-right of the Safety tab in the main menu.
 
-When you choose a Performance Rank in this menu, all avatars that are below that level will have their components/display managed as described below.
+When you choose a Performance Rank in VRChat's menu, all avatars that are below that level will have their components/display managed as described below.
 
 | Parameter                                                                        | Description                                                                              |
 | :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |

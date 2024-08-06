@@ -1,10 +1,10 @@
 ---
-title: "Cross-Platform Setup"
-slug: "cross-platform-setup"
 sidebar_position: 0
-createdAt: "2019-04-09T22:29:12.157Z"
-updatedAt: "2022-10-26T22:10:52.879Z"
 ---
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# Cross-Platform Setup
+
 Setting up a cross-platform world or avatar is actually quite straightforward! In short, all you have to do is use a duplicate project to build an Android version of the asset, and upload it to the same content ID as the VRChat PC asset. The client will manage which version it needs to download. 
 
 If you need a bit more detail on how to do this properly (and easily), here's a short guide.
@@ -32,14 +32,9 @@ Open your Quest project in Unity. Since it is a duplicate, you shouldn't have an
 ![cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png](/img/cross-platform-setup-dfca62a-VRChat_QuestContent_QuickStart.png)
 
 There's some important notes here:
-- [You need to install Unity's Android SDK](https://docs.unity3d.com/2019.4/Documentation/Manual/android-sdksetup.html). Otherwise the option won't pop up.
+- You need to install <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/android-sdksetup.html">Unity's Android SDK</UnityVersionedLink>. Otherwise the option won't pop up.
 - Although you *can* swap back and forth between Windows and Android, **you probably don't want to do this.** It changes files around, you probably want to maintain a scaled-back version of your world for Quest, and...
 - It can take a **significant** amount of time to swap to the Android platform. Thankfully, if you maintain two separate projects, you only do this once. If your project is huge or has dozens of avatars, you'll probably want to just export the content you want as Prefabs or UnityPackages, and then create an empty Android project from scratch.
-:::note Local Cache Server
-
-You can reduce the time it takes to swap platforms by using Unity's Cache Server, which you can run locally. [Read more about the cache server here](https://docs.unity3d.com/2019.4/Documentation/Manual/CacheServer.html). Keep in mind this can take up a significant amount of disk space.
-
-:::
 
 ## Fine-tuning and Optimization
 Now that you've got two separate projects set up appropriately, you'll need to start optimizing. **You cannot skip this.** Quest is a powerful headset, but not nearly as powerful as a typical VR-ready PC. You'll need to check out our [Quest Content Optimization](/platforms/android/quest-content-optimization) page to see what you need to do. For worlds this means baking lighting, lowering geometry complexity, avoiding transparency, and lowering texture resolution. For avatars, this means removal of excess components, excess bones, lowering geometry complexity, avoiding transparency, and reducing texture size.

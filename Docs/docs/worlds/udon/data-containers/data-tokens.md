@@ -83,6 +83,12 @@ DataToken _String = "value";
 DataToken _Bool = true;
 ```
 
+:::warning
+
+Don't use `nameof()` to implicitly create DataTokens in UdonSharp, or you may run into errors.
+
+:::
+
 ### Udon Graph
 
 In Udon Graph, you'll need to use the `DataToken Implicit` or `DataToken Constructor` nodes to create a DataToken with the value inside.  

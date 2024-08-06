@@ -145,7 +145,7 @@ Fired when a particle collides with a player's capsule, assuming that Particle S
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a player respawns using their menu.
+Fired when the local player respawns by clicking "Respawn" in their menu.
 
 ### OnScreenUpdate
 `Event_OnScreenUpdate`

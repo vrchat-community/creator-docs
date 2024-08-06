@@ -8,7 +8,7 @@ updatedAt: "2024-02-26T18:00:00.000Z"
 ---
 # Byte and Bit Operations
 
-:::caution
+:::info
 
 This page describes lower level concepts of working with binary data and is intended for advanced creators.
 :::

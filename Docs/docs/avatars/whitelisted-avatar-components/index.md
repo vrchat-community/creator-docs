@@ -1,16 +1,20 @@
 ---
 slug: "whitelisted-avatar-components"
 ---
-# Allowed Avatar Components
 
 import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
-Here is a list of the components permitted on avatars. Any component not on this list will be removed at runtime, and may prevent upload.
+# Allowed Avatar Components
 
-Custom scripts/components are not permitted on avatars, and will be removed at upload and runtime.
-:::caution Oculus Quest
+Your can add features to your avatar by <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/UsingComponents.html">adding components</UnityVersionedLink> to it. However, not all components can be used in VRChat. 
 
-The Quest version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
+- Any component on the following list can be used in VRChat.
+- Other components or custom scripts won't work in VRChat and may stop you from uploading your avatar.
+
+:::info
+
+The Android version of VRChat has [additional restrictions](/platforms/android/quest-content-limitations#components).
+
 :::
 ## VRChat
 
@@ -31,15 +35,7 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animation.html">Animation</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animator.html">Animator</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AudioSource.html">AudioSource</UnityVersionedLink>
-- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Camera.html">Camera</UnityVersionedLink>
-  - For avatars worn by the local user, Camera components are fully whitelisted.
-  - For avatars worn by remote users, the following rules apply:
-    - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
-      - You can use animations to enable Camera components.
-    - If the local user and remote user are friends, Camera components are not removed.
-      - Note that becoming friends with a user does not automatically reload their avatar.
-    - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
-    - If neither of the above is true, Camera components are removed and cannot be enabled.
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Camera.html">Camera</UnityVersionedLink> (See [notes below](#cameras-on-avatars))
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Cloth.html">Cloth</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collider</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-FlareLayer.html">FlareLayer</UnityVersionedLink>
@@ -60,15 +56,24 @@ The Quest version of VRChat has some exceptions to this list. Check [here](/plat
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-TrailRenderer.html">TrailRenderer</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Transform.html">Transform</UnityVersionedLink>
 
+### Cameras on Avatars
+
+For avatars worn by the local user, Camera components are fully whitelisted. For remote users, the following rules apply:
+    - In all cases, the Camera components of remote users are disabled when the avatar is loaded.
+      - You can use animations to enable Camera components.
+    - If the local user and remote user are friends, Camera components are not removed.
+      - Note that becoming friends with a user does not automatically reload their avatar.
+    - If the local user has selected "Show Avatar" for the remote user in VRChat's quick menu, Camera components are not removed.
+    - If neither of the above is true, Camera components are removed and cannot be enabled.
+
 ## [Root Motion (FinalIK)](http://www.root-motion.com/finalikdox/html/index.html)
-:::caution FinalIK Components Modified
 
 VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
 
 We do not directly support or test custom FinalIK implementations on avatars. However, they *should* work fine, and if we must intentionally break one or more of these, we will try our best to inform creators. 
 
 If you discover a bug, please [let us know](https://feedback.vrchat.com).
-:::
+
 - [Aim IK](http://www.root-motion.com/finalikdox/html/page1.html)
 - [Biped IK](http://www.root-motion.com/finalikdox/html/page4.html)
 - [CCDIK](http://www.root-motion.com/finalikdox/html/page5.html)
@@ -79,9 +84,9 @@ If you discover a bug, please [let us know](https://feedback.vrchat.com).
 - [Rotation Limits](http://www.root-motion.com/finalikdox/html/page14.html)
 - Shoulder Rotator
 - Twist Relaxer
-- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)
+- [VRIK](http://www.root-motion.com/finalikdox/html/page16.html)[^2]
 
- Using this script on a humanoid avatar will break it.
+[^2]: Using this script on a humanoid avatar will break it.
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 :::danger Dynamic Bone Deprecated

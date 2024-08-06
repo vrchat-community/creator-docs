@@ -14,7 +14,7 @@ It requires a [mesh renderer component](https://docs.unity3d.com/Manual/class-Me
 | Disable Pixel Lights | Disables real-time pixel shaded point and spot lighting. Pixel shaded lights will fall-back to vertex lighting when this is enabled. |
 | Turn Off Mirror Occlusion | Disables occlusion culling on the mirror. Enable this if you see objects flickering in the mirror. |
 | Reflect Layers | Only objects on the selected layers will be rendered in the mirror. Objects on the Water layer are never rendered in mirrors. |
-| Mirror Resolution | Rendering resolution of the mirror (per eye in VR). Auto renders at the same resolution as the user's HMD or monitor up to the maximum of 2048x2048. |
+| Mirror Resolution | Rendering resolution of the mirror (per eye in VR). Auto renders at the same resolution as the user's HMD or monitor up to the maximum of 2048x2048[^1]. |
 | Maximum Antialiasing | The maximum level of MSAA applied to the image rendered in the mirror. Can be overruled by client graphics settings. |
 | Custom Shader | The mirror will use this shader instead of the default shader if one is provided. |
 | Camera Clear Flags | Specifies the CameraClearFlags that the mirror will use to clear the background before rendering. The default "From Reference Camera" will use the same flags as the camera rendering the mirror plane. |
@@ -25,3 +25,5 @@ Mirrors can drastically reduce the framerate of your VRChat world. To avoid this
 - Keep mirrors off by default. Enable them automatically when users get near, or allow users to enable them manually.
 - Don't reflect every layer, or allow users to choose which layers to reflect. ("High quality" and "low quality" mirrors.)
 - If your users still experience performance issue, reduce the mirror resolution.
+
+[^1]: Displays with a resolution higher than 2048px suffer from reduced mirror quality. Users can switch their mirror resolution to 'Unlimited' in VRChat's settings. This improves quality, but reduces VRChat's performance.

@@ -155,10 +155,10 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 `Parameter` - Prefix used to provide multiple parameters to the avatar controller. In the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
 
 `{parameter}_IsGrabbed`  
- [Bool] Are the bones currently being grabbed.
+ [Bool] Whether the bones currently being grabbed
 
 `{parameter}_IsPosed`  
- [Bool] Are the bones been posed.
+ [Bool] Whether the bones been posed after being grabbed
 
 `{parameter}_Angle`  
 [Float] Range of 0.0-1.0. Normalized 180 angle made between the end bone's is from its original rest position. In other words, if you twist a bone completely opposite of its start direction, this param will have a value of 1.0.

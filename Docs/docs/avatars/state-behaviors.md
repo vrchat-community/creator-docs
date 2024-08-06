@@ -1,13 +1,10 @@
----
-title: "State Behaviors"
-slug: "state-behaviors"
-hidden: false
-createdAt: "2020-08-05T22:32:59.268Z"
-updatedAt: "2023-02-08T15:38:26.170Z"
----
+import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
+
+# State Behaviors
+
 :::caution Unity Knowledge Required
 
-This document is written with the assumption that you know a bit about [Unity Animators](https://docs.unity3d.com/2019.4/Documentation/Manual/class-AnimatorController.html).
+This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.
 :::
 When you've got a specific state selected in the Animator view, you'll be able to add State Behaviors. They're a bit like components for states. They do different things. Try adding them, and you'll see what they can do!
 
@@ -17,7 +14,7 @@ State behaviors *should* run no matter how long the state machine remains in the
 
 :::caution
 
-The term "should" is deliberately used here, as in the [Unity documentation](https://docs.unity3d.com/2019.4/Documentation/Manual/StateMachineBehaviours.html) does not define any guarantee that state behaviors will execute given very small transition or state durations.
+The term "should" is deliberately used here, as in the <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/StateMachineBehaviours.html">Unity documentation</UnityVersionedLink> does not define any guarantee that state behaviors will execute given very small transition or state durations.
 
 If you wanted to be **completely** safe, ensure the total time spent in the state containing the state behavior and any transitions directly to that state is a minimum of 0.02 seconds-- although in practice, this doesn't seem to be required.
 

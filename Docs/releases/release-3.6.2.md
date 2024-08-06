@@ -1,7 +1,7 @@
 ---
 slug: release-3-6-2
 date: 2024-07-23
-title: Release 3.6.2 Beta 1
+title: Release 3.6.2 Beta 2
 authors: [momo]
 tags: [release]
 ---
@@ -41,6 +41,11 @@ This update adds AI Navigation, improves Avatar editor panels, implements new Pl
 
 - Fixed issue with broken input events in ClientSim, addressing [this Canny issue](https://feedback.vrchat.com/admin/feedback/sdk-bug-reports/p/sdk-361-broke-inputgetkey?boards=sdk-bug-reports).
 - Fixed world uploads failing in some cases when using inline sprites in TextMeshPro labels.
+
+## Fixes between 3.6.2-beta.1 and 3.6.2-beta.2
+
+- Improved stability of the new editor panels.
+- Fixed avatar expression menu missing expression parameters between SDK upgrades and restarts.
 
 ## Known Issues
 

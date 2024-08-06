@@ -1,7 +1,11 @@
 ---
-title: "Mobile Best Practices"
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Mobile Best Practices
+
 Making your VRChat worlds cross-platform is a great way of allowing more players to enjoy it. Most VRChat players are on Android, so it’s worth creating an Android of your VRChat world.
 
 However, mobile players and VR players will experience your world quite differently! In this guide, we’ll explain a few ways to make your mobile VRChat world more comfortable and enjoyable.
@@ -30,36 +34,56 @@ For example: Existing tools like [EasyQuestSwitch](https://vcc.docs.vrchat.com/v
 
 When an Android player joins your world, you may want to tweak certain aspects of it. Players on an Android mobile device won’t have access to VR controllers, just like VR players won’t have access to a touchscreen.
 
-You can use [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect the input method directly.
+Use [OnInputMethodChanged](/worlds/udon/input-events/#oninputmethodchanged) to detect whenever the player's input method has changed. For example:
 
-```
-public bool IsUsingPhoneOrTablet()
-{
-    return InputManager.GetLastUsedInputMethod() == VRCInputMethod.Touch;
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
+![A screenshot of an Udon Graph. The OnInputMethodChanged event is used to branch the execution based on whether the inputMethod parameter is Touch.](/img/worlds/OnInputMethodChanged.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+public override void OnInputMethodChanged(VRCInputMethod inputMethod)  
+{  
+    if (inputMethod == VRCInputMethod.Touch)  
+    {  
+        // Run code for touch input  
+    }  
+    else  
+    {  
+        // Run code for non-touch input  
+    }  
 }
 ```
 
-Alternatively, you can also use [UdonSharp](https://udonsharp.docs.vrchat.com/) to detect Android players in your world.
+</TabItem>
+</Tabs>
 
-```
-public bool IsUsingPhoneOrTablet()
-{
-  #if UNITY_ANDROID
-  return !VRC.SDKBase.Networking.LocalPlayer.IsUserInVR();
-  #endif
-  return false;
+You can also use GetLastUsedInputMethod to detect the input method at any time. For example:
+
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
+![A screenshot of an Udon Graph. GetLastUsedInputMethod is used to branch the execution based on whether the inputMethod parameter is Touch.](/img/worlds/GetLastUsedInputMethod.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+if (VRC.SDKBase.InputManager.GetLastUsedInputMethod() == VRCInputMethod.Touch)  
+{  
+    // Run code for touch input
+}  
+else  
+{  
+    // Run code for non-touch input  
 }
 ```
 
-Here’s how it works:
-
-- Use [conditional compilation](https://docs.unity3d.com/2019.4/Documentation/Manual/PlatformDependentCompilation.html) to detect the current platform
-- Use [Networking.LocalPlayer](https://creators.vrchat.com/worlds/udon/players/) to retrieve data about the local player
-- Use [IsUserInVR](https://creators.vrchat.com/worlds/udon/players/#isuserinvr) to check if the local player is in VR.
-
-If the local player is on Android but not in VR, that means that they’re playing on an Android phone or tablet.
-
-You can also used [GetLastUsedInputMethod](https://creators.vrchat.com/worlds/udon/input-events/#oninputmethodchanged) to detect input method directly.
+</TabItem>
+</Tabs>
 
 ## 3. Optimize Your World for Android
 

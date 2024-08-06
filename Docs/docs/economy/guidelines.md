@@ -38,8 +38,8 @@ Please note that the Creator Economy is a growing and evolving system. These rul
 
 #### Worlds ####
 1. Worlds cannot promote lotteries, raffles, or other "games of chance" involving real currency.
-	1. Any systems integrating with real-world currency in methods of gambling, casino-style events, or with real-world benefits are strictly forbidden.
-	2. "Arcade-like" uses, where VRChat Credit payments are tied to (even when randomized) rewards in a VRChat world, are permitted.
+	1. Any systems integrating with **real-world currency** in methods of gambling, casino-style events, or with real-world benefits are strictly forbidden.
+	2. "Arcade-like" or "Gacha" uses, where **VRChat Credit payments** are tied to (randomized) rewards in a VRChat world, are permitted.
 
 2. You cannot give a user a strictly negative experience in your world without having made a purchase.
 	1. For example, don't drop users into a hole if they haven't paid. All users should have a comfortable experience when entering your world.
