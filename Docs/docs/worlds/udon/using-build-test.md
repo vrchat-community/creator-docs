@@ -1,15 +1,9 @@
----
-title: "Using Build & Test"
-slug: "using-build-test"
-excerpt: "Learn how to get set up to create Udon-powered Worlds in VRChat."
-sidebar_position: 1
-hidden: false
-createdAt: "2020-08-21T19:34:22.325Z"
-updatedAt: "2023-02-16T22:38:16.295Z"
----
-:::note Prerequisites
+# Using Build & Test
 
-Before you read this page, you should read [What is Udon](/worlds/udon) and [Getting Started with Udon](/worlds/udon/getting-started-with-udon).
+:::note
+
+Before you read this page, you should read [What is Udon?](/worlds/udon/#what-is-udon)
+
 :::
 
 <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLe9XHNvXcouQjg5GULWGLj1tMzeythnQi%26start%3D0&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8yaQY0arCnc&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8yaQY0arCnc%2Fhqdefault.jpg&key=f2aa6fc3595946d0afc3d76cbbd25dc3&type=text%2Fhtml&schema=youtube" width="854" height="480" scrolling="no" title="YouTube embed" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="true"></iframe>

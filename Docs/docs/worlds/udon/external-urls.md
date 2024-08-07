@@ -1,11 +1,3 @@
----
-title: "External URLs"
-slug: "external-urls"
-hidden: false
-createdAt: "2024-02-07T01:23:08.000Z"
-updatedAt: "2024-04-25T11:00:00.000Z"
----
-
 # External URLs
 Udon can use external URLs to load remote content. URLs must be wrapped in a [VRCUrl](#vrcurl) object. Users can enter URLs into `VRCUrlInputField` components at runtime, and world creators can provide pre-defined VRCUrls with their uploaded worlds.
 

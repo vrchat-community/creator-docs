@@ -1,11 +1,5 @@
----
-title: "String Loading"
-slug: "string-loading"
-excerpt: "Load text files from the internet in your VRChat worlds"
-hidden: false
-createdAt: "2023-02-07T01:10:57.067Z"
-updatedAt: "2023-03-26T00:35:05.784Z"
----
+# String Loading
+
 String Loading allows you to download text files from the internet and use them in your VRChat world. You can either use the `DownloadString` script included in the SDK, or you can make your own script using the new `VRCStringDownloader.LoadUrl` function.
 
 - Your text files can be in any format, such as `.txt` or `.json`.

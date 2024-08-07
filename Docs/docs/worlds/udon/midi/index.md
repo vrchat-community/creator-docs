@@ -1,10 +1,5 @@
----
-title: "Midi in Udon"
-excerpt: "Use midi data in your worlds, from midi files, or in real-time"
-sidebar_position: 1
-createdAt: "2021-02-26T21:32:09.385Z"
-updatedAt: "2023-02-22T21:48:25.610Z"
----
+# Midi in Udon
+
 Since the 1980s, MIDI has connected musical instruments in imaginative ways. We've included it in VRChat so you can build worlds that respond to real-time instruments and prerecorded performances. 
 
 >Read more about [MIDI on Wikipedia](https://en.wikipedia.org/wiki/MIDI).
