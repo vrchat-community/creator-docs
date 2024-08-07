@@ -1,11 +1,6 @@
----
-title: "Special Nodes"
-slug: "special-nodes"
-hidden: false
-createdAt: "2020-03-20T20:08:24.110Z"
-updatedAt: "2021-09-13T22:30:33.143Z"
----
-These are "Special" nodes. This includes flow control and special Udon features.
+# Special Nodes
+
+The "Special" category contains nodes for custom variables, custom events, flow control, and communicating with other UdonBehaviours.
 
 ### Block
 Splits flow into multiple sections. One flow input, multiple flow output. Executes all right-side flow slots from top to bottom.
@@ -27,7 +22,9 @@ Provides a reference to the GameObject that the UdonBehavior is a component of.
 ### Event Custom
 Inputs: `name` - `System.String`
 
-Recieves a custom event. Custom event name must be typed, cannot be provided via node input.
+A a custom event that can be executed by [UdonBehaviour nodes](#udonbehaviour-nodes). 
+
+You must name the custom event by typing its name in the Graph. The event name cannot be changed while your program is running.
 
 ### For
 Inputs: `start`, `end`, `step` - `System.Int32`
@@ -69,27 +66,44 @@ Inputs: `Bool` - `System.Boolean`
 Executes the flow of `Body` while `Bool` is true. If `Bool` is false, executes `Exit` flow.
 
 ## UdonBehaviour Nodes
-UdonBehaviours have a few special nodes:
+Udonbehaviour nodes allow your programs to interact with other UdonBehaviours - either locally, with a delay, or over the network.
+
+:::note UdonSharp
+
+The nodes below only work for `public` events. If you use the Udon Graph, your custom events are always `public`. If you use UdonSharp, make sure to use `public` instead of `private` events here!
+
+:::
 
 ### SendCustomEvent
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String
 
-Runs the event 'eventName' on the target UdonBehaviour. If instance is left blank, it points to one of its own events.
+Runs the event 'eventName' on the target UdonBehaviour. If `instance` is left blank, it points to one of its own events.
 
 ### SendCustomEventDelayedFrames
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delayFrames` - int, `eventTiming` - EventTiming
 
-Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
+Runs the event `eventName` on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
+
+:::note Timing issues
 
 Note that [Unity's frame count](https://docs.unity3d.com/ScriptReference/Time-frameCount.html) is based on the Update event. If you call SendCustomEventDelayedFrames [before the Update event](/worlds/udon/event-execution-order), such as [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) or an [Input event](/worlds/udon/input-events), the delay may be 1 frame shorter than expected.
 
+:::
+
 ### SendCustomEventDelayedSeconds
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delaySeconds` - float, `eventTiming` - EventTiming
+
 Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delaySeconds`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected.
 
-If `delaySeconds` is zero, the event will be executed in the same frame *or* the next frame. (See [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes#sendcustomeventdelayedframes), just above.)
+If `delaySeconds` is zero, the event will be executed in the same frame *or* the next frame (see [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes#sendcustomeventdelayedframes) above).
 
 ### SendCustomNetworkEvent
 Inputs: `instance` - `UdonBehaviour`, `target` - NetworkEventTarget, `eventName` - String
 
-Runs the event 'eventName' on the target UdonBehaviour - either on the Owner of the target if 'Owner' is selected as the target, or on Everyone in the instance if 'all' is selected.
+Runs the event `eventName` on the target UdonBehaviour - either on the Owner of the target if 'Owner' is selected as the target, or on Everyone in the instance if 'all' is selected.
+
+:::note Local only events
+
+If the name of the event starts with an underscore (`_YourEventName`), it is considered a [local-only event](/worlds/udon/networking/#local-only-events) and will **not** be executed.
+
+:::

@@ -1,10 +1,5 @@
----
-title: "Avatar Events"
-slug: "avatar-events"
-hidden: false
-createdAt: "2023-06-22T01:23:45.678Z"
-updatedAt: "2023-07-19T01:23:45.678Z"
----
+# Avatar Events
+
 These events allow Udon to react to changes regarding player avatars.
 
 ## OnAvatarChanged

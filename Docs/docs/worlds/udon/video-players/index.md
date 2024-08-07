@@ -1,10 +1,13 @@
----
-title: "Video Players"
-excerpt: "Play videos in your VRChat world"
-sidebar_position: 1
-createdAt: "2020-08-28T19:47:50.947Z"
-updatedAt: "2023-08-14T09:05:14.280Z"
----
+# Video Players
+
+You can add video players to your VRChat world with the SDK's `VRCAVProVideoPlayer` or `VRCUnityVideoPlayer`.
+
+:::note top Community prefabs
+
+Are you looking for community-created video player prefabs? Try [VideoTXL](https://github.com/vrctxl/VideoTXL), [ProTV](https://gitlab.com/techanon/protv), or [USharpVideo](https://github.com/MerlinVR/USharpVideo).
+
+:::
+
 ## Using the Prefabs
 
 The easiest way to put a Video Player in your Udon world is by using one of the Prefabs, which you can find in `Packages/VRChat SDK - Worlds/Samples/UdonExampleScene/Prefabs/VideoPlayers`.

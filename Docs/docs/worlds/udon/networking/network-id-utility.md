@@ -1,10 +1,4 @@
----
-title: "Network ID Utility"
-slug: "network-id-utility"
-hidden: false
-createdAt: "2022-10-26T00:03:35.308Z"
-updatedAt: "2022-10-26T00:03:35.308Z"
----
+# Network ID Utility
 A network ID is the identifier that is used to determine which object is which when it comes to networking. In most cases, you don’t need to worry about this, but it can come up when working with cross-platform worlds where players are technically loading two different versions of your world. 
 
 Network IDs are the link between those different versions, to make sure that everybody is seeing the same thing and that the data is being transmitted to the correct objects.

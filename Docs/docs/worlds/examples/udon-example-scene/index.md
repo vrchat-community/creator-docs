@@ -21,7 +21,7 @@ If you'd like to use the VRCWorld prefab in your own Unity scene, you can find i
 This is available as a prefab, and has a program to switch a user into an avatar when they Interact with the pedestal, which is the default behavior of the prefab.
 
 ### VRCChair3
-This is available as a prefab, and has a program to sit a player in a station when they Interact with it, and logs their displayName when they enter or exit.
+This is available as a prefab, and has a program called `StationGraph`. It seats a player in the station when they Interact with it, and logs their display name when they enter or exit.
 
 ### MirrorSystem
 This object has a **ToggleGameObject** program on it which uses the Interact event to flip a target object between Active/Inactive. In this case, it controls a VRCMirror object which is a child of this one.
