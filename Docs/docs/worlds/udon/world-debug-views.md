@@ -30,15 +30,15 @@ You can hold the Tab key to activate the mouse cursor and use the buttons on the
 
 ![world-debug-views-0db830e-VRChat_pZdYm9u4ox.png](/img/worlds/world-debug-views-0db830e-VRChat_pZdYm9u4ox.png)
 
-Debug menu 4 displays various stats about other users.
-* M: Whether or not the user is the [master of the instance](/worlds/udon/networking#the-instance-master)
-* L: Whether or not the user is the local player
-* VR: Whether or not the user is in VR
-* Ping: The user's ping
+Debug menu 4 displays various stats about other players.
+* M: Whether or not the player is the [master of the instance](/worlds/udon/networking#the-instance-master)
+* L: Whether or not the player is the local player
+* VR: Whether or not the player is in VR
+* Ping: The player's ping
 * Desrd D: The desired delay that the internal system is targeting. The actual delay is frequently adjusted to find a good balance between latency and smoothness.
-* Intrvl: The amount of time between the user sending synced data about themselves.
-* G: The current group that the user is in. Grouping in this context is an internal networking system used to combine multiple objects together by distance so that their data can be sent together.
-* D: The current delay, or how far back in time you are viewing this user.
+* Intrvl: The amount of time between the player sending synced data about themselves.
+* G: The current group that the player is in. Grouping in this context is an internal networking system used to combine multiple objects together by distance so that their data can be sent together.
+* D: The current delay, or how far back in time you are viewing this player.
 ## Debug Menu 5
 
 ![world-debug-views-1232152-VRChat_SVxaMmgiLC.png](/img/worlds/world-debug-views-1232152-VRChat_SVxaMmgiLC.png)
