@@ -1,0 +1,33 @@
+import ConstraintMainSettings from './_partial-constraint-mainsettings.mdx'
+import ConstraintActivation from './_partial-constraint-activation.mdx'
+import ConstraintSources from './_partial-constraint-sources.mdx'
+import ConstraintAdvanced from './_partial-constraint-advanced.mdx'
+
+# Look At Constraint
+
+The `VRCLookAtConstraint` component is a simplified [Aim Constraint](/avatars/avatar-dynamics/constraints/vrc-aim-constraint). It rotates the target transform so its positive Z axis faces towards the sources.
+
+![](/img/avatars/constraints/look-at.png)
+
+<ConstraintMainSettings />
+- **Use Up Object** - Controls whether or not to use a separate transform to determine roll.
+- **Roll** - Controls the angle (in degrees) around the target transform's Z axis that should be used to determine its upwards direction. Only available when `Use Up Object` is disabled.
+- **World Up Object** - When set, the constraint will roll to try and point its positive Y axis towards this transform. Only available when `Use Up Object` is enabled.
+
+<ConstraintActivation />
+
+## Constraint Settings <!--Not partial because look-at does not expose freeze axes.-->
+
+- **Rotation At Rest** - Defines the transform's rotation when the constraint's overall weight is 0.
+- **Rotation Offset** - Defines the offset applied to the result of this constraint.
+- **Lock** - When enabled, locks the `At Rest` and `Offset` values in place, preventing them from being edited.
+  - If you activate the constraint and leave these values unlocked, they'll be recalculated as the target transform's rotation changes.
+  - If you lock these values and activate the constraint, the constraint will start taking control of the transform.
+
+## Sources
+
+<ConstraintSources />
+
+## Advanced
+
+<ConstraintAdvanced affectedTrs="Rotation" />

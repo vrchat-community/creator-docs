@@ -4,7 +4,7 @@ PhysBones is a set of components that lets you add secondary motion to avatars, 
 
 PhysBones is a replacement for Dynamic Bones. While both systems share a lot of concepts, there are some major differences with PhysBones, so not all avatars may directly translate over to VRChat’s system.
 
-An example of how to use Avatar Dynamics can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
+An example of how to use Physbones can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
 
 ## VRCPhysBone
 
@@ -175,9 +175,9 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 ### Important Notes, Usage Tips, etc
 
-**Do not have a Constraint and a PhysBone component on the same GameObject**, as this causes execution order issues.
+**Do not have a Constraint and a PhysBone component affecting the same game object**, as this causes execution order issues.
 
-Put the Constraint on the parent game object instead. You can still have the target of the Constraint set to the original GameObject.
+Apply the Constraint to the parent game object instead. You can still have the source transform of the Constraint set to the original game object.
 
 :::caution Quest limitations 
 

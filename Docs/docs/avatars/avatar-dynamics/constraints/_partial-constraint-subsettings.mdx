@@ -1,0 +1,6 @@
+- **{props.affectedTrs} At Rest** - Defines the transform's {props.affectedTrs.toLowerCase()} when the constraint's overall weight is 0.
+- **{props.affectedTrs} Offset** - Defines the offset applied to the result of this constraint.
+- **Lock** - When enabled, locks the `At Rest` and `Offset` values in place, preventing them from being edited.
+  - If you activate the constraint and leave these values unlocked, they'll be recalculated as the target transform's {props.affectedTrs.toLowerCase()} changes.
+  - If you lock these values and activate the constraint, the constraint will start taking control of the transform.
+- **Freeze {props.affectedTrs} Axes** - Allows you to exclude specific axes from evaluation as the constraint is solved. By default, all three axes are selected for evaluation.

@@ -79,6 +79,8 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | PhysBones Colliders                | The number of PhysBone collider scripts on the avatar.                                                                                                                                                                                                                                                                                       |
 | PhysBones Collision Check Count    | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                                                                 |
 | Avatar Dynamics Contacts           | The number of Avatar Dynamics Contacts on the avatar.                                                                                                                                                                                                                                                                                        |
+| Constraint Count                   | The total number of VRChat constraints and Unity constraints on the avatar. [Click here for more detailed info.](/avatars/avatar-dynamics/constraints#performance) |
+| Constraint Depth                   | The deepest chain of dependencies across all constraints on the avatar. [Click here for more detailed info.](/avatars/avatar-dynamics/constraints#performance) |
 | Animators                          | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators.                                                                                                                               |
 | Bones                              | The number of Bones in the avatar's rig.                                                                                                                                                                                                                                                                                                     |
 | Lights                             | The number of Light components on the avatar.                                                                                                                                                                                                                                                                                                |
@@ -117,38 +119,40 @@ On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor
 
 Triangles are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 triangles, the avatar will be marked as Very Poor immediately.
 
-| Avatar Quality                                                        | Excellent          | Good         | Medium       | Poor         |
-| --------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------------ |
-| Triangles                                                             | 32,000             | 70,000       | 70,000       | 70,000       |
-| Bounds Size[^1]                                                       | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
-| Texture Memory                                                        | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
-| Skinned Meshes                                                        | 1                  | 2            | 8            | 16           |
-| Basic Meshes                                                          | 4                  | 8            | 16           | 24           |
-| Material Slots                                                        | 4                  | 8            | 16           | 32           |
-| Dynamic Bone Components                                               | 0                  | 4            | 16           | 32           |
-| Dynamic Bone Transforms                                               | 0                  | 16           | 32           | 256          |
-| Dynamic Bone Colliders                                                | 0                  | 0            | 4            | 32           |
-| Dynamic Bone Collision Check Count                                    | 0                  | 0            | 8            | 256          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components            | 4                  | 8            | 16           | 32           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms   | 16                 | 64           | 128          | 256          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders             | 4                  | 8            | 16           | 32           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count | 32                 | 128          | 256          | 512          |
-| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)         | 8                  | 16           | 24           | 32           |
-| Animators                                                             | 1                  | 4            | 16           | 32           |
-| Bones                                                                 | 75                 | 150          | 256          | 400          |
-| Lights                                                                | 0                  | 0            | 0            | 1            |
-| Particle Systems                                                      | 0                  | 4            | 8            | 16           |
-| Total Particles Active                                                | 0                  | 300          | 1000         | 2500         |
-| Mesh Particle Active Polys                                            | 0                  | 1000         | 2000         | 5000         |
-| Particle Trails Enabled                                               | False              | False        | True         | True         |
-| Particle Collision Enabled                                            | False              | False        | True         | True         |
-| Trail Renderers                                                       | 1                  | 2            | 4            | 8            |
-| Line Renderers                                                        | 1                  | 2            | 4            | 8            |
-| Cloths                                                                | 0                  | 1            | 1            | 1            |
-| Total Cloth Vertices                                                  | 0                  | 50           | 100          | 200          |
-| Physics Colliders                                                     | 0                  | 1            | 8            | 8            |
-| Physics Rigidbodies                                                   | 0                  | 1            | 8            | 8            |
-| Audio Sources                                                         | 1                  | 4            | 8            | 8            |
+| Avatar Quality                                                         | Excellent          | Good         | Medium       | Poor         |
+|------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
+| Triangles                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
+| Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                         | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
+| Skinned Meshes                                                         | 1                  | 2            | 8            | 16           |
+| Basic Meshes                                                           | 4                  | 8            | 16           | 24           |
+| Material Slots                                                         | 4                  | 8            | 16           | 32           |
+| Dynamic Bone Components                                                | 0                  | 4            | 16           | 32           |
+| Dynamic Bone Transforms                                                | 0                  | 16           | 32           | 256          |
+| Dynamic Bone Colliders                                                 | 0                  | 0            | 4            | 32           |
+| Dynamic Bone Collision Check Count                                     | 0                  | 0            | 8            | 256          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Components             | 4                  | 8            | 16           | 32           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms    | 16                 | 64           | 128          | 256          |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders              | 4                  | 8            | 16           | 32           |
+| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count  | 32                 | 128          | 256          | 512          |
+| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)          | 8                  | 16           | 24           | 32           |
+| [Constraint](/avatars/avatar-dynamics/constraints) Count               | 100                | 250          | 300          | 350          |
+| [Constraint](/avatars/avatar-dynamics/constraints) Depth               | 20                 | 50           | 80           | 100          |
+| Animators                                                              | 1                  | 4            | 16           | 32           |
+| Bones                                                                  | 75                 | 150          | 256          | 400          |
+| Lights                                                                 | 0                  | 0            | 0            | 1            |
+| Particle Systems                                                       | 0                  | 4            | 8            | 16           |
+| Total Particles Active                                                 | 0                  | 300          | 1000         | 2500         |
+| Mesh Particle Active Polys                                             | 0                  | 1000         | 2000         | 5000         |
+| Particle Trails Enabled                                                | False              | False        | True         | True         |
+| Particle Collision Enabled                                             | False              | False        | True         | True         |
+| Trail Renderers                                                        | 1                  | 2            | 4            | 8            |
+| Line Renderers                                                         | 1                  | 2            | 4            | 8            |
+| Cloths                                                                 | 0                  | 1            | 1            | 1            |
+| Total Cloth Vertices                                                   | 0                  | 50           | 100          | 200          |
+| Physics Colliders                                                      | 0                  | 1            | 8            | 8            |
+| Physics Rigidbodies                                                    | 0                  | 1            | 8            | 8            |
+| Audio Sources                                                          | 1                  | 4            | 8            | 8            |
 
 
 ## Android Limits
@@ -159,15 +163,17 @@ You can set your Performance Rank Block level to Poor to allow the display of Po
 
 For example, if an avatar on Android exceeds 20,000 triangles, it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
 
-Notably, **there is a hard cap on [Avatar Dynamics](/avatars/avatar-dynamics) systems on Android.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
+Notably, **there is a hard cap on some [Avatar Components](/avatars/avatar-dynamics) systems on Android.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
 
 - 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
 - 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
 - 16 [PhysBones](/avatars/avatar-dynamics/physbones) colliders
 - 64 [PhysBones](/avatars/avatar-dynamics/physbones) collider checks
 - 16 [Avatar Dynamics Contacts](/avatars/avatar-dynamics/contacts) 
+- 150 [Constraint](/avatars/avatar-dynamics/constraints) components
+- A dependency depth of 50 [Constraints](/avatars/avatar-dynamics/constraints)
 
-If this cap is exceeded on Android, all [Avatar Dynamics](/avatars/avatar-dynamics) components will be removed from the avatar, even if Show Avatar is enabled.
+If this cap is exceeded on Android, all hard capped avatar components will be removed from the avatar, even if Show Avatar is enabled.
 :::danger
 
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android entirely.** Please keep this in mind when creating avatars for VRChat on Android.
@@ -188,6 +194,8 @@ If this cap is exceeded on Android, all [Avatar Dynamics](/avatars/avatar-dynami
 | [PhysBones](/avatars/avatar-dynamics/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
 | [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
 | Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)[^2]         | 2                  | 4            | 8            | 16           |
+| [Constraint](/avatars/avatar-dynamics/constraints) Count[^2]              | 30                 | 60           | 120          | 150          |
+| [Constraint](/avatars/avatar-dynamics/constraints) Depth[^2]              | 5                  | 15           | 35           | 50           |
 | Particle Systems                                                          | 0                  | 0            | 0            | 2            |
 | Total Particles Active                                                    | 0                  | 0            | 0            | 200          |
 | Mesh Particle Active Polys                                                | 0                  | 0            | 0            | 400          |
@@ -230,6 +238,7 @@ When you choose a Performance Rank in VRChat's menu, all avatars that are below 
 | Basic Meshes                                                                     | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 | Material Slots                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 | Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts | All PhysBone, PhysBone Collider,and Contact components removed                           |
+| Constraint Count or Depth                                                        | All Constraint components removed                                                        |
 | Dynamic Bone Components or Transforms                                            | All Dynamic Bones components removed                                                     |
 | Dynamic Bone Colliders or Collision Check Count                                  | All Dynamic Bone Collider components removed                                             |
 | Animators                                                                        | All animators (aside from root animator) removed                                         |

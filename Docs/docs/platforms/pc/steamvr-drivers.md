@@ -3,11 +3,6 @@ sidebar_label: SteamVR Drivers
 ---
 # SteamVR Skeletal Hand Tracking Driver Guide
 
-:::warning
-Skeletal hand tracking is not fully available yet, it is currently in Open Beta.
-:::
-
-
 This guide is intended to help authors of custom **SteamVR Skeletal Input Drivers** get their drivers working well with VRChat, now that VRChat is updating to SteamVR Input 2.0. Whether you’ve got an existing driver you’d like to ensure works properly, or you are creating a brand new driver to use with VRChat via SteamVR, it might be a good idea to review [Valve’s documentation on creating a SteamVR Skeletal Driver](https://github.com/ValveSoftware/openvr/wiki/Creating-a-Skeletal-Input-Driver) as well as their more general [Driver API Documentation](https://github.com/ValveSoftware/openvr/blob/master/docs/Driver_API_Documentation.md)
 
 ## When & How Does VRChat use SteamVR Skeletal Data?

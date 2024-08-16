@@ -66,6 +66,16 @@ The version you're uploading depends on the originating project's build target. 
 >"Hey I'm a VRChat PC user and I want this content."
 >"Ok, here's the VRChat PC version."
 
+>"Hey, I'm a VRChat iOS user and I want this content."
+>"OK, here's the VRChat iOS version."
+
+:::info 
+
+VRChat is experimenting with content fallback systems for iOS. If your world is available on Android but not iOS, VRChat attempts to load the Android version on iOS.
+
+This tends to work well for content that primarily uses the Standard Lite shader as outlined by [Quest Content Limitations](/platforms/android/quest-content-limitations). Uploading an iOS version of your content using the SDK is recommended for best results. 
+:::
+
 If an avatar isn't available for the platform you're on, you'll see a placeholder avatar indicating what platform that user is on.
 
 If a world isn't available for the platform you're on, you'll be unable to enter portals to that world or join it through the UI.

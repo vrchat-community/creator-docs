@@ -29,6 +29,13 @@ Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/ava
 
 VRChat will automatically convert Dynamic Bones to PhysBones at runtime.
 
+## Do not use Unity Constraints!
+[Unity Constraints](https://docs.unity3d.com/Manual/Constraints.html) are components provided by the engine that allow you to change the position, rotation and scale of transforms on your avatar based on one or more other transforms.
+
+The engine's constraints are sorted based on the dependencies between them every frame, which means they can cause significant performance problems when enough of them exist at once. Use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead, because they're designed to provide better performance in the context of VRChat avatars.
+
+VRChat will automatically convert Unity constraints to VRChat constraints at runtime.
+
 ## Limit usage of Cloth
 Cloth is a default Unity component that has a similar cost to Dynamic Bones and is more difficult to set up. Limit your use of Cloth heavily, and do not apply it to meshes that have greater than 200 or so vertices.
 
@@ -53,7 +60,7 @@ As an aside, what is important is the number of **material slots on the Renderer
 
 This is due to the way that Unity splits meshes into submeshes. What really matters for performance is the number of submeshes created, which Unity creates based on Material slots.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5LwRi26RxSQ?si=_TuNCYuWLrsWrVIm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/5LwRi26RxSQ?si=_TuNCYuWLrsWrVIm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen="true"></iframe>
 
 ## Watch your VRAM usage!
 
