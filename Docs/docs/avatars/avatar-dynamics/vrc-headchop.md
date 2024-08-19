@@ -1,7 +1,4 @@
----
-slug: vrc_headchop
----
-# VRC Head Chop
+# Head Chop
 
 When wearing an avatar, VRChat automatically "chops off" the avatar's head bone by setting its transform scale to almost 0. This stops the head from clipping into view from the user's first-person perspective. `VRCHeadChop` is an optional avatar component that controls which specific bones are scaled down for head chopping, allowing avatar creators to:
 - Keep some parts of the avatar's head visible from first-person, like its hair or nose.

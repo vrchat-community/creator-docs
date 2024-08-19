@@ -1,0 +1,6 @@
+- **Target Transform** - Defines the transform affected by this constraint component. If left empty, the transform this constraint is attached to will be affected instead.
+- **Solve In Local Space** - If ticked, this constraint will be solved as if the sources are in local space rather than world space.
+- **Freeze To World** - If ticked, this constraint will ignore its sources and keep a fixed {props.affectedTrs.toLowerCase()} instead.
+- **Rebake Offsets When Unfrozen** - If ticked, this constraint will rebake its offsets relative to its sources when `Freeze To World` is disabled.
+
+See the parent section covering [Advanced Constraint Settings](/avatars/avatar-dynamics/constraints#advanced-constraint-settings) for a more in-depth description of how these advanced settings work.

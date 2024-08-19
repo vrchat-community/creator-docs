@@ -35,18 +35,18 @@ All of the shaders listed below are under `VRChat/Mobile` in the shader selectio
 
 ## Components
 
-The following components are not supported on Quest and will not work. This list may change. We'll note in the Patch Notes and updated documentation when these change.
+The following components are not supported on Android or Quest and will not work. This list may change. We'll note in the Patch Notes and updated documentation when these change.
 
 | Shader Name                | Shader Description |
 | :-- | :-- |
-| Dynamic Bones              | Completely disabled in VRChat Quest. Use [PhysBones](/avatars/avatar-dynamics/physbones) instead!! |
-| Cloth                      | Completely disabled in VRChat Quest. |
-| Cameras                    | Completely disabled on avatars in VRChat Quest. Permitted for use in Worlds. Be careful with overuse. |
-| Lights                     | Completely disabled on avatars in VRChat Quest. |
+| Dynamic Bones              | Completely disabled on Android and Quest. Use [PhysBones](/avatars/avatar-dynamics/physbones) instead!! |
+| Cloth                      | Completely disabled on Android and Quest. |
+| Cameras                    | Completely disabled for avatars on Android and Quest. Permitted for use in Worlds. Be careful with overuse. |
+| Lights                     | Completely disabled for avatars on Android and Quest. |
 | Video Players | Works with some limitations. Read more in [Video Players](/worlds/udon/video-players). |
-| Post-Processing | Post processing systems are disabled completely in VRChat Quest. The GPU is not designed to handle these effects very well. |
-| Audio Sources | Audio sources are disabled completely on avatars in VRChat Quest. Audio sources consume a significant amount of CPU resources and voices have priority. |
-| Physics Objects | Rigidbodies, colliders, and joints are disabled completely on avatars in VRChat Quest. <br /> They are permitted in worlds, but you should be careful not to go overboard with them. |
-| Particle Systems | Particles are limited heavily on avatars in VRChat Quest, with settings mirroring the [Avatar Particle System Limits](https://docs.vrchat.com/docs/avatar-particle-system-limits) on PC. |
-| Constraints | Constraints are disabled completely on avatars in VRChat Quest. There are no plans to enable them for Quest, as they have complex performance issues that are not solved by a soft or hard limit.<br /><br />Permitted for use in Worlds. Be careful with overuse, as they impact performance more than previously thought, especially with the limited resources of the Quest. |
-| FinalIK | Custom FinalIK components are completely disabled on avatars in VRChat Quest.<br />FinalIK components are an unbounded source of resource usage. We do not currently plan to enable them on Quest. |
+| Post-Processing | Post processing systems are disabled completely on Android and Quest. The GPU is not designed to handle these effects very well. |
+| Audio Sources | Audio sources are disabled completely for avatars on Android and Quest. Audio sources consume a significant amount of CPU resources and voices have priority. |
+| Physics Objects | Rigidbodies, colliders, and joints are disabled completely for avatars on Android and Quest. <br /> They are permitted in worlds, but you should be careful not to go overboard with them. |
+| Particle Systems | Particles are limited heavily on avatars for Android and Quest, with settings mirroring the [Avatar Particle System Limits](https://docs.vrchat.com/docs/avatar-particle-system-limits) on PC. |
+| Constraints | Unity constraints are disabled completely for avatars on Android and Quest due to complex performance issues. Use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead.<br /><br />Permitted for use in Worlds. Be careful with overuse, as they impact performance more than previously thought, especially with the limited resources of Quest and mobile devices. |
+| FinalIK | Custom FinalIK components are completely disabled for avatars on Android and Quest.<br />FinalIK components are an unbounded source of resource usage. We do not currently plan to enable them on these platforms. |

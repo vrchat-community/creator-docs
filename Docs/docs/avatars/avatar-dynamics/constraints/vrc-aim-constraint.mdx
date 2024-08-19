@@ -1,0 +1,35 @@
+import ConstraintMainSettings from './_partial-constraint-mainsettings.mdx'
+import ConstraintActivation from './_partial-constraint-activation.mdx'
+import ConstraintSubSettings from './_partial-constraint-subsettings.mdx'
+import ConstraintSources from './_partial-constraint-sources.mdx'
+import ConstraintAdvanced from './_partial-constraint-advanced.mdx'
+
+# Aim Constraint
+
+The `VRCAimConstraint` component rotates the target transform so it aims towards the sources. You can customize which direction is treated as forwards.
+
+![](/img/avatars/constraints/aim.png)
+
+<ConstraintMainSettings />
+- **Aim Vector** - Controls the axes that should face towards the sources.
+- **Up Vector** - Controls the upwards axis for this constraint. This is the axis of the affected transform that the constraint will try to align with the world up axis defined below.
+- **World Up Type** - Controls the world upwards direction used by this aim constraint.
+  - **Scene Up** - Treat upwards as the positive Y axis of the scene.
+  - **Object Up** - Treat upwards as the vector pointing from the target transform of the constraint to the transform specified in the `World Up Object` property.
+  - **Object Up Rotation** - Treat upwards as the `World Up Vector` axis in the local space of the transform specified in the `World Up Object` property.
+  - **Vector** - Treat upwards as the `World Up Vector` in world space.
+  - **None** - Do not define an upwards direction.
+
+<ConstraintActivation />
+
+## Constraint Settings
+
+<ConstraintSubSettings affectedTrs="Rotation" />
+
+## Sources
+
+<ConstraintSources />
+
+## Advanced
+
+<ConstraintAdvanced affectedTrs="Rotation" />

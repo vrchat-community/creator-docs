@@ -1,0 +1,32 @@
+import ConstraintMainSettings from './_partial-constraint-mainsettings.mdx'
+import ConstraintActivation from './_partial-constraint-activation.mdx'
+import ConstraintSubSettings from './_partial-constraint-subsettings.mdx'
+import ConstraintSources from './_partial-constraint-sources.mdx'
+import ConstraintAdvanced from './_partial-constraint-advanced.mdx'
+
+# Parent Constraint
+
+The `VRCParentConstraint` component moves and rotates the target transform as if it were a child of its sources.
+
+![](/img/avatars/constraints/parent.png)
+
+<ConstraintMainSettings />
+
+<ConstraintActivation />
+
+## Constraint Settings
+
+<ConstraintSubSettings affectedTrs="Position/Rotation" />
+:::info
+
+Offsets are set individually for each source when using Parent Constraints.
+
+:::
+
+## Sources
+
+<ConstraintSources />
+
+## Advanced
+
+<ConstraintAdvanced affectedTrs="Position/Rotation" />

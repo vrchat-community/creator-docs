@@ -162,6 +162,11 @@ Triggered when a player first enters the world on a Mobile Device, and whenever 
 Outputs: `inputMethod` - `VRC.SDKBase.VRCInputMethod`
 Fired when a player uses a different input method - Keyboard, Mouse, Controller, etc.
 
+### OnLanguageChanged
+`Event_OnLanguageChanged`
+Outputs: `language` - `string`
+Fired when a player updates their display language.
+
 ### OnPlayerSuspendChanged
 `Event_OnPlayerSuspendChanged`
 

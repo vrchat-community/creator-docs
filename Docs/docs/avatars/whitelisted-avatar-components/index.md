@@ -19,13 +19,14 @@ The Android version of VRChat has [additional restrictions](/platforms/android/q
 ## VRChat
 
 - VRCAvatarDescriptor
-- [VRCPipelineManager](/sdk/vrcpipelinemanager/)
-- [*VRC_IKFollower*](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use Constraints instead.
+- [VRCConstraint](/avatars/avatar-dynamics/constraints)
 - [VRCContactReceiver](/avatars/avatar-dynamics/contacts#vrccontactreceiver)
 - [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
-- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
+- [VRCHeadChop](/avatars/avatar-dynamics/vrc-headchop)
+- [VRCIKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead.
 - [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
-- [VRCHeadChop](/avatars/whitelisted-avatar-components/vrc_headchop)
+- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
+- [VRCPipelineManager](/sdk/vrcpipelinemanager/)
 - [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
 - [VRCStation](/worlds/components/vrc_station)
 
