@@ -31,7 +31,7 @@ Inputs: `start`, `end`, `step` - `System.Int32`
 
 Outputs: `index` - `System.Int32`
 
-Executes flow by using a counter. A counter is initalized with the value of `start`. The `Body` flow is executed, and then the counter is incremented by the `step` value. This continues until the counter's value is greater than `end`. Once that has occured, flow continues along on the `Exit` flow.
+Executes flow by using a counter. A counter is initalized with the value of `start`. The `Body` flow is executed, and then the counter is incremented by the `step` value. This continues until the counter's value is equal or greater than `end`. Once that has occured, flow continues along on the `Exit` flow.
 
 ### Get Variable
 Inputs: `name` - `System.String`

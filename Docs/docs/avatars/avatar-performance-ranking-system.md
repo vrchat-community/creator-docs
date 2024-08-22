@@ -155,15 +155,15 @@ Triangles are a somewhat special case-- if you are 32k or less, you are marked a
 | Audio Sources                                                          | 1                  | 4            | 8            | 8            |
 
 
-## Android Limits
+## Mobile Limits
 ### Default Performance Rank Blocking
-On Android (phones, tablets, and Meta Quest), the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
+On Android and iOS (phones, tablets, and Meta Quest), the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
 
 You can set your Performance Rank Block level to Poor to allow the display of Poor avatars. However, you cannot set your Performance Rank Block level to "Very Poor".
 
-For example, if an avatar on Android exceeds 20,000 triangles, it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
+For example, if a mobile avatar exceeds 20,000 triangles, it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
 
-Notably, **there is a hard cap on some [Avatar Components](/avatars/avatar-dynamics) systems on Android.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
+Notably, **there is a hard cap on some [Avatar Components](/avatars/avatar-dynamics) systems on mobile devices.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
 
 - 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
 - 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
@@ -173,10 +173,10 @@ Notably, **there is a hard cap on some [Avatar Components](/avatars/avatar-dynam
 - 150 [Constraint](/avatars/avatar-dynamics/constraints) components
 - A dependency depth of 50 [Constraints](/avatars/avatar-dynamics/constraints)
 
-If this cap is exceeded on Android, all hard capped avatar components will be removed from the avatar, even if Show Avatar is enabled.
+If this cap is exceeded on mobile, all hard capped avatar components will be removed from the avatar, even if Show Avatar is enabled.
 :::danger
 
-**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android entirely.** Please keep this in mind when creating avatars for VRChat on Android.
+**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from VRChat on Android and iOS entirely.** Please keep this in mind when creating mobile avatars.
 :::
 
 | Avatar Quality                                                            | Excellent          | Good         | Medium       | Poor         |
@@ -206,10 +206,10 @@ If this cap is exceeded on Android, all hard capped avatar components will be re
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
-[^2]: If the Very Poor value is exceeded on Android, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
+[^2]: If the Very Poor value is exceeded on mobile, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
 
 ### Removed Categories
-The following categories are disabled on Android since they can never appear on avatars:
+The following categories are disabled on mobile devices since they can never appear on avatars:
 
   * Lights
   * Cloths
@@ -260,16 +260,16 @@ When you choose a Performance Rank in VRChat's menu, all avatars that are below 
 ### Minimum Displayed Performance Rank on PC
 On VRChat for PC, the Minimum Displayed Performance Rank is set to "Very Poor" by default. This means that, by default, no avatars will have their components or display affected for performance reasons on PC. If you wish to change this, you can choose between "Medium", "Poor", or "Very Poor" options.
 
-### Avatar Performance Rank Blocking on Android
-On VRChat for Android, the Avatar Performance Rank Block is set to "Medium" by default. You can choose to change this to "Poor" to see avatars of that rank, but your performance may suffer as a result.
+### Avatar Performance Rank Blocking on Mobile
+On VRChat for mobile devices, the Avatar Performance Rank Block is set to "Medium" by default. You can choose to change this to "Poor" to see avatars of that rank, but your performance may suffer as a result.
 
-You cannot disable the Avatar Performance Rank Block system on Android. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for Android, and may not display at all.
+You cannot disable the Avatar Performance Rank Block system on mobile. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for mobile, and may not display at all.
 
-No matter what setting you choose, if the [Avatar Dynamics](/avatars/avatar-dynamics) component limits are exceeded on Android, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on Android avatars.
+No matter what setting you choose, if the [Avatar Dynamics](/avatars/avatar-dynamics) component limits are exceeded on mobile devices, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on mobile avatars.
 
 ### Overriding Individual Avatars
 :::danger
 
-**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android entirely.** Please keep this in mind when creating avatars for VRChat on Android and Meta Quest.
+**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android and iOS entirely.** Please keep this in mind when creating avatars for VRChat on mobile devices.
 :::
 You can choose to override the the entirety of the system (and the Safety system) by selecting "Show Avatar" on each user you wish to show.

@@ -1,7 +1,9 @@
-﻿---
-title: "Platforms"
-sidebar_position: 1
 ---
+sidebar_position: 2
+---
+
+# Platforms
+
 The VRChat SDK allows you to upload Worlds and Avatars for the following platforms: 
 - [Windows](/platforms/pc/)
   - VR mode (with a compatible VR device)

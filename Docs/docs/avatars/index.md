@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # Avatars

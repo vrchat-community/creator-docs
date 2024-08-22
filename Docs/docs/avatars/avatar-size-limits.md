@@ -17,16 +17,16 @@ The maximum size limit depends on the platform you're playing on:
 | Platform                | Download Size | Uncompressed Size |
 | ----------------------- | ------------- | ----------------- |
 | Android                 | 10 MB         | 40 MB             |
-| PC      | 200 MB        | 500 MB            |
-| PC (before July 17th)[^1]     | 500 MB        | 1.2 GB            |
+| PC                      | 200 MB        | 500 MB            |
+| PC (before Aug 16th)[^1]| 500 MB        | 1.2 GB            |
 
-[^1]: Avatars uploaded prior to July 17th, 2024, are subject to older limits. A short grace period is present for new uploads past this date. At a later date, older avatars will be forced to comply with the newer reduced limits.
+[^1]: Avatars uploaded prior to August 16th, 2024, are subject to older limits. A short grace period is present for new uploads past this date. On November 1st, older avatars will be forced to comply with the newer reduced limits.
 
 ## How to know if you are below these limits
 Within the SDK it will inform you when making a build if your avatar is breaking either limit and prevent upload, post build it will remind you what the download / uncompressed size was along with the limit. When using Build & Test size limits are not enforced.
 
 :::caution Keep your SDK up to date!
-The android uncompressed size was not enforced in the SDK until 3.5.2, ensure you are _at least_ on this version otherwise if you upload it will just fail server-side security checks! The reduced PC limits are yet to be released in SDK, as such keep an eye out and update when it releases
+The android uncompressed size was not enforced in the SDK until [3.5.2](/releases/release-3-5-2), ensure you are _at least_ on this version otherwise if you upload it will just fail server-side security checks! The reduced PC limits are enforced starting [3.7.0](/releases/release-3-7-0), so similarly if uploading to PC ensure you are _at least_ on this version.
 :::
 
 Within the client you can see both stats within the avatar details, either within the quick menu or main menu.

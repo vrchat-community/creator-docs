@@ -95,13 +95,12 @@ You can use Unity's Play Button to run your scene directly in the editor to test
 ### Running Build & Test
 Use the VRChat SDK Window to do Local Testing. This takes slightly longer as it bundles your content into an offline world and launches the actual VRChat client to give you an Avatar that can Interact with objects and VRCPlayerAPI requests.
 ![The simplest way to test Sync features is to launch 2 local clients.](/img/worlds/index-32da932-local-testing-2.png)
+
 To test Synced variables and NetworkEvents, you'll need two clients - you can use the 'Number of Clients' field to launch up to 8 local clients that will launch in a private test world. They will all have the same DisplayName, but they'll otherwise be recognized as separate players so you can test out your interactions.
-:::danger Set Your Local Client Path
 
 If 'Force Non-VR' doesn't work for you, then switch to the 'Settings' tab of the VRChat SDK Window and set your VRChat Client Path to point at your actual VRChat installation.
-:::
 
-![](/img/worlds/index-6d24b40-client-path.png)
+![Installed Client Path setting in the VRChat SDK](/img/worlds/index-6d24b40-client-path.png)
 
 ## Uploading Your World
 You will be able to Build & Test as soon as you [make a VRChat Account](https://vrchat.com/home/register). In order to publish a world so others can visit, you need to spend some time in VRChat - visit worlds, make some friends and get inspired!
