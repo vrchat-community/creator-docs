@@ -1,6 +1,6 @@
 ---
 title: Creator Economy
-sidebar_position: 99
+sidebar_position: 3
 ---
 
 import SellerNotification from './_sellers-notification.mdx';

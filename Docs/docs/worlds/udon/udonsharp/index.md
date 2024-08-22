@@ -129,7 +129,7 @@ Yes. If Udon supports it, then so does UdonSharp. You can check the [class expos
 ### Can I access the player camera?
 No, Udon can not access the player's camera. You can, however, get the head position and rotation. For example, you can use [VRCPlayerApi.GetTrackingData](https://github.com/Merlin-san/UdonSharp/wiki/vrchat-api#vrchatplayerapi) like this:
  
-`var headPosition = localPlayer.GetTrackingData(TrackingData.Head).position`
+`var headPosition = localPlayer.GetTrackingData(TrackingDataType.Head).position`
 
 ### Can I have more than one UdonSharp UdonBehavior on a GameObject?
 Yes.

@@ -1,12 +1,12 @@
----
-title: "Udon Example Scene"
-createdAt: "2021-05-13T19:15:33.839Z"
-updatedAt: "2021-10-07T17:09:09.342Z"
----
-This scene is ready to [Build & Test](/worlds/udon/using-build-test) or Publish, and it demonstrates many common interactive items.
+# Udon Example Scene
+
+This scene contains examples on how worlds can use Udon. You can [build & test](/worlds/udon/using-build-test) or publish this world to try it in VRChat.
 
 ## Prefabs
-These objects show off some of the Prefabs included with the SDK which demonstrate default interactions with the VRChat components for Avatar Pedestals, Stations and Mirrors.
+The Prefabs in this scene demonstrate common interactions with the VRChat components for buttons, avatar pedestals, stations, mirrors, and more.
+
+All of the following Prefabs are included in the VRChat Worlds SDK. You can add them to any of your own worlds. For example, the [VRCWorld](#vrcworld) is included in most VRChat scenes by default.
+
  ![](/img/worlds/udon-example-scene-prefab-scene.png)
 ### VRCWorld
 This prefab makes it easy to upload your Unity scene to VRChat. It has four components:
