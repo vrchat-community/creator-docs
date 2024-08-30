@@ -1,6 +1,8 @@
 ---
-title: "Subscribers In Instance"
+description: "Lists all subscribers in the current instance."
 ---
+
+# Subscribers In Instance
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

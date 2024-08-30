@@ -1,7 +1,9 @@
 ---
-title: "Your Store"
+description: "Manage your store, products, and listings."
 sidebar_position: 2
 ---
+
+# Your Store
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

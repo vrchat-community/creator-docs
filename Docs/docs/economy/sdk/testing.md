@@ -1,7 +1,9 @@
 ---
-title: Testing Udon Products
+description: "Test your Udon products before publishing your world."
 sidebar_position: 3
 ---
+
+# Testing Udon Products
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

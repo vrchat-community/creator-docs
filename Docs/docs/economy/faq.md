@@ -1,7 +1,13 @@
 ---
-title: FAQ
+description: "Read frequently asked questions about the Creator Economy."
 sidebar_position: 7
 ---
+
+# FAQ
+
+Here are some of the most frequently asked questions about VRChat's Creator Economy.
+
+If your question isn't listed here, please let us know by clicking the "Feedback" button in the bottom right.
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

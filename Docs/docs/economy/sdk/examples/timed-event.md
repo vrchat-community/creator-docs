@@ -1,6 +1,8 @@
 ---
-title: "Product Event Timed"
+description: "An event that only Udon product owners can trigger."
 ---
+
+# Product Event Timed
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

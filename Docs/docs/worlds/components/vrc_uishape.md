@@ -1,24 +1,46 @@
 # VRC Ui Shape
 
-This component allows players to interact with Unity's UI in your VRChat world. It requires a Unity [UICanvas](https://docs.unity3d.com/Manual/UICanvas.html) element on the same GameObject.
+The VRC Ui Shape component allows you to create [Canvas](https://docs.unity3d.com/Manual/UICanvas.html) components that players can interact with.
 
-It only has a single parameter:
+- Players can point, click, or scroll your UIs to interact with them, similar to the VRChat menu.
+- Players can interface from a distance. This often makes them easier to use than [Interact](/worlds/examples/udon/#interact) events.
+
+![Two examples UIs: A "Toggle Mirror" setting with a checkbox, and a page indicator with a "Previous" and "Next" button.](/img/worlds/components/VRC_UiShape.png)
+
+VRC Ui Shape only has one configurable parameter:
 
 | Parameter        | Description                                                                                         |
 | ---------------- | --------------------------------------------------------------------------------------------------- |
-| Allow Focus View | Whether this canvas should allow users to enter Focus View if they're playing on a phone or tablet. |
+| Allow Focus View | Whether this canvas should allow users to enter [Focus View](#focus-view) if they're playing on a phone or tablet. |
 
-## Steps to making an Interact-able UI with VRC_UiShape
+## How to set up your Canvas
 
-1. Add a Canvas using the right-click menu in your hierarchy.
-2. Add a `VRC_UIShape` component to the Canvas.
-3. Set the Canvas Render Mode to World Space.
-4. Reduce the `x`, `y`, and `z` scale of the Canvas. Usually somewhere between `0.001` and `0.005` will work well. This is the size in meters of a single pixel on the canvas.
-5. Set the Canvas GameObject layer to Default
-6. Add your UI elements to the Canvas using the right-click menu in the hierarchy
-7. Set your UI elements to `Navigation: None` to prevent the UI from moving when pressing keys or moving joysticks.
+When you right-click your hierarchy window and click "UI" -> "TextMeshPro (VRC)", the SDK automatically sets up your Canvas. The SDK automatically configures your Canvas and adds other required components.
+
+![Two examples UIs: A "Toggle Mirror" setting with a checkbox, and a page indicator with a "Previous" and "Next" button.](/img/worlds/components/vrc-ui-components.png)
+
+If you want to configure a Canvas manually, follow the steps below. Otherwise, your Canvas may not work in VRChat.
+
+1. Add a [Canvas](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/class-Canvas.html) component to your GameObject, or create a new GameObject.
+    - Unity automatically adds other helpful components to your Canvas.
+2. Add a "VRC_UIShape" component to the same GameObject as your Canvas.
+3. Change the GameObject's layer from "UI" to "Default" or another layer.
+	- The UI layer would prevent users from interacting with your UI unless the VRChat menu is open.
+4. Reduce the GameObject's `x`, `y`, and `z` scale.
+	- By default, the scale is 1, which is too large. (1 pixel = 1 meter)
+	- Reduce the scale to something like `0.01`. (1 pixel = 0.01 meters) 
+5. Change the Canvas's "Render Mode" property from "Screen Space" to "World Space".
+	- World Space Canvases are shown inside your world instead of directly on your screen. 
+6. Add UI elements to the Canvas.
+	- For example, you can add text, buttons, toggles, scroll views, input fields, and more.
+	- Set the "Navigation" property to of your UI elements to "None". This prevents players from accidently using the UI while moving in your world.
+	- Use TextMeshPro instead of Unity's built-in components for higher text quality.
+
+If you follow these steps, players can interact with your UI by clicking on it.
 
 ## Common problems
+
+If your Canvas is not configured correctly, players may be unable to interact with it. Here's how you can fix common issues:
 
 ### If you have a canvas that does not make the VRChat pointer show up:
 
@@ -31,7 +53,7 @@ It only has a single parameter:
 * **The scene must have an EventSystem.** This is added automatically when you make the canvas, so don't delete it.
 * **Make sure that interact-able elements are not covered by invisible elements.** This often happens when a text box overlaps and covers a button. There's a few solutions: You can rearrange the button so it is on top (lower in the hierarchy), you can resize the text so that it does not cover the button, or you can set the text's `raycast target` to `false`.
 * **Make sure that the UI you are trying to interact with has an image with `Raycast Target` enabled.** This is auto-generated if you create UI elements with the right-click menu in the hierarchy.
-* **Make sure that the canvas has the `Graphic Raycaster` and `Canvas Scaler` components.** These are auto-generated if you create the canvas with the right-click menu in the hierarchy.
+* **Make sure that the canvas has the `Graphic Raycaster` component.** This component is automatically added to your GameObject when you add a Canvas component.
 * **Make sure that you are looking at the canvas from the correct side. The Z-forward axis of the canvas should be facing _away_ from you.
 
 ### If the UI is responsive but does not do what you expect it to do:
@@ -54,8 +76,9 @@ It only has a single parameter:
 VRChat's "Focus View" feature allows users to expand, pan, and zoom your world's UI on their phone or tablet. This makes it easier for them to read and interact with small text on their screen.
 
 <div class="video-container">
-    <iframe src="https://assets.vrchat.com/videos/docs/focusViewDemo.mp4" title="Focus View demo" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+    <video src="https://assets.vrchat.com/videos/docs/focusViewDemo.mp4" title="Focus View demo" muted autoplay controls></video>
 </div>
+
 
 Your canvas must meet the following conditions for Focus View to be available: 
 

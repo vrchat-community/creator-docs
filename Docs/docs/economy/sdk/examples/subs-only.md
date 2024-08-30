@@ -1,6 +1,8 @@
 ---
-title: "Subscribers Only Area"
+description: "An area that only Udon product owners can enter."
 ---
+
+# Subscribers Only Area
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+description: "Give access to group roles, instances, announcements, priority queues."
 ---
 
 # Paid Roles

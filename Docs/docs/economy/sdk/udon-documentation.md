@@ -1,4 +1,5 @@
 ---
+description: "All Udon types, methods, and events related to the Creator Economy."
 sidebar_position: 4
 ---
 

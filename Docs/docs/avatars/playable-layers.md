@@ -2,7 +2,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # Playable Layers
 
-When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
+When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow you to cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
 :::caution Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.

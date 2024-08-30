@@ -1,7 +1,8 @@
 ---
-title: "Example Prefabs"
 sidebar_position: 5
 ---
+
+# Example Prefabs
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
@@ -11,15 +12,9 @@ Example Prefabs allow world creators to use the Creator Economy quickly and easi
 
 Many of the examples require knowledge on how to set up Udon products, which should be done before you proceed here. Head to our [Getting Started with the Creator Economy SDK page](/economy/sdk/getting-started/) to learn more.
 
-| Example | Description |
-| --- | --- |
-| [Open Group Page](/economy/sdk/examples/open-group-page) | A button that opens a group page based on the assigned group ID. Enable `Open To Store Page` to open the store page instead, or use the `OpenListingPrefab` to directly open a store listing. |
-| [Store Debug Logging](/economy/sdk/examples/debug-logging) | A screen for listing, debugging, and logging products in your world. |
-| [Floating Overhead Buy Indicator](/economy/sdk/examples/floating-overhead) | Spawns a floating prefab above players who own the assigned Udon product. |
-| [Udon Product Toggle](/economy/sdk/examples/product-toggle) | Enables/Disables a Game Object if any player in the instance owns the assigned Udon product. Use the `Local Only` option if the local player must own the product.
-| [Subscribers In Instance](/economy/sdk/examples/subs-instance) | Shows a list of all subscribers that are currently in this instance. |
-| [Subscribers Only Area](/economy/sdk/examples/subs-only) | An area that only subscribers can enter or non-subscribers can't leave. Players who try to trespass are teleported away. |
-| [Product Event Timed](/economy/sdk/examples/timed-event) | A button that can only be pressed by players who own the assigned Udon product. Other players can see that they pressed the button. This is an example of `OnProductEvent`. |
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Adding Prefabs
 

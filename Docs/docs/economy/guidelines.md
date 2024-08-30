@@ -1,7 +1,9 @@
 ---
-title: "Content Guidelines"
+description: "Follow these rules when selling in VRChat."
 sidebar_position: 99
 ---
+
+# Content Guidelines
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
