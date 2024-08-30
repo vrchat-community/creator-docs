@@ -1,6 +1,8 @@
 ---
-title: "Udon Product Toggle"
+description: "Toggle a GameObject for players who own an Udon product."
 ---
+
+# Udon Product Toggle
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

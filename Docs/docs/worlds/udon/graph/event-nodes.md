@@ -1,13 +1,8 @@
----
-title: "Event Nodes"
-slug: "event-nodes"
-hidden: false
-createdAt: "2020-03-20T20:08:22.541Z"
-updatedAt: "2022-10-18T23:46:02.951Z"
----
+# Event Nodes
+
 This is a list of Udon Nodes that are considered "Events".
 
-Events are used to detect actions and set off chains of action or logic. [Input Events](/worlds/udon/input-events)  have their own special page. To jump to an Event in the graph, click it in the Graph Sidebar.
+Your scripts can use events to detect actions and set off chains of action or logic. [Input Events](/worlds/udon/input-events)  have their own special page. To jump to an Event in the graph, click it in the Graph Sidebar.
 
 All below nodes have flow nodes where logic requires it.
 
@@ -18,7 +13,10 @@ More events specifically related to networking are listed on the [Network Compon
 :::
 
 ### Interact
-Fired when the local player interacts with this game object.
+Fired when the local player interacts with this GameObject.
+
+- Players can only interact with GameObjects that have a Collider component and an UdonBehaviour component.
+- If you want players to interact with a 2D UI, use [VRC Ui Shape](/worlds/components/vrc_uishape/) and a Button component instead.
 
 ### OnDrop
 Fired when a VRChat player drops this object after being held.

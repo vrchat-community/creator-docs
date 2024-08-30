@@ -1,7 +1,9 @@
 ---
-title: "Open Group Page"
+description: "Opens your group, store, or a listing."
 sidebar_position: 1
 ---
+
+# Open Group Page
 
 OpenGroupPage is a prefab that makes it easier for users to access purchasable CE listings. Use it to create buttons that open group pages or specific listings.
 

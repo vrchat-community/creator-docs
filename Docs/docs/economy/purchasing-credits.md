@@ -1,7 +1,10 @@
 ---
-title: "Purchasing Credits"
+description: "Buy VRChat credits to increase your wallet balance."
 sidebar_position: 4
 ---
+
+# Purchasing Credits
+
 Purchasing VRChat Credits is available on Steam and the Meta store. This guide walks you through making a purchase on Steam, though purchases on other platforms may be similar. 
 
 Purchasing VRChat Credits is similar to purchasing anything else on Steam: You’ll need to add money to your Steam Wallet first.

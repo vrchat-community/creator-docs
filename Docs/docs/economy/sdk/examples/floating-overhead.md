@@ -1,6 +1,8 @@
 ---
-title: "Floating Overhead Buy Indicator"
+description: "A floating indicator above players who own an Udon product."
 ---
+
+# Floating Overhead Buy Indicator
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

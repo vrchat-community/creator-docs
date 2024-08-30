@@ -1,4 +1,5 @@
 ---
+description: "Add your first Udon product to your world."
 title: Getting Started
 sidebar_position: 0
 ---

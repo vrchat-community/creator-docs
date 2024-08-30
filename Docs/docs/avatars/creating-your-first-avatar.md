@@ -27,10 +27,15 @@ If you get stuck or need help,  here's where you can get help:
 
 ## Step 1 - Choose a 3D model
 
-Maybe you already have a 3D model that you want to use as an avatar - or you might be downloading a 3D model for the first time. Here are a few ways you can get started:
+Maybe you already have a 3D model that you want to use as an avatar - or you might be downloading a 3D model for the first time. Choose one of the following four ways to get started:
 
-### Option 1: Use an avatar creation tool
-Instead of finding or creating a 3D model, you can try using an avatar creation tool:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="option-avatar-step-one">
+<TabItem value="avatar-creation-tool" label="1. Use an avatar creation tool" default>
+
+If you've never used Unity or the VRChat SDK, try using one of the following avatar creation tools: 
 
 - The [VRChat Avatar Systems](https://hello.vrchat.com/avatar-systems) page lists several beginner-friendly avatar creation tools.
  	- These tools are similar to customizing your character in a video game.
@@ -43,11 +48,17 @@ Instead of finding or creating a 3D model, you can try using an avatar creation 
 	- ⚠VRoid Studio outputs avatars in the **.vrm** format, which isn't natively supported by Unity!
 		- If you'd like to import a VRoid Studio model directly for use in VRChat, you may want to look into the community-created [VRMtoVRChat converter](https://github.com/esperecyan/VRMConverterForVRChat) for .vrm avatars. Be sure to [read the documentation for this plugin](https://www.store.vket.com/ec/items/122/detail/) if you use it.
 
-### Option 2: Use VRChat's example avatar
+</TabItem>
+<TabItem value="example-avatar" label="2. Use VRChat's example avatar">
 
-If you want to learn more about the VRChat SDK before choosing a model, [try the SDK's example avatar](/avatars/creating-your-first-avatar#try-vrchats-example-avatar). You can always come back and try your own 3D model later.
+If you want to upload your own avatar to VRChat, you need to use the VRChat SDK.
 
-### Option 3: Find a model
+If you're new to the VRChat SDK, try uploading the built-in [example avatar](/avatars/creating-your-first-avatar#try-vrchats-example-avatar) first.
+
+After you've successfully uploaded the example avatar, try uploading your own avatar!
+
+</TabItem>
+<TabItem value="find-model" label="3. Download a model">
 
 There are many stores on the internet where you can download free or paid VRChat avatars.
 
@@ -72,7 +83,9 @@ When you look for a model, try to keep the following things in mind:
 	- Uploading an avatar with an excessive triangle count can cause performance issues.
 	- On PC, you can upload models above this limit, but the avatar will be ranked as having "Very Poor" performance, which means that fewer players will see it.
 
-### Option 4: Create a model
+</TabItem>
+
+<TabItem value="create-avatar" label="4. Create a model">
 
 While most users choose to find a model as a starting point, anyone can create an avatar model from scratch. You can use any 3D software you like, as long as it supports exporting an FBX with an armature. [Blender](https://www.blender.org/) is free and a very common choice.
 
@@ -88,6 +101,10 @@ import FeedbackButton from "@site/src/components/FeedbackButton";
 
 If you have a tutorial you'd like to suggest, please suggest it by clicking the <FeedbackButton /> button.
 
+</TabItem>
+
+</Tabs>
+
 ## Step 2 - Set up the VRChat SDK
 
 Congratulations on choosing or building a model! Before you continue, you'll need to set up the [VRChat Creator Companion](https://vcc.docs.vrchat.com/). It will help you install [Unity](https://unity.com/) and create projects with the [VRChat SDK](/sdk). Watch the video below to get started!
@@ -98,9 +115,9 @@ Congratulations on choosing or building a model! Before you continue, you'll nee
 
 Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After setting creating your Unity project, you're ready to continue!
 
-:::tip New to Unity?
+:::tip
 
-Visit [Unity Learn](https://learn.unity.com/) for free tutorials on how to use Unity.
+Are you new to Unity? Visit [Unity Learn](https://learn.unity.com/) for free tutorials on how to use Unity.
 
 :::
 

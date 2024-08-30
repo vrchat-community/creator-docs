@@ -1,7 +1,9 @@
 ---
-title: "Payout"
+description: "Pay out your earnings with PayPal."
 sidebar_position: 5
 ---
+
+# Payout
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

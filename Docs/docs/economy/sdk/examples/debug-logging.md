@@ -1,6 +1,8 @@
 ---
-title: "Store Debug Logging"
+description: "A screen for listing, debugging, and logging products in your world."
 ---
+
+# Store Debug Logging
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 

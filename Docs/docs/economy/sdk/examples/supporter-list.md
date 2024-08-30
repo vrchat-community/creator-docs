@@ -1,3 +1,7 @@
+---
+description: "A customizable list of all users who own an Udon product."
+---
+
 # Supporter List
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
