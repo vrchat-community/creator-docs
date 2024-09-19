@@ -92,11 +92,6 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Trail Renderers                    | The number of Trail Renderers on the avatar.                                                                                                                                                                                                                                                                                                 |
 | Line Renderers                     | The number of Line Renderers on the avatar.                                                                                                                                                                                                                                                                                                  |
 | Cloths                             | The total number of Cloth components on the avatar.                                                                                                                                                                                                                                                                                          |
-| Dynamic Bone Components            | (Deprecated) The number of Dynamic Bone scripts on the avatar.                                                                                                                                                                                                                                                                               |
-| Dynamic Bone Transforms            | (Deprecated) The number of transforms animated by any given Dynamic Bone script on the avatar.                                                                                                                                                                                                                                               |
-| Dynamic Bone Colliders             | (Deprecated) The number of Dynamic Bone Collider scripts on the avatar.                                                                                                                                                                                                                                                                      |
-| Dynamic Bone Collision Check Count | (Deprecated) The total number of DynamicBone transforms affected by the Dynamic Bone Collider scripts on the avatar. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                              |
-
 
 ## Avatar Performance Ranks - Value Maximums per Rank
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
@@ -127,10 +122,6 @@ Triangles are a somewhat special case-- if you are 32k or less, you are marked a
 | Skinned Meshes                                                         | 1                  | 2            | 8            | 16           |
 | Basic Meshes                                                           | 4                  | 8            | 16           | 24           |
 | Material Slots                                                         | 4                  | 8            | 16           | 32           |
-| Dynamic Bone Components                                                | 0                  | 4            | 16           | 32           |
-| Dynamic Bone Transforms                                                | 0                  | 16           | 32           | 256          |
-| Dynamic Bone Colliders                                                 | 0                  | 0            | 4            | 32           |
-| Dynamic Bone Collision Check Count                                     | 0                  | 0            | 8            | 256          |
 | [PhysBones](/avatars/avatar-dynamics/physbones) Components             | 4                  | 8            | 16           | 32           |
 | [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms    | 16                 | 64           | 128          | 256          |
 | [PhysBones](/avatars/avatar-dynamics/physbones) Colliders              | 4                  | 8            | 16           | 32           |
@@ -217,10 +208,6 @@ The following categories are disabled on mobile devices since they can never app
   * Physics Colliders
   * Physics Rigidbodies
   * Audio Sources
-  * Dynamic Bone Components
-  * Dynamic Bone Transforms
-  * Dynamic Bone Colliders
-  * Dynamic Bone Collision Check Count
 
 These values may still appear in the in-app stats readout, but will always be zero.
 
@@ -239,8 +226,6 @@ When you choose a Performance Rank in VRChat's menu, all avatars that are below 
 | Material Slots                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 | Physics Bone Components, Transforms, Colliders, CollisionCheckCount, or Contacts | All PhysBone, PhysBone Collider,and Contact components removed                           |
 | Constraint Count or Depth                                                        | All Constraint components removed                                                        |
-| Dynamic Bone Components or Transforms                                            | All Dynamic Bones components removed                                                     |
-| Dynamic Bone Colliders or Collision Check Count                                  | All Dynamic Bone Collider components removed                                             |
 | Animators                                                                        | All animators (aside from root animator) removed                                         |
 | Bones                                                                            | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 | Lights                                                                           | All Lights removed                                                                       |

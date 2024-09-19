@@ -1,7 +1,7 @@
 ---
 slug: release-3-6-2
 date: 2024-07-23
-title: Release 3.6.2 Beta 2
+title: Release 3.6.2-beta.2
 authors: [momo]
 tags: [release]
 ---

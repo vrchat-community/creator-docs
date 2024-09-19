@@ -43,7 +43,6 @@
 /* For Video Embeds */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
 }
 
 .video-container iframe {

@@ -75,7 +75,7 @@ Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory. Ca
 Contains settings to apply to a downloaded texture. 
 
 - **GenerateMipmaps**: Enables Mipmap generation. (Default: `false`)
-- **FilterMode**: Sets the `FilterMode` of the texture. (Default: `Bilinear`)
+- **FilterMode**: Sets the `FilterMode` of the texture. (Default: `Trilinear`)
 - **WrapModeU**: The `TextureWrapMode` along the U (horizontal) axis (Default: `Repeat`)
 - **WrapModeV**: The `TextureWrapMode` along the V (vertical) axis  (Default: `Repeat`)
 - **WrapModeW**: The `TextureWrapMode` along the W (depth, only relevant for Texture3D) axis. (Default: `Repeat`)
