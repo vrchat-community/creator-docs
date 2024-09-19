@@ -13,7 +13,8 @@ If you want to detect when a player has entered or exited an area, your best bet
 - **OnPlayerTriggerExit** is called when a player's capsule exits a Trigger Collider.
 
 ![A simple Box Collider with 'Is Trigger' checked.](/img/worlds/player-collisions-6d9aaf6-trigger-collider.png)
-To use these events, add an object with a collider and check the 'Trigger' box on the collider. A Trigger Collider lets objects and players pass through it and calls events when those objects have colliders. You can learn more about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collision in Unity's documentation</UnityVersionedLink>.
+
+To use these events, add an object with a [collider](https://docs.unity3d.com/Manual/collider-shapes-introduction.html) component and enable the 'Is Trigger' box on the collider. A trigger collider allows objects and players pass through it and calls events when those objects have colliders. You can learn more about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collision in Unity's documentation</UnityVersionedLink>.
 
 
 :::note Edge Cases

@@ -21,7 +21,7 @@ Adds DataContainers, PhysBones 1.1 ('Squishy PhysBones'), AsyncGPUReadback, and 
 - **AsyncGPUReadback!** This allows you to read back data from GPU and shaders without a heavy performance cost
     - Adds the `VRCAsyncGPUReadback.Request` function and corresponding `OnAsyncGpuReadbackComplete` event
     - These read data from the GPU into CPU memory without too much of a performance impact, at the expense of delaying the data for one or more frames
-    - Check the [ASyncGPUReadback](/worlds/vrc-graphics/asyncgpureadback) docs for more info.
+    - Check the [ASyncGPUReadback](/worlds/udon/vrc-graphics/asyncgpureadback) docs for more info.
 
 <!--truncate-->
 

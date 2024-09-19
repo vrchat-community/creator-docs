@@ -44,6 +44,8 @@ After the payout, a confirmation page is displayed a confirmation email is sent 
 
 ## Revenue split
 
+VRChat shares the Creator Economy's revenue with sellers.
+
 ![Approximate revenue split](/img/economy/revenue-split-approximate.jpg "Approximate revenue split")
 
 After VRChat Credits have been purchased, spent, and successfully paid out to creators, the revenue split approximates the following values:

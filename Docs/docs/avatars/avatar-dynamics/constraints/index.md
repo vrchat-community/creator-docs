@@ -59,6 +59,8 @@ Enabling `Freeze To World` is not the same as disabling the constraint component
 - When the constraint is disabled, the affected transform stops moving in **local** space. It still follows your avatar movement.
 - When you enable `Freeze To World`, the constraint actively moves the transform in local space to prevent it from moving in **world** space.
 
+Additionally, having `Freeze To World` turned on by default means the constraint will freeze itself at its starting position/rotation/scale relative to your avatar the instant it loads in. This is not a guaranteed way to place it at a certain position/rotation/scale in world space.
+
 :::
 
 #### Rebake Offsets When Unfrozen

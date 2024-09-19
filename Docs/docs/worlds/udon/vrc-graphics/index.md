@@ -1,10 +1,8 @@
----
-sidebar_position: 2
----
-
 import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # VRCGraphics
+
+Udon has access to a variety of Unity's graphics functions.
 
 ## Types
 

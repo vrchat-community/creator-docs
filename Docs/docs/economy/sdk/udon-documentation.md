@@ -156,9 +156,9 @@ Sends an [OnListAvailableProducts](#onlistavailableproducts) event to the target
 ### Store.ListProductOwners
 Sends an [OnListProductOwners](#onlistproductowners) event to the target UdonBehaviour. This event allows you to retrieve the names of all your supporters and, for example, display their user names in your world.
 
-For this event to work properly, you'll first need to enable the ["Owners Names in Udon" setting](/economy/products/udon#getting-udon-products-owners-in-the-sdk) for the Udon product on [VRChat.com](https://vrchat.com/home/marketplace/storefront/products). Otherwise, [OnListProductOwners](#onlistproductowners) will not fire.
-
-If your GameObject contains multiple UdonBehaviour components, this event may not work properly.
+- For this event to work properly, you'll first need to enable the ["Owners Names in Udon" setting](/economy/products/udon#getting-udon-products-owners-in-the-sdk) for the Udon product on [VRChat.com](https://vrchat.com/home/marketplace/storefront/products). Otherwise, [OnListProductOwners](#onlistproductowners) will not fire.
+- If you are locally testing your world, OnListProductOwners will load the placeholder user names "VRCat, Fred, VRRat" instead of real user names.
+- If your GameObject contains multiple UdonBehaviour components, this event may not work properly.
 
 **Input**
 - `UdonBehaviour`: An UdonBehaviour that will receive the resulting [OnListProductOwners](#onlistproductowners) event.
@@ -173,7 +173,7 @@ If a game object or its Udon behaviour is disabled, it won't execute most of the
 :::
 
 ### OnPurchaseConfirmed
-This event is triggered once for any purchase that is received from VRChat servers. Purchases are loaded
+This event is triggered once a player's purchase has been loaded and confirmed. Purchases are loaded in the following situations: 
 - when joining the instance, both for the local player and any other players,
 - when any new players join the instance, and
 - when any player in the instance purchases one of the world's products.

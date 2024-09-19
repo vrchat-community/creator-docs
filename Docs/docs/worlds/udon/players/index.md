@@ -7,7 +7,7 @@ You can use Udon to retrieve information about players in your world instance.
 
 Udon interacts with Players through the VRCPlayerApi. Each Player has a VRCPlayerApi Object, and your world fires the OnPlayerJoined / OnPlayerLeft events on any UdonBehaviours that listen for them when a player joins or leaves.
 
-This page includes info on using some general nodes. Since there are so many things you can do with the VRCPlayerApi object, we've grouped some node info together on the following pages:
+This page includes info on using some general player properties and methods. Since there are so many things you can do with the VRCPlayerApi object, we grouped some information together on the following pages:
 
 * [Getting Players](/worlds/udon/players/getting-players)
 * [Player Positions](/worlds/udon/players/player-positions)
@@ -17,14 +17,42 @@ This page includes info on using some general nodes. Since there are so many thi
 * [Player Avatar Scaling](/worlds/udon/players/player-avatar-scaling)
 * [Player Events](/worlds/udon/graph/event-nodes#player-events)
 
-## Generally Useful Nodes
+## Generally Useful Properties and Methods
 
 ### IsValid
 *VRCPlayerApi, Boolean*
 
 Before you try to get or set anything on a Player, check whether IsValid returns true. If a player has left since you saved a reference to them, this will return False. For easier use on the graph, search for the generic "IsValid" method which works for any Object, since it gives you separate flows for True and False.
 
-![index-59fc2c8-player-isvalid.png](/img/worlds/index-59fc2c8-player-isvalid.png)
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
+![An Udon Graph screenshot showing the OnPlayerLeft event connected to an IsValid node.](/img/worlds/player-isvalid.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+   public override void OnPlayerLeft(VRCPlayerApi player)  
+   {  
+	if (Utilities.IsValid(player))
+	{
+		// Player is valid
+	}
+	else
+	{
+		// Player is not valid
+	}
+}  
+```
+
+</TabItem>
+</Tabs>
+
+
 
 ### EnablePickups
 *VRCPlayerApi, Boolean*

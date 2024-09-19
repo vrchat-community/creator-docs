@@ -14,15 +14,15 @@ You must also have created an Udon product in your Store. Please visit the [Udon
 
 If you've done everything above, you're ready to edit your Unity project.
 
-## UdonProduct Manager
+## UdonProducts Manager
 
-The **UdonProduct Manager** is an editor window that shows you all Udon Products you've created on VRChat.com. If you haven't created any yet, this window will be blank.
+The **UdonProducts Manager** is an editor window that shows you all Udon Products you've created on VRChat.com. If you haven't created any yet, this window will be blank.
 
-You can add Udon products to your project automatically with the UdonProduct Manager.
+You can add Udon products to your project automatically with the UdonProducts Manager.
 
 ![A screenshot of the UdonProducts manager.](/img/economy/sdk/udonproducts-manager.png)
 
-To open the UdonProduct Manager window, open the **VRChat SDK** tab at the top of the Unity Window, then click **UdonProducts Manager**.
+To open the UdonProducts Manager window, open the **VRChat SDK** tab at the top of the Unity Window, then click **UdonProducts Manager**.
 
 The manager lets you:
 - Fetch the thumbnail image of the product. This creates a texture you can use in your Unity project.

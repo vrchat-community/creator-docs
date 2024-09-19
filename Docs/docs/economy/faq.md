@@ -62,7 +62,7 @@ After VRChat Credits have been purchased, spent, and cashed out, ...
 - Approximately 30% went to the platform (Steam or Meta).
 - Approximately 20% went to VRChat and Tilia.
 
-The exact revenue split depends on how VRChat Credits flow through the Creator Economy. For additional details, read about our [Payout Split](/economy/payout#payout-split).
+The exact revenue split depends on how VRChat Credits flow through the Creator Economy. For additional details, read about our [Payout Split](/economy/payout#revenue-split).
 
 #### How do payouts work? ####
 VRChat Credits eligible for payout (i.e., ones you have not purchased yourself) can be paid out once per day on the VRChat website. A minimum of 30,000 VRChat Credits are required to complete a payout, converting to about $150 USD. Learn more in the [payout documentation](payout).

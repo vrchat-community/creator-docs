@@ -30,6 +30,7 @@ The services listed below are inherently trusted and are permitted with our defa
 | --- | --- |
 | Soundcloud | `soundcloud.com` |
 | Facebook Video | `*.facebook.com` |
+| Mixcloud | `*.mixcloud.com` |
 | NicoNico | `*.nicovideo.jp` |
 | Twitch.TV | `*.twitch.tv` |
 | Vimeo | `*.vimeo.com` |
