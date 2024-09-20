@@ -1,13 +1,13 @@
 ---
 slug: release-3-7-1
-date: 2024-09-04
-title: Release 3.7.1-beta.2
+date: 2024-09-20
+title: Release 3.7.1
 authors: [momo]
 tags: [release]
 ---
 ## Summary
 
-This update exposes some highly-requested functions to Udon, adds high-quality DPID mipmapping support, and optimizes PhysBone gizmos.
+This update exposes some highly-requested functions to Udon, adds high-quality DPID mipmapping support (opt-in beta), and optimizes PhysBone gizmos.
 
 ## New features
 
@@ -18,6 +18,7 @@ This update exposes some highly-requested functions to Udon, adds high-quality D
     - `System.Text.RegularExpressions` - [RegEx](https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=net-8.0) is a powerful system for searching, matching and replacing patterns within strings of text. We exposed 14 new functions and properties, addressing [this Canny post](https://feedback.vrchat.com/udon/p/feedback-expose-systemtextregularexpressions-namespace).
     - `System.Type` allows Udon to interact with data types, and can be useful to advanced creators who want to validate object types at runtime. We exposed 67 new functions and properties, addressing [this Canny post](https://feedback.vrchat.com/udon/p/expose-systemtypeissubclassof-isinstanceoftype-issubclassof-and-basetype)
 - The SDK now supports "Detail Preserving Image Downscaling" (DPID) mipmaps, which greatly improve the sharpness of world/avatar textures.
+    - :warning: We're still working on this one! It is currently a BETA feature and requires explicit opt-in via the "Settings" panel in the SDK control panel.
     - DPID replaces the mipmapping algorithm on all textures with the "Kaiser" filtering algorithm selected. "Box" filtering is unaffected.
         - The SDK build panel already encourages you to enable "Kaiser" filtering, which in turn now enables DPID.
     - Unlike the original algorithm, VRChat's version of DPID supports transparency. Enable [Alpha is Transparency](https://docs.unity3d.com/Manual/texture-type-default.html) to avoid filtering artifacts on the edges of transparent textures.
@@ -46,6 +47,14 @@ This update exposes some highly-requested functions to Udon, adds high-quality D
     - DPID is now correctly applied to all mipmaps that previously used Kaiser.
 - Simplified and streamlined the compute shader.
 - Reduced DPID-related log spam.
+
+## Fixes & Changes to DPID in the final version
+
+- Marked DPID as "BETA" and switched to opt-in.
+- Set "conservative mode" to be the default, since it seems to give better results overall.
+- Fixed normal maps (again).
+- Fixed support for lightmaps.
+- Support DPID mipmaps on HDR and Float format textures.
 
 ## Known Issues
 
