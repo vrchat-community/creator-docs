@@ -1,6 +1,8 @@
 ---
 description: "Buy VRChat credits to increase your wallet balance."
 sidebar_position: 4
+sidebar_custom_props:
+    customIcon: 💳
 ---
 
 # Purchasing Credits

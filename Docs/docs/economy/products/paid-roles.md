@@ -1,5 +1,7 @@
 ---
 description: "Give access to group roles, instances, announcements, priority queues."
+sidebar_custom_props:
+    customIcon: 👥
 ---
 
 # Paid Roles

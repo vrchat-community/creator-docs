@@ -1,6 +1,8 @@
 ---
 description: "Set up Tilia and your first group subscription."
 sidebar_position: 1
+sidebar_custom_props:
+    customIcon: 💡
 ---
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';

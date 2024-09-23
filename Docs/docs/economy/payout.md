@@ -1,6 +1,8 @@
 ---
 description: "Pay out your earnings with PayPal."
 sidebar_position: 5
+sidebar_custom_props:
+    customIcon: 💵
 ---
 
 # Payout

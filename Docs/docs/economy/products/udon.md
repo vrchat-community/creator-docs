@@ -1,5 +1,7 @@
 ---
 description: "Unlock benefits in your worlds with Udon scripts and prefabs."
+sidebar_custom_props:
+    customIcon: 🌍
 ---
 
 # Udon Products

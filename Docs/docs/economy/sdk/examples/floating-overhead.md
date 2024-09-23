@@ -1,5 +1,7 @@
 ---
 description: "A floating indicator above players who own an Udon product."
+sidebar_custom_props:
+    customIcon: 👑
 ---
 
 # Floating Overhead Buy Indicator

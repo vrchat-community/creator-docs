@@ -1,6 +1,8 @@
 ---
 description: "All Udon types, methods, and events related to the Creator Economy."
 sidebar_position: 4
+sidebar_custom_props:
+    customIcon: 🛠
 ---
 
 import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';

@@ -1,6 +1,8 @@
 ---
 description: "Manage your store, products, and listings."
 sidebar_position: 2
+sidebar_custom_props:
+    customIcon: 🏪
 ---
 
 # Your Store

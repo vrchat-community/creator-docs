@@ -1,6 +1,8 @@
 ---
 description: "Test your Udon products before publishing your world."
 sidebar_position: 3
+sidebar_custom_props:
+    customIcon: 🪲
 ---
 
 # Testing Udon Products

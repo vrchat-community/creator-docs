@@ -1,6 +1,9 @@
 ---
 title: Creator Economy SDK
 sidebar_position: 5
+sidebar_custom_props:
+    description: Use the Creator Economy in your world.
+    customIcon: 🛠
 ---
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
