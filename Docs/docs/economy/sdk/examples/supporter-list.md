@@ -1,5 +1,7 @@
 ---
 description: "A customizable list of all users who own an Udon product."
+sidebar_custom_props:
+    customIcon: 🥇
 ---
 
 # Supporter List

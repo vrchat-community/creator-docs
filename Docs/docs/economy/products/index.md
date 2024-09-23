@@ -1,5 +1,8 @@
 ---
 sidebar_position: 3
+sidebar_custom_props:
+    description: Create products to sell in your groups or worlds.
+    customIcon: 📦
 ---
 
 # Products

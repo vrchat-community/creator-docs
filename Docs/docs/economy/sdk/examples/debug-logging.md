@@ -1,5 +1,7 @@
 ---
 description: "A screen for listing, debugging, and logging products in your world."
+sidebar_custom_props:
+    customIcon: 🪲
 ---
 
 # Store Debug Logging

@@ -1,6 +1,8 @@
 ---
 description: "Follow these rules when selling in VRChat."
 sidebar_position: 99
+sidebar_custom_props:
+    customIcon: 📜
 ---
 
 # Content Guidelines

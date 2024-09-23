@@ -1,6 +1,8 @@
 ---
 description: "Read frequently asked questions about the Creator Economy."
 sidebar_position: 7
+sidebar_custom_props:
+    customIcon: ❓
 ---
 
 # FAQ

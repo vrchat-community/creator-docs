@@ -1,6 +1,8 @@
 ---
 description: "Opens your group, store, or a listing."
 sidebar_position: 1
+sidebar_custom_props:
+    customIcon: 🔗
 ---
 
 # Open Group Page

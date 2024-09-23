@@ -1,5 +1,7 @@
 ---
 description: "Lists all subscribers in the current instance."
+sidebar_custom_props:
+    customIcon: 👥
 ---
 
 # Subscribers In Instance

@@ -2,6 +2,8 @@
 description: "Add your first Udon product to your world."
 title: Getting Started
 sidebar_position: 0
+sidebar_custom_props:
+    customIcon: 💡
 ---
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';

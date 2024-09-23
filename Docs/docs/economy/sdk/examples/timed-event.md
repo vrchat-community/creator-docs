@@ -1,5 +1,7 @@
 ---
 description: "An event that only Udon product owners can trigger."
+sidebar_custom_props:
+    customIcon: ⏱
 ---
 
 # Product Event Timed

@@ -1,5 +1,7 @@
 ---
 description: "An area that only Udon product owners can enter."
+sidebar_custom_props:
+    customIcon: 🔐
 ---
 
 # Subscribers Only Area

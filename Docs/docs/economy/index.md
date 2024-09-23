@@ -1,7 +1,6 @@
 ---
 sidebar_position: 3
 ---
-
 # Creator Economy
 
 import SellerNotification from './_sellers-notification.mdx';

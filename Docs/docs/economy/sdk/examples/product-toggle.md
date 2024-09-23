@@ -1,5 +1,7 @@
 ---
 description: "Toggle a GameObject for players who own an Udon product."
+sidebar_custom_props:
+    customIcon: 🔄
 ---
 
 # Udon Product Toggle
