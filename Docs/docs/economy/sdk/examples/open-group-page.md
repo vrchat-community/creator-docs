@@ -10,10 +10,9 @@ sidebar_custom_props:
 OpenGroupPage is a prefab that makes it easier for users to access purchasable CE listings. Use it to create buttons that open group pages or specific listings.
 
 ### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/c659160083f6a0f3448e7a3f6936289aaade5c9b.unitypackage).
-2. Make sure your project is using the World SDK `3.5.0`or newer.
-3. Import the Unity package into your project.
-4. Drag your chosen prefab into your scene. The options are:
+1. Download the Example from [Example Central](https://vrc-beta-docs.netlify.app/sdk/example-central).
+2. Import the Unity package into your project.
+3. Drag your chosen prefab into your scene. The options are:
 
 ##### Prefabs included
 * **OpenGroupPagePrefab**: Includes a button that opens a group page. Also includes a text description.
@@ -26,6 +25,10 @@ OpenGroupPage is a prefab that makes it easier for users to access purchasable C
 
 ![OpenListingPrefab](/img/economy/examples/Comparison-OpenListing.png "Compares listing prefabs.")
 
+* **OpenListingDeluxePrefab**: Includes a thumbnail, and fields for the name, type and price of the listing.
+
+![OpenListingPrefab](/img/economy/examples/OpenListingDeluxe_GameView.png "Shows OpenListing Deluxe as it appears in the Game View")
+
 ### How to Use
 
 For each prefab, you'll need to replace any ID with the ID of your own group or product.
@@ -36,15 +39,22 @@ For each prefab, you'll need to replace any ID with the ID of your own group or 
 
 ![DragGroupID](/img/economy/examples/Group-Id-Copying.png "Where to put the group ID.")
 
-3. For **OpenListing/OpenListingSimple:** Set the ID of the listing in the `Listing ID` field in the inspector window.
-    - Find your listing ID by [opening the listing section](https://vrchat.com/b/monetization/home/marketplace/storefront/listings) of your store and copying its ID. 
+3. For **OpenListing/OpenListingSimple/OpenListingDeluxe:** Set the ID of the listing in the `Listing ID` field in the inspector window.
+    - Find your listing ID by [opening the listing section](https://vrchat.com/home/marketplace/storefront/listings) of your store and copying its ID. 
 
 ![DragListingID](/img/economy/examples/Listing-Id-Copying.png "Where to put the listing ID.")
 
-4. Toggle the **OpenToStorePage** toggle on the prefab if you want to open to your store page directly. If unchecked, the button will open to your group page instead of directly to your store.
+4. For **OpenListingDeluxe**:
+    - Set the Thumbnail for the listing using the `Thumbnail` field in the inspector window. It's best if you use the same thumbnail that the user will see when opening your listing, but you have the ability to use any square Sprite in your project.
+    - Set the three text lines using the `Display Name`, `Type` and `Price` fields. Just like the thumbnail, it's best if these match what the user will see in your listing, but you can enter any information you like.
+
+![OpenListingDeluxeFields](/img/economy/examples/OpenListingDeluxe_Inspector.png "The Fields for OpenListingDeluxe")
+
+
+5. Toggle the **OpenToStorePage** toggle on the prefab if you want to open to your store page directly. If unchecked, the button will open to your group page instead of directly to your store.
 ![IDPasting](/img/economy/examples/Group-versus-Store-links.png "Instructions on finding and pasting IDs.")
 
-4. Run Build & Test!
+6. Run Build & Test!
 
 ### Inspector Parameters
 
@@ -54,3 +64,9 @@ For each prefab, you'll need to replace any ID with the ID of your own group or 
 
 #### OpenListing 
 * `Listing ID` - The listing ID of the listing you want to open.
+
+#### OpenListingDeluxe
+* `Thumbnail` - The sprite shown in the prefab, typically the same as the thumbnail set for the listing.
+* `Display Name` - The first line of text, typically the Display Name of the listing.
+* `Type` - The second line of text, typically the Type of the listing - Consumable, Instant, etc.
+* `Price` - The third line of text, typically the Price of the listing in VRChat Credits.
