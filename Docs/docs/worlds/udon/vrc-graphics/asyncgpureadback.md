@@ -60,7 +60,7 @@ public class AGPURB : UdonSharpBehaviour
         }
         else
         {
-            var px = new Color[texture.width * texture.height];
+            var px = new Color32[texture.width * texture.height];
             Debug.Log("GPU readback success: " + request.TryGetData(px));
             Debug.Log("GPU readback data: " + px[0]);
         }
