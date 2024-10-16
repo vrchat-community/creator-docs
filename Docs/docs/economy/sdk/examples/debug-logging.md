@@ -12,10 +12,9 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 Store Debug Logging is a prefab that helps log store-related events on an in-world console or screen. You can set this up in your worlds to give supporters a way to check what purchases they've made, what purchases they can make, and to open your store.
 
-### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/44219d76aa08adb0b6511e37891a0011f40e8dcb.unitypackage).
-2. Make sure your project is using the World SDK `3.5.0` or newer. 
-3. Import the Unity package into your project.
+import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
+
+<HowToImportExample/>
 
 ##### Prefabs Included
 * **StoreDebugLoggingPrefab**: A prefab that contains a store-related console window, which supporters can interact with.

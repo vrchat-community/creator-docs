@@ -9,10 +9,9 @@ sidebar_custom_props:
 
 OpenGroupPage is a prefab that makes it easier for users to access purchasable CE listings. Use it to create buttons that open group pages or specific listings.
 
-### How to Import
-1. Download the Example from [Example Central](https://vrc-beta-docs.netlify.app/sdk/example-central).
-2. Import the Unity package into your project.
-3. Drag your chosen prefab into your scene. The options are:
+import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
+
+<HowToImportExample/>
 
 ##### Prefabs included
 * **OpenGroupPagePrefab**: Includes a button that opens a group page. Also includes a text description.

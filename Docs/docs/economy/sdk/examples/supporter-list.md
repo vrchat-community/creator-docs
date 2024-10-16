@@ -14,10 +14,9 @@ The Supporter List prefab displays all the names of users that have purchased an
 
 ![SupporterListPreview](/img/economy/examples/SupporterList-Preview.png "Preview of the supporter list prefab.")
 
-## How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/ba12246609ebc690682fd8707ae46aad211755f5.unitypackage).
-2. Make sure your project is using the World SDK `3.5.0` or newer.
-3. Import the Unity package into your project.
+import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
+
+<HowToImportExample/>
 
 :::caution
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete example scene.

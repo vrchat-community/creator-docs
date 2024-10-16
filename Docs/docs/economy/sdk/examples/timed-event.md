@@ -20,10 +20,9 @@ You can read more about Udon events [here](https://creators.vrchat.com/worlds/ud
     <iframe src="https://assets.vrchat.com/videos/docs/ProductEvent_Preview.mp4" title="Timed Event" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
-### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/b1547cd3c689c256299f802b3a19c8bbc9da8613.unitypackage).
-2. Make sure your project is using the World SDK `3.5.0`or newer.
-3. Import the Unity package into your project.
+import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
+
+<HowToImportExample/>
 
 ##### Prefabs Included
 * **SendProductEventPrefab**: A prefab that sends the product event when the button is pressed and enables the GameObject for the set amount of time. Though only a player who owns the product can set off the event, `OnProductEvent` will be executed by all users. Meaning, only people who pay for the product can activate the event, but anyone can see or interact once the event is activated.
