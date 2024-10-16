@@ -12,10 +12,9 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 Udon Product Toggle is a prefab that enables/disables a GameObject when a user owns the Udon Product assigned. This can be used for both local and instance-based objects. Use this in unique ways, like setting up doors that let subscribers into private areas, or creating fun, purchasable pop-ups for the entire instance.
 
-### How to Import
-1. Download the [Unity package directly by clicking here](https://cdn.sanity.io/files/yvg0vlb9/production/fa0b10c179c4860d392857709d68147d9fab5a33.unitypackage).
-2. Make sure your project is using the World SDK `3.5.0`or newer.
-3. Import the Unity package into your project.
+import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
+
+<HowToImportExample/>
 
 ##### Prefabs Included
 * **UdonProductToggleObjectOffLocalPrefab**: Sets the target object to be disabled when the local player owns the product.
