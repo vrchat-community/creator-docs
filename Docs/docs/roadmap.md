@@ -13,7 +13,7 @@ This page may be out of date. For the latest information, visit VRChat's [feedba
 
 |Status|Name|
 |---|---|
-|Closed Beta[^1]|[Save & Load persistent World Data](https://feedback.vrchat.com/udon/p/save-load-persistent-world-data)|
+|Beta[^5]|[Save & Load persistent World Data](https://feedback.vrchat.com/udon/p/save-load-persistent-world-data)|
 |Closed Beta[^1]|[New Character Controller for Worlds](https://feedback.vrchat.com/udon/p/new-character-controller-for-worlds)|
 |In progress[^2]|[Udon 2](https://feedback.vrchat.com/udon/p/udon-2)|
 |In progress[^2]|[Example Central](https://feedback.vrchat.com/udon/p/example-central-for-worlds-sdk)|
@@ -37,3 +37,5 @@ Please keep in mind that this list is subject to change. It’s also doesn’t i
 [^3]: "Closed Beta" means that this feature is getting tested with a selected group of users to collect feedback and find bugs.
 
 [^4]: This URL leads to a private feedback board for creators participating in the Creator Economy.
+
+[^5]: Use the `persistence-beta` branch on Steam!
