@@ -23,7 +23,7 @@ Unity, VRChat, and the VRChat SDK contain [terms](https://developers.google.com/
 	- For example: "GameObject" and "game object."
 - Use **lowercase** for terms that aren't unique to VRChat or the SDK, even if they mean something specific in VRChat.
 	- For example: **a**vatar, **w**orld, **c**reator.
-- **Capitalize** terms that are specific to VRChat or SDK, even if they include one of the worlds above.
+- **Capitalize** terms that are specific to VRChat or SDK, even if they include one of the words above.
 	- For example: **A**vatars SDK, **W**orlds SDK, **V**RChat, **C**reator **E**conomy, **C**reator **E**conomy.
 
 You can use acronyms for terms that are used frequently in your document. When you use an acronym in your document for the first time, you should define it. For example:  
