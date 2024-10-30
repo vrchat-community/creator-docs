@@ -1,5 +1,8 @@
 ---
 sidebar_position: -1
+description: "Very simple Udon programs in Udon Graph and UdonSharp."
+sidebar_custom_props:
+    customIcon: 🐣
 ---
 
 import Tabs from '@theme/Tabs';

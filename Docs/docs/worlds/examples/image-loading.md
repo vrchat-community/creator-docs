@@ -1,7 +1,18 @@
+---
+description: "Loading a remote image."
+sidebar_custom_props:
+    customIcon: 🖼️
+---
+
 # Image Loading Example
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+
+<video loop="loop" autoplay="autoplay" muted>
+  <source src="/img/worlds/image-loader.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
 
 Udon can load images from the internet and display them as UI elements or as textures on world objects. Our example world below demonstrates how the system works and how to use GitHub to host the images and captions.
 
@@ -10,11 +21,6 @@ Udon can load images from the internet and display them as UI elements or as tex
 [Download the example project](https://github.com/vrchat-community/examples-image-loading/archive/refs/heads/main.zip) or [visit the GitHub repo](https://github.com/vrchat-community/examples-image-loading) to clone it for yourself.
 
 This scene has a picture frame that automatically changes to show different images with matching captions. The images and captions are both hosted for free on GitHub Pages and are included in the GitHub repository above.
-
-<video loop="loop" autoplay="autoplay" muted>
-  <source src="/img/worlds/image-loader.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-</video>
 
 Scene File: `Assets/_Project/Gallery`
 
