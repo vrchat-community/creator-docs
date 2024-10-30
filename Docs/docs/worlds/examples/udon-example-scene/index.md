@@ -1,3 +1,8 @@
+---
+sidebar_custom_props:
+    customIcon: 🛝
+---
+
 # Udon Example Scene
 
 This scene contains examples on how worlds can use Udon. You can [build & test](/worlds/udon/using-build-test) or publish this world to try it in VRChat.
