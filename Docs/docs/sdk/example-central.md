@@ -15,7 +15,7 @@ Example Central has only recently been released.
 :::
 
 ## Basic Usage
-Open the window from the Unity Editor Menu under "VRChat SDK > 🛖 Example Central"
+Open the window from the Unity Editor Menu under "VRChat SDK > 🏠 Example Central"
 
 ![Opening Example Central From Menu](/img/sdk/example-central/ec-menu.png)
 
@@ -53,9 +53,7 @@ Look at the tags of examples to quickly understand the systems and concepts invo
 
 ### Guide
 
-Each example has a detailed guide in the [Examples section of the VRChat Ask Forum](https://ask.vrchat.com/c/creator-hub/examples/72/l/latest?order=created).
-
-You can use the forum to ask questions, report bugs, request improvements, or share your own examples.
+Each example has a detailed guide in the Creator Docs, which you can access by pressing the "Docs" button in the window.
 
 ### Example World
 
@@ -83,4 +81,3 @@ Both settings are disabled by default because they are currently in Beta testing
 
 What do you think of Example Central?
 - Use the [Example Central Canny Board](https://feedback.vrchat.com/example-central) to tell us your feature requests and report bugs.
-- For feedback about particular Examples, please use the [Ask Forum post](https://ask.vrchat.com/c/creator-hub/examples/72) for that example.

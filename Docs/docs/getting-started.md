@@ -27,7 +27,7 @@ Follow the steps below to quickly set up the VRChat SDK:
 2. If Unity is not installed, the Creator Companion will help you download Unity Hub, install Unity version [<CurrentUnityVersion/>](/sdk/upgrade/current-unity-version/) (VRChat SDK 3.4.2 or earlier is Unity 2019.4.31f1), and [create a Unity Account](https://id.unity.com/account/new).
 3. Use the Creator Companion to create a new Worlds or Avatar project, and open it with Unity.
 4. Build your [world](/worlds/creating-your-first-world) or [avatar](/avatars/creating-your-first-avatar) in Unity, and test it in VRChat using the SDK Control Panel.
-5. Once ready, use theSDK control panel to publish your world or avatar to VRChat!
+5. Once ready, use the SDK control panel to publish your world or avatar to VRChat!
 
 ## World Creation
 
