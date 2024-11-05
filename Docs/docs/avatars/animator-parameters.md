@@ -21,6 +21,7 @@ You should assume that parameter values may change. If you "dead-end" your anima
 | Name                               | Description                                                  | Type        | Sync           |
 | ---------------------------------- | ------------------------------------------------------------ | ----------- | -------------- |
 | IsLocal                            | True if the avatar is being worn locally, false otherwise    | Bool        | None           |
+| PreviewMode                        | Returns `1` if the avatar is being previewed, `0` if it is not | Int         | None           |
 | [Viseme](/avatars/animator-parameters#viseme-values)                             | [Oculus viseme index](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference) (`0-14`). When using Jawbone/Jawflap, range is `0-100` indicating volume  | Int         | Speech         |
 | Voice                              | Microphone volume (`0.0-1.0`)                                  | Float       | Speech         |
 | [GestureLeft](/avatars/animator-parameters#gestureleft-and-gestureright-values)                        | Gesture from L hand control (0-7)                            | Int         | IK             |
