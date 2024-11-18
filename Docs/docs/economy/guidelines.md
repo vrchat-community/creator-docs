@@ -21,9 +21,9 @@ Please note that the Creator Economy is a growing and evolving system. These rul
 	1. This includes the [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy), [Community Guidelines](https://hello.vrchat.com/community-guidelines), and [Creator Guidelines](https://hello.vrchat.com/creator-guidelines).
 	2. You may only sell content that you fully own or have the legal right to distribute, including any third-party elements. Ensure you have the necessary licenses or permissions. (See section 8.4 of VRChat's [Terms of Service](https://hello.vrchat.com/legal))
 2. Clearly define what the user is purchasing.
-	1. Both **Listings** and the **Products** they contain should be clearly labeled with detailed descriptions.
+	1. Listings, subscriptions, and products should have clear names and sufficiently detailed descriptions.
 	2. Content should avoid engaging in [Dark Patterns](https://en.wikipedia.org/wiki/Dark_pattern) (or Deceptive Design Patterns) such as misdirection, bait-and-switching, and others.
-	3. Content must avoid false advertising and not misrepresent the content or prices of listings.
+	3. Content must avoid false advertising and not misrepresent the content or prices of listings and subscriptions.
 3. If feature parity exists, the Creator Economy should be used in addition to any off-platform monetization methods.
 	1. For example, if perks or benefits for a VRChat world are sold through an off-platform subscription service, then those perks should also, when possible, be available for purchase in the Creator Economy.
 	2. Don't price your external offering to drive VRChat users off-platform.
@@ -34,7 +34,8 @@ Please note that the Creator Economy is a growing and evolving system. These rul
 	1. Fundraiser payment methods must be hosted outside of the VRChat platform.
 	2. It is allowed to ask for donations for external fundraisers that are not funded through the Creator Economy.
 	3. You are permitted to ask for donations through your supporters, though donations towards fundraisers and charity organizations are often taxed differently between countries, and should be managed only with fiat currencies.
-6. Listing costs should always be displayed in "VRChat Credits" or with ![Credit icon](/img/economy/Icons_Credits@20.svg) or "\V".
+6. Costs should always be displayed in "VRChat Credits", the VRChat Credit icon![Credit icon](/img/economy/Icons_Credits@20.svg),
+ or "\V".
 	1. Many users are in different countries with different currencies. Use "VRChat Credits" to correctly convey the cost of your products to your buyers.
 
 ### Worlds ###

@@ -128,8 +128,10 @@ Opens a group's **Store** page in VRChat's main menu.
 - `string`: ID of a group (i.e. `grp_00000000-0000-0000-0000-000000000000`)
   - To find the group ID, open the group on VRChat.com and copy the ID from your browser's address bar.
 
-### Store.OpenGroupListing
-Opens a specific **listing** on a group's Store page.
+### Store.OpenListing
+Opens the purchase screen of a [listing](/economy/listings) in VRChat's main menu.
+
+You can open any of your activated listings, even if you didn't add it to your group [store](/economy/store) or world [store](/economy/store).
 
 **Input**
 - `string`: ID of the listing (i.e. `prod_00000000-0000-0000-0000-000000000000`)

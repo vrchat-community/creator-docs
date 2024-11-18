@@ -7,64 +7,62 @@ sidebar_custom_props:
 
 # FAQ
 
-Here are some of the most frequently asked questions about VRChat's Creator Economy.
-
-If your question isn't listed here, please let us know by clicking the "Feedback" button in the bottom right.
-
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-##  General Information ##
+Here are some of the most frequently asked questions about VRChat's Creator Economy.
+
+If your question isn't listed here, please let us know by clicking the "Feedback" button in the bottom right.
+
+## General Information
 
 #### What's the Creator Economy? ####
-VRChat's Creator Economy allows creators to receive support from users. Directly inside VRChat! Users can purchase [VRChat Credits](/economy/purchasing-credits) inside of VRChat. Users can then spend them on [Listings](/economy/products/paid-roles) that creators add to their [Store](/economy/store). These listings can give users special benefits for supporting them, such as unlockable world content or access to special group instances. Creators can spend VRChat Credits on other creators or pay them out for real currency.
 
-#### How do I set up a store, create paid roles, cash out earnings, etc... ####
+The Creator Economy allows you to earn VRChat Credits by setting [listings](/economy/listings), [subscriptions](/economy/subscriptions) and [stores](/economy/store). You can spend Credits in VRChat, or [request a payout](/economy/payout) via PayPal.
 
-<iframe
-    width="100%"
-    height="400"
-    src="https://www.youtube.com/embed/NuRPDYrYhSM?si=NZblzqFKR7r1OG0E"
-    title="YouTube video player"
-    frameborder="0"
-    allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen>
-</iframe>
+#### How do I get started?
 
-Watch the video above to learn the basics of being a seller in VRChat's Creator Economy.
+ [Apply to join the the CE](https://www.surveymonkey.com/r/creator-economy-application-seller) if you're not already an approved seller.
+ 
+You need to [get started with Tilia](./getting-started) before you can create [listings](./listings), [subscriptions](./subscriptions), [products](./products), or [stores](./store).
 
 ***
 ## Payment Processing ##
 
-#### What are VRChat Credits? ####
-VRChat Credits are VRChat's new virtual currency! They are similar to premium currencies found in other video games.
+#### What are VRChat Credits?
+VRChat Credits (![VRChat Credit icon](/img/economy/Icons_Credits@20.svg)) are VRChat's currency for the Creator Economy. They are similar to premium currencies found in other video games.
 Users can purchase VRChat Credits and spend them on creators.
 Creators can pay out their earnings for real money!
 
-#### What’s the conversion of VRChat Credits to USD? ####
-When a creator pays out their VRChat Credits, 1 credit equals about $.005 USD, or 211 credits equals about $1.05 USD. Visit the [payout](/economy/payout) page to learn more.
+#### What’s the conversion of VRChat Credits to USD?
+
+When you request a [payout](/economy/payout), your earned VRChat credits are paid out at the following rate:
+
+1![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) ≈ 0.005 US$
+
+211![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) ≈ 1.05 US$
+
+In other words, if your listing costs 1200![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) (≈10 US\$), your earned [payout](/economy/payout) is approximately 5 US\$. 
+
+Please refer to the [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy) and the [payout documentation](/economy/payout) to learn more.
+
+#### What's the revenue split? ####
+After VRChat Credits have been purchased, spent, and cashed out, ...
+- Approximately 50% went to the seller.
+- Approximately 30% went to the platform (Steam or Meta).
+- Approximately 20% went to VRChat and Tilia.
+
+The exact revenue split depends on how VRChat Credits flow through the Creator Economy. For additional details, read about our [Payout Split](/economy/payout#revenue-split).
 
 #### What's Tilia? ####
 Tilia is VRChat's business partner for Creator Economy.
 They are a payment platform for accounts, wallets, payments, invoices, and payouts. As a VRChat seller, you'll be interacting with Tilia, too.
 
-#### How do I earn money in VRChat? ####
-1. Complete [Seller Onboarding](/economy/getting-started).
-2. Set up a [VRChat Group](https://vrchat.com/home/groups) or use your existing VRChat Group.
-3. Set up paid group roles and ask users to support you.
-4. [Pay out](/economy/payout) VRChat Credits you earned for real money.
-
 #### Is the Creator Economy available globally? ####
-Yes. Any creator with access to the Creator Economy can earn VRChat Credits.
-In addition, eligible sellers can pay out VRChat Credits if they are in a [region supported by PayPal](https://www.paypal.com/us/webapps/mpp/country-worldwide). Please refer to our [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy) for more information.
+Yes. Any creator with access to the Creator Economy can earn VRChat Credits. Please refer to our [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy) for more information.
 
-#### What's the revenue split? ####
-After VRChat Credits have been purchased, spent, and cashed out, ...
-- Approximately 50% went to the owner of the group.
-- Approximately 30% went to the platform (Steam or Meta).
-- Approximately 20% went to VRChat and Tilia.
-
-The exact revenue split depends on how VRChat Credits flow through the Creator Economy. For additional details, read about our [Payout Split](/economy/payout#revenue-split).
+However, to request a successful payout, you must be in a region that does supports receiving payouts via PayPal.
 
 #### How do payouts work? ####
 VRChat Credits eligible for payout (i.e., ones you have not purchased yourself) can be paid out once per day on the VRChat website. A minimum of 30,000 VRChat Credits are required to complete a payout, converting to about $150 USD. Learn more in the [payout documentation](payout).
@@ -96,18 +94,21 @@ Once the Creator Economy is publicly available, it will be part of the regular V
     - Unlock exclusive areas, items, or features.
 - Allow users to 'use' a purchased product.
     - For example, if a player purchased a 'fireworks' item, they may trigger it for all players.
-- Open your group page directly, making it easy for customers to support you.
+- Open your store directly, making it easy for customers to support you.
 
 Visit the [Creator Economy SDK documentation](/economy/sdk/) to get started!
 
-#### Can I use Udon products from someone else's group? ####
-No. You must be the world owner and the group owner to use an Udon product.
-You **can** open another user's Group or store with the [Open Group Page](sdk/udon-documentation#storeopengrouppage) method.
+#### Can I use Udon products from another world creator? ####
+No. You must be the world owner to use an Udon product.
+
+You **can** open another creator's store, group, or listing with the [SDK](/economy/sdk/udon-documentation#storeopenlisting).
 
 #### What aspects of my World is the Creator Economy SDK allowed to control? ####
-The intent of the Creator Economy SDK is to reward users for supporting you. Don't abuse it!
-Remember to keep users safe. If a user doesn't support you, don't make them physically uncomfortable.
-Avoid confusing users. Give users clear information about exclusive features.
+Use the Creator Economy SDK to reward users for supporting you. Don't abuse it!
+
+- Remember to keep users safe. If a user doesn't support you, don't make them physically uncomfortable.
+- Avoid confusing users. Give users clear information about exclusive features.
+- Refer to our [guidelines](/economy/guidelines) for more information.
 
 ***
 ## Miscellaneous ##
@@ -116,18 +117,21 @@ Avoid confusing users. Give users clear information about exclusive features.
 Not initially! You do not need to be part of a group before making a purchase on their store. Making the purchase, though, will automatically add you to the group. If you leave the group, you will lose access to your Paid Role in the group, but not the Udon Products.
 
 #### Can I split my earnings with another creator? ####
-There is currently no split pay functionality. The [Payout](/economy/payout) process is only available to the **group owner.**
+There is currently no split pay functionality. The [Payout](/economy/payout) process is only available to the seller.
 
 #### Can a listing be free? ####
-No, not at this time. However, for testing, sellers can purchase their own listings for free in VRChat.
+No, not at this time. However, for [testing](/economy/sdk/testing), sellers can purchase their own listings for free in VRChat.
 
 #### Where can I provide feedback? ####
 VRChat uses Canny for our community feedback and bug reports. Feel free to post on the Creator Economy section of our [feedback page.](https://feedback.vrchat.com/creator-economy)
 
-#### Are all purchases subscriptions, or are one-time purchases possible? ####
-All subscriptions are monthly and have an expiration date. Users can pre-pay for as many months as they want (or years!)
-
-Auto-renewing subscriptions are something we hope to support in the future.
-
 #### If a creator deletes a product, will that automatically update/delete any listings that contain that product? ####
-Creators cannot delete products that have active subscribers. They will see an error informing them that the product has active purchases and that it cannot be deleted. Instead, creators may wish to delete the listing that the product is contained in.
+Creators cannot delete products that are have any owners or active subscribers. They will see an error informing them that the product has active purchases and that it cannot be deleted. Instead, creators may wish to delete the listing that the product is contained in.
+
+:::info
+
+import FeedbackButton from "@site/src/components/FeedbackButton";
+
+Do you have another question? Ask us by pressing the <FeedbackButton /> button!
+
+:::

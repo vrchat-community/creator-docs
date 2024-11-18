@@ -10,6 +10,13 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
+1. Open [the Example Central Window](https://vrc-beta-docs.netlify.app/sdk/example-central) from the window from the Unity Editor Menu under "VRChat SDK > 🏠 Example Central"
+2. If you haven't yet specifically made examples visible yet:
+	1. Press the ⚙️ gear icon in the Example Central window to open Example Central settings.
+    2. Enable "Show Creator Economy Examples".
+3. Find this prefab in the list or search for it by title (same as the title of this page).
+4. Press the "Import" button to import the Unitypackage into your project.
+
 Floating Overhead Buy Indicator is a prefab that spawns an indicator over a player's head once they have purchased something. Customize it in various ways to highlight your supporters.
 
 ![FloatingPrefab](/img/economy/examples/BuyIndicator-FloatingPrefab.png "Shows what a Floating Obj looks like over a players head.")

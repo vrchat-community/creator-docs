@@ -33,7 +33,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: ({versionDocsDirPath, docPath}) =>
               `https://github.com/vrchat-community/creator-docs/edit/main/Docs/docs/${docPath}`,
-          showLastUpdateTime: true
+          showLastUpdateTime: true,
         },
         blog: {
           path: 'releases',
@@ -42,7 +42,7 @@ const config = {
           blogDescription: 'The latest VRChat SDK releases and patch notes.',
           showReadingTime: false,
           blogSidebarTitle: 'History',
-          blogSidebarCount: 'ALL'
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -69,6 +69,13 @@ To open projects using just the Unity Hub:
 * Do not use a single project for tons of different avatars or worlds. This is a quick way to make future migrations a huge pain in the butt!
 * If you know how to use version control software like [Git](https://git-scm.com/) or [Unity Version Control](https://unity.com/solutions/version-control), use it! It makes it very easy to roll back changes that break your project.
 
+### Understanding the Terms "Player" vs. "User"
+
+In VRChat, the terms "player" and "user" can refer to different things depending on the context:
+
+- User: This is the standard term for anyone using VRChat, whether they're in the same world as you or not. It’s the general term used for all participants on the platform.
+- Player: In technical terms, a "player" specifically refers to the individual instantiation of a user within a world instance. This distinction is more relevant for the underlying system and certain technical features (like multiplayer interactions). For example, when locally testing worlds there can be multiple players of the same user in a world instance.
+
 ### What's Next?
 Your project is ready! You can move on to [World Creation](/worlds) or [Avatar Creation](/avatars).
 
