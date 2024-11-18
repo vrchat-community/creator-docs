@@ -7,6 +7,7 @@ sidebar_custom_props:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import HowToImportExample from '/docs/worlds/examples/_how-to-import.mdx';
 
 ## Example World
 
@@ -14,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 Udon can use [AI Navigation](/worlds/udon/ai-navigation). This example shows you how it can be used for pathfinding and creating NPC characters that walk around in your world.
 
-Visit the [AI Navigation Example World](https://vrchat.com/home/world/wrld_d5953f6d-5dae-4fe3-b662-128ef2b72267) to try it for yourself!
+Visit the [AI Navigation Example World](https://vrchat.com/home/world/wrld_b7b99484-d92f-403d-ac10-4da7e5a9ce14) to try it for yourself!
 
 ## Using the Example
 
@@ -22,11 +23,7 @@ This scene has a collection of NPCs which are trying to get from the red block t
 
 Open the scene in the Unity Editor to test the basic functionality. It should work roughly the same as in VRChat. When you enter play mode, the NPCs will attempt to reach the green block. You can move the blue blocks to help the AI to reach their goal. You can press the "Reset" button to try again.
 
-## Importing the Example from the SDK
-
-The example is included in the Worlds SDK. You can open it by selecting "VRChat SDK > Samples > AI Navigation".
-
-If you want to save your changes to the scene, make sure to save it as a new scene in your "Assets" folder. If you overwrite the scene in the "Packages" folder, your changes may be lost when updating the SDK.
+<HowToImportExample/>
 
 ## Technical Breakdown
 

@@ -28,6 +28,7 @@ To detect events on these Colliders, you can use:
 - **OnPlayerCollisionEnter** is called when a player's capsule enters a Collider.
 - **OnPlayerCollisionStay** is called on frames while a player's capsule is inside a Collider.
 - **OnPlayerCollisionExit** is called when a player's capsule exits a Collider.
+- **OnControllerColliderHitPlayer** is called when a CharacterController hits a Player.
 
 :::caution OnPlayerCollision Events are for Moving Objects
 

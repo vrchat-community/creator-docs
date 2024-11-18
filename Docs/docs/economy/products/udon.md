@@ -1,18 +1,16 @@
 ---
-description: "Unlock benefits in your worlds with Udon scripts and prefabs."
+description: "Unlock world features with Udon or prefabs."
 sidebar_custom_props:
     customIcon: 🌍
 ---
 
-# Udon Products
+# Udon Product
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-An Udon product is a type of product you can give to your paid Group members when they purchase a listing.
-
-Your world can detect Udon products and reward players for supporting you. You can unlock new areas, customize your world, or display a nice "Thank you" message.
+Your worlds can detect Udon products and reward players who own one of your listings. You can unlock new areas, customize your world, display a "Thank you" message, or something else.
 
 Before you can use Udon products in your world, you need to create them on the VRChat website by following these steps:
 
