@@ -66,13 +66,12 @@ The gear icon (⚙) beside the search box opens up the settings of Example Centr
 
 ![Example Central Window Layout](/img/sdk/example-central/ec-settings.png)
 
-There are two settings:
+There is one setting:
 - Show Creator Economy Examples
-- Show Persistence Examples
 
 :::warning
 
-Both settings are disabled by default because they are currently in Beta testing. You can enable them, but they will not function properly if you are not a Beta tester.
+The setting is disabled by default because it is currently in Beta testing. You can enable it, but the examples will not function properly if you are not a Beta tester.
 
 :::
 
