@@ -39,9 +39,10 @@ This event triggers when sync data has been transformed from bytes back into usa
 Same as OnDeserialization, but with additional information about the time at which the request was sent and received.
 
 #### DeserializationResult
-`DeserializationResult` contains two properties:
+`DeserializationResult` contains three properties:
 - `sendTime`: The time in seconds at which this message was sent.
 - `receiveTime`: The time in seconds at which this message was received.
+- `isFromStorage`: If true, then the included data was restored from storage rather than received from other realtime clients.
 
 Both `sendTime` and `receiveTime` measure based on the time in seconds since VRChat has started, from your perspective (see <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Time-realtimeSinceStartup.html">Time.realtimeSinceStartup</UnityVersionedLink>). This means that if you want to know how many seconds ago a certain Deserialization was sent, you can calculate it with `Time.realtimeSinceStartup - sendTime`.
 
@@ -56,10 +57,10 @@ This event triggers just after an attempt was made to send serialized data. It r
 This event is deprecated - use the typical OnEnabled event if you want to do something when an object is 'Spawned' from the pool.
 
 ### OnOwnershipRequest
-This event is triggered when someone has requested to take ownership. It includes the Player Objects for the Requester and the Requested Owner. To approve or deny the change, set a boolean value into a "Set Return Value" node. This logic runs locally on both the requester and the owner, so be aware that disagreements in logic between the two will cause a desync. This is most likely to be expressed by the ownership transfer being unexpectedly rejected by the owner.
+This event is triggered when someone has requested to take ownership. It includes the PlayerObjects for the Requester and the Requested Owner. To approve or deny the change, set a boolean value into a "Set Return Value" node. This logic runs locally on both the requester and the owner, so be aware that disagreements in logic between the two will cause a desync. This is most likely to be expressed by the ownership transfer being unexpectedly rejected by the owner.
 
 ### OnOwnershipTransferred
-This event is triggered for everyone in the instance when an objects ownership is changed, and includes the Player Object for the new owner.
+This event is triggered for everyone in the instance when an objects ownership is changed, and includes the PlayerObject for the new owner.
 
 ### OnMasterTransferred
 This event is triggered for everyone in the instance when the instance master changes because the previous instance master has left the instance.
@@ -70,7 +71,7 @@ For the first user joining a new instance, this event will trigger after `OnPlay
 This is a special type of event that you can create for any variable. In Udon Graph, you create it by dragging and dropping a variable into the graph while holding alt. This event detects when the variable changes, which can include when you receive synced variables from other players. 
 * changing the contents of an array does not trigger a change, because the array itself is still the same.
 * OnVariableChanged triggers immediately when the variable itself is written to, unlike OnDeserialization which triggers after it has finished writing all the synced variables. This means that if you use OnVariableChanged from one synced variable and try to get the contents of a different synced variable, it is not guaranteed that it has been updated with the latest synced data yet.
-
+  
 ## VRC Object Sync
 This component will automatically sync the Transform (position, rotation scale) and Rigidbody (physics) of the object you put it on. It has a few special methods and properties you can access:
 

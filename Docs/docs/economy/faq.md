@@ -75,9 +75,9 @@ Please note that VRChat Plus and VRChat Credits are not yet available on all pla
 
 #### What payout methods are available? ####
 Tilia currently supports payouts to PayPal.
-Additional payout methods may become available in the future.
+Additional payout methods may become available in the future. If you're a seller, tell us on [Canny](https://feedback.vrchat.com/creator-economy-sellers) what payout methods you would like to see!
 
-####  How do refunds work? ####
+####  How do refunds work?
 If a user requests a refund, credits will be refunded for any remaining months, excluding the current one.
 For example, if the user has 3 months remaining, including the current month, and requests a refund, they will be refunded for 2 months of credits.
 
@@ -88,13 +88,12 @@ For example, if the user has 3 months remaining, including the current month, an
 The [Creator Economy SDK](/economy/sdk/) allows VRChat worlds to react to users who supported you.
 Once the Creator Economy is publicly available, it will be part of the regular VRChat SDK.
 
-#### What can World creators do with the Creator Economy SDK? ####
+#### What can world creators do with the Creator Economy SDK? ####
 - Create Udon products on [VRChat.com](https://vrchat.com/home/) and link them to Udon products in your world.
-- React to players owning products in your world.
-    - Unlock exclusive areas, items, or features.
-- Allow users to 'use' a purchased product.
-    - For example, if a player purchased a 'fireworks' item, they may trigger it for all players.
+- Unlock exclusive areas, items, or features.
 - Open your store directly, making it easy for customers to support you.
+- Create a list displaying the names of all your supporters.
+- And more!
 
 Visit the [Creator Economy SDK documentation](/economy/sdk/) to get started!
 
@@ -111,10 +110,19 @@ Use the Creator Economy SDK to reward users for supporting you. Don't abuse it!
 - Refer to our [guidelines](/economy/guidelines) for more information.
 
 ***
-## Miscellaneous ##
+## Miscellaneous
 
-#### Does a user have to be part of a group to make a purchase? ####
-Not initially! You do not need to be part of a group before making a purchase on their store. Making the purchase, though, will automatically add you to the group. If you leave the group, you will lose access to your Paid Role in the group, but not the Udon Products.
+#### Am I allowed to make changes to my listings and subscriptions?
+
+Yes. You may change listings, subscriptions, and the products they contain. Depending on your content, users may expect different types of changes, additions, or removals. This helps you support your existing customers and improve your content. 
+
+However, don't "bait-and-switch" users by taking away their purchases unexpectedly. Don't deceive users.
+
+#### Do users have to be part of my group to buy a subscription?
+
+Yes, but you can allow users to join your group by enabling the [Enable Free Join for Subscribers](/economy/subscriptions#4-role-permissions) setting in your subscription role settings.
+
+Users can leave your group after buying a subscription. They lose access to their subscription role, but keep all products until the subscription expires. 
 
 #### Can I split my earnings with another creator? ####
 There is currently no split pay functionality. The [Payout](/economy/payout) process is only available to the seller.

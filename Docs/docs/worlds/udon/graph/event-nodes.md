@@ -34,6 +34,8 @@ Fired when this object is held and the Use button is pressed. Fires on button up
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
 Fired when a VRChat player joins the instance. Outputs the `player` that joined.
+
+When you join an instance, you execute OnPlayerJoined for every player in the instance, including yourself. When another player joins your instance, you only execute OnPlayerJoined for the player who joined.
  
 ### OnPlayerLeft
 `Event_OnPlayerLeft`
@@ -41,6 +43,15 @@ Fired when a VRChat player joins the instance. Outputs the `player` that joined.
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
 Fired when a VRChat player leaves the instance. Outputs the `player` that left.
+
+### OnPlayerRestored
+`Event_OnPlayerRestored`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Triggered after all of VRChat player's persistent data has been loaded, including all of their [PlayerData](/worlds/udon/persistence/player-data) and [PlayerObjects](/worlds/udon/persistence/player-object). Outputs the `player` whose data was loaded.
+
+When you join an instance, you execute OnPlayerRestored for every player in the instance, including yourself. When another player joins your instance, you only execute OnPlayerRestored for the player who joined.
 
 ### OnStationEntered
 `Event_OnStationEntered`
