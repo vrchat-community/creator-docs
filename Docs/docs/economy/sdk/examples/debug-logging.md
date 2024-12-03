@@ -25,7 +25,7 @@ If viewing the example scene, you'll also need the [Open Group Page](/economy/sd
 
 ### How to Use
 
-For this (and most!) prefabs, you'll first need an UdonProduct to check for and a way for players to subscribe to this product. 
+For this (and most!) prefabs, you'll first need an UdonProduct to check for and a way for players to purchase this product. 
 
 Once you've created a purchasable product:
 
