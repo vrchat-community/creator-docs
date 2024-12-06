@@ -28,13 +28,16 @@ The services listed below are inherently trusted and are permitted with our defa
 | Service | Domain |
 | --- | --- |
 | --- | --- |
-| Soundcloud | `soundcloud.com` |
-| Facebook Video | `*.facebook.com` |
+| Akamai CDN | `vod-progressive.akamaized.net` |
+| Facebook Video | `*.facebook.com`,`*.fbcdn.net` |
+| Google Video | `*.googlevideo.com` |
+| Hyperbeam | `*.hyperbeam.com`,`*.hyperbeam.dev` |
 | Mixcloud | `*.mixcloud.com` |
 | NicoNico | `*.nicovideo.jp` |
-| Twitch.TV | `*.twitch.tv` |
+| Soundcloud | `soundcloud.com`,`*.sndcdn.com` |
+| Topaz Chat | `*.topaz.chat` |
+| Twitch.TV | `*.twitch.tv`,`*.ttvnw.net`,`*.twitchcdn.net` |
+| VRCDN | `*.vrcdn.live`,`*.vrcdn.video`,`*.vrcdn.cloud` |
 | Vimeo | `*.vimeo.com` |
 | Youku | `*.youku.com` |
 | YouTube | `*.youtube.com`,`youtu.be` |
-| VRCDN | `*.vrcdn.live`,`*.vrcdn.video` |
-| Topaz Chat | `ciel.topaz.chat` |
