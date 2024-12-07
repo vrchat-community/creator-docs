@@ -13,9 +13,11 @@ If a site is not on the list, it will not download unless ‘Allow Untrusted URL
 
 The following URLs are available:
 
+* DisBridge (`*.disbridge.com)
 * GitHub (`*.github.io`)
-* Pastebin (`pastebin.com`)
 * Github Gist (`gist.githubusercontent.com`)
+* Pastebin (`pastebin.com`)
+* VRCDN (`*.vrcdn.cloud`)
 
 ## Guides
 
