@@ -34,6 +34,13 @@ For each prefab, you'll need to replace any ID with the ID of your own group.
 ![DragGroupID](/img/economy/examples/Group-Id-Copying.png "Where to put the group ID.")
 
 3. Toggle the **OpenToStorePage** toggle on the prefab if you want to open to your store page directly. If unchecked, the button will open to your group page instead of directly to your store.
+4. For **OpenListing/OpenListingSimple:** Set the ID of the listing in the `Listing ID` field in the inspector window.
+    - Find your listing ID by [opening the listing section](https://vrchat.com/b/monetization/home/marketplace/storefront/listings) of your store and copying its ID. 
+
+![DragListingID](/img/economy/examples/Listing-Id-Copying.png "Where to put the listing ID.")
+
+5. Toggle the **OpenToStorePage** toggle on the prefab if you want to open to your store page directly. If unchecked, the button will open to your group page instead of directly to your store.
+
 ![IDPasting](/img/economy/examples/Group-versus-Store-links.png "Instructions on finding and pasting IDs.")
 
 6. Run Build & Test!

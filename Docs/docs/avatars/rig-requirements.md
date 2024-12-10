@@ -1,20 +1,19 @@
----
-title: "Rig Requirements"
-slug: "rig-requirements"
-hidden: false
-createdAt: "2017-09-22T20:23:26.818Z"
-updatedAt: "2022-03-03T01:55:44.258Z"
----
+# Rig Requirements
+
 :::caution
 
 This page is significantly out of date, but should still be mostly accurate.
 :::
+
+This page explains some of the requirements for configuring your avatar's rig, bones, and armature. If you follow these requirements, your avatar's limbs should move correctly in VRChat.
+
+You can also check the [SDK build panel](/avatars/creating-your-first-avatar#step-6---going-to-the-build-tab--checking-if-the-avatar-is-ok) and look for errors in the "Validations" section.
 ## Export Settings
 
 When exporting your rig from your 3D editor of choice, ensure your coordinate settings are correct. Most of the time, the defaults are correct.
 
 For Blender, ensure that your rest X rotation is 90 degrees.
-### Humanoid Rig
+## Humanoid Rig
 Unity will flag your humanoid rig configuration if it does not meet the Mecanim requirements for a humanoid. Please read and be familiar with the [Unity Documentation on configuring avatars](https://docs.unity3d.com/Manual/FBXImporter-Rig.html).
 
 :::danger Humanoid avatar must have head, hands and feet bones mapped.
@@ -28,7 +27,7 @@ You will see this message from the VRChat Build Control Panel if your avatar rig
 If your avatar diverges greatly from a human (ie. quadruped, hunching monster, etc), you should consider using a Generic rig and your own Animation Controller. See the SimpleAvatarController for an example. This is more advanced than making a humanoid, so you should be very familiar with Unity's Animation Controller system.
 :::
 
-### Finger Mappings
+## Finger Mappings
 
 :::caution Thumb, Index, and Middle finger bones are not mapped, Full-Body IK will be disabled.
 
@@ -39,7 +38,7 @@ In order to have full IK (allowing crouching and automatic foot placement) you n
 It will also prevent custom animation overrides on hand gestures from being played back. (This is **not** currently mentioned by the warning in the SDK.)
 :::
 
-### Spine Hierarchy
+## Spine Hierarchy
 
 :::danger Your rig has the UPPERCHEST mapped in the Humanoid Rig. This will cause problems with IK.
 
@@ -58,7 +57,7 @@ These bones must all be mapped. If you get this message make sure none of these 
 For the IK to work properly, you must have a specific hierarchy of bones around the chest. In your rig, your shoulder bones (mapped into Left Arm > Shoulder, Right Arm > Shoulder slots) must be direct children of your chest bone (mapped into Body > Chest slot). Also, the neck bone (mapped into Head > Neck slot) must also be a direct child of the Chest.
 :::
 
-### Arm and Leg Hierarchy
+## Arm and Leg Hierarchy
 
 :::caution LowerArm is not first child of UpperArm or Hand is not first child of LowerArm: you may have problems with Forearm rotations.
 
@@ -74,14 +73,14 @@ Note that this message is naming the slot, not the actual bone name in your rig,
 See above.
 :::
 
-### General Hierarchy
+## General Hierarchy
 
 :::caution This avatar has a split heirarchy (Hips bone is not the ancestor of all humanoid bones). IK may not work correctly.
 
 Some rigs split the hierarchy into two sections, upper and lower body. In this case the bone you put into the Body > Hips slot must be the ancestor (parent or higher) of the rest of the human bones you are mapping. Be very careful with these kinds of rigs! Often, the ancestor of these bones is a root bone on the ground or another placement which is a bad placement for a hip bone. Many of these rigs are unsuitable for use with VRChat and need to be re-rigged to work properly.
 :::
 
-### Full-Body Tracking
+## Full-Body Tracking
 There are special considerations if you are using Full-Body tracking, ie. you have 3 HTC Tracking Pucks connected. There are several recommendations that will ensure that your avatar works well when using Full-Body tracking.
 
 To see more detailed information on Full-Body Tracking rigging requirements, see our [Full-Body Tracking system guide](https://docs.vrchat.com/docs/full-body-tracking).
@@ -90,5 +89,5 @@ To see more detailed information on Full-Body Tracking rigging requirements, see
 Full-body tracking is sensitive to the angle between the hip and upper leg bones. It's best to measure this angle when the AvatarTPoseController is applied to your avatar. Ideally, the hip bone is pointing straight up and the upper leg bones point straight down in the TPose, but slight divergence is okay. You can ignore this message if you are not going to use Full-Body Tracking.
 :::
 
-### Toe Bones
+## Toe Bones
 It is not required to map the Toe bones in a humanoid avatar. However, if you DO map them, your avatar is able to move up and down on their tiptoes. Mapping the toes also makes the automatic foot-stepping look more natural, as well as improving the appearance of balance by aligning the auto stance to the beginning of the toe bone rather than the heel.

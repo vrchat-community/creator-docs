@@ -64,7 +64,7 @@ There are many stores on the internet where you can download free or paid VRChat
 
 Some stores sell 3D models that can be used in VRChat or in other applications. These avatars are great for learning about the VRChat SDK and creating your own VRChat avatar.
 
-- [100 avatars](https://www.100avatars.com/) is a free collection of hundreds of avatars. They're simple and easy to import into the VRChat SDK. 
+- [100 avatars](https://github.com/PolygonalMind/100Avatars) is a free collection of hundreds of avatars. They're simple and easy to import into the VRChat SDK. 
 - The [Unity Asset Store](https://assetstore.unity.com/) has free and paid 3D models. They're easy to import into Unity and usually compatible with the VRChat SDK, but they may include assets or scripts that won't work.
 
 Some stores sell avatars that are already prepared for VRChat. They may allow you to skip some steps when setting up the avatar in Unity but might also include advanced features that aren't covered in this article. They are suitable if you want a cool-looking avatar and care less about learning how to create your own. 
