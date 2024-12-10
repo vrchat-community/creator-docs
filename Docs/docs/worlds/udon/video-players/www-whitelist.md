@@ -41,3 +41,4 @@ The services listed below are inherently trusted and are permitted with our defa
 | Vimeo | `*.vimeo.com` |
 | Youku | `*.youku.com` |
 | YouTube | `*.youtube.com`,`youtu.be` |
+| Sekai.best | `storage.sekai.best` |
