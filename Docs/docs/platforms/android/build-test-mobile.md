@@ -41,27 +41,39 @@ ADB uses USB debugging on an android device to communicate with the device. This
 
 Enabling USB debugging also requires you to enter developer mode on your device.
 
-So, to build and test on your Android device you must do the following:
+:::caution Warning
 
-1. Ensure that your phone is plugged in to your computer with a USB cable capable of data transfer
-2. Enable developer mode by going to "Settings"->"About Phone" and scrolling down to the "Build number" at the bottom. Tap the build number 7 times to enable Developer mode.
-3. Now that developer mode is enable you can see more developer options. Go to "Settings"->"System"->"Developer Options" and locate the "USB Debugging" checkbox. Check "USB Debugging".
+USB debugging allows your computer to perform many potentially dangerous operations without any notification. You should only use it with applications that you trust. 
 
-:::caution USB Debugging Warning
-
-Note that USB Debugging enables your computer to do many potentially dangerous operations without any notification and should only be used with programs that you trust. The VRChat SDK uses this to send files to the device and open the VRChat app to launch into the test world.
+The VRChat SDK uses USB debugging to send files to your device, open the VRChat app, and launch your test world.
 
 :::
 
+#### 📱 Enabling Developer Mode on Android Phones and Tablets
+
+To enable developer mode on your Android phone or tablet you must do the following:
+
+1. Ensure that your phone is plugged in to your computer with a USB cable capable of data transfer.
+2. Enable developer mode by going to "Settings"->"About Phone" and scrolling down to the "Build number" at the bottom. Tap the build number 7 times to enable Developer mode.
+3. Now that developer mode is enable you can see more developer options. Go to "Settings"->"System"->"Developer Options" and locate the "USB Debugging" checkbox. Check "USB Debugging".
+
+#### 🥽 Enabling Developer Mode on a Meta Quest Headset
+
+To build and test on your Meta Quest device, you also need to enable developer mode and allow USB debugging.
+
+You must use the [Meta Quest Developer Hub](https://developers.meta.com/horizon/documentation/unity/ts-odh/) to switch your Meta Quest headset into developer mode.
+
+To learn how to set up developer mode on your headset, read [Meta's instructions](https://developers.meta.com/horizon/documentation/unity/unity-quickstart-mqdh/#connect-headset-to-meta-quest-developer-hub).
+
 ## Use Build and Test
 
-With developer mode enabled, USB debugging enabled and your phone plugged in, you should now be able to build and test.
+With developer mode enabled, USB debugging enabled, and your Android device plugged in, you should now be able to build and test.
 
 ### First Launch
 
 * Ensure that you have launched the app at least once to allow app directories to be generated before trying to test a world, and then close VRChat. 
 * The VRChat appplication must be closed before launching into a test world for the first time.
-* Your phone must remain unlocked for ADB to be able to launch the VRChat app into a test world.
+* Your Android device must remain unlocked for ADB to be able to launch the VRChat app into a test world.
 
 With everything above set up, and your Project in Android mode, press the "Build and Test New Build" button to test the world on your device.
 
@@ -69,9 +81,7 @@ After the world is built you should see the VRChat app automatically open. If yo
 
 If you were already logged in, you should be sent directly to the test world after the client is done loading. The play button at the bottom indicates the loading status of the client, and once it's done loading you should be sent to the world after a short delay.
 
-### World Reload
-
-You can check the "Enable World Reload" toggle in the SDK to avoid having to close and re-open VRChat each time you want to test your world. With this box checked, you can simply press the "Build and Test New Build" button after making changes - your world will be rebuilt, sent to your device, and reloaded without any further action.
+When making future changes to your world, press "Build and Test New Build" again. Your world will be rebuilt, sent to your device, and reloaded without any further action.
 
 ## Tools & Troubleshooting
 
@@ -79,9 +89,9 @@ This section describes how to fix some common issues as well as some tools that 
 
 ### Troubleshooting
 
-If you're a developer who uses debugging mode for other reasons, please make sure to unplug or disable USB debugging on all other devices besides the Android phone that you would like to build and test on.
+If you're a developer who uses debugging mode for other reasons, please make sure to unplug or disable USB debugging on all other devices except the Android device that you would like to build and test on.
 
-If USB debugging is enabled but your computer is unable to see your phone, the best way to troubleshoot this is to completely restart the USB debugging process.
+For Android phones and tablets, if USB debugging is enabled but your computer is unable to see your phone/tablet, the best way to troubleshoot this is to completely restart the USB debugging process.
    1. Unplug the Android device.
    2. Disable developer mode and USB debugging.
    3. Plug in the Android device.

@@ -189,5 +189,14 @@ When you create multiplayer interactions in VRChat, you should react to suspende
 
 Your code should account for any device becoming suspended at any time, regardless of platform. PC players currently never become suspended, but this should not be assumed.
 
+### OnVRCPlusMassGift
+`Event_OnVRCPlusMassGift`
+
+Outputs: 
+* `gifter` - `VRC.SDKBase.VRCPlayerApi`
+* `numGifts` - `int`
+
+Fired when someone in the instance drops a gift bomb.
+
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.

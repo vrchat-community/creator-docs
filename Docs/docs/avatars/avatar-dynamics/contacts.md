@@ -66,7 +66,7 @@ This section contains settings allowing you to adjust and define how this Contac
 
 - `Allow Self` - Allow this contact to be affected by yourself.
 - `Allow Others` - Allow this contact to be affected by other people.
-- `Local Only` - Limit this contact to only work on the local client.
+- `Local Only` - Limit this contact to only work on the local client. If enabled, the contact doesn't reduce your avatar's [performance rank](/avatars/avatar-performance-ranking-system).
 - `Collision Tags` - List of strings that specify what it can affect/be affected by. For a successful collision to occur, both the sender and receiver need at least one matching pair of strings. Collision tags are case sensitive.
 
 ### Receiver

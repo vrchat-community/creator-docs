@@ -20,5 +20,13 @@ While developing your world in Unity, you can use ClientSim in conjunction with 
 ## Testing in VRChat
 
 You can test Creator Economy SDK features with the "Build & Test" option.
-- When testing locally or logged into a live client as a Group's owner, all of that Group's listings will be free. No VRChat Credits will be spent.
+
+:::warning
+
+Some features of the Creator Economy cannot be tested locally and require a private world upload instead.
+
+:::
+
+- When testing locally or logged into VRChat as the world/group owner, all listings/subscription are free. Your VRChat wallet balance does not decrease.
 - When testing locally, purchased listings automatically expire after 60 seconds, no matter how many months you choose when purchasing it.
+- You can purchase published listings/subscriptions without publishing them in your store. This allows you to make test purchases without allowing users to see or buy your listings/subscriptions. 
