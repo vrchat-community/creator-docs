@@ -1,7 +1,7 @@
 # iOS
 
 :::warning
-VRChat on iOS is currently in Beta. Please report issues on [Canny](https://feedback.vrchat.com/ios-mobile-beta).
+VRChat on iOS is currently in Beta. Please report issues on [Canny](https://feedback.vrchat.com/ios-mobile-beta). (Your VRChat account must have a trust rank of "New User" or higher.)
 :::
 
 This section contains helpful pages on creating VRChat Worlds and Avatars for iOS devices.

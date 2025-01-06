@@ -7,11 +7,7 @@ sidebar_custom_props:
 
 # Open Group Page
 
-import SellerNotification from '/docs/economy/_sellers-notification.mdx';
-
-<SellerNotification/>
-
-OpenGroupPage is a prefab that makes it easier for users to access purchasable CE listings. Use it to create buttons that open group pages or specific listings.
+OpenGroupPage is a prefab that allows you to open your group page or your group store. Use it to create buttons that make it easy for users to access your group.
 
 import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 

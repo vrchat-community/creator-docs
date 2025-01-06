@@ -77,7 +77,16 @@ Please note that VRChat Plus and VRChat Credits are not yet available on all pla
 Tilia currently supports payouts to PayPal.
 Additional payout methods may become available in the future. If you're a seller, tell us on [Canny](https://feedback.vrchat.com/creator-economy-sellers) what payout methods you would like to see!
 
-####  How do refunds work?
+#### How long does it take Tilia to process payouts?
+Payout requests are processed within five business days - usually fewer.
+
+#### Why did my payout get rejected?
+If your payout got rejected, it's usually for one of the following reasons:
+
+- Your name on PayPal does not match your name on Tilia. Ensure that you entered your name correctly.
+- PayPal does not support sending payouts to your country. Check your country in [PayPal's documentation](https://developer.paypal.com/docs/payouts/standard/reference/country-feature/). 
+
+#### How do subscription refunds work?
 If a user requests a refund, credits will be refunded for any remaining months, excluding the current one.
 For example, if the user has 3 months remaining, including the current month, and requests a refund, they will be refunded for 2 months of credits.
 

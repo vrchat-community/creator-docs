@@ -158,13 +158,13 @@ During avatar initialization, this value may change! Ensure that your animator a
 | 6 | Full Body Tracking VR user. Head, hands, hip, and feet tracked. |
 
 
-### Expression Parameter Aliasing
+### Expression Parameter Naming
 
-You **must** create names (or "aliases") for Expression parameters. **You cannot (and shouldn't!) use the default Expression name for the parameters. **
+When you create a parameter, you must give it a name. You cannot (and shouldn't!) use the default Expression name for the parameters.
 
-Once you have created names for any Expression parameter you want to use, you can use that name directly in your Controller. This means can come up with your own standard naming for your parameters. This _also_ means that Menu definitions and Controllers can be mixed and matched as long as they use the same names. You can get prefab controllers from others and create your own menu styles based on your preferences, without worrying about Expression parameter conflicts.
+In addition, if you use avatar animator prefabs, be aware of potential conflicts caused by identical parameter names. You can avoid conflicts by choosing unique parameter names. 
 
-When naming your own parameters, using forward slashes (`/`) will cause parameters to automatically organize in various selection dropdowns. For example, naming a parameter `Toggles/Hat` will make the menu selection show up as Toggles -> Hat when selecting parameters for things like Animator transitions and Expression Menus, while keeping the underlying parameter the same name. This doesn't change how parameters behave, it just makes it easier to work with large parameter lists. 
+When naming your own parameters, you can use forward slashes (`/`) to organize your parameters in various selection dropdowns. For example, naming a parameter `Toggles/Hat` will make the menu selection show up as "Toggles" > "Hat" when selecting parameters for things like Animator transitions and Expression Menus, while keeping the underlying parameter the same name. This doesn't change how parameters behave, it just makes it easier to work with large parameter lists. 
 
 ### Default AV3 Aliasing
 

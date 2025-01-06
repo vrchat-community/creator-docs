@@ -110,11 +110,7 @@ The SDK warns you of this and will require that you fix it before you upload.
 :::
 
 ## PC Limits
-On PC, the default Minimum Displayed Performance Rank level is set to "Very Poor". **Currently, no avatars will be blocked by default due to performance ranking on PC, unless you've enabled the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system.**
-
-Triangles are a somewhat special case-- if you are 32k or less, you are marked as Excellent. Any number higher than 32,000 but lower than 70,001 will be marked as Good (unless some other stat pulls you down). If you exceed 70,000 triangles, the avatar will be marked as Very Poor immediately.
-
-| Avatar Quality                                                         | Excellent          | Good         | Medium       | Poor         |
+| Avatar Quality                                                         | Excellent          | Good         | Medium       | Poor          |
 |------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
 | Triangles                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
 | Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
@@ -145,30 +141,20 @@ Triangles are a somewhat special case-- if you are 32k or less, you are marked a
 | Physics Rigidbodies                                                    | 0                  | 1            | 8            | 8            |
 | Audio Sources                                                          | 1                  | 4            | 8            | 8            |
 
+The table below describes the requirements for PC avatars to receive a certain performance rank:
+
+
+### PC Default Performance Rank Blocking
+
+On PC, the default Minimum Displayed Performance Rank level is "Very Poor". This means that users can see most avatars by default. If you a user enables the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system, they can choose to hide avatars with poor performance.
+
+However, if your avatar is extremely unoptimized, VRChat may prevent you from using it. You can fix this my improving its performance rank, ensuring that it doesn't exceed VRChat's [avatar size limits](/avatars/avatar-size-limits), and then reuploading the avatar.
 
 ## Mobile Limits
-### Default Performance Rank Blocking
-On Android and iOS (phones, tablets, and Meta Quest), the Minimum Displayed Performance Rank is set to Medium by default. This means you will not see any avatars ranked as Poor or Very Poor.
 
-You can set your Performance Rank Block level to Poor to allow the display of Poor avatars. However, you cannot set your Performance Rank Block level to "Very Poor".
+VRChat on Android and iOS (phones, tablets, and Meta Quest) has stricter limits that VRChat on PC.
 
-For example, if a mobile avatar exceeds 20,000 triangles, it will not display by default in the application. These avatars can be forced to show by clicking on each user and clicking "Show Avatar". 
-
-Notably, **there is a hard cap on some [Avatar Components](/avatars/avatar-dynamics) systems on mobile devices.** It cannot be bypassed by using "Show Avatar". This is the hard cap:
-
-- 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
-- 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
-- 16 [PhysBones](/avatars/avatar-dynamics/physbones) colliders
-- 64 [PhysBones](/avatars/avatar-dynamics/physbones) collider checks
-- 16 [Avatar Dynamics Contacts](/avatars/avatar-dynamics/contacts) 
-- 150 [Constraint](/avatars/avatar-dynamics/constraints) components
-- A dependency depth of 50 [Constraints](/avatars/avatar-dynamics/constraints)
-
-If this cap is exceeded on mobile, all hard capped avatar components will be removed from the avatar, even if Show Avatar is enabled.
-:::danger
-
-**"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from VRChat on Android and iOS entirely.** Please keep this in mind when creating mobile avatars.
-:::
+The table below describes the requirements for mobile avatar to receive a certain performance rank:
 
 | Avatar Quality                                                            | Excellent          | Good         | Medium       | Poor         |
 | ------------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------------ |
@@ -199,8 +185,34 @@ If this cap is exceeded on mobile, all hard capped avatar components will be rem
 
 [^2]: If the Very Poor value is exceeded on mobile, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
 
-### Removed Categories
-The following categories are disabled on mobile devices since they can never appear on avatars:
+### Mobile Default Performance Rank Blocking
+On mobile, The Minimum Displayed Performance Rank is "Medium" by default. This means users can't see any avatars ranked as "Poor" or "Very Poor".
+
+Users can set their Performance Rank Block level to "Poor", allowing them to see "Poor" avatars. However, they cannot set their Performance Rank Block level to "Very Poor".
+
+For example, if a mobile avatar exceeds 20,000 triangles, it's "Very Poor" and users can't see it in VRChat. However, users can forcefully show "Very Poor" avatars by selecting the user and clicking "Show Avatar".
+
+:::warning
+
+In the future, VRChat may remove "Very Poor" mobile avatars and the ability to use "Show Avatar" for "Very Poor" mobile avatars. Please keep this in mind when creating mobile avatars.
+:::
+
+### Mobile Avatar Component Limits
+
+Some [avatar components](/avatars/avatar-dynamics) are limited on mobile avatars. You cannot exceed the following limits:
+
+- 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
+- 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
+- 16 [PhysBones](/avatars/avatar-dynamics/physbones) colliders
+- 64 [PhysBones](/avatars/avatar-dynamics/physbones) collider checks
+- 16 [Avatar Dynamics Contacts](/avatars/avatar-dynamics/contacts) 
+- 150 [Constraint](/avatars/avatar-dynamics/constraints) components
+- A dependency depth of 50 [Constraints](/avatars/avatar-dynamics/constraints)
+
+You cannot bypass the limits above by using "Show Avatar". If a mobile avatar exceeds a limit, all limited avatar components are removed from the avatar in VRChat, even if you enable "Show Avatar".
+
+### Mobile Removed Components
+The following components are disabled on mobile devices since they can never appear on avatars:
 
   * Lights
   * Cloths
@@ -209,7 +221,7 @@ The following categories are disabled on mobile devices since they can never app
   * Physics Rigidbodies
   * Audio Sources
 
-These values may still appear in the in-app stats readout, but will always be zero.
+These values may still appear in VRChat's avatar details screen, but they are always zero.
 
 ## Minimum Displayed Performance Rank
 You can choose to manage avatars based on their Avatar Performance Rank. This option is available in the [Performance Options](https://docs.vrchat.com/docs/vrchat-configuration-window) menu, accessible as a button in the top-right of the Safety tab in the main menu.

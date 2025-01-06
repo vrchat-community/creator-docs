@@ -80,7 +80,7 @@ Resetting your user data in VRChat is the easiest option.
 
 #### A specific world
 
-You can delete your User Data for any world (that you're not currently in). Follow the steps below:
+You can delete your User Data for any world by following the steps below:
 
 1. Select a world in VRChat's main menu.
 2. Scroll down to the "Actions" section.
@@ -88,9 +88,11 @@ You can delete your User Data for any world (that you're not currently in). Foll
     - This button only appears if you have User Data for this world.
 5. Select "YES, RESET."
 
+If you're currently in a persistent world, you may need to leave or rejoin the world before you can reset user data.
+
 #### All worlds
 
-You can also delete your User Data for all worlds that you have visited (except for the world that you are currently in) by following the steps below:
+You can also delete your User Data for all worlds that you have visited by following the steps below:
 
 1. Open your settings in VRChat's main menu.
 2. Select the "Debug" section.

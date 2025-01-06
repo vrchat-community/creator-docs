@@ -32,12 +32,6 @@ There are currently two different types of stores:
 
 Any user can view and purchase from your store by opening your group or world. They can see a **Store** tab in VRChat and the website, which lists everything for purchase from your Store.
 
-:::info
-
-World stores are currently only available in VRChat, not on the VRChat website.
-
-:::
-
 ![Store page](/img/economy/Store-PreviewStoreWeb.png "Opening your Store page")
 
 ![Store page in-game](/img/economy/Store-PreviewStoreClient.png "Opening your group's Store page in VRChat")
@@ -47,3 +41,9 @@ You can share a link to your store by copying its URL.
 Or you can ask users have a user navigate to the **Groups** tab in VRChat. From here, they can either join your Group by typing in the Group code, which will look something like `Test.0000, or they can search for it via the Group search function.
 
 ![Copy group URL](/img/economy/Store-CopyShortCode.png "Copying your group's VRChat.com URL")
+
+:::info
+
+You can use [Udon](/economy/sdk/udon-documentation) to sell your published listings and subscriptions. You don't *need* to publish your store!
+
+:::

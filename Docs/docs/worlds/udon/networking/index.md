@@ -357,14 +357,6 @@ These overlays show you
 
 ![](/img/worlds/udon-networking-9b0721f-network-debug.png)
 
-You can enter [debug menu 6](/worlds/udon/world-debug-views#debug-menu-6) to see some per-object information in list form `RightShift` + \` + `6` in VRCHat:
+You can enter [debug menu 6](/worlds/udon/world-debug-views#debug-menu-6) to see some per-object information in list form `RightShift` + \` + `6` in VRChat:
 
 ![](/img/worlds/udon-networking-dde0d15-networking-debug-6.png)
-
-:::danger Known Issues
-
-The latest build & SDK have these issues:
-
-* isInstanceOwner returns true when spawning (thanks [FSP](https://feedback.vrchat.com/udon-networking-update/p/unu-v5-isinstanceowner-returns-true-when-spawning))
-* Teleporting a player during Network Update (OnDeserialization) will not teleport the player's avatar. To fix this issue currently, use `SendCustomEventDelayedFrames` and delay the teleport by 1 frame.
-:::

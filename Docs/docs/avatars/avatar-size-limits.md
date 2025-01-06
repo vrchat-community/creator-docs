@@ -18,9 +18,6 @@ The maximum size limit depends on the platform you're playing on:
 | ----------------------- | ------------- | ----------------- |
 | Android                 | 10 MB         | 40 MB             |
 | PC                      | 200 MB        | 500 MB            |
-| PC (before Aug 16th)[^1]| 500 MB        | 1.2 GB            |
-
-[^1]: Avatars uploaded prior to August 16th, 2024, are subject to older limits. A short grace period is present for new uploads past this date. On November 1st, older avatars will be forced to comply with the newer reduced limits.
 
 ## How to know if you are below these limits
 Within the SDK it will inform you when making a build if your avatar is breaking either limit and prevent upload, post build it will remind you what the download / uncompressed size was along with the limit. When using Build & Test size limits are not enforced.

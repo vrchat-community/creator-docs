@@ -27,7 +27,6 @@ The services listed below are inherently trusted and are permitted with our defa
 
 | Service | Domain |
 | --- | --- |
-| --- | --- |
 | Akamai CDN | `vod-progressive.akamaized.net` |
 | Facebook Video | `*.facebook.com`,`*.fbcdn.net` |
 | Google Video | `*.googlevideo.com` |

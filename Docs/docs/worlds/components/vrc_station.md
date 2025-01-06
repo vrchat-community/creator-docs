@@ -137,3 +137,10 @@ There are two other restrictions upon upload:
 | Seated                          | Whether the player's avatar will sit or stand when using the station.<br />This affects the "Seated" parameter of the avatar’s playable layers. |  
 | Station Enter Player Location   | The player is moved to the position of this Transform when they enter the station. |  
 | Station Exit Player Location    | The player is moved to the position of this Transform when they exit the station. |
+
+## Limitations
+
+Avatars must meet the following requirements to sit in stations:
+
+- The avatar must have an has an [Animator component](https://docs.unity3d.com/Manual/class-AnimatorController.html) with an assigned [Unity Avatar](https://docs.unity3d.com/Manual/AvatarCreationandSetup.html). This is usually assigned automatically for humanoid avatars.
+- The Animator component must be on the same game object as the avatar descriptor component.

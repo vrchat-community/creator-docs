@@ -15,7 +15,7 @@ Listings allow you to monetize your VRChat world by selling permanent or tempora
 
 Listings contain [products](/economy/products/), which are the rewards users receive for buying your listings. Users keep the rewards until the listing expires, depending on its [duration type](#2-duration-type).
 
-You can choose your listings' [visibility](#visibility). Listings can appear in your [world store](#world-stores), or you can use Udon to [open a listing's purchase screen](#udon-buttons-in-your-world) directly.
+You can choose your listings' [visibility](#visibility). Listings can appear in your [world store](#world-stores), or you can use Udon to [open a listing's purchase screen](#udon-buttons-in-your-world) directly, even if your store is unpublished.
 
 Listings are similar to [subscriptions](/economy/subscriptions).
 
@@ -206,7 +206,7 @@ Click "Delete" on [My Listings](https://vrchat.com/home/marketplace/storefront/l
 
 ### Visibility
 
-The visibility of a listing depends on its status. Open the [My Listings](https://vrchat.com/home/marketplace/storefront/listings/page/1) to change the status of your listings:
+The visibility of a listing depends on its status. Open [My Listings](https://vrchat.com/home/marketplace/storefront/listings/page/1) to change the status of your listings:
 
 - "Published" listings can be purchased by users.
 - "Draft" listings cannot be purchased by users. If users already purchased the listing, they keep it.

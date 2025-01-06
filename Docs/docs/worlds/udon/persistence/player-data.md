@@ -55,13 +55,13 @@ The `OnPlayerDataUpdated` event provides a `PlayerData.Info` array. This array c
 
 The `State` enum describes these possible states:
 
-| State | Notes |
-| -------- | -------- |
-| Unchanged | Indicates that the data in this key has not changed since the last update. |
-| Changed | Indicates that the data in this key has been changed since the last update. |
-| Added | Indicates that this key has been added since the last update. |
-| Removed | Indicates that this key has been removed since the last update. Keys which have been removed will only appear in this array once with this state, and the next time they will be gone. |
-| Restored | Indicates that this key has been restored from persistent records. This only happens when you join the instance after having been there before. |
+| State     | Index | Notes                                                                                                                                                                                  |
+| --------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unchanged | 0     | Indicates that the data in this key has not changed since the last update.                                                                                                             |
+| Added     | 1     | Indicates that this key has been added since the last update.                                                                                                                          |
+| Removed   | 2     | Indicates that this key has been removed since the last update. Keys which have been removed will only appear in this array once with this state, and the next time they will be gone. |
+| Changed   | 3     | Indicates that the data in this key has been changed since the last update.                                                                                                            |
+| Restored  | 4     | Indicates that this key has been restored from persistent records. This only happens when you join the instance after having been there before.                                        |
 
 ## Best Practices
 

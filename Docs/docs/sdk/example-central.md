@@ -11,6 +11,7 @@ Example Central has only recently been released.
 - We're working on improving the features, design and examples.
 - Currently, only world examples are available, Avatar examples will be added in the future.
 - You can send us your feedback on the [Example Central Canny Board](https://feedback.vrchat.com/example-central).
+- Your VRChat account must have a trust rank of "New User" or higher.
 
 :::
 
@@ -80,3 +81,4 @@ The setting is disabled by default because it is currently in Beta testing. You 
 
 What do you think of Example Central?
 - Use the [Example Central Canny Board](https://feedback.vrchat.com/example-central) to tell us your feature requests and report bugs.
+- Your VRChat account must have a trust rank of "New User" or higher.

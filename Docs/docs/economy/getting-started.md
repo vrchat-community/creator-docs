@@ -46,6 +46,8 @@ Make sure to check **"I agree"** after reading Tilia's **Terms of Service** and 
 
 ![Tilia Page](/img/economy/GettingStarted-Tilia.png "Reviewing Tilia's terms and verifying information.")
 
+Ensure that your personal information is correct! Otherwise, you may not be able to use the Creator Economy.
+
 ## Step 4 - Wait
 
 Wait for your Tilia to accept your information. This usually takes around 5 business days, but may rarely take up to 30 calendar days.
@@ -64,7 +66,7 @@ If it takes Tilia longer to accept you than expected, please try the following t
 
 ## Step 5 - Accepted
 
-Once you've been accepted, the **Storefront** page will now show that you are **Authorized** to sell in VRChat! Any credits earned from now on will be eligable for Payout. 
+Once you've been accepted, the **Storefront** page will now show that you are **Authorized** to sell in VRChat! Any credits earned from now on will be eligible for [payout](/economy/payout). 
 
 ![Now Authorized](/img/economy/GettingStarted-Storefront-Authorized.png "Authorized to sell in VRChat")
 

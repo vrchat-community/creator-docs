@@ -11,6 +11,8 @@ Data Dictionaries store [Data Tokens](/worlds/udon/data-containers/data-tokens) 
 
 Both the keys and the values of a Data Dictionary are Data Tokens. This means that you can effectively use anything for your keys. However, if you intend to serialize to [VRCJSON](/worlds/udon/data-containers/vrcjson), only string keys are supported.
 
+If you are using UdonSharp, include the `using VRC.SDK3.Data;` directive to use data dictionaries.
+
 ## Properties
 
 | Property | Result                                       |
