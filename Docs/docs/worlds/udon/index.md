@@ -18,7 +18,7 @@ After you [create your VRChat world](/sdk/), there are two main ways to create U
 	- Use the Graph if you're very new to programming or only want to create very simple scripts.
 - [UdonSharp](./udonsharp) allows you to use C# to create scripts.
 	- UdonSharp is similar to Unity's built-in C# scripting system.
-	- Most UdonSharp users use an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) like [Visual Studio](https://visualstudio.microsoft.com/vs/unity-tools/) or [Rider](https://www.jetbrains.com/rider/).
+	- Most UdonSharp users use an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment). [Visual Studio](https://visualstudio.microsoft.com/vs/unity-tools/) is free, and [Rider](https://www.jetbrains.com/rider/) is free for non-commercial use.
 	- Use UdonSharp if you're already familiar with programming or want to create powerful scripts.
 
 

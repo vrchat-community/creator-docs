@@ -201,7 +201,7 @@ The "Playback order" property does not guarantee that audio clips are played in 
 | Random Pitch | The random pitch that is applied to the AudioSource when transitioning to this state. Clamped from -3 to 3.<br/>• Min: The minimum random pitch. (Default: 1)<br/>• Max: The maximum random pitch. (Default: 1) |
 | Loop | Whether the AudioSource's looping should be set enabled or disabled when transitioning to this state. |
 | On Enter | Whether to start or stop the AudioSource when transitioning into this state. Executed before "On Exit".<br/>🗹 Stop Audio Source (Default: Enabled)<br/>🗹 Play Audio Source (Default: Enabled) |
-| On Exit | Whether to start or stop the AudioSource when transitioning into this state. Executed before "On Enter".<br/>☐ Stop Audio Source (Default: Disabled)<br/>☐ Play Audio Source (Default: Disabled) |
+| On Exit | Whether to start or stop the AudioSource when transitioning out of this state. Executed before "On Enter".<br/>☐ Stop Audio Source (Default: Disabled)<br/>☐ Play Audio Source (Default: Disabled) |
 | Play On Enter Delay In Seconds | The delay before "Play On Enter" plays a clip, if enabled. Clamped from 0 to 60 seconds. (Default: 0 seconds) |
 
 Each audio setting has an additional property. By default, it's set to "Apply If Stopped". This prevents the setting from being applied if the audio source has not finished playing its previous clip and "Stop Audio Source On Enter" is disabled.

@@ -5,9 +5,15 @@ sidebar_position: -2
 
 This guide explains how to create and upload a very simple VRChat world. You'll learn the basics of setting up a Unity scene, using VRChat's Control Panel, and publishing your world.
 
-:::info
+## Requirements
 
-Before you get started, ensure you have a [Unity project with the SDK set up](/sdk).
+Before you get started, ensure that you meet the following requirements:
+
+- A VRChat account
+- Trust rank of "New User" or higher
+- A [Unity project with the VRChat SDK](/sdk) set up
+
+:::info
 
 Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) or our official forum at [ask.vrchat.com](https://ask.vrchat.com).
 

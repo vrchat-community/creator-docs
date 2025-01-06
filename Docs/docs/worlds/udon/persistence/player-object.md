@@ -27,7 +27,7 @@ VRChat automatically loads Persistent User Data on PlayerObject that fulfill the
 
 Use the [`OnPlayerRestored`](/worlds/udon/graph/event-nodes#onplayerrestored) to detect that a PlayerObject has finished loading User Data. This event is executed once for every player in the instance, including the owner of the PlayerObject.
 
-OnPlayerRestored includes a reference to the player whose data was just restored. You can use this to make the Owner of the GameObject 
+OnPlayerRestored includes a reference to the player whose data was just restored. You can use this to make the Owner of the GameObject initialize variables or execute events.
 
 In the `Start` and `OnDeserialization` events, ownership is guaranteed to be correct. However, you should avoid reading or writing a PlayerObject's User Data before the `OnPlayerRestored` event. You might accidently read or write outdated User Data, and your changes may be overwritten when User Data is received from VRChat's server.
 
@@ -102,7 +102,6 @@ public CustomPlayerObjectScript Find(VRCPlayerApi player)
 This example will use the `FindComponentInPlayerObjects` function to translate a reference from the PlayerObject template into a reference from a specific player's PlayerObject. 
 
 ```cs
-[SerializeField]
 public Transform referenceChildTransform; // A reference to a Transform on a PlayerObject or a child of a PlayerObject
 
 public void Find(VRCPlayerApi targetPlayer)

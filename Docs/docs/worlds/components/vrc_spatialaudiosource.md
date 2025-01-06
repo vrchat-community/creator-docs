@@ -43,30 +43,28 @@ All that being said, **we do not recommend using 2D audio.** All real-world sour
 
 ## Spatial Audio on Avatars
 
-VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [limitations](/worlds/components/vrc_spatialaudiosource#section-avatar-limitations). These limitations are in place to prevent abuse and malicious sounds.
+VRChat supports using `VRC_SpatialAudioSource` on avatars, albeit with some [limitations](/worlds/components/vrc_spatialaudiosource#avatar-limitations). These limitations are in place to prevent abuse and malicious sounds.
 
 Other than these limitations, `VRC_SpatialAudioSource` works precisely the same on avatars as it does in worlds.
-:::danger Don't Forget to add a SpatialAudioSource!
 
-If you don't add a `VRC_SpatialAudioSource` with your avatar audio sources, one will be added by the SDK with default settings.
+:::warning 
 
-If you use a pre-existing avatar-based `Audio Source` without a `VRC_SpatialAudioSource` or ONSP (legacy) component, you may get unexpected, undocumented, and undesired behavior. We **strongly recommend** always using `VRC_SpatialAudioSource` with any avatar-based `Audio Sources`.
+Don't forget to add a `VRC_SpatialAudioSource` to your avatar's audio sources! Otherwise, the VRChat SDK will create the component and choose the default settings, and you may experience unexpected, undocumented, and undesired behavior.
+
+If you use a pre-existing avatar's `Audio Source`, ensure that it has a `VRC_SpatialAudioSource` component!
 
 :::
 
 ## Component Properties
 
-:::caution Dynamic Adjustment at Runtime
+The `VRC_SpatialAudioSource` component has the following properties:
+
+:::info
 
 Adjusting these properties via animations during runtime is not supported. These values are set at initialization.
 
 Animating properties of the `Audio Source` should still work for properties that are not related to spatialization settings, like pitch.
 
-:::
-
-:::caution Disabling / Enabling Sound Sources
-
-On avatars, it is best to disable and enable the Audio Source components rather than the entire GameObject.
 :::
 
 | Property                         | Description     |
@@ -88,12 +86,17 @@ However, as noted above, there are some limitations on `VRC_SpatialAudioSource` 
 
 [Player Audio](/worlds/udon/players/player-audio) can override these settings.
 
+:::note
+
+On avatars, it is best to disable and enable the Audio Source components rather than the entire GameObject.
+:::
+
 ### Curve Squashing
 
-If you attempt to play avatar audio with a custom curve in a world with a shorter `Far` distance than normal, Unity "squashes" the curve. You can see what happens by adjusting the `maxDistance` range on the Audio Source.
+If you attempt to play avatar audio with a custom rolloff curve in a world with a shorter `Far` distance than normal, VRChat will "squash" the curve by changing the "Max Distance" setting of your avatar's audio source. You can see what happens by adjusting the "Max Distance" range on the Audio Source in Unity.
 
 ### Avatar Audio Compressor
-There is a compressor on the Avatar audio channel that prevents sounds from being maliciously loud. This should not affect normal use of avatar audio sources that have reasonable volume levels.
+VRChat uses a compressor on the Avatar audio channel that prevents sounds from being maliciously loud. This should not affect normal use of avatar audio sources that have reasonable volume levels.
 
 ### Tips for Avoiding the Compressor
 

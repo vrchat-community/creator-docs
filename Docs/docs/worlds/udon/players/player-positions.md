@@ -74,19 +74,22 @@ Get whether the player is touching the ground, which enables Jump.
 
 ### TeleportTo
 
-:::note Teleporting other players
+Send the [local player](/worlds/udon/players/getting-players/#networkingget-localplayer) to a new position and specified rotation, unless a Station does not allow it.
 
-TeleportTo only works with the [local player](/worlds/udon/players/getting-players/#networkingget-localplayer). You can use [networking](/worlds/udon/networking/) to cause other players to teleport themselves. 
+- Udon can only teleport the local player. Use [networking](/worlds/udon/networking/) to cause other players to teleport themselves. 
+- Stations can prevent Udon from teleporting players.
+- When you teleport very often or across very short distances, consider setting `lerpOnRemote` to `false`.
+
+:::warning
+
+Do not teleport players during network updates (e.g. [OnDeserialization](/worlds/udon/networking/network-components/#ondeserialization)). Otherwise, their avatar may unexpectedly collide with geometry during the teleport. Instead, use [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes/#sendcustomeventdelayedframes) and delay the teleport by one frame.
 
 :::
-
-Send a player to a new spot and specified rotation, unless a Station does not allow it.
 
 **Inputs**
 - `Vector3 teleportPos`: The target position in world space.
 - `Quaternion teleportRot`: The target rotation in world space.
 - `SceneDescriptorSpawnOrientation TeleportOrientation` (optional): How to align players with the destination position and rotation. 
-- `bool lerpOnRemote` (optional): Whether to interpolate the player's movement. If true, the teleportation is instantaneous and incurs and additional network bandwidth cost. If false, the teleportation is treated as normal player movement.
-
-
-
+- `bool lerpOnRemote` (optional): Whether the interpolate the player's movement for remote players.
+    - (Default) If `false`, the teleportation looks instant to remote players. The network bandwidth cost increases.
+    - If `true,` the teleportation is treated like normal player movement, and movement looks smooth to remote players.

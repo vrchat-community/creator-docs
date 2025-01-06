@@ -1,6 +1,5 @@
 ---
 sidebar_position: 5
-description: Foo
 sidebar_custom_props:
     description: Add prefabs to your world that are easy to customize.
     customIcon: 📚

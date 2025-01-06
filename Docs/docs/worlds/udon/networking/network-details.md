@@ -17,7 +17,6 @@ Note: All specs subject to change. You can see some specific information about t
 
 If a world exceeds limits, its networking will become clogged (see [IsClogged](https://creators.vrchat.com/worlds/udon/networking/network-components/#networking-properties)). The UdonBehaviour will fail to raise the network event and write errors in the logs. The logic of the UdonBehaviour will continue to work, but the data will not be sent nor received.
 
-
 Try designing your scripts in ways that reduce the amount of networking required. For example: If an object will move on a fixed or predictable path, then its position may not need to be synchronized. Instead, its initial location, velocity, and time of departure may be sufficient.
 
 ### Continuous synchronization
@@ -38,3 +37,8 @@ Manual sync is limited to **280,496 bytes** per serialization.
 
 If you have multiple UdonBehaviours on an object, the sync method will default to the most restrictive settings - a Manual UdonBehaviour and a Continuous one on the same object will both act as manual.
 
+### Prioritization of visible objects
+
+Udon's networking prioritizes synchronized game objects that are currently visible to the local user.
+
+Udon *periodically* checks the visibility of all mesh renderer children of synchronized objects. This is used in the quality of service behaviour of Udon's network load balancing.

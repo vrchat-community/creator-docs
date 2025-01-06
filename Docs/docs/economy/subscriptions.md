@@ -14,6 +14,8 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 Subscriptions are the easiest way to monetize your VRChat group. Users can visit your group store to buy a subscription. They receive a group role as a reward, but you can also grant them additional group permissions or Udon products.
 
+You can choose your subscription's [visibility](#visibility). Subscriptions can appear in your group store, or you can use Udon to [open a published subscription's purchase screen](#udon-buttons-in-your-world) directly, even if your store is unpublished.
+
 Subscriptions are similar to [listings](/economy/listings).
 
 ## Subscriptions, roles, and products
@@ -234,6 +236,19 @@ Open the [Store Manager](https://vrchat.com/home/marketplace/storefront/stores/)
 </Columns>
 
 Congratulations! Users can purchase published subscriptions in your group store.
+
+## Visibility
+
+The visibility of a subscription depends on its status. Open [My Subscriptions](https://vrchat.com/home/marketplace/storefront/subscriptions) to change the status of your subscriptions:
+
+- "Published" subscriptions can be purchased by users.
+- "Draft" listings cannot be purchased by users. If users already purchased the listing, they keep it.
+
+After publishing a subscriptions, users can only see it if you added it to a group [store](/economy/store) or if you have a store inside your world. 
+
+:::tip
+To maximize your sales, you should use world [stores](/economy/store) **and** add Udon stores to your world!
+:::
 
 ## Details about renewal, payout, and cancellation
 

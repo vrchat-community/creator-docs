@@ -31,7 +31,15 @@ Creators can pay out VRChat Earnings in USD through Paypal by visiting [Payout](
 
 4. Proceed to Tilia’s website and connect your PayPal account. If you have already connected your account, simply select the one you wish to use.
 
+:::warning
+
+Ensure that your name on PayPal is correct! It must match [the name you gave Tilia](/economy/getting-started#step-3---verify-identity). Otherwise, Tilia may deny your payout request.
+
+:::
+
+
 ![PayPal](/img/economy/TiliaPayout-Paypal.png "The Tilia page for connecting your PayPal.")
+
 
 5. Enter the requested amount of VRChat Credits to pay out.
     - Tilia will automatically convert the amount from VRChat Credits into USD.
