@@ -3,7 +3,6 @@ title: "Updating the SDK"
 slug: "updating-the-sdk"
 hidden: false
 createdAt: "2019-07-24T03:33:36.520Z"
-updatedAt: "2024-12-28T00:15:39.000Z"
 ---
 If you need to update your SDK, it is important that you follow these steps to ensure the update proceeds properly and you don't have any old/conflicting files.
 
