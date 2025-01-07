@@ -69,9 +69,9 @@ If you run into issues with upgrading via the above process, try this instead:
 3. Import the new SDK3 - Avatars package into that project.
 4. Close that Unity project.
 5. Using Explorer (Do not open Unity yet!), delete the VRCSDK3 folders from the project you're upgrading. Until this guide says otherwise, ***do not open Unity.***
-6. Edit the references of the vrchat SDK3 from Packages/vpm-manifest.json to the new SDK version from the project you're upgrading.
-7. From your new blank project that you imported the SDK into, copy the VRCSDK3 folders into your project that you're upgrading.
-8. Once the copy completes, open Unity and open your upgraded project. You may delete the blank project.
+6. Edit the references of the VRChat SDK3 from `Packages/vpm-manifest.json` to the new SDK version from the project you're upgrading.
+7. From your new blank project that you imported the SDK into, copy the VRCSDK3 folders into the project that you're upgrading.
+8. After you copy the files, open Unity and open your upgraded project. You may delete the blank project.
 
 ### Advanced Update Process
 
