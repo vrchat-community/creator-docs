@@ -7,7 +7,7 @@ This page contains a few tips on how to improve the performance of your UdonShar
 Udon can take about 200x to 1000x longer to run a piece of code than the equivalent in normal C#, depending on what you're doing. 
 - Avoid massive complex algorithms that iterate over thousands of elements.
 - Avoid iterating over very long arrays every frame.
-	- Consider "time-slicing" your array by only processing only a liminted amount of array elements per frame.
+	- Consider "time-slicing" your array by only processing only a limited amount of array elements per frame.
 - Use native Unity components or VRChat SDK components whenever possible.
 	- For example: Instead of rotating 40 GameObjects in Udon, use an animation.
 - Cache method results to improve performance.
