@@ -17,7 +17,7 @@ If you want to learn how to migrate your project to use the VCC, check out the g
 
 ## Manual Updates
 If you're using the VCC, you don't need to worry about manual updates.
-However, if you wish to, you can download the SDK on the [VRChat website](https://vrchat.com/home/download) after signing into your VRChat account
+However, if you wish to, you can download the SDK on the [VRChat website](https://vrchat.com/home/download) after signing into your VRChat account.
 
 ## Legacy SDK3
 :::caution 
