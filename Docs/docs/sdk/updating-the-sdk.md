@@ -83,7 +83,7 @@ If you're reinstalling the SDK in a project that contains a world using complex 
 4. Edit the references of the VRChat SDK3 from `Packages/vpm-manifest.json` to the new SDK version from the project you're upgrading.
 5. Create a new "dummy" Unity Project by creating a blank Unity project with Unity Hub.
 6. Install the latest VRChat SDK on the dummy project.
-7. Copy the newly added `SDK/Plugin` folder and associated `.meta` files from the dummy project into your original project
+7. Copy the newly added `SDK/Plugin` folder and associated `.meta` files from the dummy project into your original project.
 8. Done. You can now open your upgraded project.
 
 ## Updating Unity
