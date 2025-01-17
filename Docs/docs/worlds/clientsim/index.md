@@ -4,14 +4,6 @@ sidebar_position: 0
 
 # ClientSim
 
-:::warning
-
-This documentation explains ClientSim's latest features but is incomplete.
-
-For a more comprehensive overview of ClientSim, please visit the [ClientSim documentation](https://clientsim.docs.vrchat.com/).
-
-:::
-
 ![ClientSim screenshot. The Scene view shows the local player and a remote player. The Game view shows ClientSim's "Pause" menu, with buttons to respawn the player, spawn remote players, close the menu, and various other options. The ClientSim Settings window and PlayerData window are also visible.](/img/worlds/clientsim/clientsim-screenshot.png)
 
 ClientSim, short for client simulator, is a part of the Worlds SDK that replicates VRChat client behavior in the Unity editor and can be used to speed up development.
@@ -25,6 +17,7 @@ ClientSim, short for client simulator, is a part of the Worlds SDK that replicat
 - Delete EditorOnly objects when entering Play Mode.
 
 Always test your world in VRChat before making it public! ClientSim can't simulate all of VRChat's features. 
+
 ## Windows
 
 ClientSim adds several Unity Editor windows to help you debug and test your world: 
@@ -33,6 +26,14 @@ ClientSim adds several Unity Editor windows to help you debug and test your worl
 - While in Play Mode, open an in-game settings window by pressing the "Escape" key.
 - The [ClientSim PlayerData](playerdata-editor-window) window allows you to debug PlayerData.
 - The [ClientSim PlayerObject](playerObject-editor) window allows you to debug PlayerObjects.
+
+## Getting started
+
+1. Open your VRChat world scene.
+2. Press play in Unity.
+3. Test your world in Unity's "Game" window.
+
+Learn more about how all the systems work in the [Systems](systems) section
 
 ## Networking Differences in ClientSim
 
