@@ -80,7 +80,7 @@ const config = {
           {to: 'releases', label: 'Releases', position: 'left'},
           {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp', position: 'right'},
           {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion', position: 'right'},
-          {to: 'https://clientsim.docs.vrchat.com', label: 'ClientSim', position: 'right'},
+          {to: 'worlds/clientsim', label: 'ClientSim', position: 'right'},
         ],
       },
       footer: {
@@ -99,7 +99,7 @@ const config = {
             items: [
               {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp'},
               {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion'},
-              {to: 'https://clientsim.docs.vrchat.com', label: 'ClientSim'},
+              {to: 'worlds/clientsim', label: 'ClientSim'},
             ],
           },
           {
