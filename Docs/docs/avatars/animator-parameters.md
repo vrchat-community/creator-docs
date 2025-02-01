@@ -202,3 +202,7 @@ The table below shows how converting a mismatched parameter changes it.
 | `float`     | `bool`        | `0.0` is `false`, anything else is `true`                                                                     | `0.5` → `true`                        |
 | `bool`      | `int`         | `true` is `1`, `false` is `0`                                                                                 | `true` → `1`                          |
 | `bool`      | `float`       | `true` is `1.0`, `false` is `0.0`                                                                             | `true` → `1.0`                        |
+
+### Trigger Typed Parameters
+
+At this time we don't recommend using Trigger type parameters in your animation controllers.  These values can become de-synced between versions of your avatar, including remote clients viewing your avatar or in special situations like viewing your avatar in the mirror.  If you are going to represent the state of your avatar please use either Int, Float or Bool typed parameters.
