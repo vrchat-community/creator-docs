@@ -17,6 +17,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 
 * **OpenListingPrefab**: Includes a button to open to a listing page. Also includes a text description.
 * **OpenListingSimplePrefab**: Includes a button to open to a listing page. Does not include a text description.
+* **OpenListingAndReactToPurchasePrefab**: Includes a button to open to a listing page. Plays a sound effect when a given product is purchased.
 
 ![OpenListingPrefab](/img/economy/examples/Comparison-OpenListing.png "Compares listing prefabs.")
 
@@ -35,20 +36,29 @@ For each prefab, you'll need to replace any ID with the ID of your own group or 
 
 ![DragListingID](/img/economy/examples/Listing-Id-Copying.png "Where to put the listing ID.")
 
-3. For **OpenListingDeluxe**:
+3. For **OpenListingAndReactToPurchase** only:
+    - Use the [UdonProducts Manager](https://creators.vrchat.com/economy/sdk/getting-started#udonproducts-manager) to locate the `UdonProduct` asset of the product that should play a sound effect when purchased.
+    - Set the `Trigger Product` field to the `UdonProduct` asset.
+
+4. For **OpenListingDeluxe** only:
     - Set the Thumbnail for the listing using the `Thumbnail` field in the inspector window. It's best if you use the same thumbnail that the user will see when opening your listing, but you have the ability to use any square Sprite in your project.
     - Set the three text lines using the `Display Name`, `Type` and `Price` fields. Just like the thumbnail, it's best if these match what the user will see in your listing, but you can enter any information you like.
 
 ![OpenListingDeluxeFields](/img/economy/examples/OpenListingDeluxe_Inspector.png "The Fields for OpenListingDeluxe")
 
-6. Run Build & Test!
+5. Run Build & Test!
 
 ### Inspector Parameters
 
-The two prefabs have the following parameters:
+The prefabs have the following parameters:
 
-### OpenListing 
+### OpenListing & OpenListingSimple
 * `Listing ID` - The listing ID of the listing you want to open.
+
+### OpenListingAndReactToPurchase
+* `Trigger Product` - The `UdonProduct` asset that triggers the sound effect when purchased.
+* `Optional Purchase Sfx` - The sound effect that plays when purchasing the product.
+* `Optional Purchase Sfx Source` - The `AudioSource` component that plays the sound effect.
 
 ### OpenListingDeluxe
 * `Thumbnail` - The sprite shown in the prefab, typically the same as the thumbnail set for the listing.
