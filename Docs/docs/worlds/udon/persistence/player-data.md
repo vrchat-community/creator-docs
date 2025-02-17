@@ -147,7 +147,7 @@ If default values are undesirable, use `TryGet` or Queries to distinguish defaul
 | GetFloat | VRCPlayerApi player, string key | float | 
 | TryGetFloat | VRCPlayerApi player, string key | float value, bool success | 
 | GetDouble | VRCPlayerApi player, string key | double | 
-| TryGetFloat | VRCPlayerApi player, string key |  float value, bool success | 
+| TryGetDouble | VRCPlayerApi player, string key |  double value, bool success | 
 | GetQuaternion | VRCPlayerApi player, string key | Quaternion | 
 | TryGetQuaternion | VRCPlayerApi player, string key |  Quaternion value, bool success | 
 | GetVector4 | VRCPlayerApi player, string key | Vector4 | 
