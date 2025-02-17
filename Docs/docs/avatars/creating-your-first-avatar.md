@@ -71,7 +71,8 @@ Some stores sell avatars that are already prepared for VRChat. They may allow yo
 
 - [BOOTH](https://booth.pm/en/items?tags%5B%5D=VRChat) is a Japanese store for VRChat avatars. It's the largest store for anime-style avatars, but you can also find other types of avatars there.
 - [Gumroad](https://gumroad.com/discover) is more popular among Western creators and focuses on anime-style and furry avatars.
-
+- [Jinxxy](https://jinxxy.com/) and [Avatown](https://goavatown.com) also have a collection of Avatars that can be used in VRChat.
+  
 When you look for a model, try to keep the following things in mind:
 - If you decide to get your model outside of an asset store, ensure the model is fully "rigged" by the author.
 	- A "rigged" model has a skeleton that allows it to move. Creating a rig can be very difficult, but tools like [Mixamo](https://www.mixamo.com/) and [Rigify](https://docs.blender.org/manual/en/latest/addons/rigging/rigify/index.html) can do it automatically.
