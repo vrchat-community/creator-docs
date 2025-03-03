@@ -21,7 +21,7 @@ Need help? Visit our Discord at [discord.gg/vrchat](https://discord.gg/vrchat) o
 
 ## Step 1 - Setting up a scene
 
-The first thing you need is a Unity scene. You can either create a new scene, or open an existing Unity scene with pre-existing content. If you created a new project from VCC you can skip to [step 2](/worlds/creating-your-first-world/#step-2---creating-spawn-points).
+The first thing you need is a Unity scene. You can either create a new scene, or open an existing Unity scene with pre-existing content. If you created a new project from the Creator Companion, skip to [step 2](/worlds/creating-your-first-world/#step-2---creating-spawn-points).
 
 With the scene open, you need to add a **VRC Scene Descriptor** to your scene. You can easily add it with the VRChat SDK:
 
