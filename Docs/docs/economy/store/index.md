@@ -24,7 +24,7 @@ There are currently two different types of stores:
 - Group stores allow you to sell [subscriptions](/economy/subscriptions).
 	- Use them to monetize your groups and/or worlds.
 	- When you create a subscription, it is automatically connected to your group store.
-- World stores allow you to sell [listings](/economy/listings).
+- [World stores](/economy/store/world-store) allow you to sell [listings](/economy/listings).
 	- Use them to monetize your worlds.
 	- You can choose freely choose which listings are available for purchase in your world stores.
 
