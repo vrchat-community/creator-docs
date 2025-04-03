@@ -17,6 +17,7 @@ The VRC Object Sync component synchronizes the transform of a GameObject with al
 | Parameter | Description |
 | --- | --- |
 | Allow Collision Ownership Transfer | If checked, ownership of the object will transfer if it collides with another object owned by another player. |
+| Force Kinematic On Remote | If checked, the attached rigidbody will be forced into kinematic mode for all non-owning players. |
 
 ## Methods
 
