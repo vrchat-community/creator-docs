@@ -40,11 +40,17 @@ And only certain domains are allowed. If a domain is not on the list, images wil
 - Twitter (`pbs.twimg.com`)
 - VRChat (`assets.vrchat.com`)
 
+## Memory Management
+
+Downloaded images can take up a lot of memory. Once you're done using an image, you should dispose of it via Udon, which frees up memory for something else.
+
+For example, if you download a new image and want to use it to replace another image you downloaded earlier, you should use the `Dispose` method documented below to remove the old image from memory. If you don't do this and keep downloading new images, visitors to your world may run out of memory and crash after spending enough time in your world!
+
 ## UdonGraph Nodes
 
-#### VRCImageDownloader
+### VRCImageDownloader
 
-Use `VRCImageDownloader`'s constructor to create an image downloader, which can download image from the internet during runtime.
+Use `VRCImageDownloader`'s constructor to create an image downloader, which can download image from the Internet during runtime.
 
 #### DownloadImage
 
@@ -60,16 +66,17 @@ Returns an `IVRCImageDownload`, which can be used to track the progress of the d
 
 #### Dispose
 
-Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory. Calling `Dispose` invalidates the VRCImageDownloader object, and a new one must be instantiated to download images.  
+Cleans up the `VRCImageDownloader`. Frees up downloaded textures from memory.
 
-**Note on disposal and garbage collection:**
+Calling `Dispose` on a `VRCImageDownloader` invalidates the object, meaning it can't be used to download any new images.
 
-- Calling `Dispose` will invalidate the `VRCImageDownloader`, the associated `IVRCImageDownload`, and the downloaded texture.
-  - After calling `Dispose`, the `VRCImageDownloadState` `State` of `IVRCImageDownload` will change to `Unloaded` until it is garbage collected.
-- `VRCImageDownloader` keeps textures in memory until the underlying Texture2D is destroyed or disposed using its `Dispose` function.
+**Notes on disposal and garbage collection:**
+
+- Calling `Dispose` will invalidate the `VRCImageDownloader`, all of its associated `IVRCImageDownload` objects, and the textures associated with those downloads.
+  - If you only want to dispose of a single download, call `Dispose` on the `IVRCImageDownload` object instead.
 - Make sure to save the reference to your `VRCImageDownloader` as a variable to prevent it (and any downloaded texture) from randomly being garbage collected.
 
-#### TextureInfo
+### TextureInfo
 
 Contains settings to apply to a downloaded texture. 
 
@@ -82,7 +89,7 @@ Contains settings to apply to a downloaded texture.
   - VRChat uses forced anisotropic filtering. When the anisoLevel value is between 1 and 9, Unity sets the anisoLevel to 9. If the value is higher than 9, Unity clamps it between 9 and 16.
 - **MaterialProperty**: Overrides which `MaterialProperty` to apply the downloaded texture to, if a `material` was specified in `DownloadImage`. (Default: `_MainTex`)
 
-#### IVRCImageDownload
+### IVRCImageDownload
 
 Contains information about the downloaded image. Returned by `VRCImageDownloader`'s `DownloadImage` function, by `OnImageLoadSuccess`, and by `OnImageLoadError`.  
 Note that many of these fields will be invalid until the download has completed or failed.
@@ -103,8 +110,15 @@ VRChat automatically selects the <UnityVersionedLink versionKey="minor" url="htt
 - Images without an alpha channel are loaded as RGB24, RGB48, etc.
 - Greyscale images are loaded as R8, R16, etc.
 
+#### Dispose
 
-#### VRCImageDownloadState
+Cleans up the `IVRCImageDownload`. Unloads the downloaded texture and frees up the memory it was using.
+
+Unlike the dispose method of `VRCImageDownloader`, this will only dispose this individual download and its associated texture, leaving other downloads and their textures intact.
+
+Disposing an `IVRCImageDownload` will change its `State` to `Unloaded`.
+
+### VRCImageDownloadState
 
 Indicates the state of the image download in `IVRCImageDownload`:
 
@@ -114,7 +128,7 @@ Indicates the state of the image download in `IVRCImageDownload`:
 - **Unloaded**: Pending garbage collection after `Dispose` has been called on `IVRCImageDownload`.
 - **Unknown**: Unknown state.
 
-#### VRCImageDownloadError
+### VRCImageDownloadError
 
 When an image download fails, `OnImageLoadError` is called. `IVRCImageDownload`'s `Error` field will contain one of the following error states:
 
