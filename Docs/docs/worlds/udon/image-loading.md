@@ -29,7 +29,9 @@ There are a few Image Loader limits and parameters you should know:
 
 And only certain domains are allowed. If a domain is not on the list, images will not download unless **Allow Untrusted URLs** has been enabled in the user's settings.
 
-- Dropbox (`dl.dropbox.com`)
+
+- DisBridge (`*.disbridge.com`)
+- Dropbox (`dl.dropbox.com`,`dl.dropboxusercontent.com`)
 - GitHub (`*.github.io`)
 - ImageBam (`images4.imagebam.com`)
 - ImgBB (`i.ibb.co`)
@@ -38,7 +40,9 @@ And only certain domains are allowed. If a domain is not on the list, images wil
 - Postimages (`i.postimg.cc`)
 - Reddit (`i.redd.it`)
 - Twitter (`pbs.twimg.com`)
+- VRCDN (`*.vrcdn.cloud`)
 - VRChat (`assets.vrchat.com`)
+- Ytimg (`i.ytimg.com`)
 
 ## Memory Management
 
