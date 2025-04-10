@@ -201,17 +201,30 @@ If your avatar only uses a single blend shape to animate its mouth, configure it
 If you're an advanced creator, you can use this mode to control how your avatar reacts to speech with VRChat's built-in [Animator Parameters](/avatars/animator-parameters).
 
 ## Step 6 - Going to the build tab / Checking if the avatar is ok
-Next, we'll want to check that everything is good in the build window. To do that, you'll need to use the menu item `VRChat SDK > Show Control Panel`, which will open up the VRChat SDK Control panel. After signing in, switch to the "Builder" tab to see the avatar's GameObject mentioned with a Build & Publish button below it. In between you will see settings, content tags, an 'Overall performance' rank, errors, and warnings.
+Next, we'll want to check that everything is good in the build window. To do that, use the menu item `VRChat SDK > Show Control Panel`, which opens the VRChat SDK Control panel. After signing in, switch to the "Builder" tab to see the avatar's GameObject mentioned with a "Build" section below. You also see settings, content tags, the avatar's performance rank, errors, and warnings.
 
-![The VRChat SDK build panel.](/img/avatars/build-panel-avatars-2023.png)
+![The VRChat SDK build panel.](/img/avatars/build-panel-avatars-2025.png)
 
 Simply follow the steps in VRChat's SDK build panel: 
-- Give your avatar a name. You can add a description, too.
-- Make sure to tag your avatar with the appropriate content tags to comply with [VRChat's content gating system](https://hello.vrchat.com/blog/content-gating).
-- Choose your avatar's visibility. Private avatars can can't be cloned or used by other VRChat users.
-- Select a thumbnail image. You can select an image or use a capture from your Unity scene.
-- Read the 'Validations' section. It contains many useful errors and warnings. For example, the SDK may warn you about your avatar having too many polygons, which you can fix by optimizing mesh(es). If you're unable to optimize the mesh, you may need to go back and choose another model.
-- When you're ready, continue building your avatar
+1. Give your avatar a name.
+	- You can add a description, too.
+2. Choose your avatar's visibility.
+	- Public avatars can be cloned by other VRChat users or shared via pedestals in worlds.
+	- Private avatars can only be used by you.
+3. Select appropriate content warnings for your avatar to comply with VRChat's  [content gating system](https://hello.vrchat.com/blog/content-gating).
+4.  Select a thumbnail image.
+	- You can select a file or capture an image from your Unity scene.
+5. Read the 'Validations' section. It contains many useful errors and warnings.
+	- For example, the SDK may warn you about your avatar having too many triangles, which you can fix by optimizing mesh(es). If you're unable to optimize the mesh, you may need to go back and choose another model.
+6. Choose the build type.
+	- **Build & Publish Your Avatar Online** uploads your avatar to VRChat and allows other users to see it.
+	- **Build & Test Your Avatar** allows you to quickly test your avatar without uploading it.
+		- You can find your test avatar in the "Other" avatars section in VRChat.
+		- You can use [Build & Test on Android](/platforms/android/build-test-mobile/).
+7. Choose which platforms to build your [platform](/platforms/) on.
+8. Confirm that the avatar's information is accurate and thatn you have the rights to upload the content to VRChat.
+9. When you're ready, click the "Build & Publish" button.
+
 
 ## Step 7 - Building and uploading the avatar!
 Now everything is ready. Press the "Build & Publish" button, and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).

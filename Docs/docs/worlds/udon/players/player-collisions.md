@@ -17,9 +17,10 @@ If you want to detect when a player has entered or exited an area, your best bet
 To use these events, add an object with a [collider](https://docs.unity3d.com/Manual/collider-shapes-introduction.html) component and enable the 'Is Trigger' box on the collider. A trigger collider allows objects and players pass through it and calls events when those objects have colliders. You can learn more about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collision in Unity's documentation</UnityVersionedLink>.
 
 
-:::note Edge Cases
+:::danger
 
-There are some edge cases where one of these events could be skipped, like when a player teleports out of a collider, or is moving VERY fast. We'll add in handling in the future to catch these.
+There are some edge cases where one of these events could be skipped, like when a player teleports in/out of a collider, or is moving VERY fast.
+
 :::
 ## Physics
 There is another set of events you can use when you've got objects like bouncing balls or bullets that you're moving around with physics. These objects have Colliders with IsTrigger turned off so that they'll interact with the environment and each other. 

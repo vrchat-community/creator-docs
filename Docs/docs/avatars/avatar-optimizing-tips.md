@@ -12,7 +12,7 @@ Do you want your avatar to be efficient and be loved by everyone because of all 
 
 Any recommended numbers or limits in this document are subject to change at any time. Although some of the descriptions provided below are not precise in a technical manner, this document is intended to assist novice users in learning how to optimize their avatars.
 
-Community-created tools like [Cats Blender Plugin](https://github.com/michaeldegroot/cats-blender-plugin) (MIT license) allow users to very easily optimize their models and assist with common VRChat avatar problems. We strongly recommend using tools like this! It makes your job easier, and improves performance for all.
+Community-created blender plugins like [Cats](https://catsblenderplugin.xyz/) or [Tuxedo](https://github.com/feilen/tuxedo-blender-plugin) allow users to very easily optimize their models and assist with common VRChat avatar problems. We strongly recommend using tools like this! It makes your job easier, and improves performance for all.
 
 As a sidenote, the SDK's Build Control panel provides numbers of components on avatars to help with optimization.
 

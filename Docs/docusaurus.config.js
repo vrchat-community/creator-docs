@@ -106,6 +106,14 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Ask Forum',
+                href: 'https://ask.vrchat.com/',
+              },
+              {
+                label: 'Bluesky',
+                href: 'https://bsky.app/profile/vrchat.com',
+              },
+              {
                 label: 'Discord',
                 href: 'https://discord.com/invite/vrchat',
               },

@@ -14,7 +14,7 @@ Players have two sources of audio: the voice coming through their microphone, an
 <TabItem value="cs" label="UdonSharp">
 
 ```cs
-somePlayer.SetVoiceGain(15);
+somePlayer.SetVoiceGain(5);
 ```
 
 </TabItem>

@@ -40,22 +40,20 @@ You cannot upload or access worlds that exceed 100MB in size after build-time co
 **Avatars**
 
 You should be aiming for a maximum of 5-8 MB. You cannot upload or wear/view avatars that exceed 10MB in size after build-time compression for VRChat Quest.
-## Polygon Count
-Keeping polygon count low is very important on mobile platforms. Although the Quest is quite powerful for a mobile headset, its hardware does have limits. Keeping an eye on your polygon count is very important to keep performance high.
+## Triangle Count
+Keeping triangle count low is very important on mobile platforms. Although the Quest is quite powerful for a mobile headset, its hardware does have limits. Keeping an eye on your polygon count is very important to keep performance high.
 
 These recommendations are technically enforced via our [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system).
 
 **Worlds**
 
-While building worlds, you should try to keep polygon count low. You want to leave room for the user's avatars as well. **We recommend that you budget approximately 50,000 triangles for your world in total.**
+While building worlds, you should try to keep triangle count low. You want to leave room for the user's avatars as well. **We recommend that you budget approximately 50,000 triangles for your world in total.**
 
 **Avatars**
 
 The same general rules apply for avatars that apply for worlds. Keep in mind that you may have 10 or more users in the same room, so you'll want to budget your triangle usage pretty heavily. **We recommend that you aim for under 10,000 triangles for your avatar.**
 
-**A hard polygon limit may be established in the near future for VRChat Quest avatars. It will not be much higher than 5,000 triangles, hence our suggestion.**
-
-This will be a challenge for avatar authors that prefer to import characters from various sources rather than create an avatar themselves. Decimation down to this level can be destructive, and you may need to look into techniques like retopologizing geometry to keep your polygon count low.
+This is a challenge for avatar authors that prefer to import characters from various sources rather than create an avatar themselves. Decimation down to this level can be destructive, and you may need to look into techniques like retopologizing geometry to keep your polygon count low.
 ## Mesh Count
 This applies to both worlds and avatars.
 

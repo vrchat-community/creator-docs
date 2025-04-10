@@ -59,7 +59,7 @@ VRChat shares the Creator Economy's revenue with sellers.
 ![Approximate revenue split](/img/economy/revenue-split-approximate.jpg "Approximate revenue split")
 
 After VRChat Credits have been purchased, spent, and successfully paid out to creators, the revenue split approximates the following values:
-- 30%[^1] to the platform (Steam/Meta),
+- 30%:[^1] to the platform (Steam/Meta),
 - 50%:[^1] to creators,
 - 20%:[^1] to VRChat and its payment processor.
 
