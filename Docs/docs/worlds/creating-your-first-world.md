@@ -74,7 +74,7 @@ Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you 
 - Recommended capacity - The recommended maximum amount of players for your world.
   - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing in VRChat's list of public instances.
   - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
-- Tags - Keyworlds that help users find your world in VRChat.
+- Tags - Keywords that help users find your world in VRChat.
 - World debugging - Allows other users to debug your Udon code.
 - Thumbnail - A preview image of your world.
 

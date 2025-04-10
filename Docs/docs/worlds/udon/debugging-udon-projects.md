@@ -49,7 +49,7 @@ You can use a batch file to launch VRChat with special options. A batch file is 
 2. Add this line to the file: `VRChat.exe --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging`
 	- This command turns on three flags for extra logging, and also forces VRChat to bypass VR for desktop testing.
 	- There are more options you can pass along - you can include any of the flags from the [VRChat Launch Options](https://docs.vrchat.com/docs/launch-options) page as well as the [Unity Standalone Player command line arguments](https://docs.unity3d.com/2022.3/Documentation/Manual/CommandLineArguments.html).
-	- For example, the following command launches VRChat on your secondary VRChat profile and forces a screen width of 720 pixels:
+	- For example, the following command launches VRChat on your secondary VRChat profile and forces a screen height of 720 pixels:
 `VRChat.exe --profile=1 --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging -screen-width 1280 -screen-height 720`
 3. Save the batch file and run it.
 4. (Optional) Right-click the batch file, create a shortcut, and move the shortcut to your desktop.

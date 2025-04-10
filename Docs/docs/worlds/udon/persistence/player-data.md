@@ -55,13 +55,13 @@ The `OnPlayerDataUpdated` event provides a `PlayerData.Info` array. This array c
 
 The `State` enum describes these possible states:
 
-| State     | Index | Notes                                                                                                                                                                                  |
-| --------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unchanged | 0     | Indicates that the data in this key has not changed since the last update.                                                                                                             |
-| Added     | 1     | Indicates that this key has been added since the last update.                                                                                                                          |
-| Removed   | 2     | Indicates that this key has been removed since the last update. Keys which have been removed will only appear in this array once with this state, and the next time they will be gone. |
-| Changed   | 3     | Indicates that the data in this key has been changed since the last update.                                                                                                            |
-| Restored  | 4     | Indicates that this key has been restored from persistent records. This only happens when you join the instance after having been there before.                                        |
+| State     | Index | Notes                                                                                                                                                                                                                                       |
+| --------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unchanged | 0     | Indicates that the data in this key has not changed since the last update.                                                                                                                                                                  |
+| Added     | 1     | Indicates that this key has been added since the last update.                                                                                                                                                                               |
+| Removed   | 2     | Indicates that this key has been removed since the last update. Keys which have been removed will only appear in this array once with this state, and the next time they will be gone.*<br/>Note: Removing keys is not currently possible.* |
+| Changed   | 3     | Indicates that the data in this key has been changed since the last update.                                                                                                                                                                 |
+| Restored  | 4     | Indicates that this key has been restored from persistent records. This only happens when you join the instance after having been there before.                                                                                             |
 
 ## Best Practices
 
@@ -88,27 +88,27 @@ Use these methods to save PlayerData for the local player. It is not possible to
 
 Values can be overwritten, even if they previously had a different type. **Keys cannot be deleted after being written.**
 
-| Function | Input |
-| ---- | ---- |
-| SetString | string key, string value |  
-| SetBool | string key, bool value |  
-| SetSByte | string key, sbyte value |  
-| SetByte | string key, byte value |  
-| SetBytes | string key, byte[] value |  
-| SetShort | string key, short value |  
-| SetUShort | string key, ushort value |  
-| SetInt | string key, int value |  
-| SetUInt | string key, uint value |  
-| SetLong | string key, long value |  
-| SetULong | string key, ulong value |  
-| SetFloat | string key, float value |  
-| SetDouble | string key, double value |  
-| SetQuaternion | string key, Quaternion value |  
-| SetVector4 | string key, Vector4 value |  
-| SetVector3 | string key, Vector3 value |  
-| SetVector2 | string key, Vector2 value |  
-| SetColor | string key, Color value |  
-| SetColor32 | string key, Color value |  
+| Function      | Input                        |
+| ------------- | ---------------------------- |
+| SetString     | string key, string value     |
+| SetBool       | string key, bool value       |
+| SetSByte      | string key, sbyte value      |
+| SetByte       | string key, byte value       |
+| SetBytes      | string key, byte[] value     |
+| SetShort      | string key, short value      |
+| SetUShort     | string key, ushort value     |
+| SetInt        | string key, int value        |
+| SetUInt       | string key, uint value       |
+| SetLong       | string key, long value       |
+| SetULong      | string key, ulong value      |
+| SetFloat      | string key, float value      |
+| SetDouble     | string key, double value     |
+| SetQuaternion | string key, Quaternion value |
+| SetVector4    | string key, Vector4 value    |
+| SetVector3    | string key, Vector3 value    |
+| SetVector2    | string key, Vector2 value    |
+| SetColor      | string key, Color32 value    |
+| SetColor32    | string key, Color32 value    |
 
 ### Accessors
 

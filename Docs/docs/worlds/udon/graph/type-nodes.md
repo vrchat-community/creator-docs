@@ -90,6 +90,32 @@ Type definition for `VRC.SDKBase.VRC_SceneDescriptor+SpawnOrientation`.
 ### VRCSDKBaseVRCInputMethod
 Type definition for `VRC.SDKBase.VRCInputMethod`.
 
+| Index | VRCInputMethod     |
+| ----- | ------------------ |
+| 0     | Keyboard           |
+| 1     | Mouse              |
+| 2     | Controller         |
+| 3     | Gaze               |
+| 5     | Vive               |
+| 6     | Oculus             |
+| 7     | ViveXR             |
+| 10    | Index              |
+| 11    | HPMotionController |
+| 12    | Osc                |
+| 13    | QuestHands         |
+| 14    | Generic            |
+| 15    | Touch              |
+| 16    | OpenXRGeneric      |
+| 17    | Pico               |
+| 18    | SteamVR2           |
+
+:::note Ambiguous Vive input names 
+
+- `VRCInputMethod.Vive` is a Vive controller running through SteamVR.
+- `VRCInputMethod.ViveXr` is a Vive XR Elite Controller running via OpenXR.
+
+:::
+ 
 ### VRCSDKBaseVRCInputSetting
 Type definition for `VRC.SDKBase.VRCInputSetting`.
 

@@ -2,7 +2,7 @@
 
 You can read the input of a player's controller in a unified way across all platforms by using Udon Input Events. These events will work correctly even when the player has remapped their controls. 
 
-There are currently two types of events - [Button](/worlds/udon/input-events#button-events) and [Axis](/worlds/udon/input-events#axis-events), which include boolean and float values. Each event also holds a special [UdonInputEventArgs ](/worlds/udon/input-events#UdonInputEventArgs) object. You can also use [Unity input methods and properties](/worlds/udon/input-events#unity-input-methods-and-properties) to directly read input data. 
+There are currently two types of events - [Button](#button-events) and [Axis](#axis-events), which include boolean and float values. Each event also holds a special [UdonInputEventArgs](#udoninputeventargs) object. You can also use [Unity input methods and properties](/worlds/udon/input-events#unity-input-methods-and-properties) to directly read input data. 
 
 ## Button Events
 Button events include a *bool* value which is **true** when the button is pressed and **false** when it is released. 

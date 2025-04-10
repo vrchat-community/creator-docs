@@ -24,7 +24,7 @@ After creating and configuring these assets, make sure to add them to your avata
 2. Create an **Expression Parameters asset** by selecting your Expressions Menu asset and clicking the "Create" button. This allows you to create custom parameters for your Expressions Menu. 
 	- When you click "Create", the Expression Parameters asset is automatically assigned to your Expressions Menu asset.
 	- You can also create an Expression Parameters asset by selecting `Assets > Create > VRChat > Avatars > Expression Parameters`.
-    - Expression Parameters have an option to copy parameters from of an `Animator` to creator your parameters quickly.
+    - Expression Parameters have an option to copy parameters from an `Animator` to create your parameters quickly.
 
 ![What expression parameters look like by default.](/img/avatars/expression-menu/default-parameters.png)
 
@@ -37,7 +37,7 @@ After creating and configuring these assets, make sure to add them to your avata
     - You can categorize your parameters by using `/`. For example, `Clothing/Hoodie` and `Clothing/Hat`.
     - VRChat has a few [built-in parameters](https://creators.vrchat.com/avatars/animator-parameters/#parameters).
     You can always use them in animators - don't add them to your own Expression Parameters.
-5. Choose a type for each parameter. The type should match your [Animator's Parameter type](https://docs.unity3d.com/Manual/AnimationParameters.html).
+5. Choose a type for each parameter. The type should match your animator's <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/AnimationParameters.html">parameter type</UnityVersionedLink>.
 	- `Int` can be any whole number between 0 and 255.
 	- `Float` can be any number between -1.0 and 1.0.
 	- `Bool` can be either `true` or `false`.
@@ -45,6 +45,7 @@ After creating and configuring these assets, make sure to add them to your avata
 	- When the avatar is reset, the parameter will revert to this value.
 7. Enable `Saved` for parameters that shouldn't reset themselves whenever the avatar is loaded. If your avatar has customization options or settings, `Saved` will prevent them from being reset after switching to a different world or avatar.
 8. Enable `Synced` if the state of this parameter should be sent to all other players over the network.
+	- The [sync type](#sync-types) of custom parameters is Playable (except for [Puppet controls](expression-menu-and-controls#types-of-controls)).
 
 Next, you should add both assets to your avatar descriptor.
 

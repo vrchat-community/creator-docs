@@ -161,7 +161,7 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
  [Bool] Whether the bones been posed after being grabbed
 
 `{parameter}_Angle`  
-[Float] Range of 0.0-1.0. Normalized 180 angle made between the end bone's is from its original rest position. In other words, if you twist a bone completely opposite of its start direction, this param will have a value of 1.0.
+[Float] Range of 0.0-1.0. Normalized angle between the end bone's current position and its original rest position, with a range of 0-180 degrees mapping to a parameter range of 0-1. In other words, if you rotate a bone to completely opposite its start direction, this parameter has a value of 1.0.
 
 `{parameter}_Stretch`  
 [Float] Range of 0.0-1.0. How close the bones are to their maximum stretch length.

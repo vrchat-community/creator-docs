@@ -114,6 +114,9 @@ This method will get all the players who own a certain product.
 **Output**
 - `VRCPlayerApi[]`: An array of players that own this product.
 
+### Store.OpenWorldStorePage
+Opens a the world store page of the current world, if it has one.
+
 ### Store.OpenGroupPage
 Opens a group's **Group Info** page in VRChat's main menu.
 

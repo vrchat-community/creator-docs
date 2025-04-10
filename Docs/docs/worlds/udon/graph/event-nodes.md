@@ -19,21 +19,21 @@ Fired when the local player interacts with this GameObject.
 - If you want players to interact with a 2D UI, use [VRC Ui Shape](/worlds/components/vrc_uishape/) and a Button component instead.
 
 ### OnDrop
-Fired when a VRChat player drops this object after being held.
+Fired when the local player drops this object after being held.
 
 ### OnPickup
-Fired when this object is picked up by a VRChat player.
+Fired when this object is picked up by the local player.
 
 ### OnPickupUseDown
-Fired when this object is held and the Use button is pressed. Fires on button down. Requires 'Auto Hold' on Desktop.
+Fired when the local player is holding this object presses the "Use" button. Fires when the button is pressed. Requires 'Auto Hold' on Desktop.
  
 ### OnPickupUseUp
-Fired when this object is held and the Use button is pressed. Fires on button up. Requires 'Auto Hold' on Desktop.
+Fired when the local player is holding this object presses the "Use" button. Fires when the button is released. Requires 'Auto Hold' on Desktop.
 
 ### OnPlayerJoined
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a VRChat player joins the instance. Outputs the `player` that joined.
+Fired when any player joins the instance. Outputs the `player` that joined.
 
 When you join an instance, you execute OnPlayerJoined for every player in the instance, including yourself. When another player joins your instance, you only execute OnPlayerJoined for the player who joined.
  
@@ -42,26 +42,26 @@ When you join an instance, you execute OnPlayerJoined for every player in the in
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a VRChat player leaves the instance. Outputs the `player` that left.
+Fired when any player in the instance leaves. Outputs the `player` that left.
 
 ### OnPlayerRestored
 `Event_OnPlayerRestored`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Triggered after all of VRChat player's persistent data has been loaded, including all of their [PlayerData](/worlds/udon/persistence/player-data) and [PlayerObjects](/worlds/udon/persistence/player-object). Outputs the `player` whose data was loaded.
+Triggered after all persistent data of a player in the instance has finished loading, including all of their [PlayerData](/worlds/udon/persistence/player-data) and [PlayerObjects](/worlds/udon/persistence/player-object). Outputs the `player` whose data was loaded.
 
 When you join an instance, you execute OnPlayerRestored for every player in the instance, including yourself. When another player joins your instance, you only execute OnPlayerRestored for the player who joined.
 
 ### OnStationEntered
 `Event_OnStationEntered`
 
-Fired when a VRChat player enters the station on this object.
+Fired when the local player enters the station on this object.
  
 ### OnStationExited
 `Event_OnStationExited`
 
-Fired when a VRChat player exits the station on this object.
+Fired when the local player exits the station on this object.
  
 ### OnVideoEnd
 `Event_OnVideoEnd`
@@ -105,49 +105,49 @@ Fired when the video player loads a new video.
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a player's capsule enters a trigger collider.
+Fired when the capsule collider of any player in the instance enters a trigger collider.
 
 ### OnPlayerTriggerStay
 `Event_OnPlayerTriggerStay`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired on frames while a player's capsule is inside a Trigger Collider
+Fired every frame while the capsule collider of any player in the instance is inside a trigger collider.
 
 ### OnPlayerTriggerExit
 `Event_OnPlayerTriggerExit`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a player's capsule exits a Trigger Collider.
+Fired when the capsule collider of any player in the instance exits a trigger collider.
 
 ### OnPlayerCollisionEnter
 `Event_OnPlayerCollisionEnter`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
- Fired when a player's capsule enters a Collider.
+Fired when the capsule collider of any player in the instance enters a collider.
 
 ### OnPlayerCollisionStay
 `Event_OnPlayerCollisionStay`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired on frames while a player's capsule is inside a Collider.
+Fired every frame while the capsule collider of any player in the instance is inside a collider.
 
 ### OnPlayerCollisionExit
 `Event_OnPlayerCollisionExit`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a player's capsule exits a Collider.
+Fired when the capsule collider of any player in the instance exits a collider.
 
 ### OnPlayerParticleCollision
 `Event_OnPlayerParticleCollision`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a particle collides with a player's capsule, assuming that Particle System has Collision and Send Collision Messages turned on.
+Fired when a particle collides with the capsule collider of any player in the instance, assuming that particle system has "Collision" and "Send Collision Messages" turned on.
 
 ### OnPlayerRespawn
 `Event_OnPlayerRespawn`
@@ -161,7 +161,7 @@ Fired when the local player respawns by clicking "Respawn" in their menu.
 
 Outputs: `data` - `VRC.SDK3.Platform.ScreenUpdateData`
 
-Triggered when a player first enters the world on a Mobile Device, and whenever the orientation of their device changes. Outputs a `ScreenUpdateData` struct with the following values:
+Triggered when the local player first enters the world on a Mobile Device, and whenever the orientation of their device changes. Outputs a `ScreenUpdateData` struct with the following values:
 * `type` - `ScreenUpdateType` - only `OrientationChanged` for now, can be expanded in the future.
 * `orientation` - `VRCOrientation` - the orientation of the player's device, as a `VRC.SDKBase.Platform.VRCOrientation` enum, which is `Landscape` or `Portrait`.
 * `resolution` - `Vector2` - the resolution of the player's device, as a `Vector2` struct. 
@@ -169,19 +169,19 @@ Triggered when a player first enters the world on a Mobile Device, and whenever 
 ### OnInputMethodChanged
 `Event_OnInputMethodChanged`
 Outputs: `inputMethod` - `VRC.SDKBase.VRCInputMethod`
-Fired when a player uses a different input method - Keyboard, Mouse, Controller, etc.
+Fired when the local player uses a different input method - Keyboard, Mouse, Controller, etc.
 
 ### OnLanguageChanged
 `Event_OnLanguageChanged`
 Outputs: `language` - `string`
-Fired when a player updates their display language.
+Fired when the local player updates their display language.
 
 ### OnPlayerSuspendChanged
 `Event_OnPlayerSuspendChanged`
 
 Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
-Fired when a player's device becomes suspended. A device is suspended if it enters sleep mode or switches to a different app. For the player that is being suspended, this event will fire on wakeup. Check `VRCPlayerApi.isSuspended` to know if this is a wakeup or suspend event.
+Fired when the device of any player in the instance becomes suspended. A device is suspended if it enters sleep mode or switches to a different app. For the player that is being suspended, this event will fire on wakeup. Check `VRCPlayerApi.isSuspended` to know if this is a wakeup or suspend event.
 
 While suspended, devices don't run Udon code or respond to network events until the player reopens VRChat.
 
@@ -196,7 +196,7 @@ Outputs:
 * `gifter` - `VRC.SDKBase.VRCPlayerApi`
 * `numGifts` - `int`
 
-Fired when someone in the instance drops a gift bomb.
+Fired when any player in the instance drops a gift bomb.
 
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.
