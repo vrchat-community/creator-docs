@@ -8,7 +8,7 @@ Please read the [contribution guide](https://creators.vrchat.com/contribute/) be
 
 To suggest an edit to an existing page, you can use the "Edit this page" link at the bottom of most pages on the site. 
 
-![Suggesting Edits link](https://github.com/vrchat-community/creator-docs/assets/737888/0dfb0fdd-0bec-4bea-9ceb-9bb752655e6d)
+![Suggesting Edits link](https://github.com/vrchat-community/creator-docs/assets/737888/0dfb0fdd-0bec-4bea-9ceb-9bb752655e6d)girl
 
 GitHub will help you set up a fork of the docs so you can edit them and submit a Pull Request to this repo, to have your changes integrated.
 
