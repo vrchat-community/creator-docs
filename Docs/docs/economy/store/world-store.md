@@ -1,5 +1,16 @@
-# World Store
-World stores allow you to showcase [listings](/economy/listings) for your world. Users see your world store when viewing your world in the VRChat menu or website. 
+---
+description: "Contains listings for your world."
+sidebar_custom_props:
+    customIcon: 🌏
+---
+
+# World Stores
+
+import SellerNotification from '/docs/economy/_sellers-notification.mdx';
+
+<SellerNotification/>
+
+World stores allow you to showcase [listings](/economy/listings) for your world. After creating a world store, users will see it when viewing your world in the VRChat menu or website. 
 
 ![World store](/img/economy/stores/world-store/world-store.png "A world store in VRChat.")
 
@@ -17,13 +28,9 @@ You can create a world store for any of your worlds by following the steps below
 
 ![Choose world](/img/economy/stores/world-store/choose-world.png "Choose a world for your world store")
 
-4. Add published [listings](https://creators.vrchat.com/economy/listings) to your world store.
-
-:::tip
-
-Read the [listings documentation](https://creators.vrchat.com/economy/listings) to learn how to add listings to your store.
-
-:::
+4. Add published [listings](/economy/listings) to your world store.
+	- You can use the [store manager](https://vrchat.com/home/marketplace/storefront/stores) to rearrange the order in which users see subscriptions in your store. 
+	- Read the [listings documentation](https://creators.vrchat.com/economy/listings) to learn how to add listings to your store.
 
 5. Open your store in the store manager and publish it.
 

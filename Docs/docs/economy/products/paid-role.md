@@ -6,9 +6,9 @@ sidebar_custom_props:
 
 # Subscription Role Product
 
-All [subscriptions](/economy/subscriptions) contain a subscription role product. This product automatically makes them a member of your group gives them a subscription role. You can give users with subscription roles special permissions, such as as access to announcement, group instances, or priority queues.  
+All [subscriptions](/economy/subscriptions) contain a subscription role product. This product automatically makes them a member of your group and gives them a subscription role. You can give users with subscription roles special permissions, such as access to announcements, group instances, or priority queues.  
 
-Subscription roles are always connected to a single [subscription](/economy/subscriptions). Unlike [Udon products](/economy/products/udon), you cannot manually add or remove subscription role products a subscription.
+Subscription roles are always connected to a single [subscription](/economy/subscriptions). Unlike [Udon products](/economy/products/udon), you cannot manually add or remove subscription role products from a subscription.
 
 ## Create a subscription role product
 
@@ -25,7 +25,7 @@ You can create a subscription role product manually, which also creates a subscr
 
 :::warning Known issue
 
-The text and screenshots in this section uses the outdated term "paid role" instead of "subscription role product."
+The text and screenshots in this section use the outdated term "paid role" instead of "subscription role product."
 
 :::
 

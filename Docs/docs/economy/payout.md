@@ -11,15 +11,15 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-Creators can pay out VRChat Earnings in USD through Paypal by visiting [Payout](https://vrchat.com/home/marketplace/storefront/payout) and requesting a payout from Tilia, VRChat's payment processor.
+You can pay out your VRChat Credit earnings in USD through Paypal by visiting the [Payout](https://vrchat.com/home/marketplace/storefront/payout) page and requesting a payout from Tilia, VRChat's payment processor.
 
 ## Payout requirements
 
-- Sellers can pay out once per day.
+- You can pay out once per day.
 - Only authorized sellers may request a payout.
-- Sellers must have earned at least 30,000 VRChat Credits.
+- You must have earned at least 30,000 VRChat Credits.
 	- Only earned VRChat Credits (from selling to other users) can be paid out.
-	- Purchased or promotional VRChat Credits cannot be paid out. If the seller buys VRChat Credits or receives them through a promotion, those credits do not count towards their minimum payout threshold.
+	- Purchased or promotional VRChat Credits cannot be paid out. If you buy VRChat Credits or receive them through a promotion, those credits do not count towards the minimum payout threshold.
 
 ## How to pay out
 
@@ -42,15 +42,15 @@ Ensure that your name on PayPal is correct! It must match [the name you gave Til
 
 
 5. Enter the requested amount of VRChat Credits to pay out.
-    - Tilia will automatically convert the amount from VRChat Credits into USD.
-    - A 1.5% transaction fee will be deducted from the payout.
+    - Tilia automatically converts the amount from VRChat Credits into USD.
+    - A 1.5% transaction fee is deducted from the payout.
 
 ![Review Payout](/img/economy/TiliaPayout-ReviewPayout.png "Review and select your payout amount.")
 
 6. Click **Review Payout** and finalize the payout process.
 7. Confirm everything is correct, then click **Pay Out Now.**
 
-After the payout, a confirmation page is displayed a confirmation email is sent by Tilia. Congratulations on your payout!
+After the payout has been approved, you'll receive a confirmation email from Tilia. Most payouts are approved within 1-2 business days. Congratulations on your payout!
 
 ## Revenue split
 
@@ -65,7 +65,7 @@ After VRChat Credits have been purchased, spent, and successfully paid out to cr
 
 ## Fees
 
-Fees are collected during three steps:
+Fees are collected in the following three steps:
 1. **Buying Credits**: Users purchase VRChat Credits on Steam or Meta.
 	- The total purchase fee is approximately 40%[^1].
 	- In addition, the user pays [VAT](https://en.wikipedia.org/wiki/Value-added_tax), depending on their country of residence.

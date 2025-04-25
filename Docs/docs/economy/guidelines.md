@@ -15,8 +15,9 @@ Creators who sell content through VRChat's Creator Economy must adhere to the fo
 
 Please note that the Creator Economy is a growing and evolving system. These rules are subject to change as VRChat continues to explore new implementations and use cases. 
 
-## Rules ##
-### General ###
+All Creator Economy content must follow the rules below.
+
+## General
 1. You must follow VRChat's [Terms of Service](https://hello.vrchat.com/legal).
 	1. This includes the [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy), [Community Guidelines](https://hello.vrchat.com/community-guidelines), and [Creator Guidelines](https://hello.vrchat.com/creator-guidelines).
 	2. You may only sell content that you fully own or have the legal right to distribute, including any third-party elements. Ensure you have the necessary licenses or permissions. (See section 8.4 of VRChat's [Terms of Service](https://hello.vrchat.com/legal))
@@ -38,17 +39,15 @@ Please note that the Creator Economy is a growing and evolving system. These rul
  or "\V".
 	1. Many users are in different countries with different currencies. Use "VRChat Credits" to correctly convey the cost of your products to your buyers.
 
-### Worlds ###
+## Worlds
 1. Worlds cannot promote lotteries, raffles, or other "games of chance" involving real currency.
-	1. Any systems integrating with **real-world currency** in methods of gambling, casino-style events, or with real-world benefits are strictly forbidden.
-	2. "Arcade-like" or "Gacha" uses, where **VRChat Credit payments** are tied to (randomized) rewards in a VRChat world, are permitted.
-
+	1. Any systems integrating with real-world currency in methods of gambling, casino-style events, or with real-world benefits are strictly forbidden.
 2. You cannot give a user a strictly negative experience in your world without having made a purchase.
 	1. For example, don't drop users into a hole if they haven't paid. All users should have a comfortable experience when entering your world.
 
-***
-## Enforcement ##
-Breaches of these guidelines, depending on severity, may result in the following actions being taken against the offending seller's account:
-- Groups and Creator Economy content being temporarily or permanently removed from your account.
-- The ability to sell content via the Creator Economy being temporarily or permanently revoked from your account.
-- User account being temporarily or permanently banned.
+## Enforcement
+Breaches of the guidelines above may result in the following actions being taken against your account:
+
+- Your content or your store may be removed temporarily or permanently.
+- Your permission to sell content may be revoked temporarily or permanently.
+- Your user account may be banned temporarily or permanently.
