@@ -9,7 +9,10 @@ import SellerNotification from './_sellers-notification.mdx';
 
 The Creator Economy allows you to monetize your worlds and groups!
 
-You can earn VRChat Credits by selling [listings](/economy/listings) that contain [products](/economy/products), and [Pay out](/economy/payout) your earnings with Tilia and PayPal.
+- Create [products](products) that unlock content for buyers.
+- Sell [listings](./listings) to earn VRChat Credits.
+- Use [stores](/economy/store/) to help users discover listings. 
+- [Pay out](./payout) your earnings with Tilia and PayPal.
 
 import DocCardList from '@theme/DocCardList';
 

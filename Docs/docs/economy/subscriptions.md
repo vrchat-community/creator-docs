@@ -12,7 +12,11 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-Subscriptions are the easiest way to monetize your VRChat group. Users can visit your group store to buy a subscription. They receive a group role as a reward, but you can also grant them additional group permissions or Udon products.
+Subscriptions are the easiest way to monetize your VRChat group. Users can visit your group store to buy a subscription and unlock world or group benefits.
+
+Subscriptions can contain the following product types:
+- [Subscription role products](/economy/products/paid-role)
+- [Udon products](/economy/products/udon)
 
 You can choose your subscription's [visibility](#visibility). Subscriptions can appear in your group store, or you can use Udon to [open a published subscription's purchase screen](#udon-buttons-in-your-world) directly, even if your store is unpublished.
 
@@ -94,9 +98,11 @@ After creating your first subscription, you can also edit your subscriptions by 
 
 ### 2. Group
 
-Choose a group for your subscription.
+Choose a group for your subscription. If the group has no [group store](/economy/store/group-store), the website automatically creates a group store for you.
 
-Each subscription is always connected to a single group. This cannot be changed later.
+Each subscription is always connected to a single group. You cannot move the subscription to a different group later.
+
+If you already chose a group in step 1, this step is skipped.
 
 </Column>
 <Column className='text--left'>
@@ -172,7 +178,7 @@ Choose the name, description, thumbnail, and price of your subscription. When us
 - **Description**: An description of what subscribers get.
 - **Thumbnail**: An image representing the subscription.
 - **Monthly price and plans**: The price of your subscription.
-	- Choose a price of 100-10,000 ![VRChat Credits](/img/economy/Icons_Credits@20.svg) per month.
+	- Choose a price of 100-10,000 ![VRChat Credits](/img/economy/Icons_Credits@20.svg) per month.[^1]
 	- Subscribers can buy 1, 3, 6, or 12 months at once.
 	- You can encourage users to subscribe by offering reduced monthly rates for multi-month plans.
 
@@ -220,12 +226,12 @@ Click "Next" to save your subscription as a draft.
 
 ### 7. Publish
 
-After you create a listing, it is saved as a draft. You must publish it before users can buy it.
+After you create a subscription, it is saved as a draft. You must publish it before users can buy it.
 
 Open the [Store Manager](https://vrchat.com/home/marketplace/storefront/stores/) and select your group store.
 
 - Change the status of your store from "Unpublished" to "Published" by click the button in the top right.
-- Change the status of your listing from "Draft" to "Published" by opening the listing's setting and clicking "Publish."
+- Change the status of your subscription from "Draft" to "Published" by opening the subscription's setting and clicking "Publish."
 
 </Column>
 <Column className='text--left'>
@@ -242,7 +248,7 @@ Congratulations! Users can purchase published subscriptions in your group store.
 The visibility of a subscription depends on its status. Open [My Subscriptions](https://vrchat.com/home/marketplace/storefront/subscriptions) to change the status of your subscriptions:
 
 - "Published" subscriptions can be purchased by users.
-- "Draft" listings cannot be purchased by users. If users already purchased the listing, they keep it.
+- "Draft" subscriptions cannot be purchased by users. If users already purchased the subscription, they keep it.
 
 After publishing a subscriptions, users can only see it if you added it to a group [store](/economy/store) or if you have a store inside your world. 
 
@@ -264,3 +270,5 @@ When you use subscriptions to monetize your VRChat group, remember the following
 	- For example: If a user subscribes for 12 months and immediately cancels, you only receive VRChat Credits for the first month.
 - The subscription price includes a ~15.3% transaction fee.
 	- See [CE Program Rules](https://hello.vrchat.com/legal/economy) and [Payout](/economy/payout).
+
+[^1]: VRChat may change the Creator Economy's minimum and maximum subscription price in the future. We will inform you in advance before we implement a new minimum or maximum.
