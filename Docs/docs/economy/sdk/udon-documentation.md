@@ -163,7 +163,7 @@ Sends an [OnListAvailableProducts](#onlistavailableproducts) event to the target
 ### Store.ListProductOwners
 Sends an [OnListProductOwners](#onlistproductowners) event to the target UdonBehaviour. This event allows you to retrieve the names of all your supporters and, for example, display their user names in your world.
 
-- For this event to work properly, you'll first need to enable the ["Owners Names in Udon" setting](/economy/products/udon#getting-udon-products-owners-in-the-sdk) for the Udon product on [VRChat.com](https://vrchat.com/home/marketplace/storefront/products). Otherwise, [OnListProductOwners](#onlistproductowners) will not fire.
+- For this event to work properly, you'll first need to enable the ["Owners Names in Udon" setting](/economy/products/udon#editing-udon-products) for the Udon product on [VRChat.com](https://vrchat.com/home/marketplace/storefront/products). Otherwise, [OnListProductOwners](#onlistproductowners) will not fire.
 - If you are locally testing your world, OnListProductOwners will load the placeholder user names "VRCat, Fred, VRRat" instead of real user names.
 - If your GameObject contains multiple UdonBehaviour components, this event may not work properly.
 

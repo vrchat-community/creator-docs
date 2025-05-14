@@ -80,7 +80,7 @@ When you look for a model, try to keep the following things in mind:
 - Ensure that you have a license to use the model in VRChat.
 	- Most asset stores display their license on the 3D model's store page.
 	- Using them without a license is a violation of the model author's rights and the [VRChat Terms of Service](https://hello.vrchat.com/legal). 
-- Ensure that the model that you're using is [below 20,000 for VRChat on Meta Quest](/avatars/avatar-performance-ranking-system#android-limits) and [below 70,000 triangles on PC](/avatars/avatar-performance-ranking-system#pc-limits).
+- Ensure that the model that you're using is [below 20,000 for VRChat on Meta Quest](/avatars/avatar-performance-ranking-system#mobile-limits) and [below 70,000 triangles on PC](/avatars/avatar-performance-ranking-system#pc-limits).
 	- Uploading an avatar with an excessive triangle count can cause performance issues.
 	- On PC, you can upload models above this limit, but the avatar will be ranked as having "Very Poor" performance, which means that fewer players will see it.
 

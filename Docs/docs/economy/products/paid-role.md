@@ -1,5 +1,5 @@
 ---
-description: "Give access to group roles, instances, announcements, priority queues."
+description: "Gives access to group features."
 sidebar_custom_props:
     customIcon: 👥
 ---

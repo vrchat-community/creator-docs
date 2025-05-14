@@ -20,11 +20,11 @@ You can also use Udon to open your world store. For example, you can add an "Ope
 You can create a world store for any of your worlds by following the steps below:
 
 1. Open the [Store Manager](https://vrchat.com/home/marketplace/storefront/stores) on the VRChat website (Marketplace >My Store > Store Manager).
-2. Click "Set Up New Store"
+2. Select "Set Up New Store".
 
 ![Setup new store](/img/economy/stores/world-store/setup-new-store.png "Open the marketplace tab and set up a new store.")
 
-3. Press "World Store", choose one of your worlds from the dropdown, then press "Create".
+3. Select "World Store", choose one of your worlds from the dropdown, then press "Create".
 
 ![Choose world](/img/economy/stores/world-store/choose-world.png "Choose a world for your world store")
 
@@ -47,7 +47,7 @@ Keep the following restrictions in mind when using world stores:
 - You can sell the same listing to multiple world stores.
 	- You can sell listings that give users benefits in multiple worlds.
 	- Users can't buy the same listing if they already own it.
-- You can sell [permanent](/economy/listings#permanent) or [temporary](/economy/listings#temporary) listings without adding them to your world store. 
+- You can sell [permanent](/economy/listings#%EF%B8%8Fpermanent) or [temporary](/economy/listings#temporary) listings without adding them to your world store. 
 	- You can use Udon to open listings directly, i.e. with [Store.OpenListing](/economy/sdk/udon-documentation#storeopenlisting).
 	- You can't sell [instant](/economy/listings#instant) listings without adding them to your world store. In addition, only users who are currently visiting your world can buy instant listings.
 - You cannot add [subscriptions](/economy/subscriptions) to your world stores.

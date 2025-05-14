@@ -9,6 +9,8 @@ tags: [release]
 
 This update fixes multiple issues with [VRChat Constraints](/avatars/avatar-dynamics/constraints).
 
+<!-- truncate -->
+
 ## New features
 
 - Added an option to the Settings tab of the SDK Control Panel to prevent VRChat constraints from running while in Edit mode.

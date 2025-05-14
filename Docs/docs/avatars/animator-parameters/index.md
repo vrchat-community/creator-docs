@@ -54,7 +54,7 @@ The list below contains all of VRChat's built-in parameters, their description, 
 | InStation                                                                          | Returns `true` if the user is in a station, `false` if not                                                                                                                         | Bool               | IK             |
 | Earmuffs                                                                           | Returns `true` if the user's Earmuff feature is on, `false` if not                                                                                                                 | Bool               | Playable       |
 | IsOnFriendsList                                                                    | Returns `true` if the user viewing the avatar is friends with the user wearing it. `false` locally.                                                                                | Bool               | Other          |
-| [AvatarVersion](/worlds/components/vrc_station/#sdk3-station-with-sdk2sdk3-avatar) | Returns `3` if the avatar was built using VRChat's SDK3 (2020.3.2) or later, `0` if not.                                                                                           | Int                | IK             |
+| [AvatarVersion](/worlds/components/vrc_station/#detecting-sdk2-avatars) | Returns `3` if the avatar was built using VRChat's SDK3 (2020.3.2) or later, `0` if not.                                                                                           | Int                | IK             |
 | IsAnimatorEnabled                                                                  | Returns `false` one frame before the avatar's animator is disabled, and `true` when it's enabled.                                                                                  | Bool               | None           |
 
 [^1]: GestureLeftWeight and GestureRightWeight go from 0.0 to 1.0 in various gestures depending on the trigger pull. For example, if you make a fist but don't pull the trigger on the left hand, GestureLeft will be 1, but GestureLeftWeight will be 0.0. When you start pulling the trigger, it will climb from 0.0 towards 1.0. This can be used to create "analog" gestures or conditionally detect various things.
@@ -160,7 +160,7 @@ During avatar initialization, this value may change! Ensure that your animator a
 
 You can add your own parameters to your avatar's Playable Layers.
 
-You must [create a Expression Parameters asset](#expression-parameters-asset), which allows you to [control parameters in VRChat](#how-to-control-custom-parameters). For example, you can set up an [expressions menu](#expression-menu-and-controls) and allow users to customize your avatar in VRChat.
+You must [create a Expression Parameters asset](#expression-parameters-asset), which allows you to [control parameters in VRChat](#how-to-control-custom-parameters). For example, you can set up an [expressions menu](/avatars/expression-menu-and-controls) and allow users to customize your avatar in VRChat.
 
 ### Expression Parameters Asset
 
@@ -204,7 +204,7 @@ Given this, you should always use the same Expression Parameters asset for both 
 
 ### Mismatched Parameter Type Conversion
 
-When you choose a [parameter type](/avatars/animator-parameters/#parameter-types) in your [animator](https://docs.unity3d.com/Manual/AnimationParameters.html), it's a good idea to choose the same type as the [built-in parameter](/avatars/animator-parameters/#parameters) or [custom parameter](/avatars/expression-menu-and-controls/#creating-an-expressions-menu) you're trying to use. For example: If you use VRChat's built-in `AFK` parameter in your animator,  you should choose the type `bool`.
+When you choose a [parameter type](/avatars/animator-parameters/#parameter-types) in your [animator](https://docs.unity3d.com/Manual/AnimationParameters.html), it's a good idea to choose the same type as the [built-in parameter](/avatars/animator-parameters/#built-in-parameters) or [custom parameter](/avatars/expression-menu-and-controls/#creating-an-expressions-menu) you're trying to use. For example: If you use VRChat's built-in `AFK` parameter in your animator,  you should choose the type `bool`.
 
 However, you *can* choose a mismatched type for your parameters. VRChat will try convert the parameter's value to the type used by the animator. For example, if you choose the type `float` for your `AFK` parameter, VRChat will automatically set `AFK` to `1.0` or `0.0` instead of `true` or `false`. This also allows you to use the `AFK` parameter in your Animator's [Blend Tree](https://docs.unity3d.com/Manual/class-BlendTree.html).
 

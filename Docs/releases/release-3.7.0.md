@@ -9,6 +9,8 @@ tags: [release]
 
 This update adds VRChat Constraints, Unity AI Navigation, improves Avatar editor panels, upgrades Standard Lite, implements new Player State APIs, and more!
 
+<!-- truncate -->
+
 ## New features
 
 - ⚠️ The SDK now blocks uploads if the last built avatar exceeds the new reduced download or uncompressed size limits for Avatars.

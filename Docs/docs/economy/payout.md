@@ -25,7 +25,7 @@ You can pay out your VRChat Credit earnings in USD through Paypal by visiting th
 
 1. Navigate to [vrchat.com/home](https://vrchat.com/home)
 2. Open the **Marketplace** in the left-hand sidebar and click **Storefront**.
-3. Expand the **Sell in VRChat** section and find the **Pay Out Now** button. This button is only selectable if you are fully [onboarded](/economy/getting-started#seller-onboarding) and made the minimum of 30,000 VRChat Credits.
+3. Expand the **Sell in VRChat** section and find the **Pay Out Now** button.
 
 ![Click Pay Out Now](/img/economy/TiliaPayout-ClickPayOutNow.png "See if paying out is available")
 

@@ -10,7 +10,7 @@ draft: false
 
 This release reworks the main user interface for the VRChat SDK (the 'Build panel'). It includes a new UI, quality-of-life improvements, and easier ways to build and update your content.
 
-This update also adds support for the new 'Maximum capacity' and 'Recommended capacity' settings for worlds. You can learn more about these settings [in our documentation](/worlds/creating-your-first-world/#step-5---building-your-world).
+This update also adds support for the new 'Maximum capacity' and 'Recommended capacity' settings for worlds. You can learn more about these settings [in our documentation](/worlds/creating-your-first-world/).
 
 <!--truncate-->
 

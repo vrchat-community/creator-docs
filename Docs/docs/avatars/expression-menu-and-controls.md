@@ -45,7 +45,7 @@ After creating and configuring these assets, make sure to add them to your avata
 	- When the avatar is reset, the parameter will revert to this value.
 7. Enable `Saved` for parameters that shouldn't reset themselves whenever the avatar is loaded. If your avatar has customization options or settings, `Saved` will prevent them from being reset after switching to a different world or avatar.
 8. Enable `Synced` if the state of this parameter should be sent to all other players over the network.
-	- The [sync type](#sync-types) of custom parameters is Playable (except for [Puppet controls](expression-menu-and-controls#types-of-controls)).
+	- The [sync type](/avatars/animator-parameters/#sync-types) of custom parameters is Playable (except for [Puppet controls](expression-menu-and-controls#types-of-controls)).
 
 Next, you should add both assets to your avatar descriptor.
 

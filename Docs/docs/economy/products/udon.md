@@ -1,5 +1,5 @@
 ---
-description: "Unlock world features with Udon or prefabs."
+description: "Gives access to world features."
 sidebar_custom_props:
     customIcon: 🌍
 ---

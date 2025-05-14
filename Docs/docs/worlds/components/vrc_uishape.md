@@ -61,7 +61,7 @@ If your Canvas is not configured correctly, players may be unable to interact wi
 * Some UI events get removed in VRChat for security reasons. Make sure that the events you are trying to use are on [this list](/worlds/udon/ui-events)
 * If you are using `SendCustomEvent`, make sure to type the event exactly the same both in the UI button and in the UdonBehaviour's `event custom` node
 * If you are using `SendCustomEvent` to an UdonSharp behaviour, the event must be set to public. If it is set to private, it will not work.
-* If something is wrong with an UdonBehaviour, it might halt which will stop it from doing anything. See [this documentation](/worlds/udon/debugging-udon-projects#finding-udon-errors) for more details
+* If something is wrong with an UdonBehaviour, it might halt which will stop it from doing anything. Learn how to [debug your Udon projects](/worlds/udon/debugging-udon-projects) for more details.
 
 ### If the UI is moving when you move, press a key, or move a joystick:
 
