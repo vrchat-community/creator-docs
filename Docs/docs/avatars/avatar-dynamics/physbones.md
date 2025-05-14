@@ -183,7 +183,7 @@ Apply the Constraint to the parent game object instead. You can still have the s
 
 **PhysBones have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on the Meta Quest devices, which are often already low on CPU resources. 
 
-You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#quest-limits) documentation.
+You can view those limits as the Very Poor limits for Quest described in the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#mobile-limits) documentation.
 
 :::
 

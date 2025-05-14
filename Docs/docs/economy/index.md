@@ -7,7 +7,7 @@ import SellerNotification from './_sellers-notification.mdx';
 
 <SellerNotification/>
 
-The Creator Economy allows you to monetize your worlds and groups!
+The Creator Economy allows you to monetize your worlds, groups, and avatars - directly in VRChat!
 
 - Create [products](products) that unlock content for buyers.
 - Sell [listings](./listings) to earn VRChat Credits.

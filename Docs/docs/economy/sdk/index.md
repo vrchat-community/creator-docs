@@ -1,5 +1,5 @@
 ---
-title: Creator Economy SDK
+title: Creator Economy Worlds SDK
 sidebar_position: 5
 sidebar_custom_props:
     description: Use the Creator Economy in your world.

@@ -9,6 +9,8 @@ tags: [release]
 
 This update adds AI Navigation, improves Avatar editor panels, implements new Player State APIs, fixes input events in ClientSim, and fixes World uploads failing when using inline sprites.
 
+<!-- truncate -->
+
 ## New features
 
 - This release integrates [Unity 2022's AI Navigation](https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/index.html) package, which allows you to create non-player characters (NPCs) that can intelligently move around the game world, using navigation meshes that are created automatically from your Scene geometry.

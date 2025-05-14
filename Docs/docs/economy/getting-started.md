@@ -15,6 +15,12 @@ Before you can use the Creator Economy, you need to request authorization from T
 
 To get started, watch the video or read the steps below:
 
+:::warning
+
+The video below explains how to use the Creator Economy and group stores. To learn about world stores and the avatar marketplace, please read our [stores documentation](/economy/store/).
+
+:::
+
 <iframe
     width="100%"
     height="400"

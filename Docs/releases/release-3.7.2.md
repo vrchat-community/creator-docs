@@ -9,6 +9,8 @@ tags: [release]
 
 This update adds [Build & Test for Mobile](/platforms/android/build-test-mobile), [Example Central](/sdk/example-central) and some fixes for [Spookality '24](http://hello.vrchat.com/blog/spookality-2024-arrives-october-1)! It also introduces _Udon Code Signing_ for improved security.
 
+<!-- truncate -->
+
 ## New features
 
 - [Build & Test for Mobile](/platforms/android/build-test-mobile) - send worlds directly to a connected Android Device while working on it for _much_ quicker testing and iteration.

@@ -8,6 +8,7 @@ sidebar_custom_props:
 # FAQ
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
+import ThemedCreditIcon from '/docs/economy/_credit-icon.mdx';
 
 <SellerNotification/>
 
@@ -31,7 +32,7 @@ You need to [get started with Tilia](./getting-started) before you can create [l
 ## Payment Processing ##
 
 #### What are VRChat Credits?
-VRChat Credits ![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) are VRChat's currency for the Creator Economy. They are similar to premium currencies found in other video games.
+VRChat Credits<ThemedCreditIcon/> are VRChat's currency for the Creator Economy. They are similar to premium currencies found in other video games.
 Users can purchase VRChat Credits and spend them on creators.
 Creators can earn credits and pay them out in USD, if eligible.
 
@@ -39,11 +40,11 @@ Creators can earn credits and pay them out in USD, if eligible.
 
 When you request a [payout](/economy/payout), your earned VRChat credits are paid out at the following rate:
 
-1![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) ≈ 0.005 US$
+1<ThemedCreditIcon/> ≈ 0.005 US$
 
-200![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) ≈ 1 US$
+200<ThemedCreditIcon/> ≈ 1 US$
 
-In other words, for each 1200![VRChat Credit icon](/img/economy/Icons_Credits@20.svg) (≈10 US\$) users spend in your store, your [payout](/economy/payout) increases by approximately 5 US\$.
+In other words, for each 1200<ThemedCreditIcon/> (≈10 US\$) users spend in your store, your [payout](/economy/payout) increases by approximately 5 US\$.
 
 Please refer to the [Creator Economy Program Rules](https://hello.vrchat.com/legal/economy) and the [payout documentation](/economy/payout) to learn more.
 
@@ -100,6 +101,9 @@ No. You must be the content owner to use a product. For example, if you own a wo
 
 You **can** open another creator's store, group, or listing with the [SDK](/economy/sdk/udon-documentation#storeopenlisting).
 
+#### Can I sell avatars in my world store?
+
+Yes, you can add [avatar products](/economy/products/avatar) to permanent listings. However, you can't add avatar products to temporary listings, instant listings, or subscriptions.
 
 #### If I sell a permanent listing, what are the support requirements?  
   
@@ -114,6 +118,7 @@ Yes. You may change listings, subscriptions, and the products they contain. Depe
 
 However, don't "bait-and-switch" users by taking away their purchases unexpectedly. Don't deceive users.
 
+Some product types, such as [avatar products](/economy/products/avatar), cannot be removed from a listing after any user has purchased the listing.
 #### Do users have to be part of my group to buy a subscription?
 
 Yes. However, if your group is not set to "Free Join", you can allow paying users to join your group by enabling the [Enable Free Join for Subscribers](/economy/subscriptions#4-role-permissions) setting in your subscription role settings.
@@ -124,7 +129,9 @@ Users can leave your group after buying a subscription. They lose access to thei
 There is currently no split pay functionality. The [payout](/economy/payout) process is only available to the seller.
 
 #### Can a listing be free? ####
-No, listings have a minimum price of 100![VRChat Credit icon](/img/economy/Icons_Credits@20.svg). However, for [testing](/economy/sdk/testing), sellers can purchase their own listings for free in VRChat.
+No, listings cannot be free. Read our [pricing guidelines](/economy/listings#31-pricing) to learn more
+
+However, for [testing](/economy/sdk/testing), you can purchase your own listings for 0<ThemedCreditIcon/> in VRChat.
 
 #### Where can I provide feedback? ####
 VRChat uses Canny for our community feedback and bug reports. Feel free to post on the Creator Economy section of our [feedback page.](https://feedback.vrchat.com/creator-economy)

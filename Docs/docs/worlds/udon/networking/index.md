@@ -198,7 +198,7 @@ Use this when you have a variable that will update less frequently, and it's sup
 **Example**: The 'score' of each team in a basketball game. This only changes when someone makes a basket and you definitely don't want to miss an update.
 
 ### 3. Custom Network Events
-Use this to trigger an event for every player currently in the instance, or for the owner of an object. It is guaranteed to arrive, but will have a fair amount of delay and overhead. It will not be received by anyone who joins after the event was sent. See [Using Events](/worlds/udon/networking#using-events) below. 
+Use this to trigger an event for every player currently in the instance, or for the owner of an object. It is guaranteed to arrive, but will have a fair amount of delay and overhead. It will not be received by anyone who joins after the event was sent. See [Using Custom Events](#using-custom-events) below. 
 
 **Example**: A laser effect that fires as part of your Dance Club. You want everyone in the club to see it around the same time, but if someone comes in 20 minutes later, it's ok that they missed it.
 

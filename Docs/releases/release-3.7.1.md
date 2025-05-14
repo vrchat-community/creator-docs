@@ -9,6 +9,8 @@ tags: [release]
 
 This update exposes some highly-requested functions to Udon, adds high-quality DPID mipmapping support (opt-in beta), and optimizes PhysBone gizmos.
 
+<!-- truncate -->
+
 ## New features
 
 - Exposed the following C# features to Udon:

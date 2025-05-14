@@ -15,7 +15,7 @@ When you add Creator Economy features to your VRChat World, you should test it b
 
 ## Testing in ClientSim
 
-While developing your world in Unity, you can use ClientSim in conjunction with the [UdonProducts Manager](/economy/sdk/getting-started#udonproduct-manager). It allows you to activate and expire products without launching VRChat.
+While developing your world in Unity, you can use ClientSim in conjunction with the [UdonProducts Manager](/economy/sdk/getting-started#udonproducts-manager). It allows you to activate and expire products without launching VRChat.
 
 ## Testing in VRChat
 

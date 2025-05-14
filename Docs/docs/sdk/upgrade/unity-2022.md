@@ -88,7 +88,7 @@ It's easy to check what versions of Unity are available on your PC for use with 
 
 1. In the CC, go to **Settings**.
 2. Under **Unity Editors**, use the dropdown menu to change the default Unity editor. This will **not** apply retroactively to any projects already created.
-3. If you have not already installed Unity <CurrentUnityVersion versionKey="patch"/>, [follow the instructions above](unity-2022.md#Using-the-Creator-Companion). 
+3. If you have not already installed Unity <CurrentUnityVersion versionKey="patch"/>, [follow the instructions above](#using-the-creator-companion). 
 4. If you don't see a version of Unity here that you've installed, try using the refresh button or finding the path directly using the file button.
 
 ## Packages

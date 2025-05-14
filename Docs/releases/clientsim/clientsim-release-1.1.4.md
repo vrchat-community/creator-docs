@@ -9,6 +9,8 @@ tags: [release]
 
 Small cleanup release, mostly around World Tests
 
+<!-- truncate -->
+
 ### Changes
 
 * Hides Menu in Scene View [thanks to Arne-van-der-Lei](https://github.com/vrchat-community/ClientSim/pull/27)

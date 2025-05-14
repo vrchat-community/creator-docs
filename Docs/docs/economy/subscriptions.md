@@ -9,6 +9,7 @@ sidebar_custom_props:
 # Subscriptions
 
 import SellerNotification from '/docs/economy/_sellers-notification.mdx';
+import ThemedCreditIcon from '/docs/economy/_credit-icon.mdx';
 
 <SellerNotification/>
 
@@ -18,7 +19,7 @@ Subscriptions can contain the following product types:
 - [Subscription role products](/economy/products/paid-role)
 - [Udon products](/economy/products/udon)
 
-You can choose your subscription's [visibility](#visibility). Subscriptions can appear in your group store, or you can use Udon to [open a published subscription's purchase screen](#udon-buttons-in-your-world) directly, even if your store is unpublished.
+You can choose your subscription's [visibility](#visibility). Subscriptions can appear in your group store, or you can use Udon to [open a published subscription's purchase screen](/economy/sdk/examples/open-listing) directly, even if your store is unpublished.
 
 Subscriptions are similar to [listings](/economy/listings).
 
@@ -178,7 +179,7 @@ Choose the name, description, thumbnail, and price of your subscription. When us
 - **Description**: An description of what subscribers get.
 - **Thumbnail**: An image representing the subscription.
 - **Monthly price and plans**: The price of your subscription.
-	- Choose a price of 100-10,000 ![VRChat Credits](/img/economy/Icons_Credits@20.svg) per month.[^1]
+	- Choose a price of 100-10,000<ThemedCreditIcon/> per month.[^1]
 	- Subscribers can buy 1, 3, 6, or 12 months at once.
 	- You can encourage users to subscribe by offering reduced monthly rates for multi-month plans.
 

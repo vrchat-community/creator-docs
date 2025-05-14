@@ -9,6 +9,8 @@ tags: [release]
 
 This release exposes additional [TextMesh Pro](/worlds/components/textmeshpro) components and other useful properties to Udon.
 
+<!-- truncate -->
+
 ## New features
 
 - Exposed three new [TextMeshPro](/worlds/components/textmeshpro/) components to Udon.

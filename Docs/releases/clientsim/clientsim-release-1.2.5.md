@@ -10,6 +10,8 @@ draft: false
 
 Fixed a handful of ClientSim issues
 
+<!-- truncate -->
+
 ### Changes
 - Force added package resolver, which was previously git-ignored
 - Fixed Destroying focused object breaks ClientSim [Issue 59](https://github.com/vrchat-community/ClientSim/issues/59)
