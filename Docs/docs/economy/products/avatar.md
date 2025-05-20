@@ -161,9 +161,19 @@ If you want to improve or update your avatar, you can edit it in Unity and uploa
 
 When you upload a new version an avatar product, you must wait 1-2 business days for VRChat's approval. Afterwards, the update is automatically published.
 
+:::warning
+
+After you have sold your avatar to one or more users, limit your updates to the following changes:
+
+- Bug fixes
+- Performance improvements
+- New or improved features
+
+:::
+
 While waiting for approval, users can continue buying and using the previously approved version of your avatar. When VRChat approves the new version, all owners see the new version instead.
 
-While waiting for approval, you can continue uploading newer versions of your avatar. If you upload multiple versions in a short period of time, VRChat only reviews the latest version, ignoring older versions.
+While waiting for approval, you can also continue uploading newer versions of your avatar. If you upload multiple versions in a short period of time, VRChat only reviews the latest version, ignoring older versions.
 
 ## Avatar content guidelines
 
