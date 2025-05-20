@@ -152,7 +152,7 @@ However, if your avatar is extremely unoptimized, VRChat may prevent you from us
 
 ## Mobile Limits
 
-VRChat on Android and iOS (phones, tablets, and Meta Quest) has stricter limits that VRChat on PC.
+VRChat on Android and iOS (phones, tablets, and Meta Quest) has stricter limits than VRChat on PC.
 
 The table below describes the requirements for mobile avatar to receive a certain performance rank:
 

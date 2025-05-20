@@ -12,7 +12,7 @@ Note: All specs subject to change. You can see some specific information about t
 :::
 
 - Udon scripts can send out about **11 kilobytes** per second.
-- Udon scripts with manual sync are limited to roughly **280,496 bytes bytes** per serialization.
+- Udon scripts with manual sync are limited to roughly **280,496 bytes** per serialization.
 - Udon scripts with continuous sync are limited to roughly **200 bytes** per serialization.
 
 If a world exceeds limits, its networking will become clogged (see [IsClogged](https://creators.vrchat.com/worlds/udon/networking/network-components/#networking-properties)). The UdonBehaviour will fail to raise the network event and write errors in the logs. The logic of the UdonBehaviour will continue to work, but the data will not be sent nor received.

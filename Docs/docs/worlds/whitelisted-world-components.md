@@ -104,6 +104,7 @@ VRChat is currently working on [VRCConstraint](https://feedback.vrchat.com/avata
 - [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)
 - [VRC_IKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use 
 <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/Constraints.html">Constraints</UnityVersionedLink> instead!
+- [VRC_MidiListener](/worlds/udon/midi/realtime-midi/)
 - [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection)
 - [VRCPipelineManager](/sdk/vrcpipelinemanager)
 - [VRC_PortalMarker](/worlds/components/vrc_portalmarker)
