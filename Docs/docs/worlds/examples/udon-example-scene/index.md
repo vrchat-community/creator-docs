@@ -26,6 +26,8 @@ If you'd like to use the VRCWorld prefab in your own Unity scene, you can find i
 ### AvatarPedestal
 This is available as a prefab, and has a program to switch a user into an avatar when they Interact with the pedestal, which is the default behavior of the prefab.
 
+To change the interaction distance of the prefab, unpack the prefab and change the "Proximity" setting of the Udon Behaviour component.
+
 ### VRCChair3
 This is available as a prefab, and has a program called `StationGraph`. It seats a player in the station when they Interact with it, and logs their display name when they enter or exit.
 

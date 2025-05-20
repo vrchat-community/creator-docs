@@ -22,7 +22,7 @@ If you wanted to be **completely** safe, ensure the total time spent in the stat
 
 ## Animator Layer Controller
 
-![Unity_2020-07-08_12-50-04.png](/img/avatars/state-behaviors-e78eb77-Unity_2020-07-08_12-50-04.png)
+![VRC Animator Layer Control component](/img/avatars/state-behaviours/animator-layer-control.png)
 
 The Animator Layer Control allows you to blend the weight of a specific Animator Layer inside any given Playable Layer over any given time.
 
@@ -41,7 +41,7 @@ The layer weight will remain until some other state runs this State Behavior aga
 
 ## Animator Locomotion Control
 
-![state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png](/img/avatars/state-behaviors-f6f3250-Unity_2020-07-08_13-16-13.png)
+![VRC Animator Locomotion Control component](/img/avatars/state-behaviours/animator-locomotion-control.png)
 
 The Animator Locomotion Control allows you to disable locomotion in a given state of an animator. The Locomotion state will remain until some other state runs this State Behavior again and changes it.
 
@@ -53,7 +53,8 @@ In Desktop mode, this disables translational movement, and restricts rotational 
 | Debug String | When this StateBehavior runs, this string will be printed to the output log. Useful for debugging. |
 
 ## Animator Temporary Pose Space
-![state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png](/img/avatars/state-behaviors-467daaf-Unity_2020-07-14_21-38-14.png)
+
+![VRC Animator Temporary Pose Space component](/img/avatars/state-behaviours/animator-temporary-pose-space.png)
 
 The Animator Temporary Pose Space control allows you to move the viewpoint of the person wearing the avatar to the head at that given point of the animator state.
 
@@ -77,7 +78,7 @@ This state behavior **will not execute** if the state this behavior is on is exi
 
 ## Animator Tracking Control
 
-![state-behaviors-076baca-Unity_2020-07-08_13-26-00.png](/img/avatars/state-behaviors-076baca-Unity_2020-07-08_13-26-00.png)
+![VRC Animator Tracking Control component](/img/avatars/state-behaviours/animator-tracking-control.png)
 
 The Animator Tracking Control allows you to enable or disable IK or simulated movement on various different parts of the avatar body. Setting the option to "No Change" will not change the body part from its current value. "Tracking" will set it to following IK or simulated movement. "Animation" will force that body part to respect values as given by the avatar's Animator.
 
@@ -164,8 +165,8 @@ You can also use the `Convert Range` checkbox to enable some additional UI that 
 
 ## Playable Layer Control
 
-![state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png](/img/avatars/state-behaviors-33760a2-Unity_2020-07-08_13-36-13.png)
-        
+![VRC Animator Layer Control component](/img/avatars/state-behaviours/animator-playable-layer-control.png)
+
 The Playable Layer Control allows you to blend the weight of the entire Playable Layer to a specified value over specified duration. Very similar to Animator Layer Control, but instead controls the entire Playable Layer.
 
 The Action Playable layer will use this State Behavior often, as the Action layer has weight zero by default, and should always be blended back to zero after the animation is complete.

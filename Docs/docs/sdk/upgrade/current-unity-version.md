@@ -8,13 +8,13 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 The current Unity version used by VRChat is <UnityVersionedLink versionKey="patch" url="https://unity.com/releases/editor/whats-new/<VERSION>"><CurrentUnityVersion/></UnityVersionedLink>
 
-If you have Unity Hub installed, you can <UnityVersionedLink url="unityhub://<VERSION>">click this link</UnityVersionedLink> to install the correct version of Unity. <CurrentUnityVersion/> is also available in the [Unity editor release archive](https://unity.com/releases/editor/archive).
+The simplest way to install the latest Unity version is with the [Creator Companion](https://vcc.docs.vrchat.com/#download-it). After installing the Creator Companion, simply follow the instructions. 
+
+Alternatively, if you have Unity Hub installed, you can <UnityVersionedLink url="unityhub://<VERSION>">click this link</UnityVersionedLink> to install the correct version of Unity. <CurrentUnityVersion/> is also available in the [Unity editor release archive](https://unity.com/releases/editor/archive).
 
 In the installation screen, choose "Android Build Support" if you'd like to be able to create worlds or avatars for Android or Quest.
 
-**Unity <CurrentUnityVersion versionKey="major"/> is required to use the latest version of the VRChat SDK**, and we strongly recommend upgrading if you are still on Unity 2019. Without upgrading, you can't access any future SDK updates, and some previously made content might experience issues.
-
-For instructions on how to upgrade, [visit our Unity 2019 to 2022 documentation](/sdk/upgrade/unity-2022).
+For instructions on how to upgrade from Unity 2019, [visit our Unity 2019 to 2022 documentation](/sdk/upgrade/unity-2022).
 
 ## Differences from previous versions
 

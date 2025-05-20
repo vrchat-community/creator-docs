@@ -6,7 +6,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # Allowed Avatar Components
 
-Your can add features to your avatar by <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/UsingComponents.html">adding components</UnityVersionedLink> to it. However, not all components can be used in VRChat. 
+You can add features to your avatar by <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/UsingComponents.html">adding components</UnityVersionedLink> to it. However, not all components can be used in VRChat. 
 
 - Any component on the following list can be used in VRChat.
 - Other components or custom scripts won't work in VRChat and may stop you from uploading your avatar.

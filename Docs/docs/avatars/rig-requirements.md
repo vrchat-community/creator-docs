@@ -73,6 +73,12 @@ Note that this message is naming the slot, not the actual bone name in your rig,
 See above.
 :::
 
+## Eye bones
+
+Configure avatar's eye bones as follows: 
+
+- The Y axis should point up.
+- The Z axis should point forward.
 ## General Hierarchy
 
 :::caution This avatar has a split heirarchy (Hips bone is not the ancestor of all humanoid bones). IK may not work correctly.
