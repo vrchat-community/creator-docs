@@ -58,9 +58,11 @@ All Creator Economy content must follow the rules below.
 2. Your avatar must have a high degree of visual and technical fidelity.
 	1. Avatars with cross-platform support are highly recommended. If your avatar is available on multiple platforms (e.g. PC, Android and/or iOS), its appearance should be similar on all platforms.
 	2. If your avatar uses [expression menus](/avatars/expression-menu-and-controls/) or [components](/avatars/avatar-dynamics/), avoid technical issues or bugs.
-3. Your avatar should not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
+3. In general, your avatar's updates should be limited to bug fixes, performance improvements, and new/improved features.
+	1.  If you want to visibly and materially change a base avatar that has already been purchased, please contact us to discuss it. We may adjust this policy in the future.
+4. Your avatar should not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
 	1. For example: You may use GoGo Loco, but not GoGo Flight.
-4.  If your listing contains [avatar products](/economy/products/avatar), its price must be least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
+5.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
 	1. If your listing contains two different avatars, it must cost at least 2,400<ThemedCreditIcon/> (1,200 <ThemedCreditIcon/> × 2).
 	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 1,200<ThemedCreditIcon/>.
 	3. If your listing contains a single avatar, it must cost at least 1,200<ThemedCreditIcon/>.

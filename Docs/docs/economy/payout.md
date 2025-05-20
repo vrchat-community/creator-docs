@@ -15,8 +15,8 @@ You can pay out your VRChat Credit earnings in USD through Paypal by visiting th
 
 ## Payout requirements
 
-- You can pay out once per day.
 - Only authorized sellers may request a payout.
+- You can request a payout every 14 days.
 - You must have earned at least 30,000 VRChat Credits.
 	- Only earned VRChat Credits (from selling to other users) can be paid out.
 	- Purchased or promotional VRChat Credits cannot be paid out. If you buy VRChat Credits or receive them through a promotion, those credits do not count towards the minimum payout threshold.
