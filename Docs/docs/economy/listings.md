@@ -268,6 +268,13 @@ Use a combination of [stores](/economy/store) and Udon [store prefabs](/economy/
 - You can also create "hidden" listings that users can't find in your world store or elsewhere.
 - If you're experienced with Udon, write your Udon scripts with the [Store.OpenListing](/economy/sdk/udon-documentation#storeopenlisting) method.
 
+### Quantity Purchases
+
+You can allow users to buy [instant](#instant) listings in large quantities. Go to the listing details and select "Enable Quantity Purchases". When users buy the listing, they can choose to buy it up to 99 times at once.
+
+You should use the Udon method (OnPurchaseConfirmedMultiple)[/economy/sdk/udon-documentation#onpurchaseconfirmed] to detect the quantity of the purchase and give users an appropriate reward.
+
+
 ## Refunds
 
 Refunds are processed on a case-by-case basis by VRChat. You cannot directly issue refunds to your buyers. If you need help issuing refunds to buyers of your listings, please contact VRChat.

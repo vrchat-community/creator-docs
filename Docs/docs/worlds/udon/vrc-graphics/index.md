@@ -14,6 +14,10 @@ Overarching class for global shader setters. See [functions documented below](#v
 
 Exposes a subset of Unity’s built-in \`Graphics\` class. See documented functions for more.
 
+## VRCCameraSettings & VRCQualitySettings
+
+Exposes information and limited control over the user's screen camera, the handheld camera, and Unity's global quality settings. See [VRCCameraSettings](/worlds/udon/vrc-graphics/vrc-camera-settings) for more.
+
 ## Exposed Functions
 
 ### VRCGraphics.Blit()
@@ -65,3 +69,7 @@ Available variants:
   * VRCShader.SetGlobalTexture()
   * VRCShader.SetGlobalVector()
   * VRCShader.SetGlobalVectorArray()
+
+# Additional shader globals
+
+VRChat exposes a few special global shader variables you can use in any custom avatar or world shader. They are listed [here](/worlds/udon/vrc-graphics/vrchat-shader-globals).
