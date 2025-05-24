@@ -100,10 +100,6 @@ If `delaySeconds` is zero, the event will be executed in the same frame *or* the
 ### SendCustomNetworkEvent
 Inputs: `instance` - `UdonBehaviour`, `target` - NetworkEventTarget, `eventName` - String
 
-Runs the event `eventName` on the target UdonBehaviour - either on the Owner of the target if 'Owner' is selected as the target, or on Everyone in the instance if 'all' is selected.
+Runs the event `eventName` on the target UdonBehaviour for remote players according to `target`. Has overloads for including parameters.
 
-:::note Local only events
-
-If the name of the event starts with an underscore (`_YourEventName`), it is considered a [local-only event](/worlds/udon/networking/#local-only-events) and will **not** be executed.
-
-:::
+Check the page on [Network Events](/worlds/udon/networking/events) for more details.
