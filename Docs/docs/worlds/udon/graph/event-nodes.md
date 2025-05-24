@@ -198,27 +198,5 @@ Outputs:
 
 Fired when any player in the instance drops a gift bomb.
 
-### OnVRCCameraSettingsChanged
-`Event_OnVRCCameraSettingsChanged`
-
-Outputs: `camera` - `VRC.SDK3.Rendering.VRCCameraSettings`
-
-Fired when the user changes certain options in the VRChat graphics settings, e.g. "Near Clip Override" or "Field of View."
-
-Changing values yourself via `VRCCameraSettings` will _not_ trigger this event! Similarly, camera `Position` and `Rotation` will not trigger it, since those change almost every frame anyway.
-
-The `camera` object passed in refers to either the `ScreenCamera` or the `PhotoCamera` (see [VRCCameraSettings](/worlds/udon/vrc-graphics/vrc-camera-settings)). Note that this event will trigger every frame while the user is using the zoom slider on the `PhotoCamera` or a Dolly path is adjusting the zoom value, since they affect the `FieldOfView` value.
-
-Changing the screen resolution, including by resizing the VRChat window, will also call this event every frame. It is recommended to do minimal processing to avoid affecting performance.
-
-This event may trigger multiple times per frame.
-
-### OnVRCQualitySettingsChanged
-`Event_OnVRCQualitySettingsChanged`
-
-Fired when the user adjust Graphics settings affecting one or more values in `VRC.SDK3.Rendering.VRCQualitySettings`.
-
-Similarly to `OnVRCCameraSettingsChanged`, this event may trigger often, and it is recommended to keep processing light.
-
 ### Advanced Notes
 All nodes in this list have the type `System.Void`.

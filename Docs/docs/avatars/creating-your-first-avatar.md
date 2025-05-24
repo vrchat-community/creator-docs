@@ -233,8 +233,6 @@ After uploading your avatar, it should be available in VRChat. You can also see 
 
 You can also test your avatar without uploading it. To do this, click "Build & Test" instead. Your avatar will appear in the "Other" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
 
-Additionally, you can launch with the `--watch-avatars` launch option that will make it so that if you're wearing an avatar from the "Other" section, any future tests will immediately switch you to the new version of the avatar.
-
 ## Step 8 - Enjoy your avatar!
 
 Congratulations on creating your first avatar! We hope everything went smoothly. If you need any help, consider visiting our [Ask Forum](https://ask.vrchat.com/) or our [Discord server](https://discord.com/invite/vrchat).

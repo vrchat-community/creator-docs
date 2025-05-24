@@ -37,20 +37,13 @@ Matcap
 MobileToon
 DoubleSided
 Hidden //(this will hide the mesh from view if the shader is blocked, useful for things like raymarching effects.)
-toonstandard
-toonstandardoutline
 ```
-
 Toon and Unlit can also be combined with Transparent, Cutout, Fade, and DoubleSided tags for more granular control. With Toon supporting such variations as DoubleSided Cutout.
-
 :::caution
 
 Please note that using Transparent or Fade tags with Toon will result in it falling back to Transparent Unlit. You might want to take that into account when picking fallback tags.
 :::
-
 Specifying any other tag will result in a Standard shader fallback.
-
-The `toonstandard` and `toonstandardoutline` tags are special, in that they cannot be combined. They guarantee falling back to the `VRChat/Mobile/Toon Standard` and `VRChat/Mobile/Toon Standard (Outline)` shaders respectively. All same-named keywords and properties will be copied over.
 
 If no tag is provided, the old fallback system will be used, following the pattern shader name, keywords, etc.
 

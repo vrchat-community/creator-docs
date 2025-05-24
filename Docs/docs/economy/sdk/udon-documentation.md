@@ -190,30 +190,13 @@ This event is triggered once a player's purchase has been loaded and confirmed. 
 - `VRCPlayerApi`: The player who has purchased the product.
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
 
-### OnPurchaseConfirmedMultiple
-This event is triggered every time [`OnPurchaseConfirmed`](#onpurchaseconfirmed) is triggered. However, this variant also supports [Quantity Purchases](/economy/listings/#quantitypurchases). If you use [instant](/economy/listings#instant) listings in your world, you should always use this event instead of `OnPurchaseConfirmed`.
-The `quantity` value represents the amount that the user purchased. For [instant](/economy/listings#instant) listings with [Quantity Purchases](/economy/listings#quantity-purchases), `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
-
-**Output**
-- `IProduct`: The product that has been purchased.
-- `VRCPlayerApi`: The player who has purchased the product.
-- `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
-- `int`: The quantity purchased at once.
-
-:::caution
-
-Use either `OnPurchaseConfirmed` _or_ `OnPurchaseConfirmedMultiple`. Don't use both in the same script!
-
-Both events detect every purchase. If you use both, you may accidentally detect the same purchase twice. Generally, you should use `OnPurchaseConfirmedMultiple` because it's compatible with [Quantity Purchases](/economy/listings#quantity-purchases).
-
-:::
-
 ### OnPurchaseExpired
 This event is triggered when the local client detects that one of the products owned by a player in the instance has expired.
 
 **Output**
 - `IProduct`: Product that has expired.
 - `VRCPlayerApi`: The player whose product has expired.
+
 
 ### OnPurchasesLoaded
 This event is triggered when all of a player's purchases have been loaded, either when the local player joins an instance or when another player has joined later.
