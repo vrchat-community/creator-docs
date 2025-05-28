@@ -127,11 +127,3 @@ TL;DR: You can now specify up to 8 parameters on custom network events sent via 
 ## Known Issues
 
 - In rare cases, you may see an "All pipe instances are busy" error while building. This is a Unity issue - restarting your editor and trying again should fix it.
-
-:::note
-
-3.8.1 will, unfortunately, break CyanTrigger moving forward.
-
-That means that if you are using this version of the SDK (or later versions, pending future changes), you will not be able to use CyanTrigger. Existing projects and content will continue to work — you simply won't be able to use this particular tool in 3.8.1 (or beyond). This is not fixable on our end.
-
-:::
