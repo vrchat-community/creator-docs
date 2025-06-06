@@ -26,7 +26,7 @@ All Creator Economy content must follow the rules below.
 	1. For example, if your avatar contains content activated by use of a toggle that is not permitted on the marketplace, you must make reasonable efforts to upload a new avatar build that removes this content within 10 days of being notified.
 3. Clearly define what the user is purchasing.
 	1. Listings, subscriptions, and products should have clear names and sufficiently detailed descriptions.
-	2. Content should avoid engaging in [Dark Patterns](https://en.wikipedia.org/wiki/Dark_pattern) (or Deceptive Design Patterns) such as misdirection, bait-and-switch, and others.
+	2. Content should avoid engaging in [Dark Patterns](https://en.wikipedia.org/wiki/Dark_pattern) (or Deceptive Design Patterns) such as misdirection, bait-and-switching, and others.
 	3. Content must avoid false advertising and not misrepresent the content or prices of listings and subscriptions. Names, tags, descriptions, acknowledgements, images, and previews used should not be misleading. Keep in mind that if your content looks very different in VRChat than in the images you've used to showcase it, buyers may be disappointed.
 	4. Listings containing different types of products should make it clear where those products can be used. For example, if you are selling a bundle containing [avatar products](/economy/products/avatar) *and* [Udon products](/economy/products/udon), ensure the buyer understands that while they can use the avatars anywhere, the Udon Products can only be used in specific world(s).
 4. If feature parity exists, the Creator Economy should be used in addition to any off-platform monetization methods.
@@ -66,8 +66,88 @@ All Creator Economy content must follow the rules below.
 	1. If your listing contains two different avatars, it must cost at least 2,400<ThemedCreditIcon/> (1,200 <ThemedCreditIcon/> × 2).
 	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 1,200<ThemedCreditIcon/>.
 	3. If your listing contains a single avatar, it must cost at least 1,200<ThemedCreditIcon/>.
-5. Your avatar must follow the avatar content guidelines, available to authorized avatar sellers.
+6. Your avatar must follow the avatar content guidelines below.
+	1. If your listing contains avatar products and Udon products, ensure that the Udon product is also consistent with the content guidelines below.
 
+:::info
+
+VRChat may reject some avatars despite fulfilling all the criteria above. VRChat currently only accepts a limited number of avatars. High-quality avatars are more likely to be accepted.
+ 
+This restriction will become less strict in the future. Please visit our avatar seller Discord community for additional information.  
+
+:::
+
+
+### Avatar content guidelines
+
+The guidelines below clarify what type of content is suitable for the avatar marketplace. These content guidelines apply to all configuration and viewing options for an avatar. Content that violates these guidelines in an alternate state or viewing mode (e.g. through a toggle, hidden in a texture, or otherwise "locked" to be inaccessible to the user) is not permitted.
+ 
+#### Properties
+
+1. Your avatar's name, description, tags, acknowledgements, images, and previews for marketplace avatars must adhere to VRChat's [public content guidelines](https://hello.vrchat.com/creator-guidelines) for avatars.  
+2. English must be the primary language of all words or characters in your avatar's properties, textures, or expressions menus.  
+    - You're permitted to add additional non-English translations (with English equivalents).  
+    - For example: The text in your expressions menu must be in English, but you may use icons to provide a Japanese translation.
+
+#### Clothing & Appearance
+
+Your avatar must have private areas appropriately covered or presented in a non-sexualized manner.
+
+The marketplace allows creativity and stylization, but avatars should avoid conveying overt sexuality or nudity. For example, private areas with patterned textures may convey a sense of being covered, while flat shading resembling skin may imply nudity.
+
+|                                                                      |                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **This content can be sold on the marketplace.**                     | <ul><li>Swimsuits, underwear</li><li>Fantasy outfits</li><li>Tasteful clothing that isn’t overly revealing</li><li>Torsos that that imply coverage (e.g., robot plating, fur, or other stylized designs)</li></ul>                                                                                                                                                                                          |
+| **This content may receive less visibility on the marketplace.**[^1] | <ul><li>Revealing or tight-fitting outfits</li></ul>                                                                                                                                                                                                                                                          |
+| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Sexually suggestive nudity</li><li>Visible or exaggerated sexual features</li><li>Extreme body exaggerations designed primarily for sexual appeal</li><li>Lingerie</li><li>Suggestive animations</li><li>Exposed breasts that convey a sense of nakedness or sexuality</li><li>Exposed or exaggerated buttock cleavage</li><li>Sexually suggestive underbust exposure on clothed avatars</li></ul> |
+
+
+#### Weapons & Violence
+
+Your avatar may feature cartoon-like or stylized weapons, but should not depict realistic violence.
+
+|                                                                      |                                                                                                           |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| **This content can be sold on the marketplace.**                     | <ul><li>Stylized and toy-like weapons (e.g., swords, shields, bows, bubble guns)</li></ul>                |
+| **This content may receive less visibility on the marketplace.**[^1] | <ul><li>Realistic firearms</li><li>Military gear</li></ul>                                                |
+| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Graphic violence (e.g., blood splatter)</li><li>Depictions of injury, torture, or death</li></ul> |
+
+
+#### Spooky & Dark Themes
+
+Minor horror elements are acceptable, but extreme content should be avoided. 
+
+|                                                                      |                                                                                                                                                                                             |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **This content can be sold on the marketplace.**                     | <ul><li>Mildly creepy designs (e.g., skeletons, glowing eyes)</li></ul>                                                                                                                     |
+| **This content may receive less visibility on the marketplace.**[^1] | <ul><li>Unsettling or shadowy designs</li></ul>                                                                                                                                             |
+| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Extreme horror (e.g., mutilation, grotesque imagery, realistic tragic events)</li><li>References to drugs or criminal activity</li><li>References to real-world tragedies</li></ul> |
+
+#### Properties and Metadata  
+  
+Your avatar's properties should follow our [content guidelines](https://hello.vrchat.com/creator-guidelines) and be in English.  
+  
+|                                                                      |                                                                                                                                                                                                                                                                                                               |  
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Non-English names or icons in [VRC Expressions Menu](/avatars/expression-menu-and-controls/)</li><li>Avatar properties that violate [public content guidelines](https://hello.vrchat.com/creator-guidelines) (e.g., name, description, acknowledgements, images, etc.)</li></ul> |  
+  
+#### Audio Sources  
+  
+Your PC avatars may use audio sources, but they shouldn't be intrusive.  
+
+|                                                                      |                                                                                                                                                                                                                                                                                                               |  
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Noisy or overbearing sounds that may make other users uncomfortable</li></ul> |  
+  
+[^1]: Your avatar's thumbnail may not contain any of this content.
+
+:::tip
+
+In the early stages of the marketplace, we will collaborate closely with you on these guidelines to help ensure your success. These guidelines will also evolve over time as VRChat introduces new content controls and moderation tools.
+
+If you have any questions or concerns, don’t hesitate to ask us directly!
+
+:::
 
 ## Enforcement
 Breaches of the guidelines above may result in the following actions being taken against your account:
