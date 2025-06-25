@@ -69,7 +69,7 @@ Currently exposed as **read-write**:
 - `bool AllowMSAA`: Disable all MSAA (anti-aliasing) on this camera if set to `false`, regardless of user settings. Defaults to `true`, where it will use the user's graphics settings.
 - `CameraClearFlags ClearFlags`: Sets the background clear mode used when rendering this camera.
   - `Color BackgroundColor`: The color to use when `ClearFlags` is set to `SolidColor`.
-- `bool LayerCullSpherical`: See <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Camera-layerCullSpherical.html">Unity Docs</UnityVersionedLink>.
+- `bool LayerCullSpherical`: ~~See <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Camera-layerCullSpherical.html">Unity Docs</UnityVersionedLink>.~~ This API is currently disabled in Udon as it causes UI culling issues. Setting it is a no-op.
 - `float[] LayerCullDistances`: See <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Camera-layerCullDistances.html">Unity Docs</UnityVersionedLink>. Array must have 32 entries, corresponding to GameObject layers. A value of `0` for a layer means it will use the value of `FarClipPlane`. Setting this property to `null` is the same as passing in `0` for every layer.
   - Just like `FarClipPlane`, this will be clamped to a minimum of `NearClipPlane + 0.1`. Any `reserved` [layer](/worlds/layers) and `InternalUI` cannot be changed and will always read `0`.
 

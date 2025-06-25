@@ -19,7 +19,7 @@ The table below lists Unity's built-in layers, how they are used in VRChat, and 
 | 0            | Default             | Used for Unity's Game Objects by default. Used by VRChat's Avatar Pedestals.                                                                                                                                                                           | ✔                 |
 | 1            | TransparentFX       | Used for Unity's Flare Assets.                                                                                                                                                                                                                         | ❌                 |
 | 2            | IgnoreRaycast       | Ignored by Unity's Physics Raycasts if no layer mask is provided. Not ignored by VRChat's Physics Raycasts.                                                                                                                                            | ❌                 |
-| 3            | reserved3           | ⚠ Avoid using this layer. Reserved by VRChat. When you upload your world, any Game Object on a reserved Layer will be moved to Layer 0 (Default).                                                                                                      | ❌                 |
+| 3            | Item           | Used by VRChat items placed into your world by users. When you upload your world, any Game Object on this Layer will be moved to Layer 0 (Default).                                                                                                      | ❌                 |
 | 4            | Water               | Used by Unity's Standard Assets. Used by VRChat's Portals. Used by VRChat's Mirrors. Often used for Unity's Post Processing.                                                                                                                           | ✔                 |
 | 5            | UI                  | ⚠ You may not want to use this layer. Used by Unity's UI by default. Ignored by VRChat's UI pointer unless the player has the VRChat menu open. Ignored by the VRChat's camera unless 'UI' is enabled in the camera.                                   | ❌                 |
 | 6            | reserved6           | ⚠ Avoid using this layer. Reserved by VRChat. When you upload your world, any Game Object on a reserved Layer will be moved to Layer 0 (Default).                                                                                                      | ❌                 |
@@ -50,6 +50,39 @@ Stickers allow [VRChat+](https://hello.vrchat.com/vrchatplus) users to place ima
 Stickers can't be placed on [all layers](#unitys-built-in-layers). If you don't want users to place stickers on a `Collider` component, change its layer. We recommend using layer 8 ("Interactive") because it is unused by VRChat and Unity.
 
 If you don't want to allow stickers anywhere, edit your world on the [VRChat Website](https://vrchat.com/home/content/worlds) and disable stickers.
+
+## Physics and Layers
+
+When using Physics operations, it's best to limit which layers you're testing against to avoid items on Reserved layers. It's also a good idea to use `Utilities.IsValid` on any object passed back to a Physics call to make sure you didn't accidentally pick up a "protected" object, which will be `null`, possibly shutting down your UdonBehaviour.
+
+<details>
+    <summary>These Physics methods are best paired with `IsValid`:</summary>
+
+- Physics.Raycast – Casts a ray and returns the first hit.
+- Physics.RaycastAll – Returns all hits along a ray.
+- Physics.RaycastNonAlloc – Uses a preallocated array to store results, reducing garbage collection.
+- Physics.SphereCast – Similar to Raycast, but with a sphere for a wider detection area.
+- Physics.SphereCastAll – Returns all hits using a sphere.
+- Physics.SphereCastNonAlloc – Optimized version that uses a preallocated array.
+- Physics.OverlapSphere – Returns all colliders within a sphere.
+- Physics.OverlapBox – Returns all colliders inside a box.
+- Physics.OverlapCapsule – Returns all colliders inside a capsule.
+- Physics.OverlapSphereNonAlloc – Optimized version using a preallocated array.
+- Physics.OverlapBoxNonAlloc – Same, but for a box.
+- Physics.OverlapCapsuleNonAlloc – Same, but for a capsule.
+- Rigidbody.SweepTest – Checks if a Rigidbody will hit something along a given direction.
+- Rigidbody.SweepTestAll – Returns all hits along a Rigidbody’s path.
+- Physics.CapsuleCast – Casts a capsule in a direction and detects the first hit.
+- Physics.CapsuleCastAll – Returns all hits using a capsule.
+- Physics.CapsuleCastNonAlloc – Optimized version using a preallocated array.
+- Physics.BoxCast – Casts a box and detects the first hit.
+- Physics.BoxCastAll – Returns all hits using a box.
+- Physics.BoxCastNonAlloc – Optimized version using a preallocated array.
+- Collider.Raycast – Casts a ray against a single collider.
+- Physics.CheckSphere – Checks if a sphere overlaps any colliders.
+- Physics.CheckBox – Checks if a box overlaps any colliders.
+- Physics.CheckCapsule – Checks if a capsule overlaps any colliders.
+</details>
 
 ## Interaction Block and Passthrough on VRChat Layers
 

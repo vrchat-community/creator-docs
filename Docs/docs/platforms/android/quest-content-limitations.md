@@ -1,19 +1,23 @@
 ---
-title: "Quest Content Limitations"
+title: "Android Content Limitations"
 slug: "quest-content-limitations"
 hidden: false
 createdAt: "2019-05-15T01:40:38.749Z"
 updatedAt: "2022-07-04T09:34:33.253Z"
 ---
-This page will describe various limits in place for the Oculus Quest version of VRChat. These limitations are in place in the interest of performance, user safety, and discouraging malicious behavior.
+This page will describe various limits in place for the Android version of VRChat. These limitations are in place in the interest of performance, user safety, and discouraging malicious behavior.
 
-Find more information about limited components on our [Quest Content Optimization](/platforms/android/quest-content-optimization) page.
+Find more information about limited components on our [Android Content Optimization](/platforms/android/quest-content-optimization) page.
+
 ## Avatar-Specific Limitations
-Although the current version of VRChat does not implement a hard limit, **we may implement a hard limit for avatars based on triangle count, material counts, mesh counts, and other qualities in the future.** Please keep our recommendations in mind as described in [Quest Content Optimization](/platforms/android/quest-content-optimization).
+
+Although the current version of VRChat does not implement a hard limit, **we may implement a hard limit for avatars based on triangle count, material counts, mesh counts, and other qualities in the future.** Please keep our recommendations in mind as described in [Android Content Optimization](/platforms/android/quest-content-optimization).
 
 Currently, if you upload an avatar or avatar world that features avatars exceeding our recommendations, that world or avatar may be removed from public access.
+
 ## Shaders
-VRChat on Quest only permits the shaders provided with the latest SDK on avatars. The shaders are listed below with a short description and their inputs. This list may change, and we'll announce in our patch notes when new shaders are available.
+
+VRChat on Android or Quest only permits the shaders provided with the latest SDK on avatars. The shaders are listed below with a short description and their inputs. This list may change, and we'll announce in our patch notes when new shaders are available.
 
 All of the shaders listed below are under `VRChat/Mobile` in the shader selection dialog.
 

@@ -171,6 +171,12 @@ Sends an [OnListProductOwners](#onlistproductowners) event to the target UdonBeh
 - `UdonBehaviour`: An UdonBehaviour that will receive the resulting [OnListProductOwners](#onlistproductowners) event.
 - `UdonProduct`: The UdonProduct for which to retrieve the owner's user names.
 
+### VRCOpenMenu.OpenAvatarListing
+Opens the detail/purchase screen of an avatar in VRChat's main menu.
+
+**Input**
+- `string`: ID of the avatar (i.e. `avtr_00000000-0000-0000-0000-000000000000`)
+
 ## Events
 
 :::info Don't disable your script

@@ -41,7 +41,7 @@ toonstandard
 toonstandardoutline
 ```
 
-Toon and Unlit can also be combined with Transparent, Cutout, Fade, and DoubleSided tags for more granular control. With Toon supporting such variations as DoubleSided Cutout.
+Toon and Unlit can also be combined with Transparent, Cutout and Fade tags for more granular control. With Toon additionally supporting "DoubleSided" and variations like "DoubleSidedCutout".
 
 :::caution
 
