@@ -13,6 +13,10 @@ How to persistently unlock items using PlayerData, using simple in-world achieve
 
 Visit the [Unlock Items Example World](https://vrchat.com/home/world/wrld_abe04fe4-583e-44d3-ae89-29bc9f60d166) to try it for yourself!
 
+:::note
+The term 'Items' is used generically for this example, and does not refer to [user-spawned items as described here](/worlds/items).
+:::
+
 ## Using the Example
 
 1. Enter the world

@@ -64,7 +64,7 @@ Returns an `IVRCImageDownload`, which can be used to track the progress of the d
 - **Instance**: The `ImageDownloader` component to download the image with.  
 - **Url** : The `VRCURL` of the texture to download.  
 - **Material** (optional): The Material to automatically apply the downloaded image to, as a main texture.
-- **UdonBehavior** (optional): The `Udonbehavior` to send `VRCImageDownloader` events to. If `udonBehavior` is empty, the current UdonBehaviour will receive all events.
+- **UdonBehavior** (optional): The `Udonbehavior` to send `VRCImageDownloader` events to. If `udonBehavior` is left empty in UdonGraph, the current UdonBehaviour will receive all events.
   - Note that UdonSharp will not receive any events unless `udonBehavior` is specified.
 - **TextureInfo** (optional):  The `TextureInfo` object containing settings for the newly created texture.
 

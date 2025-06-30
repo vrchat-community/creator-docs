@@ -86,12 +86,6 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 
 ### Unity Components
 
-:::info
-
-VRChat is currently working on [VRCConstraint](https://feedback.vrchat.com/avatar-30/p/vrcconstraint-optimized-replacement-for-unity-constraints), an optimized replacement for Unity's Constraints. 
-
-:::
-
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AimConstraint.html">AimConstraint</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-LookAtConstraint.html">LookAtConstraint</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ParentConstraint.html">ParentConstraint</UnityVersionedLink>
@@ -99,6 +93,12 @@ VRChat is currently working on [VRCConstraint](https://feedback.vrchat.com/avata
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-PositionConstraint.html">PositionConstraint</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-RotationConstraint.html">RotationConstraint</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ScaleConstraint.html">ScaleConstraint</UnityVersionedLink>
+
+:::info
+
+While VRChat's [VRCConstraint](https://feedback.vrchat.com/avatar-30/p/vrcconstraint-optimized-replacement-for-unity-constraints) components do work inside the Unity Editor, they will not work in VRChat Worlds. You should use the Unity Constraints instead.
+
+:::
 
 ## VRChat Components
 - [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)
