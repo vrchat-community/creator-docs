@@ -106,13 +106,13 @@ This method will check if any player in the instance owns a certain product.
 - `bool`: `true` if any player in the instance owns the product, otherwise `false`.
 
 ### Store.GetPlayersWhoOwnProduct
-This method will get all the players who own a certain product.
+This method will get all the players in the instance who own a certain product.
 
 **Input**
 - `UdonProduct` or `IProduct`: Product that you want to check the ownership of.
 
 **Output**
-- `VRCPlayerApi[]`: An array of players that own this product.
+- `VRCPlayerApi[]`: An array of players in the instance that own this product.
 
 ### Store.OpenWorldStorePage
 Opens a the world store page of the current world, if it has one.
