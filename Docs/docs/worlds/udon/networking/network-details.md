@@ -37,7 +37,12 @@ Each manually-synced object is rate limited as a factor of the data size. The mo
 Manual sync is limited to **280,496 bytes** per serialization.
 
 ## Synced Variables
-These variables are available for syncing across the network.
+These variables and their arrays are available for syncing across the network.
+
+:::caution Array Sync
+
+When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/worlds/udon/networking/network-components#onpostserialization) node
+:::
 
 :::note
 In the lists below, 'size' refers to the **approximate** size in memory. When networked, the data is serialized, which may lead to more data being transmitted. For example, syncing a `bool` will send **at least** 1 byte of data (instead of 1 bit) in addition to any networking overhead.
