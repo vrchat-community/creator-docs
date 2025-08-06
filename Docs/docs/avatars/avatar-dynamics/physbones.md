@@ -1,10 +1,10 @@
-# Physbones
+# PhysBones
 
-PhysBones is a set of components that lets you add secondary motion to avatars, permitting you to add motion to things like hair, tails, ears, clothing, and more! Using these well will make your avatar seem more dynamic and real.
+PhysBones are a set of components that lets you add secondary motion to avatars, permitting you to add motion to things like hair, tails, ears, clothing, and more! Using these well will make your avatar seem more dynamic and real.
 
 PhysBones is a replacement for Dynamic Bones. While both systems share a lot of concepts, there are some major differences with PhysBones, so not all avatars may directly translate over to VRChat’s system.
 
-An example of how to use Physbones can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
+An example of how to use PhysBones can be found in the SDK under `VRCSDK\Examples3\Dynamics\Robot Avatar`.
 
 ## VRCPhysBone
 
@@ -33,11 +33,12 @@ Version 1.1:
 ### Transforms
 
 `Root Transform` - The transform where this component begins. If left blank, we assume we start at this game object.  
-`Ignore Transforms` - List of ignored transforms that shouldn't be affected by this component. Ignored transforms automatically include any of that transform's children.  
+`Ignore Transforms` - List of ignored transforms that shouldn't be affected by this component. Ignored transforms automatically include any of that transform's children. 
+`Ignore Other Phys Bones` - If enabled, the PhysBone ignores other PhysBones and their affected transforms beneath itself in the scene hierarchy. This option is enabled by default, and disabling may lead to unsupported behaviour.
 `Endpoint Position` - Vector used to create additional bones at each endpoint of the chain. Only used if the value is non-zero. Usually you'll want to increase this along +Y, which points "up" the bone.  
 `Multi-Child Type` - Behavior of the root bone when multiple bone chains exist. This has three modes:
 
- If set to **Ignore**, the root bone will not move, and will ignore physics. Useful for things like hair,   since you can use one Physbone component on the root to affect all of the hair bones!
+ If set to **Ignore**, the root bone will not move, and will ignore physics. Useful for things like hair,   since you can use one PhysBone component on the root to affect all of the hair bones!
 
  If set to **First**, the root bone will form one continuous chain with the first bone chain in the hierarchy. Every other chain will still work, but they will start from the first bone in each respective chain rather than the root like the first chain.
 

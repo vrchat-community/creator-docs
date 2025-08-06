@@ -173,7 +173,7 @@ When passing `null` as an input to `SendCustomNetworkEvent`, the method called o
 In general, keep parameter sizes minimal and avoid sending large objects or complex structures to avoid issues. There are a few hard-limits in place:
 
 * The total size of all parameters in a single network event cannot exceed 16 KB.
-* The size of a single parameter it not limited, other than by the total size of the event.
+* The size of a single parameter is not limited, other than by the total size of the event.
 * Total outgoing data is hard-capped at approximately 18 KB/s. This includes _all_ network overhead however, so in practice it is unlikely you will see more than 8-10 KB/s.
 
 In addition, there are two levels of limitation that may cause events to be delayed:
@@ -242,7 +242,7 @@ The following functions in `NetworkCalling` are available to help work with rate
 | Function | Description |
 |----------|-------------|
 | `int NetworkCalling.GetQueuedEvents(udonBehaviour, eventName)` | Returns how many events are currently queued for sending. In normal operation, this number will be between 0 and your configured rate limit. If it exceeds your rate limit, you are sending events too quickly and they will be queued until the rate limit allows them to be drained. |
-| `int NetworkCalling.GetAllQueuedEvents` | Returns how many events are queued across your entire world. A number above 0 does not automatically indicate bad network conditions, as events may end up queued for a short duration even under low load. |
+| `int NetworkCalling.GetAllQueuedEvents()` | Returns how many events are queued across your entire world. A number above 0 does not automatically indicate bad network conditions, as events may end up queued for a short duration even under low load. |
 
 You can also use the overall `Networking.IsClogged` property to determine network conditions. This will be affected by excessive event sending.
 
@@ -285,7 +285,7 @@ The `NetworkCalling` class has some useful properties for working with events:
 
 ## Legacy Events and Security
 
-`[NetworkCallable]` was introduced in SDK 3.7.7 - Udon used to allow any public method to be called, unless it started with an underscore like `_MethodName`. For backwards compatibility, you can still call any parameter-less public method which doesn't start with an underscore, but it's not recommended. Adding the `[NetworkCallable]` attribute to a method with an underscore _will_ allow it to be called over the network.
+`[NetworkCallable]` was introduced in SDK 3.8.1 - Udon used to allow any public method to be called, unless it started with an underscore like `_MethodName`. For backwards compatibility, you can still call any parameter-less public method which doesn't start with an underscore, but it's not recommended. Adding the `[NetworkCallable]` attribute to a method with an underscore _will_ allow it to be called over the network.
 
 In Udon Graph, a custom event node is considered "Legacy" if the `MaxEventsPerSecond` input field is set to 0.
 

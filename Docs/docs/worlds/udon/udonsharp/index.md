@@ -87,7 +87,6 @@ UdonSharp support most of C#'s basic syntax:
 UdonSharp is not conformant to any version of the C# language specification. Some C# features are not implemented or will not work.
 
 - For the best experience when creating UdonSharp scripts, make your scripts inherit from `UdonSharpBehaviour` instead of `MonoBehaviour`.
-- If you need to call `GetComponent<UdonBehaviour>()`, you will need to use `(UdonBehaviour)GetComponent(typeof(UdonBehaviour))` since the generic get component is not exposed for UdonBehaviours yet. `GetComponent<T>()` works for other Unity component types though.
 - Udon currently only supports array `[]` collections. By extension, UdonSharp only supports arrays at the moment. `List<T>` is not supported yet.
 - Field initializers are evaluated at compile time. If you have any initialization logic that depends on other objects in the scene you should use `Start`.
 - Use the `[UdonSynced]` attribute on fields that you want to sync over the network for all players.
@@ -125,11 +124,6 @@ public class RotatingCubeBehaviour : UdonSharpBehaviour
 
 ### Does UdonSharp support all Udon features?
 Yes. If Udon supports it, then so does UdonSharp. You can check the [class exposure tree](https://github.com/Merlin-san/UdonSharp/wiki/class-exposure-tree) to see everything UdonSharp has access to.
-
-### Can I access the player camera?
-No, Udon can not access the player's camera. You can, however, get the head position and rotation. For example, you can use [VRCPlayerApi.GetTrackingData](https://github.com/Merlin-san/UdonSharp/wiki/vrchat-api#vrchatplayerapi) like this:
- 
-`var headPosition = localPlayer.GetTrackingData(TrackingDataType.Head).position`
 
 ### Can I have more than one UdonSharp UdonBehavior on a GameObject?
 Yes.
