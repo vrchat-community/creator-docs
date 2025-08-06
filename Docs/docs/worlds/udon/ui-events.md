@@ -197,10 +197,8 @@ Please note that input fields are limited to 16.000 characters, which is the max
 * Clear
 * Emit
 * Pause
-* Pause
 * Play
 * Simulate
-* Stop
 * Stop
 * TriggerSubEmitter
 * time

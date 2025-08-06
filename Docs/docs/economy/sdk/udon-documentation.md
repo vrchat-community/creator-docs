@@ -82,7 +82,7 @@ UdonProduct's and IProduct's "Name" & "Description" fields are currently filled 
 The SDK contains methods for interacting with player purchases or VRChat's store pages. These methods can be found under the 'Store' namespace.
 
 ### Store.DoesPlayerOwnProduct
-This method will check if a player owns a certain product.
+This method checks if a player owns a certain product.
 
 **Input**
 - `VRCPlayerApi`: Player that you want to check the product ownership of.
@@ -97,7 +97,7 @@ It is not advised to use this immediately after the "Start" event. Udon may not 
 :::
 
 ### Store.DoesAnyPlayerOwnProduct
-This method will check if any player in the instance owns a certain product.
+This method checks if any player in the instance owns a certain product.
 
 **Input**
 - `UdonProduct` or `IProduct`: Product that you want to check the ownership of.
@@ -106,7 +106,7 @@ This method will check if any player in the instance owns a certain product.
 - `bool`: `true` if any player in the instance owns the product, otherwise `false`.
 
 ### Store.GetPlayersWhoOwnProduct
-This method will get all the players in the instance who own a certain product.
+This method gets all the players in the instance who own a certain product.
 
 **Input**
 - `UdonProduct` or `IProduct`: Product that you want to check the ownership of.
@@ -148,14 +148,14 @@ Before sending or receiving the networked event, this method checks if the playe
 - `UdonProduct` or `IProduct`: Product that you want to use for the event.
 
 ### Store.ListPurchases
-Sends an [OnListPurchases](#onlistpurchases) event to the target UdonBehaviour with an array of all the purchases made by a target player.
+Sends the [OnListPurchases](#onlistpurchases) event to the target UdonBehaviour with an array of all the purchases made by a target player.
 
 **Input**
 - `UdonBehaviour`: Udon Behaviour that will receive the resulting [OnListPurchases](#onlistpurchases) event.
 - `VRCPlayerApi`: Player that you want to check the purchased products from.
 
 ### Store.ListAvailableProducts
-Sends an [OnListAvailableProducts](#onlistavailableproducts) event to the target UdonBehaviour with an array containing all  products used in the world.
+Sends the [OnListAvailableProducts](#onlistavailableproducts) event to the target UdonBehaviour with an array containing all  products used in the world.
 
 **Input**
 - `UdonBehaviour`: An UdonBehaviour that will receive the resulting [OnListAvailableProducts](#onlistavailableproducts) event.
@@ -172,7 +172,7 @@ Sends an [OnListProductOwners](#onlistproductowners) event to the target UdonBeh
 - `UdonProduct`: The UdonProduct for which to retrieve the owner's user names.
 
 ### VRCOpenMenu.OpenAvatarListing
-Opens the detail/purchase screen of an avatar in VRChat's main menu.
+Opens the detail/purchase screen of a published avatar in VRChat's main menu.
 
 **Input**
 - `string`: ID of the avatar (i.e. `avtr_00000000-0000-0000-0000-000000000000`)

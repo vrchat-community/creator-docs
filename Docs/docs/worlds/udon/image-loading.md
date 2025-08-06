@@ -101,7 +101,7 @@ Note that many of these fields will be invalid until the download has completed 
 - **Get Error**: Gets the `VRCImageDownloadError` associated with the event. 
 - **Get Errormessage**: Gets the error message as a `string`.  
 - **Get Material**: Gets the Material sent into the `DownloadImage` function.  
-- **Get Progress**:`Gets the progress of the image download as a`float\` between 0 and 1. Use this to track the progress of the download, i. e. for custom loading bars.
+- **Get Progress**: Gets the progress of the image download as a `float` between 0 and 1. Use this to track the progress of the download, i. e. for custom loading bars.
 - **Get Result**: The `Texture2d` of the downloaded image.  
 - **Get SizeInMemoryBytes**: Gets the size of the texture in bytes as an `int`. 
 - **Get State**: Gets the `VRCImageDownloadState` indicating the state of the image download.  

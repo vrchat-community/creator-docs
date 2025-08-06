@@ -34,17 +34,15 @@ The video below explains how to use the Creator Economy and group stores. To lea
     <iframe src="https://www.youtube.com/embed/NuRPDYrYhSM?si=NZblzqFKR7r1OG0E" title="VRChat Creator Companion" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
-## Step 1 - Open Marketplace
+## Step 1 - Open My Store
 
-Open [VRChat.com](https://vrchat.com/home), go to the [Marketplace](https://vrchat.com/home/marketplace/) tab in the left-hand sidebar, and open your [Storefront](https://vrchat.com/home/marketplace/storefront).
+Open [VRChat.com](https://vrchat.com/home), go to the [My Store](https://vrchat.com/home/marketplace/) tab in the left-hand sidebar, and open your [Storefront](https://vrchat.com/home/marketplace/storefront).
 
 ![Marketplace](/img/economy/GettingStarted-Marketplace.png "Navigate to the Storefront Tab")
 
 ## Step 2 - Get Started
 
 Click **Get Started with Tilia**.
-
-![Review Tilia TOS](/img/economy/GettingStarted-Storefront-ReviewTiliaTOS.png "Click here to Review Tilia's terms")
 
 ## Step 3 - Verify Identity
 
@@ -77,3 +75,5 @@ Once you've been accepted, the **Storefront** page will now show that you are **
 ![Now Authorized](/img/economy/GettingStarted-Storefront-Authorized.png "Authorized to sell in VRChat")
 
 You're now ready to create [products](./products), [subscriptions](./subscriptions), [listings](./listings), and [stores](./store)!
+
+Once you've earned enough credits, you can [pay out] your earnings and connect your PayPal account. 

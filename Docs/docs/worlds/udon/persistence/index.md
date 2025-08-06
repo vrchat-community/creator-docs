@@ -12,7 +12,7 @@ Persistence also includes [PlayerObjects](/worlds/udon/persistence/player-object
 
 ## Examples of using Persistence
 
-You can find all our [Persistence Examples here](/worlds/examples/persistence).
+Browse our [Persistence Examples](/worlds/examples/persistence) to try Persistence in Unity. All examples are available in [Example Central](https://creators.vrchat.com/sdk/example-central/).
 
 ## Persistent User Data
 

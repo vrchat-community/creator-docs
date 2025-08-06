@@ -12,7 +12,7 @@ The simplest way to install the latest Unity version is with the [Creator Compan
 
 Alternatively, if you have Unity Hub installed, you can <UnityVersionedLink url="unityhub://<VERSION>">click this link</UnityVersionedLink> to install the correct version of Unity. <CurrentUnityVersion/> is also available in the [Unity editor release archive](https://unity.com/releases/editor/archive).
 
-In the installation screen, choose "Android Build Support" if you'd like to be able to create worlds or avatars for Android or Quest.
+In the installation screen, choose "iOS Build Support" and "Android Build Support" if you'd like to be able to create worlds or avatars for iOS, Android, and Quest.
 
 For instructions on how to upgrade from Unity 2019, [visit our Unity 2019 to 2022 documentation](/sdk/upgrade/unity-2022).
 

@@ -24,25 +24,20 @@ Try designing your scripts in ways that reduce the amount of networking required
 
 ### Continuous synchronization
 
-Continuous synchronization is intended for data that changes frequently and where intermediary values don't matter, like the position of an erratically moving transform. VRChat will perform intermediary value approximation to recover lost data, and will attempt to optimize network data for continuous synchronization.
+Continuous synchronization is intended for data that changes frequently and where intermediary values don't matter, like the position of an erratically moving transform. VRChat performs intermediary value approximation to recover lost data, and will attempt to optimize network data for continuous synchronization.
 
 Continuous sync is limited to roughly 200 bytes per serialization.
 
 ### Manual synchronization
 
-Manual synchronization is good for variables that are updated frequently, but quickly. It is intended for data that changes infrequently and where intermediary values matter; like the positions of pieces on a chess board.
+Manual synchronization is good for variables that update infrequently, but quickly, and where intermediary values matter. For example, positions of pieces on a chess board should be synced manually.
 
 Each manually-synced object is rate limited as a factor of the data size. The more it sends, the more its send rate is limited. Scripts can call RequestSerialization as often as they want, but Udon will wait until enough time has passed before calling OnPreSerialization, sending the data, and calling OnPostSerialization with the result.
 
 Manual sync is limited to **280,496 bytes** per serialization.
 
 ## Synced Variables
-These variables and their arrays are available for syncing across the network.
-
-:::caution Array Sync
-
-When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/worlds/udon/networking/network-components#onpostserialization) node
-:::
+These variables are available for syncing across the network.
 
 :::note
 In the lists below, 'size' refers to the **approximate** size in memory. When networked, the data is serialized, which may lead to more data being transmitted. For example, syncing a `bool` will send **at least** 1 byte of data (instead of 1 bit) in addition to any networking overhead.
