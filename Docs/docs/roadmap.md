@@ -5,7 +5,7 @@ sidebar_position: 100
 
 This page gives you an overview of upcoming changes to the VRChat Worlds and Avatars SDK.
 
-:::note Last updated: November 21, 2024
+:::note Last updated: Aug 5, 2025
 
 This page may be out of date. For the latest information, visit VRChat's [feedback board](https://feedback.vrchat.com/),  [forum](https://ask.vrchat.com/c/official/31), and [SDK release notes](/releases/).
 
