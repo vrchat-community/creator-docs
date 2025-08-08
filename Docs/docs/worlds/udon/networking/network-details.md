@@ -87,9 +87,17 @@ To find out how many bytes of serialized data were, use `byteCount` in the [`OnP
 | [VRCUrl](#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |
 
 
----
+### Multiple UdonBehaviours
+
 
 If you have multiple UdonBehaviours on an object, the sync method will default to the most restrictive settings - a Manual UdonBehaviour and a Continuous one on the same object will both act as manual.
+
+### Syncing arrays
+
+
+When syncing behaviours with synced array variables on them - make sure to always initialize those arrays to some value, e.g. an empty array. If any of the synced arrays are left uninitialized - the behaviour will not sync! You can check the serialization success via the [OnPostSerialization](/worlds/udon/networking/network-components#onpostserialization) node.
+
+
 
 ### Prioritization of visible objects
 
