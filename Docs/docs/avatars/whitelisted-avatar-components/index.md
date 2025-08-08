@@ -35,7 +35,7 @@ The Android version of VRChat has [additional restrictions](/platforms/android/q
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AimConstraint.html">AimConstraint</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animation.html">Animation</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Animator.html">Animator</UnityVersionedLink>
-- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AudioSource.html">AudioSource</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AudioSource.html">AudioSource</UnityVersionedLink> (See also [the VRCSpatialAudioSource component notes](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars))
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Camera.html">Camera</UnityVersionedLink> (See [notes below](#cameras-on-avatars))
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-Cloth.html">Cloth</UnityVersionedLink>
 - <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/CollidersOverview.html">Collider</UnityVersionedLink>
