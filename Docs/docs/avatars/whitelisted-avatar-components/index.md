@@ -71,9 +71,9 @@ For avatars worn by the local user, Camera components are fully whitelisted. For
 
 VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
 
-We do not directly support or test custom FinalIK implementations on avatars. However, they *should* work fine, and if we must intentionally break one or more of these, we will try our best to inform creators. 
+We do not directly support or test custom FinalIK implementations on avatars. However, they *should* work fine, and if we must intentionally break one or more of these, we will try our best to inform creators. If you discover a bug, please [let us know](https://feedback.vrchat.com).
 
-If you discover a bug, please [let us know](https://feedback.vrchat.com).
+Avatars are allowed a maximum of 80 FinalIK components, any additional components will be removed.
 
 - [Aim IK](http://www.root-motion.com/finalikdox/html/page1.html)
 - [Biped IK](http://www.root-motion.com/finalikdox/html/page4.html)
