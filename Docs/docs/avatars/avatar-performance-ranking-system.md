@@ -148,7 +148,7 @@ The table below describes the requirements for PC avatars to receive a certain p
 
 On PC, the default Minimum Displayed Performance Rank level is "Very Poor". This means that users can see most avatars by default. If you a user enables the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system, they can choose to hide avatars with poor performance.
 
-However, if your avatar is extremely unoptimized, VRChat may prevent you from using it. You can fix this my improving its performance rank, ensuring that it doesn't exceed VRChat's [avatar size limits](/avatars/avatar-size-limits), and then reuploading the avatar.
+However, if your avatar is extremely unoptimized, VRChat may prevent you from using it. You can fix this by improving its performance rank, ensuring that it doesn't exceed VRChat's [avatar size limits](/avatars/avatar-size-limits), and then reuploading the avatar.
 
 ## Mobile Limits
 
