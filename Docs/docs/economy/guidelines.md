@@ -29,6 +29,7 @@ All Creator Economy content must follow the rules below.
 	2. Content should avoid engaging in [Dark Patterns](https://en.wikipedia.org/wiki/Dark_pattern) (or Deceptive Design Patterns) such as misdirection, bait-and-switching, and others.
 	3. Content must avoid false advertising and not misrepresent the content or prices of listings and subscriptions. Names, tags, descriptions, acknowledgements, images, and previews used should not be misleading. Keep in mind that if your content looks very different in VRChat than in the images you've used to showcase it, buyers may be disappointed.
 	4. Listings containing different types of products should make it clear where those products can be used. For example, if you are selling a bundle containing [avatar products](/economy/products/avatar) *and* [Udon products](/economy/products/udon), ensure the buyer understands that while they can use the avatars anywhere, the Udon Products can only be used in specific world(s).
+	5. If your content's capabilities differ between platforms, you must disclose this to buyers. For example, if some features are PC-exclusive, explain it in the product description.
 4. If feature parity exists, the Creator Economy should be used in addition to any off-platform monetization methods.
 	1. For example, if perks or benefits for a VRChat world are sold through an off-platform subscription service, then those perks should also, when possible, be available for purchase in the Creator Economy.
 	2. Don't price your external offering to drive VRChat users off-platform.
@@ -49,7 +50,7 @@ All Creator Economy content must follow the rules below.
 1. Worlds cannot promote lotteries, raffles, or other "games of chance" involving real currency.
 	1. Any systems integrating with real-world currency in methods of gambling, casino-style events, or with real-world benefits are strictly forbidden.
 2. You cannot give a user a strictly negative experience in your world without having made a purchase.
-	1. For example, don't drop users into a hole if they haven't paid. All users should have a comfortable experience when entering your world.
+	1. For example, you may block access to paid content in your world, but you must clarify why they don't have access and/or allow them to buy access.
 3. Your [instant](/economy/listings#instant) listings, [temporary](/economy/listings#temporary) listings, and [subscriptions](/economy/subscriptions) may not be priced higher than 10,000<ThemedCreditIcon/>.
 ## Avatars
 1. Your avatar must be optimized and not cause significant performance issues in VRChat.
@@ -88,7 +89,11 @@ The guidelines below clarify what type of content is suitable for the avatar mar
 2. English must be the primary language of all words or characters in your avatar's properties, textures, or expressions menus.  
     - You're permitted to add additional non-English translations (with English equivalents).  
     - For example: The text in your expressions menu must be in English, but you may use icons to provide a Japanese translation.
-
+3. Your avatar's name must start with an alphanumerical character. For example:
+	- ✅Alice - Astronaut
+	- ✅8-Bit Bob!!!
+	- ❌- Alice - Astronaut
+	- ❌!!!8-Bit Bob!!!
 #### Clothing & Appearance
 
 Your avatar must have private areas appropriately covered or presented in a non-sexualized manner.
@@ -123,14 +128,6 @@ Minor horror elements are acceptable, but extreme content should be avoided.
 | **This content may receive less visibility on the marketplace.**[^1] | <ul><li>Unsettling or shadowy designs</li></ul>                                                                                                                                             |
 | **This content is not permitted on the marketplace.**[^1]            | <ul><li>Extreme horror (e.g., mutilation, grotesque imagery, realistic tragic events)</li><li>References to drugs or criminal activity</li><li>References to real-world tragedies</li></ul> |
 
-#### Properties and Metadata  
-  
-Your avatar's properties should follow our [content guidelines](https://hello.vrchat.com/creator-guidelines) and be in English.  
-  
-|                                                                      |                                                                                                                                                                                                                                                                                                               |  
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| **This content is not permitted on the marketplace.**[^1]            | <ul><li>Non-English names or icons in [VRC Expressions Menu](/avatars/expression-menu-and-controls/)</li><li>Avatar properties that violate [public content guidelines](https://hello.vrchat.com/creator-guidelines) (e.g., name, description, acknowledgements, images, etc.)</li></ul> |  
-  
 #### Audio Sources  
   
 Your PC avatars may use audio sources, but they shouldn't be intrusive.  
