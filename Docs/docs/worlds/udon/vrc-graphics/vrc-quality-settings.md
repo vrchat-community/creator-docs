@@ -37,6 +37,13 @@ Once you set a shadow distance using this property, the user's configured "Shado
 
 To disable the override and go back to the user configured shadow distance value, you can call `VRCQualitySettings.ResetShadowDistance()`.
 
+In addition, the following 2 shadow-related properties are accessible as read-write:
+
+- `float shadowCascade2Split`
+- `Vector3 shadowCascade4Split`
+
+All properties are reset on world load.
+
 ## OnChanged Event
 
 When a user changes graphics settings that affect an exposed property, the [OnVRCQualitySettingsChanged](/worlds/udon/graph/event-nodes/#onvrcqualitysettingschanged) event is triggered.

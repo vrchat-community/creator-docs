@@ -64,9 +64,10 @@ Currently exposed as **read-write**:
   - `FarClipPlane` can only be set to `0.1` higher than `NearClipPlane` at the lowest, this will be clamped
   - Adjusting the `FarClipPlane` may also adjust the `NearClipPlane` if the user has "Forced Camera Near Distance" set to "Dynamic"
 - `bool AllowHDR`: If the camera will submit HDR values to the render target
-- `DepthTextureMode DepthTextureMode`: Can be used to enable camera depth texture rendering, which is useful for certain shader effects. This can be used instead of a realtime-light with shadows enabled to force a camera depth texture. Note however, that having such a light in your scene will not change the `DepthTextureMode` property, meaning that reading a value of `None` from this property does _not_ mean there is no depth-light in the scene forcing a depth-pass to render regardless.
+- `DepthTextureMode DepthTextureMode`: Can be used to enable camera depth texture rendering, which is useful for certain shader effects. This can be used instead of a realtime-light with shadows enabled to force a camera depth texture. Note however, that having such a light in your scene will not change the `DepthTextureMode` property, meaning that reading a value of `None` from this property does _not_ mean there is no depth-light in the scene forcing a depth-pass to render regardless. The `PhotoCamera` will always have `DepthTextureMode.Depth` enabled, you cannot disable it, but you may add other options additively.
 - `bool UseOcclusionCulling`: Whether or not the Camera will use occlusion culling during rendering. Defaults to `true`, but will only have an effect if your world has baked occlusion data.
 - `bool AllowMSAA`: Disable all MSAA (anti-aliasing) on this camera if set to `false`, regardless of user settings. Defaults to `true`, where it will use the user's graphics settings.
+- `LayerMask CullingMask`: Set the layers to be rendered by the main camera. The setter for this property will throw an exception on anything but `ScreenCamera`. Any `reserved` [layer](/worlds/layers), `MirrorReflection` and `InternalUI` cannot be changed. Note that `InternalUI` may read 0 even if it is visible on some platforms, due to camera stacking.
 - `CameraClearFlags ClearFlags`: Sets the background clear mode used when rendering this camera.
   - `Color BackgroundColor`: The color to use when `ClearFlags` is set to `SolidColor`.
 - `bool LayerCullSpherical`: ~~See <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Camera-layerCullSpherical.html">Unity Docs</UnityVersionedLink>.~~ This API is currently disabled in Udon as it causes UI culling issues. Setting it is a no-op.
@@ -98,8 +99,15 @@ The `CameraMode` property is available on the `ScreenCamera` and `PhotoCamera`.
 
 Mostly useful for VR users, 2 static functions are exposed on `VRCCameraSettings`:
 
-* `Vector3 GetEyePosition(Camera.StereoscopicEye eye)`: Returns the specified eye's world space position. Equivalent to `ScreenCamera.Position` for non-VR users.
-* `Quaternion GetEyeRotation(Camera.StereoscopicEye eye)`: Returns the specified eye's world space rotation. Equivalent to `ScreenCamera.Rotation` for non-VR users.
+- `Vector3 GetEyePosition(Camera.StereoscopicEye eye)`: Returns the specified eye's world space position. Equivalent to `ScreenCamera.Position` for non-VR users.
+- `Quaternion GetEyeRotation(Camera.StereoscopicEye eye)`: Returns the specified eye's world space rotation. Equivalent to `ScreenCamera.Rotation` for non-VR users.
+
+In addition, one general use function exists:
+
+- `void GetCurrentCamera(out VRCCameraSettings internalComponent, out Camera externalComponent)`: This is a replacement for <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/ScriptReference/Camera-current.html">Camera.current</UnityVersionedLink>, which is only populated during rendering events. 
+    - When a known internal camera is rendering, `internalComponent` will contain `VRCCameraSettings.ScreenCamera` or `VRCCameraSettings.PhotoCamera` and `externalComponent` will be `null`. 
+    - When a custom camera in your world is rendering, `internalComponent` will be `null` and `externalComponent` will contain the `UnityEngine.Camera` component. 
+    - Both results will be `null` when `Camera.current` is `null`, _or_ when a camera is rendering that Udon does not have access to (e.g. a `UnityEngine.Camera` on an avatar). ⚠️ Even without any avatar cameras, this function may at any time return `null` for both results, even during render events. This is because VRChat uses some internal render steps, e.g. for built-in menus. Make sure to handle this case in your Udon scripts!
 
 ## OnChanged Event
 

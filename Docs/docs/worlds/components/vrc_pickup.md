@@ -7,6 +7,20 @@ updatedAt: "2023-05-04T21:43:45.162Z"
 ---
 Allows objects to be picked up, held and used by players.
 
+## Versions
+
+![Pickup Version Dropdown in Inspector](/img/worlds/components/pickup_version.png)
+
+You can now select the version of VRCPickup you would like to use directly on the component. By default the latest version will be chosen when creating a new component. Existing pickups will continue to use their previous version unless they are updated and their world re-uploaded.
+
+Version 1.0:
+
+The base version of the VRCPickup component.
+
+Version 1.1:
+
+The Auto Hold property has been simplified to a checkbox - if checked, the item will attach the player's hand when they first perform a "grab" action, and drop when they perform a second "grab" (or use a "drop" action they've mapped to their controller). If unchecked, the item will be dropped as soon as the initial grab is released.
+
 ## Proximity Rules
 
 :::note
@@ -39,7 +53,7 @@ There are 2 mechanisms of grabbing where the Proximity value will be in play:
 | Exact Grip                       | The position object will be held if set to Exact Grip. |
 | Allow Manipulation When Equipped | Should the user be able to manipulate the pickup while the pickup is held if using a controller? |
 | Orientation                      | What way the object will be held. |
-| Auto Hold                        | Should the pickup remain in the user's hand after they let go of the grab button.<br />- Auto Detect: Automatically detects what to do<br />- Yes: After the grab button is released the pickup remains in the hand until the drop button is pressed and released<br />- No: After the grab button is released the pickup is let go<br />Note: This only applies to control schemes which lack an independent "Use" input from "Grab", such as Desktop, Vive, and Vive-like input systems. This does not apply to Quest, Quest-like, and other input systems with a defined trigger. |
+| Auto Hold                        | Should the pickup remain in the user's hand after they finish the Grab action?.<br />- Yes: The pickup remains in the user's hand until either the grab or drop actions are triggered.<br />- No: The pickup is released once the initial Grab action is completed. <br /><br />- Sometimes: Like "Yes" above, except it only applies to users using Keyboard, Mouse, Gamepad and Vive Wand inputs. This is an old type which should not be used in most cases.<br />- Auto: Applies the same logic as "Sometimes" but also requires a Gun or Grip defined in order to AutoHold.  This is an old type which should not be used in most cases<br /> |
 | Use Text                         | Text that appears when the user has an object equipped, prompting them to "fire" the object.<br />Requires "Auto Hold" to be set to "Yes". |
 | Throw Velocity Boost Min Speed   | How fast the object needs to move to be thrown. |
 | Throw Velocity Boost Scale       | How much throwing should scale. Higher = faster thrown while lower means slower throw speed. |
