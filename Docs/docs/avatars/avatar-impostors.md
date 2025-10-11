@@ -8,7 +8,7 @@ hidden: false
 ## What are Impostors?
 Impostors are avatar body doubles, allowing you to see avatars in situations where you would typically see a fallback avatar or robot. They are intended to bridge gaps between different systems/user types in VRChat. For example, if a user’s avatar was only uploaded for Windows, VRChat makes an acceptable impostor for Quest automatically. You can only generate impostors for avatars you own and have uploaded.
 
-Even if you've never uploaded a cross-platform version of your avatar, or if your avatar is "performance blocked" due to its performance rank, other users will still be able to see an impostor of your avatar. Eventually, impostors will be auto-generated, but for now, you create them with a few easy steps. Once you've made an impostor, you can toggle it on and off - when it's off, your fallback avatar will be shown instead.
+Even if you've never uploaded a cross-platform version of your avatar, or if your avatar is "performance blocked" due to its performance rank, other users will still be able to see an impostor of your avatar. Impostors are auto-generated, but still, you can recreate them with a few easy steps. Once you've made an impostor, you can toggle it on and off - when it's off, your fallback avatar will be shown instead.
 
 ## How do I create an Impostor?
 The first step to creating an impostor is to [create and upload an avatar](/avatars/creating-your-first-avatar).
