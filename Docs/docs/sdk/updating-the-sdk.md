@@ -16,6 +16,9 @@ Keeping your SDK up to date is extremely easy with the VCC. See the [VRChat Crea
 If you want to learn how to migrate your project to use the VCC, check out the guide [here](https://vcc.docs.vrchat.com/vpm/migrating).
 
 ## Manual Updates
+:::danger You don't need these if you use the Creator Companion
+Do not import these VCC Compatible Packages into projects which have a legacy VRChat SDK already. That will cause your projects to break. Use the [VRChat Creator Companion](https://vrchat.com/download/vcc) or[ALCOM (thirdparty tools)](https://vrc-get.anatawa12.com/ja/alcom/) to migrate.
+
 If you're using the VCC, you don't need to worry about manual updates.
 However, if you wish to, you can download the SDK on the [VRChat website](https://vrchat.com/home/download) after signing into your VRChat account.
 
