@@ -82,3 +82,7 @@ public void ToggleDoor()
 ## Handling Late Joiners with Variables
 
 Make sure to learn about how to sync variables for [late joiners](/worlds/udon/networking/late-joiners)!
+
+## Handling Network Compatibility
+
+Be certain to review how [network compatibility](/worlds/udon/networking/compatibility) is determined for worlds across platform variants and release versions.
