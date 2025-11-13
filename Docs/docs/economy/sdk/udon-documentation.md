@@ -139,6 +139,20 @@ You can open any of your activated listings, even if you didn't add it to your g
 **Input**
 - `string`: ID of the listing (i.e. `prod_00000000-0000-0000-0000-000000000000`)
 
+### Store.OpenMarketplaceStore
+Opens a section of the marketplace store in the VRChat main menu, optionally opening the details page of a [listing](/economy/listings) within that section.
+
+For group or world stores, you can open any published listing if you also specify the group ID or world ID associated with any [store](/economy/store) that contains your listing.
+
+**Input**
+- `string`: Marketplace section that you want to open to.
+  - `vrchat` opens the "Exclusive" section.
+  - `avatar` opens the "Avatars" section.
+  - `world` opens the "World Stores" section.
+  - `group` opens the "Group Stores" section.
+- `string`: ID of the listing (i.e. `prod_00000000-0000-0000-0000-000000000000`) to open. If you provide an empty string, only the specified store section opens.
+- `string` (Optional): Context for the listing (group ID or world ID) - only needed for opening a listing within a group or world store (i.e., `grp_00000000-0000-0000-0000 000000000000` or `wrld_00000000-0000-0000-0000 000000000000`).
+
 ### Store.SendProductEvent
 Sends the [OnProductEvent](#onproductevent) event to all players in the instance on the target UdonBehaviour.
 Before sending or receiving the networked event, this method checks if the player using `SendProductEvent` has purchased the product.
