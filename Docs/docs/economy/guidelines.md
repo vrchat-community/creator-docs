@@ -61,13 +61,15 @@ All Creator Economy content must follow the rules below.
 	2. If your avatar uses [expression menus](/avatars/expression-menu-and-controls/) or [components](/avatars/avatar-dynamics/), avoid technical issues or bugs.
 3. In general, your avatar's updates should be limited to bug fixes, performance improvements, and new/improved features.
 	1.  If you want to visibly and materially change a base avatar that has already been purchased, please contact us to discuss it. We may adjust this policy in the future.
-4. Your avatar should not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
+4. Your avatar must not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
 	1. For example: You may use GoGo Loco, but not GoGo Flight.
-5.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
+5. Your avatar must not allow users to hide from other users by becoming invisible.
+	1. For example: Do not make it impossible for other players to find your avatar in a hide-and-seek game.
+6.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
 	1. If your listing contains two different avatars, it must cost at least 2,400<ThemedCreditIcon/> (1,200 <ThemedCreditIcon/> × 2).
 	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 1,200<ThemedCreditIcon/>.
 	3. If your listing contains a single avatar, it must cost at least 1,200<ThemedCreditIcon/>.
-6. Your avatar must follow the avatar content guidelines below.
+7. Your avatar must follow the avatar content guidelines below.
 	1. If your listing contains avatar products and Udon products, ensure that the Udon product is also consistent with the content guidelines below.
 
 :::info
