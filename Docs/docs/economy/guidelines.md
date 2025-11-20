@@ -64,7 +64,7 @@ All Creator Economy content must follow the rules below.
 4. Your avatar must not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
 	1. For example: You may use GoGo Loco, but not GoGo Flight.
 5. Your avatar must not allow users to hide from other users by becoming invisible.
-	1: For example: Do not make it impossible for other players to find your avatar in a hide-and-seek game.
+	1. For example: Do not make it impossible for other players to find your avatar in a hide-and-seek game.
 6.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
 	1. If your listing contains two different avatars, it must cost at least 2,400<ThemedCreditIcon/> (1,200 <ThemedCreditIcon/> × 2).
 	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 1,200<ThemedCreditIcon/>.
