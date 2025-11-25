@@ -20,9 +20,9 @@ This release went to beta as version `3.7.7`.
 - Improved the content ownership confirmation flow during uploads.
     - The old checkbox was removed in favor of a modal.
     - The modal only appears once per Unity Editor session and content ID.
-- Includes [PhysBone](/avatars/avatar-dynamics/physbones/) dependency sorting as introduced in VRChat client version `2025.1.3`.
+- Includes [PhysBone](/common-components/physbones/) dependency sorting as introduced in VRChat client version `2025.1.3`.
     - PhysBones and PhysBone Colliders now execute in deterministic order depending on their transform relationships with other Physbones. There is a maximum dependency depth of 8 levels deep.
-- Added an `ignoreOtherPhysBones` option to [PhysBone](/avatars/avatar-dynamics/physbones/) components.
+- Added an `ignoreOtherPhysBones` option to [PhysBone](/common-components/physbones/) components.
     - If you enable this option, the Physbone will ignore other Physbones and their affected transforms beneath itself in the scene hierarchy.
     - You should avoid disabling this option. Controlling the same Transform with multiple Physbones may lead to unsupported behaviour.
     - This option is enabled by default. For compatibility, it is disabled for existing avatars.

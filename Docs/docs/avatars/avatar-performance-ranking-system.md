@@ -78,9 +78,9 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | PhysBones Affected Transforms      | The total number of transforms affected by PhysBones components on the avatar.                                                                                                                                                                                                                                                               |
 | PhysBones Colliders                | The number of PhysBone collider scripts on the avatar.                                                                                                                                                                                                                                                                                       |
 | PhysBones Collision Check Count    | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                                                                 |
-| Avatar Dynamics Contacts           | The number of Avatar Dynamics Contacts on the avatar. Does not count [receivers](/avatars/avatar-dynamics/contacts/#vrccontactreceiver) with [filtering](/avatars/avatar-dynamics/contacts/#filtering-1) set to "Local Only."                                                                                                                                                                                                              |
-| Constraint Count                   | The total number of VRChat constraints and Unity constraints on the avatar. [Click here for more detailed info.](/avatars/avatar-dynamics/constraints#performance) |
-| Constraint Depth                   | The deepest chain of dependencies across all constraints on the avatar. [Click here for more detailed info.](/avatars/avatar-dynamics/constraints#performance) |
+| Contacts                           | The number of Contacts on the avatar. Does not count [receivers](/common-components/contacts/#vrccontactreceiver) with [filtering](/common-components/contacts/#filtering-1) set to "Local Only."                                                                                                                                            |
+| Constraint Count                   | The total number of VRChat constraints and Unity constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance) |
+| Constraint Depth                   | The deepest chain of dependencies across all constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance) |
 | Animators                          | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators.                                                                                                                               |
 | Bones                              | The number of Bones in the avatar's rig.                                                                                                                                                                                                                                                                                                     |
 | Lights                             | The number of Light components on the avatar.                                                                                                                                                                                                                                                                                                |
@@ -118,13 +118,13 @@ The SDK warns you of this and will require that you fix it before you upload.
 | Skinned Meshes                                                         | 1                  | 2            | 8            | 16           |
 | Basic Meshes                                                           | 4                  | 8            | 16           | 24           |
 | Material Slots                                                         | 4                  | 8            | 16           | 32           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components             | 4                  | 8            | 16           | 32           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms    | 16                 | 64           | 128          | 256          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders              | 4                  | 8            | 16           | 32           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count  | 32                 | 128          | 256          | 512          |
-| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)          | 8                  | 16           | 24           | 32           |
-| [Constraint](/avatars/avatar-dynamics/constraints) Count               | 100                | 250          | 300          | 350          |
-| [Constraint](/avatars/avatar-dynamics/constraints) Depth               | 20                 | 50           | 80           | 100          |
+| [PhysBones](/common-components/physbones) Components             | 4                  | 8            | 16           | 32           |
+| [PhysBones](/common-components/physbones) Affected Transforms    | 16                 | 64           | 128          | 256          |
+| [PhysBones](/common-components/physbones) Colliders              | 4                  | 8            | 16           | 32           |
+| [PhysBones](/common-components/physbones) Collision Check Count  | 32                 | 128          | 256          | 512          |
+| [Contacts](/common-components/contacts)                          | 8                  | 16           | 24           | 32           |
+| [Constraint](/common-components/constraints) Count               | 100                | 250          | 300          | 350          |
+| [Constraint](/common-components/constraints) Depth               | 20                 | 50           | 80           | 100          |
 | Animators                                                              | 1                  | 4            | 16           | 32           |
 | Bones                                                                  | 75                 | 150          | 256          | 400          |
 | Lights                                                                 | 0                  | 0            | 0            | 1            |
@@ -166,13 +166,13 @@ The table below describes the requirements for mobile avatar to receive a certai
 | Material Slots                                                            | 1                  | 1            | 2            | 4            |
 | Animators                                                                 | 1                  | 1            | 1            | 2            |
 | Bones                                                                     | 75                 | 90           | 150          | 150          |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
-| [PhysBones](/avatars/avatar-dynamics/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
-| Avatar Dynamics [Contacts](/avatars/avatar-dynamics/contacts)[^2]         | 2                  | 4            | 8            | 16           |
-| [Constraint](/avatars/avatar-dynamics/constraints) Count[^2]              | 30                 | 60           | 120          | 150          |
-| [Constraint](/avatars/avatar-dynamics/constraints) Depth[^2]              | 5                  | 15           | 35           | 50           |
+| [PhysBones](/common-components/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
+| [PhysBones](/common-components/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
+| [PhysBones](/common-components/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
+| [PhysBones](/common-components/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
+| [Contacts](/common-components/contacts)[^2]                        | 2                  | 4            | 8            | 16           |
+| [Constraint](/common-components/constraints) Count[^2]              | 30                 | 60           | 120          | 150          |
+| [Constraint](/common-components/constraints) Depth[^2]              | 5                  | 15           | 35           | 50           |
 | Particle Systems                                                          | 0                  | 0            | 0            | 2            |
 | Total Particles Active                                                    | 0                  | 0            | 0            | 200          |
 | Mesh Particle Active Polys                                                | 0                  | 0            | 0            | 400          |
@@ -183,7 +183,7 @@ The table below describes the requirements for mobile avatar to receive a certai
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
-[^2]: If the Very Poor value is exceeded on mobile, no matter the current "Show Avatar" state of the avatar, all Avatar Dynamics-related components will be removed.
+[^2]: If the Very Poor value is exceeded on mobile, no matter the current "Show Avatar" state of the avatar, all [PhysBones](/common-components/physbones), [Contacts](/common-components/contacts) and [VRChat Constraints](/common-components/constraints) on the avatar will be removed.
 
 ### Mobile Default Performance Rank Blocking
 On mobile, The Minimum Displayed Performance Rank is "Medium" by default. This means users can't see any avatars ranked as "Poor" or "Very Poor".
@@ -199,15 +199,15 @@ In the future, VRChat may remove "Very Poor" mobile avatars and the ability to u
 
 ### Mobile Avatar Component Limits
 
-Some [avatar components](/avatars/avatar-dynamics) are limited on mobile avatars. You cannot exceed the following limits:
+Some [avatar components](/avatars/avatar-components) are limited on mobile avatars. You cannot exceed the following limits:
 
-- 8 [PhysBone](/avatars/avatar-dynamics/physbones) components
-- 64 [PhysBones](/avatars/avatar-dynamics/physbones) affected transforms
-- 16 [PhysBones](/avatars/avatar-dynamics/physbones) colliders
-- 64 [PhysBones](/avatars/avatar-dynamics/physbones) collider checks
-- 16 [Avatar Dynamics Contacts](/avatars/avatar-dynamics/contacts) 
-- 150 [Constraint](/avatars/avatar-dynamics/constraints) components
-- A dependency depth of 50 [Constraints](/avatars/avatar-dynamics/constraints)
+- 8 [PhysBone](/common-components/physbones) components
+- 64 [PhysBones](/common-components/physbones) affected transforms
+- 16 [PhysBones](/common-components/physbones) colliders
+- 64 [PhysBones](/common-components/physbones) collider checks
+- 16 [Contacts](/common-components/contacts) 
+- 150 [Constraint](/common-components/constraints) components
+- A dependency depth of 50 [Constraints](/common-components/constraints)
 
 You cannot bypass the limits above by using "Show Avatar". If a mobile avatar exceeds a limit, all limited avatar components are removed from the avatar in VRChat, even if you enable "Show Avatar".
 
@@ -262,11 +262,11 @@ On VRChat for mobile devices, the Avatar Performance Rank Block is set to "Mediu
 
 You cannot disable the Avatar Performance Rank Block system on mobile. In other words, avatars that are ranked as "Very Poor" will always have their display managed VRChat for mobile, and may not display at all.
 
-No matter what setting you choose, if the [Avatar Dynamics](/avatars/avatar-dynamics) component limits are exceeded on mobile devices, all of those components will be removed. In short, there is a hard cap for Avatar Dynamics components on mobile avatars.
+No matter what setting you choose, if the [Avatar Component](/avatars/avatar-components) limits are exceeded on mobile devices, all of those components will be removed. In short, there is a hard cap for Avatar Components on mobile avatars.
 
 ### Overriding Individual Avatars
 :::danger
 
 **"Show Avatar" for Very Poor avatars functionality may be removed in the future, and Very Poor avatars may be removed from Android and iOS entirely.** Please keep this in mind when creating avatars for VRChat on mobile devices.
 :::
-You can choose to override the the entirety of the system (and the Safety system) by selecting "Show Avatar" on each user you wish to show.
+You can choose to override the entirety of the system (and the Safety system) by selecting "Show Avatar" on each user you wish to show.

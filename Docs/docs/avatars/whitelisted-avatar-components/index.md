@@ -19,13 +19,13 @@ The Android version of VRChat has [additional restrictions](/platforms/android/q
 ## VRChat
 
 - VRCAvatarDescriptor
-- [VRCConstraint](/avatars/avatar-dynamics/constraints)
-- [VRCContactReceiver](/avatars/avatar-dynamics/contacts#vrccontactreceiver)
-- [VRCContactSender](/avatars/avatar-dynamics/contacts#vrccontactsender)
-- [VRCHeadChop](/avatars/avatar-dynamics/vrc-headchop)
-- [VRCIKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead.
-- [VRCPhysBone](/avatars/avatar-dynamics/physbones#vrcphysbone)
-- [VRCPhysBoneCollider](/avatars/avatar-dynamics/physbones#vrcphysbonecollider)
+- [VRCConstraint](/common-components/constraints)
+- [VRCContactReceiver](/common-components/contacts#vrccontactreceiver)
+- [VRCContactSender](/common-components/contacts#vrccontactsender)
+- [VRCHeadChop](/avatars/avatar-components/vrc-headchop)
+- [VRCIKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated! You should use [VRChat Constraints](/common-components/constraints) instead.
+- [VRCPhysBone](/common-components/physbones#vrcphysbone)
+- [VRCPhysBoneCollider](/common-components/physbones#vrcphysbonecollider)
 - [VRCPipelineManager](/sdk/vrcpipelinemanager/)
 - [VRCSpatialAudioSource](/worlds/components/vrc_spatialaudiosource#spatial-audio-on-avatars)
 - [VRCStation](/worlds/components/vrc_station)
@@ -92,7 +92,7 @@ Avatars are allowed a maximum of 80 FinalIK components, any additional component
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 :::danger Dynamic Bone Deprecated
 
-Support for Dynamic Bone is deprecated. You should use [PhysBones](/avatars/avatar-dynamics/physbones) instead.
+Support for Dynamic Bone is deprecated. You should use [PhysBones](/common-components/physbones) instead.
   
 :::
 

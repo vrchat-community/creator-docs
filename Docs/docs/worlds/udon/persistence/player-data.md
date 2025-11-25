@@ -34,7 +34,10 @@ When you change **any** data for the local player, **all** of their PlayerData i
 | Event | Output | Notes |
 | -------- | -------- | -------- |
 | OnPlayerDataUpdated | VRCPlayerApi player, PlayerData.Info[] infos | Triggered at the end of the frame if the PlayerData of any player has changed or been received.<br/>Provides the VRCPlayerApi of the player associated with that data, along with an array of information on all the keys in that data. The information in the array includes both the keys used for the data and the state of that data, such as whether it was changed, added, or unchanged. |
-| [OnPlayerRestored](/worlds/udon/graph/event-nodes#onplayerrestored) | VRCPlayerApi player | Triggered after a VRChat player's persistent data has been loaded.
+| [OnPlayerRestored](/worlds/udon/graph/event-nodes#onplayerrestored) | VRCPlayerApi player | Triggered after a VRChat player's persistent data has been loaded. |
+| [OnPersistenceUsageUpdated](/worlds/udon/graph/event-nodes#onpersistenceusageupdated) | VRCPlayerApi player | Triggered when a VRChat player's persistence usage has been updated. |
+| [OnPlayerDataStorageExceeded](/worlds/udon/graph/event-nodes#onplayerdatastorageexceeded) | VRCPlayerApi player | Triggered when a VRChat player's Player Data usage has exceeded allowed storage limits. |
+| [OnPlayerDataStorageWarning](/worlds/udon/graph/event-nodes#onplayerdatastoragewarning) | VRCPlayerApi player | Triggered when a VRChat player's Player Data usage is nearing allowed storage limits. |
 
 :::info Watch out for timing issues
 
@@ -71,6 +74,18 @@ The `State` enum describes these possible states:
 * Iterating through all Player Keys can be slow if you have many of them. As a general guideline, use the `TryGet` methods to directly check the values of specific keys if you're only checking a few keys or you have more than ten keys to check through.
 
 ## Methods
+
+### Storage Information
+
+Player Data Storage information methods are in the `VRC.SDKBase.Networking` namespace, alongside the Player Object Storage information methods.
+
+| Function | Input | Output | Notes |
+| -------- | -------- | -------- | ------- |
+| GetPlayerDataStorageLimit | | int | Returns the Player Data Storage limit for Player Datas, in bytes. |
+| GetPlayerDataStorageUsage | VRCPlayerApi target | int | Returns the last computed Player Data Storage usage for the target player. |
+| RequestStorageUsageUpdate | | void | Requests calculation of the local player’s PlayerData and PlayerObject storage usage; results arrive via OnPersistenceUsageUpdated |
+
+Note that storage information may become stale over time and may require updating. Please avoid frequently calling RequestStorageUsageUpdate.
 
 ### Queries
 

@@ -7,7 +7,7 @@ tags: [release]
 ---
 ## Summary
 
-This update fixes multiple issues with [VRChat Constraints](/avatars/avatar-dynamics/constraints).
+This update fixes multiple issues with [VRChat Constraints](/common-components/constraints).
 
 <!-- truncate -->
 
@@ -18,7 +18,7 @@ This update fixes multiple issues with [VRChat Constraints](/avatars/avatar-dyna
 
 ## Fixes & Changes
 
-- Improved [Physbone](/avatars/avatar-dynamics/physbones) and [Contact](/avatars/avatar-dynamics/contacts) behavior when used beneath [VRChat Constraints](/avatars/avatar-dynamics/constraints) to reduce jittering.
+- Improved [Physbone](/common-components/physbones) and [Contact](/common-components/contacts) behavior when used beneath [VRChat Constraints](/common-components/constraints) to reduce jittering.
     - They sort their internal execution orders properly within a frame now.
 - Fixed a case where toggled constraints could misbehave when three or more constraints are used on the same GameObject at once.
 - Fixed the "Activate" and "Zero" functions of VRChat Constraints not applying as overrides to prefab instances.
@@ -27,8 +27,8 @@ This update fixes multiple issues with [VRChat Constraints](/avatars/avatar-dyna
 - Fixed constraints applying incorrect positions when the target transform is scaled to zero in any axis.
 - Fixed constraints sometimes having their position or rotation shifted by a tiny amount every frame under certain conditions when they should be staying still.
     - This should make it easier to work with prefabs containing constraints.
-- [Physbone](/avatars/avatar-dynamics/physbones) stats now recalculate properly when reloading a scene or switching platform.
-- Fixed [Physbone](/avatars/avatar-dynamics/physbones) jitter by including fixes from client release [2024.3.3](https://docs.vrchat.com/docs/vrchat-202433).
+- [Physbone](/common-components/physbones) stats now recalculate properly when reloading a scene or switching platform.
+- Fixed [Physbone](/common-components/physbones) jitter by including fixes from client release [2024.3.3](https://docs.vrchat.com/docs/vrchat-202433).
 - Fixed "Avatar Options" incorrectly being shown twice in the Settings tab of the SDK Control Panel.
 - Fixed `com.unity.ugui` missing as a dependency of the Worlds SDK, addressing [this Canny request](https://feedback.vrchat.com/sdk-bug-reports/p/vrcsdk-packagejson-is-missing-dependency-on-unity-ui).
 - Added a new "ExampleData" type to the SDK, which will be used to hold metadata for Examples in the future.

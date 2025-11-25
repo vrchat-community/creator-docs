@@ -58,7 +58,7 @@ In the client, all constraints will be auto-converted on load, but it is still r
 
 VRChat Constraints are supported on Mobile avatars! Check out our updated [performance rank page](/avatars/avatar-performance-ranking-system) for limits.
 
-VRChat Constraints also have a few unique features, like native "world constraints". Go check out [the extensive documentation](/avatars/avatar-dynamics/constraints/) for more info!
+VRChat Constraints also have a few unique features, like native "world constraints". Go check out [the extensive documentation](/common-components/constraints/) for more info!
 
 ## Fixes
 
@@ -97,11 +97,11 @@ This supercedes the `3.6.2` series.
 - Fixed constraint sources losing their references when selecting multiple VRChat constraints and editing their sources lists at the same time.
 
 - Improved support for community made tools interacting with the constraints auto-converter in the SDK.
-    - Please refer to [our documentation](/avatars/avatar-dynamics/constraints/#editor-tooling-info) for more info.
+    - Please refer to [our documentation](/common-components/constraints/#editor-tooling-info) for more info.
 
 ## Fixes & Changes in the final version
 
-- Further adjustments to the exposed API for constraints. Refer to the [constraints documentation](/avatars/avatar-dynamics/constraints/#editor-tooling-info) for more info.
+- Further adjustments to the exposed API for constraints. Refer to the [constraints documentation](/common-components/constraints/#editor-tooling-info) for more info.
     - This includes a parameter to indicate if a conversion was triggered by clicking "Auto-Fix".
 - Improved parameter assignment for submenus in the expression menu editor.
 - Fixed incorrect LFS references in .dylib files.

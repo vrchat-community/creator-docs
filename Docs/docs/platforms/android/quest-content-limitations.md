@@ -44,7 +44,7 @@ The following components are not supported on Android or Quest and will not work
 
 | Shader Name                | Shader Description |
 | :-- | :-- |
-| Dynamic Bones              | Completely disabled on Android and Quest. Use [PhysBones](/avatars/avatar-dynamics/physbones) instead!! |
+| Dynamic Bones              | Completely disabled on Android and Quest. Use [PhysBones](/common-components/physbones) instead!! |
 | Cloth                      | Completely disabled on Android and Quest. |
 | Cameras                    | Completely disabled for avatars on Android and Quest. Permitted for use in Worlds. Be careful with overuse. |
 | Lights                     | Completely disabled for avatars on Android and Quest. |
@@ -53,5 +53,5 @@ The following components are not supported on Android or Quest and will not work
 | Audio Sources | Audio sources are disabled completely for avatars on Android and Quest. Audio sources consume a significant amount of CPU resources and voices have priority. |
 | Physics Objects | Rigidbodies, colliders, and joints are disabled completely for avatars on Android and Quest. <br /> They are permitted in worlds, but you should be careful not to go overboard with them. |
 | Particle Systems | Particles are limited heavily on avatars for Android and Quest, with settings mirroring the [Avatar Particle System Limits](https://docs.vrchat.com/docs/avatar-particle-system-limits) on PC. |
-| Constraints | Unity constraints are disabled completely for avatars on Android and Quest due to complex performance issues. Use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead.<br /><br />Permitted for use in Worlds. Be careful with overuse, as they impact performance more than previously thought, especially with the limited resources of Quest and mobile devices. |
+| Constraints | Unity constraints are disabled completely for avatars on Android and Quest due to complex performance issues. Use [VRChat Constraints](/common-components/constraints) instead.<br /><br />Permitted for use in Worlds. Be careful with overuse, as they impact performance more than previously thought, especially with the limited resources of Quest and mobile devices. |
 | FinalIK | Custom FinalIK components are completely disabled for avatars on Android and Quest.<br />FinalIK components are an unbounded source of resource usage. We do not currently plan to enable them on these platforms. |

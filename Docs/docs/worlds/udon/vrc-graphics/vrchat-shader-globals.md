@@ -19,6 +19,7 @@ The following shader globals are currently available:
   - `0` - Rendering normally, not in a mirror
   - `1` - Rendering in a mirror viewed in VR
   - `2` - Rendering in a mirror viewed in desktop mode
+- `float _VRChatFaceMirrorMode` - `1` when rendering the face mirror (VR and Desktop use different camera types!), `0` otherwise
 - `float3 _VRChatMirrorCameraPos` - World space position of mirror camera (eye independent, "centered" in VR), `(0,0,0)` when not rendering in a mirror
 - `float3 _VRChatScreenCameraPos` - World space position of main screen camera
 - `float4 _VRChatScreenCameraRot` - World space rotation (quaternion) of main screen camera

@@ -43,7 +43,7 @@ Adds DataContainers, PhysBones 1.1 ('Squishy PhysBones'), AsyncGPUReadback, and 
     - PhysBones 1.1: **Stretch Motion value has been added.** This is a ratio of how much motion affects a bone stretching or squishing.
     - Categories of values in the VRCPhysBone component UI can now be collapsed.
         - Categories also include a Help button which will take you to the online documentation for that subject.
-    - [PhysBones](/avatars/avatar-dynamics/physbones) documentation will be updated during the Open Beta for PhysBones 1.1 and Squishy PhysBones.
+    - [PhysBones](/common-components/physbones) documentation will be updated during the Open Beta for PhysBones 1.1 and Squishy PhysBones.
 - The Network ID Utility now works for PhysBones in avatar projects
     - This tool allows syncing PhysBones between avatars on different platforms, even if they have different GameObject hierarchies
         - This advanced tool is only useful if your PC and Quest avatars have different hierarchies!
