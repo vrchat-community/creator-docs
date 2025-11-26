@@ -35,4 +35,4 @@ To make a VRChat world, you construct a scene in Unity using typical 3D models, 
 
 ## Avatar Creation
 
-To make a VRChat avatar, you must first create or find a 3D character, then ensure that it is [rigged](/avatars/rig-requirements) to work with VRChat. You can then [import your rigged model](/avatars/creating-your-first-avatar#step-3---get-the-model-into-your-project) into Unity and add [Expressions and Controls](/avatars/expression-menu-and-controls), [Avatar Dynamics](/avatars/avatar-dynamics) and much more. 
+To make a VRChat avatar, you must first create or find a 3D character, then ensure that it is [rigged](/avatars/rig-requirements) to work with VRChat. You can then [import your rigged model](/avatars/creating-your-first-avatar#step-3---get-the-model-into-your-project) into Unity and add [Expressions and Controls](/avatars/expression-menu-and-controls), [Avatar Components](/avatars/avatar-components) and much more. 

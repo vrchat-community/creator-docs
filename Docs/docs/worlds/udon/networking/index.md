@@ -48,7 +48,6 @@ In the code above, we have three different variables, with the 'UdonSynced' attr
 </TabItem>
 </Tabs>
 
-
 ### Example: Synced Slider
 ![](/img/worlds/udon-networking-8472b6b-synced-slider.png)
 

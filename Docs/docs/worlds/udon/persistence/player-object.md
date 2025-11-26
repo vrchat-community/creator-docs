@@ -56,11 +56,15 @@ Use the following methods in your scripts to find references to PlayerObjects an
 
 ## Events
 
-There is only one event related to PlayerObjects:
+The following events are related to PlayerObjects:
 
 | Event | Output | Notes |
 | -------- | -------- | -------- |
 | [OnPlayerRestored](/worlds/udon/graph/event-nodes#onplayerrestored) | VRCPlayerApi player | Triggered after all of a VRChat player's persistent data has been loaded. |
+| [OnPersistenceUsageUpdated](/worlds/udon/graph/event-nodes#onpersistenceusageupdated) | VRCPlayerApi player | Triggered when a VRChat player's persistence usage has been updated. |
+| [OnPlayerObjectStorageExceeded](/worlds/udon/graph/event-nodes#onplayerobjectstorageexceeded) | VRCPlayerApi player | Triggered when a VRChat player's Player Object usage has exceeded allowed storage limits. |
+| [OnPlayerObjectStorageWarning](/worlds/udon/graph/event-nodes#onplayerobjectstoragewarning) | VRCPlayerApi player | Triggered when a VRChat player's Player Object usage is nearing allowed storage limits. |
+
 
 ## Methods
 
@@ -70,6 +74,11 @@ PlayerObject methods are in the `VRC.SDKBase.Networking` namespace.
 | -------- | -------- | -------- | ------- |
 | GetPlayerObjects | VRCPlayerApi target | GameObject[] objects | Returns an array of all the PlayerObjects associated with the player provided |
 | FindComponentInPlayerObjects | VRCPlayerApi player, Component referenceComponent | Component | Using the `referenceComponent` which must be a child of a PlayerObject template, this function returns the corresponding component associated with the provided player. |
+| GetPlayerObjectStorageLimit | | int | Returns the Player Object Storage limit for Player Objects, in bytes. |
+| GetPlayerObjectStorageUsage | VRCPlayerApi target | int | Returns the last computed Player Object Storage usage for the target player. |
+| RequestStorageUsageUpdate | | void | Requests calculation of the local player’s PlayerData and PlayerObject storage usage; results arrive via OnPersistenceUsageUpdated |
+
+Note that storage information may become stale over time and may require updating. Please avoid frequently calling RequestStorageUsageUpdate.
 
 Utility wrappers to these methods are found on the `VRCPlayerApi` class.
 

@@ -156,6 +156,41 @@ Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
 
 Fired when the local player respawns by clicking "Respawn" in their menu.
 
+### OnPersistenceUsageUpdated
+`Event_OnPersistenceUsageUpdated`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when a player has their persistence usage updated.
+
+### OnPlayerDataStorageExceeded
+`Event_OnPlayerDataStorageExceeded`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when a player has exceeded their Player Data Storage.
+
+### OnPlayerDataStorageWarning
+`Event_OnPlayerDataStorageWarning`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when a player is nearing their Player Data Storage limit.
+
+### OnPlayerObjectStorageExceeded
+`Event_OnPlayerObjectStorageExceeded`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when a player has exceeded their Player Object Storage.
+
+### OnPlayerObjectStorageWarning
+`Event_OnPlayerObjectStorageWarning`
+
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when a player is nearing their Player Object Storage limit.
+
 ### OnScreenUpdate
 `Event_OnScreenUpdate`
 

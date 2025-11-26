@@ -9,7 +9,7 @@ tags: [release]
 
 This update adds [Persistence](/worlds/udon/persistence) to Udon! Persistence allows you to build VRChat worlds that store data between sessions.
 
-This update also fixes a few minor issues around [VRCJSON](/worlds/udon/data-containers/vrcjson) and [VRChat Constraints](/avatars/avatar-dynamics/constraints).
+This update also fixes a few minor issues around [VRCJSON](/worlds/udon/data-containers/vrcjson) and [VRChat Constraints](/common-components/constraints).
 
 <!--truncate-->
 
@@ -21,8 +21,8 @@ Learn all about the new features in our [Persistence SDK docs](/worlds/udon/pers
 
 ## Other Fixes
 
-- Fixed [VRChat Constraints](/avatars/avatar-dynamics/constraints) that need to run before [Physbones](/avatars/avatar-dynamics/physbones) not updating while in edit mode.
-- Fixed [VRChat Constraints](/avatars/avatar-dynamics/constraints) that have a child [Physbone](/avatars/avatar-dynamics/physbones), but also depend on one, not following their sources correctly.
+- Fixed [VRChat Constraints](/common-components/constraints) that need to run before [Physbones](/common-components/physbones) not updating while in edit mode.
+- Fixed [VRChat Constraints](/common-components/constraints) that have a child [Physbone](/common-components/physbones), but also depend on one, not following their sources correctly.
 - Several fixes for [VRCJSON](/worlds/udon/data-containers/vrcjson):
     - Fixed an issue where braces inside strings can fail to deserialize.
     - Fixed an issue where empty arrays can fail to deserialize if there is whitespace between the opening and closing, such as `[ ]`.

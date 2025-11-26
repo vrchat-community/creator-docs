@@ -9,16 +9,31 @@ Every Unity scene you'd like to bring into VRChat requires a [VRC_SceneDescripto
 
 Please consult [Allowlisted World Components](/worlds/whitelisted-world-components) for a full list of components available in the VRChat SDK.
 
-| Parameter                                                           | Description                                                                                                       |
-|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| [TextMesh Pro](/worlds/components/textmeshpro)                      | Used to display high-quality text.                                                                                |
-| [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)         | Used to display and / or switch to an avatar.                                                                     |
-| [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection)     | Used to create a mirror in VRChat.                                                                                |
-| [VRC_ObjectSync](/worlds/components/vrc_objectsync)                 | Syncs the transform of a GameObject with all players in the instance.                                             |
-| [VRC_Pickup](/worlds/components/vrc_pickup)                         | Allows objects to be picked up, held and used by players.                                                         |
-| [VRC_PortalMarker](/worlds/components/vrc_portalmarker)             | Creates portals to other VRChat worlds.                                                                           |
-| [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor)       | Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.                  |
-| [VRC_SpatialAudioSource](/worlds/components/vrc_spatialaudiosource) | Adds 3D spatialization to a Unity AudioSource. Usually automatically added with AudioSource components in editor. |
-| [VRC_Station](/worlds/components/vrc_station)                       | Allow users to sit down.                                                                                          |
-| [VRC_UIShape](/worlds/components/vrc_uishape)                       | Allow users to interact with Unity's UI system.                                                                   |
-| [VRC Camera Dolly](/worlds/components/vrc_cameradolly)              | Allow camera dolly animations to be applied to the VRChat user camera.                                            |
+| Component                                                                  | Description                                                                                                          |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| [TextMesh Pro](/worlds/components/textmeshpro)                             | Used to display high-quality text.                                                                                   |
+| [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)                | Used to display and / or switch to an avatar.                                                                        |
+| [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection)            | Used to create a mirror in VRChat.                                                                                   |
+| [VRC_ObjectSync](/worlds/components/vrc_objectsync)                        | Syncs the transform of a GameObject with all players in the instance.                                                |
+| [VRC_Pickup](/worlds/components/vrc_pickup)                                | Allows objects to be picked up, held and used by players.                                                            |
+| [VRC_PortalMarker](/worlds/components/vrc_portalmarker)                    | Creates portals to other VRChat worlds.                                                                              |
+| [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor)              | Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.                     |
+| [VRC_SpatialAudioSource](/worlds/components/vrc_spatialaudiosource)        | Adds 3D spatialization to a Unity AudioSource. Usually automatically added with AudioSource components in editor.    |
+| [VRC_Station](/worlds/components/vrc_station)                              | Allow users to sit down.                                                                                             |
+| [VRC_UIShape](/worlds/components/vrc_uishape)                              | Allow users to interact with Unity's UI system.                                                                      |
+| [VRC Camera Dolly](/worlds/components/vrc_cameradolly)                     | Allow camera dolly animations to be applied to the VRChat user camera.                                               |
+| [VRC Phys Bone](/common-components/physbones#vrcphysbone)                  | Adds secondary physics based motion to objects in your world.                                                        |
+| [VRC Phys Bone Collider](/common-components/physbones#vrcphysbonecollider) | Defines a collision shape that PhysBones can collide against.                                                        |
+| [VRC Phys Bone Root](/common-components/physbones#vrcphysboneroot)         | Defines the root transform for a collection of PhysBones.                                                            |
+| [VRC Contact Sender](/common-components/contacts#vrccontactsender)         | Detected by Contact Receivers to trigger world behavior when collisions start and end.                               |
+| [VRC Contact Receiver](/common-components/contacts#vrccontactreceiver)     | Detects Contact Senders to trigger world behavior when collisions start and end.                                     |
+| [VRC Constraints](/common-components/constraints)                          | A like-for-like replacement of Unity constraints to allow transforms to move relative to each other in various ways. |
+
+## World PhysBone and Contact Limits
+
+For performance reasons, there is an enforced limit of 1024 active PhysBones and PhysBone Colliders in the currently loaded world, as well as a separate limit of 1024 active Contacts. More specifically:
+
+- If the total number of active PhysBones and PhysBone Colliders in your world reaches 1024, further PhysBones and PhysBone Colliders won't work until some of the existing components are either disabled or destroyed.
+- If the total number of active Contact Senders and Contact Receivers in your world reaches 1024, further Contacts won't work until some of the existing components are either disabled or destroyed.
+
+A warning will be displayed by the SDK if the total count of these components exceeds either limit. However, you can ignore these warnings provided you make sure no more than 1024 of each kind of component are active in your world at the same time.

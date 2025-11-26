@@ -34,8 +34,8 @@ SDK Version `3.9.0` brings an Udon API for the camera dolly, a new Auto Hold mod
   - Improved UI responsiveness in very large projects containing a lot of networked objects.
   - Fixed a case where importing IDs would fail due to an exception being thrown.
   - The tool now warns against GameObjects with forward slashes (`/`) in their names while exporting, since this can cause problems when importing again later.
-- Fixed the `_Angle` parameter on [PhysBones](/avatars/avatar-dynamics/physbones/) not working if the PhysBone chain started with a scale of zero.
-- Minor performance improvement to the [PhysBone](/avatars/avatar-dynamics/physbones/) inspector panel.
+- Fixed the `_Angle` parameter on [PhysBones](/common-components/physbones/) not working if the PhysBone chain started with a scale of zero.
+- Minor performance improvement to the [PhysBone](/common-components/physbones/) inspector panel.
 - `VRCShader.SetGlobalInteger` now uses the correct integer variant of the backing `UnityEngine.Shader` function, preserving bit patterns.
 - Improved handling of `UdonBehaviour` components with an invalid script assigned to them.
 - [UdonSharp](/worlds/udon/udonsharp/) scripts are now recompiled when you switch platforms.

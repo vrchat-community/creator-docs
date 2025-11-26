@@ -27,8 +27,8 @@ Version `3.7.6` reworks the SDK's Build Panel, adds multi-platform Build & Publi
 * You can now build and test avatars on Android/Quest.
     * This requires connecting a phone (or any ADB device) to your PC.
     * Check out [our documentation](https://creators.vrchat.com/platforms/android/build-test-mobile/)!
-* Added support for [Contact Senders](/avatars/avatar-dynamics/contacts/#vrccontactsender) to be local only.
-    * If you enable "local only", the Contact Sender only exists on the local avatar in a similar way to local only [Contact Receivers](/avatars/avatar-dynamics/contacts/#vrccontactreceiver).
+* Added support for [Contact Senders](/common-components/contacts/#vrccontactsender) to be local only.
+    * If you enable "local only", the Contact Sender only exists on the local avatar in a similar way to local only [Contact Receivers](/common-components/contacts/#vrccontactreceiver).
     * These do not contribute to an avatar's performance ranking, but still count towards the hard Contact limit.
 * Fixed an exeception that could appear when toggling VRChat Contacts in Play mode.
 * Implemented all VRChat Constraint fixes from client version `2025.1.2` (and older).

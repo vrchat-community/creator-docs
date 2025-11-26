@@ -13,7 +13,7 @@ This release brings new functionality for avatar creators and various fixes.
 
 ## New features
 
-- Added the [`VRCHeadChop` component](/avatars/avatar-dynamics/vrc-headchop) to the avatars SDK.
+- Added the [`VRCHeadChop` component](/avatars/avatar-components/vrc-headchop) to the avatars SDK.
     - This component allows avatar authors to control which parts of their avatar are hidden from the perspective of the user wearing it.
 - Added the [`AnimatorPlayAudio` state behaviour](/avatars/state-behaviors#animator-play-audio) to the avatars SDK.
     - This allows you to modify an AudioSource when transitioning to an animation state.

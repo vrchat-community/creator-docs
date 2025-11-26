@@ -25,14 +25,14 @@ In addition, you should [optimize your content for Android](/platforms/android/q
 ## Do not use Dynamic Bones!
 Dynamic Bones is a Unity Asset that you can purchase that allows you to define bones on your avatar's rig to move around as if they were hanging. You can also define static forces like gravity which can make hair fall more realistically. 
 
-Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/avatars/avatar-dynamics/physbones) instead.
+Dynamic Bones is deprecated and will be removed eventually. Use [PhysBones](/common-components/physbones) instead.
 
 VRChat will automatically convert Dynamic Bones to PhysBones at runtime.
 
 ## Do not use Unity Constraints!
 [Unity Constraints](https://docs.unity3d.com/Manual/Constraints.html) are components provided by the engine that allow you to change the position, rotation and scale of transforms on your avatar based on one or more other transforms.
 
-The engine's constraints are sorted based on the dependencies between them every frame, which means they can cause significant performance problems when enough of them exist at once. Use [VRChat Constraints](/avatars/avatar-dynamics/constraints) instead, because they're designed to provide better performance in the context of VRChat avatars.
+The engine's constraints are sorted based on the dependencies between them every frame, which means they can cause significant performance problems when enough of them exist at once. Use [VRChat Constraints](/common-components/constraints) instead, because they're designed to provide better performance in the context of VRChat avatars.
 
 VRChat will automatically convert Unity constraints to VRChat constraints at runtime.
 

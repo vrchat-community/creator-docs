@@ -244,8 +244,8 @@ Creating and uploading VRChat avatars can be fun and creatively fulfilling. If y
 ## Learn more
 
 If you'd like to become better at avatar creation, check out these pages:
-- [Quest Content Optimization](/platforms/android/quest-content-optimization) - Learn how to create avatars that work well on Android and Quest.
+- [Android Content Optimization](/platforms/android/quest-content-optimization) - Learn how to create avatars that work well on Android and Quest.
 - [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Learn general advice on creating optimized PC or Android avatars.
-- [VRChat's performance ranking system?](/avatars/avatar-performance-ranking-system) - Learn why certain avatars are visible or hidden to other players by default.
-- [Avatar Dynamics](/avatars/avatar-dynamics/) - Learn how to create physics-driven interactions on your avatar. 
+- [Performance Ranks](/avatars/avatar-performance-ranking-system) - Learn why certain avatars are visible or hidden to other players by default.
+- [Avatar Components](/avatars/avatar-components/) - Learn how to create immersive interactions on your avatar. 
 

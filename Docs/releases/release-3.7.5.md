@@ -19,7 +19,7 @@ Version `3.7.5` adds Build & Test for Quest, similar to how it works on Android 
 - Resolved an issue where the DPID setting in the SDK would not persist between sessions.
 - Fixed issue where running "Build and Test" before setting the`blueprintId` of a world or avatar would trigger the error "Attempted to load the data for a world we do not own, clearing blueprint ID". This error has also been downgraded to a warning.
 - Contact receivers marked as local-only no longer count towards an avatar's performance rank.
-- Fixed more cases of jittering with specific configurations of [VRChat Constraints](/avatars/avatar-dynamics/constraints).
+- Fixed more cases of jittering with specific configurations of [VRChat Constraints](/common-components/constraints).
 
 ## Udon
 
