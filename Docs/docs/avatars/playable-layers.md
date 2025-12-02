@@ -26,6 +26,14 @@ These layers apply in order-- in other words, Base gets applied, then Additive, 
 
 We have example Playable Layers available in the SDK. Depending on how you learn and iterate on things, it might be easier for you to use and edit these default layers to figure things out!
 
+They can be found in `Packages/com.vrchat.avatars/Samples/AV3 Demo Assets/Animation/Controllers`. Their names don't quite match the layer names:
+
+* Base: `vrc_AvatarV3LocomotionLayer`
+* Additive: `vrc_AvatarV3IdleLayer`
+* FX: `vrc_AvatarV3FaceLayer`
+* Action: `vrc_AvatarV3ActionLayer`
+* Gesture: `vrc_AvatarV3HandsLayer`
+
 When you are running VRChat and you're wearing (or viewing) an Avatar 3.0 avatar, all of these Playable Layers are put together into a combined Animator. This Animator is the root, main animator of your avatar, and you can control any part of it. **This means that there is no reason to add any additional animators on your avatar.** 
 
 As an aside, you should never use the same controller in multiple Playable Layers. This may work for some setups, but it is **very** poor practice and will cause major issues as you expand the functionality of your avatar.
