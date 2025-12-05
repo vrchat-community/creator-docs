@@ -80,7 +80,7 @@ Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you 
 
 :::note What if my world doesn't have a recommended capacity?
 
-If you uploaded your VRChat world with an old VRChast SDK, without 'recommended capacity', player capacity works differently:
+If you uploaded your VRChat world with an old VRChat SDK, without 'recommended capacity', player capacity works differently:
 
  - 'Recommended capacity' will be the same as your player capacity value
  - 'Player capacity' will be **twice** your player capacity value
