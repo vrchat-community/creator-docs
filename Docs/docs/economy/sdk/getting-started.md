@@ -56,7 +56,7 @@ You can also create and manage your Udon Products manually.
 
 ## Adding UdonProducts to your world
 
-After creating UdonProduct assets, you can use them in Udon scripts.
+After creating UdonProduct assets, you can use them in Udon scripts. Each world can use up to 200 UdonProducts, though most worlds use fewer.
 
 The VRChat SDK has [examples and prefabs that can be used with your Udon product](/economy/sdk/examples/) by dragging a prefab into your scene and choosing an UdonProduct asset. The prefabs are beginner-friendly and don't require any Udon or coding knowledge.
 

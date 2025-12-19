@@ -22,7 +22,7 @@ You need the Android Build Support module installed for your VRChat-compatible U
 ![Unity Install with Android Module](/img/platforms/unity-hub-modules.png)
 
 3. Click on the gear icon next to that install and click "Add modules".
-4. Find "Android Build Support". If the box and check the box next to it if 
+4. Find "Android Build Support" and tick the box next to it.
 5. Click continue to install the Android build support module.
 
 You should now be able to build worlds for Android.

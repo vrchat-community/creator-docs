@@ -74,17 +74,17 @@ Your Playable Layer can react to the player's current [avatar scale](/avatars/av
 
 ### Parameter Types
 
-You have access to three types of variable when defining your parameters in your Parameters object.
+You can define the following types of parameters in your [Expression Parameters asset](#expression-parameters-asset):
 
-You can use up to a total of 256 bits of "memory". This isn't strictly memory in the sense of memory usage of the avatar, but has to do with the bandwidth you use when syncing parameters.
-
-| Parameter Type | Range             | Memory Usage | Notes                              |
-| :------------- | :---------------- | :----------- | :--------------------------------- |
-| `int`          | `0`-`255`         | 8 bits       | Unsigned 8-bit int.                |
-| `float`        | `-1.0` to `1.0`   | 8 bits       | Signed 8-bit fixed-point decimal[^2]. |
-| `bool`         | `True` or `False` | 1 bit        |                                    |
+| Parameter Type | Range             | Parameter Memory Usage | Notes                                |
+| :------------- | :---------------- | :--------------------- | :---------------------------------   |
+| `int`          | `0`-`255`         | 8 bits                 | Unsigned 8-bit int.                  |
+| `float`        | `-1.0` to `1.0`   | 8 bits                 | Signed 8-bit fixed-point decimal[^2]. |
+| `bool`         | `True` or `False` | 1 bit                  |                                      |
 
 [^2]: Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
+
+Each synced parameter uses a certain amount of parameter memory. VRChat can synchronize up to 256 bits of custom parameters. VRChat also limits your avatar to 8192 total custom Expression Parameters (synced and unsynced). [Built-in parameters](#built-in-parameters) do not count toward these limits.
 
 ### GestureLeft and GestureRight Values
 

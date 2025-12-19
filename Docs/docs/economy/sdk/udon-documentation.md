@@ -23,7 +23,7 @@ VRChat's SDK contains objects types to support the management of Udon products t
 UdonProduct is a <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-ScriptableObject.html">ScriptableObject</UnityVersionedLink> that you can create in your project. It represents a product from your store, allowing you to interact with it in Udon.
 A world will only receive events based on products that are being used within it, therefore it is necessary to reference a product's UdonProduct equivalent in any UdonBehaviour at least once before uploading.
 
-For example, even if you don't directly use the UdonProducts anywhere, you would need to have an array of UdonProducts on at least one UdonBehaviour somewhere in the scene to receive OnPurchaseConfirmed, OnPurchaseExpired or OnPurchasesLoaded events for those products across all UdonBehaviours.
+For example, even if you don't directly use the UdonProducts anywhere, you would need to have an array of UdonProducts on at least one UdonBehaviour somewhere in the scene to receive OnPurchaseConfirmedMultiple, OnPurchaseExpired or OnPurchasesLoaded events for those products across all UdonBehaviours.
 
 UdonProducts can be created with the UdonProductManager ("VRChat SDK" → "UdonProduct Manager") or by creating an UdonProduct asset manually ("Assets" → "Create" → "VRChat" → "UdonProduct").
 
@@ -91,9 +91,10 @@ This method checks if a player owns a certain product.
 **Output**
 - `bool`: `true` if the player owns the product, otherwise `false`.
 
-:::caution Race condition
+:::caution
 
-It is not advised to use this immediately after the "Start" event. Udon may not have received players purchases yet. It is advised to use the [OnPurchasesLoaded](#onpurchasesloaded) event instead.
+Do not use `Store.DoesPlayerOwnProduct` immediately after the `Start` event because Udon may not have received players purchases yet. To avoid race conditions, use the [OnPurchasesLoaded](#onpurchasesloaded) event instead.
+
 :::
 
 ### Store.DoesAnyPlayerOwnProduct
@@ -193,9 +194,9 @@ Opens the detail/purchase screen of a published avatar in VRChat's main menu.
 
 ## Events
 
-:::info Don't disable your script
+:::warning
 
-If a game object or its Udon behaviour is disabled, it won't execute most of the events related to the Creator Economy.
+If you disable GameObjects or UdonBehaviours, they won't execute most of the events related to the Creator Economy.
 
 :::
 
@@ -211,20 +212,22 @@ This event is triggered once a player's purchase has been loaded and confirmed. 
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
 
 ### OnPurchaseConfirmedMultiple
-This event is triggered every time [`OnPurchaseConfirmed`](#onpurchaseconfirmed) is triggered. However, this variant also supports [Quantity Purchases](/economy/listings/#quantitypurchases). If you use [instant](/economy/listings#instant) listings in your world, you should always use this event instead of `OnPurchaseConfirmed`.
-The `quantity` value represents the amount that the user purchased. For [instant](/economy/listings#instant) listings with [Quantity Purchases](/economy/listings#quantity-purchases), `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
+
+This event is triggered once a player's purchase has been loaded and confirmed. Purchases are loaded in the following situations: 
+
+- When joining the instance, both for the local player and any other players
+- When any new players join the instance
+- When any player in the instance purchases one of the world's products
 
 **Output**
 - `IProduct`: The product that has been purchased.
 - `VRCPlayerApi`: The player who has purchased the product.
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
-- `int`: The quantity purchased at once.
+- `int`: The [quantity](/economy/listings/#quantitypurchases) the user purchased. For [instant](/economy/listings#instant) listings with [quantity purchases](/economy/listings#quantity-purchases) enabled, `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
 
 :::caution
 
-Use either `OnPurchaseConfirmed` _or_ `OnPurchaseConfirmedMultiple`. Don't use both in the same script!
-
-Both events detect every purchase. If you use both, you may accidentally detect the same purchase twice. Generally, you should use `OnPurchaseConfirmedMultiple` because it's compatible with [Quantity Purchases](/economy/listings#quantity-purchases).
+`OnPurchaseConfirmed` is deprecated and does not support [quantity purchases](/economy/listings#quantity-purchases). Never use both `OnPurchaseConfirmed` and `OnPurchaseConfirmedMultiple` in the same script - otherwise, you may accidentally detect the same purchase twice.
 
 :::
 

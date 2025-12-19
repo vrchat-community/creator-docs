@@ -23,7 +23,7 @@ You must install Unity's iOS Build Support module to build or publish VRChat wor
 ![Unity Install with iOS Module](/img/platforms/unity-hub-modules.png)
 
 3. Click on the gear icon next to that install and click "Add modules".
-4. Find "iOS Build Support". Check the box next to "iOS Build Support" to include it.
+4. Find "iOS Build Support" and tick the box next to it.
 5. Click continue to install the iOS build support module.
 
 You should now be able to build worlds for iOS.

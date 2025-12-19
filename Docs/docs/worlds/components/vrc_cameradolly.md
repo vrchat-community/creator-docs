@@ -1,8 +1,9 @@
 ---
-title: "VRC Camera Dolly"
 slug: "vrc_cameradolly"
-hidden: false
 ---
+
+# VRC Camera Dolly
+
 Allow camera dolly animations to be applied to the VRChat user camera.
 Three components are used to define animations:
 * `VRC Camera Dolly Animation`: The top level component representing the entire animation
@@ -53,14 +54,14 @@ To see the animation in actions, please use Build and Test.
 | Paths                 | List of paths belonging to this animation                                               |
 
 
-## VRC Camera Dolly Animation
+## VRC Camera Dolly Path
 
 | Parameter            | Description                           |
 |----------------------|---------------------------------------|
 | Points               | List of points belonging to this path |
 
 
-## VRC Camera Dolly Animation
+## VRC Camera Dolly Path Point
 
 | Parameter           | Description                                                         |
 |---------------------|---------------------------------------------------------------------|

@@ -1,10 +1,9 @@
 ---
-title: "VRC Scene Descriptor"
 slug: "vrc_scenedescriptor"
-hidden: false
-createdAt: "2017-07-06T00:43:48.565Z"
-updatedAt: "2019-11-23T01:41:31.381Z"
 ---
+
+# VRC Scene Descriptor
+
 Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.
 
 | Parameter                       | Description                                                                                                                                                                              |
@@ -28,8 +27,6 @@ Describes your VRChat world. Required for every Unity scene you'd like to use as
 | Forbid Free Modification        | If true, non-sync'd objects can't be manipulated by non-master.                                                                                                                          |
 | Forbid User Portals             | Prevent users from opening portals from the world menu.                                                                                                                                  |
 | User Custom Voice Falloff Range | Enable the next couple options which control the voice falloff range.                                                                                                                    |
-| Voice Falloff Near              | The distance where users' voices start reducing in volume.                                                                                                                               |
-| Voice Falloff Far               | The distance where users' voices become inaudible.                                                                                                                                       |
 | Unity Version                   | Unity version being used; you should never need to touch this.                                                                                                                           |
 | Dynamic Prefabs                 | *Deprecated, unused in the VRChat SDK3.*                                                                                                                                                 |
 | Dynamic Materials               | *Deprecated, unused in the VRChat SDK3.*                                                                                                                                                 |

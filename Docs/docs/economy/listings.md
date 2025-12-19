@@ -16,6 +16,8 @@ Listings allow you to monetize your VRChat content by selling rewards, such as u
 
 Users can buy listings, which contain [products](/economy/products/). Each listing can contain 1-15 products. Users keep the products until the listing expires, depending on its [duration type](#2-duration-type). For example, [permanent](#%EF%B8%8Fpermanent) listings never expire, and [instant](#instant) listings expire immediately.
 
+Users can gift listings to their friends or users in their current VRChat instance.
+
 You can choose your listing's [visibility](#visibility). Listings can appear in your [store](/economy/store), or you can use Udon in your world to [open a listing](#udon-store-prefabs-in-your-world) directly, even if your store is not published.
 
 Listings are similar to [subscriptions](/economy/subscriptions).
@@ -91,7 +93,7 @@ For example, you could sell permanent access to avatars, world features, or worl
 </Column>
 <Column className='text--left'>
 #### ⌛Temporary
-The duration of temporary listings is **five minutes to three months**. Buyers own the listing until the duration expires, similar to [group subscriptions](./subscriptions).
+The duration of temporary listings is **five minutes** to **three months**. Buyers own the listing until the duration expires, similar to [group subscriptions](./subscriptions).
 
 You can add the following products:
 - [Udon products](/economy/products/udon)
@@ -104,7 +106,7 @@ You choose the duration of a temporary listing by editing its [details](#3-detai
 <Column className='text--left'>
 #### ⚡Instant
 
-Instant listings **do not have a duration**. Instead, you give buyers an immediate reward with Udon. Buyers can purchase the listing as many times as they want.
+Instant listings **do not have a duration**. Instead, you give buyers immediate rewards with Udon. You can also allow users to make [quantity purchases](#quantity-purchases).
 
 You can add the following products:
 - [Udon products](/economy/products/udon)
