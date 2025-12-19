@@ -28,6 +28,13 @@ The Creator Economy allows you to earn VRChat Credits by setting [listings](/eco
  
 You need to [get started with Tilia](./getting-started) before you can create [listings](./listings), [subscriptions](./subscriptions), [products](./products), or [stores](./store).
 
+#### Where can I provide feedback? ####
+
+If you're a user, please submit feedback and bug reports on our [Creator Economy](https://feedback.vrchat.com/creator-economy/) feedback board.
+
+If you're a seller, please use the [Creator Economy Sellers](https://feedback.vrchat.com/creator-economy-sellers/) and/or the [Avatar Marketplace Sellers](https://feedback.vrchat.com/avatar-marketplace-sellers/) feedback boards. If you see the error message "You need a verified @vrchat.com email address to access this page," please click the "Logout" button in the top right and sign in again.
+
+
 ***
 ## Payment Processing ##
 
@@ -82,11 +89,22 @@ When your payout gets rejected, Tilia usually sends you an email. Please check y
 Yes. If users buy a group subscription, they choose how many months to buy in advance. If they purchase two or months, they can refund any remaining months, excluding the current month.
 For example, if a user buys a 3 month group subscription, they can cancel their subscription and receive a refund for the remaining 2 months of credits. Transaction fees are not refunded.
 
+#### What happens if I buy VRChat Credits, but also earned Credits from selling listings?
+
+You can spend the credits in your wallet to buy listings from other sellers in VRChat, regardless of how you acquired them. However, you cannot request a [payout](/economy/payout) for credits you bought directly.
+
+Note that if your wallet contains bought Credits **and** earned Credits, your bought Credits are spent first. For example: Your available payout does **not** change if you buy 1200 Credits from VRChat and then spend 1200 Credits, even if your wallet contains any number of earned Credits.
+
+
+
+
+
 ***
 ## Products and Listings
 
 #### How can worlds use the Creator Economy?
 Worlds can use [Udon](/worlds/udon/) and [Udon products](/economy/products/udon) to detect purchases. Support for Udon products and the Creator Economy is [built into the Worlds SDK](/economy/sdk/).
+
 #### What can world creators do with the Creator Economy SDK? ####
 - Create Udon products on [VRChat.com](https://vrchat.com/home/) and link them to Udon products in your world.
 - Unlock exclusive areas, items, or features.
@@ -100,6 +118,10 @@ Visit the [Creator Economy SDK documentation](/economy/sdk/) to get started!
 No. You must be the content owner to use a product. For example, if you own a world, you can't use Udon products from another creator.
 
 You **can** open another creator's store, group, or listing with the [SDK](/economy/sdk/udon-documentation#storeopenlisting).
+
+#### Can I sell access to my world?
+
+Yes, but you must adhere to our [content guidelines](/economy/guidelines#worlds). For example, you cannot give users a strictly negative experience in your world without having made a purchase.
 
 #### Can I sell avatars in my world store?
 
@@ -133,8 +155,6 @@ No, listings cannot be free. Read our [pricing guidelines](/economy/listings#31-
 
 However, for [testing](/economy/sdk/testing), you can purchase your own listings for 0<ThemedCreditIcon/> in VRChat.
 
-#### Where can I provide feedback? ####
-VRChat uses Canny for our community feedback and bug reports. Feel free to post on the Creator Economy section of our [feedback page.](https://feedback.vrchat.com/creator-economy)
 
 #### If a creator deletes a product, will that automatically update/delete any listings that contain that product? ####
 You cannot delete products that have any owners or active subscribers. You will see an error informing them that the product has active purchases and that it cannot be deleted. Instead, you may wish to delete the listing that the product is contained in.

@@ -73,7 +73,10 @@ However, even with these basic upgraded systems, there are some new features.
 
 Ever wanted to iterate and test an avatar without uploading it? Well, with Avatars 3.0, now you can!
 
-In the "Builder" tab of VRChat SDK control panel, you can now select "Build & Test" at "Offline Testing" section. When you click this, your avatar will be built, and then copied into the folder `%LocalAppdata%Low\VRChat\VRChat\Avatars`.
+In the "Builder" tab of the VRChat SDK control panel, you can now select "Build & Test" in the "Offline Testing" section. When you click this, your avatar will be built, and then copied into the the following folder:
+
+- Windows: `%LocalAppdata%Low\VRChat\VRChat\Avatars`
+- Linux: `$HOME/.local/share/VRChat/VRChat/Avatars/`
 
 When you launch VRChat, you'll be able to access this avatar locally by looking in the "Other" section of the Avatar menu! Only you will be able to see it, but you can make changes to your avatar, click "Build & Test" again, and after a short build, your avatar will be updated. Simply re-select the avatar in your menu and click "Change" again, and you'll swap into the new testing avatar.
 
