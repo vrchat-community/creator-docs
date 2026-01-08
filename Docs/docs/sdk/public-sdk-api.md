@@ -108,5 +108,6 @@ public static async void BuildSelectedAvatar()
 :::caution
 If you're currently using reflection to access the SDK internals, we recommend switching to the public API as soon as possible.
 :::
-We're going to make our best effort to provide a stable API, but it's still subject to change in the future. We recommend leveraging semver to define which version of the SDK your tools are compatible with. [Learn more here](https://vcc.docs.vrchat.com/vpm/packages/#versions-and-ranges).
+We're going to make our best effort to provide a stable API, but it's still subject to change in the future. We recommend leveraging semver to define which version of the SDK your tools are compatible with. [Learn more here](https://vcc.docs.vrchat.com/vpm/packa
+ges/#versions-and-ranges).
 
