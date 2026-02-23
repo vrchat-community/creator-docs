@@ -19,9 +19,10 @@ To upload a custom avatar with Unity and the VRChat SDK, you must meet the follo
 
 :::tip Need help?
 
-If you get stuck or need help,  here's where you can get help:
+If you get stuck or need help, here's where you can get help:
 - Browse VRChat's [official documentation](https://creators.vrchat.com/). 
 - Visit VRChat's [official forum](https://ask.vrchat.com/) or [Discord server](https://discord.com/invite/vrchat) and ask the community.
+- If you're looking for community-made assets, example avatars, or upload-ready packages to learn from, browse [VRCMods](https://vrcmods.com/).
 
 :::
 
@@ -114,7 +115,7 @@ Congratulations on choosing or building a model! Before you continue, you'll nee
     <iframe src="https://www.youtube.com/embed/0u1g0TYoJsU" title="VRChat Creator Companion" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
-Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After setting creating your Unity project, you're ready to continue!
+Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After creating your Unity project, you're ready to continue!
 
 :::tip
 
@@ -139,22 +140,27 @@ If you are importing your model from a 3D editor, please ensure you keep in mind
 
 ![image](/img/avatars/creating-your-first-avatar-b066a1b-2022-05-27_11-13-48_blender.png)
 
-After you get the model in your assets, select it, you'll want to ensure it has the correct settings in the rig tab in the inspector. Make sure the Animation Type is set to Humanoid.
+After you get the model in your assets, select it. You'll want to ensure it has the correct settings in the rig tab in the inspector. Make sure the Animation Type is set to Humanoid.
 
 ## Step 4 - Get the model into a scene
 Now that you have the model in your Assets folder, with the correct settings applied, you need to put it into a scene. To do so, either drag it into your [Hierarchy](https://docs.unity3d.com/Manual/Hierarchy.html) or directly into the Scene View window. We recommend having one scene per avatar and placing it at the coordinates (0, 0, 0). If needed, rotate the avatar so it is standing up straight, and ensure that its size is what you expect. You can add a Cube to your scene to compare - the cube will be 1 meter on each side and your Avatar will best function between about 0.5-5m tall. The average person is around 1.65 meters tall.
+
 :::caution Avatar Optimization
 
 It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks wrong. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
+
 :::
+
 ## Step 5 - Adding an Avatar Descriptor 
 The next step is to add a 'VRC Avatar Descriptor' component and prepare its settings.
+
 1. Select the avatar in your hierarchy.
 2. Click 'Add Component' in the inspector.
 3. Search for the 'VRC Avatar Descriptor' component and add it.
 4. Customize its settings, as explained below.
 
 ![Add a `VRC Avatar Descriptor` to get started with your avatar.](/img/avatars/creating-your-first-avatar-fd027ea-Unity_qH7NJfAzzn.png)
+
 ### View position
 First, you'll want to set the view position. This will be where your camera will be positioned in VRChat. You can see a visual representation of it as a small white sphere in the scene.
 
@@ -163,8 +169,9 @@ If your avatar has a head, place the view position between the avatar's eyes. If
 If your avatar doesn't have a head, place the view position wherever you think it's appropriate.
 
 ![Use the Avatar Descriptor to configure your avatar for VRChat. Make sure to adjust the view position!](/img/avatars/creating-your-first-avatar-5afcbf1-Unity_lsTjP8qDqO.png)
+
 ### Lip sync mode
-When you talk, you can make your avatar's mouth (or anything else) react automatically.  Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. You can choose one of five lip sync modes:
+When you talk, you can make your avatar's mouth (or anything else) react automatically. Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. You can choose one of five lip sync modes:
 
 #### Default
 ![Pressing 'Auto Detect!' is usually enough to let your VRChat avatar react to your speech.](/img/avatars/creating-your-first-avatar-d69289f-Unity_FgsAtEU75F.png)
@@ -175,7 +182,7 @@ Press 'Auto Detect!' to let the VRChat SDK automatically detect the appropriate 
 If your avatar uses a single bone to animate the jaw, you can specify it here. Your character's jaw will open depending on how loudly you speak in VRChat. Ensure you've configured the jaw bone in Unity's Humanoid rig for your avatar.
 
 #### **Viseme Blend Shape** (recommended)
-Blend shapes/shape keys (named depending on what software you're using) modify the mesh based on vertex positions.  Many models use this for detailed animations for speaking. If your model has these, you should use them!
+Blend shapes/shape keys (named depending on what software you're using) modify the mesh based on vertex positions. Many models use this for detailed animations for speaking. If your model has these, you should use them!
 
 We use the Oculus Audio library to detect and set visemes. [You can see a reference to what all the visemes should look like and what sound triggers them here](https://developer.oculus.com/documentation/unity/audio-ovrlipsync-viseme-reference). 
 
@@ -186,12 +193,14 @@ VRChat can usually detect your avatar's visemes automatically. If not, you can c
 :::caution SIL shape
 
 Unity will delete shape keys/blend shapes that are empty on import, so make sure your "SIL" shape (the shape your mouth makes when no sound is detected, but the mic is active - such as the space between words) moves a single vertex a very small, imperceptible amount. This will prevent Unity from deleting that key.
+
 :::
 
 :::note Viseme Performance Tip!
 
 If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face.
 The performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.
+
 :::
 
 ##### Jaw Flap Blend Shape
@@ -211,8 +220,8 @@ Simply follow the steps in VRChat's SDK build panel:
 2. Choose your avatar's visibility.
 	- Public avatars can be cloned by other VRChat users or shared via pedestals in worlds.
 	- Private avatars can only be used by you.
-3. Select appropriate content warnings for your avatar to comply with VRChat's  [content gating system](https://hello.vrchat.com/blog/content-gating).
-4.  Select a thumbnail image.
+3. Select appropriate content warnings for your avatar to comply with VRChat's [content gating system](https://hello.vrchat.com/blog/content-gating).
+4. Select a thumbnail image.
 	- You can select a file or capture an image from your Unity scene.
 5. Read the 'Validations' section. It contains many useful errors and warnings.
 	- For example, the SDK may warn you about your avatar having too many triangles, which you can fix by optimizing mesh(es). If you're unable to optimize the mesh, you may need to go back and choose another model.
@@ -222,14 +231,13 @@ Simply follow the steps in VRChat's SDK build panel:
 		- You can find your test avatar in the "Other" avatars section in VRChat.
 		- You can use [Build & Test on Android](/platforms/android/build-test-mobile/).
 7. Choose which platforms to build your [platform](/platforms/) on.
-8. Confirm that the avatar's information is accurate and thatn you have the rights to upload the content to VRChat.
+8. Confirm that the avatar's information is accurate and that you have the rights to upload the content to VRChat.
 9. When you're ready, click the "Build & Publish" button.
-
 
 ## Step 7 - Building and uploading the avatar!
 Now everything is ready. Press the "Build & Publish" button, and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).
 
-After uploading your avatar, it should be available in VRChat. You can also see your avatar in  `VRChat SDK > Show Control Panel > Content Manager`.
+After uploading your avatar, it should be available in VRChat. You can also see your avatar in `VRChat SDK > Show Control Panel > Content Manager`.
 
 You can also test your avatar without uploading it. To do this, click "Build & Test" instead. Your avatar will appear in the "Other" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
 
@@ -248,4 +256,3 @@ If you'd like to become better at avatar creation, check out these pages:
 - [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Learn general advice on creating optimized PC or Android avatars.
 - [Performance Ranks](/avatars/avatar-performance-ranking-system) - Learn why certain avatars are visible or hidden to other players by default.
 - [Avatar Components](/avatars/avatar-components/) - Learn how to create immersive interactions on your avatar. 
-
