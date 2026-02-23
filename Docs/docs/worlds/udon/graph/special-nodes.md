@@ -82,7 +82,7 @@ Runs the event 'eventName' on the target UdonBehaviour. If `instance` is left bl
 ### SendCustomEventDelayedFrames
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delayFrames` - int, `eventTiming` - EventTiming
 
-Runs the event `eventName` on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
+Runs the event `eventName` on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during `Update`, `LateUpdate`, `FixedUpdate` or `PostLateUpdate`, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
 
 :::note Timing issues
 
@@ -93,7 +93,7 @@ Note that [Unity's frame count](https://docs.unity3d.com/ScriptReference/Time-fr
 ### SendCustomEventDelayedSeconds
 Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delaySeconds` - float, `eventTiming` - EventTiming
 
-Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delaySeconds`. It will run the event during Update or LateUpdate, depending on which `eventTiming` is selected.
+Runs the event 'eventName' on the target UdonBehaviour, after waiting for `delaySeconds`. It will run the event during `Update`, `LateUpdate`, `FixedUpdate` or `PostLateUpdate`, depending on which `eventTiming` is selected.
 
 If `delaySeconds` is zero, the event will be executed in the same frame *or* the next frame (see [SendCustomEventDelayedFrames](/worlds/udon/graph/special-nodes#sendcustomeventdelayedframes) above).
 
