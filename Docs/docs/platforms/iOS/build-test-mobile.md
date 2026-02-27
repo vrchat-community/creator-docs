@@ -6,7 +6,7 @@ import CurrentUnityVersion from '@site/src/components/UnityVersionedText.js';
 
 # Build and Test for iOS
 
-This guide shows you how to test your VRChat world on iOS by connecting an iOS device to Unity. Build and Test allows you to quickly test your world in VRChat without publishing it.
+This guide shows you how to test your VRChat content on iOS by connecting an iOS device to Unity. Build and Test allows you to quickly test your worlds and avatars in VRChat without publishing it.
 
 ## Set Up For Build and Test
 
@@ -14,7 +14,7 @@ To use Build and Test for iOS, you must set up your Unity project and connect yo
 
 ### Set Up iOS Build Support Unity Module
 
-You must install Unity's iOS Build Support module to build or publish VRChat worlds on IOS. Follow the steps below to install it:
+You must install Unity's iOS Build Support module to build or publish VRChat content on IOS. Follow the steps below to install it:
 
 1. Open Unity Hub and navigate to "Installs" on the left.
 2. Find the install for the Unity version that your project uses (the current recommended version is [<CurrentUnityVersion/>](/sdk/upgrade/current-unity-version/)).
@@ -26,7 +26,7 @@ You must install Unity's iOS Build Support module to build or publish VRChat wor
 4. Find "iOS Build Support" and tick the box next to it.
 5. Click continue to install the iOS build support module.
 
-You should now be able to build worlds for iOS.
+You should now be able to build worlds and avatars for iOS.
 
 ### Set Up Your Project to Target iOS
 
@@ -53,6 +53,10 @@ You can connect the SDK to your iOS device by entering its local IP address in t
 4. Once loaded into the world, the app may ask for permission to communicate over your local network. You must allow this for the VRChat Test Protocol to be able to communicate with your device.
 5. After accepting the local network permission, check the SDK console to see if the connection was successful. You should see `[VTP] Client connected.` along with details about what device was connected. See [debugging steps](#debugging-connection-issues) if you do not see this.
 6. You can now click Build and Test to test content directly on your iOS device.
+
+When testing avatars, you can find them in the Avatars section of the main menu, under the "SDK Test Avatars" tab.
+
+After you select a test avatar, you automatically switch to the newest build when you build that avatar again.
 
 ## Debugging Connection Issues
 

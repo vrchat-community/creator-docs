@@ -140,6 +140,10 @@ Random will set the Destination Parameter to a random number between Min Value a
 
 As the component points out, using Random may not produce the same result when run on a remote instance of the avatar. When using Random, it is suggested to use a synced Destination Parameter and only run the driver locally.
 
+When using a Boolean parameter, you can use the Chance variable to set the probability that the parameter will be set to true.
+
+When using an Int parameter, you can use the Prevent Repeats setting to prevent the same value being picked twice in a row.
+
 ![state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png](/img/avatars/state-behaviors-99c6248-2022-06-02_18-11-23_Unity.png)
 
 ### Copy
@@ -189,7 +193,7 @@ The "Animator Play Audio" behavior modifies an AudioSource when transitioning to
 The relative path of the AudioSource (i.e. `Armature/Hips/Spine/`) must be entered into the "Source Path" property. This property can be filled out automatically by selecting an audio source component. If the audio source is on the root of the avatar, "Source Path" should be blank.
 
 
-The "Playback order" property does not guarantee that audio clips are played in the same order for all players. For example, the "Random" setting may choose a different clip for each player. If you want to guarantee that all players hear the same clip, use multiple animation states or change "Playback Order" to "Parameter" in conjunction with a synced animator parameter. 
+**The "Playback order" property does not guarantee that audio clips are played in the same order for all players.** For example, the "Random" setting may choose a different clip for each player. If you want to guarantee that all players hear the same clip, use multiple animation states or change "Playback Order" to "Parameter" in conjunction with a synced animator parameter. 
 
 "Animator Play Audio" can be added to states inside a sub-state machine. However, adding it to the sub-state machine itself is not recommended. The state behavior will be applied for every state transition in the sub-state machine, which may cause unintended interactions with other state behaviors.
 

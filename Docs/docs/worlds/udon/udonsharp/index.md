@@ -87,7 +87,8 @@ UdonSharp support most of C#'s basic syntax:
 UdonSharp is not conformant to any version of the C# language specification. Some C# features are not implemented or will not work.
 
 - For the best experience when creating UdonSharp scripts, make your scripts inherit from `UdonSharpBehaviour` instead of `MonoBehaviour`.
-- Udon currently only supports array `[]` collections. By extension, UdonSharp only supports arrays at the moment. `List<T>` is not supported yet.
+- Changing the `enabled` state of a field serialized as a `Behaviour` won't work if that behaviour is an `UdonSharpBehaviour` component. You should serialize the field using the type of your custom U# script instead.
+- Udon and UdonSharp currently only support array `[]` collections and [data containers](/worlds/udon/data-containers). Generic collections such as `List<T>` are not supported yet.
 - Field initializers are evaluated at compile time. If you have any initialization logic that depends on other objects in the scene you should use `Start`.
 - Use the `[UdonSynced]` attribute on fields that you want to sync over the network for all players.
 - Numeric casts are checked for overflow due to UdonVM limitations.
