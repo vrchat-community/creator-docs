@@ -121,18 +121,21 @@ Contact Receiver components in worlds offer no configuration options. Instead, R
 - To detect when a Contact Sender and Contact Receiver come together, you can attach an UdonGraph or UdonSharp behaviour to the same game object as the Contact Receiver component and use the following events:
   - `OnContactEnter(ContactEnterInfo contactInfo)` - Called when a Contact Sender starts contacting the Contact Receiver. The parameter is a data structure containing this information about the contact:
     - `ContactSenderProxy contactSender` - A reference to the Contact Sender component involved in this collision.
+    - `ContactReceiverProxy contactReceiver` - A reference to the Contact Receiver component involved in this collision.
     - `Vector3 enterVelocity` - The relative velocity of the Contact Sender against the Contact Receiver at the point of contact.
     - `Vector3 contactPoint` - The estimated point of contact on the surface of the Contact Receiver, in world space.
     - `string[] matchingTags` - An array of the tags that the Contact Sender and Contact Receiver have in common.
   - `OnContactExit(ContactExitInfo contactInfo)` - Called when a Contact Sender stops contacting the Contact Receiver. Like with the enter event, the parameter is a data structure that has some information about the collision:
     - `ContactSenderProxy contactSender` - A reference to the Contact Sender component involved in this collision.
-- Each of above events passes a proxy object referencing the Contact Sender involved in the collision. You can check if this matches a `VRCContactSender` in your world by comparing the two objects using `==` or `!=`. The proxy object itself contains the following properties:
-  - `bool isValid` - True if this proxy object is referring to a valid Contact Sender, false if it isn't. You should check that this is true before accessing any of the other properties.
-  - `VRCPlayerApi player` - A reference to the player that owns the Contact Sender, if applicable. For Contact Senders in the world, this value will be null.
-  - `DynamicsUsage usage` - Describes what kind of content the Contact Sender belongs to. This will be `World` for any contacts that are part of your world, and `Avatar` for any that are part of an avatar.
-  - `Vector3 position` - The world space position of the Contact Sender's root transform.
-  - `Quaternion rotation` - The world space rotation of the Contact Sender's root transform.
-  - `Vector3 scale` - The lossy scale of the Contact Sender's root transform.
+    - `ContactReceiverProxy contactReceiver` - A reference to the Contact Receiver component involved in this collision.
+    - `string[] matchingTags` - An array of the tags that the Contact Sender and Contact Receiver have in common.
+- In each of above events, `contactSender` and `contactReceiver` are proxy objects referencing the Contact Sender and Contact Receiver involved in the collision. You can check if these match a `VRCContactSender` or `VRCContactReceiver` in your world by comparing the two objects using `==` or `!=`. The proxy object itself contains the following properties:
+  - `bool isValid` - True if this proxy object is referring to a valid contact component, false if it isn't. You should check that this is true before accessing any of the other properties.
+  - `VRCPlayerApi player` - A reference to the player that owns the contact component, if applicable. For contact components in the world, this value will be null.
+  - `DynamicsUsage usage` - Describes what kind of content the contact component belongs to. This will be `World` for any contacts that are part of your world, and `Avatar` for any that are part of an avatar.
+  - `Vector3 position` - The world space position of the contact component's root transform.
+  - `Quaternion rotation` - The world space rotation of the contact component's root transform.
+  - `Vector3 scale` - The lossy scale of the contact component's root transform.
 - You can read and set the `radius`, `height`, `position` and `rotation` properties of a Contact Sender or Contact Receiver by getting and setting those fields.
   - If you ever change these properties, you must also call `ApplyConfigurationChanges()` on the Contact after you've finished making all of your changes, otherwise they won't actually be applied back to the Contact.
   - **Configuration changes to Contacts can get expensive!** If you overdo it, you might cause performance problems that make your world uncomfortable for players - avoid changing these properties too frequently, and try to batch together as many changes as possible before applying them.
