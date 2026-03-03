@@ -205,14 +205,16 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
 
-![Three Udon Graph nodes that gets all players.](/img/worlds/graphgetplayers.png)
+![A screenshot of the Udon Graph.](/img/worlds/graph-helloworld.png)
 
 </TabItem>
 <TabItem value="cs" label="UdonSharp">
 
 ```cs showLineNumbers
-var players = new VRCPlayerApi[VRCPlayerApi.GetPlayerCount()];  
-VRCPlayerApi.GetPlayers(players);
+private void Start()
+{
+    Debug.Log("Hello, world!");
+}
 ```
 
 </TabItem>
@@ -229,14 +231,16 @@ import TabItem from '@theme/TabItem';
 <Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
 
-![A screenshot of the Udon Graph.](/img/worlds/graphgetplayers.png)
+![A screenshot of the Udon Graph.](/img/worlds/graph-helloworld.png)
 
 </TabItem>
 <TabItem value="cs" label="UdonSharp">
 
 ```cs showLineNumbers
-var players = new VRCPlayerApi[VRCPlayerApi.GetPlayerCount()];  
-VRCPlayerApi.GetPlayers(players);
+private void Start()
+{
+    Debug.Log("Hello, world!");
+}
 ```
 
 </TabItem>

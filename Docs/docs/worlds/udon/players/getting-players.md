@@ -28,28 +28,65 @@ Gets the actual number of Players in the instance when it is called.
 ### GetPlayers
 *VRCPlayerApi[]*
 
-This is how you get all the Players in your world so you can go through them in a For Loop and apply settings, make changes, look for a particular name, etc. To use it, you *first need to create a VRCPlayerApi Array*.
+This is how you get all the Players in your world so you can go through them in a For Loop and apply settings, make changes, look for a particular name, etc.
 
+The easiest way to do this is to use the version that doesn't accept any parameters.
 
 <Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
 
-![The bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.](/img/worlds/graphgetplayers.png)
+![The bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi[] as a variable so you can reuse it.](/img/worlds/graphgetplayers_alloc.png)
 
 </TabItem>
 <TabItem value="cs" label="UdonSharp">
 
-```cs
-var players = new VRCPlayerApi[VRCPlayerApi.GetPlayerCount()];  
-VRCPlayerApi.GetPlayers(players);
+```cs  
+VRCPlayerApi[] players = VRCPlayerApi.GetPlayers();
+for (int i = 0; i < players.Length; i++)
+{
+    VRCPlayerApi player = players[i];
+    // Do something with the player...
+}
 ```
 
 </TabItem>
 </Tabs>
 
+The approach above works, but it also allocates memory each time it's used, which means it will reconstruct the VRCPlayerApi array every time.
 
+If you're using this method frequently (for example, every frame), you should use the non-allocating version instead, where you pass in a VRCPlayerApi array stored as a variable to be reused each time. Make sure the array is large enough to hold as many players as your world can ever allow!
 
-Above, you can see the bare minimum for a working call to GetPlayers. A better approach would be to construct VRCPlayerApi\[\] as a variable so you can reuse it.
+<Tabs groupId="udon-compiler-language">
+<TabItem value="graph" label="Udon Graph">
+
+![A more efficient pattern for using GetPlayers regularly. This approach constructs VRCPlayerApi[] as a variable that gets reused, avoiding constructing a new one in memory every time GetPlayers runs.](/img/worlds/graphgetplayers_nonAlloc.png)
+
+</TabItem>
+<TabItem value="cs" label="UdonSharp">
+
+```cs
+private VRCPlayerApi[] players;
+
+private void Start()
+{
+    players = new VRCPlayerApi[100]; // The array should be large enough to hold all of your players at once.
+}
+
+private void Update()
+{
+    VRCPlayerApi.GetPlayers(players);
+    int playerCount = VRCPlayerApi.GetPlayerCount();
+    for (int i = 0; i < playerCount; i++)
+    {
+        VRCPlayerApi player = players[i];
+        // Do something with the player...
+    }
+}
+```
+
+</TabItem>
+</Tabs>
+
 
 ### GetPlayerById
 *int*

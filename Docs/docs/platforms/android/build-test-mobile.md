@@ -6,7 +6,7 @@ import CurrentUnityVersion from '@site/src/components/UnityVersionedText.js';
 
 # Build and Test for Android Mobile
 
-You can test a VRChat world on your Android device without publishing it using the Build and Test feature. This document describes how you can set up and use this functionality to build worlds more quickly!
+You can test a VRChat world and avatars on your Android device without publishing it using the Build and Test feature. This document describes how you can set up and use this functionality to build worlds and avatars more quickly!
 
 ## Set Up For Build and Test
 
@@ -14,7 +14,7 @@ To use Build and Test for Android Mobile you need to set up your Unity Android T
 
 ### Set Up Unity Android Tools
 
-You need the Android Build Support module installed for your VRChat-compatible Unity Editor to work on Android worlds in the first place. You may already have this, as the VRChat Creator Companion installs it by default. Follow the steps below to check this.
+You need the Android Build Support module installed for your VRChat-compatible Unity Editor to work on Android content in the first place. You may already have this, as the VRChat Creator Companion installs it by default. Follow the steps below to check this.
 
 1. Open Unity Hub and navigate to "Installs" on the left.
 2. Find the install for the Unity version that your project uses (the current recommended version is [<CurrentUnityVersion/>](/sdk/upgrade/current-unity-version/)). If your install lists "Android" below the Editor path, then you already have the module installed, and you can move on to Setting up your Project. Otherwise, continue to step 3.
@@ -25,7 +25,7 @@ You need the Android Build Support module installed for your VRChat-compatible U
 4. Find "Android Build Support" and tick the box next to it.
 5. Click continue to install the Android build support module.
 
-You should now be able to build worlds for Android.
+You should now be able to build content for Android.
 
 ### Set Up Your Project to Target Android
 
@@ -35,7 +35,7 @@ Find the "Select Platform" section and change it to "Android".
 
 ### Set Up Your Android Device to Test Worlds
 
-Build and Test for Mobile makes use of the [Android Debug Bridge](https://developer.android.com/tools/adb) (ADB) to transfer built world files to your android device.
+Build and Test for Mobile makes use of the [Android Debug Bridge](https://developer.android.com/tools/adb) (ADB) to transfer built asset bundle files to your android device.
 
 ADB uses USB debugging on an android device to communicate with the device. This allows ADB to send files and launch apps, among many other debug related features.
 
@@ -45,7 +45,7 @@ Enabling USB debugging also requires you to enter developer mode on your device.
 
 USB debugging allows your computer to perform many potentially dangerous operations without any notification. You should only use it with applications that you trust. 
 
-The VRChat SDK uses USB debugging to send files to your device, open the VRChat app, and launch your test world.
+The VRChat SDK uses USB debugging to send files to your device, open the VRChat app, and launch your test world or load your test avatar.
 
 :::
 
@@ -70,9 +70,20 @@ To learn how to set up developer mode on your headset, read [Meta's instructions
 With developer mode enabled, USB debugging enabled, and your Android device plugged in, you should now be able to build and test.
 
 ### First Launch
+Both avatars and worlds can be tested on Android devices. The process is largely the same.
+#### Avatars
+To test a new avatar on Android, you must first [follow the above steps to enable USB debugging](#set-up-your-android-device-to-test-worlds).
 
+Once you've successfully set up USB debugging, open the VRChat app and load it into an instance. Then, click the "Build and Test New Build" button in the SDK.
+
+Your avatar appears in the avatars section of the main menu, under the "SDK Test Avatars" tab.
+
+When you use a test avatar, you automatically switch to its newest version whenever you build and test.
+
+#### Worlds
+Testing worlds has a few extra requirements
 * Ensure that you have launched the app at least once to allow app directories to be generated before trying to test a world, and then close VRChat. 
-* The VRChat appplication must be closed before launching into a test world for the first time.
+* The VRChat application must be closed before launching into a test world for the first time.
 * Your Android device must remain unlocked for ADB to be able to launch the VRChat app into a test world.
 
 With everything above set up, and your Project in Android mode, press the "Build and Test New Build" button to test the world on your device.
@@ -148,4 +159,4 @@ You should be able to use ADB over Wi-Fi now.
 
 Try running `adb devices -l` to see if it's working. You should see your device in the list of devices now.
 
-You can now go back to the SDK and click "Build & Test New Build" to test a world over Wi-Fi.
+You can now go back to the SDK and click "Build & Test New Build" to test content over Wi-Fi.
