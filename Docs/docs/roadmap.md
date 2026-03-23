@@ -7,23 +7,25 @@ This page gives you an overview of upcoming and recently completed features for 
 
 :::note 
 
-This page was last updated on November 20, 2025 and may be outdated. For the latest information, visit VRChat's [feedback board](https://feedback.vrchat.com/),  [forum](https://ask.vrchat.com/c/official/31), and [SDK release notes](/releases/).
+This page was last updated on March 23, 2025 and may be outdated. For the latest information, visit VRChat's [feedback board](https://feedback.vrchat.com/),  [forum](https://ask.vrchat.com/c/official/31), and [SDK release notes](/releases/).
 
 :::
 
-| Status          | Name                                                                                                                                                              |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Complete[^1]    | [Physbones in the Worlds SDK](https://feedback.vrchat.com/udon/p/physbones-in-the-worlds-sdk)                                                                     |
-| Complete[^1]    | [VRC Constraints for worlds](https://feedback.vrchat.com/feature-requests/p/vrc-constraints-add-vrc-constraints-to-the-worlds-sdk)                                |
-| Complete[^1]    | [VRC Contacts for worlds](https://feedback.vrchat.com/udon/p/vrc-contacts-for-worlds)                                                                             |
-| Complete        | [Camera Dolly in Udon](https://feedback.vrchat.com/udon/p/camera-dolly-in-udon)                                                                                   |
-| Complete        | [Pickup auto hold for VR](https://feedback.vrchat.com/udon/p/vrcpickup-auto-hold-does-not-work-on-any-platform-except-for-desktop-and-vive-wa)                    |
-| Complete        | [World networking compatibility check](/worlds/udon/networking/compatibility/)                                                                                    |
-| Complete        | [Debug UI overhaul](/worlds/udon/world-debug-views/)                                                                                                              |
-| Complete        | [Listing gifting](/economy/listings)                                                                                                                              |
-| Open Beta[^2]   | [Steam Audio](https://feedback.vrchat.com/feature-requests/p/replace-onsp-with-steam-audio)                                                                       |
-| In progress[^3] | [Soba](https://feedback.vrchat.com/udon/p/udon-2)                                                                                                                 |
-| In progress[^3] | [Avatar optimizer](https://feedback.vrchat.com/avatar-30/p/automatic-avatar-optimization-in-sdk)                                                                  |
+
+| Status | Name |
+|----|----|
+| Complete[^1] | [Replace ONSP with Steam Audio](https://feedback.vrchat.com/feature-requests/p/replace-onsp-with-steam-audio)[^1] | 
+| Complete[^1] | [Add "Unique Random" playback order to the Animator Play Audio state behaviour](https://creators.vrchat.com/avatars/state-behaviors/#animator-play-audio) | 
+| Complete[^1] | Add/Expose [EventTiming.PostLateUpdate](https://feedback.vrchat.com/udon/p/please-add-eventtimingpostlateupdate), [EventTiming.FixedUpdate](https://feedback.vrchat.com/udon/p/please-add-eventtimingfixedupdate),<br/>and [Behaviour.isActiveAndEnabled](https://feedback.vrchat.com/sdk-bug-reports/p/expose-behaviourisactiveandenabled-to-udon-or-create-new-property-for-udonbehavi) to Udon |
+| Complete[^1] | [Improve VRCPlayerAPI.GetPlayers](https://feedback.vrchat.com/sdk-bug-reports/p/improve-vrcplayerapigetplayers) | Get a list of players without needing to provide an array as a parameter.
+| In progress[^3]| [Add a 'Box' ShapeType](https://feedback.vrchat.com/sdk-bug-reports/p/add-a-box-shapetype) |
+| In progress[^3]| [Add raycast component to avatars SDK](https://feedback.vrchat.com/avatar-30/p/add-raycast-component-to-avatars-sdk) |
+| In progress[^3]| [Implement custom "global" physbone colliders](https://feedback.vrchat.com/feature-requests/p/implement-custom-global-physbone-colliders) |
+| In progress[^3] | [VRCTween](https://feedback.vrchat.com/feature-requests/p/whitelist-dotween-for-sdk3) |
+| In progress[^3] | [Expose VRC+ status to Udon](https://feedback.vrchat.com/feature-requests/p/expose-vrc-status-to-udon) |
+| In progress[^3] | [Soba](https://feedback.vrchat.com/udon/p/udon-2) |
+| In progress[^3] | [Avatar optimizer](https://feedback.vrchat.com/avatar-30/p/automatic-avatar-optimization-in-sdk) |
+| Planned [^4] | [World analytics](https://feedback.vrchat.com/udon/p/give-world-creators-access-to-analytics-about-their-world) |
 
 
 Please keep in mind that this list is subject to change. It also doesn’t include:
