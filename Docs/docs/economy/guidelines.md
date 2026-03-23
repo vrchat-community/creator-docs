@@ -65,10 +65,10 @@ The guidelines rules are subject to change as VRChat continues to explore new im
 	1. If you want to visibly and materially change a base avatar that has already been purchased, contact the VRChat Economy Team to discuss it. We may adjust this policy in the future.
 4. Your avatar must not use colliders or [stations](/worlds/components/vrc_station/) to fly, teleport, or move quicker than other VRChat avatars.
 	1. For example: You may use GoGo Loco, but not GoGo Flight.
-5.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 1,200<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
-	1. If your listing contains two different avatars, it must cost at least 2,400<ThemedCreditIcon/> (1,200 <ThemedCreditIcon/> × 2).
-	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 1,200<ThemedCreditIcon/>.
-	3. If your listing contains a single avatar, it must cost at least 1,200<ThemedCreditIcon/>.
+5.  If your listing contains [avatar products](/economy/products/avatar), its price must be at least 600<ThemedCreditIcon/> per different avatar product in the listing, excluding variants of the same avatar. For example:
+	1. If your listing contains two different avatars, it must cost at least 1,200<ThemedCreditIcon/> (600<ThemedCreditIcon/> × 2).
+	2. If your listing contains two variants of the same avatar, i.e. different colors or outfits, it must cost at least 600<ThemedCreditIcon/>.
+	3. If your listing contains a single avatar, it must cost at least 600<ThemedCreditIcon/>.
 6. Your avatar must follow the avatar content guidelines below.
 	1. If your listing contains avatar products and Udon products, ensure that the Udon product is also consistent with the content guidelines below.
 
