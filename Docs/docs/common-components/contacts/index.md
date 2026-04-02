@@ -117,7 +117,7 @@ Contact Receiver components in worlds offer no configuration options. Instead, R
 
 ## Udon Access in Worlds
 
-- You can create fields and variables that reference Contact Senders and Contact Receivers in your world using the types `VRCContactSender` and `VRCContactReceiver` respectively. Both of these classes are in the namespace `VRC.SDK3.Dynamics.Contact.Components`.
+- You can create fields and variables that reference Contact Senders and Contact Receivers in your world using the types `VRCContactSender` and `VRCContactReceiver` respectively. Both of these classes are in the namespace `VRC.SDK3.Dynamics.Contact.Components`. `ContactEnterInfo` and `ContactExitInfo` argument types are in the namespace `VRC.Dynamics`.
 - To detect when a Contact Sender and Contact Receiver come together, you can attach an UdonGraph or UdonSharp behaviour to the same game object as the Contact Receiver component and use the following events:
   - `OnContactEnter(ContactEnterInfo contactInfo)` - Called when a Contact Sender starts contacting the Contact Receiver. The parameter is a data structure containing this information about the contact:
     - `ContactSenderProxy contactSender` - A reference to the Contact Sender component involved in this collision.
