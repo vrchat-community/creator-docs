@@ -208,6 +208,10 @@ If you have a world, you can use the [open listing example prefab](/economy/sdk/
 
 You can edit the details of your listings on the [My Listings](https://vrchat.com/home/marketplace/storefront/listings/) page.
 
+## Testing Duration and Permanent Listing Purchases
+
+To test purchasing an active duration or permanent listing again, you must revoke the purchase on the [Revenue](https://vrchat.com/home/marketplace/storefront/revenue/mysales/) page. This step is required before re-purchasing the listing.
+
 ### Details
 
 You can edit most details of your listing at any time, even after publishing it:
