@@ -5,7 +5,7 @@ The ClientSim representation of a player has been split into many components com
 
 ## ClientSimPlayer
 
-The ClientSimPlayer class is the container that holds all the systems for the player. While both local and remote players have a ClientSimPlayer, it is only initialized for the local player. All systems for the remote player are left blank, other than the [Avatar}(#avatar) and VRCPlayerApi changeable data. The ClientSimPlayer is the first component on the top level object on the Player prefabs. In the inspector, you can view and modify VRCPlayerApi data such as Locomotion Settings and Audio Settings at runtime.
+The ClientSimPlayer class is the container that holds all the systems for the player. While both local and remote players have a ClientSimPlayer, it is only initialized for the local player. All systems for the remote player are left blank, other than the [Avatar](#avatar) and VRCPlayerApi changeable data. The ClientSimPlayer is the first component on the top level object on the Player prefabs. In the inspector, you can view and modify VRCPlayerApi data such as Locomotion Settings and Audio Settings at runtime.
 
 ## TrackingProvider
 
