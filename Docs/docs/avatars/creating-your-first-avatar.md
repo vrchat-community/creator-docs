@@ -14,8 +14,9 @@ To upload a custom avatar with Unity and the VRChat SDK, you must meet the follo
 
 - You must have an account on [VRChat.com](https://vrchat.com/).
   - If you're playing on a Steam or Meta account, you'll need to [link your account first](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-platform-account-through-Steam-Meta-Pico-or-Viveport-into-a-VRChat-account).
-- Your VRChat account must have a [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) of "New User" or higher.
+- To upload an avatar, your VRChat account must have a [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) of "New User" or higher.
   - If you're new to VRChat, you'll receive an email once you're allowed to upload avatars.
+  - You can still locally build and test avatars until you reach this trust rank. This means you can work on and test your avatar, but only you'll be able to see it.
 
 :::tip Need help?
 
@@ -227,13 +228,20 @@ Simply follow the steps in VRChat's SDK build panel:
 
 
 ## Step 7 - Building and uploading the avatar!
-Now everything is ready. Press the "Build & Publish" button, and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).
+
+:::info
+
+Your [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) must be "New User" or higher to upload content to VRChat. If your rank is "Visitor", you can still locally build and test your avatars.
+
+:::
+
+If you're ready to upload your avatar for other users to see, choose the "Build & Publish Your Avatar Online" build type and press "Build & Publish", and the SDK will start building and uploading your avatar. Before uploading your avatar, you should double-check that it complies with VRChat's [Terms of Service](https://hello.vrchat.com/legal) and [Community Guidelines](https://hello.vrchat.com/community-guidelines).
 
 After uploading your avatar, it should be available in VRChat. You can also see your avatar in  `VRChat SDK > Show Control Panel > Content Manager`.
 
-You can also test your avatar without uploading it. To do this, click "Build & Test" instead. Your avatar will appear in the "Other" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
+You can also test your avatar without uploading it. To do this, switch the build type to "Build & Test Your Avatar". After a local build, your avatar will appear in the "SDK Test Avatars" section of your VRChat Avatars menu. Test avatars can only be seen by you. In order for other players to see your avatar, you need to upload it.
 
-Additionally, you can launch with the `--watch-avatars` launch option that will make it so that if you're wearing an avatar from the "Other" section, any future tests will immediately switch you to the new version of the avatar.
+Additionally, you can launch with the `--watch-avatars` launch option that will make it so that any future local builds will immediately switch you to the new version of the avatar.
 
 ## Step 8 - Enjoy your avatar!
 

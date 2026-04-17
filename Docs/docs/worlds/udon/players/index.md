@@ -85,6 +85,13 @@ out: *Boolean*
 
 Tells you whether the given player is the current instance owner.
 
+### Get isVRCPlus
+in: *VRCPlayerApi*
+
+out: *Boolean*
+
+Tells you whether the given player has an active VRC+ subscription.
+
 ### Get isSuspended
 in: *VRCPlayerApi*
 
