@@ -71,18 +71,20 @@ However, even with these basic upgraded systems, there are some new features.
 
 ### Local Avatar Testing
 
-Ever wanted to iterate and test an avatar without uploading it? Well, with Avatars 3.0, now you can!
+This feature allows you to iterate and test an avatar without uploading it to VRChat.
 
 In the "Builder" tab of the VRChat SDK control panel, you can now select "Build & Test" in the "Offline Testing" section. When you click this, your avatar will be built, and then copied into the the following folder:
 
 - Windows: `%LocalAppdata%Low\VRChat\VRChat\Avatars`
 - Linux: `$HOME/.local/share/VRChat/VRChat/Avatars/`
 
-When you launch VRChat, you'll be able to access this avatar locally by looking in the "Other" section of the Avatar menu! Only you will be able to see it, but you can make changes to your avatar, click "Build & Test" again, and after a short build, your avatar will be updated. Simply re-select the avatar in your menu and click "Change" again, and you'll swap into the new testing avatar.
+When you launch VRChat, you'll be able to access this avatar locally by looking in the "SDK Test Avatars" section of the Avatar menu. When you make changes to your avatar and build it again, your avatar will be updated; simply re-select the avatar in your menu and click "Apply" again, and you'll swap into the new testing avatar.
 
-This avatar is _only_ visible to you! To everyone else, you'll look like you're wearing the last avatar you were wearing before swapping into the local test avatar. For our AV3 testers, this made iteration a TON faster. We hope you like it!
+Alternatively, if you launch VRChat with the `--watch-avatars` launch option, VRChat will monitor for newly built local avatars and switch you to them automatically.
 
-To delete the copied local test avatar, go to "Content Manager" tab of the VRChat SDK control panel. You will see your avatar in "Test Avatars" section at the bottom. Click "Delete" and it will disappear from "Other" section of the Avatar menu when you reopen it.
+Locally built avatars are _only_ visible to you! To everyone else, you'll look like you're wearing the last avatar you were wearing before swapping into the local test avatar. This can make iterating on avatars a TON faster. We hope you like it!
+
+To delete the copied local test avatar, go to "Content Manager" tab of the VRChat SDK control panel. You will see your avatar in "Test Avatars" section at the bottom. Click "Delete" and it will disappear from the "SDK Test Avatars" section of the Avatar menu when you reopen it.
 
 ### Simulated Eye Movement
 

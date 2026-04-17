@@ -9,9 +9,12 @@ This guide explains how to create and upload a very simple VRChat world. You'll 
 
 Before you get started, ensure that you meet the following requirements:
 
-- A VRChat account
-- Trust rank of "New User" or higher
-- A [Unity project with the VRChat SDK](/sdk) set up
+- You should have a [Unity project with the VRChat SDK](/sdk) set up.
+- You must have an account on [VRChat.com](https://vrchat.com/).
+  - If you're playing on a Steam or Meta account, you'll need to [link your account first](https://help.vrchat.com/hc/en-us/articles/360062659053-I-want-to-turn-my-platform-account-through-Steam-Meta-Pico-or-Viveport-into-a-VRChat-account).
+- To upload a world, your VRChat account must have a [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) of "New User" or higher.
+  - If you're new to VRChat, you'll receive an email once you're allowed to upload worlds.
+  - You can still locally build and test worlds until you reach this trust rank. This means you can work on and test your world, but only you'll be able to visit it.
 
 :::info
 
@@ -46,6 +49,8 @@ If you'd like to create additional spawn points, create an empty Game Object and
 
 If you have more than one spawn point, you can choose the order in which people will spawn into them by changing the **Spawn Order** property.
 
+When multiple players spawn into your world in rapid succession (for example, as everyone arrives after going through a portal), they may appear inside one another if they use the same spawn point. To avoid this, you can set the Spawn Radius to a value above zero to have players spawn at a random point in a disc around each spawn point instead.
+
 ## Step 3 - Descriptor Settings
 
 There are various settings in the [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor) that change the behavior of your world. Here are some of the more important ones.
@@ -63,19 +68,19 @@ More settings can be found on the [VRC_SceneDescriptor](/worlds/components/vrc_s
 
 Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you need to give VRChat some basic information about it, such as the world's name, capacity, or content warnings.
 
-![VRChat's SDK World build panel.](/img/worlds/build-panel-worlds-2023.png)
+![VRChat's SDK World build panel.](/img/worlds/build-panel-worlds-2025.png)
 
-- World name - The name of your world, as shown to everyone.
+- Name - The name of your world, as shown to everyone.
 - Description - This will be displayed on the 'World Details' page in VRChat and on the website.
-- Content warnings - Warnings that work in conjunction with VRChat's [Content Gating system](https://hello.vrchat.com/blog/content-gating).
-- Maximum capacity - The maximum amount of players allowed in your world.
+- Maximum Capacity - The maximum amount of players allowed in your world.
   - If an instance has reached its player capacity, new players cannot join.
   - The instance creator, world creator, or group owner can always join, even if it would exceed the player capacity. (Unless they do not have permission to enter/see that instance)
-- Recommended capacity - The recommended maximum amount of players for your world.
+- Recommended Capacity - The recommended maximum amount of players for your world.
   - If a public instance has reached its recommended capacity, VRChat will discourage more players from joining. The instance will stop appearing in VRChat's list of public instances.
   - Players can still try to join the instance under some circumstances if they have a direct invite URL on vrchat.com.
+- Content Warnings - Warnings that work in conjunction with VRChat's [Content Gating system](https://hello.vrchat.com/blog/content-gating).
 - Tags - Keywords that help users find your world in VRChat.
-- World debugging - Allows other users to debug your Udon code.
+- World Debugging - Allows other users to debug your Udon code.
 - Thumbnail - A preview image of your world.
 
 :::note What if my world doesn't have a recommended capacity?
@@ -91,9 +96,7 @@ If you uploaded your VRChat world with an old VRChat SDK, without 'recommended c
 
 ## Step 5 - Check for warnings or validation messages
 
-![Validations in the SDK build panel.](/img/worlds/build-panel-validations-everything-looks-good.png)
-
-At the bottom of the VRChat SDK build panel, you'll find a section called **Validations**. It contains suggestions on how to set up your scene and build your world. For example:
+In the second section of the VRChat SDK build panel, you'll find a list of alerts and validation messages. These are suggestions on how to set up your scene and build your world. For example:
 
 - Is your scene missing a VRC Scene Descriptor?
 - Is your scene missing VRChat's layers and collision layer matrix?
@@ -103,20 +106,36 @@ The SDK will often give you the option to fix these issues automatically. If not
 
 ## Step 6 - Building and publishing your World
 
-Next, you need to build the world! You'll need to choose what you will be doing first: You can either make a **test build** to test your world without uploading it or **publish** your world directly to VRChat. Under both "Offline Testing" and "Online Publishing" headings, you will find buttons to publish a new build or your last build. Last Build takes the last successful build of the world to either test or upload. New Build puts a new world together to either test or upload.
+:::info
 
-![Validations in the SDK build panel.](/img/worlds/build-panel-upload-or-test.png)
+Your [trust rank](https://docs.vrchat.com/docs/vrchat-safety-and-trust-system#trust-rank) must be "New User" or higher to upload content to VRChat. If your rank is "Visitor", you can still locally build and test your worlds.
 
-_(Optional)_  
-If you wish to test your world, go to **Offline Testing** and click **Build & Test New Build**. This will build a new version of your world and launch into the world in VRChat. The **Number of Clients** option is used when you want to open multiple VRChat windows for testing your world with multiple players.
+:::
 
-Once you're ready to publish your world, go to **Online Publishing** and click **Build and Upload**! This will build you world and get it ready for upload. Keep in mind that you're not permitted to upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so will result in moderation action.
+Next, you need to build the world! Under the "Build Type" drop-down menu, you have a few different options for what you want to do next:
+- If you want to upload your world directly to VRChat so other users can visit it, choose "Build & Publish Your World Online".
+- If you instead want to test your world without uploading it, choose any of the appropriate testing options:
+  - "Build & Test Your World" - Builds your world and then launches it in VRChat.
+  - "Build & Reload Your World" - Builds your world, then automatically sends you to the locally built world in your current VRChat session. If VRChat is not running, this will just build the world.
+  - "Test Your Last Build" - Launches the most recent build of your world in VRChat.
+  - "Reload Your Last Build" - Automatically sends you to the most recent build of your world in your current VRChat session. If VRChat is not running, this will do nothing.
 
-After uploading your world, it will become available in VRChat! You should able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
+You should also select which platforms you'd like to build your world for.
+
+When using any of the local build options, you'll see these additional settings:
+- Clients - How many VRChat clients the SDK should start during local testing. Setting this to a value above 1 will start multiple VRChat sessions you can control independently, which can be useful for testing network related features. Setting it to 0 will prevent any clients from starting.
+- Force Non-VR - If enabled, the SDK will start VRChat in desktop mode even if a VR headset is detected.
+- Enable World Reload - If enabled, the SDK will start VRChat with world watching enabled. This means the client will automatically send you to local worlds that are built while it's running.
+
+![The SDK World Build section.](/img/worlds/build-panel-section.png)
+
+Keep in mind that you're not permitted to upload content to VRChat that violates our [Community Guidelines](https://vrchat.com/community-guidelines) or [Terms of Service](https://vrchat.com/legal). Doing so will result in moderation action.
+
+After uploading your world, it will become available in VRChat! You should be able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
 :::caution World Upload Failures
 
-If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If so, then solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
+If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If there are any, solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
 
 Check our other documentation, the [Ask Forum](https://ask.vrchat.com/),  or ask on [Discord](https://discord.com/invite/vrchat) if you need help. Make sure to provide as much information as possible, such as Unity console errors.
 
