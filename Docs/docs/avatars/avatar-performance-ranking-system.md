@@ -66,32 +66,33 @@ Bolded stats will cause the avatar to be fully blocked if they exceed the Minimu
 
 For example with the Minimum Displayed Performance Rank set to Poor an avatar with 9 Trail Renderers (Very Poor) will be displayed with all of its Trail Renderers removed. Refer to [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) for more information.
 
-| Avatar Quality                     | Quality Description                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Triangles                          | The triangle count of the model in question. (In the past, this was incorrectly referred to as "Polygons.")                                                                                                                                                                                                                                  |
-| Bounds Size                        | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time.<br/>Important note: Bounds Size will not cause the avatar to be blocked, even if it is below the "Minimum Displayed Performance Rank" setting.                                                 |
-| Texture Memory                     | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory.                                                                                                                                                                                         |
-| Skinned Meshes                     | The number of Skinned Mesh Renderer components on the avatar.                                                                                                                                                                                                                                                                                |
-| Basic Meshes                       | The number of (non-skinned) Mesh Renderer components on the avatar.                                                                                                                                                                                                                                                                          |
-| Material Slots                     | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
-| PhysBones Components               | The number of PhysBone components on the avatar.                                                                                                                                                                                                                                                                                             |
-| PhysBones Affected Transforms      | The total number of transforms affected by PhysBones components on the avatar.                                                                                                                                                                                                                                                               |
-| PhysBones Colliders                | The number of PhysBone collider scripts on the avatar.                                                                                                                                                                                                                                                                                       |
-| PhysBones Collision Check Count    | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                                                                 |
-| Contacts                           | The number of Contacts on the avatar. Does not count [receivers](/common-components/contacts/#vrccontactreceiver) with [filtering](/common-components/contacts/#filtering-1) set to "Local Only."                                                                                                                                            |
-| Constraint Count                   | The total number of VRChat constraints and Unity constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance) |
-| Constraint Depth                   | The deepest chain of dependencies across all constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance) |
-| Animators                          | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators.                                                                                                                               |
-| Bones                              | The number of Bones in the avatar's rig.                                                                                                                                                                                                                                                                                                     |
-| Lights                             | The number of Light components on the avatar.                                                                                                                                                                                                                                                                                                |
-| Particle Systems                   | The number of Particle System components on the avatar.                                                                                                                                                                                                                                                                                      |
-| Total Particles Active             | The sum of maxParticles across all particle systems on the avatar.                                                                                                                                                                                                                                                                           |
-| Mesh Particle Active Polys         | The total number of triangles of Mesh Particles emitted by Particle Systems that are active. In other words, maxEmission * meshParticleVerts.                                                                                                                                                                                                |
-| Particle Trails Enabled            | If any Particle Systems on the avatar have Particle Trails enabled, this will be True.                                                                                                                                                                                                                                                       |
-| Particle Collision Enabled         | If any Particle Systems on the avatar have Particle Collision enabled, this will be True.                                                                                                                                                                                                                                                    |
-| Trail Renderers                    | The number of Trail Renderers on the avatar.                                                                                                                                                                                                                                                                                                 |
-| Line Renderers                     | The number of Line Renderers on the avatar.                                                                                                                                                                                                                                                                                                  |
-| Cloths                             | The total number of Cloth components on the avatar.                                                                                                                                                                                                                                                                                          |
+| Avatar Quality                  | Quality Description                                                                                                                                                                                                                                                                                                                          |
+|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Triangles                       | The triangle count of the model in question. (In the past, this was incorrectly referred to as "Polygons.")                                                                                                                                                                                                                                  |
+| Bounds Size                     | The total size of the avatar. If this is really huge, that user probably has a large animation on the avatar that isn't showing all the time.<br/>Important note: Bounds Size will not cause the avatar to be blocked, even if it is below the "Minimum Displayed Performance Rank" setting.                                                 |
+| Texture Memory                  | The amount of memory estimated to be in use by the avatar's textures. These textures occupy space in both system RAM and in the video card's memory.                                                                                                                                                                                         |
+| Skinned Meshes                  | The number of Skinned Mesh Renderer components on the avatar.                                                                                                                                                                                                                                                                                |
+| Basic Meshes                    | The number of (non-skinned) Mesh Renderer components on the avatar.                                                                                                                                                                                                                                                                          |
+| Material Slots                  | The number of material slots on the avatar. Material slots are the slots on the mesh where you fit materials in. This is what counts toward Submesh creation, which incurs further draw calls. Keep in mind that Particle Systems will use one material slot, Particle System with trails use two, and Line Renderers use one material slot. |
+| PhysBones Components            | The number of PhysBone components on the avatar.                                                                                                                                                                                                                                                                                             |
+| PhysBones Affected Transforms   | The total number of transforms affected by PhysBones components on the avatar.                                                                                                                                                                                                                                                               |
+| PhysBones Colliders             | The number of PhysBone collider scripts on the avatar.                                                                                                                                                                                                                                                                                       |
+| PhysBones Collision Check Count | The sum of how many PhysBone transforms each collider can affect. This can count transforms twice or more, because a single transform can be affected by multiple colliders.                                                                                                                                                                 |
+| Contacts                        | The number of Contacts on the avatar. Does not count [receivers](/common-components/contacts/#vrccontactreceiver) with [filtering](/common-components/contacts/#filtering-1) set to "Local Only."                                                                                                                                            |
+| Constraint Count                | The total number of VRChat constraints and Unity constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance)                                                                                                                                                                                 |
+| Constraint Depth                | The deepest chain of dependencies across all constraints on the avatar. [Click here for more detailed info.](/common-components/constraints#performance)                                                                                                                                                                                     |
+| Animators                       | The number of Animators on the avatar. Important note: This will always be at least 1 due to the root animator being counted. This means that for the Excellent ranking, you can have no additional animators.                                                                                                                               |
+| Bones                           | The number of Bones in the avatar's rig.                                                                                                                                                                                                                                                                                                     |
+| Lights                          | The number of Light components on the avatar.                                                                                                                                                                                                                                                                                                |
+| Particle Systems                | The number of Particle System components on the avatar.                                                                                                                                                                                                                                                                                      |
+| Total Particles Active          | The sum of maxParticles across all particle systems on the avatar.                                                                                                                                                                                                                                                                           |
+| Mesh Particle Active Polys      | The total number of triangles of Mesh Particles emitted by Particle Systems that are active. In other words, maxEmission * meshParticleVerts.                                                                                                                                                                                                |
+| Particle Trails Enabled         | If any Particle Systems on the avatar have Particle Trails enabled, this will be True.                                                                                                                                                                                                                                                       |
+| Particle Collision Enabled      | If any Particle Systems on the avatar have Particle Collision enabled, this will be True.                                                                                                                                                                                                                                                    |
+| Trail Renderers                 | The number of Trail Renderers on the avatar.                                                                                                                                                                                                                                                                                                 |
+| Line Renderers                  | The number of Line Renderers on the avatar.                                                                                                                                                                                                                                                                                                  |
+| Raycasts                        | The number of VRCRaycast components on the avatar.                                                                                                                                                                                                                                                                                           |
+| Cloths                          | The total number of Cloth components on the avatar.                                                                                                                                                                                                                                                                                          |
 
 ## Avatar Performance Ranks - Value Maximums per Rank
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
@@ -110,36 +111,37 @@ The SDK warns you of this and will require that you fix it before you upload.
 :::
 
 ## PC Limits
-| Avatar Quality                                                         | Excellent          | Good         | Medium       | Poor          |
-|------------------------------------------------------------------------| ------------------ | ------------ | ------------ | ------------ |
-| Triangles                                                              | 32,000             | 70,000       | 70,000       | 70,000       |
-| Bounds Size[^1]                                                        | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
-| Texture Memory                                                         | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
-| Skinned Meshes                                                         | 1                  | 2            | 8            | 16           |
-| Basic Meshes                                                           | 4                  | 8            | 16           | 24           |
-| Material Slots                                                         | 4                  | 8            | 16           | 32           |
-| [PhysBones](/common-components/physbones) Components             | 4                  | 8            | 16           | 32           |
-| [PhysBones](/common-components/physbones) Affected Transforms    | 16                 | 64           | 128          | 256          |
-| [PhysBones](/common-components/physbones) Colliders              | 4                  | 8            | 16           | 32           |
-| [PhysBones](/common-components/physbones) Collision Check Count  | 32                 | 128          | 256          | 512          |
-| [Contacts](/common-components/contacts)                          | 8                  | 16           | 24           | 32           |
-| [Constraint](/common-components/constraints) Count               | 100                | 250          | 300          | 350          |
-| [Constraint](/common-components/constraints) Depth               | 20                 | 50           | 80           | 100          |
-| Animators                                                              | 1                  | 4            | 16           | 32           |
-| Bones                                                                  | 75                 | 150          | 256          | 400          |
-| Lights                                                                 | 0                  | 0            | 0            | 1            |
-| Particle Systems                                                       | 0                  | 4            | 8            | 16           |
-| Total Particles Active                                                 | 0                  | 300          | 1000         | 2500         |
-| Mesh Particle Active Polys                                             | 0                  | 1000         | 2000         | 5000         |
-| Particle Trails Enabled                                                | False              | False        | True         | True         |
-| Particle Collision Enabled                                             | False              | False        | True         | True         |
-| Trail Renderers                                                        | 1                  | 2            | 4            | 8            |
-| Line Renderers                                                         | 1                  | 2            | 4            | 8            |
-| Cloths                                                                 | 0                  | 1            | 1            | 1            |
-| Total Cloth Vertices                                                   | 0                  | 50           | 100          | 200          |
-| Physics Colliders                                                      | 0                  | 1            | 8            | 8            |
-| Physics Rigidbodies                                                    | 0                  | 1            | 8            | 8            |
-| Audio Sources                                                          | 1                  | 4            | 8            | 8            |
+| Avatar Quality                                                  | Excellent          | Good         | Medium       | Poor         |
+|-----------------------------------------------------------------| ------------------ | ------------ | ------------ |--------------|
+| Triangles                                                       | 32,000             | 70,000       | 70,000       | 70,000       |
+| Bounds Size[^1]                                                 | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                  | 40 MB              | 75 MB        | 110 MB       | 150 MB       |
+| Skinned Meshes                                                  | 1                  | 2            | 8            | 16           |
+| Basic Meshes                                                    | 4                  | 8            | 16           | 24           |
+| Material Slots                                                  | 4                  | 8            | 16           | 32           |
+| [PhysBones](/common-components/physbones) Components            | 4                  | 8            | 16           | 32           |
+| [PhysBones](/common-components/physbones) Affected Transforms   | 16                 | 64           | 128          | 256          |
+| [PhysBones](/common-components/physbones) Colliders             | 4                  | 8            | 16           | 32           |
+| [PhysBones](/common-components/physbones) Collision Check Count | 32                 | 128          | 256          | 512          |
+| [Contacts](/common-components/contacts)                         | 8                  | 16           | 24           | 32           |
+| [Constraint](/common-components/constraints) Count              | 100                | 250          | 300          | 350          |
+| [Constraint](/common-components/constraints) Depth              | 20                 | 50           | 80           | 100          |
+| Animators                                                       | 1                  | 4            | 16           | 32           |
+| Bones                                                           | 75                 | 150          | 256          | 400          |
+| Lights                                                          | 0                  | 0            | 0            | 1            |
+| Particle Systems                                                | 0                  | 4            | 8            | 16           |
+| Total Particles Active                                          | 0                  | 300          | 1000         | 2500         |
+| Mesh Particle Active Polys                                      | 0                  | 1000         | 2000         | 5000         |
+| Particle Trails Enabled                                         | False              | False        | True         | True         |
+| Particle Collision Enabled                                      | False              | False        | True         | True         |
+| Trail Renderers                                                 | 1                  | 2            | 4            | 8            |
+| Line Renderers                                                  | 1                  | 2            | 4            | 8            |
+| [Raycasts](/avatars/avatar-components/raycast)[^3]              | 1                  | 4            | 8            | 15           |
+| Cloths                                                          | 0                  | 1            | 1            | 1            |
+| Total Cloth Vertices                                            | 0                  | 50           | 100          | 200          |
+| Physics Colliders                                               | 0                  | 1            | 8            | 8            |
+| Physics Rigidbodies                                             | 0                  | 1            | 8            | 8            |
+| Audio Sources                                                   | 1                  | 4            | 8            | 8            |
 
 The table below describes the requirements for PC avatars to receive a certain performance rank:
 
@@ -156,34 +158,37 @@ VRChat on Android and iOS (phones, tablets, and Meta Quest) has stricter limits 
 
 The table below describes the requirements for mobile avatar to receive a certain performance rank:
 
-| Avatar Quality                                                            | Excellent          | Good         | Medium       | Poor         |
-| ------------------------------------------------------------------------- | ------------------ | ------------ | ------------ | ------------ |
-| Triangles                                                                 | 7,500              | 10,000       | 15,000       | 20,000       |
-| Bounds Size[^1]                                                           | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
-| Texture Memory                                                            | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
-| Skinned Meshes                                                            | 1                  | 1            | 2            | 2            |
-| Basic Meshes                                                              | 1                  | 1            | 2            | 2            |
-| Material Slots                                                            | 1                  | 1            | 2            | 4            |
-| Animators                                                                 | 1                  | 1            | 1            | 2            |
-| Bones                                                                     | 75                 | 90           | 150          | 150          |
+| Avatar Quality                                                      | Excellent          | Good         | Medium       | Poor         |
+|---------------------------------------------------------------------|--------------------|--------------|--------------|--------------|
+| Triangles                                                           | 7,500              | 10,000       | 15,000       | 20,000       |
+| Bounds Size[^1]                                                     | 2.5m x 2.5m x 2.5m | 4m x 4m x 4m | 5m x 6m x 5m | 5m x 6m x 5m |
+| Texture Memory                                                      | 10 MB              | 18 MB        | 25 MB        | 40 MB        |
+| Skinned Meshes                                                      | 1                  | 1            | 2            | 2            |
+| Basic Meshes                                                        | 1                  | 1            | 2            | 2            |
+| Material Slots                                                      | 1                  | 1            | 2            | 4            |
+| Animators                                                           | 1                  | 1            | 1            | 2            |
+| Bones                                                               | 75                 | 90           | 150          | 150          |
 | [PhysBones](/common-components/physbones) Components[^2]            | 0                  | 4            | 6            | 8            |
 | [PhysBones](/common-components/physbones) Affected Transforms[^2]   | 0                  | 16           | 32           | 64           |
 | [PhysBones](/common-components/physbones) Colliders[^2]             | 0                  | 4            | 8            | 16           |
 | [PhysBones](/common-components/physbones) Collision Check Count[^2] | 0                  | 16           | 32           | 64           |
-| [Contacts](/common-components/contacts)[^2]                        | 2                  | 4            | 8            | 16           |
+| [Contacts](/common-components/contacts)[^2]                         | 2                  | 4            | 8            | 16           |
 | [Constraint](/common-components/constraints) Count[^2]              | 30                 | 60           | 120          | 150          |
 | [Constraint](/common-components/constraints) Depth[^2]              | 5                  | 15           | 35           | 50           |
-| Particle Systems                                                          | 0                  | 0            | 0            | 2            |
-| Total Particles Active                                                    | 0                  | 0            | 0            | 200          |
-| Mesh Particle Active Polys                                                | 0                  | 0            | 0            | 400          |
-| Particle Trails Enabled                                                   | False              | False        | False        | True         |
-| Particle Collision Enabled                                                | False              | False        | False        | True         |
-| Trail Renderers                                                           | 0                  | 0            | 0            | 1            |
-| Line Renderers                                                            | 0                  | 0            | 0            | 1            |
+| Particle Systems                                                    | 0                  | 0            | 0            | 2            |
+| Total Particles Active                                              | 0                  | 0            | 0            | 200          |
+| Mesh Particle Active Polys                                          | 0                  | 0            | 0            | 400          |
+| Particle Trails Enabled                                             | False              | False        | False        | True         |
+| Particle Collision Enabled                                          | False              | False        | False        | True         |
+| Trail Renderers                                                     | 0                  | 0            | 0            | 1            |
+| Line Renderers                                                      | 0                  | 0            | 0            | 1            |
+| [Raycasts](/avatars/avatar-components/raycast)[^3]                  | 1                  | 2            | 4            | 8            |
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
 [^2]: If the Very Poor value is exceeded on mobile, no matter the current "Show Avatar" state of the avatar, all [PhysBones](/common-components/physbones), [Contacts](/common-components/contacts) and [VRChat Constraints](/common-components/constraints) on the avatar will be removed.
+
+[^3]: VRCRaycast components have a hard upper limit of 80 components per avatar on all platforms.
 
 ### Mobile Default Performance Rank Blocking
 On mobile, The Minimum Displayed Performance Rank is "Medium" by default. This means users can't see any avatars ranked as "Poor" or "Very Poor".
@@ -229,7 +234,7 @@ You can choose to manage avatars based on their Avatar Performance Rank. This op
 When you choose a Performance Rank in VRChat's menu, all avatars that are below that level will have their components/display managed as described below.
 
 | Parameter                                                                        | Description                                                                              |
-| :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- |
+|:---------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
 | Triangles                                                                        | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 | Bounds Size                                                                      | No change                                                                                |
 | Texture Memory                                                                   | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
@@ -248,6 +253,7 @@ When you choose a Performance Rank in VRChat's menu, all avatars that are below 
 | Particle Collision Enabled                                                       | All Particle Systems removed                                                             |
 | Trail Renderers                                                                  | All Trail Renderers removed                                                              |
 | Line Renderers                                                                   | All Line Renderers removed                                                               |
+| Raycasts                                                                         | All Raycasts removed                                                                     |
 | Cloths                                                                           | All Cloth components removed                                                             |
 | Total Cloth Vertices                                                             | All Cloth components removed                                                             |
 | Physics Colliders                                                                | All Physics Colliders removed                                                            |
