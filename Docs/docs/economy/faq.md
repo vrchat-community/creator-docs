@@ -24,7 +24,7 @@ The Creator Economy allows you to earn VRChat Credits by setting [listings](/eco
 
 #### How do I get started?
 
- [Apply to join the CE](https://www.surveymonkey.com/r/creator-economy-application-seller) if you're not already an approved seller.
+ [Apply to join the CE](https://www.surveymonkey.com/r/ce-creator) if you're not already an approved seller.
  
 You need to [get started with Tilia](./getting-started) before you can create [listings](./listings), [subscriptions](./subscriptions), [products](./products), or [stores](./store).
 
