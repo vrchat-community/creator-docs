@@ -32,7 +32,7 @@ There are also these supporting classes in the namespace `VRC.Dynamics`:
 
 All VRChat Constraints expose the properties listed below. Note that while these are fundamentally the same as the properties available to [Unity constraints](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Animations.IConstraint.html), the two interfaces are not identical and have some structural differences that support how the VRChat client operates.
 
-#### ApplyConfigurationChanges()
+#### ApplyModifiedChanges()
 
 This method applies any changes made to the constraint via scripting. **You must call this after modifying the properties of a constraint via a script!** Otherwise, your changes may not be applied back to the constraint.
 
