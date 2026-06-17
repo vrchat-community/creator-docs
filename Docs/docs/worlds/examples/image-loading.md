@@ -135,8 +135,7 @@ If the String downloads successfully, split it up line-by-line into separate str
 ```cs
 private void Start()
 {
-    // To receive Image and String loading events, 'this' is casted to the type needed
-    _udonEventReceiver = (IUdonEventReceiver)this;
+    _udonEventReceiver = this;
         
     // Captions are downloaded once. On success, OnImageLoadSuccess() will be called.
     VRCStringDownloader.LoadUrl(stringUrl, _udonEventReceiver);

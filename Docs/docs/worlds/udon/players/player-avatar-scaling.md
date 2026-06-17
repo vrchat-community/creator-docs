@@ -28,6 +28,8 @@ Currently, avatar scaling is operating in the player-controlled mode by default.
 
 :::
 
+Player-controlled modes can go from 0.2m to 5m, Udon can set values between 0.01m and 10000m. Do note that ranges outside of 0.1m and 100m are not officially supported by VRChat and may cause adverse effects, such as UIs breaking, or instability.
+
 ## Disabling player-controlled scaling via the website
 If you simply wish to disable the avatar scaling system in your world, you can log into the [My Worlds section of the VRChat Website](https://vrchat.com/home/content/worlds), select your world, toggle it off, and save your changes.
 

@@ -40,7 +40,6 @@ When using VRCAsyncGpuReadback, there are 4 main steps that you need to follow:
 using UdonSharp;
 using UnityEngine;
 using VRC.SDK3.Rendering;
-using VRC.Udon.Common.Interfaces;
 ​
 public class AGPURB : UdonSharpBehaviour
 {
@@ -48,7 +47,7 @@ public class AGPURB : UdonSharpBehaviour
 ​
     void Start()
     {
-        VRCAsyncGPUReadback.Request(texture, 0, (IUdonEventReceiver)this);
+        VRCAsyncGPUReadback.Request(texture, 0, this);
     }
 ​
     public void OnAsyncGpuReadbackComplete(VRCAsyncGPUReadbackRequest request)

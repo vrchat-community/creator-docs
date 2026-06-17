@@ -54,31 +54,37 @@ for (int i = 0; i < players.Length; i++)
 
 The approach above works, but it also allocates memory each time it's used, which means it will reconstruct the VRCPlayerApi array every time.
 
-If you're using this method frequently (for example, every frame), you should use the non-allocating version instead, where you pass in a VRCPlayerApi array stored as a variable to be reused each time. Make sure the array is large enough to hold as many players as your world can ever allow!
+If you're using this method frequently (for example, every frame), you should use the non-allocating version instead, where you pass in a VRCPlayerApi array stored as a variable to be reused each time. Something to keep in mind with this approach is that if there are more players in your world than the array can hold, the excess players will be missed out. To support dynamic player counts, you can use the technique demonstrated below, where you initially create the array with some pre-determined size and then expand it as needed when the number of players in your world exceeds the size of the array.
 
 <Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
 
-![A more efficient pattern for using GetPlayers regularly. This approach constructs VRCPlayerApi[] as a variable that gets reused, avoiding constructing a new one in memory every time GetPlayers runs.](/img/worlds/graphgetplayers_nonAlloc.png)
+![A more efficient pattern for using GetPlayers regularly. This approach constructs VRCPlayerApi[] as a variable that gets reused, only constructing new ones as the number of players in the world exceeds its capacity.](/img/worlds/graphgetplayers_nonAlloc.png)
 
 </TabItem>
 <TabItem value="cs" label="UdonSharp">
 
 ```cs
-private VRCPlayerApi[] players;
+private VRCPlayerApi[] playersArray;
 
 private void Start()
 {
-    players = new VRCPlayerApi[100]; // The array should be large enough to hold all of your players at once.
+    playersArray = new VRCPlayerApi[10]; // Start with a capacity of 10 players.
 }
 
 private void Update()
 {
-    VRCPlayerApi.GetPlayers(players);
     int playerCount = VRCPlayerApi.GetPlayerCount();
+    while (playerCount > playersArray.Length)
+    {
+        // Keep doubling the capacity until the array is large enough to hold all our players. 
+        playersArray = new VRCPlayerApi[playersArray.Length * 2];
+    }
+
+    VRCPlayerApi.GetPlayers(playersArray);
     for (int i = 0; i < playerCount; i++)
     {
-        VRCPlayerApi player = players[i];
+        VRCPlayerApi player = playersArray[i];
         // Do something with the player...
     }
 }

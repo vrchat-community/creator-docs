@@ -138,7 +138,7 @@ Don't overuse Polar limits, as they have a non-zero performance cost. Using a hu
 
 `Allow Collision` has three options available:
 
-If set to **True**, this PhysBone will collide with global colliders. This includes each player's hands as defined by their avatar as well as any global colliders in the world.
+If set to **True**, this PhysBone will collide with global colliders. This includes each player's hands as defined by their avatar as well as any custom defined global colliders on avatars or in the world.
 
 If set to **False**, this PhysBone will only collide with the colliders that are listed in the `Colliders` list.
 
@@ -159,7 +159,7 @@ If set to **Other**, you'll be given more options to control how collisions beha
 
 ### Options
 
-`Parameter` - An option only available to PhysBones on avatars (see [Udon Access in Worlds](/common-components/physbones#udon-access-in-worlds) for information about how to get this data from a PhysBone in a world). This is a prefix used to provide multiple parameters to the avatar controller. For example, in the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
+`Parameter` - An option only available to PhysBones on avatars (see [PhysBone Udon Access in Worlds](/common-components/physbones#physbone-udon-access-in-worlds) for information about how to get this data from a PhysBone in a world). This is a prefix used to provide multiple parameters to the avatar controller. For example, in the following items, setting Parameter to `Tail` would replace `{parameter}` with `Tail`
 
 Once `Parameter` is set to any value, the following parameters will be set on your avatar's animator: 
 
@@ -213,7 +213,7 @@ PhysBone properties like Spring, Pull, Stiffness, etc. are set at initialization
 
 On avatars, these values are intended to be constant and **cannot be animated**. However, if you animate a property of a PhysBone component and then animate the component off and then on, you _may_ get the behavior you want. Be aware that this is not a supported method of animating these properties, and will not be supported in future changes. (In other words, it might break, and if it does, we're not going to try to fix it.)
 
-In worlds, you have the option of changing the properties of a PhysBone via Udon scripting, though you should still try to limit how often you do this. See [Udon Access in Worlds](/common-components/physbones#udon-access-in-worlds) for more info.
+In worlds, you have the option of changing the properties of a PhysBone via Udon scripting, though you should still try to limit how often you do this. See [PhysBone Udon Access in Worlds](/common-components/physbones#physbone-udon-access-in-worlds) for more info.
 
 #### Humanoid Bones
 
@@ -247,7 +247,7 @@ Each VRCPhysBone component has a bounding box that grows and shrinks as bones mo
 
 The bounding box only accounts for bones with collision and a radius greater than zero. In situations where you want to provide extremely long stretching, as long as bones with collision exist past the stretching point, you can avoid hitting this maximum bounds limit.
 
-### Udon Access in Worlds
+### PhysBone Udon Access in Worlds
 
 Despite originally being designed for avatars, PhysBones can also be used in worlds. Instead of using an animator to interact with a PhysBone in a world, you should use Udon scripting instead. Here are the key differences when it comes to working with a PhysBone in a world:
 
@@ -273,8 +273,8 @@ Defines a collider that will affect PhysBones that are configured correctly.
 ![](/img/avatars/physbone-collider-inspector.png)
 
 `Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
-`Global Collision` - All PhysBones in the selected types of content will treat this collider as part of their Colliders list. The PhysBone's Allow Collision rules will still apply when deciding whether to actually process a collision. This property is available to PhysBone colliders in worlds only.  
-`Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider.  
+`Global Collision` - All PhysBones in the selected types of content will treat this collider as part of their Colliders list. The PhysBone's Allow Collision rules will still apply when deciding whether to actually process a collision. Avatars are limited to a maximum of four PhysBone colliders with Global Collision enabled. Worlds have no limit on global colliders.  
+`Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider. Global Collision is only supported on Sphere and Capsule colliders.  
 `Radius` - Size of the collider extending from its origin.  
 `Height` - Height of the capsule along the Y axis, including the half-spheres at each end. Only used when Shape Type is set to Capsule.  
 `Position` - Position offset from the root transform.  
@@ -297,6 +297,15 @@ On avatars, a set of "Standard Colliders" are defined in the Avatar Descriptor, 
   - Little
 
 These colliders act primarily as [Contact](/common-components/contacts) Senders using the [built-in body part tags](/common-components/contacts/built-in-contact-tags#body-parts) that other people can detect with their avatars. However, the finger and hand colliders are also used to create global PhysBone Colliders that can be used to affect other people’s PhysBones as well as PhysBones in the world.
+
+### Collider Udon Access in Worlds
+
+Similarly to PhysBones, it's possible to access and modify the main properties of a PhysBone collider using Udon when working on a world. You should use Udon scripting to modify colliders in worlds instead of using animators.
+
+- Access a PhysBone collider using the type `VRCPhysBoneCollider`, which is in the namespace `VRC.SDK3.Dynamics.PhysBone.Components`.
+- You can both read and set these properties of a PhysBone collider: `shapeType`, `radius`, `height`, `position` and `rotation`.
+    - If you ever change these properties, you must also call `ApplyConfigurationChanges()` on the PhysBone collider after you've finished making all of your changes, otherwise they won't actually be applied back to the collider.
+    - **Configuration changes to PhysBone colliders can get expensive!** If you overdo it, you might cause performance problems that make your world uncomfortable for players - avoid changing these properties too frequently, and try to batch together as many changes as possible before applying them.
 
 ## VRCPhysBoneRoot
 

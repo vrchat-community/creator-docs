@@ -149,7 +149,7 @@ public class EventParameterExample : UdonSharpBehaviour
 {  
     public override void Interact()  
     {  
-        NetworkCalling.SendCustomNetworkEvent((IUdonEventReceiver)this, NetworkEventTarget.All, nameof(PrintMessage), "VRCat", 11);  
+        NetworkCalling.SendCustomNetworkEvent(this, NetworkEventTarget.All, nameof(PrintMessage), "VRCat", 11);  
         // or: this.SendCustomNetworkEvent(NetworkEventTarget.All, nameof(PrintMessage), "VRCat", 11);  
     }  
       
@@ -262,7 +262,7 @@ public class EventQueueExample : UdonSharpBehaviour
     void Update()  
     {  
         queueStatus.text = $"Queue: {NetworkCalling.GetAllQueuedEvents()}";  
-        queueStatus.text += $"\nSpecific Event Queue: {NetworkCalling.GetQueuedEvents((IUdonEventReceiver)this, "SomeNetworkEvent")}";  
+        queueStatus.text += $"\nSpecific Event Queue: {NetworkCalling.GetQueuedEvents(this, "SomeNetworkEvent")}";  
         queueStatus.text += $"\nClogged: {Networking.IsClogged}";  
     }  
       
