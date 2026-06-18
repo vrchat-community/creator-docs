@@ -84,7 +84,7 @@ Calling `Dispose` on a `VRCImageDownloader` invalidates the object, meaning it c
 
 Contains settings to apply to a downloaded texture. 
 
-- **GenerateMipmaps**: Enables Mipmap generation. (Default: `false`)
+- **GenerateMipMaps**: Enables Mipmap generation. (Default: `false`)
 - **FilterMode**: Sets the `FilterMode` of the texture. (Default: `Trilinear`)
 - **WrapModeU**: The `TextureWrapMode` along the U (horizontal) axis (Default: `Repeat`)
 - **WrapModeV**: The `TextureWrapMode` along the V (vertical) axis  (Default: `Repeat`)

@@ -17,13 +17,14 @@ The Contact Sender component defines a volume of space that will send a Contact 
 ### Shape
 
 This section contains settings that define the shape of the ContactSender.
-- `Shape Type` - Type of collision shape used by this contact. You can choose between Sphere and Capsule.
-- `Radius` - Size of the collider extending from its origin.
+- `Shape Type` - Type of collision shape used by this contact. You can choose between Sphere, Capsule and Box.
+- `Radius` - Size of the collider extending from its origin. Only used when Shape Type is set to Sphere or Capsule.
 - `Height` - Height of the capsule along the Y axis, including the half-spheres at each end. Only used when Shape Type is set to Capsule.
+- `Size` - Size of the box collider along each axis. Only used when Shape Type is set to Box.
 - `Position` - Position offset from the root transform.
 - `Rotation` - Rotation offset from the root transform.
 
-Contact shapes are limited to a maximum radius of 3 meters and a maximum height of 6 meters. If the contact is attached to a scaled game object, these limits are applied after scaling.
+Contact shapes are limited to a maximum radius of 3 meters and a maximum width/height/depth of 6 meters. If the contact is attached to a scaled game object, these limits are applied after scaling.
 
 ### Filtering
 
@@ -76,13 +77,14 @@ What happens when a Contact Receiver receives a signal from a Contact Sender dep
 
 This section contains settings that define the shape of the ContactReceiver.
 
-- `Shape Type` - Type of collision shape used by this contact.
-- `Radius` - Size of the collider extending from its origin.
+- `Shape Type` - Type of collision shape used by this contact. You can choose between Sphere, Capsule and Box.
+- `Radius` - Size of the collider extending from its origin. Only used when Shape Type is set to Sphere or Capsule.
 - `Height` - Height of the capsule along the Y axis, including the half-spheres at each end. Only used when Shape Type is set to Capsule.
+- `Size` - Size of the box collider along each axis. Only used when Shape Type is set to Box.
 - `Position` - Position offset from the root transform.
 - `Rotation` - Rotation offset from the root transform.
 
-Contact shapes are limited to a maximum radius of 3 meters and a maximum height of 6 meters. If the contact is attached to a scaled game object, these limits are applied after scaling.
+Contact shapes are limited to a maximum radius of 3 meters and a maximum width/height/depth of 6 meters. If the contact is attached to a scaled game object, these limits are applied after scaling.
 
 ### Filtering
 
@@ -106,14 +108,20 @@ When used on an avatar, a Contact Receiver will respond to contact signals by se
 `Receiver Type` defines the behavior of the parameter setting when a signal is received.
 - `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
 - `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
-- `Proximity` - Gives you a Float value of `0.0-1.0` depending on how close a contact is to the trigger's center. This is calculated as the closest point of the sender onto the receiver. You must use a Float. If multiple contacts are detected, it will give you the closest. 
+- `Proximity` - Gives you a Float value of `0.0-1.0` depending on how close a contact is to the trigger as described below. You must use a Float. If multiple contacts are detected, it will give you the closest. 
 - `Parameter` - The parameter updated on the animation controller. This parameter DOES NOT need to be defined on the synced Avatar Parameter list. The parameter can be a Float, Bool, or Int, depending on the Receiver Type used.
 - `Value` - Value the parameter is updated to when a collision is detected. Parameter will reset to zero when no collisions are present.
 - `Min Velocity` - Minimum velocity needed from an incoming collider to affect this trigger, only active in `OnEnter` type.
 
+The proximity value tells you how close a contact is to the trigger's center. This is calculated as the closest point of the sender to the receiver.
+
+For box-shaped Contact Receivers, you can enable the option `Use Face Proximity`. This option changes the proximity calculation to tell you how close a contact is to the positive Z face of the box.
+
 #### Receivers in Worlds
 
-Contact Receiver components in worlds offer no configuration options. Instead, Receivers always respond to contact signals by invoking events in any Udon scripts attached to the same GameObject as the Receiver. See the section below for more info about interacting with contacts using Udon.
+Contact Receiver components in worlds offer no configuration options aside from configuring how proximity is calculated for box-shaped Contact Receivers (see above).
+
+Instead, Receivers always respond to contact signals by invoking events in any Udon scripts attached to the same GameObject as the Receiver. See the section below for more info about interacting with contacts using Udon.
 
 ## Udon Access in Worlds
 
@@ -136,9 +144,9 @@ Contact Receiver components in worlds offer no configuration options. Instead, R
   - `Vector3 position` - The world space position of the contact component's root transform.
   - `Quaternion rotation` - The world space rotation of the contact component's root transform.
   - `Vector3 scale` - The lossy scale of the contact component's root transform.
-- You can read and set the `radius`, `height`, `position` and `rotation` properties of a Contact Sender or Contact Receiver by getting and setting those fields.
+- You can read and set the `radius`, `height`, `size`, `position` and `rotation` properties of a Contact Sender or Contact Receiver by getting and setting those fields.
   - If you ever change these properties, you must also call `ApplyConfigurationChanges()` on the Contact after you've finished making all of your changes, otherwise they won't actually be applied back to the Contact.
   - **Configuration changes to Contacts can get expensive!** If you overdo it, you might cause performance problems that make your world uncomfortable for players - avoid changing these properties too frequently, and try to batch together as many changes as possible before applying them.
-- At any time, you can calculate the proximity between a Receiver and a Sender using the method `CalculateProximity()` on the Receiver. This returns a Float value from `0.0-1.0` representing how close the Sender is to the Receiver's center.
+- At any time, you can calculate the proximity between a Receiver and a Sender using the method `CalculateProximity()` on the Receiver. This returns a Float value from `0.0-1.0` representing how close the Sender is to the Receiver's center (or the Receiver's positive Z face, if the Receiver is a box with `Use Face Proximity` enabled).
 - You can change the set of allowed content types and collision tags for a Contact by using the methods `UpdateContentTypes(DynamicsUsageFlags newContentTypes)` and `UpdateCollisionTags(string[] newCollisionTags)`.
   - Remember that a hard limit of 16 tags applies to Contacts. If you try to set more than 16 tags, only the first 16 will apply.

@@ -13,6 +13,14 @@ Data Lists can be serialized to/from JSON strings using [VRCJSON](/worlds/udon/d
 
 If you are using UdonSharp, include the `using VRC.SDK3.Data;` directive to use data lists.
 
+## Constructors
+
+| Constructor                  | Result                                                                                                                                                                                                                                                                |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DataList()                   | Constructs an empty DataList with the default initial capacity.                                                                                                                                                                                                       |
+| DataList(int)                | Constructs an empty DataList with the specified initial capacity. See [C# documentation](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.-ctor?view=net-8.0#system-collections-generic-list-1-ctor(system-int32)) for further details. |
+| DataList(params DataToken[]) | Constructs a DataList populated with the given DataToken objects.                                                                                                                                                                                                     |
+
 ## Properties
 
 | Property | Result                                                                                                                                                                                 |

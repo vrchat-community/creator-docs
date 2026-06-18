@@ -13,6 +13,13 @@ Both the keys and the values of a Data Dictionary are Data Tokens. This means th
 
 If you are using UdonSharp, include the `using VRC.SDK3.Data;` directive to use data dictionaries.
 
+## Constructors
+
+| Constructor         | Result                                                                                                                                                                                                                                                                                  |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DataDictionary()    | Constructs an empty DataDictionary with the default initial capacity.                                                                                                                                                                                                                   |
+| DataDictionary(int) | Constructs an empty DataDictionary with the specified initial capacity. See [C# documentation](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2.-ctor?view=net-8.0#system-collections-generic-dictionary-2-ctor(system-int32)) for further details. |
+
 ## Properties
 
 | Property | Result                                       |

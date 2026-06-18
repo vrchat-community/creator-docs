@@ -56,7 +56,7 @@ Use this static class to download strings from the web.
 * **Url**: the URL to load from the internet.
 * **UdonBehaviour**: the UdonBehaviour to send the events to. 
     * In Udon Graph, this defaults to the current UdonBehaviour
-    * In Udon Sharp, you can use `(IUdonEventReceiver)this`
+    * In Udon Sharp, you can use `this`
 
 
 ### IVRCStringDownload
@@ -77,7 +77,6 @@ using UdonSharp;
 using UnityEngine;
 using VRC.SDK3.StringLoading;
 using VRC.SDKBase;
-using VRC.Udon.Common.Interfaces;
 
 public class ResultBytesExample : UdonSharpBehaviour
 {
@@ -86,7 +85,7 @@ public class ResultBytesExample : UdonSharpBehaviour
 
     void Start()
     {
-        VRCStringDownloader.LoadUrl(url, (IUdonEventReceiver)this);
+        VRCStringDownloader.LoadUrl(url, this);
     }
 
     public override void OnStringLoadSuccess(IVRCStringDownload result)
