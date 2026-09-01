@@ -223,7 +223,7 @@ Simply follow the steps in VRChat's SDK build panel:
 		- You can find your test avatar in the "Other" avatars section in VRChat.
 		- You can use [Build & Test on Android](/platforms/android/build-test-mobile/).
 7. Choose which platforms to build your [platform](/platforms/) on.
-8. Confirm that the avatar's information is accurate and that you have the rights to upload the content to VRChat.
+8. Confirm that the avatar's information is accurate and thatn you have the rights to upload the content to VRChat.
 9. When you're ready, click the "Build & Publish" button.
 
 
