@@ -72,7 +72,7 @@ Some stores sell avatars that are already prepared for VRChat. They may allow yo
 
 - [BOOTH](https://booth.pm/en/items?tags%5B%5D=VRChat) is a Japanese store for VRChat avatars. It's the largest store for anime-style avatars, but you can also find other types of avatars there.
 - [Gumroad](https://gumroad.com/discover) is more popular among Western creators and focuses on anime-style and furry avatars.
-- [Jinxxy](https://jinxxy.com/) and [Avatown](https://goavatown.com) also have a collection of Avatars that can be used in VRChat.
+- [Jinxxy](https://jinxxy.com/) and [Avatown](https://goavatown.com) also have a collection of avatars that can be used in VRChat.
   
 When you look for a model, try to keep the following things in mind:
 - If you decide to get your model outside of an asset store, ensure the model is fully "rigged" by the author.
@@ -115,12 +115,11 @@ Congratulations on choosing or building a model! Before you continue, you'll nee
     <iframe src="https://www.youtube.com/embed/0u1g0TYoJsU" title="VRChat Creator Companion" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
-Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After setting creating your Unity project, you're ready to continue!
+Read the Creator Companion's [Getting Started](https://vcc.docs.vrchat.com/guides/getting-started) page to learn more. After creating your Unity project, you're ready to continue!
 
 :::tip
 
-Are you new to Unity? Visit [Unity Learn](https://learn.unity.com/) for free tutorials on how to use Unity.
-
+Are you new to Unity? Visit [Unity Learn](https://learn.unity.com/) for free tutorials on getting started.
 :::
 
 ### Try VRChat's example avatar
