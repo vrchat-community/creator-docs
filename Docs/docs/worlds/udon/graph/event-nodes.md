@@ -56,13 +56,17 @@ When you join an instance, you execute OnPlayerRestored for every player in the 
 ### OnStationEntered
 `Event_OnStationEntered`
 
-Fired when the local player enters the station on this object.
- 
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when player (include local and remote player) enters the station on this object.
+
 ### OnStationExited
 `Event_OnStationExited`
 
-Fired when the local player exits the station on this object.
- 
+Outputs: `player` - `VRC.SDKBase.VRCPlayerApi`
+
+Fired when player (include local and remote player) exits the station on this object.
+
 ### OnVideoEnd
 `Event_OnVideoEnd`
 
