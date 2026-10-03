@@ -4,6 +4,7 @@ sidebar_position: -99
 import CurrentUnityVersion from '@site/src/components/UnityVersionedText.js';
 
 # Welcome!
+phones any advice are allowed
 
 VRChat is a social platform where you can meet people, explore user-created worlds, and express yourself through custom avatars. Whether you're a seasoned developer or a newcomer, the VRChat SDK helps you bring your own ideas to life.
 
