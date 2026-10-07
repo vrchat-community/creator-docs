@@ -69,7 +69,9 @@ public class StationGraph : UdonSharpBehaviour
 </TabItem>
 </Tabs>
 
-Udon's "OnStationEntered" and "OnStationExited" events can be very useful for advanced use cases, such as detecting which player has entered or exited a moving vehicle.
+Udon's "OnStationEntered" and "OnStationExited" events run for both for the local player and remote players.
+
+These events can be very useful for advanced use cases, such as detecting which player has entered or exited a moving vehicle.
 
 ## Stations used in Worlds
 
