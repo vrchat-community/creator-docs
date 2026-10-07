@@ -54,7 +54,6 @@ public class StationGraph : UdonSharpBehaviour
         Networking.LocalPlayer.UseAttachedStation();  
     }  
   
-    // It will trigger in both local and remote player!
     public override void OnStationEntered(VRCPlayerApi player)  
     {  
         Debug.Log($"{player.displayName} Entered");  
@@ -70,13 +69,9 @@ public class StationGraph : UdonSharpBehaviour
 </TabItem>
 </Tabs>
 
-:::tip
+Udon's "OnStationEntered" and "OnStationExited" events run for both for the local player and remote players.
 
-`OnStationEntered` and `OnStationExited` will trigger in both local and remote player!
-
-:::
-
-Udon's "OnStationEntered" and "OnStationExited" events can be very useful for advanced use cases, such as detecting which player has entered or exited a moving vehicle.
+These events can be very useful for advanced use cases, such as detecting which player has entered or exited a moving vehicle.
 
 ## Stations used in Worlds
 
