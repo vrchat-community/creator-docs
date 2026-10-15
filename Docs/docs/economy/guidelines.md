@@ -29,7 +29,7 @@ The guidelines rules are subject to change as VRChat continues to explore new im
 3. Clearly define what the user is purchasing.
 	1. Listings, subscriptions, and products must have clear names and sufficiently detailed descriptions.
 	2. Content must avoid engaging in [dark patterns](https://en.wikipedia.org/wiki/Dark_pattern) or deceptive design patterns, such as misdirection and bait-and-switching.
-	3. Content must avoid false advertising and not misrepresent the content or prices of listings and subscriptions. Names, tags, descriptions, acknowledgements, images, and previews must not be misleading. Keep in mind that if your content looks very different in VRChat than in the images you've used to showcase it, buyers may be disappointed.
+	3. Listings and subscriptions must accurately represent what buyers will receive. Names, tags, descriptions, acknowledgements, images, and previews (including thumbnails) must not be misleading. Keep in mind that if your content looks different in VRChat than in the images you've used to showcase it, buyers may be disappointed.
 	4. Listings containing different types of products must make it clear where those products can be used. For example, if you are selling a bundle containing [avatar products](/economy/products/avatar) *and* [Udon products](/economy/products/udon), ensure the buyer understands that while they can use the avatars anywhere, the Udon Products can only be used in specific world(s).
 	5. If your content's capabilities differ between platforms, you must disclose this to buyers. For example, if some features are PC-exclusive, explain it in the product description.
 4. If feature parity exists, you must use the Creator Economy in addition to any off-platform monetization methods.

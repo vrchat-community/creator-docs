@@ -175,7 +175,7 @@ Once `Parameter` is set to any value, the following parameters will be set on yo
 
 `Is Animated` - Allows bone transforms to be animated. Each frame bone rest position will be updated according to what was animated. This must be enabled in order for any bone in the PhysBone chain (Root bone included!) to respect animations applied to it.
 
-`Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position.
+`Reset When Disabled` - When this component becomes disabled, the bones will automatically reset to their default position and the parameter values will be reset to false/zero.
 
 ### Gizmos
 
@@ -273,7 +273,7 @@ Defines a collider that will affect PhysBones that are configured correctly.
 ![](/img/avatars/physbone-collider-inspector.png)
 
 `Root Transform` - Transform where this collider is placed. If empty, we use this game object's transform.  
-`Global Collision` - All PhysBones in the selected types of content will treat this collider as part of their Colliders list. The PhysBone's Allow Collision rules will still apply when deciding whether to actually process a collision. Avatars are limited to a maximum of four PhysBone colliders with Global Collision enabled. Worlds have no limit on global colliders.  
+`Global Collision` - Allows other PhysBones to potentially collide with this collider even if it's not part of their Colliders list. See below for more information about this property.  
 `Shape Type` - Type of collision shape used by this collider. You can choose between a Sphere, Capsule, or Plane collider. Global Collision is only supported on Sphere and Capsule colliders.  
 `Radius` - Size of the collider extending from its origin.  
 `Height` - Height of the capsule along the Y axis, including the half-spheres at each end. Only used when Shape Type is set to Capsule.  
@@ -281,6 +281,16 @@ Defines a collider that will affect PhysBones that are configured correctly.
 `Rotation` - Rotation offset from the root transform.  
 `Inside Bounds` - When enabled, this collider will contain bones within its bounds instead of keeping them out.  
 `Bones As Sphere` - When enabled, this collider will treat PhysBone collision radii as spheres centered on the bone's position rather than capsules running the length of the bone.
+
+`Global Collision` has three options available:
+
+If set to **True**, all PhysBones will treat this collider as part of their `Colliders` lists. The PhysBone's Allow Collision rules will still apply when deciding whether to actually process a collision.
+
+If set to **False**, this collider will only apply to PhysBones that list it in their `Colliders` lists.
+
+If set to **Other**, you'll be given more options to control how collisions behave based on whether this is an avatar or a world. For a PhysBone collider on an avatar, you can filter to only colliding with PhysBones on this avatar and on other avatars/worlds. For a PhysBone collider in a world, you can set whether it's able to respond to PhysBones in the world, on an avatar, on an item, or on a mixture of the three. The PhysBone's Allow Collision rules will still apply when deciding whether to actually process a collision.
+
+Avatars are limited to a maximum of four PhysBone colliders with Global Collision enabled. Worlds have no limit on global colliders.
 
 ### Standard Colliders
 

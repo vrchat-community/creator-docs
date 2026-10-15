@@ -12,21 +12,23 @@ This guide shows you how to test your VRChat content on iOS by connecting an iOS
 
 To use Build and Test for iOS, you must set up your Unity project and connect your iOS device to the SDK.
 
-### Set Up iOS Build Support Unity Module
+### Install iOS Build Support Unity Module
 
-You must install Unity's iOS Build Support module to build or publish VRChat content on IOS. Follow the steps below to install it:
+You must install Unity's iOS Build Support module to build or publish VRChat content on iOS. Follow the steps below to install it:
 
-1. Open Unity Hub and navigate to "Installs" on the left.
+1. Open the Unity Hub and navigate to "Installs" on the left.
 2. Find the install for the Unity version that your project uses (the current recommended version is [<CurrentUnityVersion/>](/sdk/upgrade/current-unity-version/)).
   - If your install lists "iOS" below the Editor path, then the module is already installed, and you can [set up your project](#set-up-your-project-to-target-ios).
 
 ![Unity Install with iOS Module](/img/platforms/unity-hub-modules.png)
 
 3. Click on the gear icon next to that install and click "Add modules".
+
+	- If you do not see the "Add modules" button, the Unity Hub cannot automatically install the module. Instead, you must download and run the module's installer from the [Unity download archive](https://unity.com/releases/editor/archive).
 4. Find "iOS Build Support" and tick the box next to it.
 5. Click continue to install the iOS build support module.
 
-You should now be able to build worlds and avatars for iOS.
+You can now build worlds (and avatars) for iOS.
 
 ### Set Up Your Project to Target iOS
 

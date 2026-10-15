@@ -4,13 +4,16 @@ The `VRCRaycast` component in VRChat allow avatars to fire rays through the scen
 
 ## Component Properties
 
-![VRCRaycast](/img/avatars/vrcraycast.png)
+![The VRC Raycast component in the Unity inspector](/img/avatars/vrcraycast.png)
+
+The following table lists all the parameters you can configure:
 
 | Property                    |                          | Description                                                                                                                                                                                                                                                                          |
 |-----------------------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Root Transform**          |                          | The transform to start the raycast from. If empty, the transform this component is attached to will be used instead.                                                                                                                                                                 |
 | **Raycast Direction**       |                          | The direction to cast the ray in. This is applied in local space, so it will be affected by the rotation of the transform.                                                                                                                                                           |
 | **Distance**                |                          | The maximum distance the raycast is able to travel. If you set this to zero, the raycast will travel as far as possible (1000 units).                                                                                                                                                |
-| **Apply Transform Scale**   |                          | If this property is enabled, the lossy Z scale of the transform this component is attached to will affect the raycast distance.                                                                                                                                                      |
+| **Apply Transform Scale**   |                          | If this property is enabled, the lossy Z scale of the transform the ray starts from will affect the raycast distance.                                                                                                                                                                |
 | **Collision Mode**          |                          | Controls the [layers](/worlds/layers) this raycast component will collide against: You can have it collide against layers used in worlds, layers used on player colliders, or both at once. You can also manually define the specific layers to collide with for advanced use cases. |
 |                             | *Hit Worlds*             | The ray will collide with the `Default` and `Environment` layers as well as all of the user controlled layers. (Default)                                                                                                                                                             |
 |                             | *Hit Players*            | The ray will collide with `Player` and `PlayerLocal` layers.                                                                                                                                                                                                                         |
