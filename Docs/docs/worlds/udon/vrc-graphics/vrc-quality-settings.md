@@ -24,8 +24,19 @@ Currently exposed:
 - `float ShadowDistance`
 - `int ShadowCascades`
 - `int vSyncCount`
+- `bool RealtimeReflectionProbes`
+- `ShadowmaskMode ShadowmaskMode`
 
 Some of these may be affected by the user's graphics settings.
+
+### World Quality Settings Script
+
+The [VRCWorld prefab](/worlds/sdk-prefabs/#vrcworld) includes the 'World Quality Settings' script. It allows you to easily configure the following Unity settings:
+
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/shadow-distance.html">Shadow Distance</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/LightMode-Mixed-Shadowmask.html">Shadowmask Lighting Mode</UnityVersionedLink>
+- <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/RefProbeTypes.html">Realtime Probes</UnityVersionedLink>
+
 
 ### Shadow Distance
 

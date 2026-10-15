@@ -79,6 +79,7 @@ Send the [local player](/worlds/udon/players/getting-players/#networkingget-loca
 - Udon can only teleport the local player. Use [networking](/worlds/udon/networking/) to cause other players to teleport themselves. 
 - Stations can prevent Udon from teleporting players.
 - When you teleport very often or across very short distances, consider setting `lerpOnRemote` to `false`.
+- Teleporting a player over a distance of more than 1 meter or a rotation of more than 45 degrees will reset their animation and IK, _unless_ `lerpOnRemote` is set to true, since this implies the teleport is being treated like normal movement.
 
 :::warning
 
@@ -91,5 +92,5 @@ Do not teleport players during network updates (e.g. [OnDeserialization](/worlds
 - `Quaternion teleportRot`: The target rotation in world space.
 - `SceneDescriptorSpawnOrientation TeleportOrientation` (optional): How to align players with the destination position and rotation. 
 - `bool lerpOnRemote` (optional): Whether the interpolate the player's movement for remote players.
-    - (Default) If `false`, the teleportation looks instant to remote players. The network bandwidth cost increases.
-    - If `true,` the teleportation is treated like normal player movement, and movement looks smooth to remote players.
+    - (Default) If `false`, the teleportation looks instant to remote players. The network bandwidth cost increases. Avatar animation and IK are reset if the teleport distance is high enough.
+    - If `true,` the teleportation is treated like normal player movement, and movement looks smooth to remote players. Avatar animation and IK are not reset by the teleport.

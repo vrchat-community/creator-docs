@@ -7,7 +7,9 @@ When wearing an avatar, VRChat automatically "chops off" the avatar's head bone 
 `VRCHeadChop` only affects how the avatar appears from the perspective of the user wearing it. It doesn't affect what the avatar looks like in mirrors or to other players.
 
 ## Component properties
-![vrcheadchop-618b6e18-2024-02-06_11-48-10_Unity.png](/img/avatars/vrcheadchop-f0de7579-2024-03-15_19-46-28_Unity.png)
+![The VRC Head Chop component in the Unity inspector](/img/avatars/vrcheadchop-f0de7579-2024-03-15_19-46-28_Unity.png)
+
+The following table lists all the parameters you can configure:
 
 | Property |  | Description |
 | ---- | ---- | ---- |

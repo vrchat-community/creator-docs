@@ -45,6 +45,12 @@ This object is included in every input event, and holds additional data for the 
 ## OnInputMethodChanged
 This event fires whenever a user switches input methods, like from Keyboard to Mouse, Controller, or Touchscreen. It includes a [VRCInputMethod](/worlds/udon/graph/type-nodes/#vrcsdkbasevrcinputmethod) enum as its parameter.
 
+:::note
+
+The majority of VR controllers used on PC show as `SteamVR2`. However, it is still possible for a user to change to a different input type throughout the session. For example, switching to Quest/Pico hand tracking changes the input method to `Embodied`.
+
+:::
+
 :::note Ambiguous Vive input names 
 
 - `VRCInputMethod.Vive` is a Vive controller running through SteamVR.
@@ -80,5 +86,3 @@ When you open a VRChat menu, Udon releases all held inputs, even if you continue
 When you close a VRChat menu, Udon presses all held **Unity** inputs. For example:
 - If you hold the right arrow key while closing the VRChat menu, `Input.GetButtonDown()` returns `true` for that key.
 - If you hold the jump button and close the VRChat menu, Udon does **not** execute `InputJump(true)`.
-
-

@@ -4,18 +4,36 @@ sidebar_position: 0
 
 # Cross-Platform Setup
 
-Setting up a cross-platform world or avatar is actually quite straightforward! In short, all you have to do is switch Unity to the desired target platform and build the content.
+This page explains how to set up your project for Android or iOS development. Switching between platforms in Unity is quite simple
 
-If you need a bit more detail on how to do this properly, here's a short guide.
+Creating content for Android and iOS is very similar - once you know how to build Android content, it's easy to build iOS content, too.
 
-## Setting up for Android
+## Setup
 
-First, you'll want to switch your project to target Android to perform first-time setup and ensure your content can be built for the platform.
+To install Unity's Android and iOS modules, follow the guides below.
+
+- [Setting up Unity for Creating iOS Content](/platforms/iOS/setting-up-unity-for-creating-ios-content)
+- [Setting up Unity for Creating Android Content](/platforms/android/setting-up-unity-for-creating-quest-content)
+
+Both guides are similar, and you can install both modules at the same time.
+
+## Switch platforms
+
+After installing the modules, switch your project's build target to Android or iOS. 
 
 1. Open the SDK Control Panel and switch to the Builder tab
 2. In the "Build" section select the platforms dropdown. Uncheck "Windows" and check "Android"
-3. In the popup that appears, click "Switch" to confirm the change
-4. Inspect the validation messages that appear in the SDK control panel to ensure your content is compatible with Android
+3. In the popup that appears, click "Switch" to confirm the change.
+
+Switching to a platform causes Unity to reimport all assets and perform a first-time setup. This takes a while - but if you switch again in the future, it will be much faster.
+
+## Validate your project
+
+After switching to a platform, ensure that your project works on that platform.
+
+- Inspect the validation messages that appear in VRChat's SDK control panel to ensure your content is compatible with Android.
+- Inspect Unity's console for any new errors or warning messages.
+- Inspect your scene for visual issues. If it's a world, try it in play mode.
 
 ## Fine-tuning and Optimization
 

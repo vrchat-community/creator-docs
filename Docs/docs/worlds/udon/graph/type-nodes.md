@@ -108,6 +108,9 @@ Type definition for `VRC.SDKBase.VRCInputMethod`.
 | 16    | OpenXRGeneric      |
 | 17    | Pico               |
 | 18    | SteamVR2           |
+| 19    | Embodied[^1]       |
+
+[^1]: Embodied means the user is using finger tracking of some kind, e.g., gloves or camera-based finger tracking on a VR headset.
 
 :::note Ambiguous Vive input names 
 
