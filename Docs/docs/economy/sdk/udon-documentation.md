@@ -201,7 +201,7 @@ If you disable GameObjects or UdonBehaviours, they won't execute most of the eve
 :::
 
 ### OnPurchaseConfirmed
-This event is triggered once a player's purchase has been loaded and confirmed. Purchases are loaded in the following situations: 
+This event is triggered once a player's purchase has been loaded and confirmed. It does not support [Quantity Purchases](/economy/listings/#quantitypurchases). Purchases are loaded in the following situations: 
 - when joining the instance, both for the local player and any other players,
 - when any new players join the instance, and
 - when any player in the instance purchases one of the world's products.
@@ -210,6 +210,14 @@ This event is triggered once a player's purchase has been loaded and confirmed. 
 - `IProduct`: The product that has been purchased.
 - `VRCPlayerApi`: The player who has purchased the product.
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
+
+:::caution
+
+Use either `OnPurchaseConfirmed` _or_ `OnPurchaseConfirmedMultiple`. Don't use both in the same script!
+
+Both events detect every purchase. If you use both, you may accidentally detect the same purchase twice. Generally, you should use `OnPurchaseConfirmedMultiple` because it's compatible with [Quantity Purchases](/economy/listings#quantity-purchases).
+
+:::
 
 ### OnPurchaseConfirmedMultiple
 

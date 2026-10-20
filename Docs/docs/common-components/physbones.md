@@ -4,6 +4,7 @@ PhysBones are a set of components that lets you add secondary motion to objects 
 
 An example of how to use PhysBones on an avatar can be found in the Avatars SDK. To access it, go to `VRChat SDK\Samples` from the menu bar at the top of the Unity window and choose the appropriate sample avatar for your platform.
 
+You can test Physbones in your project by entering Play mode and using the the Game view. Use the left and right mouse buttons to grab and pose PhysBones.
 ## VRCPhysBone
 
 Defines a chain of bones to be animated with PhysBones. These can be used to simulate soft-body and secondary motion like hair, tails, floppy ears, and more! It has many configuration options, and can be set up in many ways.
