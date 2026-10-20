@@ -87,15 +87,51 @@ The guidelines below clarify what type of content is suitable for the avatar mar
  
 #### Properties
 
+import Columns from '@site/src/components/Columns';
+import Column from '@site/src/components/Column';
+
 1. Your avatar's name, description, tags, acknowledgements, images, and previews for marketplace avatars must adhere to VRChat's [public content guidelines](https://hello.vrchat.com/creator-guidelines) for avatars.  
 2. English must be the primary language of all words or characters in your avatar's properties, textures, or expressions menus.  
     - You're permitted to add additional non-English translations (with English equivalents).  
     - For example: The text in your expressions menu must be in English, but you may use icons to provide a Japanese translation.
-3. Your avatar's name must start with an alphanumeric character. For example:
-	- ✅Alice - Astronaut
-	- ✅8-Bit Bob!!!
-	- ❌- Alice - Astronaut
-	- ❌!!!8-Bit Bob!!!
+3. Your avatar's name must start with an alphanumeric character. For example,
+
+<Columns> 
+<Column className='text--left'>
+these names are not allowed:
+- ❌ - Alice - Astronaut
+- ❌!8-Bit Bob!
+
+</Column>
+<Column className='text--left'>
+these names are allowed:
+- ✅Alice - Astronaut
+- ✅8-Bit Bob
+
+</Column>
+</Columns>
+
+4. Your avatar's name must not start with numbers if you could use words instead, unless the number is part of a proper word. For example,
+
+<Columns> 
+<Column className='text--left'>
+these names are not allowed:
+- ❌0 Energy
+- ❌3rd Avi
+- ❌6 cats in a trenchcoat
+
+</Column>
+<Column className='text--left'>
+these names are allowed:
+- ✅Zero Energy
+- ✅Third Avi
+- ✅Six cats in a trenchoat
+- ✅8-Bit Bob
+- ✅Eight-Bit Bob
+
+</Column>
+</Columns>
+
 #### Clothing & Appearance
 
 Your avatar must have private areas appropriately covered or presented in a non-sexualized manner.
