@@ -278,7 +278,7 @@ Use a combination of [stores](/economy/store) and Udon [store prefabs](/economy/
 
 You can allow users to buy [instant](#instant) listings in large quantities. Go to the listing details and select "Enable Quantity Purchases". When users buy the listing, they can choose to buy it up to 99 times at once.
 
-You should use the Udon method (OnPurchaseConfirmedMultiple)[/economy/sdk/udon-documentation#onpurchaseconfirmed] to detect the quantity of the purchase and give users an appropriate reward.
+You must use the Udon method [OnPurchaseConfirmedMultiple](/economy/sdk/udon-documentation#onpurchaseconfirmed) to detect the quantity of the purchase and give users an appropriate reward.
 
 
 ## Refunds
