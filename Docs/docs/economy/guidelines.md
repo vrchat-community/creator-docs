@@ -132,6 +132,25 @@ these names are allowed:
 </Column>
 </Columns>
 
+5. Your avatar's name must not start words 'A', 'An', or repeated sequences of the letter 'A' that are unrelated to the actual avatar name.
+
+<Columns> 
+<Column className='text--left'>
+these names are not allowed:
+- ❌An Anime Vempire
+- ❌A cherry on a pie
+- ❌Aaaaaaaaaaaaaaaaaaaphrodite
+
+</Column>
+<Column className='text--left'>
+these names are allowed:
+- ✅Anime Vampire
+- ✅Cherry on a pie
+- ✅Adphrodite
+
+</Column>
+</Columns>
+
 #### Clothing & Appearance
 
 Your avatar must have private areas appropriately covered or presented in a non-sexualized manner.
