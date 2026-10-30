@@ -131,7 +131,7 @@ However, we've limited what can be called to this list:
 * SetActive
 
 ### InputField
-:::caution Character limit
+:::warning Character limit
 
 Please note that input fields are limited to 16.000 characters, which is the maximum amount of characters a text component can render.
 :::

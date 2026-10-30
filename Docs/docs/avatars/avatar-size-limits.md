@@ -22,7 +22,7 @@ The maximum size limit depends on the platform you're playing on:
 ## How to know if you are below these limits
 Within the SDK it will inform you when making a build if your avatar is breaking either limit and prevent upload, post build it will remind you what the download / uncompressed size was along with the limit. When using Build & Test size limits are not enforced.
 
-:::caution Keep your SDK up to date!
+:::warning Keep your SDK up to date!
 The android uncompressed size was not enforced in the SDK until [3.5.2](/releases/release-3-5-2), ensure you are _at least_ on this version otherwise if you upload it will just fail server-side security checks! The reduced PC limits are enforced starting [3.7.0](/releases/release-3-7-0), so similarly if uploading to PC ensure you are _at least_ on this version.
 :::
 

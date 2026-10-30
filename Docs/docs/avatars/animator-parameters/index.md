@@ -2,7 +2,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # Animator Parameters
 
-:::caution
+:::warning
 
 This document requires knowledge about Unity's <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/AnimationParameters.html">Animator Controllers</UnityVersionedLink> and <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Animation Parameters</UnityVersionedLink>.
 
@@ -59,6 +59,23 @@ The list below contains all of VRChat's built-in parameters, their description, 
 
 [^1]: GestureLeftWeight and GestureRightWeight go from 0.0 to 1.0 in various gestures depending on the trigger pull. For example, if you make a fist but don't pull the trigger on the left hand, GestureLeft will be 1, but GestureLeftWeight will be 0.0. When you start pulling the trigger, it will climb from 0.0 towards 1.0. This can be used to create "analog" gestures or conditionally detect various things.
 
+### Eye and face tracking parameters
+
+Use these built-in parameters to choose animator states based on the user's tracking availability:
+
+| Name | Description | Type | Sync |
+| --- | --- | --- | --- |
+| `UserEyeTracking` | Returns `true` when eye tracking data is available. Automatic eye movement alone does not set this to `true`. | Bool | Other |
+| `UserFaceTracking` | Returns `true` when face tracking is allowed and a face tracking source is active. | Bool | Other |
+
+Add these parameters as **Bool** parameters in your Animator Controller. You do not need to add them to your Expression Parameters asset, and they do not use your custom synced parameter budget. For example, use `UserFaceTracking` to switch between tracked facial expressions and gesture-driven expressions.
+
+For your own avatar, VRChat calculates these values from your active tracking sources and tracking settings. Eye tracking can come from tracked eye look, tracked eyelids, or a source that supplies eye blendshapes directly, such as OSC face tracking.
+
+For remote avatars, VRChat calculates these values from received tracking data rather than synchronizing the two booleans directly. Both values are `true` while native face tracking playback is active. Otherwise, received eye look or eyelid data sets `UserEyeTracking`, and legacy face tracking data sets `UserFaceTracking`. Both values are `false` when no visible tracking is available. Remote values can therefore differ from the wearer's local values.
+
+These parameters describe the user's tracking, not whether the avatar supports the [Face Tracking system](/avatars/face-tracking). External applications can read them through [OSC tracking status outputs](/avatars/face-tracking/osc#tracking-status-outputs).
+
 ### Avatar Scaling Parameters
 
 Your Playable Layer can react to the player's current [avatar scale](/avatars/avatar-scaling) by using the parameters below:
@@ -70,21 +87,6 @@ Your Playable Layer can react to the player's current [avatar scale](/avatars/av
 | ScaleFactorInverse | Inverse relation (`1/x`) between the avatar's default height and the current height. An avatar with a default eye-height of 1m scaled to 2m will report `0.5`. Might be inaccurate at extremes. | Float | Playable |
 | EyeHeightAsMeters  | The avatar's eye height in meters.                                                                                                                                                              | Float | Playable |
 | EyeHeightAsPercent | Relation of the avatar's eye height in meters relative to the default scaling limits (`0.2`-`5.0`). An avatar scaled to 2m will report `(2.0 - 0.2) / (5.0 - 0.2)` = `0.375`.                   | Float | Playable |
-
-
-### Parameter Types
-
-You can define the following types of parameters in your [Expression Parameters asset](#expression-parameters-asset):
-
-| Parameter Type | Range             | Parameter Memory Usage | Notes                                |
-| :------------- | :---------------- | :--------------------- | :---------------------------------   |
-| `int`          | `0`-`255`         | 8 bits                 | Unsigned 8-bit int.                  |
-| `float`        | `-1.0` to `1.0`   | 8 bits                 | Signed 8-bit fixed-point decimal[^2]. |
-| `bool`         | `True` or `False` | 1 bit                  |                                      |
-
-[^2]: Remotely synced `float` values have 255 possible values, giving a precision of `1/127` over the network, and can store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators. 
-
-Each synced parameter uses a certain amount of parameter memory. VRChat can synchronize up to 256 bits of custom parameters. VRChat also limits your avatar to 8192 total custom Expression Parameters (synced and unsynced). [Built-in parameters](#built-in-parameters) do not count toward these limits.
 
 ### GestureLeft and GestureRight Values
 
@@ -140,7 +142,7 @@ If the value is 3, 4, or 6 while `VRMode` is 1, the value is indicating how many
 
 If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the avatar is still initializing. You should not design animators to branch based off this combination of values, and it should instead wait for a "valid" value of 3, 4, or 6.
 
-:::caution Account for changes
+:::warning Account for changes
 
 During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
 
@@ -156,7 +158,7 @@ During avatar initialization, this value may change! Ensure that your animator a
 | 5 | 5-point VR user. Head, hands and feet tracked. Basically full Body Tracking but without the hip. |
 | 6 | Full Body Tracking VR user. Head, hands, hip, and feet tracked. |
 
-## Custom parameters
+## Custom Parameters
 
 You can add your own parameters to your avatar's Playable Layers.
 
@@ -165,6 +167,8 @@ You must [create a Expression Parameters asset](#expression-parameters-asset), w
 ### Expression Parameters Asset
 
 An Expression Parameters asset contains the list of custom parameters that your Playable Layers can use. Each parameter has a name, type, and default value. You can also choose whether the parameter should be synchronized for other players, which allows other players to see changes caused by the animator and custom parameters.
+
+If you tick "Show Advanced Options", you can also adjust each avatar's bit width (how many bits of space it takes up) and its representation (signed or unsigned). A label shows you the range of allowed values for the settings you've chosen.
 
 ![What expression parameters look like by default.](/img/avatars/expression-menu/default-parameters.png)
 
@@ -176,11 +180,13 @@ Learn how to create an Expression Paramaters asset by reading the [Expressions M
 
 ### How to Control Custom Parameters
 
-After setting up custom parameters in your avatar's Playable Layers and Expression Parameters asset, you can control them in three different ways:
+After setting up custom parameters in your avatar's Playable Layers and Expression Parameters asset, you can control them in the following ways:
 
 - Set up an [Expressions Menu](/avatars/expression-menu-and-controls), which allows users to easily control the parameters in VRChat, e.g., switch between outfits or play custom animations. Expressions Menus are the easiest and most common method to control custom parameters.
 - You can attach the state behaviour [Avatar Parameter Driver](/avatars/state-behaviors#avatar-parameter-driver) to states in your Playable Layer. It can automatically set, add, or randomize parameters that you defined in your Expression Parameters asset.
 - You can set up your avatar for [OSC](https://docs.vrchat.com/docs/osc-overview), allowing users and third-party tools to control parameters. For example, [VRCFaceTracking](https://docs.vrcft.io/) uses face and eye tracking hardware to control an avatar's facial expression parameters. 
+- You can use [Face Tracking Parameter Behaviors](/avatars/face-tracking#parameter-behaviors) with **Forward to Animator** to send calculated tracking, voice, or individual viseme strengths to named parameters.
+	- These parameters usually do not need **Synced** enabled, because VRChat syncs face tracking data separately. See [Face Tracking networking](/avatars/face-tracking#networking-and-synced-parameters).
 
 ### Default AV3 Aliasing
 
@@ -198,9 +204,37 @@ If you also have an `eyes_closed` blendshape, it'll close them when you use the 
 
 ### Cross-Platform Parameter Sync
 
-When using an avatar that has both Quest and PC versions uploaded, parameters are synced by their position in the parameters list and their parameter type, **not** by the names of the parameters. For a given parameter to sync between PC and Quest, it has to be in the same position in the parameter list, and have the same parameter type. 
+When using an avatar that has both Quest and PC versions uploaded, parameters are synced by their position in the parameters list and their parameter type, **not** by the names of the parameters. For a given parameter to sync between PC and Quest, it has to be in the same position in the parameter list, and have the same parameter type.
 
 Given this, you should always use the same Expression Parameters asset for both the PC and Quest versions of an avatar, even if one version doesn't make use of all the parameters.
+
+### Parameter Types
+
+You can define the following types of parameters in your [Expression Parameters asset](#expression-parameters-asset):
+
+| Parameter Type | Default Range     | Default Memory Usage | Notes                       |
+|:---------------|:------------------|:---------------------|:----------------------------|
+| `int`          | `0` to `255`      | 8 bits               | Unsigned integer.           |
+| `float`        | `-1.0` to `1.0`   | 8 bits               | Signed fixed-point decimal. |
+| `bool`         | `True` or `False` | 1 bit                | A single binary value.      |
+
+Each synced parameter uses a certain amount of parameter memory. VRChat can synchronize up to 256 bits of custom parameters. VRChat also limits your avatar to 8192 total custom Expression Parameters (synced and unsynced). [Built-in parameters](#built-in-parameters) do not count toward these limits.
+
+Remotely synced `int` values start with a memory usage of 8 bits, allowing for values from 0 to 255 inclusive.
+- If you don't need that full range, you can [reduce the bit width](/avatars/expression-menu-and-controls#creating-an-expressions-menu) to save some space in your avatar's 256 bit allowance while reducing the maximum range of numbers the integer can hold. The minimum bit width is 2 bits.
+- If you want to use negative values, you can mark the integer as signed instead of unsigned. This reduces the maximum value in exchange for being able to express negative numbers.
+
+Remotely synced `float` values also start with a memory usage of 8 bits, which gives them a precision of `1/127` over the network. They can always store `-1.0`, `0.0`, and `1.0` precisely. When updated locally, such as with [OSC](https://docs.vrchat.com/docs/osc-overview), float values are stored as native (32-bit) floating-point values in animators.
+- Similar to integers, you can [reduce the bit width](/avatars/expression-menu-and-controls#creating-an-expressions-menu) of floats to save space. This reduces the float's precision, so it should only be done when that precision isn't needed. The minimum bit width is 2 bits.
+- If you only want to express the values `0.0` to `1.0`, you can mark the float as unsigned instead of signed. This reduces the range of the float in exchange for higher precision.
+
+### Parameter Interpolation
+
+If you enable interpolation, parameters change smoothly over a duration rather than instantly.
+
+By default, parameters set by the local player do not interpolate. Instead, they snap immediately to their target values in the same frame they're set. Parameters that are set remotely (for example, someone else in the instance setting a new value for a synced parameter) interpolate over a short, automatically determined period. This helps smooth out sudden changes.
+
+When setting up [custom parameters](/avatars/expression-menu-and-controls/#creating-an-expressions-menu), you can also configure a custom interpolation time for them. A parameter with a custom lerp time moves over that time from the old value to the new one whenever a new value is given. This same duration applies both locally and remotely.
 
 ### Mismatched Parameter Type Conversion
 

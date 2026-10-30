@@ -31,7 +31,7 @@ Follow the steps below to quickly set up the VRChat SDK:
 
 ## World Creation
 
-To make a VRChat world, you construct a scene in Unity using typical 3D models, materials and lighting. You can add interactivity with [Udon](/worlds/udon), our custom scripting system. Udon can be built with the visual [Udon Graph](/worlds/udon) or by writing C#-like code using [UdonSharp](https://udonsharp.docs.vrchat.com). You can use our [Networking](/worlds/udon/networking) system to synchronize experiences between players.
+To make a VRChat world, you construct a scene in Unity using typical 3D models, materials and lighting. You can add interactivity with [Udon](/worlds/udon), our custom scripting system. Udon can be built with the visual [Udon Graph](/worlds/udon) or by writing C#-like code using [UdonSharp](/worlds/udon/udonsharp). You can use our [Networking](/worlds/udon/networking) system to synchronize experiences between players.
 
 ## Avatar Creation
 

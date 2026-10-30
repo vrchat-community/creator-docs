@@ -27,7 +27,7 @@ For more details on best practices when working with cross-platform projects, re
 
 ![Select Confirm](/img/platforms/ios-switch-platform-confirm.png)
 
-:::caution Requires Additional Setup
+:::warning Requires Additional Setup
 
 In some situations the "iOS" option will not be selectable in the dropdown. If that's the case - you may need to install the iOS Build Support module. You can follow the [Set Up iOS Build Support Unity Module](/platforms/iOS/build-test-mobile#set-up-ios-build-support-unity-module) guide to install it.
 

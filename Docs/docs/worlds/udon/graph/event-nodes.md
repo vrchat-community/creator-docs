@@ -16,6 +16,7 @@ More events specifically related to networking are listed on the [Network Compon
 Fired when the local player interacts with this GameObject.
 
 - Players can only interact with GameObjects that have a Collider component and an UdonBehaviour component.
+- When implementing this event in an [UdonSharp](/worlds/udon/udonsharp/) script, the inspector will display options to control how the interaction is displayed, such as its Interaction Text. These work the same way as the matching options in [VRC Pickup](/worlds/components/vrc_pickup#component-properties).
 - If you want players to interact with a 2D UI, use [VRC Ui Shape](/worlds/components/vrc_uishape/) and a Button component instead.
 
 ### OnDrop

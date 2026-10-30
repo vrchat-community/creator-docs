@@ -3,7 +3,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 # Playable Layers
 
 When you create animations for your VRChat avatar, you'll utilize VRChat's 'Playable Layers.' They allow you to cleanly separate some things you might want to do with your avatar into their own animations - such as running, jumping, giving a thumbs-up, smiling, wagging your tail, and combinations of these.
-:::caution Unity Knowledge Required
+:::warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.
 :::
@@ -67,7 +67,7 @@ The Additive layer is meant for additive transform movement on top of humanoid b
 
 The Additive layer is special because it is _always_ set to "Additive" blending. In short, if you've got a transform that moves during locomotion, the Additive animation will "add" its animation on top. This can act really weirdly if you do crazy things to bones in Additive, so try to keep it pretty minimal.
 
-:::caution Additive First Layer Avatar Mask Ignored
+:::warning Additive First Layer Avatar Mask Ignored
 
 The first layer (base layer, 0th layer, etc)'s Avatar Mask is ignored. This is for internal masking purposes. You can still mask other layers, but any mask you apply to the first layer will be ignored.
 :::

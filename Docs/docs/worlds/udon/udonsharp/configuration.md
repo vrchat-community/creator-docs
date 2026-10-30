@@ -48,4 +48,4 @@ Includes the C# inline code in the generated assembly code.
 ### Listen for client exceptions
 This will listen for exceptions from the output log the VRChat client makes, then try to match it up against scripts in the project.
 
-[Read more here on how to set it up](https://github.com/vrchat-community/UdonSharp/wiki/class-exposure-tree)
+[Read more about viewing UdonSharp logs in Unity](/worlds/udon/debugging-udon-projects#view-udonsharp-logs-in-unity).

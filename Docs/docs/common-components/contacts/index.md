@@ -105,23 +105,89 @@ This section contains settings defining what the Receiver does when it gets a si
 
 When used on an avatar, a Contact Receiver will respond to contact signals by setting [Animator Parameter](/avatars/animator-parameters) in the avatar's animator.
 
-`Receiver Type` defines the behavior of the parameter setting when a signal is received.
-- `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
-- `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
-- `Proximity` - Gives you a Float value of `0.0-1.0` depending on how close a contact is to the trigger as described below. You must use a Float. If multiple contacts are detected, it will give you the closest. 
+- `Receiver Type` defines the behavior of the parameter setting when a signal is received.
+  - `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
+  - `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
+  - `Proximity` - Gives you a Float value of `0.0-1.0` depending on how close a contact is to the trigger as described below. You must use a Float. If multiple contacts are detected, it will give you the closest.
+    - `Advanced Proximity Parameters` - Enables several additional parameters giving more detailed information about the proximity contact. See [Advanced Proximity Parameters](#advanced-proximity-parameters) for more info.
+    - `Write to Shaders` - Allows the contact receiver to write matrix information to shaders on the same game object. See [Material Contacts](#material-contacts) for more info.
 - `Parameter` - The parameter updated on the animation controller. This parameter DOES NOT need to be defined on the synced Avatar Parameter list. The parameter can be a Float, Bool, or Int, depending on the Receiver Type used.
 - `Value` - Value the parameter is updated to when a collision is detected. Parameter will reset to zero when no collisions are present.
 - `Min Velocity` - Minimum velocity needed from an incoming collider to affect this trigger, only active in `OnEnter` type.
 
-The proximity value tells you how close a contact is to the trigger's center. This is calculated as the closest point of the sender to the receiver.
+The `Proximity` value tells you how close a contact is to the trigger's center. This is calculated as the closest point from the surface of the sender to the center of the receiver.
 
-For box-shaped Contact Receivers, you can enable the option `Use Face Proximity`. This option changes the proximity calculation to tell you how close a contact is to the positive Z face of the box.
+For box-shaped Contact Receivers, you can enable the option `Use Face Proximity`. This option changes the proximity calculation to tell you how close a contact is to the positive Z face of the box. This is calculated as the closest point between the surface of the sender and the positive Z face of the receiver.
+
+##### Advanced Parameters
+
+The `Advanced Parameters` option allows you to generate additional parameters that give more information about the contact. These parameters are intended for more advanced use cases.
+
+:::warning
+
+Advanced parameters can be expensive to calculate. Only enable the ones you need.
+
+:::
+
+As you select choices from the list, the extra parameters below will be set on your avatar's animator, where `{parameter}` is the text you entered for the `Parameter` option. When there's more than one contact sender touching the receiver, these values are set based on the one with the highest proximity.
+
+- `{parameter}_SenderType` [Int] - Identifies what owns the Contact Sender touching the receiver.
+  - `0` - No Contact Senders are touching the receiver, or the Contact Sender is attached to something that VRChat doesn't recognize.
+  - `1` - The Contact Sender is attached to the same avatar as the receiver.
+  - `2` - The Contact Sender is attached to a different avatar from the receiver.
+  - `3` - The Contact Sender is part of the world.
+  - `4` - The Contact Sender is part of a spawned item.
+- `{parameter}_SenderLocalPositionX` [Float] - The local position of the Contact Sender's midpoint relative to the receiver along the Contact Receiver's X axis.
+- `{parameter}_SenderLocalPositionY` [Float] - The local position of the Contact Sender's midpoint relative to the receiver along the Contact Receiver's Y axis.
+- `{parameter}_SenderLocalPositionZ` [Float] - The local position of the Contact Sender's midpoint relative to the receiver along the Contact Receiver's Z axis.
+- `{parameter}_SenderLossyScaleX` [Float] - The lossy world scale of the Contact Sender's transform on the X axis.
+- `{parameter}_SenderLossyScaleY` [Float] - The lossy world scale of the Contact Sender's transform on the Y axis.
+- `{parameter}_SenderLossyScaleZ` [Float] - The lossy world scale of the Contact Sender's transform on the Z axis.
+- `{parameter}_SenderVelocityX` [Float] - The velocity of the Contact Sender relative to the receiver along the Contact Receiver's X axis.
+- `{parameter}_SenderVelocityY` [Float] - The velocity of the Contact Sender relative to the receiver along the Contact Receiver's Y axis.
+- `{parameter}_SenderVelocityZ` [Float] - The velocity of the Contact Sender relative to the receiver along the Contact Receiver's Z axis.
+- `{parameter}_SenderVelocityMagnitude` [Float] - The overall speed of the Contact Sender relative to the Contact Receiver.
+- `{parameter}_PointSeparation` [Float] - The world-space distance, in meters, between the nearest inner points of the Contact Sender and Contact Receiver. For spheres and boxes, the distance is measured from the shape's center. For capsules, it's measured from the nearest point on the capsule's center line. This value is -1 when no Contact Sender is touching the receiver. Distances below 0.001 are treated as 0.
+- `{parameter}_ProximitySpeed` [Float] - The rate of change of the proximity value. Only generated when `Receiver Type` is set to `Proximity`. For example, if proximity starts at 0.5, and then 0.1 seconds later it changes to 1.0, this value will be set to 5, since it changed at a rate of 5 per second. This value is positive when proximity increases, negative when it decreases, and 0 when it isn't moving. Speed values between +0.001 and -0.001 are treated as 0.
+- `{parameter}_CollisionTag_{tag}` [Bool] - Indicates which collision tags match between the Contact Sender and the Contact Receiver, where `{tag}` is the name of the collision tag. One of these parameters is generated for every collision tag your receiver defines.
+
+##### Material Contacts
+
+:::tip
+
+This is an advanced feature for shader authors; creators aren't required to understand this if they only wish to work with the typical avatar parameter usage of contacts.
+
+:::
+
+When the `Write to Shaders` option is enabled, the contact receiver will update the material property blocks of up to four specified renderers with the following data every frame. `{parameter}` is the text you entered for the `Parameter` option. If you specify a `Shader Parameter Override`, that value will be used instead of the main `Parameter` field, without affecting the names of Animator parameters. If a `Shader Parameter Override` is specified and the main `Parameter` field is left empty, the receiver will only update shader properties and won't affect animators.
+- `float4x4 _VRChatContact_Transforms_{parameter}[9]` - A buffer of world-space transforms for the collision shapes of the eight nearest contact senders, followed by that of this receiver's root transform (not its shape).
+- `float4 _VRChatContact_Data_{parameter}[9]` - Parallel to the _Transforms buffer, this contains packed data for the associated contacts (playerId and matching contact tags)
+
+Rather than manually declaring the above properties, use the `VRC_CONTACT_DECLARE();` macro in the provided `Packages/com.vrchat.base/ShaderLibrary/VRCContacts.cginc` file. It also defines convenient data access macros. Read the .cginc file itself in your Unity project for further details.
+```c
+#include "Packages/com.vrchat.base/ShaderLibrary/VRCContacts.cginc"
+
+// Provides the following
+VRC_CONTACT_DECLARE(property);
+int VRC_CONTACT_TARGETCOUNT(property);
+float4x4 VRC_CONTACT_TRANSFORM(property, i);
+float4x4 VRC_CONTACT_TRANSFORM_SELF(property);
+float3 VRC_CONTACT_WORLDPOS(property, i);
+float3 VRC_CONTACT_WORLDPOS_SELF(property);
+int VRC_CONTACT_PLAYERID(property, i);
+int VRC_CONTACT_PLAYERID_SELF(property);
+uint VRC_CONTACT_TAGS(property, i);
+uint VRC_CONTACT_GET_TAG(property, i, tagIndex);
+```
+
+Note that any third-party SDK tools that modify a contact's `Parameter` field (e.g. to avoid naming conflicts) will also affect the shader property names it will write to.
 
 #### Receivers in Worlds
 
 Contact Receiver components in worlds offer no configuration options aside from configuring how proximity is calculated for box-shaped Contact Receivers (see above).
 
 Instead, Receivers always respond to contact signals by invoking events in any Udon scripts attached to the same GameObject as the Receiver. See the section below for more info about interacting with contacts using Udon.
+
 
 ## Udon Access in Worlds
 

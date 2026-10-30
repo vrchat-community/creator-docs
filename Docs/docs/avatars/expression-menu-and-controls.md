@@ -38,30 +38,41 @@ After creating and configuring these assets, make sure to add them to your avata
     - VRChat has a few [built-in parameters](https://creators.vrchat.com/avatars/animator-parameters/#parameters).
     You can always use them in animators - don't add them to your own Expression Parameters.
 5. Choose a type for each parameter. The type should match your animator's <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/AnimationParameters.html">parameter type</UnityVersionedLink>.
-	- `Int` can be any whole number between 0 and 255.
-	- `Float` can be any number between -1.0 and 1.0.
+	- `Int` can be any whole number between 0 and 255 by default.
+	- `Float` can be any number between -1.0 and 1.0 by default.
 	- `Bool` can be either `true` or `false`.
 6. Select the `Default` value to set the default value of each parameter.
 	- When the avatar is reset, the parameter will revert to this value.
-7. Enable `Saved` for parameters that shouldn't reset themselves whenever the avatar is loaded. If your avatar has customization options or settings, `Saved` will prevent them from being reset after switching to a different world or avatar.
-8. Enable `Synced` if the state of this parameter should be sent to all other players over the network.
+7. Optionally, tick `Show Advanced Options` to display and change advanced options for the parameter. If you're unsure what these are, it's safe to ignore them and leave the box unticked.
+   1. Choose the `Lerp Duration` for the value. This property allows you to configure how long it takes for the value to arrive at its target when it changes.
+       - `Default` means the interpolation duration is determined automatically. The value changes instantly locally, and will move to the target over a short space of time remotely.
+       - `Custom` means the value will change over the amount of time you define, ranging from 0 seconds (immediate) to 300 seconds (five minutes). This duration is used both locally and remotely.
+   2. Choose how many `Bits` the value uses.
+       - `Int` uses 8 bits by default. Decreasing this means the integer takes up less space in exchange for a smaller range.
+       - `Float` uses 8 bits by default. Decreasing this means the float takes up less space, but will be less precise, with a larger gap between each value.
+       - `Bool` always uses exactly 1 bit. This cannot be changed.
+   3. Choose the `Representation` the value uses.
+       - `Unsigned` means the minimum value is 0 and the parameter represents positive numbers only. Integers are unsigned by default. Booleans are always unsigned.
+       - `Signed` means the range of values is distributed around 0, allowing both positive and negative numbers in exchange for a smaller range above 0 compared to `Unsigned`. Floats are signed by default.
+8. Enable `Saved` for parameters that shouldn't reset themselves whenever the avatar is loaded. If your avatar has customization options or settings, `Saved` will prevent them from being reset after switching to a different world or avatar.
+9. Enable `Synced` if the state of this parameter should be sent to all other players over the network.
 	- The [sync type](/avatars/animator-parameters/#sync-types) of custom parameters is Playable (except for [Puppet controls](expression-menu-and-controls#types-of-controls)).
 
 Next, you should add both assets to your avatar descriptor.
 
 ![What expression parameters look like by default.](/img/avatars/expression-menu/avatar-descriptor-params.png)
 
-9. Select your avatar descriptor and scroll down to the "Expressions" section.
-10. Change the "Menu" property to your expressions menu.
-11. Change the "Parameters" property to your expression parameters.
+10. Select your avatar descriptor and scroll down to the "Expressions" section.
+11. Change the "Menu" property to your expressions menu.
+12. Change the "Parameters" property to your expression parameters.
 
 After adding both assets to your avatar descriptor, all your expression parameters will now be available in the expression menu, allowing you to customize it.
 
 ![What expression parameters look like by default.](/img/avatars/expression-menu/populated-menu.png)
 
-12. In the inspector, click "Add Control." Up to 8 controls can be added to a single menu.
-13. Choose a name and [type](/avatars/expression-menu-and-controls#types-of-controls). 
-14. You can also add icons, and submenus, or change the order of the controls here.
+13. In the inspector, click "Add Control." Up to 8 controls can be added to a single menu.
+14. Choose a name and [type](/avatars/expression-menu-and-controls#types-of-controls). 
+15. You can also add icons, and submenus, or change the order of the controls here.
   - You can find some default icons in `VRCSDK/Assets3/Expression Menu Icons/` .
 
 ## Types of Controls

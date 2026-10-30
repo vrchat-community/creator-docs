@@ -17,6 +17,7 @@ There's a whole 'Avatars' category on the sidebar to check out. Here are some of
 - [Rig Requirements](/avatars/rig-requirements) explains how to set up your custom 3D model's hierarchy for VRChat.
 - [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system) explains how some avatars achieve an 'Excellent' performance, and others 'Very Poor'.
 - [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Now that you know _why_, check out this page to learn how to get all your frames back.
+- [Face Tracking](/avatars/face-tracking) explains how to map face tracking, visemes, and eye movement to blendshapes across multiple meshes and interact with your animator.
 - Continue reading this page to learn more about important Avatars 3.0 SDK concepts.
 
 ## What is Avatars 3.0?
@@ -92,7 +93,7 @@ Simulated eye movement is where your eyes will move around, looking at things ar
 
 You can preview your setup in the editor and adjust how your avatar's eyes look in a combination of states, which are used to determine how your eye bones are set up.
 
-Blinking can be handled via blendshapes or bones. Blendshapes are the usual method, but we included bones as well to allow for more setups.
+Blinking can be handled via blendshapes, bones, or the [Face Tracking system](/avatars/face-tracking#eyelids-type). For gaze direction, **Eye Gaze Mode** supports **Bone Rotation**, **Face Tracking**, or **Both** together. See [Eye Gaze Mode](/avatars/face-tracking#eye-gaze-mode) for setup details.
 
 Blinking blendshapes are defined by three blendshapes, described below:
 
@@ -115,6 +116,8 @@ In addition, you can now configure the angle of the jaw-flap bone viseme for som
 However, in Avatars 3.0, you can also access an Animator Parameter which indicates which viseme should be currently playing! This means if you can animate it, **you can use it in a viseme.** No more trickery for 2D mouths, robots, whatever-- you can just animate whatever you like for your visemes.
 
 The `Viseme` animator parameter is updated in all viseme modes.
+
+Use **Viseme Blend Shape Face Tracking** to map audio-driven visemes across multiple meshes, balance them with tracked mouth expressions, or forward individual viseme float strengths to the animator. See [LipSync Mode](/avatars/face-tracking#lipsync-mode).
 
 ### Proxy Animations
 
@@ -158,7 +161,7 @@ If you decide to set Write Defaults to "Off":
 - It's recommended that for all states in a layer, you explicitly animate every property affected by that layer.
 - Each state should have an animation clip ("motion" in the state options) that animates at least one property. It does not have to be a valid property reference. States with "None" motion or entirely empty clips will behave as if Write Defaults is "On".
 
-:::caution Additive layers and direct blend trees
+:::warning Additive layers and direct blend trees
 
 VRChat's avatar creator community recommends setting Write Defaults to "On" for:
 - Layers that use additive blending

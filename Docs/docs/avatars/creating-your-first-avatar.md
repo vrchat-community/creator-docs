@@ -143,7 +143,7 @@ After you get the model in your assets, select it, you'll want to ensure it has 
 
 ## Step 4 - Get the model into a scene
 Now that you have the model in your Assets folder, with the correct settings applied, you need to put it into a scene. To do so, either drag it into your [Hierarchy](https://docs.unity3d.com/Manual/Hierarchy.html) or directly into the Scene View window. We recommend having one scene per avatar and placing it at the coordinates (0, 0, 0). If needed, rotate the avatar so it is standing up straight, and ensure that its size is what you expect. You can add a Cube to your scene to compare - the cube will be 1 meter on each side and your Avatar will best function between about 0.5-5m tall. The average person is around 1.65 meters tall.
-:::caution Avatar Optimization
+:::warning Avatar Optimization
 
 It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks wrong. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
 :::
@@ -164,7 +164,7 @@ If your avatar doesn't have a head, place the view position wherever you think i
 
 ![Use the Avatar Descriptor to configure your avatar for VRChat. Make sure to adjust the view position!](/img/avatars/creating-your-first-avatar-5afcbf1-Unity_lsTjP8qDqO.png)
 ### Lip sync mode
-When you talk, you can make your avatar's mouth (or anything else) react automatically.  Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. You can choose one of five lip sync modes:
+When you talk, you can make your avatar's mouth (or anything else) react automatically. Open your `VRC Avatar Descriptor` and expand the `LipSync` dropdown. You can choose one of six lip sync modes:
 
 #### Default
 ![Pressing 'Auto Detect!' is usually enough to let your VRChat avatar react to your speech.](/img/avatars/creating-your-first-avatar-d69289f-Unity_FgsAtEU75F.png)
@@ -183,7 +183,7 @@ VRChat can usually detect your avatar's visemes automatically. If not, you can c
 
 ![The 'Viseme Blend Shape' mode is the most common method of making your character's face move when you speak.](/img/avatars/creating-your-first-avatar-6272723-Unity_w5nQONGtcb.png)
 
-:::caution SIL shape
+:::warning SIL shape
 
 Unity will delete shape keys/blend shapes that are empty on import, so make sure your "SIL" shape (the shape your mouth makes when no sound is detected, but the mic is active - such as the space between words) moves a single vertex a very small, imperceptible amount. This will prevent Unity from deleting that key.
 :::
@@ -199,6 +199,16 @@ If your avatar only uses a single blend shape to animate its mouth, configure it
 
 ##### Viseme Parameter Only
 If you're an advanced creator, you can use this mode to control how your avatar reacts to speech with VRChat's built-in [Animator Parameters](/avatars/animator-parameters).
+
+#### Viseme Blend Shape Face Tracking
+
+This mode routes audio-driven visemes through the [Face Tracking system](/avatars/face-tracking). It supports visemes on multiple meshes, interaction with tracked mouth expressions, and forwarding individual viseme strengths to animator parameters.
+
+Enable **Face Tracking** in the Avatar Descriptor, add your meshes to **Face Tracking Meshes**, and configure viseme mappings in **Blendshapes Sets**. Leave **Use All Tracking Keys** unchecked if the avatar only needs audio-driven visemes or automatic eye movement. See [LipSync Mode](/avatars/face-tracking#lipsync-mode) for details.
+
+### Face tracking and eye look
+
+To support webcam or OSC face tracking, configure the Avatar Descriptor's **Face Tracking** section. You can also route eye direction and eyelid movement through this system using the **Eye Look** settings. Follow the [Face Tracking guide](/avatars/face-tracking#getting-started) to configure **Face Tracking Meshes**, **Blendshapes Sets**, and **Parameter Behaviors**.
 
 ## Step 6 - Going to the build tab / Checking if the avatar is ok
 Next, we'll want to check that everything is good in the build window. To do that, use the menu item `VRChat SDK > Show Control Panel`, which opens the VRChat SDK Control panel. After signing in, switch to the "Builder" tab to see the avatar's GameObject mentioned with a "Build" section below. You also see settings, content tags, the avatar's performance rank, errors, and warnings.

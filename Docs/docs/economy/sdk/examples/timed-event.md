@@ -14,7 +14,7 @@ A ProductEvent is an event that only can be sent by a player who owns a product.
 
 This can be customized in a variety of ways! For example, create a paid product that allows those players to set off fireworks for a certain amount of time. 
 
-You can read more about Udon events [here](https://creators.vrchat.com/worlds/udon/graph/event-nodes/) and [here](https://udonsharp.docs.vrchat.com/events/).
+You can read more about [Udon events](/worlds/udon/graph/event-nodes) and [event execution order](/worlds/udon/event-execution-order).
 
 <div class="video-container">
     <iframe src="https://assets.vrchat.com/videos/docs/ProductEvent_Preview.mp4" title="Timed Event" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
@@ -27,7 +27,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 ##### Prefabs Included
 * **SendProductEventPrefab**: A prefab that sends the product event when the button is pressed and enables the GameObject for the set amount of time. Though only a player who owns the product can set off the event, `OnProductEvent` will be executed by all users. Meaning, only people who pay for the product can activate the event, but anyone can see or interact once the event is activated.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete scene.
 :::
 

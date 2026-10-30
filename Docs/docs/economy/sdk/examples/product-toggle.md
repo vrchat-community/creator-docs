@@ -25,7 +25,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 * **UdonProductToggleObjectOnAnyonePrefab**: Sets the target object to be enabled when anyone in the instance owns the product.
     -  Use these prefabs when a player must be a product owner to enable something for either themself or the entire instance, like spawning cool effects or new objects.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete scene.
 :::
 

@@ -43,7 +43,7 @@ Version 1.1:
 
  If set to **Average**, the motion of the root bone will be the average of all the other chains. This means that the base of each chain will be able to move. 
 
-:::caution
+:::warning
 
 If you are using a single root bone, or a single root bone with several children (but no grandchildren), you **must** define an endpoint position!
 
@@ -192,7 +192,7 @@ These settings control how the PhysBone appears in the scene view of the Unity e
 
 Apply the Constraint to the parent game object instead. You can still have the source transform of the Constraint set to the original game object.
 
-:::caution 
+:::warning 
 
 **PhysBones on avatars have a hard limit on the Meta Quest.** This is done to prevent a reduction in performance on Meta Quest devices, which are often already low on CPU resources.
 

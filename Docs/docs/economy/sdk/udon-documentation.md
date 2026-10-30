@@ -13,7 +13,7 @@ import SellerNotification from '/docs/economy/_sellers-notification.mdx';
 
 <SellerNotification/>
 
-This page documents all Udon types, methods, and events related to the VRChat Creator Economy. You can use them to create your own [Udon scripts](/worlds/udon) with the [Udon Node Graph](/worlds/udon/graph) or [UdonSharp](https://udonsharp.docs.vrchat.com).
+This page documents all Udon types, methods, and events related to the VRChat Creator Economy. You can use them to create your own [Udon scripts](/worlds/udon) with the [Udon Node Graph](/worlds/udon/graph) or [UdonSharp](/worlds/udon/udonsharp).
 
 ## Types
 
@@ -91,7 +91,7 @@ This method checks if a player owns a certain product.
 **Output**
 - `bool`: `true` if the player owns the product, otherwise `false`.
 
-:::caution
+:::warning
 
 Do not use `Store.DoesPlayerOwnProduct` immediately after the `Start` event because Udon may not have received players purchases yet. To avoid race conditions, use the [OnPurchasesLoaded](#onpurchasesloaded) event instead.
 
@@ -233,7 +233,7 @@ This event is triggered once a player's purchase has been loaded and confirmed. 
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
 - `int`: The [quantity](/economy/listings/#quantitypurchases) the user purchased. For [instant](/economy/listings#instant) listings with [quantity purchases](/economy/listings#quantity-purchases) enabled, `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
 
-:::caution
+:::warning
 
 `OnPurchaseConfirmed` is deprecated and does not support [quantity purchases](/economy/listings#quantity-purchases). Never use both `OnPurchaseConfirmed` and `OnPurchaseConfirmedMultiple` in the same script - otherwise, you may accidentally detect the same purchase twice.
 

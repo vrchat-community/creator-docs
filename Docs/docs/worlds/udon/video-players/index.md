@@ -43,6 +43,31 @@ With a single video player, this isn't an issue-- but if you have multiple video
 
 This also applies to late-joiners. If you have 2 video players running in your world, a late-joiner will see that they must send out two video requests. Unmanaged, they will attempt to do so simultaneously and will fail. In cases where you have more than one video player playing simultaneously in a world, you'll have to account for this.
 
+## Handling Errors
+
+When a video fails to load or play, the `OnVideoError` event fires with a `VideoError` value telling you what went wrong.
+
+`enum VRC.SDK3.Components.Video.VideoError`
+
+| Name | Summary |
+| --- | --- |
+| Unknown | The video failed for a reason VRChat could not identify. |
+| InvalidURL | The URL is malformed, or points to something that isn't a playable video. |
+| AccessDenied | The player has not enabled "Allow Untrusted URLs" in their settings, and the URL is not on the [allowlist](/worlds/udon/external-urls#allowlist). |
+| PlayerError | The video player component itself failed to play the video. |
+| RateLimited | The request was [rate limited](#rate-limiting). Wait before trying again. |
+
+**Example**
+```cs
+public override void OnVideoError(VideoError videoError)
+{
+    if (videoError == VideoError.RateLimited)
+    {
+        // Back off and retry later rather than immediately requesting again.
+    }
+}
+```
+
 ## Supported Video Hosts
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 

@@ -41,7 +41,7 @@ ADB uses USB debugging on an android device to communicate with the device. This
 
 Enabling USB debugging also requires you to enter developer mode on your device.
 
-:::caution Warning
+:::warning
 
 USB debugging allows your computer to perform many potentially dangerous operations without any notification. You should only use it with applications that you trust. 
 

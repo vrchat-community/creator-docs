@@ -22,7 +22,7 @@ The API provides the following user-facing types for VRChat Constraints, all in 
 - [**VRCRotationConstraint**](/common-components/constraints/vrc-rotation-constraint)
 - [**VRCScaleConstraint**](/common-components/constraints/vrc-scale-constraint)
 
-There are also these supporting classes in the namespace `VRC.Dynamics`:
+There are also these supporting types in the namespace `VRC.Dynamics`:
 - **VRCConstraintSource** - A single constraint source, containing a `SourceTransform` and a `Weight`
 - **VRCConstraintSourceKeyableList** - A list of sources used by a constraint.
 
@@ -58,52 +58,162 @@ Functionally identical to Unity's [locked](https://docs.unity3d.com/2022.3/Docum
 
 Constraints are always treated as locked in play mode.
 
-#### Sources
+#### Source Access
 
-- `VRCConstraintSourceKeyableList`: The list of sources belonging to this constraint.
+The series of methods listed below can be used to access and modify the sources belonging to a constraint via Udon.
 
-As an example, the following code sample randomizes the weights of every source assigned to a particular constraint by iterating over each source, changing its weight, and then assigning it back to the list again:
+As an example, the following code sample randomizes the weights of every source assigned to a particular constraint by getting each source, changing its weight, and then setting the source in the constraint again:
 
 ```csharp
-for (int i = 0; i < constraint.Sources.Count; i++)
+for (int i = 0; i < constraint.SourceCount; i++)
 {
-    VRCConstraintSource source = constraint.Sources[i];
+    VRCConstraintSource source = constraint.GetSource(i);
     source.Weight = UnityEngine.Random.value;
-    constraint.Sources[i] = source;
+    constraint.SetSource(i, source);
 }
 ```
 
-You can programatically add sources to a constraint by getting the sources list and calling `Add()` on it:
+You can programatically add sources to a constraint with the `AddSource()` method:
 
 ```csharp
 // Create a new constraint source targeting this transform with a weight of one.
 VRCConstraintSource source = new VRCConstraintSource(transform, 1.0f);
 
 // Add this source to a constraint.
-constraint.Sources.Add(source);
+constraint.AddSource(source);
 ```
 
-To remove sources, you can either use `Remove()` with the same source struct as when you added it, or find a particular existing source by index and use `RemoveAt()`.
+To remove sources, use the `RemoveSource()` method. You can either pass in the specific source you want to remove, or remove a particular source by index.
 
 ```csharp
-// Remove a specific source...
-constraint.Sources.Remove(source);
+// Remove a specific source, with a return value telling us if it was removed...
+bool removed = constraint.RemoveSource(source);
 
 // ...Or remove a source at a particular index i.
-constraint.Sources.RemoveAt(i);
+int i = 0;
+constraint.RemoveSource(i);
 ```
 
 :::warning
 
-The sources list has a special limitation where only the first sixteen elements of it can be targeted by animators on avatars. This is due to the nature of how the Unity engine handles animating elements of an array and the need to keep compatibility with certain user made animation tooling. You should keep this limitation in mind if you're planning to write tooling for the Avatars SDK that adds more than sixteen sources to a single constraint.
+While the raw `Sources` list itself is also available to Udon, **VRChat strongly recommends you use the methods listed below instead.** This is because Udon can have issues applying changes when modifying the list directly (since it's a `struct` type). It is exposed to Udon for backward compatibility reasons only.
+
+The `Sources` list is safe to use in animation clips and non-Udon projects such as SDK tooling written in C#.
+
+Additionally, the sources list has a special limitation where only the first sixteen elements of it can be targeted by animators. This is due to the nature of how the Unity engine handles animating elements of an array and the need to keep compatibility with certain user made animation tooling. You should keep this limitation in mind if you're planning to write tooling for the SDK that adds more than sixteen sources to a single constraint.
 
 :::
+
+##### SourceCount
+
+The number of sources the constraint currently has.
+
+##### AddSource()
+
+- `source`: The source to add to the sources list.
+
+Adds a new source to the list of sources. The new source will be added at the end.
+
+##### RemoveSource()
+
+- `index`: The index of the source to remove.
+- `source`: The source to remove.
+
+Remove a source from the list of sources either by index or by a particular source. If a specific source is passed in, the method returns true if a matching source in the list was found and removed.
+
+##### GetSource()
+
+- `index`: The index of the source to get.
+
+Get a source by its index.
+
+Logs an error and returns an empty source if the index is out of source list's bounds. Indexing starts from 0, so the first source will be at index 0, the second will be at index 1, and so on.
+
+To safely access a source, make sure the index is in bounds first. For example:
+
+```csharp
+if (index >= 0 && index < constraint.SourceCount)
+{
+    constraint.GetSource(index);
+}
+else
+{
+    // No source available at this index...
+}
+```
+
+##### SetSource()
+
+- `index`: The index of the source to be replaced.
+- `source`: The source to set at this index.
+
+Sets a source in the list to the one given by overwriting what was previously there.
+
+Logs an error and returns an empty source if the index is out of source list's bounds. Indexing starts from 0, so the first source will be at index 0, the second will be at index 1, and so on.
+
+To set a source safely, make sure the index is in bounds first. For example:
+
+```csharp
+if (index >= 0 && index < constraint.SourceCount)
+{
+    constraint.SetSource(index, source);
+}
+else
+{
+    // No source available at this index...
+}
+```
+
+##### GetSources()
+
+- `sources`: An array of sources to be updated by this method.
+
+Gets the constraint's full list of sources by placing them in the array you provide.
+
+The method will update the sources array to contain the sources assigned to the constraint, beginning from the start of the array. If the array is too small to contain all of the sources, it will copy over as many as it can until it runs out of space. This method returns the number of sources that were actually copied over.
+
+Here's an example of how you might use this to get the sources in a constraint:
+
+```csharp
+// Construct an array with enough space to hold all of the sources in the constraint.
+VRCConstraintSource[] mySources = new VRCConstraintSource[constraint.SourceCount];
+
+// Use this to get the sources from the constraint.
+int count = constraint.GetSources(mySources);
+
+// Iterate over the array and do something with each source.
+for (int i = 0; i < count; i++)
+{
+    VRCConstraintSource source = mySources[i];
+    // ...
+}
+```
+
+##### SetSources()
+
+- `sources`: The array of sources to set.
+
+Updates this constraint's sources list to exactly match the array you provide. All existing sources will be replaced.
+
+If the provided sources array is null or empty, this is equivalent to clearing the sources list.
+
+##### ClearSources()
+
+Clears the sources list so the constraint no longer has any sources.
 
 #### TargetTransform
 
 - `Transform`: The transform that's affected by the result of this constraint component.
 
 When set to `null`, the constraint applies its result to the transform it's attached to instead.
+
+#### SmoothingFactor
+
+- `float`: The amount of smoothing the constraint applies, where `0` means no smoothing.
+
+The higher the smoothing factor, the longer the motion takes. The constraint will move approximately 63% of the way to its target every `SmoothingFactor` seconds.
+
+Smoothing is applied to the constraint's result every frame based on this formula, where `deltaTime` is the amount of time since the previous frame: `result = lerp(current, target, 1 - exp(-deltaTime / smoothingFactor))`
 
 #### SolveInLocalSpace
 

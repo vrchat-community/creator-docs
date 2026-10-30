@@ -10,7 +10,7 @@ draft: false
 
 This update merges the ClientSim and UdonSharp packages into the Worlds package so they will be available in all projects moving forward. It also updates the Content Tags available in the Build panel to support the new [Content Gating system](https://hello.vrchat.com/blog/content-gating).
 
-:::caution
+:::warning
 
 Make sure you update to [Creator Companion 2.1.6](https://vcc.docs.vrchat.com/news/release-2.1.6) or higher before updating to this version of the SDK!
 

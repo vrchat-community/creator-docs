@@ -103,3 +103,15 @@ Inputs: `instance` - `UdonBehaviour`, `target` - NetworkEventTarget, `eventName`
 Runs the event `eventName` on the target UdonBehaviour for remote players according to `target`. Has overloads for including parameters.
 
 Check the page on [Network Events](/worlds/udon/networking/events) for more details.
+
+### DisableInteractive
+Type: `bool`
+
+Set this to `true` to stop an UdonBehaviour from receiving [Interact](/worlds/udon/graph/event-nodes) events. This also hides the interaction highlight on the object, so players get no hint that it used to be interactive.
+
+Setting it back to `false` restores interactivity. This is a runtime switch. It does not remove the `Interact` event from the program.
+
+### GetProgramVariableType
+Inputs: `symbolName` - `string`
+
+Returns the `System.Type` of the Udon variable named `symbolName`, or `null` if no variable by that name exists. Because it returns `null` for unknown names, you can also use it to check whether a variable exists before reading it.

@@ -32,6 +32,16 @@ The `Target Transform` setting allows you to change the transform targeted by th
 
 This may be useful if you'd like to keep all the constraint components on your avatar or world prefab in one place, or if you're setting up a system that uses constraints and you want it to be transferable between different avatars or world prefabs.
 
+### Smoothing Factor
+
+The `Smoothing Factor` setting lets you apply motion smoothing to the constraint. By default, the smoothing factor is set to zero, which means no smoothing is applied and the constraint will resolve to its target instantly. If you set the value to a number above zero, the constraint will move smoothly to its target position/rotation/scale over time instead of moving instantly.
+
+This lets you smooth out the motion of a VRChat constraint if you want to avoid abrupt movements. For example, if you're using an aim constraint to point one object at another, you could use smoothing to let it turn around with some lag as the target moves around.
+
+Values between 0 and 1 generally work best, but you can go above 1 if you need a constraint that moves very slowly.
+
+In SDK projects, smoothing only applies while the editor is in play mode.
+
 ### Solve In Local Space
 
 Normally, a constraint is solved in world space, which means it will match the **world** position/rotation/scale of its sources. If the `Solve In Local Space` option is enabled, the constraint will match the **local** position/rotation/scale of its sources instead.
