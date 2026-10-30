@@ -31,7 +31,7 @@ To detect events on these Colliders, you can use:
 - **OnPlayerCollisionExit** is called when a player's capsule exits a Collider.
 - **OnControllerColliderHitPlayer** is called when a CharacterController hits a Player.
 
-:::caution OnPlayerCollision Events are for Moving Objects
+:::warning OnPlayerCollision Events are for Moving Objects
 
 These events WILL NOT be called when a player 'walks into' a stationary object. If you want to handle that, use a Trigger Collider.
 

@@ -144,6 +144,43 @@ The [simulation time](/worlds/udon/networking/network-components) of a player.
 
 **NOT RECOMMENDED** - Turns on legacy locomotion for this player, mimicking how players moved in VRChat's deprecated SDK2. After enabling legacy locomotion, it stays enabled until the user leaves your world.
 
+### ShuffleArray
+`Utilities.ShuffleArray(int[] array)`
+
+Randomly reorders the elements of an `int` array. It shuffles the array you pass in rather than returning a new one, so copy the array first if you need to keep the original order.
+
+In UdonSharp, `ShuffleArray` only accepts `int[]`. Passing any other array type fails to compile with "Method is not exposed to Udon". To shuffle another array, shuffle an array of indices and use it to read the original array.
+
+For example, you can shuffle the order of players to split them into two random teams:
+
+```cs
+using UdonSharp;
+using UnityEngine;
+using VRC.SDKBase;
+
+public class TeamPicker : UdonSharpBehaviour
+{
+    public override void Interact()
+    {
+        VRCPlayerApi[] players = VRCPlayerApi.GetPlayers();
+
+        int[] order = new int[players.Length];
+        for (int i = 0; i < order.Length; i++)
+        {
+            order[i] = i;
+        }
+        Utilities.ShuffleArray(order);
+
+        for (int i = 0; i < order.Length; i++)
+        {
+            VRCPlayerApi player = players[order[i]];
+            string team = i % 2 == 0 ? "Red" : "Blue";
+            Debug.Log($"{player.displayName} joins the {team} team.");
+        }
+    }
+}
+```
+
 ## Language
 
 ### GetCurrentLanguage

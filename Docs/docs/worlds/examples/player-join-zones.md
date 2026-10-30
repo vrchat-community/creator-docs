@@ -39,7 +39,7 @@ This example requires TextMeshPro, a window will offer to "Import TMP Essentials
 This section explains the base program and its two extensions - `JoinZoneWithDisplay` and `BossPicker`.
 
 The `PlayerJoinZone` program is a base class for managing Players within a specific zone. It handles the following:
-* **Modes**: It defines three modes - `MODE_JOIN` accepts changes to the player list, `MODE_GAME` freezes the player list for gameplay, and `MODE_END` offers a place to show end-of-game information. This mode is synced to all players, and uses a [FieldChangeCallback](https://udonsharp.docs.vrchat.com/udonsharp/#fieldchangecallback) to call additional functionality when the mode is changed.
+* **Modes**: It defines three modes - `MODE_JOIN` accepts changes to the player list, `MODE_GAME` freezes the player list for gameplay, and `MODE_END` offers a place to show end-of-game information. This mode is synced to all players, and uses a [FieldChangeCallback](/worlds/udon/udonsharp/attributes#fieldchangecallback) to call additional functionality when the mode is changed.
 * **Player Tracking**: It uses three events to track players, adding them to a [DataList](/worlds/udon/data-containers/data-lists) called `Players`.
     * `OnPlayerTriggerStay` detects players entering the zone, as well as players who were in the zone when the mode was changed.
     * `OnPlayerTriggerExit` detects players leaving the zone.

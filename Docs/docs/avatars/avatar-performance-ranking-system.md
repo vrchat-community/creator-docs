@@ -93,17 +93,37 @@ For example with the Minimum Displayed Performance Rank set to Poor an avatar wi
 | Line Renderers                  | The number of Line Renderers on the avatar.                                                                                                                                                                                                                                                                                                  |
 | Raycasts                        | The number of VRCRaycast components on the avatar.                                                                                                                                                                                                                                                                                           |
 | Cloths                          | The total number of Cloth components on the avatar.                                                                                                                                                                                                                                                                                          |
+| Face Tracking Operations        | The work configured in Face Tracking blendshape mappings and Parameter Behaviors. See [Face Tracking](#face-tracking) below. |
+| Forwarded Parameters            | The number of Avatar Parameters set by Face Tracking Parameter Behaviors using **Forward to Animator**. See [Face Tracking](#face-tracking) below. |
+
+### Face Tracking
+
+The [Face Tracking system](/avatars/face-tracking) contributes two performance statistics:
+
+- **Face Tracking Operations** estimates the calculation work configured on the avatar. Each tracking or viseme blendshape mapping in each Blendshapes Set counts once per mesh in **Face Tracking Meshes** that contains the target blendshape. Each input to a Parameter Behavior also counts, as does each input reference and operator or function in a **Custom** mode **Expression**. Numeric constants do not count. Blendshapes Sets with a **Default Weight** of `0` still count.
+- **Forwarded Parameters** counts Avatar Parameters set by Parameter Behaviors using **Forward to Animator**. These values update matching parameters in the animator. Prefer direct blendshape mappings and calculations in the Face Tracking system, and forward only the values your animator needs.
+
+For example, 100 tracking-to-blendshape mappings in one Blendshapes Set, with every target shape present on two meshes in **Face Tracking Meshes**, contribute 200 Face Tracking Operations. Adding a second equivalent Blendshapes Set contributes another 200, even if its **Default Weight** is `0`.
+
+Custom expressions also have separate [expression limits](/avatars/face-tracking#custom-expression-limits). These limits don't affect your Performance Rank.
+
+These thresholds apply on both PC and mobile:
+
+| Statistic | Excellent | Good | Medium | Poor | Very Poor |
+| --- | --- | --- | --- | --- | --- |
+| Face Tracking Operations | ≤ 2,000 | ≤ 4,000 | ≤ 8,000 | ≤ 16,000 | > 16,000 |
+| Forwarded Parameters | ≤ 10 | ≤ 20 | ≤ 30 | ≤ 40 | > 40 |
 
 ## Avatar Performance Ranks - Value Maximums per Rank
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
 
 For example (on PC), if your avatar has 2 Skinned Meshes, your avatar will be ranked as Good, as that exceeds the rating for Excellent, but does not exceed the rating for Good. 
-:::caution All GameObjects and Components are counted!
+:::warning All GameObjects and Components are counted!
 
 All GameObjects and Components, **including those that are currently disabled**, count towards the Avatar Performance Rank.
 :::
 
-:::caution Mesh Read/Write Disabled
+:::warning Mesh Read/Write Disabled
 
 If you disable Mesh Read/Write on **any** mesh on the avatar (including particle systems), the "Triangles" count will read "Mesh Read/Write Disabled" and the avatar's Performance Rank will be immediately downgraded to "Very Poor" regardless of the actual triangle count on the avatar.
 
@@ -142,6 +162,8 @@ The SDK warns you of this and will require that you fix it before you upload.
 | Physics Colliders                                               | 0                  | 1            | 8            | 8            |
 | Physics Rigidbodies                                             | 0                  | 1            | 8            | 8            |
 | Audio Sources                                                   | 1                  | 4            | 8            | 8            |
+| [Face Tracking Operations](#face-tracking)                      | 2,000              | 4,000        | 8,000        | 16,000       |
+| [Forwarded Parameters](#face-tracking)                          | 10                 | 20           | 30           | 40           |
 
 The table below describes the requirements for PC avatars to receive a certain performance rank:
 
@@ -183,6 +205,8 @@ The table below describes the requirements for mobile avatar to receive a certai
 | Trail Renderers                                                     | 0                  | 0            | 0            | 1            |
 | Line Renderers                                                      | 0                  | 0            | 0            | 1            |
 | [Raycasts](/avatars/avatar-components/raycast)[^3]                  | 1                  | 2            | 4            | 8            |
+| [Face Tracking Operations](#face-tracking)                          | 2,000              | 4,000        | 8,000        | 16,000       |
+| [Forwarded Parameters](#face-tracking)                              | 10                 | 20           | 30           | 40           |
 
 [^1]: Bounds Size is determined by the maximum size of all components on your avatar. Trail and Line Renderers do not count for this calculation.
 
@@ -259,6 +283,7 @@ When you choose a Performance Rank in VRChat's menu, all avatars that are below 
 | Physics Colliders                                                                | All Physics Colliders removed                                                            |
 | Physics Rigidbodies                                                              | All Physics Rigidbodies removed                                                          |
 | Audio Sources                                                                    | All Audio Sources removed                                                                |
+| Face Tracking Operations or Forwarded Parameters                                 | **Avatar replaced with [Fallback](https://docs.vrchat.com/docs/avatar-fallback-system)** |
 
 ### Minimum Displayed Performance Rank on PC
 On VRChat for PC, the Minimum Displayed Performance Rank is set to "Very Poor" by default. This means that, by default, no avatars will have their components or display affected for performance reasons on PC. If you wish to change this, you can choose between "Medium", "Poor", or "Very Poor" options.

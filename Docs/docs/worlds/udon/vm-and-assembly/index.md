@@ -87,7 +87,7 @@ In particular:
 
 If it is none of these, an error occurs.
 
-:::caution
+:::warning
 
 It is not presently possible to specify a non-null value for `SystemType` in Udon Assembly, but it is possible in Udon Graph and UdonSharp. Similar issues exist for `SystemInt64`, `SystemUInt64`, `SystemSByte`, `SystemByte`, `SystemInt16`, `SystemUInt16`, and `SystemBoolean` (yes, it is impossible to actually _successfully_ specify `true` or `false`).
 
@@ -125,7 +125,7 @@ Custom events never take parameters (outside of whatever mechanism you define), 
 
 The actual opcodes are reasonably simple. There is the opcode name, and then for some opcodes, a parameter. This parameter can be an integer, a symbol (integer value of that symbol, i.e. heap index or code address), or a string. When it is a string, the assembler will create a hidden, unnamed variable for that string, and the actual value will be the heap index.
 
-:::caution
+:::warning
 
 For some reason, defining two code symbols that point to the same position is not allowed, causing an `Address aliasing detected` error.
 
@@ -220,7 +220,7 @@ Pops two heap indexes. The value from the second heap index popped (aka the firs
 
 ## Externs Reference
 
-:::caution
+:::warning
 
 Relying on the exact format of extern signatures is less than advisable, outside of relying on specific externs that are already known to exist.
 
@@ -251,10 +251,10 @@ _There is presently no complete reference of externs._
 
 However:
 
-* [The UdonSharp documentation has an API reference for the VRChat methods.](https://udonsharp.docs.vrchat.com/vrchat-api)
-* UdonSharp provides a way to explore what's available, using the [Class Exposure Tree](https://udonsharp.docs.vrchat.com/class-exposure-tree).
+* The [Player API](/worlds/udon/players), [Networking](/worlds/udon/networking) and [world components](/worlds/components) pages document the VRChat methods available to Udon.
+* UdonSharp provides a way to explore what's available, using the [Class Exposure Tree](/worlds/udon/udonsharp/class-exposure-tree).
 
-:::caution
+:::warning
 
 The ability to copy member names in the UdonSharp Class Exposure Tree is broken at this time. This is a good way to quickly scout what's available, but you'll still need to actually get the extern name using Udon Graph.
 

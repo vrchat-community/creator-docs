@@ -64,7 +64,7 @@ Once you've read everything above, submit your new world to Community Labs! If y
 If you want your world to be categorized as an Avatar World or Game World, just add the appropriate tag during upload.
 
 
-:::caution Don't abuse the world rows
+:::warning Don't abuse the world rows
 
 These rules are in place to give **all** worlds a chance to be discovered. Utilizing "SEO-like" techniques is not permitted and will result in actions such as tag removal, or in repeated/worse cases, moderation of the author.
 
@@ -80,7 +80,7 @@ To categorize your world as an Avatar World, its title must include one of the t
 
 By including one of these terms in your world's title, it will show up in the "Avatar World" category in VRChat's menu, making it easier for users to discover.
 
-:::caution Don't miscategorize your world
+:::warning Don't miscategorize your world
 
 Does your world contain avatars, but it's not an Avatar World?
 

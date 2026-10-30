@@ -8,7 +8,7 @@
 
 You can also user other TextMeshPro components from VRChat's [allowlisted world components](/worlds/whitelisted-world-components#text-mesh-pro), but they aren't available in Udon. 
 
-:::caution
+:::warning
 
 Avoid using Unity's built-in [text components](https://docs.unity3d.com/2018.1/Documentation/ScriptReference/UI.Text.html).
 

@@ -9,7 +9,7 @@ Videos in your world only play if their domain is on the allowlist below, or if 
 
 VRChat on Android does not play video if the host is not using HTTPS.
 
-:::caution
+:::warning
 
 The example video player in the SDK does not handle cases where the instance master has "Allow Untrusted URLs" disabled, which prevents videos from playing. Consider modifying the Udon code to give sync ownership to the user requesting the video.
 :::

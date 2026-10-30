@@ -20,7 +20,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 * **ProductOwnersInInstancePrefab**: A prefab with a console that shows all the product owners in the instance.
 * **NonProductOwnersInInstancePrefab**: A prefab with a console that shows all the non-owners in the instance.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete scene.
 :::
 

@@ -133,7 +133,7 @@ Keep in mind that you're not permitted to upload content to VRChat that violates
 
 After uploading your world, it will become available in VRChat! You should be able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
-:::caution World Upload Failures
+:::warning World Upload Failures
 
 If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If there are any, solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
 

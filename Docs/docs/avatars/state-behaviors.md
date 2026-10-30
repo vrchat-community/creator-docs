@@ -2,7 +2,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # State Behaviors
 
-:::caution Unity Knowledge Required
+:::warning Unity Knowledge Required
 
 This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.
 :::
@@ -12,7 +12,7 @@ All state behaviors run on the first frame of the transition into that state.
 
 State behaviors *should* run no matter how long the state machine remains in the state containing the state behavior.
 
-:::caution
+:::warning
 
 The term "should" is deliberately used here, as in the <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/StateMachineBehaviours.html">Unity documentation</UnityVersionedLink> does not define any guarantee that state behaviors will execute given very small transition or state durations.
 
@@ -148,7 +148,7 @@ When using an Int parameter, you can use the Prevent Repeats setting to prevent 
 
 ### Copy
 Copy will set the value of the Source Parameter to the Destination Parameter. This can be used to set one float to match another float, to remap one float into a different range, or to convert between two different types entirely.
-:::caution
+:::warning
 
 VRChat's built-in parameters, such as `GestureLeftWeight`, **can** be specified but do not work as source parameters.
 :::
@@ -216,3 +216,21 @@ Each audio setting has an additional property. By default, it's set to "Apply If
 | Always Apply     | The setting is applied to the audio source, even if it is currently playing a clip.               |
 | Apply If Stopped | The setting is applied to the audio source unless it's already playing a clip. (Default)   |
 | Never Apply      | The setting is unused and greyed out in the inspector.                                     |
+
+## Animator Face Tracking Blendshapes Set
+
+The **VRC Animator Face Tracking Blendshapes Set** behavior lets you set the weight of one or more [Blendshapes Sets](/avatars/face-tracking#blendshapes-sets) defined in the Face Tracking section of the Avatar Descriptor. A single behavior can drive multiple Blendshapes Sets, and each entry is applied *once* upon entry to the State upon which the behavior resides.
+
+When `Type` is set to `Parameter`, the weight is read from **Source Parameter** on state entry, similar to how the [Avatar Parameter Driver](#copy) reads a source. It is not continuously read while the state remains active. To continuously drive a Blendshapes Set's weight from tracking inputs, use a [Parameter Behavior](/avatars/face-tracking#parameter-behaviors) with **Apply Blend Set Weight**.
+
+| Property Name    | Purpose                                                                                      |
+| ---------------- | -------------------------------------------------------------------------------------------- |
+| Type             | Whether the weight comes from a fixed `Value` or is read from a `Parameter`.                  |
+| Source Parameter | The parameter to read the weight from (`Parameter` type only).                               |
+| Blendshapes Set Name | The name of the Blendshapes Set to modify, matching the name in the Avatar Descriptor. Set the weight to 0 to disable that Blendshapes Set. |
+| Apply Weight     | The weight (0-1) to apply to the Blendshapes Set (`Value` type only).                         |
+| Convert Range    | If enabled, remap the source value from **Source Parameter Range** into **Apply as Weight Range** before applying it as the weight, as with the Parameter Driver's [Custom Ranges](#custom-ranges). You can't remap to values outside 0-1, but specifying Min/Max in reverse order flips whether the value increases or decreases with the source. |
+| Lerp Speed       | Rate of weight change per second (0-100). 0 applies the weight instantly. Higher nonzero values produce faster transitions. |
+| Debug Message    | When this StateBehavior runs, it prints this string to the output log. Useful for debugging. |
+
+For example, to switch from a Blendshapes Set named `Happy` to one named `Angry`, add two entries with **Type** set to **Value**. For the entry with **Blendshapes Set Name** set to `Happy`, set **Apply Weight** to `0`; for `Angry`, set **Apply Weight** to `1`. A **Lerp Speed** of `2` takes half a second to change a weight from `0` to `1`. The animator selects the active Blendshapes Sets while Face Tracking handles the blendshape mappings.

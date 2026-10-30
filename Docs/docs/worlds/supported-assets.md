@@ -18,7 +18,7 @@ As of Unity 2018, TextMesh Pro is a built-in component of Unity. We strongly rec
 Import from Package Manager.
 
 We strongly suggest checking out [Silent's Post Processing guide](https://gitlab.com/s-ilent/SCSS/wikis/Other/Post-Processing) for more info and best practices.
-:::caution 
+:::warning 
 
 Do not import the `Test` folder when importing post-processing. It will cause script errors which will prevent you from uploading the world.
 :::

@@ -32,7 +32,7 @@ To set up a preview mode animation for your avatar, follow the steps below:
 
 ![Plug In Animator](/img/avatars/preview-mode/preview-mode-plug-in-animator.png)
 
-:::caution
+:::warning
 Please note that Material swapping animations do not work correctly when previewed in the menu. However, you can still do most other things like toggling objects, or adjusting BlendShapes.
 :::
 

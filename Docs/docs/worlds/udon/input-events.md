@@ -58,6 +58,42 @@ The majority of VR controllers used on PC show as `SteamVR2`. However, it is sti
 
 :::
 
+## InputManager
+
+`static class VRC.SDKBase.InputManager`
+
+`InputManager` lets you check how the local player is currently interacting with your world.
+
+| Name | Returns | Summary |
+| --- | --- | --- |
+| IsUsingHandController() | bool | Whether the local player is using VR hand controllers. |
+| GetLastUsedInputMethod() | [VRCInputMethod](/worlds/udon/graph/type-nodes/#vrcsdkbasevrcinputmethod) | The input method the local player used most recently. |
+| EnableObjectHighlight(GameObject obj, bool enable) | void | Turns the interaction highlight on or off for the `Renderer` on this GameObject. Does not affect renderers on child objects. |
+| EnableObjectHighlight(Renderer renderer, bool enable) | void | Turns the interaction highlight on or off for a specific `Renderer`. |
+
+**Example**
+```cs
+using UdonSharp;
+using UnityEngine;
+using VRC.SDKBase;
+
+public class HighlightWhenVR : UdonSharpBehaviour
+{
+    public Renderer targetRenderer;
+
+    void Start()
+    {
+        InputManager.EnableObjectHighlight(targetRenderer, InputManager.IsUsingHandController());
+    }
+}
+```
+
+:::note
+
+`GetLastUsedInputMethod` reports the last method the player *used*, not the hardware they have connected. A VR player who picks up a keyboard reports `Keyboard` until they use their controllers again. To react to changes as they happen, use [OnInputMethodChanged](#oninputmethodchanged) instead of polling.
+
+:::
+
 ## Unity Input Methods and Properties
 
 Udon can access some methods and properties from the [`UnityEngine.Input`](https://docs.unity3d.com/ScriptReference/Input.html) namespace. They provide detailed information about user input.

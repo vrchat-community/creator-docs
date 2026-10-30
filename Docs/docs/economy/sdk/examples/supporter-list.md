@@ -18,7 +18,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 
 <HowToImportExample/>
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete example scene.
 :::
 

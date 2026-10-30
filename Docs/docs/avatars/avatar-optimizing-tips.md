@@ -1,6 +1,6 @@
 # Avatar Optimization Tips
 
-:::caution
+:::warning
 
 **This guide is not meant to be the end-all, be-all of avatar optimization!** Optimizing your avatar properly requires pretty wide knowledge of a ton of things. We don't expect everyone to know everything.
 

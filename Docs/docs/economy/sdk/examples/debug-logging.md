@@ -19,7 +19,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 ##### Prefabs Included
 * **StoreDebugLoggingPrefab**: A prefab that contains a store-related console window, which supporters can interact with.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete scene.
 :::
 

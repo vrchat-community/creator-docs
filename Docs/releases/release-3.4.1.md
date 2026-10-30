@@ -10,7 +10,7 @@ draft: false
 
 This update addresses post-3.4.0 issues and makes minor usability improvements to the SDK.
 
-:::caution
+:::warning
 
 Make sure you update to [Creator Companion 2.1.6](https://vcc.docs.vrchat.com/news/release-2.1.6) or higher before updating to this version of the SDK!
 

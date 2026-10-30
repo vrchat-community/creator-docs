@@ -9,19 +9,17 @@ This component can also be used on avatars to create seats on avatars!
 
 ## Parameters and Options
 
-| Parameter                    | Description                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Player Mobility              | Should the player be able to move, options include:                                                     |
-|                              | - Mobile: Allow users to move when seated in the station.                                               |
-|                              | - Immobilize: Prevents the user from moving.                                                            |
-|                              | - Immobilize For Vehicle: Same as Immobilized but optimized for moving stations.                        |
-| Can Use Station From Station | If the user can switch stations when sitting in a station.                                              |
-| Animation Controller (optional) | Used to override normal seating animations with a custom one.                                        |
-| Disable Station Exit         | If the user cannot exit the station by usual means, use triggers to unseat the user.                    |
-| Seated                       | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
-| Station Enter Player Location | Transform that defines where the user should be transported to when seated.                            |
-| Station Exit Player Location  | Transform that defines where the user should be transported to when they are unseated.                  |
-| Controls Object              | This is used for stations where you can control an object, such as a vehicle.                           |
+| Parameter                       | Udon property | Description |
+| ------------------------------- | ------------- | ----------- |
+| Player Mobility                 | `PlayerMobility` | Controls whether seated players can move. <ul><li>**Mobile** (`Mobile`): Players can move while seated.</li><li>**Immobilize** (`Immobilize`): Players can't move.</li><li>**Immobilize For Vehicle** (`ImmobilizeForVehicle`): Players can't move. Use this for stations that move, such as vehicles.</li></ul> |
+| Can Use Station From Station    | `canUseStationFromStation` | If the user can switch stations when sitting in a station. |
+| Animation Controller (optional) | `animatorController` | Used to override normal seating animations with a custom one. |
+| Disable Station Exit            | `disableStationExit` | If the user cannot exit the station by usual means, use triggers to unseat the user. |
+| Seated                          | `seated` (read-only) | Is this a station that the user should be sitting in? See the details above to see what this indicates. |
+| Station Enter Player Location   | `stationEnterPlayerLocation` | Transform that defines where the user should be transported to when seated. |
+| Station Exit Player Location    | `stationExitPlayerLocation` | Transform that defines where the user should be transported to when they are unseated. |
+| Controls Object                 | — | This is used for stations where you can control an object, such as a vehicle. |
+
 ## Creating a station with Udon
 
 You can use stations in your own custom Udon scripts. Making a chair to sit in is fairly straightforward. The [VRCChair3](/worlds/examples/udon-example-scene#vrcchair3) prefab included with the VRCSDK shows how to setup one. 
@@ -33,6 +31,14 @@ All you need for a chair is a GameObject with the following components:
 4. (Optional) A mesh that looks like a chair.
 
 The VRChat SDK comes with a program that handles step 3, which is called **StationGraph**.
+
+:::note
+
+If the station's GameObject has no collider, VRChat adds a `BoxCollider` with "Is Trigger" enabled when the station loads. ClientSim does the same, so you see identical behavior when testing in the editor.
+
+Only the station's own GameObject is checked. A collider on a child object does not count, so you still get the extra box. To control the shape and size of the area players interact with, add your own collider to the same GameObject as the `VRC_Station`.
+
+:::
 
 <Tabs groupId="udon-compiler-language">
 <TabItem value="graph" label="Udon Graph">
@@ -73,6 +79,21 @@ Udon's "OnStationEntered" and "OnStationExited" events run for both for the loca
 
 These events can be very useful for advanced use cases, such as detecting which player has entered or exited a moving vehicle.
 
+## Udon API
+
+`class VRC.SDK3.Components.VRCStation`
+
+You can change a station's settings, seat players in it, or remove them from it, from Udon. To change a setting, use the Udon property listed in [Parameters and Options](#parameters-and-options).
+
+### Methods
+
+| Name | Returns | Summary |
+| --- | --- | --- |
+| UseStation([VRCPlayerApi](/worlds/udon/players) player) | void | Seats the given player in this station. |
+| ExitStation([VRCPlayerApi](/worlds/udon/players) player) | void | Removes the given player from this station. |
+
+To seat the local player in a station attached to the same GameObject, you can also call [`UseAttachedStation`](/worlds/udon/players#useattachedstation) on the player, as the `StationGraph` example above does.
+
 ## Stations used in Worlds
 
 Your Animator can access avatar parameters to react to avatars entering the station. 
@@ -103,7 +124,7 @@ Note that since the creator decides what type of Tracking Control to apply, the 
 
 Our example Seated controllers show this branching behavior and the proper transitions and State Behavior setup for applying a seated animation.
 
-:::caution
+:::warning
 
 Stations can only affect parameters that already existed on an avatar. You can't use [State Behaviors](/avatars/state-behaviors) to create new parameters.
 

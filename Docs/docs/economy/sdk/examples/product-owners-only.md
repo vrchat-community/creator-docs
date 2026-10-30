@@ -19,7 +19,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 ##### Prefabs Included
 * **ProductOwnersOnlyAreaExamplePrefab**: A prefab that contains a full example of how to use the ProductOwnersOnlyArea script.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) and [Udon Product Toggle](/economy/sdk/examples/product-toggle) prefabs. Otherwise, your project will be missing what it needs for a complete example scene.
 :::
 

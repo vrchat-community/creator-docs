@@ -95,6 +95,38 @@ UdonSharp is not conformant to any version of the C# language specification. Som
 - The internal type of variables returned by `.GetType()` will not always match what you may expect since U# abstracts some types in order to make them work in Udon. For instance, any jagged array type will return a type of `object[]` instead of something like `int[][]` for a 2D `int` jagged array.
 
 
+## Instantiating objects
+
+Use `Instantiate` to create a copy of a GameObject at runtime. Udon can only instantiate `GameObject`s. Instantiating any other type, such as a `Material` or a `ScriptableObject`, fails to compile.
+
+Instantiated objects are local to each client. To spawn objects that every player can see, use a [VRC Object Pool](/worlds/udon/networking/network-components#vrc-object-pool) instead. If you want every player to have their own copy of an object for as long as they're in the instance, use [Player Objects](/worlds/udon/persistence/player-object).
+
+```cs
+public GameObject prefab;
+
+public override void Interact()
+{
+    GameObject copy = Instantiate(prefab);
+    copy.transform.position = transform.position;
+}
+```
+
+These overloads are available:
+
+```cs
+Instantiate(GameObject original);
+Instantiate(GameObject original, Vector3 position, Quaternion rotation);
+Instantiate(GameObject original, Transform parent);
+Instantiate(GameObject original, Transform parent, bool worldPositionStays);
+Instantiate(GameObject original, Vector3 position, Quaternion rotation, Transform parent);
+```
+
+:::note
+
+Older scripts may call `VRCInstantiate`. It still works, but it's obsolete, so use `Instantiate` instead.
+
+:::
+
 ## Example scripts
 
 ### The rotating cube demo
@@ -124,7 +156,7 @@ public class RotatingCubeBehaviour : UdonSharpBehaviour
 ## Frequently asked questions
 
 ### Does UdonSharp support all Udon features?
-Yes. If Udon supports it, then so does UdonSharp. You can check the [class exposure tree](https://github.com/Merlin-san/UdonSharp/wiki/class-exposure-tree) to see everything UdonSharp has access to.
+Yes. If Udon supports it, then so does UdonSharp. You can check the [class exposure tree](./class-exposure-tree) to see everything UdonSharp has access to.
 
 ### Can I have more than one UdonSharp UdonBehavior on a GameObject?
 Yes.

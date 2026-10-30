@@ -16,12 +16,15 @@ Please consult [Allowlisted World Components](/worlds/whitelisted-world-componen
 | [VRC_MirrorReflection](/worlds/components/vrc_mirrorreflection)            | Used to create a mirror in VRChat.                                                                                   |
 | [VRC_ObjectSync](/worlds/components/vrc_objectsync)                        | Syncs the transform of a GameObject with all players in the instance.                                                |
 | [VRC_Pickup](/worlds/components/vrc_pickup)                                | Allows objects to be picked up, held and used by players.                                                            |
+| [VRC_PlacementZone](/worlds/components/vrc_placementzone)                  | Controls the placement of user portals, stickers and more within an area.                                            |
 | [VRC_PortalMarker](/worlds/components/vrc_portalmarker)                    | Creates portals to other VRChat worlds.                                                                              |
 | [VRC_SceneDescriptor](/worlds/components/vrc_scenedescriptor)              | Describes your VRChat world. Required for every Unity scene you'd like to use as a VRChat world.                     |
 | [VRC_SpatialAudioSource](/worlds/components/vrc_spatialaudiosource)        | Adds 3D spatialization to a Unity AudioSource. Usually automatically added with AudioSource components in editor.    |
 | [VRC_Station](/worlds/components/vrc_station)                              | Allow users to sit down.                                                                                             |
 | [VRC_UIShape](/worlds/components/vrc_uishape)                              | Allow users to interact with Unity's UI system.                                                                      |
+| [VRC Billboard](/worlds/udon/vrc-billboard)                                | Rotates an object every frame so it faces the player's viewpoint.                                                    |
 | [VRC Camera Dolly](/worlds/components/vrc_cameradolly)                     | Allow camera dolly animations to be applied to the VRChat user camera.                                               |
+| [VRC Velocity Tracker](/worlds/components/vrc_velocitytracker)             | Measures how fast a GameObject is moving and rotating so Udon can read its velocity.                                 |
 | [VRC Phys Bone](/common-components/physbones#vrcphysbone)                  | Adds secondary physics based motion to objects in your world.                                                        |
 | [VRC Phys Bone Collider](/common-components/physbones#vrcphysbonecollider) | Defines a collision shape that PhysBones can collide against.                                                        |
 | [VRC Phys Bone Root](/common-components/physbones#vrcphysboneroot)         | Defines the root transform for a collection of PhysBones.                                                            |

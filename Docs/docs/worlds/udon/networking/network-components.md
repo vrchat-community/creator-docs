@@ -17,13 +17,69 @@ Special properties you can *get* from Networking:
 | Master           | Returns the [VRC Player API](/worlds/udon/players) object of the player who is the current instance master. Is always valid. |
 | IsNetworkSettled | Returns `true` if all the data in the instance has been deserialized, applied, and is ready for use. |
 | IsClogged        | Returns `true` if there is too much data trying to get out. You can use this to wait until the network is unclogged or to adjust your logic. |
-| SimulationTime   | Returns the current simulation time of a player or object with networking components. See below for more details. |
 
 ### Simulation time
 
 Simulation time is a timestamp that refers to how far back in time an object is simulated. This value is used internally for [`VRCObjectSync`](/worlds/udon/networking/network-components#vrc-object-sync) and [players](/worlds/udon/players#simulationtime), but can be used in Udon scripts as well. For example, if your ` Time.realtimeSinceStartup ` is 45 and the SimulationTime of an object is 44.5, then VRChat believes 500ms of delay is necessary to smoothly replicate the object at that moment. You can use that number to learn some information about what `VRCObjectSync` is doing, or to create your own system similar to `VRCObjectSync`. For example, if you do `Time.realTimeSinceStartup - SimulationTime(player)` then that will tell you exactly how much latency that player has at that moment.
  
 Simulation time is frequently adjusted depending on network conditions, including many factors such as latency, reliability, and frequency of the packets being received. The goal of this adjustment is to be as close to real-time as possible to reduce latency, but to leave enough room to prevent hitching. There are a variety of factors that can cause hitching, but one example can be running out of received packets from the owner.
+
+## Networking Methods
+
+Methods you can call on `Networking`:
+
+| Name | Returns | Summary |
+| --- | --- | --- |
+| GetServerTimeInSeconds() | double | The current server time in seconds. Every client in the instance sees approximately the same value, so use it to agree on timing across the network. |
+| GetServerTimeInMilliseconds() | int | The current server time in milliseconds. |
+| CalculateServerDeltaTime(double timeInSeconds, double previousTimeInSeconds) | double | The elapsed time between two values from `GetServerTimeInSeconds`, correcting for wrap-around. |
+| GetNetworkDateTime() | System.DateTime | The current network time as a `DateTime`. |
+| GetOwner(GameObject obj) | [VRCPlayerApi](/worlds/udon/players) | The player who owns the object. See [Ownership](/worlds/udon/networking/ownership). |
+| IsOwner(GameObject obj)<br/>IsOwner([VRCPlayerApi](/worlds/udon/players) player, GameObject obj) | bool | Whether the local player, or the given player, owns the object. See [Ownership](/worlds/udon/networking/ownership). |
+| SetOwner([VRCPlayerApi](/worlds/udon/players) player, GameObject obj) | void | Makes the given player the owner of the object. See [Ownership](/worlds/udon/networking/ownership). |
+| SimulationTime(GameObject obj)<br/>SimulationTime([VRCPlayerApi](/worlds/udon/players) player) | float | The [simulation time](#simulation-time) of an object or player. |
+| IsObjectReady(GameObject obj) | bool | Whether the object has finished being set up over the network and is safe to use. |
+| GetUniqueName(GameObject obj) | string | A network-unique name for the object. |
+| Destroy(GameObject obj) | void | Destroys a networked object. To spawn and despawn objects at runtime, use a [VRC Object Pool](#vrc-object-pool) instead. |
+
+For persistence methods such as `GetPlayerObjects`, `FindComponentInPlayerObjects`, and the storage usage and limit methods, see [Player Objects](/worlds/udon/persistence/player-object) and [Player Data](/worlds/udon/persistence/player-data).
+
+:::warning
+
+Server time wraps around, so in VRChat it can be negative. Don't compare server timestamps directly. Use `CalculateServerDeltaTime` to get the time between two of them.
+
+In ClientSim, server time starts near zero when you enter Play mode and never wraps, so test wrap-around handling in VRChat.
+
+:::
+
+### Example: syncing a timer
+
+Because every client reads the same server time, you can sync a countdown by syncing only its start time rather than the remaining seconds.
+
+```cs
+using UdonSharp;
+using UnityEngine;
+using VRC.SDKBase;
+
+[UdonBehaviourSyncMode(BehaviourSyncMode.Manual)]
+public class SharedCountdown : UdonSharpBehaviour
+{
+    [UdonSynced] private double _startTime;
+
+    public override void Interact()
+    {
+        Networking.SetOwner(Networking.LocalPlayer, gameObject);
+        _startTime = Networking.GetServerTimeInSeconds();
+        RequestSerialization();
+    }
+
+    void Update()
+    {
+        double elapsed = Networking.CalculateServerDeltaTime(Networking.GetServerTimeInSeconds(), _startTime);
+        // Every client computes the same value from the same synced start time.
+    }
+}
+```
 
 ## Networking Events
 
@@ -54,7 +110,7 @@ SendTime can be a negative number if the message was sent by someone else before
 This event triggers just after an attempt was made to send serialized data. It returns a **SerializationResult** struct with a 'success' bool and 'byteCount' int with the number of bytes sent.
 
 ### OnSpawn
-This event is deprecated - use the typical OnEnabled event if you want to do something when an object is 'Spawned' from the pool.
+This event is deprecated - use the typical `OnEnable` event if you want to do something when an object is 'Spawned' from the pool.
 
 ### OnOwnershipRequest
 This event is triggered when someone has requested to take ownership. It includes the PlayerObjects for the Requester and the Requested Owner. To approve or deny the change, set a boolean value into a "Set Return Value" node. This logic runs locally on both the requester and the owner, so be aware that disagreements in logic between the two will cause a desync. This is most likely to be expressed by the ownership transfer being unexpectedly rejected by the owner.

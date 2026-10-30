@@ -30,7 +30,7 @@ import HowToImportExample from '/docs/economy/_ce-how-to-import.mdx';
 
 * **FloatingObjectPrefab**: What's spawned above the player when they own the product. You can customize this or replace it with another GameObject to be anything you'd like.
 
-:::caution
+:::warning
 If viewing the example scene, you'll also need the [Open Group Page](/economy/sdk/examples/open-group-page) prefab. Otherwise, your project will be missing what it needs for a complete scene.
 :::
 

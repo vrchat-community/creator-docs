@@ -43,7 +43,7 @@ toonstandardoutline
 
 Toon and Unlit can also be combined with Transparent, Cutout and Fade tags for more granular control. With Toon additionally supporting "DoubleSided" and variations like "DoubleSidedCutout".
 
-:::caution
+:::warning
 
 Please note that using Transparent or Fade tags with Toon will result in it falling back to Transparent Unlit. You might want to take that into account when picking fallback tags.
 :::

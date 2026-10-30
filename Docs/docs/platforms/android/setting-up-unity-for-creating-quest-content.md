@@ -29,7 +29,7 @@ For more details on best practices when working with dual-platform projects, rea
 
 ![Select Confirm](/img/platforms/android-switch-platform-confirm.png)
 
-:::caution Requires Additional Setup
+:::warning Requires Additional Setup
 
 If you installed Unity via the Unity Hub and not the Creator Companion, and the "Android" option is not selectable in the dropdown - you may need to install the Android Build Support module. You can follow the [Set Up Unity Android Tools](/platforms/android/build-test-mobile#set-up-unity-android-tools) guide to install it.
 

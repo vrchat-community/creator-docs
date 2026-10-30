@@ -3,7 +3,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 # Allowlisted World Components
 
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
-:::caution Oculus Quest
+:::warning Oculus Quest
 
 The Android version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
 :::
@@ -88,6 +88,7 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 
 ## VRChat Components
 - [VRC_AvatarPedestal](/worlds/components/vrc_avatarpedestal)
+- [VRCBillboard](/worlds/udon/vrc-billboard)
 - [VRCContactReceiver](/common-components/contacts#vrccontactreceiver)[^1]
 - [VRCContactSender](/common-components/contacts#vrccontactsender)[^1]
 - [VRC_IKFollower](https://docs.vrchat.com/docs/vrc_ikfollower) - Deprecated. Use [VRChat Constraints](/common-components/constraints) or
@@ -103,6 +104,7 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 - [VRC_SpatialAudioSource](/worlds/components/vrc_spatialaudiosource)
 - [VRC_Station](/worlds/components/vrc_station)
 - [VRC_UiShape](/worlds/components/vrc_uishape)
+- [VRCVelocityTracker](/worlds/components/vrc_velocitytracker)
 
 [^1]: Maximum shape limits apply to these components. For more information, check the advice [here](/worlds/components#world-shape-limits).
 
@@ -169,7 +171,7 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 - VerticalLayoutGroup
 
 ## Post Processing Stack V2
-:::caution Post Processing Stack v1
+:::warning Post Processing Stack v1
 
 PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by Unity.
 :::
@@ -194,7 +196,7 @@ PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by U
 
 ## Final IK
 
-:::caution FinalIK Components Modified
+:::warning FinalIK Components Modified
 
 VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
 

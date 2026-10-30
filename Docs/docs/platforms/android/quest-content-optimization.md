@@ -125,7 +125,7 @@ This is also the reason you don't want to be too aggressive in merging meshes in
 
 Keeping bone count low is important to keep the cost of skinning calls low. If a bone isn't animated by an animation or by the rig, you should merge its weights into its parent and delete the original bone. Tools like [Cat's Blender Plugin](https://github.com/michaeldegroot/cats-blender-plugin) make this exceedingly easy.
 
-:::caution Matching Rigs
+:::warning Matching Rigs
 
 Ensure that the basic bone layout and hierarchy of your rigs are identical, including scale, rotation, and position. This especially applies to your root (usually hip) bone. Having a mismatch can result in strange behavior when viewing content cross-platform.
 :::

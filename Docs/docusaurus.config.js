@@ -78,7 +78,7 @@ const config = {
           {to: 'avatars', label: 'Avatars', position: 'left'},
           {to: 'economy', label: 'Creator Economy', position: 'left'},
           {to: 'releases', label: 'Releases', position: 'left'},
-          {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp', position: 'right'},
+          {to: 'worlds/udon/udonsharp', label: 'UdonSharp', position: 'right'},
           {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion', position: 'right'},
           {to: 'worlds/clientsim', label: 'ClientSim', position: 'right'},
         ],
@@ -97,7 +97,7 @@ const config = {
           {
             title: 'Tools',
             items: [
-              {to: 'https://udonsharp.docs.vrchat.com', label: 'UdonSharp'},
+              {to: 'worlds/udon/udonsharp', label: 'UdonSharp'},
               {to: 'https://vcc.docs.vrchat.com', label: 'Creator Companion'},
               {to: 'worlds/clientsim', label: 'ClientSim'},
             ],
