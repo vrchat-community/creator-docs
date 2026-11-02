@@ -7,7 +7,7 @@ Networking in Udon can be challenging! Try to keep things simple until you're mo
 
 :::note
 
-Note: All specs subject to change. You can see some specific information about the data used per-object in [Debug Menu 6](/worlds/udon/world-debug-views/#debug-menu-6).
+Note: All specs subject to change. You can see some specific information about the data used per-object in [Debug Menu 6](/worlds/udon/world-debug-views#net-objects-6).
 
 :::
 
