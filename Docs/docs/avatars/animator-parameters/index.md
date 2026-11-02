@@ -121,9 +121,9 @@ We use the [Oculus viseme index](https://developer.oculus.com/documentation/unit
 | 9                | `rr`   |
 | 10               | `aa`   |
 | 11               | `e`    |
-| 12               | `i`    |
-| 13               | `o`    |
-| 14               | `u`    |
+| 12               | `ih`   |
+| 13               | `oh`   |
+| 14               | `ou`   |
 
 
 ### AFK State
