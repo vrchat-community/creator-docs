@@ -84,7 +84,7 @@ To find out how many bytes of serialized data were, use `byteCount` in the [`OnP
 ### Other structures
 | Type   | Range            | Size           |
 |--------|------------------|----------------|
-| [VRCUrl](#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |
+| [VRCUrl](/worlds/udon/external-urls#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |
 
 
 ### Multiple UdonBehaviours

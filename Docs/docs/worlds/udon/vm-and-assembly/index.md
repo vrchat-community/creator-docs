@@ -99,7 +99,7 @@ Floating-point numbers are always read as floats, even if the intended type is a
 
 These variables can also be marked as public, using, i.e. `.export message`, and can be marked with sync metadata, i.e. `.sync message, none`.
 
-Marking a variable with sync metadata is equivalent to the `synced` checkbox; see [Networking](../networking#variables) for details.
+Marking a variable with sync metadata is equivalent to the `synced` checkbox; see [Networking](/worlds/udon/networking/variables) for details.
 
 `none` here is the interpolation mode. The interpolation modes are `none`, `linear`, and `smooth`, though not all interpolation modes are valid for all types.
 

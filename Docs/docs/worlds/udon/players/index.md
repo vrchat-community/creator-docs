@@ -76,7 +76,7 @@ in: *VRCPlayerApi*
 
 out: *Boolean*
 
-Tells you whether the given Player is the [instance master](/worlds/udon/networking#the-instance-master).
+Tells you whether the given Player is the [instance master](/worlds/udon/networking/ownership#the-instance-master).
 
 ### Get isInstanceOwner
 in: *VRCPlayerApi*
