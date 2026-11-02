@@ -8,7 +8,7 @@ tags: [release]
 ## Summary
 
 
-SDK Version `3.10.6` brings support for native face tracking, [additional contact parameters](/common-components/contacts/#advanced-proximity-parameters) and [material contacts](/common-components/contacts/#material-contacts), placeable [exclusion zones](/worlds/components/vrc_placementzone), the [VRCVelocityTracker](/worlds/components/vrc_velocitytracker) and [VRCBillboard](/worlds/udon/vrc-billboard) components, and a variety of bug fixes to UdonSharp and [VRChat Constraints](/common-components/constraints/). In addition, [Avatar Expressions](/avatars/animator-parameters/#custom-parameters) now provide options for interpolation, bit width, and signed/unsigned representation.
+SDK Version `3.10.6` brings support for native face tracking, [additional contact parameters](/common-components/contacts/#advanced-parameters) and [material contacts](/common-components/contacts/#material-contacts), placeable [exclusion zones](/worlds/components/vrc_placementzone), the [VRCVelocityTracker](/worlds/components/vrc_velocitytracker) and [VRCBillboard](/worlds/udon/vrc-billboard) components, and a variety of bug fixes to UdonSharp and [VRChat Constraints](/common-components/constraints/). In addition, [Avatar Expressions](/avatars/animator-parameters/#custom-parameters) now provide options for interpolation, bit width, and signed/unsigned representation.
 
 :::warning
 
@@ -42,7 +42,7 @@ There are lots of details, so be sure to [**check the docs!**](/avatars/face-tra
     - This provides an efficient way to "billboard" any transform, that is, make it point at the player's camera in desktop, or their head in VR.
     - You can also register transforms for billboarding directly from Udon.
 - New functionality for [contact receivers](/common-components/contacts/#vrccontactreceiver):
-    - [Advanced Proximity Parameters](/common-components/contacts/#advanced-proximity-parameters): Allows contact receivers to pass additional information about the nearest ongoing contact, including the type of sender it is contacting, its local position, local velocity, and more.
+    - [Advanced Proximity Parameters](/common-components/contacts/#advanced-parameters): Allows contact receivers to pass additional information about the nearest ongoing contact, including the type of sender it is contacting, its local position, local velocity, and more.
     - [Material Contacts](/common-components/contacts/#material-contacts): Allows contact receivers to write world-space transform data and other information about the nearest eight contact senders to the material properties of up to four mesh renderers.
         - If you're a shader author, check the included `VRCContacts.cginc` helper in the SDK for usage details.
 - Added a [Smoothing Factor](/common-components/constraints/#smoothing-factor) option for VRChat Constraints.
