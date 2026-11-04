@@ -51,7 +51,7 @@ The majority of VR controllers used on PC show as `SteamVR2`. However, it is sti
 
 :::
 
-:::note Ambiguous Vive input names 
+:::note[Ambiguous Vive input names]
 
 - `VRCInputMethod.Vive` is a Vive controller running through SteamVR.
 - `VRCInputMethod.ViveXr` is a Vive XR Elite Controller running via OpenXR.

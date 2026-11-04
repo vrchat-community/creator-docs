@@ -161,7 +161,7 @@ If you decide to set Write Defaults to "Off":
 - It's recommended that for all states in a layer, you explicitly animate every property affected by that layer.
 - Each state should have an animation clip ("motion" in the state options) that animates at least one property. It does not have to be a valid property reference. States with "None" motion or entirely empty clips will behave as if Write Defaults is "On".
 
-:::warning Additive layers and direct blend trees
+:::warning[Additive layers and direct blend trees]
 
 VRChat's avatar creator community recommends setting Write Defaults to "On" for:
 - Layers that use additive blending

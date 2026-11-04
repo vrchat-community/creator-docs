@@ -112,7 +112,7 @@ Type definition for `VRC.SDKBase.VRCInputMethod`.
 
 [^1]: Embodied means the user is using finger tracking of some kind, e.g., gloves or camera-based finger tracking on a VR headset.
 
-:::note Ambiguous Vive input names 
+:::note[Ambiguous Vive input names]
 
 - `VRCInputMethod.Vive` is a Vive controller running through SteamVR.
 - `VRCInputMethod.ViveXr` is a Vive XR Elite Controller running via OpenXR.

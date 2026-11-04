@@ -18,7 +18,7 @@ To upload a custom avatar with Unity and the VRChat SDK, you must meet the follo
   - If you're new to VRChat, you'll receive an email once you're allowed to upload avatars.
   - You can still locally build and test avatars until you reach this trust rank. This means you can work on and test your avatar, but only you'll be able to see it.
 
-:::tip Need help?
+:::tip[Need help?]
 
 If you get stuck or need help,  here's where you can get help:
 - Browse VRChat's [official documentation](https://creators.vrchat.com/). 
@@ -143,7 +143,7 @@ After you get the model in your assets, select it, you'll want to ensure it has 
 
 ## Step 4 - Get the model into a scene
 Now that you have the model in your Assets folder, with the correct settings applied, you need to put it into a scene. To do so, either drag it into your [Hierarchy](https://docs.unity3d.com/Manual/Hierarchy.html) or directly into the Scene View window. We recommend having one scene per avatar and placing it at the coordinates (0, 0, 0). If needed, rotate the avatar so it is standing up straight, and ensure that its size is what you expect. You can add a Cube to your scene to compare - the cube will be 1 meter on each side and your Avatar will best function between about 0.5-5m tall. The average person is around 1.65 meters tall.
-:::warning Avatar Optimization
+:::warning[Avatar Optimization]
 
 It is very important that your avatar is optimized so that you do not cause low FPS for yourself and others. The SDK will inform you if something looks wrong. Check out our [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) to check out methods to improve your avatar's Performance Rank.
 :::
@@ -183,12 +183,12 @@ VRChat can usually detect your avatar's visemes automatically. If not, you can c
 
 ![The 'Viseme Blend Shape' mode is the most common method of making your character's face move when you speak.](/img/avatars/creating-your-first-avatar-6272723-Unity_w5nQONGtcb.png)
 
-:::warning SIL shape
+:::warning[SIL shape]
 
 Unity will delete shape keys/blend shapes that are empty on import, so make sure your "SIL" shape (the shape your mouth makes when no sound is detected, but the mic is active - such as the space between words) moves a single vertex a very small, imperceptible amount. This will prevent Unity from deleting that key.
 :::
 
-:::note Viseme Performance Tip!
+:::note[Viseme Performance Tip!]
 
 If you're an avatar creator, consider splitting your avatar into two skinned meshes - one for your body, and one for your head/face.
 The performance cost of blend shapes depends on how much of your 3D model they affect. Keeping blend shapes on a separate head mesh and having fewer blend shapes on your body mesh may improve your avatar's performance.

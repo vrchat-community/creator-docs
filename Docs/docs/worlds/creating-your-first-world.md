@@ -83,7 +83,7 @@ Click  `VRChat SDK > Show Control Panel`. Before you can upload your world, you 
 - World Debugging - Allows other users to debug your Udon code.
 - Thumbnail - A preview image of your world.
 
-:::note What if my world doesn't have a recommended capacity?
+:::note[What if my world doesn't have a recommended capacity?]
 
 If you uploaded your VRChat world with an old VRChat SDK, without 'recommended capacity', player capacity works differently:
 
@@ -133,7 +133,7 @@ Keep in mind that you're not permitted to upload content to VRChat that violates
 
 After uploading your world, it will become available in VRChat! You should be able to see it in-game or via the content manager in the SDK via `VRChat SDK > Show Control Panel > Content Manager`.
 
-:::warning World Upload Failures
+:::warning[World Upload Failures]
 
 If your world fails to upload, [check Unity's console](https://docs.unity3d.com/Manual/Console.html) to see if there are any errors. If there are any, solve them before trying to build your world again. Make sure to read the entirety of Unity's log, and click on errors to see additional information.
 

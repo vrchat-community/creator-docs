@@ -7,7 +7,7 @@ updatedAt: "2021-01-22T01:07:11.156Z"
 ---
 Here are the nodes relating to forces that act on Players. For nodes that deal with Player positions, see [Player Positions](/worlds/udon/players/player-positions) 
 
-:::note Local player only
+:::note[Local player only]
 
 Only use these nodes for the [local player](/worlds/udon/players/getting-players/#networkingget-localplayer). They can't be used for remote players.
 

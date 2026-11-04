@@ -61,7 +61,7 @@ You can also do this for clients you launch yourself, if you want to test with m
 VRChat.exe --watch-worlds --profile=0 --no-vr --enable-debug-gui --enable-sdk-log-levels --enable-udon-debug-logging -screen-width 1920 -screen-height 1080
 ```
 
-:::danger New 'Build & Test' Clients Don't Join Reloaded Worlds
+:::danger[New 'Build & Test' Clients Don't Join Reloaded Worlds]
 
 If you Build & Reload some clients, then choose 'Build & Test' to add more clients, they may not be joined into the right room. However, you can simply reduce the number of clients back to 0 and then 'Build & Reload' or 'Reload Last Build' in order to join them all together again.
 :::

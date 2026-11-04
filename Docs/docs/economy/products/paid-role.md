@@ -23,7 +23,7 @@ You can create a subscription role product by creating a subscription or creatin
 
 You can create a subscription role product manually, which also creates a subscription for you. This process is more complex than creating a subscription first.
 
-:::warning Known issue
+:::warning[Known issue]
 
 The text and screenshots in this section use the outdated term "paid role" instead of "subscription role product."
 
@@ -37,7 +37,7 @@ The text and screenshots in this section use the outdated term "paid role" inste
 
 ![Create paid role](/img/economy/products/PaidRoles-CreatePaidRole.png "Click Create Paid Role")
 
-:::warning known issue
+:::warning[known issue]
 
 You cannot create more than five (paid) roles with the "View all members" permission. See [Canny](https://feedback.vrchat.com/creator-economy-sellers/p/cannot-create-more-than-five-paid-roles-with-view-all-members-permission).
 

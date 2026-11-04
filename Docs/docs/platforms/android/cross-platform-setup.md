@@ -88,7 +88,7 @@ If a world isn't available for the platform you're on, you'll be unable to enter
 
 **However**, if you join a world that has both Android and PC versions, and the people in the instance have both Android and PC versions of their avatars, you'll view the world appropriately for your platform and be able to hang out with everyone, with no issues!
 
-:::danger Armatures MUST be identical!
+:::danger[Armatures MUST be identical!]
 
 For avatars to work properly cross-platform, the armature path MUST be identical between the PC and Quest versions to essential bones like the head, hands, and feet. Additionally, the scale and rotation of the "root bone" (the first bone in the hierarchy) MUST be identical between versions.
 

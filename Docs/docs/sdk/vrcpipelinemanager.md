@@ -6,7 +6,7 @@ createdAt: "2017-11-22T18:54:45.512Z"
 updatedAt: "2019-10-28T19:23:09.669Z"
 ---
 Used to store the ID of a world or avatar.
-:::note Added Automatically
+:::note[Added Automatically]
 
 This component is added automatically when the component it depends on is added to an object. You should not need to add this component manually.
 :::
@@ -16,7 +16,7 @@ This component is added automatically when the component it depends on is added 
 | Blueprint ID | The unique id for the avatar or world |
 
 If you want to upload the world or avatar to a different blueprint you can press the `Detach (Optional)` button
-:::danger Required Blueprint Format
+:::danger[Required Blueprint Format]
 
 Blueprint IDs can only be of the following format where 0 is replaced with [0-9] [a-f]:
 

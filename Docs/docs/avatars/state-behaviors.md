@@ -2,7 +2,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 # State Behaviors
 
-:::warning Unity Knowledge Required
+:::warning[Unity Knowledge Required]
 
 This document is written with the assumption that you know a bit about <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/class-AnimatorController.html">Unity Animators</UnityVersionedLink>.
 :::

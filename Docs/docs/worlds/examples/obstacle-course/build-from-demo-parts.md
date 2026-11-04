@@ -28,7 +28,7 @@ You can find all the available Course Pieces in the project under "Assets/_World
 1. To add new pieces to your course, just drag and drop them into the scene view. You can hold CTRL while dragging to snap the items to a grid.
 2. If you're using Udon on any of your pieces, make sure to Unpack them from being prefabs to just regular GameObjects. It's also a good idea in case you want to load in an updated package for this project with overwriting your existing pieces.
 
-:::note Grid Snapping
+:::note[Grid Snapping]
 
 Unity has many settings for aligning items to a grid - check out <UnityVersionedLink versionKey="minor" url="https://docs.unity3d.com/<VERSION>/Documentation/Manual/GridSnapping.html">Unity's Manual</UnityVersionedLink>
 :::
@@ -61,7 +61,7 @@ Select one of these checkpoints and the Scene View will move to focus on it. You
 
 ## Test Checkpoints
 At this point, you've extended or changed the course, and added some checkpoints - time for a test! Open the VRChat SDK Control Panel, sign into your account, and choose "Build & Test" to test out your course!
-:::note Build and Test
+:::note[Build and Test]
 
 If you have any problems launching your world or just want to learn more about local testing, check out the [Build and Test](/worlds/udon/using-build-test) docs.
 :::
@@ -97,7 +97,7 @@ Move Speed sets **Walk**, **Run** and **Strafe** speeds to be all the same.
 
 4. Once you've placed your Hazards, press the "Refresh" button at bottom of the Utility window. This will inject some references into your Hazards so they can properly Respawn your users when they touch the Hazard.
 
-:::danger NO SERIOUSLY - UNPACK THAT PREFAB!
+:::danger[NO SERIOUSLY - UNPACK THAT PREFAB!]
 
 
 :::
@@ -119,7 +119,7 @@ It's a good idea to set the **Number of Players** in your Obstacle Course world 
 ## Build & Publish
 
 Once you're ready to invite your friends to help test your world, you can **Build & Publish** it to make it available in VRChat. You'll set your world name, take a picture to share, and you can Submit to Community Labs once you're ready for more people to see it!
-:::note Publishing & Trust Levels
+:::note[Publishing & Trust Levels]
 
 You need to be spend some time in VRChat before you can publish worlds. Learn more here: [FAQ](https://docs.vrchat.com/docs/frequently-asked-questions#why-cant-i-upload-content-yet)
 :::

@@ -97,7 +97,7 @@ There is a combined upper limit of 80 [VRCRaycast](/avatars/avatar-components/ra
 [^2]: Using this script on a humanoid avatar will break it.
 
 ## [DynamicBone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
-:::danger Dynamic Bone Deprecated
+:::danger[Dynamic Bone Deprecated]
 
 Support for Dynamic Bone is deprecated. You should use [PhysBones](/common-components/physbones) instead.
   

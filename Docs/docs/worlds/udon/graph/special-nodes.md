@@ -68,7 +68,7 @@ Executes the flow of `Body` while `Bool` is true. If `Bool` is false, executes `
 ## UdonBehaviour Nodes
 Udonbehaviour nodes allow your programs to interact with other UdonBehaviours - either locally, with a delay, or over the network.
 
-:::note UdonSharp
+:::note[UdonSharp]
 
 The nodes below only work for `public` events. If you use the Udon Graph, your custom events are always `public`. If you use UdonSharp, make sure to use `public` instead of `private` events here!
 
@@ -84,7 +84,7 @@ Inputs: `instance` - `UdonBehaviour`, `eventName` - String, `delayFrames` - int,
 
 Runs the event `eventName` on the target UdonBehaviour, after waiting for `delayFrames`. It will run the event during `Update`, `LateUpdate`, `FixedUpdate` or `PostLateUpdate`, depending on which `eventTiming` is selected. Minimum of 1 frame delay.
 
-:::note Timing issues
+:::note[Timing issues]
 
 Note that [Unity's frame count](https://docs.unity3d.com/ScriptReference/Time-frameCount.html) is based on the Update event. If you call SendCustomEventDelayedFrames [before the Update event](/worlds/udon/event-execution-order), such as [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html) or an [Input event](/worlds/udon/input-events), the delay may be 1 frame shorter than expected.
 

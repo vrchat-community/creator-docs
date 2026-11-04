@@ -2,7 +2,7 @@
 
 You can add video players to your VRChat world with the SDK's `VRCAVProVideoPlayer` or `VRCUnityVideoPlayer`.
 
-:::note top Community prefabs
+:::note[top Community prefabs]
 
 Are you looking for community-created video player prefabs? Try [VideoTXL](https://github.com/vrctxl/VideoTXL), [ProTV](https://gitlab.com/techanon/protv), or [USharpVideo](https://github.com/MerlinVR/USharpVideo).
 
@@ -16,7 +16,7 @@ The easiest way to put a Video Player in your Udon world is by using one of the 
 
 Both of these prefabs will play a video of your choosing, synchronized for everyone in your world. They won't loop - the graph turns off looping for now to get sync to work. If you want them to loop, turn on 'Loop' and remove the UdonBehaviour.
 
-:::note These are Synced Player EXAMPLES
+:::note[These are Synced Player EXAMPLES]
 
 You don't have to use the "UdonSyncPlayer" Udon Behaviours. You can use just the VRC Video Player component if you don't need the videos synced in your world. You can also make your own Sync Graphs using the provided one as a starting point or you can make one from scratch.
 
@@ -72,7 +72,7 @@ public override void OnVideoError(VideoError videoError)
 To play a video, you need to provide a URL in the Video URL field when you set up your Video Player in the editor, or you can paste a URL into the VRCUrlInputField provided in the prefabs.
 
 A full list of our supported hosts is available at [Video Player Allowlist](/worlds/udon/video-players/www-whitelist). Some recommendations are below.
-:::note Disclaimer
+:::note[Disclaimer]
 
 *The listings below do not constitute partnerships or endorsements*. These are services that are widely accessible and have been tested to work properly with VRChat video players.
 :::

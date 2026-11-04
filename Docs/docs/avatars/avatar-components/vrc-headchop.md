@@ -19,7 +19,7 @@ The following table lists all the parameters you can configure:
 |  | *Apply Condition* | Controls under which conditions the scaling should be applied to the transform. <br/>- Always apply (Default)<br/>- VR only<br/>- Non-VR only |
 | **Global Scale Factor** |  | Multiplies the scale factor of each target bone. You can generally leave this set to 1 unless you want to scale all of the bones at once.<br/>If the global scale factor is 1, each target bone will use its individual scale factor. (Default)<br/>If the global scale factor is 0, all target bones will have a scale factor of 0. |
 
-:::info Usage tips
+:::info[Usage tips]
 
 - Changing the `VRCHeadChop` settings for a parent bone affects all child bones, too.
 - If a child bone has its own `VRCHeadChop` settings, it overrides its parent bone's settings.

@@ -26,7 +26,7 @@ Newer versions of UdonSharp are included in the VRChat Worlds SDK, which is easy
 
 When migrating your project from a very old version of UdonSharp, you may encounter some known issues. Here's how you can address them.
 
-:::tip Try this first!
+:::tip[Try this first!]
 
 Is UdonSharp giving you trouble? Try reimporting all assets with "Assets" > "Reimport All."
 

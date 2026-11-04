@@ -16,20 +16,20 @@ For Blender, ensure that your rest X rotation is 90 degrees.
 ## Humanoid Rig
 Unity will flag your humanoid rig configuration if it does not meet the Mecanim requirements for a humanoid. Please read and be familiar with the [Unity Documentation on configuring avatars](https://docs.unity3d.com/Manual/FBXImporter-Rig.html).
 
-:::danger Humanoid avatar must have head, hands and feet bones mapped.
+:::danger[Humanoid avatar must have head, hands and feet bones mapped.]
 
 You will see this message from the VRChat Build Control Panel if your avatar rig is humanoid but does not have the essential bones mapped.",
 
 :::
 
-:::note Non-human avatars
+:::note[Non-human avatars]
 
 If your avatar diverges greatly from a human (ie. quadruped, hunching monster, etc), you should consider using a Generic rig and your own Animation Controller. See the SimpleAvatarController for an example. This is more advanced than making a humanoid, so you should be very familiar with Unity's Animation Controller system.
 :::
 
 ## Finger Mappings
 
-:::warning Thumb, Index, and Middle finger bones are not mapped, Full-Body IK will be disabled.
+:::warning[Thumb, Index, and Middle finger bones are not mapped, Full-Body IK will be disabled.]
 
 **This warning does not appear for SDK3 avatars, as they have no problem with using armatures without finger bones.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.
 
@@ -40,26 +40,26 @@ It will also prevent custom animation overrides on hand gestures from being play
 
 ## Spine Hierarchy
 
-:::danger Your rig has the UPPERCHEST mapped in the Humanoid Rig. This will cause problems with IK.
+:::danger[Your rig has the UPPERCHEST mapped in the Humanoid Rig. This will cause problems with IK.]
 
 **This warning does not appear for SDK3 avatars, as they have no problem with using armatures with a mapped upper chest.** This error only occurs when using VRChat SDK2, which is deprecated and should not be used.
 
 If you must use SDK2, leave the upper chest bone blank when configuring your humanoid.
 :::
 
-:::danger Spine hierarchy missing elements, make sure that Pelvis, Spine, Chest, Neck and Shoulders are mapped.
+:::danger[Spine hierarchy missing elements, make sure that Pelvis, Spine, Chest, Neck and Shoulders are mapped.]
 
 These bones must all be mapped. If you get this message make sure none of these slots are empty. Note that the Neck and Chest slots are optional for Mecanim, but required for VRChat.
 :::
 
-:::danger Spine hierarchy incorrect. Make sure that the parent of both Shoulders and the Neck is the Chest.
+:::danger[Spine hierarchy incorrect. Make sure that the parent of both Shoulders and the Neck is the Chest.]
 
 For the IK to work properly, you must have a specific hierarchy of bones around the chest. In your rig, your shoulder bones (mapped into Left Arm > Shoulder, Right Arm > Shoulder slots) must be direct children of your chest bone (mapped into Body > Chest slot). Also, the neck bone (mapped into Head > Neck slot) must also be a direct child of the Chest.
 :::
 
 ## Arm and Leg Hierarchy
 
-:::warning LowerArm is not first child of UpperArm or Hand is not first child of LowerArm: you may have problems with Forearm rotations.
+:::warning[LowerArm is not first child of UpperArm or Hand is not first child of LowerArm: you may have problems with Forearm rotations.]
 
 VRChat's IK system looks at the first child of a bone when determining the bone layout. If you have other child bones, like prop-placement bones or twist-bones in your rig, they can confuse the IK. In this particular case, the SDK is seeing that your LowerArm is not the first-listed child of your UpperArm bone.
 
@@ -68,7 +68,7 @@ To fix this, move the child bone to the first position in the list of children o
 Note that this message is naming the slot, not the actual bone name in your rig, so you'll have to look to see what bone is in that slot.
 :::
 
-:::warning LowerLeg is not first child of UpperLeg or Foot is not first child of LowerLeg: you may have problems with Shin rotations.
+:::warning[LowerLeg is not first child of UpperLeg or Foot is not first child of LowerLeg: you may have problems with Shin rotations.]
 
 See above.
 :::
@@ -81,7 +81,7 @@ Configure avatar's eye bones as follows:
 - The Z axis should point forward.
 ## General Hierarchy
 
-:::warning This avatar has a split hierarchy (Hips bone is not the ancestor of all humanoid bones). IK may not work correctly.
+:::warning[This avatar has a split hierarchy (Hips bone is not the ancestor of all humanoid bones). IK may not work correctly.]
 
 Some rigs split the hierarchy into two sections, upper and lower body. In this case the bone you put into the Body > Hips slot must be the ancestor (parent or higher) of the rest of the human bones you are mapping. Be very careful with these kinds of rigs! Often, the ancestor of these bones is a root bone on the ground or another placement which is a bad placement for a hip bone. Many of these rigs are unsuitable for use with VRChat and need to be re-rigged to work properly.
 :::
@@ -90,7 +90,7 @@ Some rigs split the hierarchy into two sections, upper and lower body. In this c
 There are special considerations if you are using Full-Body tracking, ie. you have 3 HTC Tracking Pucks connected. There are several recommendations that will ensure that your avatar works well when using Full-Body tracking.
 
 To see more detailed information on Full-Body Tracking rigging requirements, see our [Full-Body Tracking system guide](https://docs.vrchat.com/docs/full-body-tracking).
-:::warning The angle between pelvis and thigh bones should be close to 180 degrees (this avatar's angle is ___). Your avatar may not work well with full-body IK and Tracking.
+:::warning[The angle between pelvis and thigh bones should be close to 180 degrees (this avatar's angle is ___). Your avatar may not work well with full-body IK and Tracking.]
 
 Full-body tracking is sensitive to the angle between the hip and upper leg bones. It's best to measure this angle when the AvatarTPoseController is applied to your avatar. Ideally, the hip bone is pointing straight up and the upper leg bones point straight down in the TPose, but slight divergence is okay. You can ignore this message if you are not going to use Full-Body Tracking.
 :::

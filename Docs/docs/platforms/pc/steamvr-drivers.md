@@ -150,7 +150,7 @@ In the case that you are building a single peripheral for PCVR (such as writing 
 
 ## Finger Tracking Exclusive Mode
 
-:::warning Deprecated
+:::warning[Deprecated]
 
 VRChat may remove this feature in the future. Any non-conformant drivers that provide their own inputs to various actions will provide a worse user experience.
 
