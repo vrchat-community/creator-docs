@@ -42,7 +42,7 @@ There are lots of details, so be sure to [**check the docs!**](/avatars/face-tra
     - This provides an efficient way to "billboard" any transform, that is, make it point at the player's camera in desktop, or their head in VR.
     - You can also register transforms for billboarding directly from Udon.
 - New functionality for [contact receivers](/common-components/contacts/#vrccontactreceiver):
-    - [Advanced Proximity Parameters](/common-components/contacts/#advanced-parameters): Allows contact receivers to pass additional information about the nearest ongoing contact, including the type of sender it is contacting, its local position, local velocity, and more.
+    - [Advanced Parameters](/common-components/contacts/#advanced-parameters): Allows contact receivers to pass additional information about the nearest ongoing contact, including the type of sender it is contacting, its local position, local velocity, and more.
     - [Material Contacts](/common-components/contacts/#material-contacts): Allows contact receivers to write world-space transform data and other information about the nearest eight contact senders to the material properties of up to four mesh renderers.
         - If you're a shader author, check the included `VRCContacts.cginc` helper in the SDK for usage details.
 - Added a [Smoothing Factor](/common-components/constraints/#smoothing-factor) option for VRChat Constraints.
