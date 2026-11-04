@@ -8,7 +8,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 
 When you create a Unity project with VRChat's Worlds SDK, your project will automatically be configured to use VRChat's built-in layers. If you change the collision matrix, rename, or remove built-in layers, your changes will be overridden when you upload your world to VRChat.
 
-Layers 22-31 are unused 'User' Unity layers. You can edit them freely, and changes to their collision matrix will not be discarded when you build & upload your world. However, their names are replaced with `user0`-`user9` in uploaded worlds, so refer to them by layer number or layer mask in your scripts instead of by name.
+Layers 22-31 are unused 'User' Unity layers. You can edit them freely, and changes to these layers will not be discarded when you build & upload your world.
 
 ## Unity's built-in layers
 
@@ -38,7 +38,7 @@ The table below lists Unity's built-in layers, how they are used in VRChat, and 
 | 19           | InternalUI          | ⚠ Avoid using this layer. Used by VRChat for internal UI elements such as the menu, nameplates and debug panels.                                                                                                                                       | ❌                 |
 | 20           | HardwareObjects     | ⚠ Avoid using this layer. Used by VRChat to render virtual representations of physical hardware in-game i.e. controllers and trackers                                                                                                                  | ❌                 |
 | 21           | reserved4           | ⚠ Avoid using this layer. Reserved by VRChat. When you upload your world, any Game Object on a reserved Layer will be moved to Layer 0 (Default).                                                                                                      | ❌                 |
-| 22-30        |                     | Unused by Unity and VRChat. VRChat will not override the collision matrix of these Layers in uploaded worlds, but their names are replaced with `user0`-`user8`.                                                                                       | (✔)[^1]           |
+| 22-30        |                     | Unused by Unity and VRChat. VRChat will not override the name and collision matrix of these Layers in uploaded worlds.                                                                                                                                 | (✔)[^1]           |
 | 31           |                     | ⚠ Avoid using this layer. Used by Unity's Editor’s Preview window mechanics.                                                                                                                                                                           | (✔)[^1]           |
 
 [^1]: Layers 22-31 are enabled for Stickers by default. You can disable them by adding them to the [Interaction Passthrough](/worlds/layers#interaction-passthrough-for-user-layers) list.
