@@ -10,7 +10,7 @@ Using the Action Menu, you can use the Avatar Overlay option to show visual repr
 
 :::tip
 
-Are you a world creator using these components in your world? There's a [debug view](/worlds/udon/world-debug-views#debug-view-7) you can use to visualize them instead.
+Are you a world creator using these components in your world? There's a [debug view](/worlds/udon/world-debug-views#physbone--contact-overlay-7) you can use to visualize them instead.
 
 :::
 

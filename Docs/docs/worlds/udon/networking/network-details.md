@@ -7,7 +7,7 @@ Networking in Udon can be challenging! Try to keep things simple until you're mo
 
 :::note
 
-Note: All specs subject to change. You can see some specific information about the data used per-object in [Debug Menu 6](/worlds/udon/world-debug-views/#debug-menu-6).
+Note: All specs subject to change. You can see some specific information about the data used per-object in [Debug Menu 6](/worlds/udon/world-debug-views#net-objects-6).
 
 :::
 
@@ -84,7 +84,7 @@ To find out how many bytes of serialized data were, use `byteCount` in the [`OnP
 ### Other structures
 | Type   | Range            | Size           |
 |--------|------------------|----------------|
-| [VRCUrl](#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |
+| [VRCUrl](/worlds/udon/external-urls#vrcurl) | U+0000 to U+FFFF | 2 bytes / char |
 
 
 ### Multiple UdonBehaviours

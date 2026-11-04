@@ -70,7 +70,7 @@ Collecting logs in the background can have a noticeable performance impact.
 
 Debug View 4 displays various stats about other players.
 
-* M: Whether or not the player is the [master of the instance](/worlds/udon/networking#the-instance-master)
+* M: Whether or not the player is the [master of the instance](/worlds/udon/networking/ownership#the-instance-master)
 * L: Whether or not the player is the local player
 * VR: Whether or not the player is in VR
 * Group: The current group that the player is in. Grouping in this context is an internal networking system used to combine multiple objects together by distance so that their data can be sent together.

@@ -109,7 +109,7 @@ When used on an avatar, a Contact Receiver will respond to contact signals by se
   - `Constant` - Informs you when any contacts are present. Resets when no contact is detected. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int.
   - `OnEnter` - Informs you the frame a contact is detected. Resets immediately the next frame. Ideally, use a bool parameter here. Sets `1.0` for a Float, `True` for a Bool, and `1` for an Int. Can optionally have a `Min Velocity` defined.
   - `Proximity` - Gives you a Float value of `0.0-1.0` depending on how close a contact is to the trigger as described below. You must use a Float. If multiple contacts are detected, it will give you the closest.
-    - `Advanced Proximity Parameters` - Enables several additional parameters giving more detailed information about the proximity contact. See [Advanced Proximity Parameters](#advanced-proximity-parameters) for more info.
+    - `Advanced Parameters` - Enables several additional parameters giving more detailed information about the proximity contact. See [Advanced Parameters](#advanced-parameters) for more info.
     - `Write to Shaders` - Allows the contact receiver to write matrix information to shaders on the same game object. See [Material Contacts](#material-contacts) for more info.
 - `Parameter` - The parameter updated on the animation controller. This parameter DOES NOT need to be defined on the synced Avatar Parameter list. The parameter can be a Float, Bool, or Int, depending on the Receiver Type used.
 - `Value` - Value the parameter is updated to when a collision is detected. Parameter will reset to zero when no collisions are present.

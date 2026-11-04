@@ -106,7 +106,7 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 - [VRC_UiShape](/worlds/components/vrc_uishape)
 - [VRCVelocityTracker](/worlds/components/vrc_velocitytracker)
 
-[^1]: Maximum shape limits apply to these components. For more information, check the advice [here](/worlds/components#world-shape-limits).
+[^1]: Maximum shape limits apply to these components. For more information, check the advice [here](/worlds/components#world-physbone-and-contact-limits).
 
 ## Dynamic Bone
 - DynamicBone - Deprecated. Use [VRChat PhysBones](/common-components/physbones#vrcphysbone) instead!

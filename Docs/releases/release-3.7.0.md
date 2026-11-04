@@ -97,11 +97,11 @@ This supercedes the `3.6.2` series.
 - Fixed constraint sources losing their references when selecting multiple VRChat constraints and editing their sources lists at the same time.
 
 - Improved support for community made tools interacting with the constraints auto-converter in the SDK.
-    - Please refer to [our documentation](/common-components/constraints/#editor-tooling-info) for more info.
+    - Please refer to [our documentation](/common-components/constraints/constraints-api#constraint-conversion-hooks) for more info.
 
 ## Fixes & Changes in the final version
 
-- Further adjustments to the exposed API for constraints. Refer to the [constraints documentation](/common-components/constraints/#editor-tooling-info) for more info.
+- Further adjustments to the exposed API for constraints. Refer to the [constraints documentation](/common-components/constraints/constraints-api#constraint-conversion-hooks) for more info.
     - This includes a parameter to indicate if a conversion was triggered by clicking "Auto-Fix".
 - Improved parameter assignment for submenus in the expression menu editor.
 - Fixed incorrect LFS references in .dylib files.

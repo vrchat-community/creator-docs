@@ -201,7 +201,7 @@ If you disable GameObjects or UdonBehaviours, they won't execute most of the eve
 :::
 
 ### OnPurchaseConfirmed
-This event is triggered once a player's purchase has been loaded and confirmed. It does not support [Quantity Purchases](/economy/listings/#quantitypurchases). Purchases are loaded in the following situations: 
+This event is triggered once a player's purchase has been loaded and confirmed. It does not support [Quantity Purchases](/economy/listings#quantity-purchases). Purchases are loaded in the following situations: 
 - when joining the instance, both for the local player and any other players,
 - when any new players join the instance, and
 - when any player in the instance purchases one of the world's products.
@@ -231,7 +231,7 @@ This event is triggered once a player's purchase has been loaded and confirmed. 
 - `IProduct`: The product that has been purchased.
 - `VRCPlayerApi`: The player who has purchased the product.
 - `bool`: `true` if the purchase was just made, `false` if it was made as part of loading the player's purchases upon joining the world.
-- `int`: The [quantity](/economy/listings/#quantitypurchases) the user purchased. For [instant](/economy/listings#instant) listings with [quantity purchases](/economy/listings#quantity-purchases) enabled, `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
+- `int`: The [quantity](/economy/listings#quantity-purchases) the user purchased. For [instant](/economy/listings#instant) listings with [quantity purchases](/economy/listings#quantity-purchases) enabled, `quantity` ranges from `1` to `99`. For all other listing types, `quantity` is always `1`.
 
 :::warning
 
