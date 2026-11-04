@@ -17,7 +17,7 @@ Occasionally, VRChat will update within minor Unity versions. For example, VRCha
 	- Otherwise, duplicate the whole project folder and give it a new name.
 	- Export your entire project as a Unity Package. This takes a long time and may cause errors.
 
-:::danger Don't skip this step!
+:::danger[Don't skip this step!]
 Upgrades can fail. If you keep your original project files safe, you can restore them, try again, and find out what went wrong.
 
 Without a backup, you don't get a second try. If you make a mistake or the upgrade fails, fixing it may be difficult or even impossible.

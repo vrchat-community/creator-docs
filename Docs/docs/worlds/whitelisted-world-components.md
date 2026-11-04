@@ -3,7 +3,7 @@ import UnityVersionedLink from '@site/src/components/UnityVersionedLink.js';
 # Allowlisted World Components
 
 The following is the complete list of scripts usable within worlds. Components that are not in this list will not work.
-:::warning Oculus Quest
+:::warning[Oculus Quest]
 
 The Android version of VRChat has some exceptions to this list. Check [here](/platforms/android/quest-content-limitations#components) for more info.
 :::
@@ -171,7 +171,7 @@ The Android version of VRChat has some exceptions to this list. Check [here](/pl
 - VerticalLayoutGroup
 
 ## Post Processing Stack V2
-:::warning Post Processing Stack v1
+:::warning[Post Processing Stack v1]
 
 PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by Unity.
 :::
@@ -196,7 +196,7 @@ PPSv1 is not supported in either VRCSDK2 or VRCSDK3. It has been deprecated by U
 
 ## Final IK
 
-:::warning FinalIK Components Modified
+:::warning[FinalIK Components Modified]
 
 VRChat has highly modified its implementation of FinalIK. As such, these components may not work as documented.
 

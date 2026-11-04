@@ -20,7 +20,7 @@ To remove items from Groups, you can:
 * Select the items, right-click and choose 'Remove From Group'.
 
 To jump to a Group in the graph, click it in the Graph Sidebar.
-:::note Nested Groups
+:::note[Nested Groups]
 
 Currently, nested groups are not supported. The current grouping behavior is to delete the existing group if you try to select and enclose it with a new group.
 :::

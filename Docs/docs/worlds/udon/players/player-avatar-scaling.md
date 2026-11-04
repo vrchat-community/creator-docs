@@ -11,7 +11,7 @@ Udon provides functions allowing world creators to
 
 To see relevant events to use in concert with these functions, including "OnAvatarChanged" and "OnAvatarEyeHeightChanged", see [Avatar Events](/worlds/udon/avatar-events)
 
-:::note Scaling and collision
+:::note[Scaling and collision]
 Please note that scaling an avatar to another size does **not** affect its collision with the environment -- just as uploading an avatar that you've scaled up in Unity would not do so.
 :::
 
@@ -22,7 +22,7 @@ Avatar Scaling operates in two modes and can be adjusted individually on a playe
 
 In either case, avatar changes and eye height changes will fire "OnAvatarChanged" and "OnAvatarEyeHeightChanged" events so that an Udon program can react to these occurrences.
 
-:::note Player-controlled by default
+:::note[Player-controlled by default]
 
 Currently, avatar scaling is operating in the player-controlled mode by default. If you wish to operate in the world-authoritative mode, you must disable it on the website or with the Udon functions below.
 
@@ -42,7 +42,7 @@ Because of this, the following `VRCPlayerApi` functions are not available to Udo
 If you wish to retain access to these Udon functions but don't want users to be able to scale themselves via the radial puppet in their Action Menu, please leave avatar scaling enabled via the website and instead use Udon to disable the player-controlled avatar scaling mode via `SetManualAvatarScalingAllowed`.
 
 ## Functions for player-controlled scaling
-:::note Local player only
+:::note[Local player only]
 Unless otherwise stated, all of the functions below can only be used by an Udon program affecting the local player and cannot be called on a `VRCPlayerApi` object belonging to another player successfully.
 :::
 
@@ -86,7 +86,7 @@ Sets the maximum eye height in meters that the local player is permitted to scal
 
 ## Functions for world-authoritative scaling
 
-:::note Local player only
+:::note[Local player only]
 Unless otherwise stated, all of the functions below can only be used by an Udon program affecting the local player and cannot be called on a `VRCPlayerApi` object belonging to another player successfully.
 :::
 

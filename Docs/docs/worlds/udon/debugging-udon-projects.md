@@ -62,7 +62,7 @@ If you use the Steam version of VRChat, you enable debugging by changing VRChat'
 2. In the 'General' tab, press the 'Set Launch Options' button.
 3. In the field that appears, you can enter the VRChat-specific flags you want always enabled, like `--enable-debug-gui --enable-udon-debug-logging` to always have the Debug GUI and Udon Debugging enabled.
 
-:::note Debugging reduces performance
+:::note[Debugging reduces performance]
 
 It is **not** recommend to always keep debugging enabled. It decreases VRChat's performance and increases the size of your log files. Disable debugging if you don't need it.
 

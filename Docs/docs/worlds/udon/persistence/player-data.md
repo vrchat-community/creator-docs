@@ -39,7 +39,7 @@ When you change **any** data for the local player, **all** of their PlayerData i
 | [OnPlayerDataStorageExceeded](/worlds/udon/graph/event-nodes#onplayerdatastorageexceeded) | VRCPlayerApi player | Triggered when a VRChat player's Player Data usage has exceeded allowed storage limits. |
 | [OnPlayerDataStorageWarning](/worlds/udon/graph/event-nodes#onplayerdatastoragewarning) | VRCPlayerApi player | Triggered when a VRChat player's Player Data usage is nearing allowed storage limits. |
 
-:::info Watch out for timing issues
+:::info[Watch out for timing issues]
 
 Wait for the `OnPlayerRestored` event before you read or write PlayerData.
 

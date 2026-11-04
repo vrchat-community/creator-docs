@@ -74,7 +74,7 @@ The master player selection follows these rules:
 
 These are the _only_ guarantees VRChat currently makes about network master behaviour. Any other observed behaviour is subject to change.
 
-:::note Don't rely on master if you can avoid it!
+:::note[Don't rely on master if you can avoid it!]
 
 It is recommended to use ownership checks for your networking logic instead of checking for instance master wherever possible.
 There are scenarios where a master player might become unresponsive for a while, and events during that time might not be executed.

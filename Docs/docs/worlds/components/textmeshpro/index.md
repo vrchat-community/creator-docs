@@ -36,7 +36,7 @@ You can import your own font into TextMesh Pro with the [font asset creator](htt
     <iframe src="https://www.youtube.com/embed/qzJNIGCFFtY?si=JsAJMtzdp3KC-8tJ" title="TextMesh Pro - Font Asset Creation" frameborder="0" allow="encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
 </div>
 
-:::tip Optimize your font assets!
+:::tip[Optimize your font assets!]
 
 Font assets increase the download size and RAM requirements of your world. When importing fonts, reduce your atlas resolution and don't import unused characters.
 

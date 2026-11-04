@@ -164,7 +164,7 @@ If the Image downloads successfully, save a reference to it and then load it up 
 
 When each image is visited for the second+ time, it will be displayed from its saved Texture2D reference instead of loaded fresh, unless it failed to download the first time.
 
-:::tip Source Code
+:::tip[Source Code]
 View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/vrchat-community/examples-image-loading/blob/main/Assets/_Project/Frame/SlideshowFrame.cs).
 :::
 
@@ -172,7 +172,7 @@ View the full source code for [SlideshowFrame.cs on GitHub](https://github.com/v
 
 * The first image doesn't have its caption loaded quickly enough, so it doesn't show until the first loop around.
 
-:::tip Udon
+:::tip[Udon]
 
 View the [main Image Loading docs page](/worlds/udon/image-loading) for full details on the Image Loading system, including domain and file limits.
 

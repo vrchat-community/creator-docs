@@ -10,7 +10,7 @@ If you've worked with the VRChat SDK in the past, your project may be using an o
 - Read our [Unity 2022 migration guide](/sdk/upgrade/unity-2022) to learn how to upgrade your Unity 2019 project to Unity 2022.
 - Learn how to perform a [minor Unity version upgrade](/sdk/upgrade/migrating-to-a-newer-minor-unity-version).
 
-:::info Starting a new project?
+:::info[Starting a new project?]
 
 Read [Setting up the SDK](/sdk/index.md) to learn how to create new projects with VRChat's latest Unity SDK.
 

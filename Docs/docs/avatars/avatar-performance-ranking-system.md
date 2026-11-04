@@ -7,7 +7,7 @@ This system is provided to inform users what is likely the most performance-heav
 It is also used to drive the [Minimum Displayed Performance Rank](/avatars/avatar-performance-ranking-system#minimum-displayed-performance-rank-on-pc) system, which is a way for users to decide what avatars they wish to show based on their Performance Rank.
 
 **This system is not meant to be an end-all-be-all authority on avatar performance**, but is a good general guide to indicate if an avatar needs a bit more work to be performant.
-:::danger Perf Ranks are not the final word!
+:::danger[Perf Ranks are not the final word!]
 
 Although the Performance Rank system does as best as it can to judge the "worst case" scenario of an avatar's performance, there are many ways to have a well-optimized avatar appear as Very Poor, and have a FPS hog rank as Excellent.
 
@@ -118,12 +118,12 @@ These thresholds apply on both PC and mobile:
 Below, you'll find the limits for each of the Performance Ranks. If you go above these numbers for any category, you'll be bumped into the next rank.
 
 For example (on PC), if your avatar has 2 Skinned Meshes, your avatar will be ranked as Good, as that exceeds the rating for Excellent, but does not exceed the rating for Good. 
-:::warning All GameObjects and Components are counted!
+:::warning[All GameObjects and Components are counted!]
 
 All GameObjects and Components, **including those that are currently disabled**, count towards the Avatar Performance Rank.
 :::
 
-:::warning Mesh Read/Write Disabled
+:::warning[Mesh Read/Write Disabled]
 
 If you disable Mesh Read/Write on **any** mesh on the avatar (including particle systems), the "Triangles" count will read "Mesh Read/Write Disabled" and the avatar's Performance Rank will be immediately downgraded to "Very Poor" regardless of the actual triangle count on the avatar.
 

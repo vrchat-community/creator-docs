@@ -142,7 +142,7 @@ If the value is 3, 4, or 6 while `VRMode` is 1, the value is indicating how many
 
 If the value is 0, 1, or 2 while `VRMode` is 1, the value indicates that the avatar is still initializing. You should not design animators to branch based off this combination of values, and it should instead wait for a "valid" value of 3, 4, or 6.
 
-:::warning Account for changes
+:::warning[Account for changes]
 
 During avatar initialization, this value may change! Ensure that your animator accounts for possible changes, and that it doesn't "dead-end" into any branch.
 

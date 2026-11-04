@@ -20,7 +20,7 @@ If you're using the [VRChat Creator Companion](https://creators.vrchat.com/), it
 
 ![Creating a backup.](/img/sdk/migrate-2019-2022/creating_backup.png)
 
-:::danger Don't skip this step!
+:::danger[Don't skip this step!]
 Keeping a backup when making major changes to your precious project is always a good idea.
 
 Upgrades can fail. If they do, your backup can be used as a checkpoint. If you keep your original project files safe, you can restore them, try again, and find out what went wrong.
@@ -34,7 +34,7 @@ Upgrades can fail. If they do, your backup can be used as a checkpoint. If you k
 
 Now you're ready to upgrade!
 
-:::danger Test your content before uploading it
+:::danger[Test your content before uploading it]
 
 After successfully uploading a world or avatar with Unity 2022, you won't be able to upload it again with Unity 2019.
 

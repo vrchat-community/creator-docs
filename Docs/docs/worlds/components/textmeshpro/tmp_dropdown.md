@@ -33,7 +33,7 @@ This class is part of the VRChat SDK. It allows you to add options to your dropd
 | AddOptions | TMP_Dropdown,<br/> sprite[]     |        | Adds the array of sprites to the dropdown.                                               |
 | AddOptions | TMP_Dropdown,<br/> OptionData[] |        | Adds the array of [TMP_Dropdown.OptionData](#tmp_dropdownoptiondata) to the dropdown. |
 
-:::note Extension method
+:::note[Extension method]
 In UdonSharp, AddOptions is an [extension method](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods).
 
 Instead of `AddOptions(dropdown, options)`, you can type `dropdown.AddOptions(options)`. Make sure you have the namespace `VRC.SDK3.Components` included in the file.

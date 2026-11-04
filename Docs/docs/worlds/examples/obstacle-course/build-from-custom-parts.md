@@ -5,7 +5,7 @@ hidden: false
 createdAt: "2021-08-10T19:34:59.759Z"
 updatedAt: "2021-08-18T20:57:33.538Z"
 ---
-:::note Make a Simple Course First
+:::note[Make a Simple Course First]
 
 It's highly recommended to work with the Demo prefabs and Starter Scene first. Read through the instructions to [Build From Demo Parts](/worlds/examples/obstacle-course/build-from-demo-parts).
 :::
@@ -21,7 +21,7 @@ Here is the hierarchy of the Checkpoint prefab we include:
 ## Trigger Requirements
 ![build-from-custom-parts-f72c567-checkpoint-inspector.png](/img/worlds/build-from-custom-parts-f72c567-checkpoint-inspector.png)
 
-:::note It's a Pattern!
+:::note[It's a Pattern!]
 
 The "Trigger" object on this prefab uses a pattern that you'll see repeated on nearly every object that detects the player - Checkpoints, PowerUps, Hazards, Respawners, etc. We'll go into detail on this first prefab, and we can skip past it for the rest.
 :::
@@ -36,7 +36,7 @@ This UdonBehaviour needs the following variables set:
 4. _deactivateOnTrigger_ should be checked for Checkpoints so that it can only be activated once per run until a player finishes the course.
 5. _sendPlayerData_ is only required for a Checkpoint being used as a StartGate.
 
-:::note OnPlayerDataEnter details
+:::note[OnPlayerDataEnter details]
 
 If you want to learn more about what's going on in this program, you can find the full documentation here: [OnPlayerDataEnter](/worlds/examples/obstacle-course/uoc-how-stuff-works#onplayerdataenter)
 :::
@@ -109,7 +109,7 @@ This prefab has a TriggerCollider on the "Trigger" child object which runs the e
 * _playerModsManager_ is set by the **HazardSpawner** program
 * _speedChange_ works like a typical **PowerUp**. The 'x' value is the change to apply to the player's default speed, and the 'y' value is the duration of the effect. The default setting of (-3,3) on this prefab will subtract 3 from the player's speed for 3 seconds when they touch it.
 
-:::danger UNPACK YOUR HAZARD PREFABS
+:::danger[UNPACK YOUR HAZARD PREFABS]
 
 Since these prefabs are not created and managed through the Utility Window, it's important to unpack them after you place them in your scene. Otherwise the auto-injection might not stick.
 :::
