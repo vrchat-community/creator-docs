@@ -58,7 +58,7 @@ The guidelines rules are subject to change as VRChat continues to explore new im
 1. Your avatar must be optimized and not cause significant performance issues in VRChat.
 	1. Your avatar must have a performance rank of "Excellent," "Good," "Medium," or "Poor." 
 	2. "Very Poor" avatars are only accepted on a case-by-case basis.
-2. Your avatar must have a high degree of visual and technical fidelity.
+2. Your avatar must have a high degree of visual and technical fidelity. See the [Avatar Quality Guidelines](/avatars/avatar-quality-guidelines) to learn which areas VRChat considers when reviewing your avatar.
 	1. If your avatar is available on multiple platforms (PC, Android, iOS), its appearance must be similar on all platforms.
 	2. If your avatar uses [expression menus](/avatars/expression-menu-and-controls/) or [components](/common-components/), avoid technical issues or bugs.
 3. Your avatar's updates must be limited to bug fixes, performance improvements, and new/improved features.
@@ -75,8 +75,8 @@ The guidelines rules are subject to change as VRChat continues to explore new im
 :::info
 
 VRChat may reject some avatars despite fulfilling all the criteria above. VRChat currently only accepts a limited number of avatars. High-quality avatars are more likely to be accepted.
- 
-This restriction will become less strict in the future. Please visit our avatar seller Discord community for additional information.  
+
+Read the [Avatar Quality Guidelines](/avatars/avatar-quality-guidelines) to learn about common avatar quality issues and how to avoid them.
 
 :::
 

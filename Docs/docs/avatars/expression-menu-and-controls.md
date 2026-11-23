@@ -45,7 +45,7 @@ After creating and configuring these assets, make sure to add them to your avata
 	- When the avatar is reset, the parameter will revert to this value.
 7. Optionally, tick `Show Advanced Options` to display and change advanced options for the parameter. If you're unsure what these are, it's safe to ignore them and leave the box unticked.
    1. Choose the `Lerp Duration` for the value. This property allows you to configure how long it takes for the value to arrive at its target when it changes.
-       - `Default` means the interpolation duration is determined automatically. The value changes instantly locally, and will move to the target over a short space of time remotely.
+       - `Default` means the interpolation duration is determined automatically. Local changes always apply instantly. Remote changes apply instantly for integers and Booleans, and over a short space of time for floats.
        - `Custom` means the value will change over the amount of time you define, ranging from 0 seconds (immediate) to 300 seconds (five minutes). This duration is used both locally and remotely.
    2. Choose how many `Bits` the value uses.
        - `Int` uses 8 bits by default. Decreasing this means the integer takes up less space in exchange for a smaller range.

@@ -185,4 +185,4 @@ The avatar content guidelines may change rapidly while the avatar marketplace is
 
 :::
 
-Review the Creator Economy [content guidelines](/economy/guidelines) to learn more.
+Review the Creator Economy [content guidelines](/economy/guidelines) to learn more. To learn which areas VRChat considers when reviewing your avatar's visual and technical fidelity, read the [Avatar Quality Guidelines](/avatars/avatar-quality-guidelines).

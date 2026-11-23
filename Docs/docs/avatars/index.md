@@ -17,6 +17,7 @@ There's a whole 'Avatars' category on the sidebar to check out. Here are some of
 - [Rig Requirements](/avatars/rig-requirements) explains how to set up your custom 3D model's hierarchy for VRChat.
 - [Avatar Performance Ranking System](/avatars/avatar-performance-ranking-system) explains how some avatars achieve an 'Excellent' performance, and others 'Very Poor'.
 - [Avatar Optimization Tips](/avatars/avatar-optimizing-tips) - Now that you know _why_, check out this page to learn how to get all your frames back.
+- [Avatar Quality Guidelines](/avatars/avatar-quality-guidelines) explains common avatar quality issues and how to avoid them.
 - [Face Tracking](/avatars/face-tracking) explains how to map face tracking, visemes, and eye movement to blendshapes across multiple meshes and interact with your animator.
 - Continue reading this page to learn more about important Avatars 3.0 SDK concepts.
 

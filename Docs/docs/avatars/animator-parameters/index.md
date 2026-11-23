@@ -121,9 +121,9 @@ We use the [Oculus viseme index](https://developer.oculus.com/documentation/unit
 | 9                | `rr`   |
 | 10               | `aa`   |
 | 11               | `e`    |
-| 12               | `ih`   |
-| 13               | `oh`   |
-| 14               | `ou`   |
+| 12               | `i`    |
+| 13               | `o`    |
+| 14               | `u`    |
 
 
 ### AFK State
@@ -230,17 +230,18 @@ Remotely synced `float` values also start with a memory usage of 8 bits, which g
 
 ### Parameter Interpolation
 
-If you enable interpolation, parameters change smoothly over a duration rather than instantly.
+When setting up [custom parameters](/avatars/expression-menu-and-controls/#creating-an-expressions-menu), you can optionally configure a custom interpolation duration for them. A parameter with a custom lerp duration moves over that duration from the old value to the new one whenever a new value is given. This same duration applies both locally and remotely. A lerp duration of zero means the value changes instantly.
 
-By default, parameters set by the local player do not interpolate. Instead, they snap immediately to their target values in the same frame they're set. Parameters that are set remotely (for example, someone else in the instance setting a new value for a synced parameter) interpolate over a short, automatically determined period. This helps smooth out sudden changes.
-
-When setting up [custom parameters](/avatars/expression-menu-and-controls/#creating-an-expressions-menu), you can also configure a custom interpolation time for them. A parameter with a custom lerp time moves over that time from the old value to the new one whenever a new value is given. This same duration applies both locally and remotely.
+When the lerp duration is set to `Default`, parameters behave like this:
+- Parameters set by the local player do not interpolate, instead snapping to their target values in the same frame that they're set.
+- Integer and Boolean parameters set remotely (for example, someone else in the instance setting a new value for a synced parameter) also change immediately without interpolating.
+- Float parameters set remotely will interpolate over a short, automatically determined period. This helps smooth out sudden changes in float values.
 
 ### Mismatched Parameter Type Conversion
 
 When you choose a [parameter type](/avatars/animator-parameters/#parameter-types) in your [animator](https://docs.unity3d.com/Manual/AnimationParameters.html), it's a good idea to choose the same type as the [built-in parameter](/avatars/animator-parameters/#built-in-parameters) or [custom parameter](/avatars/expression-menu-and-controls/#creating-an-expressions-menu) you're trying to use. For example: If you use VRChat's built-in `AFK` parameter in your animator,  you should choose the type `bool`.
 
-However, you *can* choose a mismatched type for your parameters. VRChat will try convert the parameter's value to the type used by the animator. For example, if you choose the type `float` for your `AFK` parameter, VRChat will automatically set `AFK` to `1.0` or `0.0` instead of `true` or `false`. This also allows you to use the `AFK` parameter in your Animator's [Blend Tree](https://docs.unity3d.com/Manual/class-BlendTree.html).
+However, you *can* choose a mismatched type for your parameters. VRChat will try to convert the parameter's value to the type used by the animator. For example, if you choose the type `float` for your `AFK` parameter, VRChat will automatically set `AFK` to `1.0` or `0.0` instead of `true` or `false`. This also allows you to use the `AFK` parameter in your Animator's [Blend Tree](https://docs.unity3d.com/Manual/class-BlendTree.html).
 
 The table below shows how converting a mismatched parameter changes it. 
 
